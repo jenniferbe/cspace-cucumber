@@ -30,21 +30,21 @@ Feature: Advanced Search ­ Acquisition
         And clicks the "Advanced Search" button
         And user selects "Acquisition" from the "Record Type Select" drop down box
         And user enters "2016-01-01" in the "Accession date" field
-        And user clicks the "search" button
+        And clicks the "search" button
         Then the search results should contain "CQA71.1"
 
         #Acquisition Date
         And clicks the "Advanced Search" button
         And user selects "Acquisition" from the "Record Type Select" drop down box
         And user enters "2016-02-02" in the "Acquisition date" field
-        And user clicks the "search" button
+        And clicks the "search" button
         Then the search results should contain "CQA71.1"
 
         #Acquisition Method
         And clicks the "Advanced Search" button
         And user selects "Acquisition" from the "Record Type Select" drop down box
         And user selects "Gift" from the "Acquisition Method" drop down box
-        And user clicks the "search" button
+        And clicks the "search" button
         Then the search results should contain "CQA71.1"
 
         #Acquisition Method
@@ -52,7 +52,7 @@ Feature: Advanced Search ­ Acquisition
         And user selects "Acquisition" from the "Record Type Select" drop down box
         And user enters "CQA-71 Acquisition Source" in the "Acquisition Source" field
         And user selects "CQA-71 Acquisition Source" from autocomplete options        
-        And user clicks the "search" button
+        And clicks the "search" button
         Then the search results should contain "CQA71.1"
 
         #Acquisition Funding
@@ -60,14 +60,14 @@ Feature: Advanced Search ­ Acquisition
         And user selects "Acquisition" from the "Record Type Select" drop down box
         And user enters "CQA-71 Funding source" in the "Funding Source" field
         And user selects "CQA-71 Funding source" from autocomplete options        
-        And user clicks the "search" button
+        And clicks the "search" button
         Then the search results should contain "CQA71.1"
 
         #Field Collection event name
         And clicks the "Advanced Search" button
         And user selects "Acquisition" from the "Record Type Select" drop down box
         And user enters "CQA-71 Test" in the "Field collection event name" field 
-        And user clicks the "search" button
+        And clicks the "search" button
         Then the search results should contain "CQA71.1"
 
         #Todays Date
