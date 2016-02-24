@@ -6,7 +6,7 @@ Feature: Advanced Search ­– Exhibition Planning
 
     Scenario: Advanced Search Fields
         Given the user is in the "Create New" page
-        # And user selects the "Exhibition" radio button on the Create New page
+        And user selects the "Exhibition" radio button on the Create New page
         And user enters "CQA74.1" in the "Exhibition Number" field 
         And user enters "CQA74 Test" in the "Exhibition Title" field 
         And user selects "Permanent" from the "Exhibition Type" drop down box  
