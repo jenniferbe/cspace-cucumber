@@ -6,7 +6,7 @@ Feature: Advanced Search ­ Acquisition
 
 	Scenario: Advanced Search Fields and wildcard
 	Given the user is in the "Create New" page
-        # And user selects the "Acquisition" radio button on the Create New page
+        And user selects the "Acquisition" radio button on the Create New page
         And user enters "CQA71.1" in the "Acquisition Reference Number" field 
         And user enters "2016-01-01" in the "Accession date" field
         And user enters "2016-02-02" in the "Acquisition date" field 
@@ -89,7 +89,7 @@ Feature: Advanced Search ­ Acquisition
 
 	Scenario: Boolean field­-based search
         Given the user is in the "Create New" page
-        # And user selects the "Acquisition" radio button on the Create New page
+        And user selects the "Acquisition" radio button on the Create New page
         And user enters "CQA71.2" in the "Acquisition Reference Number" field
         And user selects "Purchase" from the "Acquisition Method" drop down box  
         And user enters "testtest" in the "Acquisition Reason" field
@@ -182,5 +182,5 @@ Feature: Advanced Search ­ Acquisition
 
         Then close the browser
 
-# Delete 71.1-.4!!!!!!
+
 	
