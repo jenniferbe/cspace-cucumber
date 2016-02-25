@@ -16,7 +16,7 @@ Feature: #Enter feature name here
         Then "CQA99.1" should appear in the "Related Cataloging Records" area
         Then close the browser
 
-	Scenario: Dismissing the dialog #3 
+	Scenario: Dismissing the dialogue #3 
         Given the user is in the "My CollectionSpace" page
         And user goes to the record with identification number "CQA99_NE"
 
@@ -42,7 +42,7 @@ Feature: #Enter feature name here
         And clicks the "Add to current record" button #needs Step def #7
 
         #Expected, Group #1
-        Then the dialog should be dismissed 
+        Then the dialogue should be dismissed 
         Then "CQA99.3" should appear in the "Related Cataloging Records" area
         Then "CQA99.2" should appear in the "Related Cataloging Records" area 
         Then "CQA99.3" should appear in the "Procedures" area 
@@ -76,7 +76,7 @@ Feature: #Enter feature name here
         And clicks the "Add record" button
         And clicks on the "Create New" button
         
-        Then the dialog should be dismissed
+        Then the dialogue should be dismissed
         Then the message "Creating new record..." should be displayed
         
         Then the "Identification Number" field should be empty
@@ -918,13 +918,13 @@ Feature: #Enter feature name here
         And clicks the "Delete Relation" button on the row that reads "CQA99.7" #Green "X" button. Needs step def
         Then delete confirmation dialogue should appear 
         And user clicks cancel button
-        Then the dialog should be dismissed
+        Then the dialogue should be dismissed
         Then the "Related Cataloging Records" area should contain "CQA99.7"
 
         And clicks the "Delete Relation" button on the row that reads "CQA99.7" #Green "X" button. Needs step def. Again
         Then delete confirmation dialogue should appear
         And clicks the "close" button
-        Then the dialog should be dismissed
+        Then the dialogue should be dismissed
         Then the "Related Cataloging Records" area should contain "CQA99.7"
 
         And clicks the "Delete Relation" button on the row that reads "CQA99.7" #Green "X" button. Needs step def. Last time.
@@ -959,13 +959,13 @@ Feature: #Enter feature name here
         And clicks the "Delete this relation" button
         Then a delete confirmation dialogue should appear
         And user clicks cancel button
-        Then the dialog should be dismissed
+        Then the dialogue should be dismissed
         Then the "Related Cataloging Records" area should contain "CQA99.8"
 
         And clicks the "Delete this relation" button
         Then a delete confirmation dialogue should appear #needs Stepdef
         And user clicks close button # close button == close symbol?
-        Then the dialog should be dismissed #needs stepdef
+        Then the dialogue should be dismissed #needs stepdef
         Then the "Related Cataloging Records" area should contain "CQA99.8"
 
         And clicks the "Delete this relation" button
