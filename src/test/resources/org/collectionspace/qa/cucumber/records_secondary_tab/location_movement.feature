@@ -15,33 +15,33 @@ Feature: Location/Movement/Inventory Control Tab
   	    Then the "Related Location/Movement/Inventory" are should be empty
 	    Then close the browser
 
-  	Scenario: Dismissing the dialog
+  	Scenario: Dismissing the dialogue 
   		Given the user is in the "My CollectionSpace" page
 		And user goes to the record with identification number "CQA113_NE"
 
 		#Variation A
-		And the user clicks on the "Add record" button #needs step def
-	    And the user clicks the "close" button 
+		And clicks the "Add record" button #needs step def
+	    And clicks the "close" button 
 	    Then the "Related Location/Movement/Inventory Records" area should only contain "CQA113.1"
 
 	    #Variation B
-	    And the user clicks on the "Add record" button
+	    And clicks the "Add record" button
 	    And the user presses the "ESC" key # Needs StepDef
 	    Then the "Related Location/Movement/Inventory Records" area should only contain "CQA113.1"
 
 
   	Scenario: Searching and adding multiple Location/Movement/Inventory records
-		And the user clicks on the "Add record" button #NeedsStepDef
-	    And the user clicks the "search" button #needs StepDef maybe? 
+		And clicks the "Add record" button #NeedsStepDef
+	    And clicks the "search" button #needs StepDef maybe? 
 	    Then the search results should contain "CQA113.3" 
 	    Then the search results should contain "CQA113.2" 
 
 	    And the user selects the box with result "CQA113.3" 
 	    And the user selects the box with result "CQA113.2"  
-	    And the user clicks the "Add to current record" button #needs Step def #7
+	    And clicks the "Add to current record" button #needs Step def #7
 
 	    #Expected, Group #1
-	    Then the dialog should be dismissed 
+	    Then the dialogue should be dismissed 
 	    Then "CQA113.3" should appear in the "Related Location/Movement/Inventory Records" area  #needs Stepdef
 	    Then "CQA113.2" should appear in the "Related Location/Movement/Inventory Records" area  #needs Stepdef
 	    Then "CQA113.3" should appear in the "Procedures" area  #needs Stepdef
@@ -52,7 +52,7 @@ Feature: Location/Movement/Inventory Control Tab
 	    Then an "Edit Location/Movement/Inventory Control" form should be displayed # Be more specific? #Needs Stepdef
 	   	Then the "Reference Number" field should contain "CQA113.3"
 
-	   	And the user clicks the "Delete this relation." button
+	   	And clicks the "Delete this relation." button
 	    Then a delete confirmation dialogue should appear
 	    And the user clicks the delete button 
 	    Then the deletion should be confirmed in a dialogue
@@ -63,7 +63,7 @@ Feature: Location/Movement/Inventory Control Tab
 	    Then an "Edit Location/Movement/Inventory Control" form should be displayed # Be more specific? #Needs Stepdef
 	   	Then the "Reference Number" field should contain "CQA113.2"
 
-	   	And the user clicks the "Delete this relation." button
+	   	And clicks the "Delete this relation." button
 	    Then a delete confirmation dialogue should appear
 	    And the user clicks the delete button 
 	    Then the deletion should be confirmed in a dialogue
@@ -78,7 +78,7 @@ Feature: Location/Movement/Inventory Control Tab
 	    And user selects the "Location/Movement/Inventory" tab 
 	    
 
-	    And the user clicks on the "Add record" button #needs step def
+	    And clicks the "Add record" button #needs step def
 		And clicks on the "Create New" button
 		Then the message "Creating new record..." should be displayed # needs StepDef
 	    # Then an empty Intake record form should be displayed below the listing of records
@@ -89,23 +89,23 @@ Feature: Location/Movement/Inventory Control Tab
 	    #Variation A
 	   		And user selects the "Current Record" tab
 		    Then a leave confirmation dialogue should appear #needs StepDef
-		    And the user clicks the "close" button  #might not work
+		    And clicks the "close" button  #might not work
 		    Then the "Reference Number" field should contain "CQA113.4" 
 
 		#Variation B
 	   		And user selects the "Current Record" tab
 		    Then a leave confirmation dialogue should appear #needs StepDef
-		    And the user clicks the "cancel" button  #might not work
+		    And clicks the "cancel" button  #might not work
 		    Then the dialogue should be dismissed
 
 		#Variation D
 		    And user selects the "Current Record" tab
-		    And the user clicks the "Don't save" button 
+		    And clicks the "Don't save" button 
 		   	And user selects the "Location/Movement/Inventory" tab 
 		    Then "CQA113.4" should not appear in the "Related Location/Movement/Inventory Records" area
 
 		#Variation C
-		    And the user clicks on the "Add record" button
+		    And clicks the "Add record" button
 		    And clicks on the Create button
 			And user enters "CQA113.4" in the "Reference Number" field 
 			And user enters "CQA113.2" in the "Current Location" field
@@ -132,7 +132,7 @@ Feature: Location/Movement/Inventory Control Tab
     	Given the user is in the "My CollectionSpace" page
 		And user goes to the record with identification number "CQA113_NE"
 		And user selects the "Location/Movement/Inventory" tab
-	    And the user clicks on the "Add record" button #needs step def
+	    And clicks the "Add record" button #needs step def
 	    And clicks on the "Create new" button
 
 	    # Variation A
@@ -144,7 +144,7 @@ Feature: Location/Movement/Inventory Control Tab
 		And user enters "CQA113.2" in the "Current Location" field
 		And user selects "CQA113.2" from the drop down options 
 
-	    And the user clicks the "cancel changes" button at the top of the page 
+	    And clicks the "cancel changes" button at the top of the page 
 	    Then the "Reference Number" should be empty # makes sure it reverted
 
 
@@ -153,13 +153,13 @@ Feature: Location/Movement/Inventory Control Tab
 		And user enters "CQA113.2" in the "Current Location" field
 		And user selects "CQA113.2" from the drop down options 
 
-	    And the user clicks the "save" button 
+	    And clicks the "save" button 
 	    Then the "cancel changes" button at the top of the page should not be clickable 
     	Then the "cancel changes" button at the bottom of the page should not be clickable 
    
    
-	    And the user clicks the "Go to record" button
-	    And the user clicks the "Delete" button 
+	    And clicks the "Go to record" button
+	    And clicks the "Delete" button 
 	    Then a delete confirmation dialogue should appear
 	    And the user clicks the confirmation delete button
 	    Then a deletion should be confirmed in a dialogue
@@ -173,7 +173,7 @@ Feature: Location/Movement/Inventory Control Tab
         And user goes to the record with identification number "CQA113_NE"
         And user selects the "Location/Movement/Inventory" tab 
 
-        And the user clicks on the "+ Add Record" button
+        And clicks the "+ Add Record" button
         And clicks on the Create button
         And the user saves the record # click the save button
         Then the message "Please specify a Current Location" should appear 
@@ -267,8 +267,8 @@ Feature: Location/Movement/Inventory Control Tab
         Then the "Inventory Date" field should contain "2016-02-11"
         Then the "Next Inventory Date" field should contain "2016-02-12"
         Then the "Note" field should contain "CQA113 Third Note Box Test 13" 
-        And the user clicks the "Go To Record" button	    
-	    And the user clicks the "Delete" button
+        And clicks the "Go To Record" button	    
+	    And clicks the "Delete" button
 	    Then a delete confirmation dialogue should appear #needs Step
 	    And the user clicks the delete button         
 
@@ -284,7 +284,7 @@ Feature: Location/Movement/Inventory Control Tab
 	    Then "CQA113.1" should appear in the "Related Location/Movement/Inventory Records" area  #needs Stepdef
 	    And the user clicks on result with text "CQA113.1"
 	    Then "CQA113.1" should be in the "Reference Number" field   #needs Stepdef
-		And the user clicks the "Go To Record" button #above the Location/Movement/Inventory form
+		And clicks the "Go To Record" button #above the Location/Movement/Inventory form
 		Then the titlebar should contain "CQA113.1" 
 	    Then the "Reference Number" field should contain "CQA113.1"
 	    Then close the browser
@@ -294,7 +294,7 @@ Feature: Location/Movement/Inventory Control Tab
 	    And user goes to the record with identification number "CQA113_NE"
 	    And user selects the "Location/Movement/Inventory" tab 
 
-	    And the user clicks on the "Add record" button #needs step def
+	    And clicks the "Add record" button #needs step def
 	    And clicks on the Create button
 	    And user enters "CQA113.7" in the "Reference Number" field #might not work 
 		And user enters "CQA113.2" in the "Current Location" field
@@ -302,21 +302,21 @@ Feature: Location/Movement/Inventory Control Tab
 
 	    And the user saves the record
 	    And user clicks the "Delete Relation" button on the row that reads "CQA113.7" #Green "X" button. Needs step def
-	    Then delete confirmation dialogue should appear # Then the dialog should appear asking you to delete this relation
+	    Then delete confirmation dialogue should appear # Then the dialogue should appear asking you to delete this relation
 	    And user clicks cancel button
-	    Then the dialog should be dismissed #needs Step def
+	    Then the dialogue should be dismissed #needs Step def
 	    Then no changes should occur #needs step def
 
 	    And user clicks the "Delete Relation" button on the row that reads "CQA113.7" #Green "X" button. Needs step def. Again
 	    Then delete confirmation dialogue should appear
 	    And user clicks the "close" button # close button == close symbol? #Needs stepdef???
-	    Then the dialog should be dismissed
+	    Then the dialogue should be dismissed
 	    Then no changes should occur #needs step def
 
 	    And user clicks the "Delete Relation" button on the row that reads "CQA113.7" #Green "X" button. Needs step def. Last time.
 	    Then delete confirmation dialogue should appear
 	    And user clicks on the delete button
-	    Then "CQA113.7" should not appear in the "Procedures" sidebar #needs StepDef #notlogged
+	    Then "CQA113.7" should not appear in the "Procedures" area #needs StepDef #notlogged
 	    Then "CQA113.7" should not appear in the "Related Location/Movement/Inventory Records" area #needs Stepdef #not logged
 
         And user goes to the record with identification number "CQA113.6"
@@ -337,7 +337,7 @@ Feature: Location/Movement/Inventory Control Tab
 	    Then "CQA113_NE" should be in the "Identification Number" field
 
 	    And user selects the "Location/Movement/Inventory" tab 
-	    And the user clicks on the "Add record" button #needs step def
+	    And clicks the "Add record" button #needs step def
 	    And clicks on the Create button
 	    And user enters "CQA113.8" in the "Reference Number" field #might not work 
 		And user enters "CQA113.2" in the "Current Location" field
@@ -346,25 +346,25 @@ Feature: Location/Movement/Inventory Control Tab
 	    And the user saves the record
 	    And the user clicks the result with text "CQA113.8"
 	    
-	    And the user clicks the "Delete this relation." button
+	    And clicks the "Delete this relation." button
 	    Then a delete confirmation dialogue should appear #needs Stepdef
 	    And user clicks cancel button # click cancel
-	    Then the dialog should be dismissed #needs stepdef
+	    Then the dialogue should be dismissed #needs stepdef
 	    Then the "Related Location/Movement/Inventory Records" area should contain "CQA113.8"
 
-	    And the user clicks the "Delete this relation" button
+	    And clicks the "Delete this relation" button
 	    Then a delete confirmation dialogue should appear #needs Stepdef
 	    And user clicks close button # close button == close symbol?
-	    Then the dialog should be dismissed #needs stepdef
+	    Then the dialogue should be dismissed #needs stepdef
 	    Then the "Related Location/Movement/Inventory Records" area should contain "CQA113.8"
 
-	    And the user clicks the "Delete this relation" button
+	    And clicks the "Delete this relation" button
 	    Then a delete confirmation dialogue should appear #needs Step
 	    And the user clicks the delete button 
 	    Then the deletion should be confirmed in a dialogue
 	    # Then the record editor should no longer be displayed (below list)
 	    Then "CQA113.8" should not appear in the "Procedures" area  #needs Stepdef
-	    Then "CQA113.8" should not appear in the "Related Location/Movement/Inventory Records"
+	    Then "CQA113.8" should not appear in the "Related Location/Movement/Inventory Records" area
 
 
 
