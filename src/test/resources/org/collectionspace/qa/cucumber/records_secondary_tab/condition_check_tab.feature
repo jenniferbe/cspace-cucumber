@@ -21,25 +21,25 @@ Feature: Condition Check Tab Test Plan
         And user goes to the record with identification number "CQA103_NE"
 
         #Variation A
-        And clicks the "Add record" button 
-        And clicks the "close" button 
+        And user clicks the "Add record" button 
+        And user clicks the "close" button 
         Then the "Related Condition Check Records" area should only contain "CQA103.1"
 
         #Variation B
-        And clicks the "Add record" button
+        And user clicks the "Add record" button
         And the user presses the "ESC" key 
         Then the "Related Condition Check Records" area should only contain "CQA103.1"
 
 
 	Scenario: Searching and adding multiple condition Check records #5
-        And clicks the "Add record" button 
-        And clicks the "search" button 
+        And user clicks the "Add record" button 
+        And user clicks the "search" button 
         Then the search results should contain "CQA103.3" 
         Then the search results should contain "CQA103.2" 
 
         And the user selects the box with result "CQA103.3" 
         And the user selects the box with result "CQA103.2"  
-        And clicks the "Add to current record" button #needs Step def #7
+        And user clicks the "Add to current record" button #needs Step def #7
 
         #Expected, Group #1
         Then the dialogue should be dismissed 
@@ -52,7 +52,7 @@ Feature: Condition Check Tab Test Plan
         And the user clicks on result with text "CQA103.3" 
         Then an "Edit Condition Check Record" form should be displayed 
         Then the "Condition Check/Assessment Reference Number" field should contain "CQA103.3"
-        And clicks the "Delete this relation." button
+        And user clicks the "Delete this relation." button
         Then a delete confirmation dialogue should appear
         And the user clicks the delete button 
         Then the deletion should be confirmed in a dialogue
@@ -61,7 +61,7 @@ Feature: Condition Check Tab Test Plan
         And the user clicks on result with text "CQA103.2" 
         Then an "Edit Condition Check Record" form should be displayed 
         Then the "Condition Check/Assessment Reference Number" field should contain "CQA103.2"
-        And clicks the "Delete this relation." button
+        And user clicks the "Delete this relation." button
         Then a delete confirmation dialogue should appear
         And the user clicks the delete button 
         Then the deletion should be confirmed in a dialogue
@@ -74,8 +74,8 @@ Feature: Condition Check Tab Test Plan
         Then "CQA103_NE" should be in the "Identification Number" field
         And user selects the "Condition" tab 
         
-        And clicks the "Add record" button
-        And clicks on the "Create New" button
+        And user clicks the "Add record" button
+        And user clicks the "Create New" button
         
         Then the dialogue should be dismissed
         Then the message "Creating new record..." should be displayed
@@ -86,27 +86,27 @@ Feature: Condition Check Tab Test Plan
         #Variation A
         And user selects the "Current Record" tab
         Then a leave confirmation dialogue should appear 
-        And clicks the "close" button  
+        And user clicks the "close" button  
         Then the "Condition Check/Assessment Reference Number" field should contain "CQA103.4"
 
         #Variation B
         And user selects the "Current Record" tab
         Then a leave confirmation dialogue should appear #needs StepDef
-        And clicks the "cancel" button  #might not work
+        And user clicks the "cancel" button  #might not work
         Then the "Condition Check/Assessment Reference Number" field should contain "CQA103.4"
 
         ## Variation D
         And user selects the "Current Record" tab
-        And clicks the "Don't save" button 
+        And user clicks the "Don't save" button 
         And user selects the "Condition" tab 
         Then "CQA103.4" should not appear in the "Related Condition Check Records" area
 
         #Variation C
-        And clicks the "Add record" button
+        And user clicks the "Add record" button
         And clicks on the Create button
         And user enters "CQA103.4" in the "Condition Check/Assessment Reference Number" field 
         And user selects the "Current Record" tab
-        And clicks the "save" button
+        And user clicks the "save" button
 
         And user selects the "Condition" tab 
         Then "CQA103.4" should appear in the "Related Condition Check Records" area 
@@ -122,8 +122,8 @@ Feature: Condition Check Tab Test Plan
         Given the user is in the "My CollectionSpace" page
         And user goes to the record with identification number "CQA103_NE"
         And user selects the "Condition" tab
-        And clicks the "Add record" button #needs step def
-        And clicks on the "Create new" button
+        And user clicks the "Add record" button #needs step def
+        And user clicks the "Create new" button
 
         # Variation A
         Then the message "Creating new record..." should be displayed
@@ -131,17 +131,17 @@ Feature: Condition Check Tab Test Plan
         Then the "cancel changes" button at the top of the page should not be clickable
         
         And user enters "CQA103.5" in the "Condition Check/Assessment Reference Number" field
-        And clicks the "cancel changes" button 
+        And user clicks the "cancel changes" button 
         Then the "Condition Check/Assessment Reference Number" field should be empty
 
         # Variation B
         And user enters "CQA103.5" in the "Condition Check/Assessment Reference Number" field
-        And clicks the "save" button 
+        And user clicks the "save" button 
         Then the "cancel changes" button at the top of the page should not be clickable 
         Then the "cancel changes" button at the bottom of the page should not be clickable 
    
-        And clicks the "Go to record" button
-        And clicks the "Delete" button 
+        And user clicks the "Go to record" button
+        And user clicks the "Delete" button 
         Then a delete confirmation dialogue should appear
         And the user clicks the confirmation delete button
         Then a deletion should be confirmed in a dialogue
@@ -328,8 +328,8 @@ Feature: Condition Check Tab Test Plan
         Then the "Legal/License Requirements Held Renew Date" field should contain "2017-10-10"
         Then the "Salvage Priority Code Date" field should contain "2017-11-11"
         Then the "Salvage Priority Code" field should contain "102"
-        And clicks the "Go To Record" button        
-        And clicks the "Delete" button
+        And user clicks the "Go To Record" button        
+        And user clicks the "Delete" button
         Then a delete confirmation dialogue should appear
         And the user clicks the delete button 
         Then the deletion should be confirmed in a dialogue        
@@ -342,7 +342,7 @@ Feature: Condition Check Tab Test Plan
         And user selects the "Condition" tab 
         And the user clicks on result with text "CQA103.1"
         Then the "Condition Check/Assessment Reference Number" field should contain "CQA103.1"
-        And clicks the "Go to record" button
+        And user clicks the "Go to record" button
         Then the titlebar should contain "CQA103.1"
         Then the "Condition Check/Assessment Reference Number" field should contain "CQA103.1"
         Then close the browser 
@@ -352,7 +352,7 @@ Feature: Condition Check Tab Test Plan
         And user goes to the record with identification number "CQA103_NE"
         And user selects the "Condition" tab
 
-        And clicks the "Add record" button #needs step def
+        And user clicks the "Add record" button #needs step def
         And clicks on the Create button
         And user enters "CQA103.7" in the "Condition Check/Assessment Reference Number" field #might not work 
         And the user saves the record
@@ -393,25 +393,25 @@ Feature: Condition Check Tab Test Plan
         Then "CQA103_NE" should be in the "Identification Number" field
 
         And user selects the "Condition" tab 
-        And clicks the "Add record" button #needs step def
+        And user clicks the "Add record" button #needs step def
         And clicks on the Create button
         And user enters "CQA103.8" in the "Condition Check/Assessment Reference Number" field #might not work 
         And the user saves the record
         And the user clicks on result with text "CQA103.8"
         
-        And clicks the "Delete this relation" button
+        And user clicks the "Delete this relation" button
         Then a delete confirmation dialogue should appear #needs Stepdef
         And user clicks cancel button # click cancel
         Then the dialogue should be dismissed #needs stepdef
         Then the "Related Condition Check Records" area should contain "CQA103.8"
 
-        And clicks the "Delete this relation" button
+        And user clicks the "Delete this relation" button
         Then a delete confirmation dialogue should appear #needs Stepdef
         And user clicks close button # close button == close symbol?
         Then the dialogue should be dismissed #needs stepdef
         Then the "Related Condition Check Records" area should contain "CQA103.8"
 
-        And clicks the "Delete this relation" button
+        And user clicks the "Delete this relation" button
         Then a delete confirmation dialogue should appear #needs Step
         And the user clicks the delete button 
         Then the deletion should be confirmed in a dialogue
@@ -430,30 +430,4 @@ Feature: Condition Check Tab Test Plan
         Then the deletion should be confirmed in a dialogue
         Then close the browser 
 
-	Scenario: Testing functional accessibility #31
-	    Given the user is in the "My CollectionSpace" page
-	    And user goes to the record with identification number "CQA103_NE"
-	    And user selects the "Condition Check" tab 
-
-	    And the user presses the "Tab" key until reaching the "Add record" button  #needs Stepdef
-	    And the user presses the "Enter" key #needs Stepdef
-	    And the user presses the "Tab" key until reaching the "Create" button #needs Stepdef
-	    And the user presses the "Enter" key #needs Stepdef
-	    And the user presses the "Tab" key until reaching the "Run" button #needs Stepdef
-	    Then everything should have been clickable #needs Stepdef
-	    And user enters "CQA103.9" in the "Condition Check/Assessment Reference Number" field #might not work 
-	    And the user saves the record
-	    And the user presses the "Tab" key until reaching the text field containing "CQA103.9" #needs Stepdef
-	    Then the text field should be clickable  #needs Stepdef
-
-	    And selects "Intake" from the top nav search record type select field # And using the top right search area, select intake from the drop down
-	    And user enters "CQA103.9" in the top nav search field
-	    Then the search results should contain "CQA103.9"
-	    And the user clicks on result with text "CQA103.9"
-	    Then "CQA103.9" should be in the "Identification Number" field   #needs Stepdef
-	    And the user clicks the delete button
-	    Then a delete confirmation dialogue should appear #needs Stepdef
-	    And the user clicks the delete button 
-	    Then the deletion should be confirmed in a dialogue
-	    Then close the browser 
 

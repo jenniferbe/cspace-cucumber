@@ -22,24 +22,24 @@ Feature: Acquisition Tab
         And user goes to the record with identification number "CQA93_NE"
 
         #Variation A
-        And clicks the "Add record" button 
-        And clicks the "close" button 
+        And user clicks the "Add record" button 
+        And user clicks the "close" button 
         Then the "Related Acquisition Records" area should only contain "CQA93.1"
 
         #Variation B
-        And clicks the "Add record" button
+        And user clicks the "Add record" button
         And the user presses the "ESC" key 
         Then the "Related Acquisition Records" area should only contain "CQA93.1"
 
     Scenario: Searching and adding multiple Acquisition records #5 
-        And clicks the "Add record" button 
-        And clicks the "search" button 
+        And user clicks the "Add record" button 
+        And user clicks the "search" button 
         Then the search results should contain "CQA93.3" 
         Then the search results should contain "CQA93.2" 
 
         And the user selects the box with result "CQA93.3" 
         And the user selects the box with result "CQA93.2"  
-        And clicks the "Add to current record" button #needs Step def #7
+        And user clicks the "Add to current record" button #needs Step def #7
 
         #Expected, Group #1
         Then the dialogue should be dismissed 
@@ -52,7 +52,7 @@ Feature: Acquisition Tab
         And the user clicks on result with text "CQA93.3" 
         Then an "Edit Acquisition Record" form should be displayed 
         Then the "Acquisition Reference Number" field should contain "CQA93.3"
-        And clicks the "Delete this relation." button
+        And user clicks the "Delete this relation." button
         Then a delete confirmation dialogue should appear
         And user clicks on the delete button 
         Then the deletion should be confirmed in a dialogue
@@ -62,7 +62,7 @@ Feature: Acquisition Tab
         And the user clicks on result with text "CQA93.2" 
         Then an "Edit Acquisition Record" form should be displayed 
         Then the "Acquisition Reference Number" field should contain "CQA93.2"
-        And clicks the "Delete this relation." button
+        And user clicks the "Delete this relation." button
         Then a delete confirmation dialogue should appear
         And user clicks on the delete button 
         Then the deletion should be confirmed in a dialogue
@@ -75,8 +75,8 @@ Feature: Acquisition Tab
         Then the "Identification Number" field should contain "CQA93_NE"
         And user selects the "Acquisition" tab 
         
-        And clicks the "Add record" button
-        And clicks on the "Create New" button
+        And user clicks the "Add record" button
+        And user clicks the "Create New" button
         
         Then the dialogue should be dismissed
         Then the message "Creating new record..." should be displayed
@@ -95,22 +95,22 @@ Feature: Acquisition Tab
         #Variation B
         And user selects the "Current Record" tab
         Then a leave confirmation dialogue should appear #needs StepDef
-        And clicks the "cancel" button  #might not work
+        And user clicks the "cancel" button  #might not work
         Then the "Acquisition Reference Number" field should contain "CQA93.4"
 
         ## Variation D
         And user selects the "Current Record" tab
-        And clicks the "Don't save" button 
+        And user clicks the "Don't save" button 
         And user selects the "Acquisition" tab 
         Then "CQA93.4" should not appear in the "Related Acquisition Records" area
 
 
         #Variation C
-        And clicks the "Add record" button
+        And user clicks the "Add record" button
         And clicks on the Create button
         And user enters "CQA93.4" in the "Acquisition Reference Number" field 
         And user selects the "Current Record" tab
-        And clicks the "save" button
+        And user clicks the "save" button
 
         And user selects the "Acquisition" tab 
         Then "CQA93.4" should appear in the "Related Acquisition Records" area 
@@ -126,8 +126,8 @@ Feature: Acquisition Tab
         Given the user is in the "My CollectionSpace" page
         And user goes to the record with identification number "CQA93_NE"
         And user selects the "Acquisition" tab
-        And clicks the "Add record" button #needs step def
-        And clicks on the "Create new" button
+        And user clicks the "Add record" button #needs step def
+        And user clicks the "Create new" button
 
         # Variation A
         Then the message "Creating new record..." should be displayed
@@ -135,18 +135,18 @@ Feature: Acquisition Tab
         Then the "cancel changes" button at the top of the page should not be clickable
         
         And user enters "CQA93.5" in the "Acquisition Reference Number" field
-        And clicks the "cancel changes" button 
+        And user clicks the "cancel changes" button 
         Then the "Acquisition Reference Number" field should be empty
 
         # Variation B
         And user enters "CQA93.5" in the "Acquisition Reference Number" field
-        And clicks the "save" button 
+        And user clicks the "save" button 
         Then the "cancel changes" button at the top of the page should not be clickable 
         Then the "cancel changes" button at the bottom of the page should not be clickable 
    
    
-        And clicks the "Go to record" button
-        And clicks the "Delete" button 
+        And user clicks the "Go to record" button
+        And user clicks the "Delete" button 
         Then a delete confirmation dialogue should appear
         And the user clicks the confirmation delete button
         Then a deletion should be confirmed in a dialogue
@@ -159,7 +159,7 @@ Feature: Acquisition Tab
         And user goes to the record with identification number "CQA93_NE" 
         And user selects the "Acquisition" tab 
 
-        And clicks the "+ Add Record" button
+        And user clicks the "+ Add Record" button
         And clicks on the Create button
         And the user saves the record # click the save button
         Then the message "Please specify an Acquisition Reference Number" should appear #fail
@@ -273,8 +273,8 @@ Feature: Acquisition Tab
         Then the "Source provisos" field should contain "Some"
         Then the "Credit Line" field should contain "93.13.8"
         Then the "Field collection event name" field should contain "CQA93 Digging Event"
-        And clicks the "Go To Record" button
-        And clicks the "Delete" button
+        And user clicks the "Go To Record" button
+        And user clicks the "Delete" button
         Then a delete confirmation dialogue should appear
         And user clicks on the delete button        
         Then close the browser
@@ -286,7 +286,7 @@ Feature: Acquisition Tab
         And user selects the "Acquisition" tab 
         And the user clicks on result with text "CQA93.1"
         Then the "Acquisition Reference Number" field should contain "CQA93.1"
-        And clicks the "Go to record" button
+        And user clicks the "Go to record" button
         Then the titlebar should contain "CQA93.1"
         Then the "Acquisition Reference Number" field should contain "CQA93.1"
         Then close the browser  
@@ -296,27 +296,27 @@ Feature: Acquisition Tab
         And user goes to the record with identification number "CQA93_NE"
         And user selects the "Acquisition" tab 
 
-        And clicks the "Add record" button #needs step def
+        And user clicks the "Add record" button #needs step def
         And clicks on the Create button
         And user enters "CQA93.7" in the "Acquisition Reference Number" field #might not work 
         And the user saves the record
         
-        And clicks the "Delete Relation" button on the row that reads "CQA93.7" #Green "X" button. Needs step def
+        And user clicks the "Delete Relation" button on the row that reads "CQA93.7" #Green "X" button. Needs step def
         Then delete confirmation dialogue should appear # Then the dialogue should appear asking you to delete this relation
-        And clicks the "cancel" button
+        And user clicks the "cancel" button
         Then the dialogue should be dismissed #needs Step def
         Then the "Related Acquisition Records" area should contain "CQA93.7"
 
-        And clicks the "Delete Relation" button on the row that reads "CQA93.7" #Green "X" button. Needs step def. Again
+        And user clicks the "Delete Relation" button on the row that reads "CQA93.7" #Green "X" button. Needs step def. Again
         Then delete confirmation dialogue should appear
-        And clicks the "close" button # close button == close symbol? #Needs stepdef???
+        And user clicks the "close" button # close button == close symbol? #Needs stepdef???
         Then the dialogue should be dismissed
         Then the "Related Acquisition Records" area should contain "CQA93.7"
 
 
-        And clicks the "Delete Relation" button on the row that reads "CQA93.7" #Green "X" button. Needs step def. Last time.
+        And user clicks the "Delete Relation" button on the row that reads "CQA93.7" #Green "X" button. Needs step def. Last time.
         Then delete confirmation dialogue should appear
-        And clicks the "delete" button
+        And user clicks the "delete" button
         Then "CQA93.7" should not appear in the "Procedures" sidebar #needs StepDef #notlogged
         Then "CQA93.7" should not appear in the "Related Acquisition Records" area #needs Stepdef #not logged
 
@@ -337,25 +337,25 @@ Feature: Acquisition Tab
         Then "CQA93_NE" should be in the "Identification Number" field
 
         And user selects the "Acquisition" tab 
-        And clicks the "Add record" button #needs step def
+        And user clicks the "Add record" button #needs step def
         And clicks on the Create button
         And user enters "CQA93.8" in the "Acquisition Reference Number" field #might not work 
         And the user saves the record
         And the user clicks on result with text "CQA93.8"
         
-        And clicks the "Delete this relation" button
+        And user clicks the "Delete this relation" button
         Then a delete confirmation dialogue should appear #needs Stepdef
-        And clicks the "cancel" button # click cancel
+        And user clicks the "cancel" button # click cancel
         Then the dialogue should be dismissed #needs stepdef
         Then the "Related Acquisition Records" area should contain "CQA93.8"
 
-        And clicks the "Delete this relation" button
+        And user clicks the "Delete this relation" button
         Then a delete confirmation dialogue should appear #needs Stepdef
-        And clicks the "close" button # close button == close symbol?
+        And user clicks the "close" button # close button == close symbol?
         Then the dialogue should be dismissed #needs stepdef
         Then the "Related Acquisition Records" area should contain "CQA93.8"
 
-        And clicks the "Delete this relation" button
+        And user clicks the "Delete this relation" button
         Then a delete confirmation dialogue should appear #needs Step
         And user clicks on the delete button 
         Then the deletion should be confirmed in a dialogue
@@ -373,29 +373,3 @@ Feature: Acquisition Tab
         Then the deletion should be confirmed in a dialogue
         Then close the browser 
 
-    Scenario: Testing Functional Accessibility #31 
-        Given the user is in the "My CollectionSpace" page
-        And user goes to the record with identification number "CQA93_NE"
-        And user selects the "Object Exit" tab 
-
-        And the user presses the "Tab" key until reaching the "Add record" button  #needs Stepdef
-        And the user presses the "Enter" key #needs Stepdef
-        And the user presses the "Tab" key until reaching the "Create" button #needs Stepdef
-        And the user presses the "Enter" key #needs Stepdef
-        And the user presses the "Tab" key until reaching the "Run" button #needs Stepdef
-        Then everything should have been clickable #needs Stepdef
-        And user enters "CQA93.9" in the "Acquisition Reference Number" field #might not work 
-        And the user saves the record
-        And the user presses the "Tab" key until reaching the text field containing "CQA93.9" #needs Stepdef
-        Then the text field should be clickable  #needs Stepdef
-
-        And selects "Acquisition" from the top nav search record type select field # And using the top right search area, select intake from the drop down
-        And user enters "CQA93.9" in the top nav search field
-        Then the search results should contain "CQA93.9"
-        And the user clicks on result with text "CQA93.9"
-        Then "CQA93.9" should be in the "Identification Number" field   #needs Stepdef
-        And user clicks on the delete button
-        Then a delete confirmation dialogue should appear #needs Stepdef
-        And user clicks on the delete button 
-        Then the deletion should be confirmed in a dialogue
-        Then close the browser 
