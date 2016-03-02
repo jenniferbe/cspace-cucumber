@@ -9,7 +9,7 @@ import cucumber.api.CucumberOptions;
 @CucumberOptions(
         glue = { "org.collectionspace.qa.cucumber.stepDefinitions" },
         format = { "json:target/report.json" },
-        tags = { "person" }
+        tags = { "@person" }
 )
 public class PersonAuthorityIT {
 
