@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         glue = { "org.collectionspace.qa.cucumber.stepDefinitions" },
-        tags = { "supplementaryprimary" },
+        tags = { "@supplementaryprimary" },
         format = { "json:target/report.json" }
 )
 public class SupplementaryPrimaryIT {

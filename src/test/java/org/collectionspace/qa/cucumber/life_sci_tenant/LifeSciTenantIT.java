@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         glue = { "org.collectionspace.qa.cucumber.stepDefinitions" },
-        tags = { "lstenant" },
+        tags = { "@lstenant" },
         format = { "json:target/report.json" }
 		)
 public class LifeSciTenantIT {

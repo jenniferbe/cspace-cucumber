@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         glue = { "org.collectionspace.qa.cucumber.stepDefinitions" },
         format = { "json:target/report.json" },
-        tags = { "advancedsearch" }
+        tags = { "@advancedsearch" }
 		)
 public class AdvancedSearchIT {
 }
