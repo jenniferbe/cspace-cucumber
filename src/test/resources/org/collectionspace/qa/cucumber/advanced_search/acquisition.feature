@@ -6,7 +6,7 @@ Feature: Advanced Search ­ Acquisition
 
 	Scenario: Advanced Search Fields and wildcard
 	Given the user is in the "Create New" page
-        # And user selects the "Acquisition" radio button on the Create New page
+        And user selects the "Acquisition" radio button on the Create New page
         And user enters "CQA71.1" in the "Acquisition Reference Number" field 
         And user enters "2016-01-01" in the "Accession date" field
         And user enters "2016-02-02" in the "Acquisition date" field 
@@ -30,21 +30,21 @@ Feature: Advanced Search ­ Acquisition
         And clicks the "Advanced Search" button
         And user selects "Acquisition" from the "Record Type Select" drop down box
         And user enters "2016-01-01" in the "Accession date" field
-        And user clicks the "search" button
+        And clicks the "search" button
         Then the search results should contain "CQA71.1"
 
         #Acquisition Date
         And clicks the "Advanced Search" button
         And user selects "Acquisition" from the "Record Type Select" drop down box
         And user enters "2016-02-02" in the "Acquisition date" field
-        And user clicks the "search" button
+        And clicks the "search" button
         Then the search results should contain "CQA71.1"
 
         #Acquisition Method
         And clicks the "Advanced Search" button
         And user selects "Acquisition" from the "Record Type Select" drop down box
         And user selects "Gift" from the "Acquisition Method" drop down box
-        And user clicks the "search" button
+        And clicks the "search" button
         Then the search results should contain "CQA71.1"
 
         #Acquisition Method
@@ -52,7 +52,7 @@ Feature: Advanced Search ­ Acquisition
         And user selects "Acquisition" from the "Record Type Select" drop down box
         And user enters "CQA-71 Acquisition Source" in the "Acquisition Source" field
         And user selects "CQA-71 Acquisition Source" from autocomplete options        
-        And user clicks the "search" button
+        And clicks the "search" button
         Then the search results should contain "CQA71.1"
 
         #Acquisition Funding
@@ -60,14 +60,14 @@ Feature: Advanced Search ­ Acquisition
         And user selects "Acquisition" from the "Record Type Select" drop down box
         And user enters "CQA-71 Funding source" in the "Funding Source" field
         And user selects "CQA-71 Funding source" from autocomplete options        
-        And user clicks the "search" button
+        And clicks the "search" button
         Then the search results should contain "CQA71.1"
 
         #Field Collection event name
         And clicks the "Advanced Search" button
         And user selects "Acquisition" from the "Record Type Select" drop down box
         And user enters "CQA-71 Test" in the "Field collection event name" field 
-        And user clicks the "search" button
+        And clicks the "search" button
         Then the search results should contain "CQA71.1"
 
         #Todays Date
@@ -89,7 +89,7 @@ Feature: Advanced Search ­ Acquisition
 
 	Scenario: Boolean field­-based search
         Given the user is in the "Create New" page
-        # And user selects the "Acquisition" radio button on the Create New page
+        And user selects the "Acquisition" radio button on the Create New page
         And user enters "CQA71.2" in the "Acquisition Reference Number" field
         And user selects "Purchase" from the "Acquisition Method" drop down box  
         And user enters "testtest" in the "Acquisition Reason" field
@@ -182,5 +182,5 @@ Feature: Advanced Search ­ Acquisition
 
         Then close the browser
 
-# Delete 71.1-.4!!!!!!
+
 	
