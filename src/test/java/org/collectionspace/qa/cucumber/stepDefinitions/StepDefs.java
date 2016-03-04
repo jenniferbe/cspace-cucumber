@@ -426,8 +426,8 @@ public class StepDefs {
     }
 
     @And("user clicks on \"([^\"]*)\" in the Used By sidebar")
-    public void and_user_clicks_on_field_in_the_used_by_sidebar(String field) throws Throwable {
-        String xpath = "//div[@class='csc-related-record csc-related-nonVocabularies']//td/a[contains(text(), '" + field +"')]";
+    public void and_user_clicks_on_term_in_the_used_by_sidebar(String term) throws Throwable {
+        String xpath = "//div[@class='csc-related-record csc-related-nonVocabularies']//td/a[contains(text(), '" + term +"')]";
         driver.findElement(By.xpath(xpath)).click();
         wait.until(textToBePresentInElementLocated(
                 By.className("csc-titleBar-value"), term));
