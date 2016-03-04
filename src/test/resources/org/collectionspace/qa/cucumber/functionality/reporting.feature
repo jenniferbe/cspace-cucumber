@@ -1,5 +1,6 @@
+#Created by Forest Yang
+
 @functionality
-@author FY
 
 Feature: Reporting
   #Test1
