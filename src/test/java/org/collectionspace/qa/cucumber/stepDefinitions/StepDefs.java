@@ -433,11 +433,4 @@ public class StepDefs {
                 By.className("csc-titleBar-value"), term));
     }
 
-    @Then("user clicks on \"([^\"]*)\" in the Used By sidebar")
-    public void then_user_clicks_on_field_in_the_used_by_sidebar(String field) throws Throwable {
-        String xpath = "//div[@class='csc-related-record csc-related-nonVocabularies']//td/a[contains(text(), '" + field +"')]";
-        driver.findElement(By.xpath(xpath)).click();
-        wait.until(textToBePresentInElementLocated(
-                By.className("csc-titleBar-value"), term));
-    }
 }
