@@ -1,5 +1,7 @@
+#Created by Forest Yang
+
 @functionality
-@author FY
+
 Feature: Object Current Location
 
   #Test 1a
