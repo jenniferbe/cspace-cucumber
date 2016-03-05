@@ -1,4 +1,4 @@
-@person
+@vocabterms
 Feature: Person Vocabulary Data Entry
 
 

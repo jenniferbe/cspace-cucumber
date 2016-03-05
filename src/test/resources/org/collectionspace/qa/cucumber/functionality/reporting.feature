@@ -1,7 +1,6 @@
 #Created by Forest Yang
 
 @functionality
-
 Feature: Reporting
   #Test1
   Scenario: Creating a Report

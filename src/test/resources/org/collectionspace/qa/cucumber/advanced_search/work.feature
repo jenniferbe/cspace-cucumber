@@ -1,5 +1,6 @@
-@supplementary_to_secondary
 #Created by Forest Yang on 1/8/2016
+
+@advancedsearch
 Feature: Advanced Search - Work
 
   #Test1

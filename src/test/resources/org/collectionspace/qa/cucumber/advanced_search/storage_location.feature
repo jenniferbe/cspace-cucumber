@@ -1,5 +1,6 @@
-@supplementary_to_secondary
 #Created by Forest Yang on 1/9/2016
+
+@advancedsearch
 Feature: Advanced Search - Storage Location
 
 	#Test1
