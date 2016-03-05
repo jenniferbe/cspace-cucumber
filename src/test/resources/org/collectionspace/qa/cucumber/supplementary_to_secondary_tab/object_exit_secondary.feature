@@ -1,5 +1,6 @@
-@supplementarysecondary
 #created by Forest Yang on Christmas Day 2015
+
+@supplementarysecondary
 Feature: Object Exit Secondary Tab
 
   #Test 1

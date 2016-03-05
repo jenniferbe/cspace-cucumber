@@ -1,6 +1,6 @@
 # Created by fy at ___?
-@functionality
 
+@functionality
 Feature: Search Results and Pagination
 
 

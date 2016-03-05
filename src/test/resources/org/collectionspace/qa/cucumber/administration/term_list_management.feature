@@ -1,5 +1,6 @@
-@administration
 #Created by Forest Yang on 12/22/2015
+
+@administration
 Feature: Term List Management
 
   #Test1 

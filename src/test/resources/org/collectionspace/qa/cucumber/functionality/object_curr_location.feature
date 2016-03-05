@@ -1,7 +1,6 @@
 #Created by Forest Yang
 
 @functionality
-
 Feature: Object Current Location
 
   #Test 1a

@@ -1,5 +1,6 @@
-@advanced_search
 #Created by forest yang on 1/5/2016
+
+@advancedsearch
 Feature: Advanced_Search - Extras
   
   #Prerequisite

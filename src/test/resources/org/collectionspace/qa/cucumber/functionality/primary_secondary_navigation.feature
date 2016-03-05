@@ -1,6 +1,6 @@
-@functionality
 #Created by Forest Yang on 12/28/2015
 
+@functionality
 Feature: Navigating between Primary and Secondary Tabs
 
   #Test1

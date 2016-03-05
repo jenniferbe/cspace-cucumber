@@ -1,6 +1,6 @@
-@advanced_search
 #created by forest yang on 12/28/2015
 
+@advancedsearch
 Feature: Advanced Search - Loans In
   #Test1
   Scenario: Search by Loan In Number

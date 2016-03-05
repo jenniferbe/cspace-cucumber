@@ -1,5 +1,6 @@
-@advanced_search
 #Created by Forest Yang on 12/302015
+
+@advancedsearch
 Feature: Advanced Search - Object Exit
 
   #Test1

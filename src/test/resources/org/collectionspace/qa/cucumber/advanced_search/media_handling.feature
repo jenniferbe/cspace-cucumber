@@ -1,5 +1,6 @@
-@advanced_search
-#Created by Forest Yang on 12/302015
+#Created by Forest Yang on 12/30/2015
+
+@advancedsearch
 Feature: Advanced Search - Media Handling
 
 #Decided to disinclude uploading an image, because an automated way of doing so seems.... dodgy

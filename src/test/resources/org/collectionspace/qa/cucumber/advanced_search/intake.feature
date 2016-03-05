@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-# Created by xxx on mo/day/2015
+#Created by Forest Yang on 1/8/2016
 
 @advancedsearch
-Feature: #Enter feature name here
-  # Enter feature description here
-
-  Scenario: # Enter scenario name here
-    # Enter steps here
-=======
-@supplementary_to_secondary
-#Created by Forest Yang on 1/8/2016
 Feature: Advanced Search - Intake
 
   #Test1
@@ -255,4 +246,3 @@ Feature: Advanced Search - Intake
     
 
       
->>>>>>> abfc52fd1dcd3d7689ec0133fa0090b863879464
