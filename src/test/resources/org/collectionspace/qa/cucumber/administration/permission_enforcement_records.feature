@@ -169,7 +169,7 @@ Feature: Permission Enforcement
       And clicks on the top nav search submit button
       And user clicks on a vocabulary term
     Then the vocabulary should be in "View Only" mode
-    The the "Save" button is not present
+    Then the "Save" button is not present
     Then the "Cancel" button is not present
       And selects "Record Type B" from the top nav search record type select field
       And clicks on the top nav search submit button
