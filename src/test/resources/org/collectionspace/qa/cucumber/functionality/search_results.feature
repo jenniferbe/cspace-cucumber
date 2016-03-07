@@ -166,7 +166,7 @@ Feature: Search Results and Pagination
   # No stepdef
           And clicks "6677" to load the record
       Then the titlebar should contain "6677"
-      The close the browser
+      Then close the browser
 
   Scenario: Perform a wildcard search
       Given user is on the "My CollectionSpace" page

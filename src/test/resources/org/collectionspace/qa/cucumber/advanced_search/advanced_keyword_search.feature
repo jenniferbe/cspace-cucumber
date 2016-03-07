@@ -99,7 +99,7 @@ Scenario: Boolean Keyword Search
         Create three loan in records with the phrase "queen size bed" in one of the text fields.
         Create three loan in records with the phrase "king size bed" in one of the text fields.
         Go to advanced search and select "loan in" from the record type drop down
-        Type "queen and bed" into the the keyword search text field and click search
+        Type "queen and bed" into the keyword search text field and click search
     Expected:
         The first three records you created should appear in the search results
     Actions:

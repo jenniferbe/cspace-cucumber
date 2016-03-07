@@ -95,7 +95,7 @@ Scenario: Display Name
     Expected:
         The Display Name should now be displayed above the tabs
     Actions:
-        Create a new repeatable Term block Click the the Green Tab with the "+" sign. Upper right hand corner above the Term Blocks.
+        Create a new repeatable Term block Click the Green Tab with the "+" sign. Upper right hand corner above the Term Blocks.
         Write a different Display Name
         Mark this Term block as "Preferred" then Save
     Expected:
