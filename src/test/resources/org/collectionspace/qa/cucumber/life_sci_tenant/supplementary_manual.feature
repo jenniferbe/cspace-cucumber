@@ -1,6 +1,6 @@
 # Created by xxx on mo/day/2015
 
-@lifesci
+@lstenant
 Feature: #Enter feature name here
   # Enter feature description here
 
