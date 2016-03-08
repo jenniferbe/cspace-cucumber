@@ -1,10 +1,10 @@
 # Created by xxx on mo/day/2015
 
-@frontpageandlogin
+@generalpages @frontpageandlogin
 Feature: #Enter feature name here
   # Enter feature description here
 
-      Scenario: User Creates a minimal Basic Person record
+  Scenario: User Creates a minimal Basic Person record
     Given user is on the "Create New" page
       And selects the "Person" radio button on the Create New page
     Then a drop down list should appear in the "Person" row
