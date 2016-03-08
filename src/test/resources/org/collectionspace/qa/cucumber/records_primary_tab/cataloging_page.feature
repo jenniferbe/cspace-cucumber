@@ -89,9 +89,11 @@ Scenario: Removing values from all fields
     Then the record is successfully saved   
     Then the message "IN2016.2" should be displayed
     Then the "Terms Used" area in the right sidebar should be empty.
-    All the fields should be saved as empty (check by browsing to the object record via find and edit)
+    # Check the following step by browsing to the object record via find and edit
+    # We may need to add intervening steps for this
+    Then all the fields should be saved as empty
     When user Deletes the Identification Number
-    And the user saves the record
+      And the user saves the record
     Then the message "Please specify an Identification Number" should be displayed above object formula
     Then Object should not be saved
 
