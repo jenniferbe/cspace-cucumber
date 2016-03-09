@@ -45,10 +45,10 @@ Feature: Intake Secondary Tab
       And clicks on result with text "NeedleDrop"
     Then the titlebar should contain "Cataloging"
     Then "Donnie" should appear in the "Procedures" sidebar
-      And clicks on "Donnie" from Procedures sidebar
+      And clicks on "Donnie" from "Procedures" area
     Then the titlebar should contain "Intake" 
-    Then "NeedleDrop" should appear in the Cataloging sidebar
-      And clicks on "NeedleDrop" from Cataloging sidebar
+    Then "NeedleDrop" should appear in the "Cataloging" area
+      And clicks on "NeedleDrop" from "Cataloging" area
     Then the titlebar should contain "Cataloging"
   #Test3: Search to relate Dialog
       And selects the "Intake" tab
@@ -62,7 +62,7 @@ Feature: Intake Secondary Tab
       And clicks the "Add to Current Record" button
     Then the dialog should be dismissed
     Then the newly added records should be displayed under "Related Intake Records"
-    Then the newly added records should be in the Procedures sidebar
+    Then the newly added records should be in the "Procedures" area
       And clicks on a newly added record 
     Then an "Edit Record" form for the newly added record should be displayed
     Then close the browser

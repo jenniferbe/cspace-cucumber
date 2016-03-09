@@ -302,24 +302,28 @@ Feature: Advanced Search ­Cataloging
 
 
         And navigates to the record with identification number "CQA72.1"
-        And clicks the delete button
+        And clicks on the delete button 
+
         Then a delete confirmation dialog should appear
-        And clicks the delete button 
+        And clicks on the delete button 
         Then the deletion should be confirmed in a dialog
         And navigates to the record with identification number "CQA72.2"
-        And clicks the delete button
+        And clicks on the delete button 
+
         Then a delete confirmation dialog should appear
-        And clicks the delete button 
+        And clicks on the delete button 
         Then the deletion should be confirmed in a dialog
         And navigates to the record with identification number "CQA72.3"
-        And clicks the delete button
+        And clicks on the delete button 
+
         Then a delete confirmation dialog should appear
-        And clicks the delete button 
+        And clicks on the delete button 
         Then the deletion should be confirmed in a dialog
         And navigates to the record with identification number "CQA72.3"
-        And clicks the delete button
+        And clicks on the delete button 
+
         Then a delete confirmation dialog should appear
-        And clicks the delete button 
+        And clicks on the delete button 
         Then the deletion should be confirmed in a dialog        
         Then close the browser
 

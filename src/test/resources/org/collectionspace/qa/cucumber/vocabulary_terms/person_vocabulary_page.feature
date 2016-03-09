@@ -65,22 +65,22 @@ Feature: Person Vocabulary Data Entry
 #need to test for clicking cancel changes button at top of page as well
   Scenario: Check that changes are not saved
     Given user is on a "Person" record
-      And clicks on the Cancel changes button at bottom of page
+      And clicks on the "Cancel changes" button at bottom of page
     Then nothing should happen
-    Then the Cancel changes button at top of page should not be clickable
-    Then the Cancel changes button at bottom of page should not be clickable
+    Then the "Cancel changes" button at top of page should not be clickable
+    Then the "Cancel changes" button at bottom of page should not be clickable
       And enters "revert this" in the "Display name" field
       And selects "Yoruba" from dropdown in  "Language" row
-      And clicks on the Cancel changes button at bottom of page
-    Then the Cancel changes button at top of page should be clickable
-    Then the Cancel changes button at bottom of page should be clickable
+      And clicks on the "Cancel changes" button at bottom of page
+    Then the "Cancel changes" button at top of page should be clickable
+    Then the "Cancel changes" button at bottom of page should be clickable
     Then record should be reverted to before changes were made
      And enters "Revertica Notica" in the "Display name" field
      And clicks on the Save button
-     And clicks on the Cancel changes button at bottom of page
+     And clicks on the "Cancel changes" button at bottom of page
     Then nothing should happen
-    Then the Cancel changes button at top of page should not be clickable
-    Then the Cancel changes button at bottom of page should not be clickable
+    Then the "Cancel changes" button at top of page should not be clickable
+    Then the "Cancel changes" button at bottom of page should not be clickable
     Then close the browser
 
 #Test 13
@@ -131,7 +131,7 @@ Feature: Person Vocabulary Data Entry
 #Test 23
   Scenario: Create Loan In and select "Joe Bean" from drop down menu for Lender using keyboard only
     Given user is on the "Create New" page
-      And selects the "Loan In" radio button on the "Create New" page
+      And selects the "Loan In" radio button on the Create New page
       And clicks on the Create button
     Then the titlebar should contain "Loan In"
       And enters "Joe" in the "Loan In" "Lender" field
@@ -143,7 +143,7 @@ Feature: Person Vocabulary Data Entry
 
   Scenario: Create Loan In and add nonexisting Person through Lender drop down
     Given user is on the "Create New" page
-      And selects the "Loan In" radio button on the "Create New" page
+      And selects the "Loan In" radio button on the Create New page
       And clicks on the Create button
     Then the titlebar should contain "Loan In"
       And enters "Does Not Exist" in the "Loan In" "Lender" field
@@ -186,7 +186,7 @@ Feature: Person Vocabulary Data Entry
       And saves the record
 # Uncertain stepdef 
       And navigates to the "Create New" page
-      And selects the "Loan In" radio button on the "Create New" page
+      And selects the "Loan In" radio button on the Create New page
       And clicks on the Create button
     Then the titlebar should contain "Loan In" 
       And fills in all the fields of the "Loan In" record
@@ -201,8 +201,8 @@ Feature: Person Vocabulary Data Entry
       And clicks on "Samuel Clemens" from dropdown in "Lender" row
     Then "Samuel Clemens" should be in the "Loan In" "Lender" field
       And saves the record
-    Then "Samuel Clemens" should appear in the Terms Used sidebar
-      And clicks on "Samuel Clemens" in the Terms Used sidebar
+    Then "Samuel Clemens" should appear in the "Terms Used" area
+      And clicks on "Samuel Clemens" in the "Terms Used" area
     Then the titlebar should contain "Samuel Clemens"
     Then close the browser
 
@@ -220,7 +220,7 @@ Feature: Person Vocabulary Data Entry
       And saves the record
 # Uncertain stepdef 
       And navigates to the "Create New" page
-      And selects the "Loan In" radio button on the "Create New" page
+      And selects the "Loan In" radio button on the Create New page
       And clicks on the Create button
     Then the titlebar should contain "Loan In" 
       And fills in all the fields of the "Loan In" record
@@ -235,8 +235,8 @@ Feature: Person Vocabulary Data Entry
       And clicks on "Mark Twain" from dropdown in "Lender" row
     Then "Mark Twain" should be in the "Loan In" "Lender" field
       And saves the record
-    Then "Mark Twain" should appear in the Terms Used sidebar
-      And clicks on "Mark Twain" in the Terms Used sidebar
+    Then "Mark Twain" should appear in the "Terms Used" area
+      And clicks on "Mark Twain" in the "Terms Used" area
     Then the titlebar should contain "Samuel Clemens"
     Then close the browser
 

@@ -43,10 +43,10 @@ Feature: Condition Check Secondary Tab
       And clicks on result with text "Aligeiers"
     Then the titlebar should contain "Cataloging"
     Then "blastphemie" should appear in the "Procedures" sidebar
-      And clicks on "blastphemie" from Procedures sidebar
+      And clicks on "blastphemie" from "Procedures" area
     Then the titlebar should contain "Condition Check" 
-    Then "Aligeiers" should appear in the Cataloging sidebar
-      And clicks on "Aligeiers" from Cataloging sidebar
+    Then "Aligeiers" should appear in the "Cataloging" area
+      And clicks on "Aligeiers" from "Cataloging" area
     Then the titlebar should contain "Cataloging"
   #Test3: Search to relate Dialog
       And selects the "Condition" tab
@@ -60,7 +60,7 @@ Feature: Condition Check Secondary Tab
       And clicks the "Add to Current Record" button
     Then the dialog should be dismissed
     Then the newly added records should be displayed under "Related Condition Check Records"
-    Then the newly added records should be in the Procedures sidebar
+    Then the newly added records should be in the "Procedures" area
       And clicks on a newly added record 
     Then an "Edit Record" form for the newly added record should be displayed
     Then close the browser

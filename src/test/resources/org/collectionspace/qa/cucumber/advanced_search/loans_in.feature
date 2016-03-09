@@ -71,10 +71,10 @@ Feature: Advanced Search - Loans In
     Then close the browser
 
   Scenario: Search by Loan In Renewal Application Date
-    Given user is on the "My Collectionspace" page#
-      And clicks on link to "Advanced Search" in upper right corner#
-    Then the titlebar should contain "Advanced Search"#
-      And selects "Loan In" from record type dropdown#
+    Given user is on the "My Collectionspace" page
+      And clicks on link to "Advanced Search" in upper right corner
+    Then the titlebar should contain "Advanced Search"
+      And selects "Loan In" from record type dropdown
       And enters "2011-01-01" in the "Advanced Search" "Loan In Renewal Application" field
       And clicks the "Search" button
     Then the search results should contain "textbook"

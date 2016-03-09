@@ -206,7 +206,7 @@ Feature: Advanced Search - Valuation
       And enters "Jane Doe" in the "Advanced Search" "Source" vocab field
       And clicks on "Jane Doe" from autocomplete options
       And clicks on the "Advanced Search" "Type" field
-    Then a drop down lis should appear in the "Type" row
+    Then a drop down list should appear in the "Type" row
       And selects "Current Value" from dropdown in "Type" row
       And clicks the "Search" button
     Then the search results should contain "Extreme Wealth"

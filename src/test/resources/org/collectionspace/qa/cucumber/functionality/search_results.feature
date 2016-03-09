@@ -17,10 +17,8 @@ Feature: Search Results and Pagination
           And enters "2345" in the "Cataloging" "Identification Number" field
           And saves the record
       Given user is on the "My CollectionSpace" page
-  #No Stepdef
-      Then "1234" should appear in the "Cataloging Records" form
-  #No Stepdef
-      Then "2345" should appear in the "Cataloging Records" form
+      Then "1234" should appear in the "Cataloging Records" area
+      Then "2345" should appear in the "Cataloging Records" area
       Then close the browser
 
 
@@ -28,12 +26,10 @@ Feature: Search Results and Pagination
 
   Scenario: Search for keyword "sesame"
       Given user is on the "My CollectionSpace" page
-  # No Stepdef
           And clicks "1234" to load the record
           And enters "sesame" in the "Cataloging" "Brief Description" field
           And saves the record
       Given user is on the "My CollectionSpace" page
-  # No Stepdef
           And clicks "2345" to load the record
           And enters "sesame" in the "Cataloging" "Distinguishing Features" field
           And saves the record
@@ -63,40 +59,24 @@ Feature: Search Results and Pagination
           And enters "sesame" in the top nav search field
           And selects "Cataloging" from the top nav search record type select field
           And clicks on the top nav search submit button
-  # No Stepdef
+
       Then the search results should contain "4567"
   # Skipping Advanced search section of the test.. No stepdefs at all
-  # No Stepdef
           And clicks the "Identification Number" heading above the list results
-  # No Stepdef
       Then results should sort by "Identification Number" in descending order
-  # No Stepdef
           And clicks the "Identification Number" heading above the list results
-  # No Stepdef
       Then results should sort by "Identification Number" in ascending order
-  # No Stepdef
           And clicks the "Summary" heading above the list results
-  # No Stepdef
       Then results should sort by "Title" in descending order
-  # No Stepdef
           And clicks the "Summary" heading above the list results
-  # No Stepdef
       Then results should sort by "Title" in ascending order
-  # No Stepdef
           And clicks the "Record Type" heading above the list results
-  # No Stepdef
       Then results should sort by "Record Type" in ascending order
-  # No Stepdef
           And clicks the "Record Type" heading above the list results
-  # No Stepdef
       Then results should sort by "Record Type" in descending order
-  # No Stepdef
           And clicks the "Updated At" heading above the list results
-  # No Stepdef
       Then results should sort by "Updated At" in ascending order
-  # No Stepdef
           And clicks the "Updated At" heading above the list results
-  # No Stepdef
       Then results should sort by "Updated At" in descending order
       Then close the browser
 

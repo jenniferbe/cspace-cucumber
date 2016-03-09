@@ -32,7 +32,7 @@ Feature: Location/Movement/Inventory Control Tab
 
     Scenario: Searching and adding multiple Location/Movement/Inventory records
         And clicks the "Add record" button 
-        And clicks the "search" button   maybe? 
+        And clicks the "search" button
         Then the search results should contain "CQA113.3" 
         Then the search results should contain "CQA113.2" 
 
@@ -54,7 +54,7 @@ Feature: Location/Movement/Inventory Control Tab
 
         And clicks the "Delete this relation." button
         Then a delete confirmation dialog should appear
-        And clicks the delete button 
+        And clicks on the delete button 
         Then the deletion should be confirmed in a dialog
         Then "CQA113.3" should not appear in the "Related Location/Movement/Inventory Records" area 
 
@@ -65,7 +65,7 @@ Feature: Location/Movement/Inventory Control Tab
 
         And clicks the "Delete this relation." button
         Then a delete confirmation dialog should appear
-        And clicks the delete button 
+        And clicks on the delete button 
         Then the deletion should be confirmed in a dialog
         Then "CQA113.3" should not appear in the "Related Location/Movement/Inventory Records" area 
 
@@ -120,9 +120,10 @@ Feature: Location/Movement/Inventory Control Tab
 
         ## Deleting records so we can reuse
         And navigates to the record with identification number "CQA113.4"
-        And clicks the delete button
+        And clicks on the delete button 
+
         Then a delete confirmation dialog should appear
-        And clicks the delete button 
+        And clicks on the delete button 
         Then the deletion should be confirmed in a dialog
         Then close the browser
 
@@ -145,7 +146,7 @@ Feature: Location/Movement/Inventory Control Tab
         And selects "CQA113.2" from the drop down options 
 
         And clicks the "cancel changes" button at the top of the page 
-        Then the "Reference Number" should be empty # makes sure it reverted
+        Then the "Reference Number" should be empty
 
 
         # Variation B
@@ -162,7 +163,7 @@ Feature: Location/Movement/Inventory Control Tab
         And clicks the "Delete" button 
         Then a delete confirmation dialog should appear
         And clicks the confirmation delete button
-        Then a deletion should be confirmed in a dialog
+        Then the deletion should be confirmed in a dialog
         Then close the browser
 
 
@@ -250,7 +251,7 @@ Feature: Location/Movement/Inventory Control Tab
         And saves the record
         Then the message "Location/Movement/Inventory successfully saved" should appear
 
-        Then The "Reference Number" field should contain "CQA113.11"
+        Then the "Reference Number" field should contain "CQA113.11"
         Then the "Normal Location" field should contain "CQA113_Loc_2"
         Then the "Fitness" field should contain "Suitable"
         Then the "Note" field should contain "CQA113 Test 13"
@@ -270,7 +271,8 @@ Feature: Location/Movement/Inventory Control Tab
         And clicks the "Go To Record" button       
         And clicks the "Delete" button
         Then a delete confirmation dialog should appear
-        And clicks the delete button         
+        And clicks on the delete button 
+         
 
         Then close the browser
 
@@ -315,7 +317,8 @@ Feature: Location/Movement/Inventory Control Tab
 
         And clicks the "Delete Relation" button on the row that reads "CQA113.7"
         Then delete confirmation dialog should appear
-        And clicks on the delete button
+        And clicks on the delete button 
+
         Then "CQA113.7" should not appear in the "Procedures" area
         Then "CQA113.7" should not appear in the "Related Location/Movement/Inventory Records" area
 
@@ -324,9 +327,10 @@ Feature: Location/Movement/Inventory Control Tab
         Then "CQA113_NE" should not appear in the "Related Location/Movement/Inventory Records" area   
         And selects the "Current Record" tab
 
-        And clicks the delete button
+        And clicks on the delete button 
+
         Then a delete confirmation dialog should appear
-        And clicks the delete button 
+        And clicks on the delete button 
         Then the deletion should be confirmed in a dialog
         Then close the browser
 
@@ -360,7 +364,7 @@ Feature: Location/Movement/Inventory Control Tab
 
         And clicks the "Delete this relation" button
         Then a delete confirmation dialog should appear
-        And clicks the delete button 
+        And clicks on the delete button 
         Then the deletion should be confirmed in a dialog
        
         Then "CQA113.8" should not appear in the "Procedures" area   
@@ -373,9 +377,10 @@ Feature: Location/Movement/Inventory Control Tab
         Then the "Related Location/Movement/Inventory Records" area should be empty
         
         And selects the "Current Record" tab 
-        And clicks the delete button
+        And clicks on the delete button 
+
         Then a delete confirmation dialog should appear
-        And clicks the delete button 
+        And clicks on the delete button 
         Then the deletion should be confirmed in a dialog
         Then close the browser  
 

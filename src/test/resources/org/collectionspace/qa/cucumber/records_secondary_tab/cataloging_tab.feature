@@ -54,6 +54,7 @@ Feature: #Enter feature name here
         And clicks the "Delete this relation." button
         Then a delete confirmation dialog should appear
         And clicks on the delete button 
+ 
         Then the deletion should be confirmed in a dialog
         Then "CQA99.3" should not appear in the "Related Cataloging Records" area 
 
@@ -63,6 +64,7 @@ Feature: #Enter feature name here
         And clicks the "Delete this relation." button
         Then a delete confirmation dialog should appear
         And clicks on the delete button 
+ 
         Then the deletion should be confirmed in a dialog
         Then "CQA99.2" should not appear in the "Related Cataloging Records" area 
         Then close the browser
@@ -111,9 +113,11 @@ Feature: #Enter feature name here
         Then "CQA99.4" should appear in the "Related Cataloging Records" area 
 
         And navigates to the record with identification number "CQA99.4"
-        And clicks on the delete button
+        And clicks on the delete button 
+
         Then a delete confirmation dialog should appear
         And clicks on the delete button 
+ 
         Then the deletion should be confirmed in a dialog
         Then close the browser
 
@@ -143,7 +147,7 @@ Feature: #Enter feature name here
         And clicks the "Delete" button 
         Then a delete confirmation dialog should appear
         And clicks the confirmation delete button
-        Then a deletion should be confirmed in a dialog
+        Then the deletion should be confirmed in a dialog
         Then close the browser
 
 	Scenario: Ensure all fields are properly saved #13 
@@ -890,6 +894,7 @@ Feature: #Enter feature name here
         And clicks the "Delete" button
         Then a delete confirmation dialog should appear
         And clicks on the delete button 
+ 
         Then the deletion should be confirmed in a dialog   
         Then close the browser
 
@@ -929,7 +934,8 @@ Feature: #Enter feature name here
 
         And clicks the "Delete Relation" button on the row that reads "CQA99.7"
         Then delete confirmation dialog should appear
-        And clicks on the delete button
+        And clicks on the delete button 
+
         Then "CQA99.7" should not appear in the "Procedures" area
         Then "CQA99.7" should not appear in the "Related Cataloging Records" area
 
@@ -938,9 +944,11 @@ Feature: #Enter feature name here
         Then "CQA99_NE" should not appear in the "Related Cataloging Records" area   
         And selects the "Current Record" tab
 
-        And clicks on the delete button
+        And clicks on the delete button 
+
         Then a delete confirmation dialog should appear
         And clicks on the delete button 
+ 
         Then the deletion should be confirmed in a dialog
         Then close the browser
 
@@ -971,6 +979,7 @@ Feature: #Enter feature name here
         And clicks the "Delete this relation" button
         Then a delete confirmation dialog should appear
         And clicks on the delete button 
+ 
         Then the deletion should be confirmed in a dialog
         # Then the record editor should no longer be displayed (below list)
         Then "CQA99.8" should not appear in the "Procedures" area   
@@ -981,9 +990,11 @@ Feature: #Enter feature name here
         Then the "Related Cataloging Records" area should be empty
         
         And selects the "Current Record" tab 
-        And clicks on the delete button
+        And clicks on the delete button 
+
         Then a delete confirmation dialog should appear
         And clicks on the delete button 
+ 
         Then the deletion should be confirmed in a dialog
         Then close the browser 
 

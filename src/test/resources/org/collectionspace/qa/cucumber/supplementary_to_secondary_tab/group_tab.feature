@@ -44,10 +44,10 @@ Feature: Group Secondary Tab
       And clicks on result with text "Gnerar"
     Then the titlebar should contain "Cataloging"
     Then "transpleb" should appear in the "Procedures" sidebar
-      And clicks on "transpleb" from Procedures sidebar
+      And clicks on "transpleb" from "Procedures" area
     Then the titlebar should contain "Group" 
-    Then "Gnerar" should appear in the Cataloging sidebar
-      And clicks on "Gnerar" from Cataloging sidebar
+    Then "Gnerar" should appear in the "Cataloging" area
+      And clicks on "Gnerar" from "Cataloging" area
     Then the titlebar should contain "Cataloging"
   #Test3: Search to relate Dialog
       And selects the "Group" tab
@@ -61,7 +61,7 @@ Feature: Group Secondary Tab
       And clicks the "Add to Current Record" button
     Then the dialog should be dismissed
     Then the newly added records should be displayed under "Related Group Records"
-    Then the newly added records should be in the Procedures sidebar
+    Then the newly added records should be in the "Procedures" area
       And clicks on a newly added record 
     Then an "Edit Record" form for the newly added record should be displayed
     Then close the browser

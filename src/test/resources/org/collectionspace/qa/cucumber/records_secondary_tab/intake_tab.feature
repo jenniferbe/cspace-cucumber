@@ -51,14 +51,14 @@ Feature: Intake Tab
 
     And clicks the "Delete this relation." button
     Then a delete confirmation dialog should appear
-    And clicks the delete button 
+    And clicks on the delete button 
     Then the deletion should be confirmed in a dialog
     Then "041319951.3" should not appear in the "Related Intake Records" area 
 
     And clicks on result with text "041319951.2"
     And clicks the "Delete this relation." button
     Then a delete confirmation dialog should appear 
-    And clicks the delete button 
+    And clicks on the delete button 
     Then the deletion should be confirmed in a dialog
     Then "041319951.2" should not appear in the "Related Intake Records" area 
 
@@ -86,9 +86,9 @@ Feature: Intake Tab
  
     
     Then a leave confirmation dialog should appear 
-    And clicks the close button  
+    And clicks close button  
     Then the dialog should be dismissed 
-    And clicks the cancel button 
+    And clicks cancel button 
     Then the "Intake Entry Number" should contain "04131995.4"
 
     And selects the "Current Record" tab
@@ -111,9 +111,10 @@ Feature: Intake Tab
     Then "041319953.4" should appear in the "Related Intake Records" area 
 
     And navigates to the record with identification number "041319953.4"
-    And clicks the delete button
+    And clicks on the delete button 
+
     Then a delete confirmation dialog should appear
-    And clicks the delete button 
+    And clicks on the delete button 
     Then the deletion should be confirmed in a dialog
     Then close the browser
 
@@ -148,7 +149,7 @@ Feature: Intake Tab
     And clicks the "Delete" button 
     Then a delete confirmation dialog should appear
     And clicks the confirmation delete button
-    Then a deletion should be confirmed in a dialog
+    Then the deletion should be confirmed in a dialog
     Then close the browser
 
 
@@ -345,7 +346,8 @@ Feature: Intake Tab
         And clicks the "Go To Record" button        
         And clicks the "Delete" button
         Then a delete confirmation dialog should appear
-        And clicks the delete button        
+        And clicks on the delete button 
+        
         Then close the browser
 
 
@@ -388,14 +390,16 @@ Feature: Intake Tab
 
     And clicks the "Delete Relation" button on the row that reads "0413199525"
     Then delete confirmation dialog should appear
-    And clicks on the delete button
+    And clicks on the delete button 
+
     Then "0413199525" should not appear in the "Procedures" area 
     Then "0413199525" should not appear in the "Related Intake Records" area
 
     And navigates to the record with identification number "0413199525"
-    And clicks the delete button
+    And clicks on the delete button 
+
     Then a delete confirmation dialog should appear
-    And clicks the delete button 
+    And clicks on the delete button 
     Then the deletion should be confirmed in a dialog
     Then close the browser
 
@@ -427,7 +431,7 @@ Feature: Intake Tab
 
     And clicks the "Delete this relation." button
     Then a delete confirmation dialog should appear
-    And clicks the delete button 
+    And clicks on the delete button 
     Then the deletion should be confirmed in a dialog
     Then "0413199527" should not appear in the "Procedures" area  
     Then "0413199527" should not appear in the "Related Intake Records" area
@@ -436,9 +440,10 @@ Feature: Intake Tab
     And selects the "Intake" tab 
     Then the "Related Intake Records" area should be empty
     And selects the "Current Record" tab 
-    And clicks the delete button
+    And clicks on the delete button 
+
     Then a delete confirmation dialog should appear
-    And clicks the delete button 
+    And clicks on the delete button 
     Then the deletion should be confirmed in a dialog
     Then close the browser 
 

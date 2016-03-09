@@ -70,8 +70,8 @@ Feature: Person Vocabulary Data Entry
         And saves the record		
       Then the record is successfully saved		
       Then "<choice>" should be in the "Cataloging" "<field>" vocab field		
-      Then "<choice>" should appear in the Terms Used sidebar		
-        And clicks on "<choice>" in the Terms Used sidebar		
+      Then "<choice>" should appear in the "Terms Used" area		
+        And clicks on "<choice>" in the "Terms Used" area		
       Then the titlebar should contain "Person"		
       Then "<choice>" should be in the "Person" "Display Name" field		
       Then close the browser		
@@ -114,18 +114,21 @@ Feature: Person Vocabulary Data Entry
       Then the "delete" button should not be clickable		
         And saves the record		
       Then the record is successfully saved		
-        And clicks on the delete button		
+        And clicks on the delete button 
+		
       Then delete confirmation dialog should appear		
         And clicks cancel button		
       Then "Delete Me" should be in the "Person" "Display Name" field		
-        And clicks on the delete button		
+        And clicks on the delete button 
+		
       Then delete confirmation dialog should appear		
         And clicks close button		
       Then "Delete Me" should be in the "Person" "Display Name" field		
-        And clicks on the delete button		
+        And clicks on the delete button 
+		
       Then delete confirmation dialog should appear		
         And clicks the confirmation delete button		
-      Then deletion should be confirmed in a dialog		
+      Then the deletion should be confirmed in a dialog		
         And clicks delete confirmation OK button		
         And enters "Delete Me" in the top nav search field		
         And clicks on the top nav search submit button		

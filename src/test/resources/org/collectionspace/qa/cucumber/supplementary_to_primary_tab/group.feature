@@ -74,16 +74,17 @@ Feature: Supplementary Manual QA - Group
     Then disables top and bottom "cancel" buttons
     Then enables top and bottom "delete" buttons
     # not sure if types should be specified
-    Then "Albert Smith" should appear in the Terms Used sidebar
-    Then "person" should appear in the Terms Used sidebar
-    Then "owner" should appear in the Terms Used sidebar
-      And clicks on "Albert Smith" in the Terms Used sidebar
+    Then "Albert Smith" should appear in the "Terms Used" area
+    Then "person" should appear in the "Terms Used" area
+    Then "owner" should appear in the "Terms Used" area
+      And clicks on "Albert Smith" in the "Terms Used" area
     Then the titlebar should contain "Albert Smith"
     # Used By steps do not exist
     Then "Blue" should in the Used By sidebar
       And clicks on "Blue" in the Used By sidebar
     Then the titlebar should contain "Blue"
-      And clicks on the delete button
+      And clicks on the delete button 
+
       And clicks the confirmation delete button
       And clicks delete confirmation OK button
     Then close the browser

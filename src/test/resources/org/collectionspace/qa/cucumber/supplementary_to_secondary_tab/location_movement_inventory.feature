@@ -67,9 +67,9 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory Secondary Tab
       And clicks the entry to load the record
     Then the titlebar should contain "Location/Movement/Inventory"
       And selects the "Cataloging" tab
-    Then "Dummy Record" should appear in the "Cataloging" sidebar
+    Then "Dummy Record" should appear in the "Cataloging" area
   # Not a step def
-      And clicks the link to "Dummy Record" in the "Cataloging" sidebar
+      And clicks the link to "Dummy Record" in the "Cataloging" area
     Then the titlebar should contain "Cataloging"
   # same the entry reference issue
     Then the entry should appear in the "Procedures" sidebar

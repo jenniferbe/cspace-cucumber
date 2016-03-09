@@ -134,7 +134,7 @@ Feature: User Management
 #         Select at least two roles for user
 #         Click delete
 #     Expected:
-#         The delete button should be inactive and nothing should happen
+#         The clicks on the delete button should be inactive and nothing should happen
 #     Actions:
 #         Click Save
 #     Expected:
@@ -208,7 +208,7 @@ Feature: User Management
 #         go to collectionspace/ui/html/administration.html
 #         Select user you are logged in as, from users list
 #     Expected:
-#         No delete button should appear
+#         No clicks on the delete button should appear
 #
 # Warnings on leaving an unsaved screen
 # Scenario: Allow to leave page on empty fields on user creation
@@ -319,7 +319,7 @@ Feature: User Management
 #         click on user you logged in as on the list to the left
 #     Expected:
 #         The status select-box should be missing or disabled
-#         The delete button should be disabled
+#         The clicks on the delete button should be disabled
 #
 # Search area
 # Scenario: Search area prerequisite

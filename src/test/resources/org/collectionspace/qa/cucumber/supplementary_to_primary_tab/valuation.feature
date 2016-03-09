@@ -96,16 +96,17 @@ Feature: Supplementary Manual QA - Valuation
     Then disables top and bottom "cancel" buttons
     Then enables top and bottom "delete" buttons
     # not sure if types should be specified
-    Then "Foo Clan" should appear in the Terms Used sidebar
-    Then "person" should appear in the Terms Used sidebar
-    Then "valueSource" should appear in the Terms Used sidebar
-      And clicks on "Foo Clan" in the Terms Used sidebar
+    Then "Foo Clan" should appear in the "Terms Used" area
+    Then "person" should appear in the "Terms Used" area
+    Then "valueSource" should appear in the "Terms Used" area
+      And clicks on "Foo Clan" in the "Terms Used" area
     Then the titlebar should contain "Foo Clan"
     # Used By steps do not exist
     Then "1.2.3.4.5" should in the Used By sidebar
       And clicks on "1.2.3.4.5" in the Used By sidebar
     Then the titlebar should contain "1.2.3.4.5"
-      And clicks on the delete button
+      And clicks on the delete button 
+
       And clicks the confirmation delete button
       And clicks delete confirmation OK button
     Then close the browser

@@ -17,16 +17,16 @@ Feature: Reporting
     Then a dropdown should appear under "Run Report"
   #Probably no stepdefs for phrase : under run report
       And selects "Acquisition Summary (PDF)" from dropdown under "Run Report"
-      And clicks the "Run" button under "Run Report"
+      And clicks the "Run" button
   # lack of confirmation dialog stepdefs
     Then a confirmation dialog should appear
       And clicks the "Cancel" button in the confirmation dialog
     Then the dialog should be dismissed
-      And clicks the "Run" button under "Run Report"
+      And clicks the "Run" button
     Then a confirmation dialog should appear
       And clicks the close symbol in the confirmation dialog
     Then the dialog should be dismissed
-      And clicks the "Run" button under "Run Report"
+      And clicks the "Run" button
     Then a confirmation dialog should appear
       And clicks the "Run" button in the confirmation dialog
   # Inadequate stepdefs for the following sequence
@@ -46,7 +46,7 @@ Feature: Reporting
       And clicks the link to "102938" 
     Then the titlebar should contain "102938"
       And selects "Acquisition Summary (MS Word)" from dropdown under "Run Report"
-      And clicks the "Run" button under "Run Report"
+      And clicks the "Run" button
     Then a confirmation dialog should appear
       And clicks the "Run" button in the confirmation dialog
     Then a progress bar should appear
@@ -63,7 +63,7 @@ Feature: Reporting
       And clicks the link to "102938" 
     Then the titlebar should contain "102938"
       And selects "Acquisition Summary (MS Excel)" from dropdown under "Run Report"
-      And clicks the "Run" button under "Run Report"
+      And clicks the "Run" button
     Then a confirmation dialog should appear
       And clicks the "Run" button in the confirmation dialog
     Then a progress bar should appear
@@ -80,7 +80,7 @@ Feature: Reporting
       And clicks the link to "102938" 
     Then the titlebar should contain "102938"
       And selects "Acquisition Summary (MS PPT)" from dropdown under "Run Report"
-      And clicks the "Run" button under "Run Report"
+      And clicks the "Run" button
     Then a confirmation dialog should appear
       And clicks the "Run" button in the confirmation dialog
     Then a progress bar should appear
@@ -97,7 +97,7 @@ Feature: Reporting
       And clicks the link to "102938" 
     Then the titlebar should contain "102938"
       And selects "Acquisition Summary (CSV)" from dropdown under "Run Report"
-      And clicks the "Run" button under "Run Report"
+      And clicks the "Run" button
     Then a confirmation dialog should appear
       And clicks the "Run" button in the confirmation dialog
     Then a progress bar should appear
@@ -114,7 +114,7 @@ Feature: Reporting
       And clicks the link to "102938" 
     Then the titlebar should contain "102938"
       And selects "Acquisition Summary (TSV)" from dropdown under "Run Report"
-      And clicks the "Run" button under "Run Report"
+      And clicks the "Run" button
     Then a confirmation dialog should appear
       And clicks the "Run" button in the confirmation dialog
     Then a progress bar should appear
@@ -132,12 +132,12 @@ Feature: Reporting
     Then the titlebar should contain "102938"
       And enters "10293847" in the "Acquisition" "Acquisition Reference Number" field
       And selects "Acquisition Summary (PDF)" from dropdown under "Run Report"
-      And clicks the "Run" button under "Run Report"
-    Then a confirmation dialog should appear with the message "Save unsaved changes and run this report?"
+      And clicks the "Run" button
+    Then a dialog containing the message "Save unsaved changes and run this report?" should be displayed
       And clicks the "Cancel" button in the confirmation dialog
     Then the dialog should be dismissed
-      And clicks the "Run" button under "Run Report"
-    Then a confirmation dialog should appear with the message "Save unsaved changes and run this report?" 
+      And clicks the "Run" button
+    Then a dialog containing the message "Save unsaved changes and run this report?" should be displayed
       And clicks the "Save and Run" button in the confirmation dialog
     Then a progress bar should appear
     Then a browser dialog should appear

@@ -55,7 +55,7 @@ Feature: Exhibition Planning Tab
         Then the "Exhibition Number" field should contain "CQA105.3"
         And clicks the "Delete this relation." button
         Then a delete confirmation dialog should appear
-        And clicks the delete button 
+        And clicks on the delete button 
         Then the deletion should be confirmed in a dialog
         Then "CQA105.3" should not appear in the "Related Exhibition Records" area 
 
@@ -65,7 +65,7 @@ Feature: Exhibition Planning Tab
         Then the "Exhibition Number" field should contain "CQA105.2"
         And clicks the "Delete this relation." button
         Then a delete confirmation dialog should appear
-        And clicks the delete button 
+        And clicks on the delete button 
         Then the deletion should be confirmed in a dialog
         Then "CQA105.2" should not appear in the "Related Exhibition Records" area 
         Then close the browser
@@ -117,9 +117,10 @@ Feature: Exhibition Planning Tab
         Then "CQA105.4" should appear in the "Related Exhibition Records" area 
 
         And navigates to the record with identification number "CQA105.4"
-        And clicks the delete button
+        And clicks on the delete button 
+
         Then a delete confirmation dialog should appear
-        And clicks the delete button 
+        And clicks on the delete button 
         Then the deletion should be confirmed in a dialog
         Then close the browser
 
@@ -150,7 +151,7 @@ Feature: Exhibition Planning Tab
         And clicks the "Delete" button 
         Then a delete confirmation dialog should appear
         And clicks the confirmation delete button
-        Then a deletion should be confirmed in a dialog
+        Then the deletion should be confirmed in a dialog
         Then close the browser
 
 
@@ -353,7 +354,7 @@ Feature: Exhibition Planning Tab
         And clicks the "Go To Record" button        
         And clicks the "Delete" button
         Then a delete confirmation dialog should appear
-        And clicks the delete button 
+        And clicks on the delete button 
         Then the deletion should be confirmed in a dialog        
         Then close the browser
 
@@ -397,7 +398,8 @@ Feature: Exhibition Planning Tab
 
         And clicks the "Delete Relation" button on the row that reads "CQA105.7"
         Then delete confirmation dialog should appear
-        And clicks on the delete button
+        And clicks on the delete button 
+
         Then "CQA105.7" should not appear in the "Procedures" area
         Then "CQA105.7" should not appear in the "Related Exhibition Records" area
 
@@ -406,9 +408,10 @@ Feature: Exhibition Planning Tab
         Then "CQA105_NE" should not appear in the "Related Exhibition Records" area   
         And selects the "Current Record" tab
 
-        And clicks the delete button
+        And clicks on the delete button 
+
         Then a delete confirmation dialog should appear
-        And clicks the delete button 
+        And clicks on the delete button 
         Then the deletion should be confirmed in a dialog
         Then close the browser
 
@@ -437,7 +440,7 @@ Feature: Exhibition Planning Tab
 
         And clicks the "Delete this relation" button
         Then a delete confirmation dialog should appear
-        And clicks the delete button 
+        And clicks on the delete button 
         Then the deletion should be confirmed in a dialog
         # Then the record editor should no longer be displayed (below list)
         Then "CQA105.8" should not appear in the "Procedures" area   
@@ -448,9 +451,10 @@ Feature: Exhibition Planning Tab
         Then the "Related Exhibition Records" area should be empty
         
         And selects the "Current Record" tab 
-        And clicks the delete button
+        And clicks on the delete button 
+
         Then a delete confirmation dialog should appear
-        And clicks the delete button 
+        And clicks on the delete button 
         Then the deletion should be confirmed in a dialog
         Then close the browser 
 
@@ -475,8 +479,9 @@ Feature: Exhibition Planning Tab
 	    Then the search results should contain "CQA105.9"
 	    And clicks on result with text "CQA105.9"
 	    Then "CQA105.9" should be in the "Identification Number" field
-	    And clicks the delete button
+	    And clicks on the delete button 
+
 	    Then a delete confirmation dialog should appear  
-	    And clicks the delete button 
+	    And clicks on the delete button 
 	    Then the deletion should be confirmed in a dialog
 	    Then close the browser 

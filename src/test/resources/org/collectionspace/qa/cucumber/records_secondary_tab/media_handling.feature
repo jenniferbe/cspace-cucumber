@@ -31,7 +31,7 @@ Feature: Media Handling Page Tab
 
 	Scenario: Searching and adding multiple Media Handling records #3
 		And clicks the "Add record" button 
-	    And clicks the "search" button   maybe? 
+	    And clicks the "search" button
 	    Then the search results should contain "CQA114.3" 
 	    Then the search results should contain "CQA114.2" 
 
@@ -51,7 +51,7 @@ Feature: Media Handling Page Tab
 	    Then the "Identification Number" field should contain "CQA114.3"
 	    And clicks the "Delete this relation." button
 	    Then a delete confirmation dialog should appear
-	    And clicks the delete button 
+	    And clicks on the delete button 
 	    Then the deletion should be confirmed in a dialog
 	    Then "CQA114.3" should not appear in the "Related Media Handling Records" area
 
@@ -60,7 +60,7 @@ Feature: Media Handling Page Tab
 	    Then the "Identification Number" field should contain "CQA114.2"
 	    And clicks the "Delete this relation." button
 	    Then a delete confirmation dialog should appear
-	    And clicks the delete button 
+	    And clicks on the delete button 
 	    Then the deletion should be confirmed in a dialog
 	    Then "CQA114.2" should not appear in the "Related Media Handling Records" area 
 
@@ -112,9 +112,10 @@ Feature: Media Handling Page Tab
 	    Then "CQA114.4" should appear in the "Related Media Handling Records" area 
 
 	    And navigates to the record with identification number "CQA114.4"
-	    And clicks the delete button
+	    And clicks on the delete button 
+
 	    Then a delete confirmation dialog should appear
-	    And clicks the delete button 
+	    And clicks on the delete button 
 	    Then the deletion should be confirmed in a dialog
 	    Then close the browser
 
@@ -145,7 +146,7 @@ Feature: Media Handling Page Tab
 	    And clicks the "Delete" button 
 	    Then a delete confirmation dialog should appear
 	    And clicks the confirmation delete button
-	    Then a deletion should be confirmed in a dialog
+	    Then the deletion should be confirmed in a dialog
 	    Then close the browser
 
 
@@ -279,7 +280,8 @@ Feature: Media Handling Page Tab
         And clicks the "Go To Record" button	    
 	    And clicks the "Delete" button
 	    Then a delete confirmation dialog should appear
-	    And clicks the delete button         
+	    And clicks on the delete button 
+         
         Then close the browser
 
 	Scenario: Testing links and "Go To Record" works #10
@@ -318,7 +320,8 @@ Feature: Media Handling Page Tab
 
 	    And clicks the "Delete Relation" button on the row that reads "CQA114.7"
 	    Then delete confirmation dialog should appear
-	    And clicks on the delete button
+	    And clicks on the delete button 
+
 	    Then "CQA114.7" should not appear in the "Procedures" area
 	    Then "CQA114.7" should not appear in the "Related Media Handling Records" area
 
@@ -327,9 +330,10 @@ Feature: Media Handling Page Tab
 	    Then "CQA114_NE" should not appear in the "Related Media Handling Records" area   
 	    And selects the "Current Record" tab
 
-	    And clicks the delete button
+	    And clicks on the delete button 
+
 	    Then a delete confirmation dialog should appear
-	    And clicks the delete button 
+	    And clicks on the delete button 
 	    Then the deletion should be confirmed in a dialog
 	    Then close the browser
 
@@ -359,7 +363,7 @@ Feature: Media Handling Page Tab
 
 	    And clicks the "Delete this relation" button
 	    Then a delete confirmation dialog should appear
-	    And clicks the delete button 
+	    And clicks on the delete button 
 	    Then the deletion should be confirmed in a dialog
 
 	    Then "CQA114.8" should not appear in the "Procedures" area   
@@ -370,9 +374,10 @@ Feature: Media Handling Page Tab
 	    Then the "Related Media Handling Records" area should be empty
 	    
 	    And selects the "Current Record" tab 
-	    And clicks the delete button
+	    And clicks on the delete button 
+
 	    Then a delete confirmation dialog should appear
-	    And clicks the delete button 
+	    And clicks on the delete button 
 	    Then the deletion should be confirmed in a dialog
 	    Then close the browser 
 

@@ -106,16 +106,17 @@ Feature: Supplementary Manual QA - Loan In
     Then disables top and bottom "cancel" buttons
     Then enables top and bottom "delete" buttons
     # not sure if types should be specified
-    Then "John Doe" should appear in the Terms Used sidebar
-    Then "person" should appear in the Terms Used sidebar
-    Then "lender" should appear in the Terms Used sidebar
-      And clicks on "John Doe" in the Terms Used sidebar
+    Then "John Doe" should appear in the "Terms Used" area
+    Then "person" should appear in the "Terms Used" area
+    Then "lender" should appear in the "Terms Used" area
+      And clicks on "John Doe" in the "Terms Used" area
     Then the titlebar should contain "John Doe"
     # Used By steps do not exist
     Then "1.2.3.4.5" should in the Used By sidebar
       And clicks on "1.2.3.4.5" in the Used By sidebar
     Then the titlebar should contain "1.2.3.4.5"
-      And clicks on the delete button
+      And clicks on the delete button 
+
       And clicks the confirmation delete button
       And clicks delete confirmation OK button
     Then close the browser

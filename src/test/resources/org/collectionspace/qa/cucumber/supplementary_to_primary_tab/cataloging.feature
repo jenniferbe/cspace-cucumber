@@ -161,16 +161,17 @@ Feature: Supplementary Manual QA - Cataloging
     Then disables top and bottom "cancel" buttons
     Then enables top and bottom "delete" buttons
     # not sure if types should be specified
-    Then "Object" should appear in the Terms Used sidebar
-    Then "concept" should appear in the Terms Used sidebar
-    Then "contentConcept" should appear in the Terms Used sidebar
-      And clicks on "Object" in the Terms Used sidebar
+    Then "Object" should appear in the "Terms Used" area
+    Then "concept" should appear in the "Terms Used" area
+    Then "contentConcept" should appear in the "Terms Used" area
+      And clicks on "Object" in the "Terms Used" area
     Then the titlebar should contain "Object"
     # Used By steps do not exist
     Then "1.2.3.4.5" should appear in the Used By sidebar
       And clicks on "1.2.3.4.5" in the Used By sidebar
     Then the titlebar should contain "1.2.3.4.5"
-      And clicks on the delete button
+      And clicks on the delete button 
+
       And clicks the confirmation delete button
       And clicks delete confirmation OK button
     Then close the browser

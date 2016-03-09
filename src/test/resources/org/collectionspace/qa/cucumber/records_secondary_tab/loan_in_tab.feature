@@ -30,7 +30,7 @@ Feature: Loan In Tab
 	
 	Scenario: Test 5-> Searching and ading multiple Loan In records. Continued from Test 3
 		And clicks the "Add record" button 
-	    And clicks the "search" button   maybe? 
+	    And clicks the "search" button
 	    Then the search results should contain "CQA111.2"
 	    Then the search results should contain "CQA111.3" 
 
@@ -46,25 +46,25 @@ Feature: Loan In Tab
 	    Then "CQA111.3" should appear in the "Procedures" area   
 
 
-	    And clicks on result with text "CQA111.2" # Might not work. #Change num?
-	    Then an "Edit Loan In Record" form should be displayed # Be more specific?  
+	    And clicks on result with text "CQA111.2"
+	    Then an "Edit Loan In Record" form should be displayed
 	   	Then the "Loan In Number" field should contain "CQA111.2"
 
 	   	And clicks on the result with text "CQA111.3"
-	    Then an "Edit Loan In Record" form should be displayed # Be more specific?  
+	    Then an "Edit Loan In Record" form should be displayed
 	    Then the "Loan In Number" field should contain "CQA111.3"
 
 
 	    And clicks the "Delete this relation." button
 	    Then a delete confirmation dialog should appear
-	    And clicks the delete button 
+	    And clicks on the delete button 
 	    Then the deletion should be confirmed in a dialog
 	    Then "CQA111.3" should not appear in the "Related Loan In Records" area 
 
 	    And clicks on result with text "CQA111.2"
 	    And clicks the "Delete this relation." button
 	    Then a delete confirmation dialog should appear 
-	    And clicks the delete button 
+	    And clicks on the delete button 
 	    Then the deletion should be confirmed in a dialog
 	    Then "CQA111.2" should not appear in the "Related Loan In Records" area 
 
@@ -86,14 +86,14 @@ Feature: Loan In Tab
 		### VARIATION A	    
 	    And selects the "Current Record" tab
 	    Then a leave confirmation dialog should appear 
-	    And clicks the close button 
+	    And clicks close button 
 	    Then the "Loan In Number" field should contain "CQA111.4"
 
 
 	    ## VARIATION B
 	    And selects the "Current Record" tab
 	    Then the dialog should be dismissed 
-	    And clicks the cancel button 
+	    And clicks cancel button 
 	    Then the "Loan In Number" field should contain "CQA111.4"
 
 	    ## Variation D
@@ -116,9 +116,10 @@ Feature: Loan In Tab
 
 	    ## Deleting records so we can reuse
 	    And navigates to the record with identification number "CQA111.4"
-	    And clicks the delete button
+	    And clicks on the delete button 
+
 	    Then a delete confirmation dialog should appear
-	    And clicks the delete button 
+	    And clicks on the delete button 
 	    Then the deletion should be confirmed in a dialog
 	    Then close the browser
 
@@ -152,7 +153,7 @@ Feature: Loan In Tab
 	    And clicks the "Delete" button 
 	    Then a delete confirmation dialog should appear
 	    And clicks the confirmation delete button
-	    Then a deletion should be confirmed in a dialog
+	    Then the deletion should be confirmed in a dialog
 	    Then close the browser
 
 
@@ -266,7 +267,8 @@ Feature: Loan In Tab
         And clicks the "Go To Record" button        
         And clicks the "Delete" button
         Then a delete confirmation dialog should appear
-        And clicks the delete button
+        And clicks on the delete button 
+
         
         Then close the browser
 
@@ -306,7 +308,8 @@ Feature: Loan In Tab
 
 	    And clicks the "Delete Relation" button on the row that reads "CQA111.6"
 	    Then delete confirmation dialog should appear
-	    And clicks on the delete button
+	    And clicks on the delete button 
+
 	    Then "CQA111.6" should not appear in the "Procedures" area
 	    Then "CQA111.6" should not appear in the "Related Loan In Records" area
 
@@ -315,9 +318,10 @@ Feature: Loan In Tab
 	    Then "CQA111_NE" should not appear in the "Related Loan In Records" area   
 	    And selects the "Current Record" tab
 
-	    And clicks the delete button
+	    And clicks on the delete button 
+
 	    Then a delete confirmation dialog should appear
-	    And clicks the delete button 
+	    And clicks on the delete button 
 	    Then the deletion should be confirmed in a dialog
 	    Then close the browser
 
@@ -350,19 +354,20 @@ Feature: Loan In Tab
 
 	    And clicks the "Delete this relation" button
 	    Then a delete confirmation dialog should appear
-	    And clicks the delete button 
+	    And clicks on the delete button 
 	    Then the deletion should be confirmed in a dialog
 	    Then "CQA111.7" should not appear in the "Procedures" area   
-		Then "CQA111.7" should not appear in the "Related Loan In Records Area"
+		Then "CQA111.7" should not appear in the "Related Loan In Records" area
 
 	    And navigates to the record with identification number "CQA111.7"
 	    And selects the "Loan In" tab 
 	    Then the "Related Loan In Records" area should be empty
 	    
 	    And selects the "Current Record" tab 
-	    And clicks the delete button
+	    And clicks on the delete button 
+
 	    Then a delete confirmation dialog should appear
-	    And clicks the delete button 
+	    And clicks on the delete button 
 	    Then the deletion should be confirmed in a dialog
 	    Then close the browser 
 

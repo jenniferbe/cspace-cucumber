@@ -93,26 +93,31 @@ Feature: Loan Out Page Testing
     And selects the "Loan Out" radio button on the Create New page
     And clicks on the Create button
     And enters "deleteloanouttest123" in the "Loan Out Number" field
-    And clicks on the delete button
+    And clicks on the delete button 
+
     Then the "delete" button should not be clickable
-    When user clicks on the delete button
+    And clicks on the delete button 
+
     Then the "delete" button should not be clickable
     When user clicks on the Save button
     Then the record is successfully saved
-    When user clicks on the delete button
+    And clicks on the delete button 
+
     Then delete confirmation dialog should appear
     When user clicks cancel button
     Then the delete confirmation dialog should disappear
     # And #nothing else should happen
-    When user clicks on the delete button
+    And clicks on the delete button 
+
     Then delete confirmation dialog should appear
     When user clicks close button
     Then the delete confirmation dialog should disappear
     # And #nothing else should happen
-    When user clicks on the delete button
+    And clicks on the delete button 
+
     Then delete confirmation dialog should appear
-    When user clicks the confirmation delete button
-    Then deletion should be confirmed in a dialog
+    And clicks the confirmation delete button
+    Then the deletion should be confirmed in a dialog
     # And #you should be redirected to Find and Edit page
     When selects "Loan Out" from the top nav search record type select field
     And enters "deleteloanouttest123" in the top nav search field
@@ -133,23 +138,26 @@ Feature: Loan Out Page Testing
     And enters "loanout456" in the "Loan Out Number" field
     And clicks on the Save button
     And selects the "Current Record" tab
-    And clicks on the delete button
-    Then deletion should be confirmed in a dialog
+    And clicks on the delete button 
+
+    Then the deletion should be confirmed in a dialog
     And the deletion dialog should contain "and its relationships"
     When user clicks cancel button
     Then the delete confirmation dialog should disappear
     # And #nothing else should happen
-    When user clicks on the delete button
+    And clicks on the delete button 
+
     Then delete confirmation dialog should appear
     And the deletion dialog should contain "and its relationships"
     When user clicks close button
     Then the delete confirmation dialog should disappear
     # And #nothing else should happen
-    When user clicks on the delete button
+    And clicks on the delete button 
+
     Then delete confirmation dialog should appear
     And the deletion dialog should contain "and its relationships"
-    When user clicks the confirmation delete button
-    Then deletion should be confirmed in a dialog
+    And clicks the confirmation delete button
+    Then the deletion should be confirmed in a dialog
     # And #you should be redirected to Find and Edit page
     When selects "Loan Out" from the top nav search record type select field
     And enters "loandelete2" in the top nav search field

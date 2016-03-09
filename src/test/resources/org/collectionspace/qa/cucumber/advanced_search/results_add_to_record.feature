@@ -31,8 +31,8 @@ Feature: Advanced Search results Add to Record
         And clicks on result with text "CQA-86 Group"
         And selects the "Cataloging" tab 
 
-        Then "120415.1" should appear in the "Cataloging" sidebar  
-        Then "120415.2" should appear in the "Cataloging" sidebar  
+        Then "120415.1" should appear in the "Cataloging" area  
+        Then "120415.2" should appear in the "Cataloging" area  
 
         Then "CQA86.1" should appear in the "Related Cataloging Records" area
         Then "CQA86.2" should appear in the "Related Cataloging Records" area
@@ -42,9 +42,10 @@ Feature: Advanced Search results Add to Record
         Then "CQA86.1" should not appear in the "Related Cataloging Records" area
 
         And selects the "Current Record" tab 
-        And clicks the delete button
+        And clicks on the delete button 
+
         Then a delete confirmation dialog should appear
-        And clicks the delete button 
+        And clicks on the delete button 
         Then the deletion should be confirmed in a dialog
         Then close the browser 
 
