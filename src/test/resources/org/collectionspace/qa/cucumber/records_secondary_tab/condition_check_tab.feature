@@ -6,7 +6,7 @@ Feature: Condition Check Tab Test Plan
 	Scenario: Working Condition Check Secondary Tab #1
         Given user is in the "My CollectionSpace" page
        
-        And user goes to the record with identification number "CQA103_E" #not empty
+        And user goes to the record with identification number "CQA103_E"
         And user selects the "Condition" tab     
         Then the "Related Condition Check Records" area should be empty
        
@@ -39,7 +39,7 @@ Feature: Condition Check Tab Test Plan
 
         And user selects the box with result "CQA103.3" 
         And user selects the box with result "CQA103.2"  
-        And user clicks the "Add to current record" button #needs Step def #7
+        And user clicks the "Add to current record" button
 
         #Expected, Group #1
         Then the dialogue should be dismissed 
@@ -68,7 +68,7 @@ Feature: Condition Check Tab Test Plan
         Then "CQA103.2" should not appear in the "Related Condition Check Records" area 
         Then close the browser
 
-	Scenario: Warning when navigating away form new Condition Check record #7
+	Scenario: Warning when navigating away form new Condition Check record 
         Given user is in the "My CollectionSpace" page
         And user goes to the record with identification number "CQA103_NE"
         Then "CQA103_NE" should be in the "Identification Number" field
@@ -92,7 +92,7 @@ Feature: Condition Check Tab Test Plan
         #Variation B
         And user selects the "Current Record" tab
         Then a leave confirmation dialogue should appear  
-        And user clicks the "cancel" button  #might not work
+        And user clicks the "cancel" button
         Then the "Condition Check/Assessment Reference Number" field should contain "CQA103.4"
 
         ## Variation D
@@ -122,7 +122,7 @@ Feature: Condition Check Tab Test Plan
         Given user is in the "My CollectionSpace" page
         And user goes to the record with identification number "CQA103_NE"
         And user selects the "Condition" tab
-        And user clicks the "Add record" button #needs step def
+        And user clicks the "Add record" button 
         And user clicks the "Create new" button
 
         # Variation A
@@ -156,11 +156,11 @@ Feature: Condition Check Tab Test Plan
 
         And user clicks on the "+ Add Record" button
         And clicks on the Create button
-        And user saves the record # click the save button
-        Then the message "Please specify a Condition Check Number" should appear #fail
+        And user saves the record
+        Then the message "Please specify a Condition Check Number" should appear
         And user enters "CQA103.11" in the "Condition Check/Assessment Reference Number" field
         And user saves the record
-        Then the message "Relation successfully created." should appear #success!
+        Then the message "Relation successfully created." should appear
 
         And user selects "Medium" from the "Object Audit Category" drop down box
         And user selects "Medium" from the "Conservation Treatment Priority" drop down box
@@ -202,7 +202,7 @@ Feature: Condition Check Tab Test Plan
         And user enters "2016-11-11" in the "Salvage Priority Code Date" field
         And user enters "103103" in the "Salvage Priority Code" field
         And user saves the record
-        Then the message "Condition Check successfully saved" should appear #success!        
+        Then the message "Condition Check successfully saved" should appear        
         
         ## test 11 thens
 
@@ -288,7 +288,7 @@ Feature: Condition Check Tab Test Plan
         And user enters "2017-11-11" in the "Salvage Priority Code Date" field
         And user enters "102" in the "Salvage Priority Code" field
         And user saves the record
-        Then the message "Condition Check successfully saved" should appear #success!  
+        Then the message "Condition Check successfully saved" should appear  
 
         ## test 11 thens
 
@@ -352,29 +352,29 @@ Feature: Condition Check Tab Test Plan
         And user goes to the record with identification number "CQA103_NE"
         And user selects the "Condition" tab
 
-        And user clicks the "Add record" button #needs step def
+        And user clicks the "Add record" button 
         And clicks on the Create button
-        And user enters "CQA103.7" in the "Condition Check/Assessment Reference Number" field #might not work 
+        And user enters "CQA103.7" in the "Condition Check/Assessment Reference Number" field
         And user saves the record
         
-        And user clicks the "Delete Relation" button on the row that reads "CQA103.7" #Green "X" button. Needs step def
+        And user clicks the "Delete Relation" button on the row that reads "CQA103.7"
         Then delete confirmation dialogue should appear
         And user clicks cancel button
         Then the dialogue should be dismissed
         Then the "Related Condition Check Records" area should contain "CQA103.7"
 
-        And user clicks the "Delete Relation" button on the row that reads "CQA103.7" #Green "X" button. Needs step def. Again
+        And user clicks the "Delete Relation" button on the row that reads "CQA103.7". Again
         Then delete confirmation dialogue should appear
         And user clicks the "close" button
         Then the dialogue should be dismissed
         Then the "Related Condition Check Records" area should contain "CQA103.7"
 
 
-        And user clicks the "Delete Relation" button on the row that reads "CQA103.7" #Green "X" button. Needs step def. Last time.
+        And user clicks the "Delete Relation" button on the row that reads "CQA103.7". Last time.
         Then delete confirmation dialogue should appear
         And user clicks on the delete button
         Then "CQA103.7" should not appear in the "Procedures" area
-        Then "CQA103.7" should not appear in the "Related Condition Check Records" area   #not logged
+        Then "CQA103.7" should not appear in the "Related Condition Check Records" area
 
         And user goes to the record with identification number "CQA103.7"
         And user selects the "Condition" tab 
@@ -393,26 +393,26 @@ Feature: Condition Check Tab Test Plan
         Then "CQA103_NE" should be in the "Identification Number" field
 
         And user selects the "Condition" tab 
-        And user clicks the "Add record" button #needs step def
+        And user clicks the "Add record" button 
         And clicks on the Create button
-        And user enters "CQA103.8" in the "Condition Check/Assessment Reference Number" field #might not work 
+        And user enters "CQA103.8" in the "Condition Check/Assessment Reference Number" field
         And user saves the record
         And user clicks on result with text "CQA103.8"
         
         And user clicks the "Delete this relation" button
         Then a delete confirmation dialogue should appear  
-        And user clicks cancel button # click cancel
+        And user clicks cancel button
         Then the dialogue should be dismissed  
         Then the "Related Condition Check Records" area should contain "CQA103.8"
 
         And user clicks the "Delete this relation" button
         Then a delete confirmation dialogue should appear  
-        And user clicks close button # close button == close symbol?
+        And user clicks close button
         Then the dialogue should be dismissed  
         Then the "Related Condition Check Records" area should contain "CQA103.8"
 
         And user clicks the "Delete this relation" button
-        Then a delete confirmation dialogue should appear #needs Step
+        Then a delete confirmation dialogue should appear
         And user clicks the delete button 
         Then the deletion should be confirmed in a dialogue
         # Then the record editor should no longer be displayed (below list)

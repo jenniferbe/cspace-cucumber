@@ -11,7 +11,7 @@ Feature: Media Handling Page Tab
 	    And user selects the "Media Handling" tab
 	    Then "CQA114.1" should appear in the "Related Media Handling Records" area
 
-	    And user goes to the record with identification number "CQA114_E" #not empty
+	    And user goes to the record with identification number "CQA114_E"
 	    Then the "Related Media Handling Records" area should be empty
 	    Then close the browser
 
@@ -20,24 +20,24 @@ Feature: Media Handling Page Tab
 		And user goes to the record with identification number "CQA114_NE"
 
 		#Variation A
-		And user clicks the "Add record" button #needs step def
+		And user clicks the "Add record" button 
 	    And user clicks the "close" button 
 	    Then the "Related Media Handling Records" area should only contain "CQA114.1"
 
 	    #Variation B
 	    And user clicks the "Add record" button
-	    And user presses the "ESC" key # Needs StepDef
+	    And user presses the "ESC" key 
 	    Then the "Related Media Handling Records" area should only contain "CQA114.1"
 
 	Scenario: Searching and adding multiple Media Handling records #3
-		And user clicks the "Add record" button #NeedsStepDef
+		And user clicks the "Add record" button 
 	    And user clicks the "search" button   maybe? 
 	    Then the search results should contain "CQA114.3" 
 	    Then the search results should contain "CQA114.2" 
 
 	    And user selects the box with result "CQA114.3" 
 	    And user selects the box with result "CQA114.2"  
-	    And user clicks the "Add to current record" button #needs Step def #7
+	    And user clicks the "Add to current record" button  
 
 	    #Expected, Group #1
 	    Then the dialogue should be dismissed 
@@ -74,11 +74,11 @@ Feature: Media Handling Page Tab
 	    Then "CQA114_NE" should be in the "Identification Number" field
 	    And user selects the "Media Handling" tab
 
-	    And user clicks the "Add record" button #needs step def
+	    And user clicks the "Add record" button 
 		And user clicks the "Create New" button
 
 		Then the dialogue should be dismissed
-		Then the message "Creating new record..." should be displayed # needs StepDef
+		Then the message "Creating new record..." should be displayed 
 		And user enters "CQA114.4" in the "Media Handling Number" field 
 
 
@@ -91,7 +91,7 @@ Feature: Media Handling Page Tab
 		#Variation B
 		And user selects the "Current Record" tab
 	    Then a leave confirmation dialogue should appear  
-	    And user clicks the "cancel" button  #might not work
+	    And user clicks the "cancel" button
 	    Then the "Identification Number" field should contain "CQA114.4"
 
 	    ## Variation D
@@ -122,7 +122,7 @@ Feature: Media Handling Page Tab
 		Given user is in the "My CollectionSpace" page
 		And user goes to the record with identification number "CQA114_NE"
 		And user selects the "Media Handling" tab
-	    And user clicks the "Add record" button #needs step def
+	    And user clicks the "Add record" button 
 	    And user clicks the "Create new" button
 
 	    # Variation A
@@ -130,12 +130,12 @@ Feature: Media Handling Page Tab
 	   	Then the "cancel changes" button at the bottom of the page should not be clickable
 	    Then the "cancel changes" button at the top of the page should not be clickable
 	    
-	    And user enters "CQA114.5" in the "Identification Number" field #might not work
+	    And user enters "CQA114.5" in the "Identification Number" field
 	    And user clicks the "cancel changes" button 
     	Then the "Identification Number" field should be empty
 
 	    # Variation B 
-	    And user enters "CQA114.5" in the "Identification Number" field #might not work
+	    And user enters "CQA114.5" in the "Identification Number" field
 	    And user clicks the "save" button 
 	    Then the "cancel changes" button at the top of the page should not be clickable 
     	Then the "cancel changes" button at the bottom of the page should not be clickable 
@@ -157,11 +157,11 @@ Feature: Media Handling Page Tab
 
         And user clicks the "+ Add Record" button
         And clicks on the Create button
-        And user saves the record # click the save button
-        Then the message "Please specify an Identification Number" should appear #fail
+        And user saves the record
+        Then the message "Please specify an Identification Number" should appear
         And user enters "CQA114.11" in the "Identification Number" field
         And user saves the record
-        Then the message "Relation successfully created." should appear #success!  
+        Then the message "Relation successfully created." should appear  
         
         And user enters "CQA114 Form Filling" in the "Title" field
         And user selects "base" from the "Part" drop down box
@@ -192,7 +192,7 @@ Feature: Media Handling Page Tab
         And user selects "Cesar Villalobos" from autocomplete options
         And user enters "CQA114 description box" in the "Description" field   
         And user saves the record
-        Then the message "Media Handling successfully saved" should appear #succes
+        Then the message "Media Handling successfully saved" should appear
 
         ## test 11 thens
 
@@ -250,7 +250,7 @@ Feature: Media Handling Page Tab
         And user selects "Jennifer Be" from autocomplete options
         And user enters "CQA114 description box pt 2" in the "Description" field   
         And user saves the record
-        Then the message "Media Handling successfully saved" should appear #succes
+        Then the message "Media Handling successfully saved" should appear
 
         ## test 13 thens
 
@@ -278,7 +278,7 @@ Feature: Media Handling Page Tab
         Then the "Languages" field should contain "German"
         And user clicks the "Go To Record" button	    
 	    And user clicks the "Delete" button
-	    Then a delete confirmation dialogue should appear #needs Step
+	    Then a delete confirmation dialogue should appear
 	    And user clicks the delete button         
         Then close the browser
 
@@ -303,24 +303,24 @@ Feature: Media Handling Page Tab
 	    And user enters "CQA114.7" in the "Identification Number" field 
 	    And user saves the record
 	    
-	    And user clicks the "Delete Relation" button on the row that reads "CQA114.7" #Green "X" button. Needs step def
-	    Then delete confirmation dialogue should appear # Then the dialogue should appear asking you to delete this relation
+	    And user clicks the "Delete Relation" button on the row that reads "CQA114.7"
+	    Then delete confirmation dialogue should appear
 	    And user clicks cancel button
-	    Then the dialogue should be dismissed #needs Step def
+	    Then the dialogue should be dismissed 
 	    Then the "Related Media Handling Records" area should contain "CQA114.7"
 
-	    And user clicks the "Delete Relation" button on the row that reads "CQA114.7" #Green "X" button. Needs step def. Again
+	    And user clicks the "Delete Relation" button on the row that reads "CQA114.7". Again
 	    Then delete confirmation dialogue should appear
-	    And user clicks the "close" button # close button == close symbol?  ???
+	    And user clicks the "close" button
 	    Then the dialogue should be dismissed
 	    Then the "Related Media Handling Records" area should contain "CQA114.7"
 
 
-	    And user clicks the "Delete Relation" button on the row that reads "CQA114.7" #Green "X" button. Needs step def. Last time.
+	    And user clicks the "Delete Relation" button on the row that reads "CQA114.7". Last time.
 	    Then delete confirmation dialogue should appear
 	    And user clicks on the delete button
-	    Then "CQA114.7" should not appear in the "Procedures" area   #notlogged
-	    Then "CQA114.7" should not appear in the "Related Media Handling Records" area   #not logged
+	    Then "CQA114.7" should not appear in the "Procedures" area
+	    Then "CQA114.7" should not appear in the "Related Media Handling Records" area
 
     	And user goes to the record with identification number "CQA114.7"
         And user selects the "Media Handling" tab 
@@ -339,9 +339,9 @@ Feature: Media Handling Page Tab
 	    Then "CQA114_NE" should be in the "Identification Number" field
 
 	    And user selects the "Media Handling" tab
-	    And user clicks the "Add record" button #needs step def
+	    And user clicks the "Add record" button 
 	    And clicks on the Create button
-	    And user enters "CQA114.8" in the "Identification Number" field #might not work 
+	    And user enters "CQA114.8" in the "Identification Number" field
 	    And user saves the record
 	    And user clicks on result with text "CQA114.8"
 	    
@@ -353,12 +353,12 @@ Feature: Media Handling Page Tab
 
 	    And user clicks the "Delete this relation" button
 	    Then a delete confirmation dialogue should appear 
-	    And user clicks close button # close button == close symbol?
+	    And user clicks close button
 	    Then the dialogue should be dismissed 
 	    Then the "Related Media Handling Records" area should contain "CQA114.8"
 
 	    And user clicks the "Delete this relation" button
-	    Then a delete confirmation dialogue should appear #needs Step
+	    Then a delete confirmation dialogue should appear
 	    And user clicks the delete button 
 	    Then the deletion should be confirmed in a dialogue
 

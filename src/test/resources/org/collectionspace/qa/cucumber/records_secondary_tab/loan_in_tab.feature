@@ -19,24 +19,24 @@ Feature: Loan In Tab
  
 
 	Scenario: Test 3 -> Continued from Test 1
-		And user clicks the "Add record" button #needs step def
+		And user clicks the "Add record" button 
 	    # Then  a pop-up window will appear with the option to add a relationship to an existing record or create a new record
 	    And user clicks the "close" button 
 	    Then the "Related Loan In Records" area should only contain "CQA111.1"
 
 	    And user clicks the "Add record" button
-	    And user presses the "ESC" key # Needs StepDef
+	    And user presses the "ESC" key 
 	    Then the "Related Loan In Records" area should only contain "CQA111.1"
 	
 	Scenario: Test 5-> Searching and ading multiple Loan In records. Continued from Test 3
-		And user clicks the "Add record" button #NeedsStepDef
+		And user clicks the "Add record" button 
 	    And user clicks the "search" button   maybe? 
 	    Then the search results should contain "CQA111.2"
 	    Then the search results should contain "CQA111.3" 
 
-	    And user selects the box with result "CQA111.3"  #needs Step def #6
-	    And user selects the box with result "CQA111.2"  #needs Step def #6 
-	    And user clicks the "Add to current record" button #needs Step def #7
+	    And user selects the box with result "CQA111.3"
+	    And user selects the box with result "CQA111.2"
+	    And user clicks the "Add to current record" button
 
 	    #Expected, Group #1
 	    Then the dialogue should be dismissed 
@@ -129,7 +129,7 @@ Feature: Loan In Tab
 		And user goes to the record with identification number "CQA111_NE"
 		
 		And user selects the "Loan In" tab
-	    And user clicks the "Add record" button #needs step def
+	    And user clicks the "Add record" button 
 	    And user clicks the "Create new" button
 
 	    # Variation A
@@ -137,12 +137,12 @@ Feature: Loan In Tab
 	   	Then the "cancel changes" button at the bottom of the page should not be clickable  
 	    Then the "cancel changes" button at the top of the page should not be clickable  
 	    
-	    And user enters "CQA111.5" in the "Loan In Number" field #might not work
+	    And user enters "CQA111.5" in the "Loan In Number" field
 	    And user clicks the "cancel changes" button 
     	Then the "Loan In Number" field should be empty
 
 	    # Variation B
-	    And user enters "CQA111.5" in the "Loan In Number" field #might not work
+	    And user enters "CQA111.5" in the "Loan In Number" field
 	    And user clicks the "save" button 
 	    Then the "cancel changes" button at the top of the page should not be clickable 
     	Then the "cancel changes" button at the bottom of the page should not be clickable 
@@ -164,7 +164,7 @@ Feature: Loan In Tab
 
         And user clicks the "+ Add Record" button
         And clicks on the Create button
-        And user saves the record # click the save button
+        And user saves the record
         Then the message "Please specify a Loan In Number" should appear 
 
         And user enters "CQA111.11" in the "Loan In Number" field
@@ -265,7 +265,7 @@ Feature: Loan In Tab
         Then the "Loan Renewal Application Date" field should contain "2017-06-01"
         And user clicks the "Go To Record" button        
         And user clicks the "Delete" button
-        Then a delete confirmation dialogue should appear #needs Step
+        Then a delete confirmation dialogue should appear
         And user clicks the delete button
         
         Then close the browser
@@ -287,28 +287,28 @@ Feature: Loan In Tab
 	    And user goes to the record with identification number "CQA111_NE"
 	    And user selects the "Loan In" tab 
 
-	    And user clicks the "Add record" button #needs step def
+	    And user clicks the "Add record" button 
 	    And clicks on the Create button
-	    And user enters "CQA111.6" in the "Loan In Number" field #might not work 
+	    And user enters "CQA111.6" in the "Loan In Number" field
 	    And user saves the record
 
-	    And user clicks the "Delete Relation" button on the row that reads "CQA111.6" #Green "X" button. Needs step def
-	    Then delete confirmation dialogue should appear # Then the dialogue should appear asking you to delete this relation
+	    And user clicks the "Delete Relation" button on the row that reads "CQA111.6"
+	    Then delete confirmation dialogue should appear
 	    And user clicks cancel button
-	    Then the dialogue should be dismissed #needs Step def
+	    Then the dialogue should be dismissed 
 	    Then the "Related Loan In Records" area should contain "CQA111.6"
 
-	    And user clicks the "Delete Relation" button on the row that reads "CQA111.6" #Green "X" button. Needs step def. Again
+	    And user clicks the "Delete Relation" button on the row that reads "CQA111.6". Again
 	    Then delete confirmation dialogue should appear
-	    And user clicks the "close" button # close button == close symbol?  ???
+	    And user clicks the "close" button
 	    Then the dialogue should be dismissed
 	    Then the "Related Loan In Records" area should contain "CQA111.6"
 
-	    And user clicks the "Delete Relation" button on the row that reads "CQA111.6" #Green "X" button. Needs step def. Last time.
+	    And user clicks the "Delete Relation" button on the row that reads "CQA111.6". Last time.
 	    Then delete confirmation dialogue should appear
 	    And user clicks on the delete button
-	    Then "CQA111.6" should not appear in the "Procedures" area   #notlogged
-	    Then "CQA111.6" should not appear in the "Related Loan In Records" area   #not logged
+	    Then "CQA111.6" should not appear in the "Procedures" area
+	    Then "CQA111.6" should not appear in the "Related Loan In Records" area
 
         And user goes to the record with identification number "CQA111.6"
         And user selects the "Loan In" tab 
@@ -329,27 +329,27 @@ Feature: Loan In Tab
 	    Then "CQA111_NE" should be in the "Identification Number" field
 
 	    And user selects the "Loan In" tab 
-	    And user clicks the "Add record" button #needs step def
+	    And user clicks the "Add record" button 
 	    And clicks on the Create button
-	    And user enters "CQA111.7" in the "Loan In Number" field #might not work 
+	    And user enters "CQA111.7" in the "Loan In Number" field
 	    And user saves the record
 	    And user clicks on result with text "CQA111.7"
 
 	    
 	    And user clicks the "Delete this relation." button
 	    Then a delete confirmation dialogue should appear  
-	    And user clicks cancel button # click cancel
+	    And user clicks cancel button
 	    Then the dialogue should be dismissed  
 	    Then the "Related Loan In Records" area should contain "CQA111.7"
 
 	    And user clicks the "Delete this relation" button
 	    Then a delete confirmation dialogue should appear  
-	    And user clicks close button # close button == close symbol?
+	    And user clicks close button
 	    Then the dialogue should be dismissed  
 	    Then the "Related Loan In Records" area should contain "CQA111.7"
 
 	    And user clicks the "Delete this relation" button
-	    Then a delete confirmation dialogue should appear #needs Step
+	    Then a delete confirmation dialogue should appear
 	    And user clicks the delete button 
 	    Then the deletion should be confirmed in a dialogue
 	    Then "CQA111.7" should not appear in the "Procedures" area   

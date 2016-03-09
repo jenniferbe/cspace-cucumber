@@ -7,7 +7,7 @@ Feature: #Enter feature name here
 	Scenario: Working cataloging tab #1 
         Given user is in the "My CollectionSpace" page
        
-        And user goes to the record with identification number "CQA99_E" #not empty
+        And user goes to the record with identification number "CQA99_E"
         And user selects the "Cataloging" tab     
         Then the "Related Cataloging Records" area should be empty
        
@@ -39,7 +39,7 @@ Feature: #Enter feature name here
 
         And user selects the box with result "CQA99.3" 
         And user selects the box with result "CQA99.2"  
-        And user clicks the "Add to current record" button #needs Step def #7
+        And user clicks the "Add to current record" button  
 
         #Expected, Group #1
         Then the dialogue should be dismissed 
@@ -67,7 +67,7 @@ Feature: #Enter feature name here
         Then "CQA99.2" should not appear in the "Related Cataloging Records" area 
         Then close the browser
 
-	Scenario: Warning when navigating away from new cataloging records #7 
+	Scenario: Warning when navigating away from new cataloging records  
         Given user is in the "My CollectionSpace" page
         And user goes to the record with identification number "CQA99_NE"
         Then "CQA99_NE" should be in the "Identification Number" field
@@ -91,7 +91,7 @@ Feature: #Enter feature name here
         #Variation B
         And user selects the "Current Record" tab
         Then a leave confirmation dialogue should appear  
-        And user clicks the "cancel" button  #might not work
+        And user clicks the "cancel" button
         Then the "Identification Number" field should contain "CQA99.4"
 
         ## Variation D
@@ -121,7 +121,7 @@ Feature: #Enter feature name here
         Given user is in the "My CollectionSpace" page
         And user goes to the record with identification number "CQA99_NE"
         And user selects the "Cataloging" tab
-        And user clicks the "Add record" button #needs step def
+        And user clicks the "Add record" button 
         And user clicks the "Create new" button
 
         # Variation A
@@ -154,11 +154,11 @@ Feature: #Enter feature name here
 
         And user clicks the "+ Add Record" button
         And clicks on the Create button
-        And user saves the record # click the save button
-        Then the message "Please specify an Identification Number" should appear #fail
+        And user saves the record
+        Then the message "Please specify an Identification Number" should appear
         And user enters "CQA99.11" in the "Identification Number" field
         And user saves the record
-        Then the message "Relation successfully created." should appear #success!
+        Then the message "Relation successfully created." should appear
 
         #Object ID Information
         And user enters "99" in the "Number of Objects" field
@@ -888,7 +888,7 @@ Feature: #Enter feature name here
 
         And user clicks the "Go To Record" button       
         And user clicks the "Delete" button
-        Then a delete confirmation dialogue should appear #needs Step
+        Then a delete confirmation dialogue should appear
         And user clicks on the delete button 
         Then the deletion should be confirmed in a dialogue   
         Then close the browser
@@ -915,23 +915,23 @@ Feature: #Enter feature name here
         And user enters "CQA99.7" in the "Identification Number" field
         And user saves the record
         
-        And user clicks the "Delete Relation" button on the row that reads "CQA99.7" #Green "X" button. Needs step def
+        And user clicks the "Delete Relation" button on the row that reads "CQA99.7"
         Then delete confirmation dialogue should appear 
         And user clicks cancel button
         Then the dialogue should be dismissed
         Then the "Related Cataloging Records" area should contain "CQA99.7"
 
-        And user clicks the "Delete Relation" button on the row that reads "CQA99.7" #Green "X" button. Needs step def. Again
+        And user clicks the "Delete Relation" button on the row that reads "CQA99.7". Again
         Then delete confirmation dialogue should appear
         And user clicks the "close" button
         Then the dialogue should be dismissed
         Then the "Related Cataloging Records" area should contain "CQA99.7"
 
-        And user clicks the "Delete Relation" button on the row that reads "CQA99.7" #Green "X" button. Needs step def. Last time.
+        And user clicks the "Delete Relation" button on the row that reads "CQA99.7". Last time.
         Then delete confirmation dialogue should appear
         And user clicks on the delete button
-        Then "CQA99.7" should not appear in the "Procedures" area   #notlogged
-        Then "CQA99.7" should not appear in the "Related Cataloging Records" area   #not logged
+        Then "CQA99.7" should not appear in the "Procedures" area
+        Then "CQA99.7" should not appear in the "Related Cataloging Records" area
 
         And user goes to the record with identification number "CQA99.7"
         And user selects the "Cataloging" tab 
@@ -964,12 +964,12 @@ Feature: #Enter feature name here
 
         And user clicks the "Delete this relation" button
         Then a delete confirmation dialogue should appear  
-        And user clicks close button # close button == close symbol?
+        And user clicks close button
         Then the dialogue should be dismissed  
         Then the "Related Cataloging Records" area should contain "CQA99.8"
 
         And user clicks the "Delete this relation" button
-        Then a delete confirmation dialogue should appear #needs Step
+        Then a delete confirmation dialogue should appear
         And user clicks on the delete button 
         Then the deletion should be confirmed in a dialogue
         # Then the record editor should no longer be displayed (below list)

@@ -7,7 +7,7 @@ Feature: Exhibition Planning Tab
  	Scenario: Working Exhibition Secondary Tab #1
         Given user is in the "My CollectionSpace" page
        
-        And user goes to the record with identification number "CQA105_E" #not empty
+        And user goes to the record with identification number "CQA105_E"
         And user selects the "Exhibition" tab     
         Then the "Related Exhibition Records" area should be empty
        
@@ -40,7 +40,7 @@ Feature: Exhibition Planning Tab
 
         And user selects the box with result "CQA105.3" 
         And user selects the box with result "CQA105.2"  
-        And user clicks the "Add to current record" button #needs Step def #7
+        And user clicks the "Add to current record" button
 
         #Expected, Group #1
         Then the dialogue should be dismissed 
@@ -70,7 +70,7 @@ Feature: Exhibition Planning Tab
         Then "CQA105.2" should not appear in the "Related Exhibition Records" area 
         Then close the browser
 
-	Scenario: Warning when navigating away from new Exhibition record #7
+	Scenario: Warning when navigating away from new Exhibition record 
         Given user is in the "My CollectionSpace" page
         And user goes to the record with identification number "CQA105_NE"
         Then "CQA105_NE" should be in the "Identification Number" field
@@ -96,7 +96,7 @@ Feature: Exhibition Planning Tab
         #Variation B
         And user selects the "Current Record" tab
         Then a leave confirmation dialogue should appear  
-        And user clicks the "cancel" button  #might not work
+        And user clicks the "cancel" button
         Then the "Exhibition Number" field should contain "CQA105.4"
 
         ## Variation D
@@ -163,11 +163,11 @@ Feature: Exhibition Planning Tab
 
         And user clicks the "+ Add Record" button
         And clicks on the Create button
-        And user saves the record # click the save button
-        Then the message "Please specify an Exhibition Number" should appear #fail
+        And user saves the record
+        Then the message "Please specify an Exhibition Number" should appear
         And user enters "CQA105.11" in the "Exhibition Number" field
         And user saves the record
-        Then the message "Relation successfully created." should appear #success!
+        Then the message "Relation successfully created." should appear
       
 
         And user enters "CQA105_Test_11" in the "Exhibition Title" field
@@ -204,7 +204,7 @@ Feature: Exhibition Planning Tab
         And user enters "CQA105.11.4" in the "Location" field
         And user enters "CQA105.11.5" in the "Objects" field
         And user enters "CQA105.11.6" in the "Remarks" field
-        And user selects "Labels written" from the "Status" drop down box #Conflicting status boxes?
+        And user selects "Labels written" from the "Status" drop down box
         And user enters "2016-05-05" in the "Status Date" field
         And user enters "CQA105.11.6" in the "Remarks" field
         And user enters "Yes" in the "Object" field
@@ -219,7 +219,7 @@ Feature: Exhibition Planning Tab
         And user enters "CQA105.11.12" in the "Note" field
 
         And user saves the record
-        Then the message "Exhibition successfully saved" should appear #succes
+        Then the message "Exhibition successfully saved" should appear
 
         Then the "Exhibition Title" field should contain "CQA105_Test_11"
         Then the "Exhibition Type" field should contain "Permanent"
@@ -295,7 +295,7 @@ Feature: Exhibition Planning Tab
         And user enters "CQA105.11.13.4" in the "Location" field
         And user enters "CQA105.11.13.5" in the "Objects" field
         And user enters "CQA105.11.13.6" in the "Remarks" field
-        And user selects "Labels written" from the "Status" drop down box #Conflicting status boxes?
+        And user selects "Labels written" from the "Status" drop down box
         And user enters "2017-05-05" in the "Status Date" field
         And user enters "CQA105.11.13.6" in the "Remarks" field
         And user enters "No" in the "Object" field
@@ -310,7 +310,7 @@ Feature: Exhibition Planning Tab
         And user enters "CQA105.11.13.12" in the "Note" field
 
         And user saves the record
-        Then the message "Exhibition successfully saved" should appear #succes
+        Then the message "Exhibition successfully saved" should appear
 
         Then the "Exhibition Title" field should contain "CQA105_Test_11 Test 13"
         Then the "Exhibition Type" field should contain "Temporary"
@@ -382,24 +382,24 @@ Feature: Exhibition Planning Tab
         And user enters "CQA105.7" in the "Exhibition Number" field
         And user saves the record
         
-        And user clicks the "Delete Relation" button on the row that reads "CQA105.7" #Green "X" button. Needs step def
-        Then delete confirmation dialogue should appear # Then the dialogue should appear asking you to delete this relation
+        And user clicks the "Delete Relation" button on the row that reads "CQA105.7"
+        Then delete confirmation dialogue should appear
         And user clicks cancel button
         Then the dialogue should be dismissed
         Then the "Related Exhibition Records" area should contain "CQA105.7"
 
-        And user clicks the "Delete Relation" button on the row that reads "CQA105.7" #Green "X" button. Needs step def. Again
+        And user clicks the "Delete Relation" button on the row that reads "CQA105.7". Again
         Then delete confirmation dialogue should appear
-        And user clicks the "close" button # close button == close symbol?  ???
+        And user clicks the "close" button
         Then the dialogue should be dismissed
         Then the "Related Exhibition Records" area should contain "CQA105.7"
 
 
-        And user clicks the "Delete Relation" button on the row that reads "CQA105.7" #Green "X" button. Needs step def. Last time.
+        And user clicks the "Delete Relation" button on the row that reads "CQA105.7". Last time.
         Then delete confirmation dialogue should appear
         And user clicks on the delete button
         Then "CQA105.7" should not appear in the "Procedures" area
-        Then "CQA105.7" should not appear in the "Related Exhibition Records" area   #not logged
+        Then "CQA105.7" should not appear in the "Related Exhibition Records" area
 
         And user goes to the record with identification number "CQA105.7"
         And user selects the "Exhibition" tab 
@@ -417,26 +417,26 @@ Feature: Exhibition Planning Tab
         Then "CQA105_NE" should be in the "Identification Number" field
 
         And user selects the "Exhibition" tab 
-        And user clicks the "Add record" button #needs step def
+        And user clicks the "Add record" button 
         And clicks on the Create button
-        And user enters "CQA105.8" in the "Exhibition Number" field #might not work 
+        And user enters "CQA105.8" in the "Exhibition Number" field
         And user saves the record
         And user clicks on result with text "CQA105.8"
         
         And user clicks the "Delete this relation" button
         Then a delete confirmation dialogue should appear  
-        And user clicks cancel button # click cancel
+        And user clicks cancel button
         Then the dialogue should be dismissed  
         Then the "Related Exhibition Records" area should contain "CQA105.8"
 
         And user clicks the "Delete this relation" button
         Then a delete confirmation dialogue should appear  
-        And user clicks close button # close button == close symbol?
+        And user clicks close button
         Then the dialogue should be dismissed  
         Then the "Related Exhibition Records" area should contain "CQA105.8"
 
         And user clicks the "Delete this relation" button
-        Then a delete confirmation dialogue should appear #needs Step
+        Then a delete confirmation dialogue should appear
         And user clicks the delete button 
         Then the deletion should be confirmed in a dialogue
         # Then the record editor should no longer be displayed (below list)
@@ -465,7 +465,7 @@ Feature: Exhibition Planning Tab
 	    And user presses the "Enter" key  
 	    And user presses the "Tab" key until reaching the "Run" button
 	    Then everything should have been clickable  
-	    And user enters "CQA105.9" in the "Exhibition Number" field #might not work 
+	    And user enters "CQA105.9" in the "Exhibition Number" field
 	    And user saves the record
 	    And user presses the "Tab" key until reaching the text field containing "CQA105.9"  
 	    Then the text field should be clickable   

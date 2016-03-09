@@ -17,7 +17,7 @@ Feature: Intake Tab
 
 
   # Begin Test 3:
-    And user clicks the "Add record" button #needs step def
+    And user clicks the "Add record" button 
     And user clicks the "close" button 
     Then no changes to the record will occur 
 
@@ -160,7 +160,7 @@ Feature: Intake Tab
 
         And user clicks the "+ Add Record" button
         And clicks on the Create button
-        And user saves the record # click the save button
+        And user saves the record
         Then the message "Please specify an Intake Entry Number" should appear 
 
         And user enters "CQA110_11" in the "Intake Entry Number" field
@@ -194,7 +194,7 @@ Feature: Intake Tab
         And user selects "Cesar Villalobos" from autocomplete options
         And user enters "Cesar Inc" in the "Insurer" field
         And user selects "Cesar Inc" from autocomplete options
-        And user enters "110.1" in the "Reference Number" field #there are more than 1!
+        And user enters "110.1" in the "Reference Number" field
         And user enters "110110110" in the "Policy Number" field
         And user enters "2016-01-04" in the "Renewal Date" field
         And user enters "Taking care of CQA-110" in the "Insurance Note" field
@@ -283,7 +283,7 @@ Feature: Intake Tab
         And user selects "Cesar Villalobos" from autocomplete options
         And user enters "Cesar Inc" in the "Insurer" field
         And user selects "Cesar Inc" from autocomplete options
-        And user enters "110.1.13" in the "Reference Number" field #there are more than 1!
+        And user enters "110.1.13" in the "Reference Number" field
         And user enters "110110110.13" in the "Policy Number" field
         And user enters "2016-01-06" in the "Renewal Date" field
         And user enters "Taking care of CQA-110 Test 13" in the "Insurance Note" field
@@ -344,7 +344,7 @@ Feature: Intake Tab
         Then the "Field collection method" field should contain "netted"
         And user clicks the "Go To Record" button        
         And user clicks the "Delete" button
-        Then a delete confirmation dialogue should appear #needs Step
+        Then a delete confirmation dialogue should appear
         And user clicks the delete button        
         Then close the browser
 
@@ -368,25 +368,25 @@ Feature: Intake Tab
 
 
     And user selects the "Intake" tab 
-    And user clicks the "Add record" button #needs step def
+    And user clicks the "Add record" button 
     And clicks on the Create button
-    And user enters "0413199525" in the "Intake Entry Number" field #might not work 
+    And user enters "0413199525" in the "Intake Entry Number" field
     And user saves the record
    
-    And user clicks the "Delete Relation" button on the row that reads "0413199525" #Green "X" button. Needs step def
+    And user clicks the "Delete Relation" button on the row that reads "0413199525"
     Then delete confirmation dialogue should appear 
     And user clicks cancel button
     Then the dialogue should be dismissed 
     Then the "Related Intake Records" are should contain "0413199525"
 
 
-    And user clicks the "Delete Relation" button on the row that reads "0413199525" #Green "X" button. Needs step def
+    And user clicks the "Delete Relation" button on the row that reads "0413199525"
     Then delete confirmation dialogue should appear
     And user clicks close button
     Then the dialogue should be dismissed
     Then the "Related Intake Records" are should contain "0413199525"
 
-    And user clicks the "Delete Relation" button on the row that reads "0413199525" #Green "X" button. Needs step def
+    And user clicks the "Delete Relation" button on the row that reads "0413199525"
     Then delete confirmation dialogue should appear
     And user clicks on the delete button
     Then "0413199525" should not appear in the "Procedures" area 

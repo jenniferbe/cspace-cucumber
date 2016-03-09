@@ -7,7 +7,7 @@ Feature: Acquisition Tab
     Scenario: Working Acquisition Secondary Tab #1 
         Given user is in the "My CollectionSpace" page
        
-        And user goes to the record with identification number "CQA93_E" #not empty
+        And user goes to the record with identification number "CQA93_E"
         And user selects the "Acquisition" tab     
         Then the "Related Acquisition Records" area should be empty
        
@@ -39,7 +39,7 @@ Feature: Acquisition Tab
 
         And user selects the box with result "CQA93.3" 
         And user selects the box with result "CQA93.2"  
-        And user clicks the "Add to current record" button #needs Step def #7
+        And user clicks the "Add to current record" button  
 
         #Expected, Group #1
         Then the dialogue should be dismissed 
@@ -69,7 +69,7 @@ Feature: Acquisition Tab
         Then "CQA93.2" should not appear in the "Related Acquisition Records" area 
         Then close the browser
 
-    Scenario: Warning when navigating away from new Acquisition record #7 
+    Scenario: Warning when navigating away from new Acquisition record  
         Given user is in the "My CollectionSpace" page
         And user goes to the record with identification number "CQA93_NE"
         Then the "Identification Number" field should contain "CQA93_NE"
@@ -95,7 +95,7 @@ Feature: Acquisition Tab
         #Variation B
         And user selects the "Current Record" tab
         Then a leave confirmation dialogue should appear  
-        And user clicks the "cancel" button  #might not work
+        And user clicks the "cancel" button
         Then the "Acquisition Reference Number" field should contain "CQA93.4"
 
         ## Variation D
@@ -126,7 +126,7 @@ Feature: Acquisition Tab
         Given user is in the "My CollectionSpace" page
         And user goes to the record with identification number "CQA93_NE"
         And user selects the "Acquisition" tab
-        And user clicks the "Add record" button #needs step def
+        And user clicks the "Add record" button 
         And user clicks the "Create new" button
 
         # Variation A
@@ -161,11 +161,11 @@ Feature: Acquisition Tab
 
         And user clicks the "+ Add Record" button
         And clicks on the Create button
-        And user saves the record # click the save button
-        Then the message "Please specify an Acquisition Reference Number" should appear #fail
+        And user saves the record
+        Then the message "Please specify an Acquisition Reference Number" should appear
         And user enters "CQA93.11" in the "Acquisition Reference Number" field
         And user saves the record
-        Then the message "Relation successfully created." should appear #success!
+        Then the message "Relation successfully created." should appear
         
         And user enters "2016-01-01" in the "Accession Date" field
         And user enters "Cesar Villalobos" in the "Acquisition Authorizer" field
@@ -195,7 +195,7 @@ Feature: Acquisition Tab
         And user enters "CQA93 Digging Event" in the "Field collection event name" field
         
         And user saves the record
-        Then the message "Acquisition successfully saved" should appear #success!
+        Then the message "Acquisition successfully saved" should appear
 
         Then the "Accession Date" field should contain "2016-01-01"
         Then the "Acquisition Authorizer" field should contain "Cesar Villalobos"
@@ -249,7 +249,7 @@ Feature: Acquisition Tab
         And user enters "93.13.8" in the "Credit Line" field
         And user enters "CQA93 Digging Event" in the "Field collection event name" field
         And user saves the record
-        Then the message "Acquisition successfully saved" should appear #success!
+        Then the message "Acquisition successfully saved" should appear
 
         Then the "Accession Date" field should contain "2017-01-01"
         Then the "Acquisition Authorizer" field should contain "Jennifer Be"
@@ -296,29 +296,29 @@ Feature: Acquisition Tab
         And user goes to the record with identification number "CQA93_NE"
         And user selects the "Acquisition" tab 
 
-        And user clicks the "Add record" button #needs step def
+        And user clicks the "Add record" button 
         And clicks on the Create button
-        And user enters "CQA93.7" in the "Acquisition Reference Number" field #might not work 
+        And user enters "CQA93.7" in the "Acquisition Reference Number" field
         And user saves the record
         
-        And user clicks the "Delete Relation" button on the row that reads "CQA93.7" #Green "X" button. Needs step def
-        Then delete confirmation dialogue should appear # Then the dialogue should appear asking you to delete this relation
+        And user clicks the "Delete Relation" button on the row that reads "CQA93.7"
+        Then delete confirmation dialogue should appear
         And user clicks the "cancel" button
-        Then the dialogue should be dismissed #needs Step def
+        Then the dialogue should be dismissed 
         Then the "Related Acquisition Records" area should contain "CQA93.7"
 
-        And user clicks the "Delete Relation" button on the row that reads "CQA93.7" #Green "X" button. Needs step def. Again
+        And user clicks the "Delete Relation" button on the row that reads "CQA93.7". Again
         Then delete confirmation dialogue should appear
-        And user clicks the "close" button # close button == close symbol?  ???
+        And user clicks the "close" button
         Then the dialogue should be dismissed
         Then the "Related Acquisition Records" area should contain "CQA93.7"
 
 
-        And user clicks the "Delete Relation" button on the row that reads "CQA93.7" #Green "X" button. Needs step def. Last time.
+        And user clicks the "Delete Relation" button on the row that reads "CQA93.7". Last time.
         Then delete confirmation dialogue should appear
         And user clicks the "delete" button
-        Then "CQA93.7" should not appear in the "Procedures" sidebar   #notlogged
-        Then "CQA93.7" should not appear in the "Related Acquisition Records" area   #not logged
+        Then "CQA93.7" should not appear in the "Procedures" sidebar
+        Then "CQA93.7" should not appear in the "Related Acquisition Records" area
 
         And user goes to the record with identification number "CQA93.7"
         And user selects the "Acquisition" tab 
@@ -337,26 +337,26 @@ Feature: Acquisition Tab
         Then "CQA93_NE" should be in the "Identification Number" field
 
         And user selects the "Acquisition" tab 
-        And user clicks the "Add record" button #needs step def
+        And user clicks the "Add record" button 
         And clicks on the Create button
-        And user enters "CQA93.8" in the "Acquisition Reference Number" field #might not work 
+        And user enters "CQA93.8" in the "Acquisition Reference Number" field
         And user saves the record
         And user clicks on result with text "CQA93.8"
         
         And user clicks the "Delete this relation" button
         Then a delete confirmation dialogue should appear  
-        And user clicks the "cancel" button # click cancel
+        And user clicks the "cancel" button
         Then the dialogue should be dismissed  
         Then the "Related Acquisition Records" area should contain "CQA93.8"
 
         And user clicks the "Delete this relation" button
         Then a delete confirmation dialogue should appear  
-        And user clicks the "close" button # close button == close symbol?
+        And user clicks the "close" button
         Then the dialogue should be dismissed  
         Then the "Related Acquisition Records" area should contain "CQA93.8"
 
         And user clicks the "Delete this relation" button
-        Then a delete confirmation dialogue should appear #needs Step
+        Then a delete confirmation dialogue should appear
         And user clicks on the delete button 
         Then the deletion should be confirmed in a dialogue
         Then "CQA93.8" should not appear in the "Procedures" area   

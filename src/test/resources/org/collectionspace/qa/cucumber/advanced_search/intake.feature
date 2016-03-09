@@ -72,7 +72,7 @@ Feature: Advanced Search - Intake
       And user clicks on link to "Advanced Search" in upper right corner
     Then the titlebar should contain "Advanced Search"
       And user selects "Intake" from record type dropdown
-      And user enters "2011-01-01" in the Advanced Search" "Return Date" field
+      And user enters "2011-01-01" in the Advanced Search "Return Date" field
       And user clicks the "Search" button
     Then the search results should contain "Lagume"
     Then close the browser
