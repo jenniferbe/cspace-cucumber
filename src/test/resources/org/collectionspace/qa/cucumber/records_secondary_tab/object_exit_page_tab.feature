@@ -7,40 +7,40 @@ Feature: Object Exit Page Tab
   Scenario: Working Object Exit Secondary Tab #1
 		Given user is in the "My CollectionSpace" page
 	   
-	    And user goes to the record with identification number "CQA115_E"
-	    And user selects the "Object Exit" tab	    
+	    And navigates to the record with identification number "CQA115_E"
+	    And selects the "Object Exit" tab	    
 	    Then the "Related Object Exit Records" area should be empty
 	   
 
-		And user goes to the record with identification number "CQA115_NE"
-	    And user selects the "Object Exit" tab
+		And navigates to the record with identification number "CQA115_NE"
+	    And selects the "Object Exit" tab
 	    Then "CQA115.1" should appear in the "Related Object Exit Records" area
 	    Then close the browser
 
   Scenario: Dismissing the dialog #3
 		Given user is in the "My CollectionSpace" page
-		And user goes to the record with identification number "CQA115_NE"
+		And navigates to the record with identification number "CQA115_NE"
 
 		#Variation A
-		And user clicks the "Add record" button 
-	    And user clicks the "close" button 
+		And clicks the "Add record" button 
+	    And clicks the "close" button 
 	    Then the "Related Object Exit Records" area should only contain "CQA115.1"
 
 	    #Variation B
-	    And user clicks the "Add record" button
-	    And user presses the "ESC" key 
+	    And clicks the "Add record" button
+	    And presses the "ESC" key 
 	    Then the "Related Object Exit Records" area should only contain "CQA115.1"
 
 
   Scenario: Searching and adding multiple Object Exit records #5
-		And user clicks the "Add record" button 
-	    And user clicks the "search" button 
+		And clicks the "Add record" button 
+	    And clicks the "search" button 
 	    Then the search results should contain "CQA115.3" 
 	    Then the search results should contain "CQA115.2" 
 
-	    And user selects the box with result "CQA115.3" 
-	    And user selects the box with result "CQA115.2"  
-	    And user clicks the "Add to current record" button  
+	    And selects the box with result "CQA115.3" 
+	    And selects the box with result "CQA115.2"  
+	    And clicks the "Add to current record" button  
 
 	    #Expected, Group #1
 	    Then the dialog should be dismissed 
@@ -50,22 +50,22 @@ Feature: Object Exit Page Tab
 	    Then "CQA115.2" should appear in the "Procedures" area 
 
 
-	    And user clicks on result with text "CQA115.3" 
+	    And clicks on result with text "CQA115.3" 
 	    Then an "Edit Object Exit Record" form should be displayed 
 	    Then the "Object Exit Number" field should contain "CQA115.3"
-	    And user clicks the "Delete this relation." button
+	    And clicks the "Delete this relation." button
 	    Then a delete confirmation dialog should appear
-	    And user clicks the delete button 
+	    And clicks the delete button 
 	    Then the deletion should be confirmed in a dialog
 	    Then "CQA115.3" should not appear in the "Related Object Exit Records" area 
 
 
-	    And user clicks on result with text "CQA115.2" 
+	    And clicks on result with text "CQA115.2" 
 	    Then an "Edit Object Exit Record" form should be displayed 
 	    Then the "Object Exit Number" field should contain "CQA115.2"
-	    And user clicks the "Delete this relation." button
+	    And clicks the "Delete this relation." button
 	    Then a delete confirmation dialog should appear
-	    And user clicks the delete button 
+	    And clicks the delete button 
 	    Then the deletion should be confirmed in a dialog
 	    Then "CQA115.2" should not appear in the "Related Object Exit Records" area 
 
@@ -74,84 +74,84 @@ Feature: Object Exit Page Tab
 
   Scenario: Warning when navigating away from Object Exit record 
 		Given user is in the "My CollectionSpace" page
-		And user goes to the record with identification number "CQA115_NE"
+		And navigates to the record with identification number "CQA115_NE"
 	    Then "CQA115_NE" should be in the "Identification Number" field
-	    And user selects the "Object Exit" tab 
+	    And selects the "Object Exit" tab 
 	    
-	    And user clicks the "Add record" button
-		And user clicks the "Create New" button
+	    And clicks the "Add record" button
+		And clicks the "Create New" button
 		
 		Then the dialog should be dismissed
 		Then the message "Creating new record..." should be displayed
 	    
 		Then the "Exit Number" field should be empty
-	    And user enters "CQA115.4" in the "Exit Number" field
+	    And enters "CQA115.4" in the "Exit Number" field
 
 
 	    #Variation A
-    	And user selects the "Current Record" tab
+    	And selects the "Current Record" tab
 	    Then a leave confirmation dialog should appear 
-	    And user clicks the "close" button  
+	    And clicks the "close" button  
 	    Then the "Exit Number" field should contain "CQA115.4"
 
 
 		#Variation B
-		And user selects the "Current Record" tab
+		And selects the "Current Record" tab
 	    Then a leave confirmation dialog should appear  
-	    And user clicks the "cancel" button
+	    And clicks the "cancel" button
 	    Then the "Exit Number" field should contain "CQA115.4"
 
 	    ## Variation D
-	    And user selects the "Current Record" tab
-	    And user clicks the "Don't save" button 
-	   	And user selects the "Object Exit" tab 
+	    And selects the "Current Record" tab
+	    And clicks the "Don't save" button 
+	   	And selects the "Object Exit" tab 
 	    Then "CQA115.4" should not appear in the "Related Object Exit Records" area
 
 
 		#Variation C
-		And user clicks the "Add record" button
+		And clicks the "Add record" button
     	And clicks on the Create button
-    	And user enters "CQA115.4" in the "Exit Number" field 
-		And user selects the "Current Record" tab
-		And user clicks the "save" button
+    	And enters "CQA115.4" in the "Exit Number" field 
+		And selects the "Current Record" tab
+		And clicks the "save" button
 
-	    And user selects the "Object Exit" tab 
+	    And selects the "Object Exit" tab 
 	    Then "CQA115.4" should appear in the "Related Object Exit Records" area 
 
-	    And user goes to the record with identification number "CQA115.4"
-	    And user clicks the delete button
+	    And navigates to the record with identification number "CQA115.4"
+	    And clicks the delete button
 	    Then a delete confirmation dialog should appear
-	    And user clicks the delete button 
+	    And clicks the delete button 
 	    Then the deletion should be confirmed in a dialog
 	    Then close the browser
 
   Scenario: Cancel changes button #9
 		Given user is in the "My CollectionSpace" page
-		And user goes to the record with identification number "CQA115_NE"
-		And user selects the "Object Exit" tab
-	    And user clicks the "Add record" button 
-	    And user clicks the "Create new" button
+		And navigates to the record with identification number "CQA115_NE"
+		And selects the "Object Exit" tab
+	    And clicks the "Add record" button 
+	    And clicks the "Create new" button
 
 	    # Variation A
 	    Then the message "Creating new record..." should be displayed
 	   	Then the "cancel changes" button at the bottom of the page should not be clickable
 	    Then the "cancel changes" button at the top of the page should not be clickable
 	    
-	    And user enters "CQA115.5" in the "Exit Number" field
-	    And user clicks the "cancel changes" button 
+	    And enters "CQA115.5" in the "Exit Number" field
+	    And clicks the "cancel changes" button 
     	Then the "Exit Number" field should be empty
 
 	    # Variation B
-	    And user enters "CQA115.5" in the "Exit Number" field
-	    And user clicks the "save" button 
+	    And enters "CQA115.5" in the "Exit Number" field
+	    And clicks the "save" button 
 	    Then the "cancel changes" button at the top of the page should not be clickable 
     	Then the "cancel changes" button at the bottom of the page should not be clickable 
    
    
-	    And user clicks the "Go to record" button
-	    And user clicks the "Delete" button 
+	    And clicks the "Go to record" button
+	    And clicks the "Delete" button 
 	    Then a delete confirmation dialog should appear
-	    And user clicks the confirmation delete button
+	    And clicks the confirmation delete button
 	    Then a deletion should be confirmed in a dialog
 	    Then close the browser
 
@@ -159,28 +159,28 @@ Feature: Object Exit Page Tab
 
         # Scenario: Test 11--> Successful save
         Given user is on the "My CollectionSpace" page 
-        And user goes to the record with identification number "CQA115_NE"
-        And user selects the "Object Exit" tab 
+        And navigates to the record with identification number "CQA115_NE"
+        And selects the "Object Exit" tab 
 
-        And user clicks the "+ Add Record" button
+        And clicks the "+ Add Record" button
         And clicks on the Create button
-        And user saves the record
+        And saves the record
         Then the message "Please specify an Exit Number" should appear
-        And user enters "CQA115.11" in the "Exit Number" field
-        And user saves the record
+        And enters "CQA115.11" in the "Exit Number" field
+        And saves the record
         Then the message "Relation successfully created." should appear
 
-        And user enters "2016-01-05" in the "Exit Date" field
-        And user enters "Cesar Villalobos" in the "Current Owner" field
-        And user clicks on "Cesar Villalobos" from autocomplete options
-        And user enters "Jennifer Be" in the "Depositor" field
-        And user clicks on "Jennifer Be" from the autocomplete options
-        And user selects "Courier" from the "Exit Method" drop down box
-        And user selects "Deaccession" from the "Exit Reason" drop down box
-        And user enters "This \n is \n CQA115" in the "Exit Note" field
-        And user enters "Packing for CQA115" in the "Packing Note" field
+        And enters "2016-01-05" in the "Exit Date" field
+        And enters "Cesar Villalobos" in the "Current Owner" field
+        And clicks on "Cesar Villalobos" from autocomplete options
+        And enters "Jennifer Be" in the "Depositor" field
+        And clicks on "Jennifer Be" from the autocomplete options
+        And selects "Courier" from the "Exit Method" drop down box
+        And selects "Deaccession" from the "Exit Reason" drop down box
+        And enters "This \n is \n CQA115" in the "Exit Note" field
+        And enters "Packing for CQA115" in the "Packing Note" field
 
-        And user saves the record
+        And saves the record
         Then the message "Object Exit successfully saved" should appear
 
 
@@ -196,17 +196,17 @@ Feature: Object Exit Page Tab
 
         ## Test 13
 
-        And user enters "2016-01-10" in the "Exit Date" field
-        And user enters "Jennifer Be" in the "Current Owner" field
-        And user clicks on "Jennifer Be" from autocomplete options
-        And user enters "Cesar Villalobos" in the "Depositor" field
-        And user clicks on "Cesar Villalobos" from the autocomplete options
-        And user selects "Post" from the "Exit Method" drop down box
-        And user selects "Disposal" from the "Exit Reason" drop down box
-        And user enters "This \n is \n CQA115 \n Test 13" in the "Exit Note" field
-        And user enters "Packing for CQA115 Test 13" in the "Packing Note" field
+        And enters "2016-01-10" in the "Exit Date" field
+        And enters "Jennifer Be" in the "Current Owner" field
+        And clicks on "Jennifer Be" from autocomplete options
+        And enters "Cesar Villalobos" in the "Depositor" field
+        And clicks on "Cesar Villalobos" from the autocomplete options
+        And selects "Post" from the "Exit Method" drop down box
+        And selects "Disposal" from the "Exit Reason" drop down box
+        And enters "This \n is \n CQA115 \n Test 13" in the "Exit Note" field
+        And enters "Packing for CQA115 Test 13" in the "Packing Note" field
 
-        And user saves the record
+        And saves the record
         Then the message "Object Exit successfully saved" should appear
 
         Then the "Exit Number" field should contain "CQA115.11"
@@ -217,10 +217,10 @@ Feature: Object Exit Page Tab
         Then the "Exit Date" field should contain "2016-01-10"
         Then the "Exit Note" field should contain "This \n is \n CQA115 \n Test 13"
         Then the "Packing Note" field should contain "Packing for CQA115 Test 13"
-        And user clicks the "Go To Record" button	    
-	    And user clicks the "Delete" button
+        And clicks the "Go To Record" button	    
+	    And clicks the "Delete" button
 	    Then a delete confirmation dialog should appear
-	    And user clicks the delete button 
+	    And clicks the delete button 
 	    Then the deletion should be confirmed in a dialog   
 
         Then close the browser
@@ -230,93 +230,93 @@ Feature: Object Exit Page Tab
 
   Scenario: Testing links and "Go To Record" works #23
 	    Given user is in the "My CollectionSpace" page
-	    And user goes to the record with identification number "CQA115_NE"
-	    And user selects the "Object Exit" tab 
-	    And user clicks on result with text "CQA115.1"
+	    And navigates to the record with identification number "CQA115_NE"
+	    And selects the "Object Exit" tab 
+	    And clicks on result with text "CQA115.1"
 	    Then the "Exit Number" field should contain "CQA115.1"
-	    And user clicks the "Go to record" button
+	    And clicks the "Go to record" button
 	    Then the titlebar should contain "CQA115.1"
 	    Then close the browser	
 
 	Scenario: Deleting relation via list #25
 		Given user is in the "My CollectionSpace" page
-	    And user goes to the record with identification number "CQA115_NE"
-	    And user selects the "Object Exit" tab 
+	    And navigates to the record with identification number "CQA115_NE"
+	    And selects the "Object Exit" tab 
 
-	    And user clicks the "Add record" button 
+	    And clicks the "Add record" button 
 	    And clicks on the Create button
-	    And user enters "CQA115.7" in the "Exit Number" field
-	    And user saves the record
+	    And enters "CQA115.7" in the "Exit Number" field
+	    And saves the record
 	    
-	    And user clicks the "Delete Relation" button on the row that reads "CQA115.7"
+	    And clicks the "Delete Relation" button on the row that reads "CQA115.7"
 	    Then delete confirmation dialog should appear
-	    And user clicks cancel button
+	    And clicks cancel button
 	    Then the dialog should be dismissed 
 	    Then the "Related Object Exit Records" area should contain "CQA115.7"
 
-	    And user clicks the "Delete Relation" button on the row that reads "CQA115.7". Again
+	    And clicks the "Delete Relation" button on the row that reads "CQA115.7"
 	    Then delete confirmation dialog should appear
-	    And user clicks the "close" button
+	    And clicks the "close" button
 	    Then the dialog should be dismissed
 	    Then the "Related Object Exit Records" area should contain "CQA115.7"
 
-	    And user clicks the "Delete Relation" button on the row that reads "CQA115.7". Last time.
+	    And clicks the "Delete Relation" button on the row that reads "CQA115.7"
 	    Then delete confirmation dialog should appear
-	    And user clicks on the delete button
+	    And clicks on the delete button
 	    Then "CQA115.7" should not appear in the "Procedures" area
 	    Then "CQA115.7" should not appear in the "Related Object Exit Records" area
 
-		And user goes to the record with identification number "CQA115.7"
-	    And user selects the "Object Exit" tab 
+		And navigates to the record with identification number "CQA115.7"
+	    And selects the "Object Exit" tab 
 	    Then "CQA115_NE" should not appear in the "Related Object Exit Records" area   
-	    And user selects the "Current Record" tab
+	    And selects the "Current Record" tab
 
-	    And user clicks the delete button
+	    And clicks the delete button
 	    Then a delete confirmation dialog should appear
-	    And user clicks the delete button 
+	    And clicks the delete button 
 	    Then the deletion should be confirmed in a dialog
 	    Then close the browser
 
 	Scenario: Deleting relation via record editor #27
 		Given user is in the "My CollectionSpace" page
-	    And user goes to the record with identification number "CQA115_NE"
+	    And navigates to the record with identification number "CQA115_NE"
 	    Then "CQA115_NE" should be in the "Identification Number" field
 
-	    And user selects the "Object Exit" tab 
-	    And user clicks the "Add record" button 
+	    And selects the "Object Exit" tab 
+	    And clicks the "Add record" button 
 	    And clicks on the Create button
-	    And user enters "CQA115.8" in the "Exit Number" field
-	    And user saves the record
-	    And user clicks on result with text "CQA115.8"
+	    And enters "CQA115.8" in the "Exit Number" field
+	    And saves the record
+	    And clicks on result with text "CQA115.8"
 
-	    And user clicks the "Delete this relation" button
+	    And clicks the "Delete this relation" button
 	    Then a delete confirmation dialog should appear  
-	    And user clicks cancel button
+	    And clicks cancel button
 	    Then the dialog should be dismissed  
 	    Then the "Related Object Exit Records" area should contain "CQA115.8"
 
-	    And user clicks the "Delete this relation" button
+	    And clicks the "Delete this relation" button
 	    Then a delete confirmation dialog should appear  
-	    And user clicks close button
+	    And clicks close button
 	    Then the dialog should be dismissed  
 	    Then the "Related Object Exit Records" area should contain "CQA115.8"
 
-	    And user clicks the "Delete this relation" button
+	    And clicks the "Delete this relation" button
 	    Then a delete confirmation dialog should appear
-	    And user clicks the delete button 
+	    And clicks the delete button 
 	    Then the deletion should be confirmed in a dialog
 	    # Then the record editor should no longer be displayed (below list)
 	    Then "CQA115.8" should not appear in the "Procedures" area   
 	    Then "CQA115.8" should not appear in the "Related Object Exit Records" area
 
-	    And user goes to the record with identification number "CQA115.8"
-	    And user selects the "Object Exit" tab 
+	    And navigates to the record with identification number "CQA115.8"
+	    And selects the "Object Exit" tab 
 	    Then the "Related Object Exit Records" area should be empty
 	    
-	    And user selects the "Current Record" tab 
-	    And user clicks the delete button
+	    And selects the "Current Record" tab 
+	    And clicks the delete button
 	    Then a delete confirmation dialog should appear
-	    And user clicks the delete button 
+	    And clicks the delete button 
 	    Then the deletion should be confirmed in a dialog
 	    Then close the browser 
 

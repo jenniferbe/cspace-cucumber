@@ -9,120 +9,120 @@ Feature: Advanced Search - Loans Out
       And selects the "Loan Out" radio button on the Create New page
       And clicks on the Create button
     Then the titlebar should contain "Loan Out"
-      And user enters "textbook" in the "Loan Out" "Loan Out Number" field
-      And user clicks on the "Loan Out" "Loan Purpose" field
+      And enters "textbook" in the "Loan Out" "Loan Out Number" field
+      And clicks on the "Loan Out" "Loan Purpose" field
     Then a drop down list should appear in the "Loan Purpose" row
-      And user selects "Exhibition" from dropdown in "Loan Purpose" row
-      And user enters "textbook" in the "Loan Out" "Borrower" vocab field
-      And user adds "textbook" to "Local Persons"
-      And user clicks on the "Loan Out" "Loan Status" field
+      And selects "Exhibition" from dropdown in "Loan Purpose" row
+      And enters "textbook" in the "Loan Out" "Borrower" vocab field
+      And adds "textbook" to "Local Persons"
+      And clicks on the "Loan Out" "Loan Status" field
     Then a drop down list should appear in the "Loan Status" row
-      And user selects "Agreed" from dropdown in "Loan Status" row
-      And user enters "2022-01-01" in the "Loan Out" "Loan Out Date" field
-      And user enters "2022-01-01" in the "Loan Out" "Loan Return Date" field
-      And user enters "2022-01-01" in the "Loan Out" "Loan Renewal Application Date" field
-      And user saves the record
+      And selects "Agreed" from dropdown in "Loan Status" row
+      And enters "2022-01-01" in the "Loan Out" "Loan Out Date" field
+      And enters "2022-01-01" in the "Loan Out" "Loan Return Date" field
+      And enters "2022-01-01" in the "Loan Out" "Loan Renewal Application Date" field
+      And saves the record
     Then the record is successfully saved
-      And user clicks on link to "Advanced Search" in upper right corner
+      And clicks on link to "Advanced Search" in upper right corner
     Then the titlebar should contain "Advanced Search"
-      And user selects "Loan Out" from record type dropdown
-      And user enters "textbook" in the "Advanced Search" "Loan Out Number" field
-      And user clicks the "Search" button
+      And selects "Loan Out" from record type dropdown
+      And enters "textbook" in the "Advanced Search" "Loan Out Number" field
+      And clicks the "Search" button
     Then the search results should contain "textbook"
     Then close the browser
 
   Scenario: Search by Loan Purpose
     Given user is on the "My Collectionspace" page
-      And user clicks on link to "Advanced Search" in upper right corner
+      And clicks on link to "Advanced Search" in upper right corner
     Then the titlebar should contain "Advanced Search"
-      And user selects "Loan Out" from record type dropdown
-      And user clicks on the "Advanced Search" "Loan Purpose" field
+      And selects "Loan Out" from record type dropdown
+      And clicks on the "Advanced Search" "Loan Purpose" field
     Then a drop down list should appear in the "Loan Purpose" row
-      And user selects "Exhibition" from dropdown in "Loan Purpose" row
-      And user clicks the "Search" button
+      And selects "Exhibition" from dropdown in "Loan Purpose" row
+      And clicks the "Search" button
     Then the search results should contain "textbook" 
     Then close the browser
 
   Scenario: Search by Borrower
     Given user is on the "My Collectionspace" page
-      And user clicks on link to "Advanced Search" in upper right corner
+      And clicks on link to "Advanced Search" in upper right corner
     Then the titlebar should contain "Advanced Search"
-      And user selects "Loan Out" from record type dropdown
-      And user enters "textbook" in the "Advanced Search" "Borrower" vocab field
-      And user clicks on "textbook" from autocomplete options
-      And user clicks the "Search" button
+      And selects "Loan Out" from record type dropdown
+      And enters "textbook" in the "Advanced Search" "Borrower" vocab field
+      And clicks on "textbook" from autocomplete options
+      And clicks the "Search" button
     Then the search results should contain "textbook"
     Then close the browser
 
   Scenario: Search by Loan Status
     Given user is on the "My Collectionspace" page
-      And user clicks on link to "Advanced Search" in upper right corner
+      And clicks on link to "Advanced Search" in upper right corner
     Then the titlebar should contain "Advanced Search"
-      And user selects "Loan Out" from record type dropdown
-      And user clicks on the "Advanced Search" "Loan Status" field
+      And selects "Loan Out" from record type dropdown
+      And clicks on the "Advanced Search" "Loan Status" field
     Then a drop down list should appear in the "Loan Status" row
-      And user selects "Agreed" from dropdown in "Loan Status" row
-      And user clicks the "Search" button
+      And selects "Agreed" from dropdown in "Loan Status" row
+      And clicks the "Search" button
     Then the search results should contain "textbook"
     Then close the browser
 
   Scenario: Search by Loan Out Date
     Given user is on the "My Collectionspace" page
-      And user clicks on link to "Advanced Search" in upper right corner
+      And clicks on link to "Advanced Search" in upper right corner
     Then the titlebar should contain "Advanced Search"
-      And user selects "Loan Out" from record type dropdown
-      And user enters "2022-01-01" in the "Advanced Search" "Loan Out Date" field
-      And user clicks the "Search" button
+      And selects "Loan Out" from record type dropdown
+      And enters "2022-01-01" in the "Advanced Search" "Loan Out Date" field
+      And clicks the "Search" button
     Then the search results should contain "textbook"
     Then close the browser
 
   Scenario: Search by Loan Return Date
     Given user is on the "My Collectionspace" page
-      And user clicks on link to "Advanced Search" in upper right corner
+      And clicks on link to "Advanced Search" in upper right corner
     Then the titlebar should contain "Advanced Search"
-      And user selects "Loan Out" from record type dropdown
-      And user enters "2022-01-01" in the "Advanced Search" "Loan Return Date" field
-      And user clicks the "Search" button
+      And selects "Loan Out" from record type dropdown
+      And enters "2022-01-01" in the "Advanced Search" "Loan Return Date" field
+      And clicks the "Search" button
     Then the search results should contain "textbook"
     Then close the browser
 
   Scenario: Search by Loan Renewal Application Date
     Given user is on the "My Collectionspace" page
-      And user clicks on link to "Advanced Search" in upper right corner
+      And clicks on link to "Advanced Search" in upper right corner
     Then the titlebar should contain "Advanced Search"
-      And user selects "Loan Out" from record type dropdown
-      And user enters "2022-01-01" in the "Advanced Search" "Loan Renewal Application Date" field
-      And user clicks the "Search" button
+      And selects "Loan Out" from record type dropdown
+      And enters "2022-01-01" in the "Advanced Search" "Loan Renewal Application Date" field
+      And clicks the "Search" button
     Then the search results should contain "textbook" 
     Then close the browser
 
   Scenario: Search by Modified Date
     Given user is on the "My Collectionspace" page
-      And user clicks on link to "Advanced Search" in upper right corner
+      And clicks on link to "Advanced Search" in upper right corner
     Then the titlebar should contain "Advanced Search"
-      And user selects "Loan Out" from record type dropdown
-      And user enters today's date in the "Advanced Search" "Modified Date" field
-      And user clicks the "Search" button
+      And selects "Loan Out" from record type dropdown
+      And enters today's date in the "Modified Date" field
+      And clicks the "Search" button
     Then the search results should contain "textbook"
     Then close the browser
 
   Scenario: Search by username
     Given user is on the "My Collectionspace" page
-      And user clicks on link to "Advanced Search" in upper right corner
+      And clicks on link to "Advanced Search" in upper right corner
     Then the titlebar should contain "Advanced Search"
-      And user selects "Loan Out" from record type dropdown
-      And user enters username in the "Advanced Search" "Record last modified by" field
-      And user clicks the "Search" button
+      And selects "Loan Out" from record type dropdown
+      And enters username in the "Advanced Search" "Record last modified by" field
+      And clicks the "Search" button
     Then the search results should contain "textbook"
     Then close the browser
 
   Scenario: textb**
     Given user is on the "My Collectionspace" page
-      And user clicks on link to "Advanced Search" in upper right corner
+      And clicks on link to "Advanced Search" in upper right corner
     Then the titlebar should contain "Advanced Search"
-      And user selects "Loan Out" from record type dropdown
-      And user enters "textb*" in the "Advanced Search" "Loan Out Number" field
-      And user clicks the "Search" button
+      And selects "Loan Out" from record type dropdown
+      And enters "textb*" in the "Advanced Search" "Loan Out Number" field
+      And clicks the "Search" button
     Then the search results should contain "textbook"
     Then close the browser
 
@@ -132,64 +132,64 @@ Feature: Advanced Search - Loans Out
       And selects the "Loan Out" radio button on the Create New page
       And clicks on the Create button
     Then the titlebar should contain "Loan Out" 
-      And user enters "example" in the "Loan Out" "Loan Out Number" field
-      And user enters "John Doe" in the "Loan Out" "Borrower" vocab field
-      And user adds "John Doe" to "Local Persons"
-      And user clicks on the "Loan Out" "Loan Purpose" field
+      And enters "example" in the "Loan Out" "Loan Out Number" field
+      And enters "John Doe" in the "Loan Out" "Borrower" vocab field
+      And adds "John Doe" to "Local Persons"
+      And clicks on the "Loan Out" "Loan Purpose" field
     Then a drop down list should appear in the "Loan Purpose" row
-      And user selects "Research" from dropdown in "Loan Purpose" row
-      And user enters "testtest" in the "Loan Out" "Loan Out Note" field
-      And user saves the record
+      And selects "Research" from dropdown in "Loan Purpose" row
+      And enters "testtest" in the "Loan Out" "Loan Out Note" field
+      And saves the record
     Then the record is successfully saved
     Given user is on the "Create New" page
       And selects the "Loan Out" radio button on the Create New page
       And clicks on the Create button
     Then the titlebar should contain "Loan Out" 
-      And user enters "exampleexample" in the "Loan Out" "Loan Out Number" field
-      And user enters "John Doe" in the "Loan Out" "Borrower" vocab field
-      And user clicks on "John Doe" from autocomplete options
+      And enters "exampleexample" in the "Loan Out" "Loan Out Number" field
+      And enters "John Doe" in the "Loan Out" "Borrower" vocab field
+      And clicks on "John Doe" from autocomplete options
       And clicks on the "Loan Out" "Loan Purpose" field
     Then a drop down list should appear in the "Loan Purpose" row
-      And user selects "Research" from dropdown in "Loan Purpose" row
-      And user enters "testtest" in the "Loan Out" "Loan Out Conditions" field
-      And user saves the record
+      And selects "Research" from dropdown in "Loan Purpose" row
+      And enters "testtest" in the "Loan Out" "Loan Out Conditions" field
+      And saves the record
     Then the record is successfully saved
     Given user is on the "Create New" page
       And selects the "Loan Out" radio button on the Create New page
       And clicks on the Create button
     Then the titlebar should contain "Loan Out"
-      And user enters "exampleexampleexample" in the "Loan Out" "Loan Out Number" field
-      And user enters "John Doe" in the "Loan Out" "Borrower" vocab field
-      And user clicks on "John Doe" from autocomplete options
-      And user clicks on the "Loan Out" "Loan Purpose" field
+      And enters "exampleexampleexample" in the "Loan Out" "Loan Out Number" field
+      And enters "John Doe" in the "Loan Out" "Borrower" vocab field
+      And clicks on "John Doe" from autocomplete options
+      And clicks on the "Loan Out" "Loan Purpose" field
     Then a drop down list should appear in the "Loan Purpose" row
-      And user selects "Photography" from dropdown in "Loan Purpose" row
-      And user enters "testtest" in the "Loan Out" "Loan Out Note" field
-      And user saves the record
+      And selects "Photography" from dropdown in "Loan Purpose" row
+      And enters "testtest" in the "Loan Out" "Loan Out Note" field
+      And saves the record
     Then the record is successfully saved
-      And user clicks on link to "Advanced Search" in upper right corner
+      And clicks on link to "Advanced Search" in upper right corner
     Then the titlebar should contain "Advanced Search" 
-      And user selects "any (OR)" from boolean dropdown
-      And user selects "Loan Out" from record type dropdown
-      And user enters "John Doe" in the "Advanced Search" "Borrower" vocab field
-      And user clicks on "John Doe" from autocomplete options
-      And user clicks on the "Advanced Search" "Loan Purpose" field
+      And selects "any (OR)" from boolean dropdown
+      And selects "Loan Out" from record type dropdown
+      And enters "John Doe" in the "Advanced Search" "Borrower" vocab field
+      And clicks on "John Doe" from autocomplete options
+      And clicks on the "Advanced Search" "Loan Purpose" field
     Then a drop down list should appear in the "Loan Purpose" row
-      And user selects "Research" from dropdown in "Loan Purpose" row
-      And user clicks the "Search" button
+      And selects "Research" from dropdown in "Loan Purpose" row
+      And clicks the "Search" button
     Then the search results should contain "example"
     Then the search results should contain "exampleexample"
     Then the search results should contain "exampleexampleexample"
-      And user clicks on link to "Advanced Search" in upper right corner 
+      And clicks on link to "Advanced Search" in upper right corner 
     Then the titlebar should contain "Advanced Search"
-      And user selects "Loan Out" from record type dropdown
-      And user selects "all (AND)" from boolean dropdown
-      And user enters "John Doe" in the "Advanced Search" "Borrower" vocab field
-      And user clicks on "John Doe" from autocomplete options
-      And user clicks on the "Advanced Search" "Loan Purpose" field
+      And selects "Loan Out" from record type dropdown
+      And selects "all (AND)" from boolean dropdown
+      And enters "John Doe" in the "Advanced Search" "Borrower" vocab field
+      And clicks on "John Doe" from autocomplete options
+      And clicks on the "Advanced Search" "Loan Purpose" field
     Then a drop down list should appear in the "Loan Purpose" row
-      And user selects "Research" from dropdown in "Loan Purpose" row
-      And user clicks the "Search" button
+      And selects "Research" from dropdown in "Loan Purpose" row
+      And clicks the "Search" button
     Then the search results should contain "example"
     Then the search results should contain "exampleexample"
     Then the search results should not contain "exampleexampleexample"
@@ -198,31 +198,31 @@ Feature: Advanced Search - Loans Out
   #Test3
   Scenario: Boolean and Keyword Search
     Given user is on the "My Collectionspace" page
-      And user clicks on link to "Advanced Search" in upper right corner
+      And clicks on link to "Advanced Search" in upper right corner
     Then the titlebar should contain "Advanced Search"
-      And user enters "testtest" in the keyword search field
-      And user selects "Loan Out" from record type dropdown
-      And user selects "any (OR)" from boolean dropdown
-      And user enters "John Doe" in the "Advanced Search" "Borrower" vocab field
-      And user clicks on "John Doe" from autocomplete options
-      And user clicks on the "Advanced Search" "Loan Purpose" field
+      And enters "testtest" in the keyword search field
+      And selects "Loan Out" from record type dropdown
+      And selects "any (OR)" from boolean dropdown
+      And enters "John Doe" in the "Advanced Search" "Borrower" vocab field
+      And clicks on "John Doe" from autocomplete options
+      And clicks on the "Advanced Search" "Loan Purpose" field
     Then a drop down list should appear in the "Loan Purpose" row
-      And user selects "Research" from dropdown in "Loan Purpose" row
-      And user clicks the "Search" button
+      And selects "Research" from dropdown in "Loan Purpose" row
+      And clicks the "Search" button
     Then the search results should contain "example"
     Then the search results should contain "exampleexample"
     Then the search results should not contain "exampleexampleexample"
-      And user clicks on link to "Advanced Search" in upper right corner
+      And clicks on link to "Advanced Search" in upper right corner
     Then the titlebar should contain "Advanced Search"
-      And user enters "testtest" in the keyword search field
-      And user selects "Loan Out" from record type dropdown
-      And user selects "all (AND)" from boolean dropdown
-      And user enters "John Doe" in the "Advanced Search" "Borrower" vocab field
-      And user clicks on "John Doe" from autocomplete options
-      And user clicks on the "Advanced Search" "Loan Purpose" field
+      And enters "testtest" in the keyword search field
+      And selects "Loan Out" from record type dropdown
+      And selects "all (AND)" from boolean dropdown
+      And enters "John Doe" in the "Advanced Search" "Borrower" vocab field
+      And clicks on "John Doe" from autocomplete options
+      And clicks on the "Advanced Search" "Loan Purpose" field
     Then a drop down list should appear in the "Loan Purpose" field
-      And user selects "Research" from dropdown in "Loan Purpose" row
-      And user clicks the "Search" button
+      And selects "Research" from dropdown in "Loan Purpose" row
+      And clicks the "Search" button
     Then the search results should contain "example"
     Then the search results should contain "exampleexample"
     Then the search results should not contain "exampleexampleexample"

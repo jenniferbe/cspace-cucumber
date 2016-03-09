@@ -20,11 +20,11 @@ Feature: Supplementary Manual QA - Object Exit
     Given user is on the "Create New" page
       And selects the "Object Exit" radio button on the Create New page
       And clicks on the Create button
-      And user clicks Select number pattern
-      And user selects "Object Exit" from dropdown in "Exit Number" row
+      And clicks Select number pattern
+      And selects "Object Exit" from dropdown in "Exit Number" row
     Then enables top and bottom "cancel" buttons
-      And user clicks Select number pattern
-      And user selects "Object Exit" from dropdown in "Exit Number" row
+      And clicks Select number pattern
+      And selects "Object Exit" from dropdown in "Exit Number" row
     # cannot detect incrementing numbers (next line)
     Then the number pattern incremented by one should be in the "Object Exit" "Exit Number" field
     Then enables top and bottom "cancel" buttons
@@ -34,13 +34,13 @@ Feature: Supplementary Manual QA - Object Exit
     Given user is on the "Create New" page
       And selects the "Object Exit" radio button on the Create New page
       And clicks on the Create button
-      And user enters "1234" in the "Object Exit" "Exit Number" field
-      And user enters "John Doe" in the "Object Exit" "Current Owner" field
+      And enters "1234" in the "Object Exit" "Exit Number" field
+      And enters "John Doe" in the "Object Exit" "Current Owner" field
     Then the titlebar should contain "1234"
     Then the titlebar should contain "John Doe"
-    And user enters "Cesar Inc" in the "Object Exit" "Current Owner" field
+    And enters "Cesar Inc" in the "Object Exit" "Current Owner" field
     Then the titlebar should contain "Cesar Inc"
-      And user clears all fields of the "Object Exit" record
+      And clears all fields of the "Object Exit" record
     # following lines do not exist
     Then the titlebar should not contain "1234"
     Then the titlebar should not contain "Cesar Inc"
@@ -50,8 +50,8 @@ Feature: Supplementary Manual QA - Object Exit
     Given user is on the "Create New" page
       And selects the "Object Exit" radio button on the Create New page
       And clicks on the Create button
-      And user enters "1234" in the "Object Exit" "Exit Number" field
-      And user saves the record
+      And enters "1234" in the "Object Exit" "Exit Number" field
+      And saves the record
     Then the record is successfully saved
     Then "GMT-0800 (PST)" should be displayed in the message bar
     Then disables top and bottom "cancel" buttons
@@ -61,18 +61,18 @@ Feature: Supplementary Manual QA - Object Exit
   Scenario: Docking Title Bar
     Given user is on the "Create New" page
       And clicks on the Create button
-      And user enters "1234" in the "Object Exit" "Exit Number" field
-      And user clicks the plus to repeat the "Exit Method" form
-      And user clicks the plus to repeat the "Exit Method" form
-      And user clicks the plus to repeat the "Exit Method" form
-      And user clicks the plus to repeat the "Exit Method" form
-      And user clicks the plus to repeat the "Exit Method" form
-      And user clicks the plus to repeat the "Exit Method" form
-      And user clicks the plus to repeat the "Exit Method" form
-      And user clicks the plus to repeat the "Exit Method" form
-      And user clicks the plus to repeat the "Exit Method" form
+      And enters "1234" in the "Object Exit" "Exit Number" field
+      And clicks the plus to repeat the "Exit Method" form
+      And clicks the plus to repeat the "Exit Method" form
+      And clicks the plus to repeat the "Exit Method" form
+      And clicks the plus to repeat the "Exit Method" form
+      And clicks the plus to repeat the "Exit Method" form
+      And clicks the plus to repeat the "Exit Method" form
+      And clicks the plus to repeat the "Exit Method" form
+      And clicks the plus to repeat the "Exit Method" form
+      And clicks the plus to repeat the "Exit Method" form
       # cannot enable a scroll to bottom of page, following line is not defined
-      And user clicks on the "Packing Note" field
+      And clicks on the "Packing Note" field
     # not sure if titlebar term works for docking bar
     Then the titlebar should contain "1234"
     Then the titlebar should contain "Object Exit"
@@ -95,9 +95,9 @@ Feature: Supplementary Manual QA - Object Exit
     Given user is on the "Create New" page
       And selects the "Object Exit" radio button on the Create New page
       And clicks on the Create button
-      And user enters "1.2.3.4.5" in the "Object Exit" "Exit Number" field
-      And user adds "Abbott Publishing Company" to the "Object Exit" "Current Owner" vocab field
-      And user saves the record
+      And enters "1.2.3.4.5" in the "Object Exit" "Exit Number" field
+      And adds "Abbott Publishing Company" to the "Object Exit" "Current Owner" vocab field
+      And saves the record
     Then the record is successfully saved
     Then disables top and bottom "cancel" buttons
     Then enables top and bottom "delete" buttons
@@ -105,15 +105,15 @@ Feature: Supplementary Manual QA - Object Exit
     Then "Abbott Publishing Company" should appear in the Terms Used sidebar
     Then "organization" should appear in the Terms Used sidebar
     Then "currentOwner" should appear in the Terms Used sidebar
-      And user clicks on "Abbott Publishing Company" in the Terms Used sidebar
+      And clicks on "Abbott Publishing Company" in the Terms Used sidebar
     Then the titlebar should contain "Abbott Publishing Company"
     # Used By steps do not exist
     Then "1.2.3.4.5" should in the Used By sidebar
-      And user clicks on "1.2.3.4.5" in the Used By sidebar
+      And clicks on "1.2.3.4.5" in the Used By sidebar
     Then the titlebar should contain "1.2.3.4.5"
-      And user clicks on the delete button
-      And user clicks the confirmation delete button
-      And user clicks delete confirmation OK button
+      And clicks on the delete button
+      And clicks the confirmation delete button
+      And clicks delete confirmation OK button
     Then close the browser
 
 ## The remainder of this feature file, below, needs to be converted from narrative (broad declarative steps)

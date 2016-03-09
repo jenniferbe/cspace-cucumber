@@ -7,39 +7,39 @@ Feature: #Enter feature name here
 	Scenario: Working cataloging tab #1 
         Given user is in the "My CollectionSpace" page
        
-        And user goes to the record with identification number "CQA99_E"
-        And user selects the "Cataloging" tab     
+        And navigates to the record with identification number "CQA99_E"
+        And selects the "Cataloging" tab     
         Then the "Related Cataloging Records" area should be empty
        
-        And user goes to the record with identification number "CQA99_NE"
-        And user selects the "Cataloging" tab
+        And navigates to the record with identification number "CQA99_NE"
+        And selects the "Cataloging" tab
         Then "CQA99.1" should appear in the "Related Cataloging Records" area
         Then close the browser
 
 	Scenario: Dismissing the dialog #3 
         Given user is in the "My CollectionSpace" page
-        And user goes to the record with identification number "CQA99_NE"
+        And navigates to the record with identification number "CQA99_NE"
 
         #Variation A
-        And user clicks the "Add record" button
-        And user clicks the "close" button 
+        And clicks the "Add record" button
+        And clicks the "close" button 
         Then the "Related Cataloging Records" area should only contain "CQA99.1"
 
         #Variation B
-        And user clicks the "Add record" button
-        And user presses the "ESC" key 
+        And clicks the "Add record" button
+        And presses the "ESC" key 
         Then the "Related Cataloging Records" area should only contain "CQA99.1"
 
 
 	Scenario: Searching and adding multiple cataloging records #5 
-        And user clicks the "Add record" button 
-        And user clicks the "search" button 
+        And clicks the "Add record" button 
+        And clicks the "search" button 
         Then the search results should contain "CQA99.3" 
         Then the search results should contain "CQA99.2" 
 
-        And user selects the box with result "CQA99.3" 
-        And user selects the box with result "CQA99.2"  
-        And user clicks the "Add to current record" button  
+        And selects the box with result "CQA99.3" 
+        And selects the box with result "CQA99.2"  
+        And clicks the "Add to current record" button  
 
         #Expected, Group #1
         Then the dialog should be dismissed 
@@ -48,314 +48,314 @@ Feature: #Enter feature name here
         Then "CQA99.3" should appear in the "Procedures" area 
         Then "CQA99.2" should appear in the "Procedures" area 
 
-        And user clicks on result with text "CQA99.3" 
+        And clicks on result with text "CQA99.3" 
         Then an "Edit Cataloging Record" form should be displayed 
         Then the "Identification Number" field should contain "CQA99.3"
-        And user clicks the "Delete this relation." button
+        And clicks the "Delete this relation." button
         Then a delete confirmation dialog should appear
-        And user clicks on the delete button 
+        And clicks on the delete button 
         Then the deletion should be confirmed in a dialog
         Then "CQA99.3" should not appear in the "Related Cataloging Records" area 
 
-        And user clicks on result with text "CQA99.2" 
+        And clicks on result with text "CQA99.2" 
         Then an "Edit Cataloging Record" form should be displayed 
         Then the "Identification Number" field should contain "CQA99.2"
-        And user clicks the "Delete this relation." button
+        And clicks the "Delete this relation." button
         Then a delete confirmation dialog should appear
-        And user clicks on the delete button 
+        And clicks on the delete button 
         Then the deletion should be confirmed in a dialog
         Then "CQA99.2" should not appear in the "Related Cataloging Records" area 
         Then close the browser
 
 	Scenario: Warning when navigating away from new cataloging records  
         Given user is in the "My CollectionSpace" page
-        And user goes to the record with identification number "CQA99_NE"
+        And navigates to the record with identification number "CQA99_NE"
         Then "CQA99_NE" should be in the "Identification Number" field
-        And user selects the "Cataloging" tab 
+        And selects the "Cataloging" tab 
         
-        And user clicks the "Add record" button
-        And user clicks the "Create New" button
+        And clicks the "Add record" button
+        And clicks the "Create New" button
         
         Then the dialog should be dismissed
         Then the message "Creating new record..." should be displayed
         
         Then the "Identification Number" field should be empty
-        And user enters "CQA99.4" in the "Identification Number" field
+        And enters "CQA99.4" in the "Identification Number" field
 
         #Variation A
-        And user selects the "Current Record" tab
+        And selects the "Current Record" tab
         Then a leave confirmation dialog should appear 
-        And user clicks the "close" button  
+        And clicks the "close" button  
         Then the "Identification Number" field should contain "CQA99.4"
 
         #Variation B
-        And user selects the "Current Record" tab
+        And selects the "Current Record" tab
         Then a leave confirmation dialog should appear  
-        And user clicks the "cancel" button
+        And clicks the "cancel" button
         Then the "Identification Number" field should contain "CQA99.4"
 
         ## Variation D
-        And user selects the "Current Record" tab
-        And user clicks the "Don't save" button 
-        And user selects the "Cataloging" tab 
+        And selects the "Current Record" tab
+        And clicks the "Don't save" button 
+        And selects the "Cataloging" tab 
         Then "CQA99.4" should not appear in the "Related Cataloging Records" area
 
         #Variation C
-        And user clicks the "Add record" button
+        And clicks the "Add record" button
         And clicks on the Create button
-        And user enters "CQA99.4" in the "Identification Number" field 
-        And user selects the "Current Record" tab
-        And user clicks the "save" button
+        And enters "CQA99.4" in the "Identification Number" field 
+        And selects the "Current Record" tab
+        And clicks the "save" button
 
-        And user selects the "Cataloging" tab 
+        And selects the "Cataloging" tab 
         Then "CQA99.4" should appear in the "Related Cataloging Records" area 
 
-        And user goes to the record with identification number "CQA99.4"
-        And user clicks on the delete button
+        And navigates to the record with identification number "CQA99.4"
+        And clicks on the delete button
         Then a delete confirmation dialog should appear
-        And user clicks on the delete button 
+        And clicks on the delete button 
         Then the deletion should be confirmed in a dialog
         Then close the browser
 
 	Scenario: Cancel changes button #9 
         Given user is in the "My CollectionSpace" page
-        And user goes to the record with identification number "CQA99_NE"
-        And user selects the "Cataloging" tab
-        And user clicks the "Add record" button 
-        And user clicks the "Create new" button
+        And navigates to the record with identification number "CQA99_NE"
+        And selects the "Cataloging" tab
+        And clicks the "Add record" button 
+        And clicks the "Create new" button
 
         # Variation A
         Then the message "Creating new record..." should be displayed
         Then the "cancel changes" button at the bottom of the page should not be clickable
         Then the "cancel changes" button at the top of the page should not be clickable
         
-        And user enters "CQA99.5" in the "Identification Number" field
-        And user clicks the "cancel changes" button 
+        And enters "CQA99.5" in the "Identification Number" field
+        And clicks the "cancel changes" button 
         Then the "Identification Number" field should be empty
 
         # Variation B
-        And user enters "CQA99.5" in the "Identification Number" field
-        And user clicks the "save" button 
+        And enters "CQA99.5" in the "Identification Number" field
+        And clicks the "save" button 
         Then the "cancel changes" button at the top of the page should not be clickable 
         Then the "cancel changes" button at the bottom of the page should not be clickable 
    
-        And user clicks the "Go to record" button
-        And user clicks the "Delete" button 
+        And clicks the "Go to record" button
+        And clicks the "Delete" button 
         Then a delete confirmation dialog should appear
-        And user clicks the confirmation delete button
+        And clicks the confirmation delete button
         Then a deletion should be confirmed in a dialog
         Then close the browser
 
 	Scenario: Ensure all fields are properly saved #13 
         # Scenario: Test 11--> Successful save
         Given user is on the "My CollectionSpace" page 
-        And user goes to the record with identification number "CQA99_NE" 
-        And user selects the "Cataloging" tab 
+        And navigates to the record with identification number "CQA99_NE" 
+        And selects the "Cataloging" tab 
 
-        And user clicks the "+ Add Record" button
+        And clicks the "+ Add Record" button
         And clicks on the Create button
-        And user saves the record
+        And saves the record
         Then the message "Please specify an Identification Number" should appear
-        And user enters "CQA99.11" in the "Identification Number" field
-        And user saves the record
+        And enters "CQA99.11" in the "Identification Number" field
+        And saves the record
         Then the message "Relation successfully created." should appear
 
         #Object ID Information
-        And user enters "99" in the "Number of Objects" field
-        And user enters "99.1" in the "Number" field        
-        And user selects "Lender" from the "Number Type" drop down box        
-        And user selects "Antiquities" from the "Responsible Department" drop down box
-        And user selects "Library collection" from the "Collection" drop down box
-        And user selects "New" from the "Record Status" drop down box
-        And user enters "CQA-99 Brief Description box" in the "Brief Description" field
-        And user enters "CQA-99 Distinguishing Features box" in the "Distinguishing Features" field
-        And user enters "CQA-99 Comments box" in the "Comments" field
-        And user enters "CQA-99 title field" in the "Title" field
-        And user selects "French" from the "Title Language" drop down box
-        And user selects "Generic" from the "Title Type" drop down box
-        And user selects "French" from the "Title Translation Language" drop down box
-        And user enters "Fr" in the "Title Translation" field
-        And user enters "CQA99.11" in the "Object Name" field        
-        And user selects "Current" from the "Currency" drop down box
-        And user selects "Group" from the "Level" drop down box
-        And user selects "Nomenclature" from the "System" drop down box
-        And user selects "Simple" from the "Type" drop down box
-        And user selects "French" from the "Language" drop down box
-        And user selects "CQA-99 Note box" from the "Note" drop down box
+        And enters "99" in the "Number of Objects" field
+        And enters "99.1" in the "Number" field        
+        And selects "Lender" from the "Number Type" drop down box        
+        And selects "Antiquities" from the "Responsible Department" drop down box
+        And selects "Library collection" from the "Collection" drop down box
+        And selects "New" from the "Record Status" drop down box
+        And enters "CQA-99 Brief Description box" in the "Brief Description" field
+        And enters "CQA-99 Distinguishing Features box" in the "Distinguishing Features" field
+        And enters "CQA-99 Comments box" in the "Comments" field
+        And enters "CQA-99 title field" in the "Title" field
+        And selects "French" from the "Title Language" drop down box
+        And selects "Generic" from the "Title Type" drop down box
+        And selects "French" from the "Title Translation Language" drop down box
+        And enters "Fr" in the "Title Translation" field
+        And enters "CQA99.11" in the "Object Name" field        
+        And selects "Current" from the "Currency" drop down box
+        And selects "Group" from the "Level" drop down box
+        And selects "Nomenclature" from the "System" drop down box
+        And selects "Simple" from the "Type" drop down box
+        And selects "French" from the "Language" drop down box
+        And selects "CQA-99 Note box" from the "Note" drop down box
         #Object Description Information Box
-        And user enters "99.1" in the "Copy Number" field
-        And user enters "99.2" in the "Edition Number" field                
-        And user selects "copy" from the "Object Status" drop down box
-        And user enters "99" in the "Age" field
-        And user selects "older than" from the "Age Qualifier" drop down box
-        And user selects "Years" from the "Unit" drop down box
-        And user selects "male" from the "Sex" drop down box
-        And user selects "adult" from the "Phase" drop down box
-        And user selects "pinned" from the "Form" drop down box
-        And user enters "French" in the "Style" field
-        And user enters "Blue" in the "Color" field
-        And user enters "Polyester" in the "Material" field
-        And user enters "Diamonds" in the "Material Component" field
-        And user enters "Blood Diamonds" in the "Material Component Note" field
-        And user enters "Polyester Doll" in the "Material Name" field
-        And user enters "Africa" in the "Material Source" field
-        And user enters "African Polyester doll with blood diamonds" in the "Physical Description" field
-        And user selects "handle" from the "Object Component Name" drop down box
-        And user enters "Blue Handle" in the "Information" field
-        And user selects "record speed" from the "Technical Attribute" drop down box
-        And user selects "metal" from the "Measurement" drop down box
-        And user selects "rpm" from the "Unit" drop down box
-        And user selects "base" from the "Part" drop down box
-        And user selects "area" from the "Dimension" drop down box
-        And user selects "Ruler" from the "Method" drop down box
-        And user selects "carats" from the "Dimension Unit" drop down box
-        And user enters "base of doll" in the "Summary" field
-        And user enters "99.3" in the "Value" field
-        And user enters "Cesar Villalobos" in the "Measured By" field
-        And user selects "Cesar Villalobos" from autocomplete options
-        And user enters "pounds" in the "Value Qualifier" field
-        And user enters "2016-01-01" in the "Date" field
+        And enters "99.1" in the "Copy Number" field
+        And enters "99.2" in the "Edition Number" field                
+        And selects "copy" from the "Object Status" drop down box
+        And enters "99" in the "Age" field
+        And selects "older than" from the "Age Qualifier" drop down box
+        And selects "Years" from the "Unit" drop down box
+        And selects "male" from the "Sex" drop down box
+        And selects "adult" from the "Phase" drop down box
+        And selects "pinned" from the "Form" drop down box
+        And enters "French" in the "Style" field
+        And enters "Blue" in the "Color" field
+        And enters "Polyester" in the "Material" field
+        And enters "Diamonds" in the "Material Component" field
+        And enters "Blood Diamonds" in the "Material Component Note" field
+        And enters "Polyester Doll" in the "Material Name" field
+        And enters "Africa" in the "Material Source" field
+        And enters "African Polyester doll with blood diamonds" in the "Physical Description" field
+        And selects "handle" from the "Object Component Name" drop down box
+        And enters "Blue Handle" in the "Information" field
+        And selects "record speed" from the "Technical Attribute" drop down box
+        And selects "metal" from the "Measurement" drop down box
+        And selects "rpm" from the "Unit" drop down box
+        And selects "base" from the "Part" drop down box
+        And selects "area" from the "Dimension" drop down box
+        And selects "Ruler" from the "Method" drop down box
+        And selects "carats" from the "Dimension Unit" drop down box
+        And enters "base of doll" in the "Summary" field
+        And enters "99.3" in the "Value" field
+        And enters "Cesar Villalobos" in the "Measured By" field
+        And selects "Cesar Villalobos" from autocomplete options
+        And enters "pounds" in the "Value Qualifier" field
+        And enters "2016-01-01" in the "Date" field
         #Content Box
-        And user enters "African Polyester doll with blood diamonds" in the "Description" field
-        And user selects "French" from the "Language" drop down box
-        And user enters "moving" in the "Activity" field        
-        And user enters "Testing" in the "Concept" field
-        And user selects "Testing" from autocomplete options
-        And user enters "2016-02-02" in the "Date" field
-        And user selects "back" from the "Position" drop down box
-        And user selects "Furniture" from the "Object Type" drop down box
-        And user enters "red chair" in the "Object" field
-        And user enters "Regina Xu, Jennifer Be" in the "People" field
-        And user enters "Cesar Villalobos" in the "Person" field
-        And user selects "Cesar Villalobos" from autocomplete options
-        And user enters "Orange County" in the "Place" field
-        And user selects "Gothic script" from the "Script" drop down box
-        And user enters "Water Tribe" in the "Organization" field
-        And user selects "Water Tribe" from autocomplete options
-        And user enters "CQA-99 Testing" in the "Event Name" field
-        And user enters "CQA-99 Test" in the "Event Name Type" field
-        And user enters "CQA-99 Other" in the "Other" field
-        And user enters "CQA-99 Other Type" in the "Other Type" field
+        And enters "African Polyester doll with blood diamonds" in the "Description" field
+        And selects "French" from the "Language" drop down box
+        And enters "moving" in the "Activity" field        
+        And enters "Testing" in the "Concept" field
+        And selects "Testing" from autocomplete options
+        And enters "2016-02-02" in the "Date" field
+        And selects "back" from the "Position" drop down box
+        And selects "Furniture" from the "Object Type" drop down box
+        And enters "red chair" in the "Object" field
+        And enters "Regina Xu, Jennifer Be" in the "People" field
+        And enters "Cesar Villalobos" in the "Person" field
+        And selects "Cesar Villalobos" from autocomplete options
+        And enters "Orange County" in the "Place" field
+        And selects "Gothic script" from the "Script" drop down box
+        And enters "Water Tribe" in the "Organization" field
+        And selects "Water Tribe" from autocomplete options
+        And enters "CQA-99 Testing" in the "Event Name" field
+        And enters "CQA-99 Test" in the "Event Name Type" field
+        And enters "CQA-99 Other" in the "Other" field
+        And enters "CQA-99 Other Type" in the "Other Type" field
         #Textual Inscription
-        And user enters "Il y a une baguette magique" in the "Inscription Content" field
-        And user enters "There's a magic wand" in the "Interpretation" field
-        And user enters "There is a magic wand" in the "Translation" field
-        And user enters "CQA-99 Transliteration box" in the "Transliteration" field
-        And user enters "X-Ray" in the "Method" field
-        And user enters "2016-03-03" in the "Date" field
-        And user enters "Cesar Villalobos" in the "Inscriber" field
-        And user selects "Cesar Villalobos" from autocomplete options
-        And user selects "back" from the "Position" drop down box
-        And user selects "Gothic script" from the "Script" drop down box
-        And user selects "decoration" from the "Type" drop down box
+        And enters "Il y a une baguette magique" in the "Inscription Content" field
+        And enters "There's a magic wand" in the "Interpretation" field
+        And enters "There is a magic wand" in the "Translation" field
+        And enters "CQA-99 Transliteration box" in the "Transliteration" field
+        And enters "X-Ray" in the "Method" field
+        And enters "2016-03-03" in the "Date" field
+        And enters "Cesar Villalobos" in the "Inscriber" field
+        And selects "Cesar Villalobos" from autocomplete options
+        And selects "back" from the "Position" drop down box
+        And selects "Gothic script" from the "Script" drop down box
+        And selects "decoration" from the "Type" drop down box
         #Non-Textual Inscription
-        And user enters "CQA-99 Inscription Box" in the "Inscription Description" field
-        And user enters "CQA-99 Transliteration box" in the "Transliteration" field        
-        And user enters "X-Ray" in the "Method" field
-        And user enters "2016-03-03" in the "Date" field        
-        And user enters "Cesar Villalobos" in the "Inscriber" field
-        And user selects "Cesar Villalobos" from autocomplete options
-        And user selects "back" from the "Position" drop down box                                          
-        And user selects "decoration" from the "Type" drop down box                    
+        And enters "CQA-99 Inscription Box" in the "Inscription Description" field
+        And enters "CQA-99 Transliteration box" in the "Transliteration" field        
+        And enters "X-Ray" in the "Method" field
+        And enters "2016-03-03" in the "Date" field        
+        And enters "Cesar Villalobos" in the "Inscriber" field
+        And selects "Cesar Villalobos" from autocomplete options
+        And selects "back" from the "Position" drop down box                                          
+        And selects "decoration" from the "Type" drop down box                    
         #Obj Production Info
-        And user enters "2016-04-04" in the "Production Date" field
-        And user enters "Watering" in the "Technique Type" field
-        And user enters "Hydration" in the "Technique" field
-        And user enters "Mexico" in the "Production place" field
-        And user enters "Manufacture" in the "Role" field
-        And user enters "Aztecs" in the "Production people" field
-        And user enters "Manufacture" in the "Role" field
-        And user enters "Cesar Villalobos" in the "Production person" field
-        And user selects "Cesar Villalobos" from autocomplete options
-        And user enters "Manufacture" in the "Role" field
-        And user enters "Aztecs United" in the "Production organization" field
-        And user selects "Aztecs United" from autocomplete options
-        And user enters "Manufacture" in the "Role" field
-        And user enters "CQA-99 Made by the Aztecs" in the "Production Note" field
-        And user enters "CQA-99 No Reason Found" in the "Production Reason" field
+        And enters "2016-04-04" in the "Production Date" field
+        And enters "Watering" in the "Technique Type" field
+        And enters "Hydration" in the "Technique" field
+        And enters "Mexico" in the "Production place" field
+        And enters "Manufacture" in the "Role" field
+        And enters "Aztecs" in the "Production people" field
+        And enters "Manufacture" in the "Role" field
+        And enters "Cesar Villalobos" in the "Production person" field
+        And selects "Cesar Villalobos" from autocomplete options
+        And enters "Manufacture" in the "Role" field
+        And enters "Aztecs United" in the "Production organization" field
+        And selects "Aztecs United" from autocomplete options
+        And enters "Manufacture" in the "Role" field
+        And enters "CQA-99 Made by the Aztecs" in the "Production Note" field
+        And enters "CQA-99 No Reason Found" in the "Production Reason" field
         #Obj History and Association Info
-        And user enters "waterbending" in the "Associated Activity" field
-        And user enters "water" in the "Associated Activity Type" field
-        And user enters "waterbent item" in the "Associated Activity Note" field
-        And user enters "water necklace" in the "Associated Object" field
-        And user enters "necklace" in the "Associated Object Type" field
-        And user enters "very expernsive" in the "Associated Object Note" field
-        And user enters "Testing" in the "Associated Concept" field
-        And user selects "Testing" from autocomplete options
-        And user enters "artisanship" in the "Associated Concept Type" field
-        And user enters "made with care" in the "Associated Concept Note" field
-        And user enters "water tribe" in the "Associated Cultural Affinity" field
-        And user enters "religious" in the "Associated Cultural Affinity Type" field
-        And user enters "religious item" in the "Associated Cultural Affinity Note" field
-        And user enters "Aztecs United" in the "Associated Organization" field
-        And user selects "Aztecs United" from autocomplete options
-        And user enters "tribe" in the "Associated Organization Type" field
-        And user enters "item from tribe" in the "Associated Organization Note" field
-        And user enters "airbenders" in the "Associated People" field
-        And user enters "air" in the "Associated People Type" field    
-        And user enters "gifted to the air nation" in the "Associated People Note" field
-        And user enters "Aang" in the "Associated Person" field
-        And user selects "Aang" from autocomplete options
-        And user enters "waterbender" in the "Associated Person Type" field
-        And user enters "from katara to aang" in the "Associated Person Note" field        
-        And user enters "nortwest temple" in the "Associated Place" field
-        And user enters "temple" in the "Associated Place Type" field
-        And user enters "to be kept here" in the "Associated Place Note" field
-        And user enters "aang funeral" in the "Associated Event Name" field
-        And user enters "funeral " in the "Associated Event Name type" field        
-        And user enters "Water Tribe" in the "Associated Event Organization" field                                    
-        And user selects "Water Tribe" from autocomplete options
-        And user enters "air nomads" in the "Associated Event People" field
-        And user enters "nortwestern air temple" in the "Associated Event Place" field
-        And user enters "Aang" in the "Associated Event Person" field
-        And user selects "Aang" from autocomplete options
-        And user enters "No note" in the "Associated Event Note" field
-        And user enters "2016-05-05" in the "Associated Date" field
-        And user enters "cinco de mayo" in the "Associated Date Type" field
-        And user enters "funeral on cinco de mayo" in the "Associated Date Note" field
-        And user enters "object gifted to aang on his funeral" in the "Object History Note" field
-        And user enters "decoration" in the "Usage" field
-        And user enters "to be used by the next avatar" in the "Usage Note" field
-        And user enters "Aang" in the "Owner" field
-        And user selects "Aang" from autocomplete options
-        And user enters "2016-07-06" in the "Ownership date" field
-        And user enters "worldwide" in the "Ownership place" field
-        And user selects "limited" from the "Ownership access" drop down box                                          
-        And user selects "company" from the "Ownership category" drop down box                                          
-        And user enters "CQA-99 No note" in the "Note" field
-        And user enters "99" in the "Price - value" field
-        And user selects "bequest" from the "Method" drop down box                                          
-        And user selects "Euro" from the "Price - currency" drop down box                                          
+        And enters "waterbending" in the "Associated Activity" field
+        And enters "water" in the "Associated Activity Type" field
+        And enters "waterbent item" in the "Associated Activity Note" field
+        And enters "water necklace" in the "Associated Object" field
+        And enters "necklace" in the "Associated Object Type" field
+        And enters "very expernsive" in the "Associated Object Note" field
+        And enters "Testing" in the "Associated Concept" field
+        And selects "Testing" from autocomplete options
+        And enters "artisanship" in the "Associated Concept Type" field
+        And enters "made with care" in the "Associated Concept Note" field
+        And enters "water tribe" in the "Associated Cultural Affinity" field
+        And enters "religious" in the "Associated Cultural Affinity Type" field
+        And enters "religious item" in the "Associated Cultural Affinity Note" field
+        And enters "Aztecs United" in the "Associated Organization" field
+        And selects "Aztecs United" from autocomplete options
+        And enters "tribe" in the "Associated Organization Type" field
+        And enters "item from tribe" in the "Associated Organization Note" field
+        And enters "airbenders" in the "Associated People" field
+        And enters "air" in the "Associated People Type" field    
+        And enters "gifted to the air nation" in the "Associated People Note" field
+        And enters "Aang" in the "Associated Person" field
+        And selects "Aang" from autocomplete options
+        And enters "waterbender" in the "Associated Person Type" field
+        And enters "from katara to aang" in the "Associated Person Note" field        
+        And enters "nortwest temple" in the "Associated Place" field
+        And enters "temple" in the "Associated Place Type" field
+        And enters "to be kept here" in the "Associated Place Note" field
+        And enters "aang funeral" in the "Associated Event Name" field
+        And enters "funeral " in the "Associated Event Name type" field        
+        And enters "Water Tribe" in the "Associated Event Organization" field                                    
+        And selects "Water Tribe" from autocomplete options
+        And enters "air nomads" in the "Associated Event People" field
+        And enters "nortwestern air temple" in the "Associated Event Place" field
+        And enters "Aang" in the "Associated Event Person" field
+        And selects "Aang" from autocomplete options
+        And enters "No note" in the "Associated Event Note" field
+        And enters "2016-05-05" in the "Associated Date" field
+        And enters "cinco de mayo" in the "Associated Date Type" field
+        And enters "funeral on cinco de mayo" in the "Associated Date Note" field
+        And enters "object gifted to aang on his funeral" in the "Object History Note" field
+        And enters "decoration" in the "Usage" field
+        And enters "to be used by the next avatar" in the "Usage Note" field
+        And enters "Aang" in the "Owner" field
+        And selects "Aang" from autocomplete options
+        And enters "2016-07-06" in the "Ownership date" field
+        And enters "worldwide" in the "Ownership place" field
+        And selects "limited" from the "Ownership access" drop down box                                          
+        And selects "company" from the "Ownership category" drop down box                                          
+        And enters "CQA-99 No note" in the "Note" field
+        And enters "99" in the "Price - value" field
+        And selects "bequest" from the "Method" drop down box                                          
+        And selects "Euro" from the "Price - currency" drop down box                                          
         #Associations
         #Object Owner's Contribution Information
-        And user enters "Never used it. He was dead." in the "Owner's Personal Experience" field
-        And user enters "Owner never saw it" in the "Owner's Personal Response" field
-        And user enters "Katara" in the "Owner's Reference" field
-        And user enters "My relic" in the "Owner's Contribution Note" field
+        And enters "Never used it. He was dead." in the "Owner's Personal Experience" field
+        And enters "Owner never saw it" in the "Owner's Personal Response" field
+        And enters "Katara" in the "Owner's Reference" field
+        And enters "My relic" in the "Owner's Contribution Note" field
         #Object Viewer's Contribution info
-        And user enters "Observation" in the "Viewer's Role" field
-        And user enters "Vivid, blue" in the "Viewer's Personal Experience" field
-        And user enters "amazed" in the "Viewer's Personal Response" field
-        And user enters "Katara" in the "Viewer's Reference" field        
-        And user enters "Made sure it was safe" in the "Viewer's Contribution Note" field
+        And enters "Observation" in the "Viewer's Role" field
+        And enters "Vivid, blue" in the "Viewer's Personal Experience" field
+        And enters "amazed" in the "Viewer's Personal Response" field
+        And enters "Katara" in the "Viewer's Reference" field        
+        And enters "Made sure it was safe" in the "Viewer's Contribution Note" field
         #Reference Info
-        And user enters "Katara" in the "Reference" field
-        And user selects "Katara" from autocomplete options
-        And user enters "CQA-99 Reference note field" in the "Reference Note" field
+        And enters "Katara" in the "Reference" field
+        And selects "Katara" from autocomplete options
+        And enters "CQA-99 Reference note field" in the "Reference Note" field
         #Object Collection Info
-        And user enters "2016-07-07" in the "Field collection date" field
-        And user selects "borehole" from the "Field collection method" drop down box
-        And user enters "It was actually stolen from air temple" in the "Field collection note" field
-        And user enters "CQA-99.11" in the "Field collection number" field
-        And user enters "North Temple" in the "Field collection place" field
-        And user selects "North Temple" from autocomplete options
-        And user enters "Cesar Villalobos" in the "Field collection collector" field
-        And user selects "Cesar Villalobos" from autocomplete options    
-        And user enters "Cesar Villalobos" in the "Field collection source" field
-        And user selects "Cesar Villalobos" from autocomplete options 
-        And user enters "Temple exploration" in the "Field collection event name" field
+        And enters "2016-07-07" in the "Field collection date" field
+        And selects "borehole" from the "Field collection method" drop down box
+        And enters "It was actually stolen from air temple" in the "Field collection note" field
+        And enters "CQA-99.11" in the "Field collection number" field
+        And enters "North Temple" in the "Field collection place" field
+        And selects "North Temple" from autocomplete options
+        And enters "Cesar Villalobos" in the "Field collection collector" field
+        And selects "Cesar Villalobos" from autocomplete options    
+        And enters "Cesar Villalobos" in the "Field collection source" field
+        And selects "Cesar Villalobos" from autocomplete options 
+        And enters "Temple exploration" in the "Field collection event name" field
         #Object Hierarchy
-        And user saves the record
+        And saves the record
         
         Then the "Number of Objects" field should contain "99"
         Then the "Number" field should contain "99.1"
@@ -525,201 +525,201 @@ Feature: #Enter feature name here
     ### 13
 
         #Object ID Information
-        And user enters "99.13" in the "Number of Objects" field
-        And user enters "99.13.1" in the "Number" field        
-        And user selects "Obsolte" from the "Number Type" drop down box        
-        And user selects "Paleobotany" from the "Responsible Department" drop down box
-        And user selects "Permanent collection" from the "Collection" drop down box
-        And user selects "In process" from the "Record Status" drop down box
-        And user enters "CQA-99.13 Brief Description box" in the "Brief Description" field
-        And user enters "CQA-99.13 Distinguishing Features box" in the "Distinguishing Features" field
-        And user enters "CQA-99.13 Comments box" in the "Comments" field
-        And user enters "CQA-99.13 title field" in the "Title" field
-        And user selects "German" from the "Title Language" drop down box
-        And user selects "Generic" from the "Title Type" drop down box
-        And user selects "German" from the "Title Translation Language" drop down box
-        And user enters "Ger" in the "Title Translation" field
-        And user enters "CQA99.13.11" in the "Object Name" field        
-        And user selects "Current" from the "Currency" drop down box
-        And user selects "Group" from the "Level" drop down box
-        And user selects "Nomenclature" from the "System" drop down box
-        And user selects "Simple" from the "Type" drop down box
-        And user selects "German" from the "Language" drop down box
-        And user selects "CQA-99.13 Note box" from the "Note" drop down box
+        And enters "99.13" in the "Number of Objects" field
+        And enters "99.13.1" in the "Number" field        
+        And selects "Obsolte" from the "Number Type" drop down box        
+        And selects "Paleobotany" from the "Responsible Department" drop down box
+        And selects "Permanent collection" from the "Collection" drop down box
+        And selects "In process" from the "Record Status" drop down box
+        And enters "CQA-99.13 Brief Description box" in the "Brief Description" field
+        And enters "CQA-99.13 Distinguishing Features box" in the "Distinguishing Features" field
+        And enters "CQA-99.13 Comments box" in the "Comments" field
+        And enters "CQA-99.13 title field" in the "Title" field
+        And selects "German" from the "Title Language" drop down box
+        And selects "Generic" from the "Title Type" drop down box
+        And selects "German" from the "Title Translation Language" drop down box
+        And enters "Ger" in the "Title Translation" field
+        And enters "CQA99.13.11" in the "Object Name" field        
+        And selects "Current" from the "Currency" drop down box
+        And selects "Group" from the "Level" drop down box
+        And selects "Nomenclature" from the "System" drop down box
+        And selects "Simple" from the "Type" drop down box
+        And selects "German" from the "Language" drop down box
+        And selects "CQA-99.13 Note box" from the "Note" drop down box
         #Object Description Information Box
-        And user enters "99.13.1" in the "Copy Number" field
-        And user enters "99.13.2" in the "Edition Number" field                
-        And user selects "forgery" from the "Object Status" drop down box
-        And user enters "99.13" in the "Age" field
-        And user selects "older than" from the "Age Qualifier" drop down box
-        And user selects "Years" from the "Unit" drop down box
-        And user selects "female" from the "Sex" drop down box
-        And user selects "larva" from the "Phase" drop down box
-        And user selects "dry" from the "Form" drop down box
-        And user enters "German" in the "Style" field
-        And user enters "Purple" in the "Color" field
-        And user enters "Fabric" in the "Material" field
-        And user enters "Diamonds" in the "Material Component" field
-        And user enters "Blood Diamonds" in the "Material Component Note" field
-        And user enters "Fabric Doll" in the "Material Name" field
-        And user enters "Africa" in the "Material Source" field
-        And user enters "African Fabric doll with blood diamonds" in the "Physical Description" field
-        And user selects "handle" from the "Object Component Name" drop down box
-        And user enters "Purple Handle" in the "Information" field
-        And user selects "record speed" from the "Technical Attribute" drop down box
-        And user selects "78" from the "Measurement" drop down box
-        And user selects "rpm" from the "Unit" drop down box
-        And user selects "base" from the "Part" drop down box
-        And user selects "area" from the "Dimension" drop down box
-        And user selects "Ruler" from the "Method" drop down box
-        And user selects "carats" from the "Dimension Unit" drop down box
-        And user enters "base of doll" in the "Summary" field
-        And user enters "99.13.3" in the "Value" field
-        And user enters "Cesar Villalobos" in the "Measured By" field
-        And user selects "Cesar Villalobos" from autocomplete options
-        And user enters "pounds" in the "Value Qualifier" field
-        And user enters "2017-01-01" in the "Date" field
+        And enters "99.13.1" in the "Copy Number" field
+        And enters "99.13.2" in the "Edition Number" field                
+        And selects "forgery" from the "Object Status" drop down box
+        And enters "99.13" in the "Age" field
+        And selects "older than" from the "Age Qualifier" drop down box
+        And selects "Years" from the "Unit" drop down box
+        And selects "female" from the "Sex" drop down box
+        And selects "larva" from the "Phase" drop down box
+        And selects "dry" from the "Form" drop down box
+        And enters "German" in the "Style" field
+        And enters "Purple" in the "Color" field
+        And enters "Fabric" in the "Material" field
+        And enters "Diamonds" in the "Material Component" field
+        And enters "Blood Diamonds" in the "Material Component Note" field
+        And enters "Fabric Doll" in the "Material Name" field
+        And enters "Africa" in the "Material Source" field
+        And enters "African Fabric doll with blood diamonds" in the "Physical Description" field
+        And selects "handle" from the "Object Component Name" drop down box
+        And enters "Purple Handle" in the "Information" field
+        And selects "record speed" from the "Technical Attribute" drop down box
+        And selects "78" from the "Measurement" drop down box
+        And selects "rpm" from the "Unit" drop down box
+        And selects "base" from the "Part" drop down box
+        And selects "area" from the "Dimension" drop down box
+        And selects "Ruler" from the "Method" drop down box
+        And selects "carats" from the "Dimension Unit" drop down box
+        And enters "base of doll" in the "Summary" field
+        And enters "99.13.3" in the "Value" field
+        And enters "Cesar Villalobos" in the "Measured By" field
+        And selects "Cesar Villalobos" from autocomplete options
+        And enters "pounds" in the "Value Qualifier" field
+        And enters "2017-01-01" in the "Date" field
         #Content Box
-        And user enters "African Fabric doll with blood diamonds" in the "Description" field
-        And user selects "German" from the "Language" drop down box
-        And user enters "moving" in the "Activity" field        
-        And user enters "Testing" in the "Concept" field
-        And user selects "Testing" from autocomplete options
-        And user enters "2017-02-02" in the "Date" field
-        And user selects "back" from the "Position" drop down box
-        And user selects "Furniture" from the "Object Type" drop down box
-        And user enters "red chair" in the "Object" field
-        And user enters "Regina Xu, Jennifer Be" in the "People" field
-        And user enters "Cesar Villalobos" in the "Person" field
-        And user selects "Cesar Villalobos" from autocomplete options
-        And user enters "Orange County" in the "Place" field
-        And user selects "Gothic script" from the "Script" drop down box
-        And user enters "Water Tribe" in the "Organization" field
-        And user selects "Water Tribe" from autocomplete options 
-        And user enters "CQA-99.13 Testing" in the "Event Name" field
-        And user enters "CQA-99.13 Test" in the "Event Name Type" field
-        And user enters "CQA-99.13 Other" in the "Other" field
-        And user enters "CQA-99.13 Other Type" in the "Other Type" field
+        And enters "African Fabric doll with blood diamonds" in the "Description" field
+        And selects "German" from the "Language" drop down box
+        And enters "moving" in the "Activity" field        
+        And enters "Testing" in the "Concept" field
+        And selects "Testing" from autocomplete options
+        And enters "2017-02-02" in the "Date" field
+        And selects "back" from the "Position" drop down box
+        And selects "Furniture" from the "Object Type" drop down box
+        And enters "red chair" in the "Object" field
+        And enters "Regina Xu, Jennifer Be" in the "People" field
+        And enters "Cesar Villalobos" in the "Person" field
+        And selects "Cesar Villalobos" from autocomplete options
+        And enters "Orange County" in the "Place" field
+        And selects "Gothic script" from the "Script" drop down box
+        And enters "Water Tribe" in the "Organization" field
+        And selects "Water Tribe" from autocomplete options 
+        And enters "CQA-99.13 Testing" in the "Event Name" field
+        And enters "CQA-99.13 Test" in the "Event Name Type" field
+        And enters "CQA-99.13 Other" in the "Other" field
+        And enters "CQA-99.13 Other Type" in the "Other Type" field
         #Textual Inscription
-        And user enters "Il y a une baguette magique" in the "Inscription Content" field
-        And user enters "There's a magic wand" in the "Interpretation" field
-        And user enters "There is a magic wand" in the "Translation" field
-        And user enters "CQA-99.13 Transliteration box" in the "Transliteration" field        
-        And user enters "X-Ray" in the "Method" field
-        And user enters "2017-03-03" in the "Date" field        
-        And user enters "Cesar Villalobos" in the "Inscriber" field
-        And user selects "Cesar Villalobos" from autocomplete options
-        And user selects "back" from the "Position" drop down box                        
-        And user selects "Gothic script" from the "Script" drop down box                        
-        And user selects "decoration" from the "Type" drop down box                        
+        And enters "Il y a une baguette magique" in the "Inscription Content" field
+        And enters "There's a magic wand" in the "Interpretation" field
+        And enters "There is a magic wand" in the "Translation" field
+        And enters "CQA-99.13 Transliteration box" in the "Transliteration" field        
+        And enters "X-Ray" in the "Method" field
+        And enters "2017-03-03" in the "Date" field        
+        And enters "Cesar Villalobos" in the "Inscriber" field
+        And selects "Cesar Villalobos" from autocomplete options
+        And selects "back" from the "Position" drop down box                        
+        And selects "Gothic script" from the "Script" drop down box                        
+        And selects "decoration" from the "Type" drop down box                        
         #Non-Textual Inscription
-        And user enters "CQA-99.13 Inscription Box" in the "Inscription Description" field
-        And user enters "CQA-99.13 Transliteration box" in the "Transliteration" field        
-        And user enters "X-Ray" in the "Method" field
-        And user enters "2017-03-03" in the "Date" field        
-        And user enters "Cesar Villalobos" in the "Inscriber" field
-        And user selects "Cesar Villalobos" from autocomplete options
-        And user selects "back" from the "Position" drop down box                                          
-        And user selects "decoration" from the "Type" drop down box                    
+        And enters "CQA-99.13 Inscription Box" in the "Inscription Description" field
+        And enters "CQA-99.13 Transliteration box" in the "Transliteration" field        
+        And enters "X-Ray" in the "Method" field
+        And enters "2017-03-03" in the "Date" field        
+        And enters "Cesar Villalobos" in the "Inscriber" field
+        And selects "Cesar Villalobos" from autocomplete options
+        And selects "back" from the "Position" drop down box                                          
+        And selects "decoration" from the "Type" drop down box                    
         #Obj Production Info
-        And user enters "2017-04-04" in the "Production Date" field
-        And user enters "Watering" in the "Technique Type" field
-        And user enters "Hydration" in the "Technique" field
-        And user enters "Mexico" in the "Production place" field
-        And user enters "Production" in the "Role" field
-        And user enters "Aztecs" in the "Production people" field
-        And user enters "Production" in the "Role" field
-        And user enters "Cesar Villalobos" in the "Production person" field
-        And user selects "Cesar Villalobos" from autocomplete options
-        And user enters "Production" in the "Role" field
-        And user enters "Water Tribe" in the "Production organization" field
-        And user selects "Water Tribe" from autocomplete options
-        And user enters "Production" in the "Role" field
-        And user enters "CQA-99.13 Made by the Aztecs" in the "Production Note" field
-        And user enters "CQA-99.13 No Reason Found" in the "Production Reason" field
+        And enters "2017-04-04" in the "Production Date" field
+        And enters "Watering" in the "Technique Type" field
+        And enters "Hydration" in the "Technique" field
+        And enters "Mexico" in the "Production place" field
+        And enters "Production" in the "Role" field
+        And enters "Aztecs" in the "Production people" field
+        And enters "Production" in the "Role" field
+        And enters "Cesar Villalobos" in the "Production person" field
+        And selects "Cesar Villalobos" from autocomplete options
+        And enters "Production" in the "Role" field
+        And enters "Water Tribe" in the "Production organization" field
+        And selects "Water Tribe" from autocomplete options
+        And enters "Production" in the "Role" field
+        And enters "CQA-99.13 Made by the Aztecs" in the "Production Note" field
+        And enters "CQA-99.13 No Reason Found" in the "Production Reason" field
         #Obj History and Association Info
-        And user enters "waterbending" in the "Associated Activity" field
-        And user enters "water" in the "Associated Activity Type" field
-        And user enters "waterbent item" in the "Associated Activity Note" field
-        And user enters "water necklace" in the "Associated Object" field
-        And user enters "necklace" in the "Associated Object Type" field
-        And user enters "very expernsive" in the "Associated Object Note" field
-        And user enters "Testing" in the "Associated Concept" field
-        And user selects "Testing" from autocomplete options
-        And user enters "artisanship" in the "Associated Concept Type" field
-        And user enters "made with care" in the "Associated Concept Note" field
-        And user enters "water tribe" in the "Associated Cultural Affinity" field
-        And user enters "religious" in the "Associated Cultural Affinity Type" field
-        And user enters "religious item" in the "Associated Cultural Affinity Note" field
-        And user enters "Water Tribe" in the "Associated Organization" field
-        And user selects "Water Tribe" from autocomplete options
-        And user enters "tribe" in the "Associated Organization Type" field
-        And user enters "item from tribe" in the "Associated Organization Note" field
-        And user enters "airbenders" in the "Associated People" field
-        And user enters "air" in the "Associated People Type" field    
-        And user enters "gifted to the air nation" in the "Associated People Note" field
-        And user enters "Aang" in the "Associated Person" field
-        And user selects "Aang" from autocomplete options
-        And user enters "waterbender" in the "Associated Person Type" field
-        And user enters "from Aang to aang" in the "Associated Person Note" field        
-        And user enters "nortwest temple 13" in the "Associated Place" field
-        And user enters "temple" in the "Associated Place Type" field
-        And user enters "to be kept here" in the "Associated Place Note" field
-        And user enters "aang funeral" in the "Associated Event Name" field
-        And user enters "funeral " in the "Associated Event Name type" field        
-        And user enters "Water Tribe" in the "Associated Event Organization" field                                    
-        And user selects "Water Tribe" from autocomplete options
-        And user enters "air nomads" in the "Associated Event People" field
-        And user enters "nortwestern air temple" in the "Associated Event Place" field
-        And user enters "Aang" in the "Associated Event Person" field
-        And user selects "Aang" from autocomplete options
-        And user enters "No note" in the "Associated Event Note" field
-        And user enters "2017-05-05" in the "Associated Date" field
-        And user enters "cinco de mayo" in the "Associated Date Type" field
-        And user enters "funeral on cinco de mayo" in the "Associated Date Note" field
-        And user enters "object gifted to aang on his funeral" in the "Object History Note" field
-        And user enters "decoration" in the "Usage" field
-        And user enters "to be used by the next avatar" in the "Usage Note" field
-        And user enters "Aang" in the "Owner" field
-        And user selects "Aang" from autocomplete options
-        And user enters "2017-07-06" in the "Ownership date" field
-        And user enters "worldwide" in the "Ownership place" field
-        And user selects "limited" from the "Ownership access" drop down box                                          
-        And user selects "company" from the "Ownership category" drop down box                                          
-        And user enters "CQA-99.13 No note" in the "Note" field
-        And user enters "99.13" in the "Price - value" field
-        And user selects "bequest" from the "Method" drop down box                                          
-        And user selects "Euro" from the "Price - currency" drop down box                                          
+        And enters "waterbending" in the "Associated Activity" field
+        And enters "water" in the "Associated Activity Type" field
+        And enters "waterbent item" in the "Associated Activity Note" field
+        And enters "water necklace" in the "Associated Object" field
+        And enters "necklace" in the "Associated Object Type" field
+        And enters "very expernsive" in the "Associated Object Note" field
+        And enters "Testing" in the "Associated Concept" field
+        And selects "Testing" from autocomplete options
+        And enters "artisanship" in the "Associated Concept Type" field
+        And enters "made with care" in the "Associated Concept Note" field
+        And enters "water tribe" in the "Associated Cultural Affinity" field
+        And enters "religious" in the "Associated Cultural Affinity Type" field
+        And enters "religious item" in the "Associated Cultural Affinity Note" field
+        And enters "Water Tribe" in the "Associated Organization" field
+        And selects "Water Tribe" from autocomplete options
+        And enters "tribe" in the "Associated Organization Type" field
+        And enters "item from tribe" in the "Associated Organization Note" field
+        And enters "airbenders" in the "Associated People" field
+        And enters "air" in the "Associated People Type" field    
+        And enters "gifted to the air nation" in the "Associated People Note" field
+        And enters "Aang" in the "Associated Person" field
+        And selects "Aang" from autocomplete options
+        And enters "waterbender" in the "Associated Person Type" field
+        And enters "from Aang to aang" in the "Associated Person Note" field        
+        And enters "nortwest temple 13" in the "Associated Place" field
+        And enters "temple" in the "Associated Place Type" field
+        And enters "to be kept here" in the "Associated Place Note" field
+        And enters "aang funeral" in the "Associated Event Name" field
+        And enters "funeral " in the "Associated Event Name type" field        
+        And enters "Water Tribe" in the "Associated Event Organization" field                                    
+        And selects "Water Tribe" from autocomplete options
+        And enters "air nomads" in the "Associated Event People" field
+        And enters "nortwestern air temple" in the "Associated Event Place" field
+        And enters "Aang" in the "Associated Event Person" field
+        And selects "Aang" from autocomplete options
+        And enters "No note" in the "Associated Event Note" field
+        And enters "2017-05-05" in the "Associated Date" field
+        And enters "cinco de mayo" in the "Associated Date Type" field
+        And enters "funeral on cinco de mayo" in the "Associated Date Note" field
+        And enters "object gifted to aang on his funeral" in the "Object History Note" field
+        And enters "decoration" in the "Usage" field
+        And enters "to be used by the next avatar" in the "Usage Note" field
+        And enters "Aang" in the "Owner" field
+        And selects "Aang" from autocomplete options
+        And enters "2017-07-06" in the "Ownership date" field
+        And enters "worldwide" in the "Ownership place" field
+        And selects "limited" from the "Ownership access" drop down box                                          
+        And selects "company" from the "Ownership category" drop down box                                          
+        And enters "CQA-99.13 No note" in the "Note" field
+        And enters "99.13" in the "Price - value" field
+        And selects "bequest" from the "Method" drop down box                                          
+        And selects "Euro" from the "Price - currency" drop down box                                          
         #Associations
         #Object Owner's Contribution Information
-        And user enters "Never used it. He was dead." in the "Owner's Personal Experience" field
-        And user enters "Owner never saw it" in the "Owner's Personal Response" field
-        And user enters "Aang" in the "Owner's Reference" field
-        And user enters "My relic" in the "Owner's Contribution Note" field
+        And enters "Never used it. He was dead." in the "Owner's Personal Experience" field
+        And enters "Owner never saw it" in the "Owner's Personal Response" field
+        And enters "Aang" in the "Owner's Reference" field
+        And enters "My relic" in the "Owner's Contribution Note" field
         #Object Viewer's Contribution info
-        And user enters "Observation" in the "Viewer's Role" field
-        And user enters "Vivid, Purple" in the "Viewer's Personal Experience" field
-        And user enters "amazed" in the "Viewer's Personal Response" field
-        And user enters "Aang" in the "Viewer's Reference" field        
-        And user enters "Made sure it was safe" in the "Viewer's Contribution Note" field
+        And enters "Observation" in the "Viewer's Role" field
+        And enters "Vivid, Purple" in the "Viewer's Personal Experience" field
+        And enters "amazed" in the "Viewer's Personal Response" field
+        And enters "Aang" in the "Viewer's Reference" field        
+        And enters "Made sure it was safe" in the "Viewer's Contribution Note" field
         #Reference Info
-        And user enters "Aang" in the "Reference" field
-        And user selects "Aang" from autocomplete options
-        And user enters "CQA-99.13 Reference note field" in the "Reference Note" field
+        And enters "Aang" in the "Reference" field
+        And selects "Aang" from autocomplete options
+        And enters "CQA-99.13 Reference note field" in the "Reference Note" field
         #Object Collection Info
-        And user enters "2017-07-07" in the "Field collection date" field
-        And user selects "borehole" from the "Field collection method" drop down box
-        And user enters "It was actually stolen from air temple" in the "Field collection note" field
-        And user enters "CQA-99.13.11" in the "Field collection number" field
-        And user enters "North Temple" in the "Field collection place" field
-        And user selects "North Temple" from autocomplete options
-        And user enters "Cesar Villalobos" in the "Field collection collector" field
-        And user selects "Cesar Villalobos" from autocomplete options    
-        And user enters "Cesar Villalobos" in the "Field collection source" field
-        And user selects "Cesar Villalobos" from autocomplete options 
-        And user enters "Temple exploration" in the "Field collection event name" field
+        And enters "2017-07-07" in the "Field collection date" field
+        And selects "borehole" from the "Field collection method" drop down box
+        And enters "It was actually stolen from air temple" in the "Field collection note" field
+        And enters "CQA-99.13.11" in the "Field collection number" field
+        And enters "North Temple" in the "Field collection place" field
+        And selects "North Temple" from autocomplete options
+        And enters "Cesar Villalobos" in the "Field collection collector" field
+        And selects "Cesar Villalobos" from autocomplete options    
+        And enters "Cesar Villalobos" in the "Field collection source" field
+        And selects "Cesar Villalobos" from autocomplete options 
+        And enters "Temple exploration" in the "Field collection event name" field
         #Object Hierarchy
-        And user saves the record
+        And saves the record
         
         Then the "Number of Objects" field should contain "99.13"
         Then the "Number" field should contain "99.13.1"
@@ -886,104 +886,104 @@ Feature: #Enter feature name here
         Then the "Field collection source" field should contain "Cesar Villalobos"
         Then the "Field collection event name" field should contain "Temple exploration"    
 
-        And user clicks the "Go To Record" button       
-        And user clicks the "Delete" button
+        And clicks the "Go To Record" button       
+        And clicks the "Delete" button
         Then a delete confirmation dialog should appear
-        And user clicks on the delete button 
+        And clicks on the delete button 
         Then the deletion should be confirmed in a dialog   
         Then close the browser
 
 
 	Scenario: Testing links and "Go To Record" works #23 
         Given user is in the "My CollectionSpace" page
-        And user goes to the record with identification number "CQA99_NE"
-        And user selects the "Cataloging" tab
-        And user clicks on result with text "CQA99.1"
+        And navigates to the record with identification number "CQA99_NE"
+        And selects the "Cataloging" tab
+        And clicks on result with text "CQA99.1"
         Then the "Identification Number" field should contain "CQA99.1"
-        And user clicks the "Go to record" button
+        And clicks the "Go to record" button
         Then the titlebar should contain "CQA99.1"
         Then the "Identification Number" field should contain "CQA99.1"
         Then close the browser
 
 	Scenario: Deleting relation via list #25 
         Given user is in the "My CollectionSpace" page
-        And user goes to the record with identification number "CQA99_NE"
-        And user selects the "Cataloging" tab 
+        And navigates to the record with identification number "CQA99_NE"
+        And selects the "Cataloging" tab 
 
-        And user clicks the "Add record" button
+        And clicks the "Add record" button
         And clicks on the Create button
-        And user enters "CQA99.7" in the "Identification Number" field
-        And user saves the record
+        And enters "CQA99.7" in the "Identification Number" field
+        And saves the record
         
-        And user clicks the "Delete Relation" button on the row that reads "CQA99.7"
+        And clicks the "Delete Relation" button on the row that reads "CQA99.7"
         Then delete confirmation dialog should appear 
-        And user clicks cancel button
+        And clicks cancel button
         Then the dialog should be dismissed
         Then the "Related Cataloging Records" area should contain "CQA99.7"
 
-        And user clicks the "Delete Relation" button on the row that reads "CQA99.7". Again
+        And clicks the "Delete Relation" button on the row that reads "CQA99.7"
         Then delete confirmation dialog should appear
-        And user clicks the "close" button
+        And clicks the "close" button
         Then the dialog should be dismissed
         Then the "Related Cataloging Records" area should contain "CQA99.7"
 
-        And user clicks the "Delete Relation" button on the row that reads "CQA99.7". Last time.
+        And clicks the "Delete Relation" button on the row that reads "CQA99.7"
         Then delete confirmation dialog should appear
-        And user clicks on the delete button
+        And clicks on the delete button
         Then "CQA99.7" should not appear in the "Procedures" area
         Then "CQA99.7" should not appear in the "Related Cataloging Records" area
 
-        And user goes to the record with identification number "CQA99.7"
-        And user selects the "Cataloging" tab 
+        And navigates to the record with identification number "CQA99.7"
+        And selects the "Cataloging" tab 
         Then "CQA99_NE" should not appear in the "Related Cataloging Records" area   
-        And user selects the "Current Record" tab
+        And selects the "Current Record" tab
 
-        And user clicks on the delete button
+        And clicks on the delete button
         Then a delete confirmation dialog should appear
-        And user clicks on the delete button 
+        And clicks on the delete button 
         Then the deletion should be confirmed in a dialog
         Then close the browser
 
 	Scenario: Deleting relation via record editor #27 
         Given user is in the "My CollectionSpace" page
-        And user goes to the record with identification number "CQA99_NE"
+        And navigates to the record with identification number "CQA99_NE"
         Then "CQA99_NE" should be in the "Identification Number" field
 
-        And user selects the "Cataloging" tab 
-        And user clicks the "Add record" button
+        And selects the "Cataloging" tab 
+        And clicks the "Add record" button
         And clicks on the Create button
-        And user enters "CQA99.8" in the "Identification Number" field
-        And user saves the record
-        And user clicks on result with text "CQA99.8"
+        And enters "CQA99.8" in the "Identification Number" field
+        And saves the record
+        And clicks on result with text "CQA99.8"
         
-        And user clicks the "Delete this relation" button
+        And clicks the "Delete this relation" button
         Then a delete confirmation dialog should appear
-        And user clicks cancel button
+        And clicks cancel button
         Then the dialog should be dismissed
         Then the "Related Cataloging Records" area should contain "CQA99.8"
 
-        And user clicks the "Delete this relation" button
+        And clicks the "Delete this relation" button
         Then a delete confirmation dialog should appear  
-        And user clicks close button
+        And clicks close button
         Then the dialog should be dismissed  
         Then the "Related Cataloging Records" area should contain "CQA99.8"
 
-        And user clicks the "Delete this relation" button
+        And clicks the "Delete this relation" button
         Then a delete confirmation dialog should appear
-        And user clicks on the delete button 
+        And clicks on the delete button 
         Then the deletion should be confirmed in a dialog
         # Then the record editor should no longer be displayed (below list)
         Then "CQA99.8" should not appear in the "Procedures" area   
         Then "CQA99.8" should not appear in the "Related Cataloging Records" area
 
-        And user goes to the record with identification number "CQA99.8"
-        And user selects the "Cataloging" tab 
+        And navigates to the record with identification number "CQA99.8"
+        And selects the "Cataloging" tab 
         Then the "Related Cataloging Records" area should be empty
         
-        And user selects the "Current Record" tab 
-        And user clicks on the delete button
+        And selects the "Current Record" tab 
+        And clicks on the delete button
         Then a delete confirmation dialog should appear
-        And user clicks on the delete button 
+        And clicks on the delete button 
         Then the deletion should be confirmed in a dialog
         Then close the browser 
 

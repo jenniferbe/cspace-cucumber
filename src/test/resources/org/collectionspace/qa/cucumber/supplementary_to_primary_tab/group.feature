@@ -20,8 +20,8 @@ Feature: Supplementary Manual QA - Group
     Given user is on the "Create New" page
       And selects the "Group" radio button on the Create New page
       And clicks on the Create button
-      And user enters "Blue" in the "Group" "Title" field
-      And user adds "Albert Smith" to the "Group" "Group Owner" vocab field
+      And enters "Blue" in the "Group" "Title" field
+      And adds "Albert Smith" to the "Group" "Group Owner" vocab field
     Then the titlebar should contain "Blue"
     Then the titlebar should contain "Albert Smith"
     Then close the browser
@@ -30,8 +30,8 @@ Feature: Supplementary Manual QA - Group
     Given user is on the "Create New" page
       And selects the "Group" radio button on the Create New page
       And clicks on the Create button
-      And user enters "Red" in the "Group" "Title" field
-      And user saves the record
+      And enters "Red" in the "Group" "Title" field
+      And saves the record
     Then the record is successfully saved
     Then "GMT-0800 (PST)" should be displayed in the message bar
     Then disables top and bottom "cancel" buttons
@@ -42,9 +42,9 @@ Feature: Supplementary Manual QA - Group
     Given user is on the "Create New" page
       And selects the "Group" radio button on the Create New page
       And clicks on the Create button
-      And user enters "Red" in the "Group" "Title" field
+      And enters "Red" in the "Group" "Title" field
       # cannot enable a scroll to bottom of page
-      And user scrolls to the bottom of the page
+      And scrolls to the bottom of the page
     # not sure if titlebar term works for docking bar
     Then the titlebar should contain "Red"
     Then the titlebar should contain "Group"
@@ -67,9 +67,9 @@ Feature: Supplementary Manual QA - Group
     Given user is on the "Create New" page
       And selects the "Group" radio button on the Create New page
       And clicks on the Create button
-      And user enters "Blue" in the "Group" "Title" field
-      And user adds "Albert Smith" to the "Group" "Group Owner" vocab field
-      And user saves the record
+      And enters "Blue" in the "Group" "Title" field
+      And adds "Albert Smith" to the "Group" "Group Owner" vocab field
+      And saves the record
     Then the record is successfully saved
     Then disables top and bottom "cancel" buttons
     Then enables top and bottom "delete" buttons
@@ -77,15 +77,15 @@ Feature: Supplementary Manual QA - Group
     Then "Albert Smith" should appear in the Terms Used sidebar
     Then "person" should appear in the Terms Used sidebar
     Then "owner" should appear in the Terms Used sidebar
-      And user clicks on "Albert Smith" in the Terms Used sidebar
+      And clicks on "Albert Smith" in the Terms Used sidebar
     Then the titlebar should contain "Albert Smith"
     # Used By steps do not exist
     Then "Blue" should in the Used By sidebar
-      And user clicks on "Blue" in the Used By sidebar
+      And clicks on "Blue" in the Used By sidebar
     Then the titlebar should contain "Blue"
-      And user clicks on the delete button
-      And user clicks the confirmation delete button
-      And user clicks delete confirmation OK button
+      And clicks on the delete button
+      And clicks the confirmation delete button
+      And clicks delete confirmation OK button
     Then close the browser
 
 ## The remainder of this feature file, below, needs to be converted from narrative (broad declarative steps)
