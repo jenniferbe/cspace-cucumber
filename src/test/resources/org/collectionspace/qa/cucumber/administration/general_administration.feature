@@ -32,7 +32,7 @@ Feature: General Administration
       And enters "No Admin User" in the "Administration" "Full Name" field
       And enters "12341234" in the "Administration" "Password" field
       And enters "12341234" in the "Administration" "Confirm Password" field
-      And clicks "No Admin" from Roles list 
+      And clicks "No Admin"
       And clicks the "Save" button
       And clicks the "Sign Out" button
       And enters "Notanemail@notanemail.com" in the "Email" field
@@ -42,7 +42,7 @@ Feature: General Administration
 
   #Test 21
   Scenario: Navigation to Administration tab possible with keys
-    Given user is on "My CollectionSpace" page
+    Given user is on the "My CollectionSpace" page
       And tabs to "Administration" tab
       And presses the "Enter" key
     Then the titlebar should contain "Administration"

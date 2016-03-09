@@ -71,7 +71,7 @@ Feature: Person Vocabulary Data Entry
       Then the record is successfully saved		
       Then "<choice>" should be in the "Cataloging" "<field>" vocab field		
       Then "<choice>" should appear in the Terms Used sidebar		
-        And clicks on "<choice>" in Terms Used sidebar		
+        And clicks on "<choice>" in the Terms Used sidebar		
       Then the titlebar should contain "Person"		
       Then "<choice>" should be in the "Person" "Display Name" field		
       Then close the browser		

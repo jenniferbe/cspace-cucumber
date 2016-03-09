@@ -203,7 +203,7 @@ Feature: Storage Location Authority Page
 #     Expected:
 #         The title bar (term name, record/vocabulary type) should remain pinned to the top of the page while you scroll
 #     Actions
-#         If your browser does not have a scroll bar visible, add enough instances of a repeatable field to lengthen the page to where a scroll bar is necessary
+#         If your browser does not have a scroll bar visible, add enough instances of a repeatable field to lengThen the page to where a scroll bar is necessary
 #         Scroll the page down
 #     Expected:
 #         The title bar (term name, record/vocabulary type) should remain pinned to the top of the page while you scroll

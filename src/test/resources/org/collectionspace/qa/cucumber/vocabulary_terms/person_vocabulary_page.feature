@@ -112,7 +112,7 @@ Feature: Person Vocabulary Data Entry
       And clicks on "Find and Edit" menu item
     Then a confirmation dialog should appear
       And clicks on the Cancel button
-    Then the dialog is dismissed
+    Then the dialog should be dismissed
     Then close the browser
 
 #Test 21, not sure on which stepdefs are appropriate

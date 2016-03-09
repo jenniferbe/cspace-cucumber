@@ -287,12 +287,12 @@ Feature: Structured Objects- QA Test Plan
 		And clicks on the "Go To" button next to the "Broader Object" field
 
 		Then the "Identification Number" field should contain "2013.12.2"
-		# then the files should be the same. BUG
+		# Then the files should be the same. BUG
 
 		And navigates to the record with identification number "2013.12.1"
 		Then the "Identification Number" field should contain "2013.12.1"
 
-		# then the files should be the same. BUG?
+		# Then the files should be the same. BUG?
 		Then close the browser
 
 
