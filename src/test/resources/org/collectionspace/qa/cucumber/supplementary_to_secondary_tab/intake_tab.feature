@@ -26,7 +26,7 @@ Feature: Intake Secondary Tab
     Then the "Cancel changes" button at the bottom of the record should be clickable
     Then the "Cancel changes" button at the top of the record should be clickable
     Then "Donnie" should be in the "Cataloging" "Intake Entry Number" field
-      And fills in required fields for "Intake" record
+      And fills in all the fields of the "Intake" record
       And enters "Darko" in the "Cataloging" "Current Owner" vocab field
       And adds "Darko" to "Local Persons"
       And saves the record
@@ -71,14 +71,14 @@ Feature: Intake Secondary Tab
   Scenario: Keyboard Navigation
     Given user is on a blank "Cataloging" record
       And tabs to "Intake" tab
-      And presses enter
+      And presses the "Enter" key
       And tabs to the "+ Add New" button
-      And presses enter
+      And presses the "Enter" key
     # Then each field should be reachable by keyboard
     # The following may first require entering data in required fields; see
     # the related location_movement_inventory.feature for a possible approach
       And tabs to the "Save" button
-      And presses enter
+      And presses the "Enter" key
     Then the record is successfully saved
     # Then the newly created record should be reachable by keyboard
     Then close the record

@@ -78,7 +78,7 @@ Feature: Advanced Search ­– Exhibition Planning
         And enters "testtest" in the "Boilerplate Text" field
         And saves the record
 
-        And goes to the "Create New" page 
+        And navigates to the "Create New" page 
         And selects the "Exhibition" radio button on the Create New page
         And enters "CQA74.3" in the "Exhibition Number" field
         And selects "Permanent" from the "Exhibition Type" drop down box  
@@ -87,7 +87,7 @@ Feature: Advanced Search ­– Exhibition Planning
         And enters "testtest" in the "Planning Notes" field 
         And saves the record
 
-        And goes to the "Create New" page 
+        And navigates to the "Create New" page 
         And selects the "Exhibition" radio button on the Create New page
         And enters "CQA74.4" in the "Exhibition Number" field
         And selects "Permanent" from the "Exhibition Type" drop down box  
@@ -144,22 +144,22 @@ Feature: Advanced Search ­– Exhibition Planning
         Then the search results should contain "CQA74.3"        
         Then the search results should not contain "CQA74.4"
 
-        And goes to the record with identification number "CQA74.1"
+        And navigates to the record with identification number "CQA74.1"
         And clicks the delete button
         Then a delete confirmation dialog should appear
         And clicks the delete button 
         Then the deletion should be confirmed in a dialog
-        And goes to the record with identification number "CQA74.2"
+        And navigates to the record with identification number "CQA74.2"
         And clicks the delete button
         Then a delete confirmation dialog should appear
         And clicks the delete button 
         Then the deletion should be confirmed in a dialog
-        And goes to the record with identification number "CQA74.3"
+        And navigates to the record with identification number "CQA74.3"
         And clicks the delete button
         Then a delete confirmation dialog should appear
         And clicks the delete button 
         Then the deletion should be confirmed in a dialog
-        And goes to the record with identification number "CQA74.3"
+        And navigates to the record with identification number "CQA74.3"
         And clicks the delete button
         Then a delete confirmation dialog should appear
         And clicks the delete button 

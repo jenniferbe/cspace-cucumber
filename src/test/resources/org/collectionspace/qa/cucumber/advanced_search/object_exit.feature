@@ -234,7 +234,7 @@ Feature: Advanced Search - Object Exit
   Scenario: Structured Date Search
     Given user is on the "Create New" page
       And selects the "Object Exit" radio button on the Create New page
-      And fills in required fields for "Object Exit" record
+      And fills in all the fields of the "Object Exit" record
       And enters "Lovehoneybear" in the "Object Exit" "Exit Number" field
       And enters "1987" in the "Object Exit" "Exit Date" "Earliest/Single Year" field
       And enters "6" in the "Object Exit" "Exit Date" "Earliest/Single Month" field

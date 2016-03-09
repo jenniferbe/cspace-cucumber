@@ -7,11 +7,11 @@ Feature: Exhibition Planning Tab
  	Scenario: Working Exhibition Secondary Tab #1
         Given user is in the "My CollectionSpace" page
        
-        And goes to the record with identification number "CQA105_E"
+        And navigates to the record with identification number "CQA105_E"
         And selects the "Exhibition" tab     
         Then the "Related Exhibition Records" area should be empty
        
-        And goes to the record with identification number "CQA105_NE"
+        And navigates to the record with identification number "CQA105_NE"
         And selects the "Exhibition" tab
         Then "CQA105.1" should appear in the "Related Exhibition Records" area
 
@@ -19,7 +19,7 @@ Feature: Exhibition Planning Tab
 
 	Scenario: Dismissing the dialog #3
         Given user is in the "My CollectionSpace" page
-        And goes to the record with identification number "CQA105_NE"
+        And navigates to the record with identification number "CQA105_NE"
 
         #Variation A
         And clicks the "Add record" button 
@@ -72,7 +72,7 @@ Feature: Exhibition Planning Tab
 
 	Scenario: Warning when navigating away from new Exhibition record 
         Given user is in the "My CollectionSpace" page
-        And goes to the record with identification number "CQA105_NE"
+        And navigates to the record with identification number "CQA105_NE"
         Then "CQA105_NE" should be in the "Identification Number" field
         And selects the "Exhibition" tab 
         
@@ -116,7 +116,7 @@ Feature: Exhibition Planning Tab
         And selects the "Exhibition" tab 
         Then "CQA105.4" should appear in the "Related Exhibition Records" area 
 
-        And goes to the record with identification number "CQA105.4"
+        And navigates to the record with identification number "CQA105.4"
         And clicks the delete button
         Then a delete confirmation dialog should appear
         And clicks the delete button 
@@ -125,7 +125,7 @@ Feature: Exhibition Planning Tab
 
 	Scenario: Cancel Changes button #9
         Given user is in the "My CollectionSpace" page
-        And goes to the record with identification number "CQA105_NE"
+        And navigates to the record with identification number "CQA105_NE"
         And selects the "Exhibition" tab
         And clicks the "Add record" button
         And clicks the "Create new" button
@@ -158,7 +158,7 @@ Feature: Exhibition Planning Tab
 
         # Scenario: Test 11--> Successful save
         Given user is on the "My CollectionSpace" page 
-        And goes to the record with identification number "CQA105_NE" 
+        And navigates to the record with identification number "CQA105_NE" 
         And selects the "Media Handling" tab 
 
         And clicks the "+ Add Record" button
@@ -363,7 +363,7 @@ Feature: Exhibition Planning Tab
 
 	Scenario: Testing links and "Go To Record" works #23
         Given user is in the "My CollectionSpace" page
-        And goes to the record with identification number "CQA105_NE"
+        And navigates to the record with identification number "CQA105_NE"
         And selects the "Exhibition" tab 
         And clicks on result with text "CQA105.1"
         Then the "Exhibition Number" field should contain "CQA105.1"
@@ -374,7 +374,7 @@ Feature: Exhibition Planning Tab
 
 	Scenario: Deleting Relation via list #25
         Given user is in the "My CollectionSpace" page
-        And goes to the record with identification number "CQA105_NE"
+        And navigates to the record with identification number "CQA105_NE"
         And selects the "Exhibition" tab 
 
         And clicks the "Add record" button
@@ -401,7 +401,7 @@ Feature: Exhibition Planning Tab
         Then "CQA105.7" should not appear in the "Procedures" area
         Then "CQA105.7" should not appear in the "Related Exhibition Records" area
 
-        And goes to the record with identification number "CQA105.7"
+        And navigates to the record with identification number "CQA105.7"
         And selects the "Exhibition" tab 
         Then "CQA105_NE" should not appear in the "Related Exhibition Records" area   
         And selects the "Current Record" tab
@@ -413,7 +413,7 @@ Feature: Exhibition Planning Tab
         Then close the browser
 
 	Scenario: Deleting relation via record editor #27 Given user is in the "My CollectionSpace" page
-        And goes to the record with identification number "CQA105_NE"
+        And navigates to the record with identification number "CQA105_NE"
         Then "CQA105_NE" should be in the "Identification Number" field
 
         And selects the "Exhibition" tab 
@@ -443,7 +443,7 @@ Feature: Exhibition Planning Tab
         Then "CQA105.8" should not appear in the "Procedures" area   
         Then "CQA105.8" should not appear in the "Related Exhibition Records" area
 
-        And goes to the record with identification number "CQA105.8"
+        And navigates to the record with identification number "CQA105.8"
         And selects the "Exhibition" tab 
         Then the "Related Exhibition Records" area should be empty
         
@@ -456,7 +456,7 @@ Feature: Exhibition Planning Tab
 
 	Scenario: Testing functional Accessibility #31
 	    Given user is in the "My CollectionSpace" page
-	    And goes to the record with identification number "CQA105_NE"
+	    And navigates to the record with identification number "CQA105_NE"
 	    And selects the "Exhibition" tab 
 
 	    And presses the "Tab" key until reaching the "Add record" button

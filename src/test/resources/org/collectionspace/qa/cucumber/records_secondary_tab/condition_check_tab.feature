@@ -6,11 +6,11 @@ Feature: Condition Check Tab Test Plan
 	Scenario: Working Condition Check Secondary Tab #1
         Given user is in the "My CollectionSpace" page
        
-        And goes to the record with identification number "CQA103_E"
+        And navigates to the record with identification number "CQA103_E"
         And selects the "Condition" tab     
         Then the "Related Condition Check Records" area should be empty
        
-        And goes to the record with identification number "CQA103_NE"
+        And navigates to the record with identification number "CQA103_NE"
         And selects the "Condition" tab
         Then "CQA103.1" should appear in the "Related Condition Check Records" area
 
@@ -18,7 +18,7 @@ Feature: Condition Check Tab Test Plan
 
 	Scenario: Dismissing the dialog #3
         Given user is in the "My CollectionSpace" page
-        And goes to the record with identification number "CQA103_NE"
+        And navigates to the record with identification number "CQA103_NE"
 
         #Variation A
         And clicks the "Add record" button 
@@ -70,7 +70,7 @@ Feature: Condition Check Tab Test Plan
 
 	Scenario: Warning when navigating away form new Condition Check record 
         Given user is in the "My CollectionSpace" page
-        And goes to the record with identification number "CQA103_NE"
+        And navigates to the record with identification number "CQA103_NE"
         Then "CQA103_NE" should be in the "Identification Number" field
         And selects the "Condition" tab 
         
@@ -111,7 +111,7 @@ Feature: Condition Check Tab Test Plan
         And selects the "Condition" tab 
         Then "CQA103.4" should appear in the "Related Condition Check Records" area 
 
-        And goes to the record with identification number "CQA103.4"
+        And navigates to the record with identification number "CQA103.4"
         And clicks the delete button
         Then a delete confirmation dialog should appear
         And clicks the delete button 
@@ -120,7 +120,7 @@ Feature: Condition Check Tab Test Plan
 
 	Scenario: Cancel changes button #9
         Given user is in the "My CollectionSpace" page
-        And goes to the record with identification number "CQA103_NE"
+        And navigates to the record with identification number "CQA103_NE"
         And selects the "Condition" tab
         And clicks the "Add record" button 
         And clicks the "Create new" button
@@ -151,7 +151,7 @@ Feature: Condition Check Tab Test Plan
 
         # Scenario: Test 11--> Successful save
         Given user is on the "My CollectionSpace" page 
-        And goes to the record with identification number "CQA103_NE" 
+        And navigates to the record with identification number "CQA103_NE" 
         And selects the "Condition" tab 
 
         And clicks on the "+ Add Record" button
@@ -338,7 +338,7 @@ Feature: Condition Check Tab Test Plan
 
 	Scenario: Testing links and "Go To Record" works #23
         Given user is in the "My CollectionSpace" page
-        And goes to the record with identification number "CQA103_NE"
+        And navigates to the record with identification number "CQA103_NE"
         And selects the "Condition" tab 
         And clicks on result with text "CQA103.1"
         Then the "Condition Check/Assessment Reference Number" field should contain "CQA103.1"
@@ -349,7 +349,7 @@ Feature: Condition Check Tab Test Plan
 
 	Scenario: Deleting relation via list #25
         Given user is in the "My CollectionSpace" page
-        And goes to the record with identification number "CQA103_NE"
+        And navigates to the record with identification number "CQA103_NE"
         And selects the "Condition" tab
 
         And clicks the "Add record" button 
@@ -376,7 +376,7 @@ Feature: Condition Check Tab Test Plan
         Then "CQA103.7" should not appear in the "Procedures" area
         Then "CQA103.7" should not appear in the "Related Condition Check Records" area
 
-        And goes to the record with identification number "CQA103.7"
+        And navigates to the record with identification number "CQA103.7"
         And selects the "Condition" tab 
         Then "CQA103_NE" should not appear in the "Related Condition Check Records" area   
         And selects the "Current Record" tab
@@ -389,7 +389,7 @@ Feature: Condition Check Tab Test Plan
 
 	Scenario: Deleting relation via record editor #27
         Given user is in the "My CollectionSpace" page
-        And goes to the record with identification number "CQA103_NE"
+        And navigates to the record with identification number "CQA103_NE"
         Then "CQA103_NE" should be in the "Identification Number" field
 
         And selects the "Condition" tab 
@@ -419,7 +419,7 @@ Feature: Condition Check Tab Test Plan
         Then "CQA103.8" should not appear in the "Procedures" area   
         Then "CQA103.8" should not appear in the "Related Condition Check Records" area
 
-        And goes to the record with identification number "CQA103.8"
+        And navigates to the record with identification number "CQA103.8"
         And selects the "Condition" tab 
         Then the "Related Condition Check Records" area should be empty
         

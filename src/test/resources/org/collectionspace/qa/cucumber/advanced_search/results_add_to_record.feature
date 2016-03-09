@@ -10,7 +10,7 @@ Feature: Advanced Search results Add to Record
         And enters "CQA-86 Group" in the "Title" field
         And saves the record
         And clicks the "Advanced Search button"
-        And enters "CQA86" in the in the search field
+        And enters "CQA86" in the search field
         Then the results should contain "CQA86.1"
         Then the results should contain "CQA86.2"
         Then the results should contain "CQA86.3"
@@ -52,7 +52,7 @@ Feature: Advanced Search results Add to Record
     Scenario: Keyboard accessibility:
         Given user is in the "Create New" page
         And clicks the "Advanced Search button"
-        And enters "CQA86" in the in the search field
+        And enters "CQA86" in the search field
         Then the results should contain "CQA86.1"
         Then the results should contain "CQA86.2"
         Then the results should contain "CQA86.3"

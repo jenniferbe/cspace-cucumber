@@ -44,8 +44,8 @@ Feature: General Administration
   Scenario: Navigation to Administration tab possible with keys
     Given user is on "My CollectionSpace" page
       And tabs to "Administration" tab
-      And presses enter
+      And presses the "Enter" key
     Then the titlebar should contain "Administration"
-      And presses spacebar
+      And presses the "Space" key
     Then nothing should happen
     Then the url should contain "collectionspace/ui/core/html/administration.html"

@@ -122,7 +122,8 @@ Feature: Person Vocabulary Data Entry
     Then user should be able to enter "Tabber" in the "Person" "Occupation" field
       And enters "Tabber" in the "Person" "Occupation" field
       And tabs to the Save button at bottom of page
-      And hits enter
+      And presses the "Enter" key
+
     Then the record is successfully saved
     Then "Tabber" should be in the "Person" "Occupation" field
     Then close the browser
@@ -188,7 +189,7 @@ Feature: Person Vocabulary Data Entry
       And selects the "Loan In" radio button on the "Create New" page
       And clicks on the Create button
     Then the titlebar should contain "Loan In" 
-      And fills in required fields for "Loan In" record
+      And fills in all the fields of the "Loan In" record
 #types vs enters for stepdef?
       And types "Mark" in the "Loan In" "Lender" field
     Then a drop down list should appear in the "Lender" row
@@ -222,7 +223,7 @@ Feature: Person Vocabulary Data Entry
       And selects the "Loan In" radio button on the "Create New" page
       And clicks on the Create button
     Then the titlebar should contain "Loan In" 
-      And fills in required fields for "Loan In" record
+      And fills in all the fields of the "Loan In" record
 #types vs enters for stepdef?
       And types "Mark" in the "Loan In" "Lender" field
     Then a drop down list should appear in the "Lender" row

@@ -6,18 +6,18 @@ Feature: Media Handling Page Tab
 
 	Scenario:  Working Media Handling Secondary tab #1
 		Given user is in the "My CollectionSpace" page
-		And goes to the record with identification number "CQA114_NE"
+		And navigates to the record with identification number "CQA114_NE"
 
 	    And selects the "Media Handling" tab
 	    Then "CQA114.1" should appear in the "Related Media Handling Records" area
 
-	    And goes to the record with identification number "CQA114_E"
+	    And navigates to the record with identification number "CQA114_E"
 	    Then the "Related Media Handling Records" area should be empty
 	    Then close the browser
 
 	Scenario:  Dismissing the dialog #2
   		Given user is in the "My CollectionSpace" page
-		And goes to the record with identification number "CQA114_NE"
+		And navigates to the record with identification number "CQA114_NE"
 
 		#Variation A
 		And clicks the "Add record" button 
@@ -70,7 +70,7 @@ Feature: Media Handling Page Tab
 
 	Scenario: Warning when navigating away from new Media Handling record #4
   		Given user is in the "My CollectionSpace" page
-		And goes to the record with identification number "CQA114_NE"
+		And navigates to the record with identification number "CQA114_NE"
 	    Then "CQA114_NE" should be in the "Identification Number" field
 	    And selects the "Media Handling" tab
 
@@ -111,7 +111,7 @@ Feature: Media Handling Page Tab
 	    And selects the "Media Handling" tab 
 	    Then "CQA114.4" should appear in the "Related Media Handling Records" area 
 
-	    And goes to the record with identification number "CQA114.4"
+	    And navigates to the record with identification number "CQA114.4"
 	    And clicks the delete button
 	    Then a delete confirmation dialog should appear
 	    And clicks the delete button 
@@ -120,7 +120,7 @@ Feature: Media Handling Page Tab
 
 	Scenario: Cancel changes button #5
 		Given user is in the "My CollectionSpace" page
-		And goes to the record with identification number "CQA114_NE"
+		And navigates to the record with identification number "CQA114_NE"
 		And selects the "Media Handling" tab
 	    And clicks the "Add record" button 
 	    And clicks the "Create new" button
@@ -152,7 +152,7 @@ Feature: Media Handling Page Tab
 	Scenario: Check Identification Number and successful save, and edited Media Handling record 
         # Scenario: Test 11--> Successful save
         Given user is on the "My CollectionSpace" page 
-        And goes to the record with identification number "CQA114_NE" 
+        And navigates to the record with identification number "CQA114_NE" 
         And selects the "Media Handling" tab 
 
         And clicks the "+ Add Record" button
@@ -284,7 +284,7 @@ Feature: Media Handling Page Tab
 
 	Scenario: Testing links and "Go To Record" works #10
 		Given user is in the "My CollectionSpace" page
-	    And goes to the record with identification number "CQA114_NE"
+	    And navigates to the record with identification number "CQA114_NE"
 	    And selects the "Media Handling" tab 
 	    And clicks on result with text "CQA114.1"
 	    Then the "Identification Number" field should contain "CQA114.1"
@@ -295,7 +295,7 @@ Feature: Media Handling Page Tab
 
 	Scenario: Deleting relation via list #11
 		Given user is in the "My CollectionSpace" page
-	    And goes to the record with identification number "CQA114_NE"
+	    And navigates to the record with identification number "CQA114_NE"
 	    And selects the "Media Handling" tab 
 
 	    And clicks the "Add record" button 
@@ -322,7 +322,7 @@ Feature: Media Handling Page Tab
 	    Then "CQA114.7" should not appear in the "Procedures" area
 	    Then "CQA114.7" should not appear in the "Related Media Handling Records" area
 
-    	And goes to the record with identification number "CQA114.7"
+    	And navigates to the record with identification number "CQA114.7"
         And selects the "Media Handling" tab 
 	    Then "CQA114_NE" should not appear in the "Related Media Handling Records" area   
 	    And selects the "Current Record" tab
@@ -335,7 +335,7 @@ Feature: Media Handling Page Tab
 
 	Scenario: Deleting relation via record editor #Test 27
 		Given user is in the "My CollectionSpace" page
-	    And goes to the record with identification number "CQA114_NE"
+	    And navigates to the record with identification number "CQA114_NE"
 	    Then "CQA114_NE" should be in the "Identification Number" field
 
 	    And selects the "Media Handling" tab
@@ -365,7 +365,7 @@ Feature: Media Handling Page Tab
 	    Then "CQA114.8" should not appear in the "Procedures" area   
 	    Then "CQA114.8" should not appear in the "Related Media Handling Records" area
 
-	    And goes to the record with identification number "CQA114.8"
+	    And navigates to the record with identification number "CQA114.8"
 	    And selects the "Media Handling" tab
 	    Then the "Related Media Handling Records" area should be empty
 	    

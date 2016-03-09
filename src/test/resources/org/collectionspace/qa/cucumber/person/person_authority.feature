@@ -63,7 +63,7 @@ Feature: Person Vocabulary Data Entry
         And selects the "Cataloging" radio button on the Create New page		
         And clicks on the Create button		
       Then the titlebar should contain "Cataloging"		
-        And fills in required fields for "Cataloging" record		
+        And fills in all the fields of the "Cataloging" record		
         And enters "<text>" in the "Cataloging" "<field>" vocab field		
       Then the vocabulary autocomplete should contain "<options>"		
         And clicks on "<choice>" from autocomplete options		

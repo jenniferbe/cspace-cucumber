@@ -96,7 +96,7 @@ Feature: Advanced Search ­ Acquisition
         And enters "thank you" in the "Credit Line" field        
         And saves the record
 
-        And goes to the "Create New" page 
+        And navigates to the "Create New" page 
         And selects the "Acquisition" radio button on the Create New page
         And enters "CQA71.3" in the "Acquisition Reference Number" field
         And selects "Purchase" from the "Acquisition Method" drop down box  
@@ -104,7 +104,7 @@ Feature: Advanced Search ­ Acquisition
         And enters "thank you" in the "Credit Line" field
         And saves the record
 
-        And goes to the "Create New" page 
+        And navigates to the "Create New" page 
         And selects the "Acquisition" radio button on the Create New page
         And enters "CQA71.4" in the "Acquisition Reference Number" field
         And selects "Gift" from the "Acquisition Method" drop down box  
@@ -157,22 +157,22 @@ Feature: Advanced Search ­ Acquisition
         Then the search results should not contain "71.4"
 
 
-        And goes to the record with identification number "71.1"
+        And navigates to the record with identification number "71.1"
         And clicks the delete button
         Then a delete confirmation dialog should appear
         And clicks the delete button 
         Then the deletion should be confirmed in a dialog
-        And goes to the record with identification number "71.2"
+        And navigates to the record with identification number "71.2"
         And clicks the delete button
         Then a delete confirmation dialog should appear
         And clicks the delete button 
         Then the deletion should be confirmed in a dialog
-        And goes to the record with identification number "71.3"
+        And navigates to the record with identification number "71.3"
         And clicks the delete button
         Then a delete confirmation dialog should appear
         And clicks the delete button 
         Then the deletion should be confirmed in a dialog
-        And goes to the record with identification number "71.3"
+        And navigates to the record with identification number "71.3"
         And clicks the delete button
         Then a delete confirmation dialog should appear
         And clicks the delete button 

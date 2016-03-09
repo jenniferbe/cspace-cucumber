@@ -8,11 +8,11 @@ Feature: Loan In Tab
 	Scenario: Test 1
 	    Given user is on the "My CollectionSpace" page 
 	   	
-	   	And goes to the record with identification number "CQA111_E"
+	   	And navigates to the record with identification number "CQA111_E"
 	    And selects the "Loan In" tab 
 	    Then the "Related Loan In Records" area should be empty
 
-	    And goes to the record with identification number "CQA111_NE"
+	    And navigates to the record with identification number "CQA111_NE"
 	    And selects the "Loan In" tab 
 	    Then "CQA111.1" should appear in the "Related Loan In Records" area
 
@@ -72,7 +72,7 @@ Feature: Loan In Tab
 
 	Scenario: Test 7--> Warning when navigating away from new Loan In record
 	    Given user is in the "My CollectionSpace" page
-	   	And goes to the record with identification number "CQA111_NE"
+	   	And navigates to the record with identification number "CQA111_NE"
 	    And selects the "Loan In" tab 
 	    
 
@@ -115,7 +115,7 @@ Feature: Loan In Tab
 	    Then "CQA111.4" should appear in the "Related Loan In Records" area 
 
 	    ## Deleting records so we can reuse
-	    And goes to the record with identification number "CQA111.4"
+	    And navigates to the record with identification number "CQA111.4"
 	    And clicks the delete button
 	    Then a delete confirmation dialog should appear
 	    And clicks the delete button 
@@ -126,7 +126,7 @@ Feature: Loan In Tab
 
 	Scenario: Test 9: Testing Cancel Changes button 
 		Given user is in the "My CollectionSpace" page
-		And goes to the record with identification number "CQA111_NE"
+		And navigates to the record with identification number "CQA111_NE"
 		
 		And selects the "Loan In" tab
 	    And clicks the "Add record" button 
@@ -159,7 +159,7 @@ Feature: Loan In Tab
 
 	# Scenario: Test 11--> Successful save
         Given user is on the "My CollectionSpace" page 
-        And goes to the record with identification number "CQA111_NE"
+        And navigates to the record with identification number "CQA111_NE"
         And selects the "Loan In" tab 
 
         And clicks the "+ Add Record" button
@@ -273,7 +273,7 @@ Feature: Loan In Tab
 
 	Scenario: Test 23--> Testing links and "Go To Record" works
 	    Given user is in the "My CollectionSpace" page
-	    And goes to the record with identification number "CQA111_NE"
+	    And navigates to the record with identification number "CQA111_NE"
 	    And selects the "Loan In" tab 
 	    And clicks on result with text "CQA111.1"
 	    Then the "Loan In Number" field should contain "CQA111.1"
@@ -284,7 +284,7 @@ Feature: Loan In Tab
 
 	Scenario: Test 25--> Deleting relation via list
 	    Given user is in the "My CollectionSpace" page
-	    And goes to the record with identification number "CQA111_NE"
+	    And navigates to the record with identification number "CQA111_NE"
 	    And selects the "Loan In" tab 
 
 	    And clicks the "Add record" button 
@@ -310,7 +310,7 @@ Feature: Loan In Tab
 	    Then "CQA111.6" should not appear in the "Procedures" area
 	    Then "CQA111.6" should not appear in the "Related Loan In Records" area
 
-        And goes to the record with identification number "CQA111.6"
+        And navigates to the record with identification number "CQA111.6"
         And selects the "Loan In" tab 
 	    Then "CQA111_NE" should not appear in the "Related Loan In Records" area   
 	    And selects the "Current Record" tab
@@ -325,7 +325,7 @@ Feature: Loan In Tab
 
 	Scenario: Test 27--> Deleting relation via record editor
 	    Given user is in the "My CollectionSpace" page
-	    And goes to the record with identification number "CQA111_NE"
+	    And navigates to the record with identification number "CQA111_NE"
 	    Then "CQA111_NE" should be in the "Identification Number" field
 
 	    And selects the "Loan In" tab 
@@ -355,7 +355,7 @@ Feature: Loan In Tab
 	    Then "CQA111.7" should not appear in the "Procedures" area   
 		Then "CQA111.7" should not appear in the "Related Loan In Records Area"
 
-	    And goes to the record with identification number "CQA111.7"
+	    And navigates to the record with identification number "CQA111.7"
 	    And selects the "Loan In" tab 
 	    Then the "Related Loan In Records" area should be empty
 	    

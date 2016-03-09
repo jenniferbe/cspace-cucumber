@@ -52,7 +52,7 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory Secondary Tab
       And enters "Dummy Location" in the "Location/Movement/Inventory" "Current Location" vocab field
     Then the vocabulary autocomplete should contain "Dummy Location"
       And clicks on "Dummy Location" from autocomplete options
-      And fills in required fields for "Location/Movement/Inventory" record
+      And fills in all the fields of the "Location/Movement/Inventory" record
       And saves the record
   # Not a known stepdef
     Then the record listing should contain the entry
@@ -122,17 +122,17 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory Secondary Tab
       And clicks "Dummy Record" to load the record
     Then the titlebar should contain "Dummy Record"
       And tabs to "Loc/Mov/Inv" tab
-      And presses enter
+      And presses the "Enter" key
     Then related records should be displayed
       And tabs to + Add Record" button
-      And presses enter
+      And presses the "Enter" key
       And tabs to "Create" button
-      And presses enter
+      And presses the "Enter" key
       And tabs to "Select number pattern" button
-      And presses enter
+      And presses the "Enter" key
       And tabs to "Location" from dropdown in "Reference Number" row
-      And presses enter
+      And presses the "Enter" key
       And tabs to "Save" button
-      And presses enter
+      And presses the "Enter" key
     Then the record is successfully saved
     Then close the browser 

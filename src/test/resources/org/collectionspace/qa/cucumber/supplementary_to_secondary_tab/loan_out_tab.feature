@@ -27,7 +27,7 @@ Feature: Loan Out Secondary Tab
     Then the "Cancel changes" button at the bottom of the page should be clickable
     Then the "Delete this relation." button at the top of the page should be clickable
     Then the "Delete this relation." button at the bottom of the page should be clickable
-      And fills in required fields for "Loan Out" record
+      And fills in all the fields of the "Loan Out" record
       And saves the record
     Then the record entry should be displayed under "Related Loan Out Records"
       And clicks the newly created record 
@@ -72,14 +72,14 @@ Feature: Loan Out Secondary Tab
   Scenario: Keyboard Navigation
     Given user is on a blank "Cataloging" record
       And tabs to "Loan Out" tab
-      And presses enter
+      And presses the "Enter" key
       And tabs to the "+ Add New" button
-      And presses enter
+      And presses the "Enter" key
     # Then each field should be reachable by keyboard
     # The following may first require entering data in required fields; see
     # the related location_movement_inventory.feature for a possible approach
       And tabs to the "Save" button
-      And presses enter
+      And presses the "Enter" key
     Then the record is successfully saved
     # Then the newly created record should be reachable by keyboard
     Then close the record
