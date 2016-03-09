@@ -66,7 +66,7 @@ Feature: Term List Management
       And enters "Existing Term Test" in the "Intake" "Intake Entry Number" field
       And enters "found dead" in the "Intake" "Field Collection Method" field
       And saves the record
-    Given user is on the "Administration page"
+    Given user is on the "Administration" page
       And selects the "Term List Management" tab
       And clicks on "collectionmethod" term list
       And changes "Term Name" for "found dead" to "found deadest"
@@ -136,7 +136,7 @@ Feature: Term List Management
 
   #Test 8
   Scenario: Keyboard accessibility
-    Given user is on the "Administration page"
+    Given user is on the "Administration" page
       And tabs to "Term List Management" tab
       And presses enter
       And tabs to the "Administration" "Name" field

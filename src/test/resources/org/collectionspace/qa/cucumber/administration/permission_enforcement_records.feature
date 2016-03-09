@@ -175,7 +175,7 @@ Feature: Permission Enforcement
       And clicks on the top nav search submit button
       And clicks on a "Record Type B" record
     Then the record should be read only
-      And clicks on a "Terms Used" link
+      And clicks on "Terms Used"
     Then the vocabulary is successfully loaded
     Then the vocabulary should be read only
     Then close the browser

@@ -125,7 +125,7 @@ Feature: Exhibition Page Testing
       And selects the "Current Record" tab
       And clicks on the delete button
     Then deletion should be confirmed in a dialog
-      And the deletion dialog should contain "and its relationships" #New step def
+      And the deletion dialog should contain "and its relationships"
     When user clicks cancel button
     Then the delete confirmation dialog should disappear
       # And #nothing else should happen
@@ -156,7 +156,7 @@ Feature: Exhibition Page Testing
       And the "Fold" symbol next to "Loans Out Information" should be a folded symbol
     When user clicks on the "Fold" symbol next to "Exhibition Information"
     Then the "Loans Out Information" section should unfold
-      And the "Fold" symbol next to "Loans Out Information" should be a unfolded symbol
+      And the "Fold" symbol next to "Loans Out Information" should be an unfolded symbol
       And close the browser
 
   #Warnings

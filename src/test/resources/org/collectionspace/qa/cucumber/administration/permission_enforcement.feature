@@ -17,8 +17,8 @@ Feature: Permission Enforcement
       And selects the "Term List Management" tab
       And clicks on a term list
     Then the details should be read only
-    Then the "Save" button is not present
-    Then the "Cancel" button is not present
+    Then the "Save" button should not present
+    Then the "Cancel" button should not present
     Then close the browser
 
   #Test3
@@ -26,34 +26,34 @@ Feature: Permission Enforcement
     Given user is logged in as "User II"
       And clicks the "Administration" menu item
     Then "Users" tab should be selected by default
-    Then the "+ User" button is not present
+    Then the "+ User" button should not present
       And clicks on a user
-    Then the "Save" button is not present
-    Then the "Cancel" button is not present
-    Then the "Delete" button is not present
+    Then the "Save" button should not present
+    Then the "Cancel" button should not present
+    Then the "Delete" button should not present
     Then the details should be read only
   
   #Test5: Read only access to Roles and Permissions; continues from Test3
       And selects the "Roles & Permissions" tab
-    Then the "+ Role" button is not present
+    Then the "+ Role" button should not present
       And clicks on a role
     Then the details should be read only
-    Then the "Save" button is not present
-    Then the "Cancel" button is not present
-    Then the "Delete" button is not present
+    Then the "Save" button should not present
+    Then the "Cancel" button should not present
+    Then the "Delete" button should not present
     Then close the browser
 
   #Test7
   Scenario: Write access to Users
     Given user is logged in as "User III"
       And clicks the "Administration" menu item
-    Then the "+ User" button is present
+    Then the "+ User" button should present
       And clicks on a user
     Then the details should be editable
-    Then the "Delete" button is not present
+    Then the "Delete" button should not present
       And clicks the "+ User" button
       And fills out required fields
-      And assigns an existing Role
+      And assigns an existing role
       And clicks on the Save button
     Then user is successfully saved
     Then a confirmation message should appear
@@ -68,7 +68,7 @@ Feature: Permission Enforcement
     Then the "+ Role" button should be present
       And clicks on a role
     Then the details should be editable
-    Then the "Delete" button is not present
+    Then the "Delete" button should not present
       And clicks the "+ Role" button
       And fills out required fields
       And changes a permission
@@ -85,8 +85,8 @@ Feature: Permission Enforcement
       And selects the "Term List Management" tab
       And clicks on a term list
     Then the details should be editable
-    Then the "Save" button is present
-    Then the "Cancel" button is present
+    Then the "Save" button should present
+    Then the "Cancel" button should present
     Then the "Cancel" button should not be clickable
       And changes the "Name" field
       And changes the "Source" field
@@ -123,6 +123,6 @@ Feature: Permission Enforcement
       And opens a different browser
     Given user is logged in as "test@collectionspace.org" with the password "test@collectionspace.org" on the second browser
       And clicks the "test@collectionspace.org" user
-    Then the "Delete" button is not present
+    Then the "Delete" button should not present
     Then the "Term List Management" tab is not present
     Then close the browser
