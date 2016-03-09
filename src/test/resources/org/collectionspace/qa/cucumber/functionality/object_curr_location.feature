@@ -58,7 +58,7 @@ Feature: Object Current Location
       And selects "Location/Movement/Inventory" from dropdown in "Search Existing" row
   #probably not how secondary search stepdefs are implemented, if they even are implemented
       And enters "Bravo" in the search box
-      And clicks search
+      And clicks the "search" button
       And checks "Bravo Location" in search results
       And clicks the "Add to Current Record" button
     Then "Bravo Location" should appear in the Procedures sidebar
@@ -88,7 +88,7 @@ Feature: Object Current Location
       And selects the "Loc/Mov/Inv" tab
       And clicks the "Add Record" button
       And enters "Charlie" in the search box
-      And clicks search
+      And clicks the "search" button
       And checks "Charlie Organization" in search results
       And clicks the "Add to Current Record" button
       And selects the "Current Record" tab
