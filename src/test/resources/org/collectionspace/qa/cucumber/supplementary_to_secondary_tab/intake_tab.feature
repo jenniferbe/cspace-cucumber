@@ -44,7 +44,7 @@ Feature: Intake Secondary Tab
       And selects "Cataloging" from top nav search record type select field
       And clicks on result with text "NeedleDrop"
     Then the titlebar should contain "Cataloging"
-    Then "Donnie" should appear in the Procedures sidebar
+    Then "Donnie" should appear in the "Procedures" sidebar
       And clicks on "Donnie" from Procedures sidebar
     Then the titlebar should contain "Intake" 
     Then "NeedleDrop" should appear in the Cataloging sidebar

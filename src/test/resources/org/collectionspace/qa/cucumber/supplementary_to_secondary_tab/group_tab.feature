@@ -43,7 +43,7 @@ Feature: Group Secondary Tab
       And selects "Cataloging" from top nav search record type select field
       And clicks on result with text "Gnerar"
     Then the titlebar should contain "Cataloging"
-    Then "transpleb" should appear in the Procedures sidebar
+    Then "transpleb" should appear in the "Procedures" sidebar
       And clicks on "transpleb" from Procedures sidebar
     Then the titlebar should contain "Group" 
     Then "Gnerar" should appear in the Cataloging sidebar

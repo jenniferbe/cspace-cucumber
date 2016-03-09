@@ -30,7 +30,7 @@ Feature: Object Current Location
       And clicks on the top nav search submit button
   #not a stepdef
       And clicks the link to "Tango Object" on the Find and Edit page
-    Then "Alpha Location" should appear in the Procedures sidebar
+    Then "Alpha Location" should appear in the "Procedures" sidebar
     Then "Alpha Location" should appear in the Terms Used sidebar
     Then "Alpha Location" should be in the "Computed Current Location" field
     Then close the browser
@@ -61,9 +61,8 @@ Feature: Object Current Location
       And clicks the "search" button
       And checks "Bravo Location" in search results
       And clicks the "Add to Current Record" button
-    Then "Bravo Location" should appear in the Procedures sidebar
-    Then "Alpha Location should be in the "Computed Current Location" field
-  # not stepdef
+    Then "Bravo Location" should appear in the "Procedures" sidebar
+    Then "Alpha Location" should be in the "Computed Current Location" field
       And reloads the page
     Then "Bravo Location" should be in the "Computed Current Location" field
     Then "Bravo Location" should appear in the Terms Used sidebar
@@ -92,9 +91,9 @@ Feature: Object Current Location
       And checks "Charlie Organization" in search results
       And clicks the "Add to Current Record" button
       And selects the "Current Record" tab
-    Then "Charlie Organization" should appear in the Procedures sidebar
-    Then "Alpha Location" should appear in the Procedures sidebar
-    Then "Bravo Location" should appear in the Procedures sidebar
+    Then "Charlie Organization" should appear in the "Procedures" sidebar
+    Then "Alpha Location" should appear in the "Procedures" sidebar
+    Then "Bravo Location" should appear in the "Procedures" sidebar
     Then "Bravo Location" should be in the "Computed Current Location" field
     Then "Bravo Location" should appear in the Terms Used sidebar
       And reloads the page
@@ -126,9 +125,9 @@ Feature: Object Current Location
       And enters "Tango Object" in the top nav search field
       And clicks on the top nav search submit button
       And clicks the link to "Tango Object" 
-    Then "Charlie Organization" should appear in the Procedures sidebar
-    Then "Bravo Location" should appear in the Procedures sidebar
-    Then "Alpha Location" should not appear in the Procedures sidebar
+    Then "Charlie Organization" should appear in the "Procedures" sidebar
+    Then "Bravo Location" should appear in the "Procedures" sidebar
+    Then "Alpha Location" should not appear in the "Procedures" sidebar
     Then "Charlie Organization" should be in the "Computed Current Location" field
     Then "Charlie Organization" should appear in the Terms Used sidebar
 
@@ -142,9 +141,9 @@ Feature: Object Current Location
       And enters "Tango Object" in the top nav search field
       And clicks on the top nav search submit button
       And clicks the link to "Tango Object"
-    Then "Bravo Location" should appear in the Procedures sidebar
-    Then "Alpha Location" should not appear in the Procedures sidebar
-    Then "Charlie Organization" should not appear in the Procedures sidebar
+    Then "Bravo Location" should appear in the "Procedures" sidebar
+    Then "Alpha Location" should not appear in the "Procedures" sidebar
+    Then "Charlie Organization" should not appear in the "Procedures" sidebar
     Then "Bravo Location" should be in the "Computed Current Location" field
     Then "Bravo Location" should appear in the Terms Used sidebar
     Then close the browser
