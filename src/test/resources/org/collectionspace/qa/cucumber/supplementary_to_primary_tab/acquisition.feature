@@ -116,3 +116,15 @@ Feature: Supplementary Manual QA - Acquisition
       And user clicks the confirmation delete button
       And user clicks delete confirmation OK button
     Then close the browser
+    
+## The remainder of this feature file, below, needs to be converted from narrative (broad declarative steps)
+## to testable steps
+#
+  # Scenario: Keyboard Accessibility
+  #   # doesn't work, need to do later
+  #   When user uses tab through the entire formula
+  #   Then each of the fields should be reachable
+  #   Then the two save buttons and Cancel button should be reachable
+  #   Then the folding functionality should be usable # tab to it and hit space
+  #   Then the focus is visible at all times
+  #   Then the terms used in the right frame should be reachable
