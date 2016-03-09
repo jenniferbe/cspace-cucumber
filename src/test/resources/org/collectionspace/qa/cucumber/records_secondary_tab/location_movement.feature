@@ -12,7 +12,7 @@ Feature: Location/Movement/Inventory Control Tab
      
         And goes to the record with identification number "CQA113_E"
         And selects the "Location/Movement/Inventory" tab
-        Then the "Related Location/Movement/Inventory" are should be empty
+        Then the "Related Location/Movement/Inventory" area should be empty
         Then close the browser
 
     Scenario: Dismissing the dialog 

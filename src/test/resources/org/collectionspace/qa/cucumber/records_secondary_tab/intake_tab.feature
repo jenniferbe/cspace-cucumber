@@ -377,14 +377,14 @@ Feature: Intake Tab
     Then delete confirmation dialog should appear 
     And clicks cancel button
     Then the dialog should be dismissed 
-    Then the "Related Intake Records" are should contain "0413199525"
+    Then the "Related Intake Records" area should contain "0413199525"
 
 
     And clicks the "Delete Relation" button on the row that reads "0413199525"
     Then delete confirmation dialog should appear
     And clicks close button
     Then the dialog should be dismissed
-    Then the "Related Intake Records" are should contain "0413199525"
+    Then the "Related Intake Records" area should contain "0413199525"
 
     And clicks the "Delete Relation" button on the row that reads "0413199525"
     Then delete confirmation dialog should appear
