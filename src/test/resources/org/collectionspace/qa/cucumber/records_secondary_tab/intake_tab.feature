@@ -130,20 +130,20 @@ Feature: Intake Tab
     # Then the dialog should be dismissed
 
     Then the message "Creating new record..." should be displayed
-    Then the "cancel changes" button at the top of the page should not be clickable 
-    Then the "cancel changes" button at the bottom of the page should not be clickable 
+    Then the "cancel changes" button at the "top" of the page "should not" be clickable 
+    Then the "cancel changes" button at the "bottom" of the page "should not" be clickable 
     And enters "04131995.5" in the "Intake Entry Number" field
     
-    Then the "cancel changes" button at the top of the page should be clickable 
-    Then the "cancel changes" button at the bottom of the page should be clickable  
+    Then the "cancel changes" button at the "top" of the page "should" be clickable 
+    Then the "cancel changes" button at the "bottom" of the page "should" be clickable  
     And clicks the "cancel changes" button 
     Then the "Intake Entry Number" field should be empty
 
 
     And enters "04131995.5" in the "Intake Entry Number" field
     And clicks the "save" button
-    Then the "cancel changes" button at the top of the page should not be clickable 
-    Then the "cancel changes" button at the bottom of the page should not be clickable 
+    Then the "cancel changes" button at the "top" of the page "should not" be clickable 
+    Then the "cancel changes" button at the "bottom" of the page "should not" be clickable 
    
     And clicks the "Go to record" button
     And clicks the "Delete" button 

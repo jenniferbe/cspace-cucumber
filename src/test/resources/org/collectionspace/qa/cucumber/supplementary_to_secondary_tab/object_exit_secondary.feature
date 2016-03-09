@@ -17,24 +17,24 @@ Feature: Object Exit Secondary Tab
       And clicks the "Create" button
     Then an empty form should be present
     Then "Creating new record..." should be displayed
-    Then the "Cancel changes" button at the top of the page should not be clickable
-    Then the "Cancel changes" button at the bottom of the page should not be clickable
-    Then the "Delete this relation." button at the top of the page should not be clickable
-    Then the "Delete this relation." button at the bottom of the page should not be clickable
+    Then the "Cancel changes" button at the "top" of the page "should not" be clickable
+    Then the "Cancel changes" button at the "bottom" of the page "should not" be clickable
+    Then the "Delete this relation." button at the "top" of the page "should not" be clickable
+    Then the "Delete this relation." button at the "bottom" of the page "should not" be clickable
       And clicks the "Select number pattern" button
       And selects something from dropdown in "Exit Number" row
-    Then the "Cancel changes" button at the top of the page should be clickable
-    Then the "Cancel changes" button at the bottom of the page should be clickable
-    Then the "Delete this relation." button at the top of the page should be clickable
-    Then the "Delete this relation." button at the bottom of the page should be clickable
+    Then the "Cancel changes" button at the "top" of the page "should" be clickable
+    Then the "Cancel changes" button at the "bottom" of the page "should" be clickable
+    Then the "Delete this relation." button at the "top" of the page "should" be clickable
+    Then the "Delete this relation." button at the "bottom" of the page "should" be clickable
       And fills in all the fields of the "Object Exit" record
       And saves the record
     Then the record entry should be displayed under "Related Object Exit Records"
       And clicks the newly created record 
-    Then the "Cancel changes" button at the top of the page should not be clickable
-    Then the "Cancel changes" button at the bottom of the page should not be clickable
-    Then the "Delete this relation." button at the top of the page should be clickable
-    Then the "Delete this relation." button at the bottom of the page should be clickable
+    Then the "Cancel changes" button at the "top" of the page "should not" be clickable
+    Then the "Cancel changes" button at the "bottom" of the page "should not" be clickable
+    Then the "Delete this relation." button at the "top" of the page "should" be clickable
+    Then the "Delete this relation." button at the "bottom" of the page "should" be clickable
       And selects the "Current Record" tab
       And saves the record
     Given user is on the "My Collectionspace" page

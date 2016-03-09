@@ -133,8 +133,8 @@ Feature: Exhibition Planning Tab
 
         # Variation A
         Then the message "Creating new record..." should be displayed
-        Then the "cancel changes" button at the bottom of the page should not be clickable
-        Then the "cancel changes" button at the top of the page should not be clickable
+        Then the "cancel changes" button at the "bottom" of the page "should not" be clickable
+        Then the "cancel changes" button at the "top" of the page "should not" be clickable
         
         And enters "CQA105.5" in the "Exhibition Number" field
         And clicks the "cancel changes" button 
@@ -143,8 +143,8 @@ Feature: Exhibition Planning Tab
         # Variation B
         And enters "CQA105.5" in the "Exhibition Number" field
         And clicks the "save" button 
-        Then the "cancel changes" button at the top of the page should not be clickable 
-        Then the "cancel changes" button at the bottom of the page should not be clickable 
+        Then the "cancel changes" button at the "top" of the page "should not" be clickable 
+        Then the "cancel changes" button at the "bottom" of the page "should not" be clickable 
    
    
         And clicks the "Go to record" button
@@ -472,7 +472,7 @@ Feature: Exhibition Planning Tab
 	    And enters "CQA105.9" in the "Exhibition Number" field
 	    And saves the record
 	    And presses the "Tab" key until reaching the text field containing "CQA105.9"  
-	    Then the text field should be clickable   
+	    Then the text field "should" be clickable   
 
 	    And selects "Exhibition" from the top nav search record type select field # And using the top right search area, select Exhibition from the drop down
 	    And enters "CQA105.9" in the top nav search field

@@ -87,7 +87,7 @@ Feature: Permission Enforcement
     Then the details should be editable
     Then the "Save" button should present
     Then the "Cancel" button should present
-    Then the "Cancel" button should not be clickable
+    Then the "Cancel" button "should not" be clickable
       And changes the "Name" field
       And changes the "Source" field
       And changes the "Destination" field

@@ -38,17 +38,17 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory Secondary Tab
   # Not a known stepdef
       And clicks the "+ Add Record" button
       And clicks on the create button
-    Then the "Cancel changes" button at the top of the page should not be clickable
-    Then the "Cancel changes" button at the bottom of the page should not be clickable
-    Then the "Delete this relation." button at the top of the page should be clickable
-    Then the "Delte this relation." button at the bottom of the page should be clickable
+    Then the "Cancel changes" button at the "top" of the page "should not" be clickable
+    Then the "Cancel changes" button at the "bottom" of the page "should not" be clickable
+    Then the "Delete this relation." button at the "top" of the page "should" be clickable
+    Then the "Delte this relation." button at the "bottom" of the page "should" be clickable
   # Not a known stepdef
     Then a "Creating New Related Record" meessage should appear
   # Not a known stepdef
       And clicks the "Select number pattern" button
       And selects "Inventory" from dropdown in "Reference Number" row
-    Then the "Cancel changes" button at the top of the page should be clickable
-    Then the "Cancel changes" button at the bottom of the page should be clickable
+    Then the "Cancel changes" button at the "top" of the page "should" be clickable
+    Then the "Cancel changes" button at the "bottom" of the page "should" be clickable
       And enters "Dummy Location" in the "Location/Movement/Inventory" "Current Location" vocab field
     Then the vocabulary autocomplete should contain "Dummy Location"
       And clicks on "Dummy Location" from autocomplete options
@@ -56,8 +56,8 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory Secondary Tab
       And saves the record
   # Not a known stepdef
     Then the record listing should contain the entry
-    Then the "Cancel changes" button at the top of the page should be clickable
-    Then the "Cancel changes" button at the bottom of the page should be clickable
+    Then the "Cancel changes" button at the "top" of the page "should" be clickable
+    Then the "Cancel changes" button at the "bottom" of the page "should" be clickable
       And enters "Dummy Location" in the top nav search field
       And selects "Location/Movement/Inventory" from the top nav search record select type field
       And clicks on the top nav search submit button

@@ -18,13 +18,13 @@ Feature: Group Secondary Tab
       And clicks the "Create" button
     Then an empty form should be present
     Then "Creating a new record..." should be displayed
-    Then the "Cancel changes" button at the bottom of the record should not be clickable
-    Then the "Cancel changes" button at the top of the record should not be clickable
-    Then the "Delete this relation." button at the bottom of the record should not be clickable
-    Then the "Delete this relation." button at the top of the record should not be clickable
+    Then the "Cancel changes" button at the bottom of the record "should not" be clickable
+    Then the "Cancel changes" button at the top of the record "should not" be clickable
+    Then the "Delete this relation." button at the bottom of the record "should not" be clickable
+    Then the "Delete this relation." button at the top of the record "should not" be clickable
       And enters "transpleb" in the "Cataloging" "Title" field
-    Then the "Cancel changes" button at the bottom of the record should be clickable
-    Then the "Cancel changes" button at the top of the record should be clickable
+    Then the "Cancel changes" button at the bottom of the record "should" be clickable
+    Then the "Cancel changes" button at the top of the record "should" be clickable
     Then "transpleb" should be in the "Cataloging" "Title" field
       And fills in all the fields of the "Group" record
       And enters "ian" in the "Cataloging" "Group Owner" vocab field
@@ -32,10 +32,10 @@ Feature: Group Secondary Tab
       And saves the record
     Then the record entry should be displayed under "Related Group Records"
       And clicks on related record entry "transpleb"
-    Then the "Cancel changes" button at the bottom of the record should not be clickable
-    Then the "Cancel changes" button at the top of the record should not be clickable
-    Then the "Delete this relation." button at the bottom of the record should be clickable
-    Then the "Delete this relation." button at the top of the record should be clickable
+    Then the "Cancel changes" button at the bottom of the record "should not" be clickable
+    Then the "Cancel changes" button at the top of the record "should not" be clickable
+    Then the "Delete this relation." button at the bottom of the record "should" be clickable
+    Then the "Delete this relation." button at the top of the record "should" be clickable
       And selects the "Current Record" tab
       And saves the record
     Then the record is successfully saved

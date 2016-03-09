@@ -17,13 +17,13 @@ Feature: Condition Check Secondary Tab
       And clicks the "Create" button
     Then an empty form should be present
     Then "Creating a new record..." should be displayed
-    Then the "Cancel changes" button at the bottom of the record should not be clickable
-    Then the "Cancel changes" button at the top of the record should not be clickable
-    Then the "Delete this relation." button at the bottom of the record should not be clickable
-    Then the "Delete this relation." button at the top of the record should not be clickable
+    Then the "Cancel changes" button at the bottom of the record "should not" be clickable
+    Then the "Cancel changes" button at the top of the record "should not" be clickable
+    Then the "Delete this relation." button at the bottom of the record "should not" be clickable
+    Then the "Delete this relation." button at the top of the record "should not" be clickable
       And enters "blastphemie" in the "Cataloging" "Condition Check/Assessment Reference Number" field
-    Then the "Cancel changes" button at the bottom of the record should be clickable
-    Then the "Cancel changes" button at the top of the record should be clickable
+    Then the "Cancel changes" button at the bottom of the record "should" be clickable
+    Then the "Cancel changes" button at the top of the record "should" be clickable
     Then "blastphemie" should be in the "Cataloging" "Condition Check/Assessment Reference Number" field
       And fills in all the fields of the "Condition Check" record
       And enters "alagrofortei" in the "Cataloging" "Condition Checker/Assessor" vocab field
@@ -31,10 +31,10 @@ Feature: Condition Check Secondary Tab
       And saves the record
     Then the record entry should be displayed under "Related Condition Check Records"
       And clicks on related record entry "blastphemie"
-    Then the "Cancel changes" button at the bottom of the record should not be clickable
-    Then the "Cancel changes" button at the top of the record should not be clickable
-    Then the "Delete this relation." button at the bottom of the record should be clickable
-    Then the "Delete this relation." button at the top of the record should be clickable
+    Then the "Cancel changes" button at the bottom of the record "should not" be clickable
+    Then the "Cancel changes" button at the top of the record "should not" be clickable
+    Then the "Delete this relation." button at the bottom of the record "should" be clickable
+    Then the "Delete this relation." button at the top of the record "should" be clickable
       And selects the "Current Record" tab
       And saves the record
     Then the record is successfully saved

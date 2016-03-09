@@ -95,10 +95,10 @@ Feature: Loan Out Page Testing
     And enters "deleteloanouttest123" in the "Loan Out Number" field
     And clicks on the delete button 
 
-    Then the "delete" button should not be clickable
+    Then the "delete" button "should not" be clickable
     And clicks on the delete button 
 
-    Then the "delete" button should not be clickable
+    Then the "delete" button "should not" be clickable
     When user clicks on the Save button
     Then the record is successfully saved
     And clicks on the delete button 
@@ -186,9 +186,9 @@ Feature: Loan Out Page Testing
     And clicks on the top nav search submit button
     # And #selects one of the loan out records
     And clicks the "Cancel Changes" button on the top
-    Then the "Cancel Changes" button on the top should not be clickable
+    Then the "Cancel Changes" button on the top "should not" be clickable
     When user clicks the "Cancel Changes" button on the bottom
-    Then the "Cancel Changes" button on the bottom should not be clickable
+    Then the "Cancel Changes" button on the bottom "should not" be clickable
     When user enters "testnote" in the "Loan Out Note" field
     And clicks the "Cancel Changes" button on the top
     Then nothing should be in the "Loan Out Note" field
@@ -197,9 +197,9 @@ Feature: Loan Out Page Testing
     Then nothing should be in the "Loan Out Note" field
     When user clicks on the Save button
     And clicks the "Cancel Changes" button on the top
-    Then the "Cancel Changes" button on the top should not be clickable
+    Then the "Cancel Changes" button on the top "should not" be clickable
     When user clicks the "Cancel Changes" button on the bottom
-    Then the "Cancel Changes" button on the bottom should not be clickable
+    Then the "Cancel Changes" button on the bottom "should not" be clickable
     And close the browser
 
   #Incomplete

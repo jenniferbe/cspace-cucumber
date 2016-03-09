@@ -138,14 +138,14 @@ Feature: Location/Movement/Inventory Control Tab
 
         # Variation A
         Then the message "Creating new record..." should be displayed
-        Then the "cancel changes" button at the bottom of the page should not be clickable  
-        Then the "cancel changes" button at the top of the page should not be clickable  
+        Then the "cancel changes" button at the "bottom" of the page "should not" be clickable  
+        Then the "cancel changes" button at the "top" of the page "should not" be clickable  
 
         And enters "CQA113.5" in the "Reference Number" field
         And enters "CQA113.2" in the "Current Location" field
         And selects "CQA113.2" from the drop down options 
 
-        And clicks the "cancel changes" button at the top of the page 
+        And clicks the "cancel changes" button at the "top" of the page 
         Then the "Reference Number" should be empty
 
 
@@ -155,8 +155,8 @@ Feature: Location/Movement/Inventory Control Tab
         And selects "CQA113.2" from the drop down options 
 
         And clicks the "save" button 
-        Then the "cancel changes" button at the top of the page should not be clickable 
-        Then the "cancel changes" button at the bottom of the page should not be clickable 
+        Then the "cancel changes" button at the "top" of the page "should not" be clickable 
+        Then the "cancel changes" button at the "bottom" of the page "should not" be clickable 
    
    
         And clicks the "Go to record" button

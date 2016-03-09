@@ -8,7 +8,7 @@ Feature: Term List Management
     Given user is on the "Administration" page
       And selects the "Term List Management" tab
       And clicks on a term list
-    Then the "Cancel changes" button should not be clickable
+    Then the "Cancel changes" button "should not" be clickable
       And enters "Changedname" in the "Administration" "Name" field
       And enters "Changeddescription" in the "Administration" "Description" field
       And enters "Changedsource" in the "Administration" "Source" field
@@ -40,7 +40,7 @@ Feature: Term List Management
       And navigates to a procedure containing the term list
       And clicks relevant field
     Then the dropdown should contain the term
-    Then the term list should be clickable
+    Then the term list "should" be clickable
     Then close the browser
 
   #Test3

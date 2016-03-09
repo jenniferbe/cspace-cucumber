@@ -135,8 +135,8 @@ Feature: Loan In Tab
 
 	    # Variation A
 	    Then the message "Creating new record..." should be displayed
-	   	Then the "cancel changes" button at the bottom of the page should not be clickable  
-	    Then the "cancel changes" button at the top of the page should not be clickable  
+	   	Then the "cancel changes" button at the "bottom" of the page "should not" be clickable  
+	    Then the "cancel changes" button at the "top" of the page "should not" be clickable  
 	    
 	    And enters "CQA111.5" in the "Loan In Number" field
 	    And clicks the "cancel changes" button 
@@ -145,8 +145,8 @@ Feature: Loan In Tab
 	    # Variation B
 	    And enters "CQA111.5" in the "Loan In Number" field
 	    And clicks the "save" button 
-	    Then the "cancel changes" button at the top of the page should not be clickable 
-    	Then the "cancel changes" button at the bottom of the page should not be clickable 
+	    Then the "cancel changes" button at the "top" of the page "should not" be clickable 
+    	Then the "cancel changes" button at the "bottom" of the page "should not" be clickable 
    
    
 	    And clicks the "Go to record" button

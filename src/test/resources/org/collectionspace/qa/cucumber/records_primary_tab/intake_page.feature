@@ -79,10 +79,10 @@ Feature: Intake Page Testing
     And enters "delete123" in the "Intake Entry Number" field
     And clicks on the delete button 
 
-    Then the "delete" button should not be clickable
+    Then the "delete" button "should not" be clickable
     And clicks on the delete button 
 
-    Then the "delete" button should not be clickable
+    Then the "delete" button "should not" be clickable
     When user clicks on the Save button
     Then the record is successfully saved
     And clicks on the delete button 
@@ -198,9 +198,9 @@ Feature: Intake Page Testing
     And clicks on the top nav search submit button
     # And #selects one of the intakes
     And clicks the "Cancel Changes" button on the top
-    Then the "Cancel Changes" button on the top should not be clickable
+    Then the "Cancel Changes" button on the top "should not" be clickable
     When user clicks the "Cancel Changes" button on the bottom
-    Then the "Cancel Changes" button on the bottom should not be clickable
+    Then the "Cancel Changes" button on the bottom "should not" be clickable
     When user enters "testnote" in the "Entry Note" field
     And clicks the "Cancel Changes" button on the top
     Then nothing should be in the "Entry Note" field
@@ -209,9 +209,9 @@ Feature: Intake Page Testing
     Then nothing should be in the "Entry Note" field
     When user clicks on the Save button
     And clicks the "Cancel Changes" button on the top
-    Then the "Cancel Changes" button on the top should not be clickable
+    Then the "Cancel Changes" button on the top "should not" be clickable
     When user clicks the "Cancel Changes" button on the bottom
-    Then the "Cancel Changes" button on the bottom should not be clickable
+    Then the "Cancel Changes" button on the bottom "should not" be clickable
     And close the browser
 
   Scenario: Warning on attempting to leave edited page on new intake record

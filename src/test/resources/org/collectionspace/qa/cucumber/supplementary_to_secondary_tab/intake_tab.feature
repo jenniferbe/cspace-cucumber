@@ -18,13 +18,13 @@ Feature: Intake Secondary Tab
       And clicks the "Create" button
     Then an empty form should be present
     Then "Creating a new record..." should be displayed
-    Then the "Cancel changes" button at the bottom of the record should not be clickable
-    Then the "Cancel changes" button at the top of the record should not be clickable
-    Then the "Delete this relation." button at the bottom of the record should not be clickable
-    Then the "Delete this relation." button at the top of the record should not be clickable
+    Then the "Cancel changes" button at the bottom of the record "should not" be clickable
+    Then the "Cancel changes" button at the top of the record "should not" be clickable
+    Then the "Delete this relation." button at the bottom of the record "should not" be clickable
+    Then the "Delete this relation." button at the top of the record "should not" be clickable
       And enters "Donnie" in the "Cataloging" "Intake Entry Number" field
-    Then the "Cancel changes" button at the bottom of the record should be clickable
-    Then the "Cancel changes" button at the top of the record should be clickable
+    Then the "Cancel changes" button at the bottom of the record "should" be clickable
+    Then the "Cancel changes" button at the top of the record "should" be clickable
     Then "Donnie" should be in the "Cataloging" "Intake Entry Number" field
       And fills in all the fields of the "Intake" record
       And enters "Darko" in the "Cataloging" "Current Owner" vocab field
@@ -33,10 +33,10 @@ Feature: Intake Secondary Tab
     Then the record is successfully saved
     Then the record entry should be displayed under "Related Intake Records"
       And clicks on related record entry "Donnie"
-    Then the "Cancel changes" button at the bottom of the record should not be clickable
-    Then the "Cancel changes" button at the top of the record should not be clickable
-    Then the "Delete this relation." button at the bottom of the record should be clickable
-    Then the "Delete this relation." button at the top of the record should be clickable
+    Then the "Cancel changes" button at the bottom of the record "should not" be clickable
+    Then the "Cancel changes" button at the top of the record "should not" be clickable
+    Then the "Delete this relation." button at the bottom of the record "should" be clickable
+    Then the "Delete this relation." button at the top of the record "should" be clickable
       And selects the "Current Record" tab
       And saves the record
     Then the record is successfully saved

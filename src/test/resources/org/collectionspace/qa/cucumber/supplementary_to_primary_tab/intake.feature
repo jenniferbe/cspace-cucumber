@@ -8,8 +8,8 @@ Feature: Supplementary Manual QA - Intake
     Given user is on the "Create New" page
       And selects the "Intake" radio button on the Create New page
       And clicks on the Create button
-    Then the "cancel" button should not be clickable
-    Then the "delete" button should not be clickable
+    Then the "cancel" button "should not" be clickable
+    Then the "delete" button "should not" be clickable
     When user clicks the "add" button on the "Cataloging" area to the right
     Then the message "Please save the record you are creating before trying to relate other records to it." should be displayed
     When user clicks the "add" button on the "Procedures" area to the right
