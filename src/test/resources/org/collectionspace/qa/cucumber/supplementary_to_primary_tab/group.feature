@@ -31,7 +31,7 @@ Feature: Supplementary Manual QA - Group
       And selects the "Group" radio button on the Create New page
       And clicks on the Create button
       And user enters "Red" in the "Group" "Title" field
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
     Then "GMT-0800 (PST)" should be displayed in the message bar
     Then disables top and bottom "cancel" buttons
@@ -69,7 +69,7 @@ Feature: Supplementary Manual QA - Group
       And clicks on the Create button
       And user enters "Blue" in the "Group" "Title" field
       And user adds "Albert Smith" to the "Group" "Group Owner" vocab field
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
     Then disables top and bottom "cancel" buttons
     Then enables top and bottom "delete" buttons
@@ -88,11 +88,14 @@ Feature: Supplementary Manual QA - Group
       And user clicks delete confirmation OK button
     Then close the browser
 
-  Scenario: Keyboard Accessibility
-    # doesn't work, need to do later
-    When user uses tab through the entire formula
-    Then each of the fields should be reachable
-    Then the two save buttons and Cancel button should be reachable
-    Then the folding functionality should be usable # tab to it and hit space
-    Then the focus is visible at all times
-    Then the terms used in the right frame should be reachable
+## The remainder of this feature file, below, needs to be converted from narrative (broad declarative steps)
+## to testable steps
+#
+  # Scenario: Keyboard Accessibility
+  #   # doesn't work, need to do later
+  #   When user uses tab through the entire formula
+  #   Then each of the fields should be reachable
+  #   Then the two save buttons and Cancel button should be reachable
+  #   Then the folding functionality should be usable # tab to it and hit space
+  #   Then the focus is visible at all times
+  #   Then the terms used in the right frame should be reachable

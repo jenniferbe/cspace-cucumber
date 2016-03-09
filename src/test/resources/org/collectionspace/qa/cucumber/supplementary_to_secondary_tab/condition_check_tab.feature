@@ -10,7 +10,7 @@ Feature: Condition Check Secondary Tab
       And clicks on the Create button
     Then the titlebar should contain "Cataloging"
       And user enters "Aligeiers" in the "Cataloging" "Identification Number" field
-      And the user saves the record
+      And user saves the record
       And user selects the "Condition" tab
     Then "No related record selected" should be displayed
       And user clicks the "+ Add Record" button
@@ -28,7 +28,7 @@ Feature: Condition Check Secondary Tab
       And user fills in required fields for "Condition Check" record
       And user enters "alagrofortei" in the "Cataloging" "Condition Checker/Assessor" vocab field
       And user adds "alagrofortei" to "Local Persons"
-      And the user saves the record
+      And user saves the record
     Then the record entry should be displayed under "Related Condition Check Records"
       And user clicks on related record entry "blastphemie"
     Then the "Cancel changes" button at the bottom of the record should not be clickable
@@ -36,11 +36,11 @@ Feature: Condition Check Secondary Tab
     Then the "Delete this relation." button at the bottom of the record should be clickable
     Then the "Delete this relation." button at the top of the record should be clickable
       And user selects the "Current Record" tab
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
       And user enters "Aligeiers" in the top nav search field 
       And selects "Cataloging" from top nav search record type select field
-      And the user clicks on result with text "Aligeiers"
+      And user clicks on result with text "Aligeiers"
     Then the titlebar should contain "Cataloging"
     Then "blastphemie" should appear in the Procedures sidebar
       And user clicks on "blastphemie" from Procedures sidebar
@@ -72,11 +72,13 @@ Feature: Condition Check Secondary Tab
       And user presses enter
       And user tabs to the "+ Add New" button
       And user presses enter
-    Then each field should be reachable by keyboard
+    # Then each field should be reachable by keyboard
+    # The following may first require entering data in required fields; see
+    # the related location_movement_inventory.feature for a possible approach
       And user tabs to the "Save" button
       And user presses enter
     Then the record is successfully saved
-    Then the newly created record should be reachable by keyboard
+    # Then the newly created record should be reachable by keyboard
     Then close the record
 
 

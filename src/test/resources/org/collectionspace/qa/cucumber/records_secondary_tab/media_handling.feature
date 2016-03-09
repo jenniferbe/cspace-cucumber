@@ -5,7 +5,7 @@ Feature: Media Handling Page Tab
   # Enter feature description here
 
 	Scenario:  Working Media Handling Secondary tab #1
-		Given the user is in the "My CollectionSpace" page
+		Given user is in the "My CollectionSpace" page
 		And user goes to the record with identification number "CQA114_NE"
 
 	    And user selects the "Media Handling" tab
@@ -16,7 +16,7 @@ Feature: Media Handling Page Tab
 	    Then close the browser
 
 	Scenario:  Dismissing the dialogue #2
-  		Given the user is in the "My CollectionSpace" page
+  		Given user is in the "My CollectionSpace" page
 		And user goes to the record with identification number "CQA114_NE"
 
 		#Variation A
@@ -26,41 +26,41 @@ Feature: Media Handling Page Tab
 
 	    #Variation B
 	    And user clicks the "Add record" button
-	    And the user presses the "ESC" key # Needs StepDef
+	    And user presses the "ESC" key # Needs StepDef
 	    Then the "Related Media Handling Records" area should only contain "CQA114.1"
 
 	Scenario: Searching and adding multiple Media Handling records #3
 		And user clicks the "Add record" button #NeedsStepDef
-	    And user clicks the "search" button #needs StepDef maybe? 
+	    And user clicks the "search" button   maybe? 
 	    Then the search results should contain "CQA114.3" 
 	    Then the search results should contain "CQA114.2" 
 
-	    And the user selects the box with result "CQA114.3" 
-	    And the user selects the box with result "CQA114.2"  
+	    And user selects the box with result "CQA114.3" 
+	    And user selects the box with result "CQA114.2"  
 	    And user clicks the "Add to current record" button #needs Step def #7
 
 	    #Expected, Group #1
 	    Then the dialogue should be dismissed 
-	    Then "CQA114.3" should appear in the "Related Media Handling Records" area  #needs Stepdef
-	    Then "CQA114.2" should appear in the "Related Media Handling Records" area  #needs Stepdef
-	    Then "CQA114.3" should appear in the "Procedures" area  #needs Stepdef
-	    Then "CQA114.2" should appear in the "Procedures" area  #needs Stepdef
+	    Then "CQA114.3" should appear in the "Related Media Handling Records" area   
+	    Then "CQA114.2" should appear in the "Related Media Handling Records" area   
+	    Then "CQA114.3" should appear in the "Procedures" area   
+	    Then "CQA114.2" should appear in the "Procedures" area   
 
-	    And the user clicks on result with text "CQA114.3" 
+	    And user clicks on result with text "CQA114.3" 
 	    Then an "Edit Media Record" form should be displayed 
 	    Then the "Identification Number" field should contain "CQA114.3"
 	    And user clicks the "Delete this relation." button
 	    Then a delete confirmation dialogue should appear
-	    And the user clicks the delete button 
+	    And user clicks the delete button 
 	    Then the deletion should be confirmed in a dialogue
 	    Then "CQA114.3" should not appear in the "Related Media Handling Records" area
 
-	    And the user clicks on result with text "CQA114.2" 
+	    And user clicks on result with text "CQA114.2" 
 	    Then an "Edit Media Record" form should be displayed 
 	    Then the "Identification Number" field should contain "CQA114.2"
 	    And user clicks the "Delete this relation." button
 	    Then a delete confirmation dialogue should appear
-	    And the user clicks the delete button 
+	    And user clicks the delete button 
 	    Then the deletion should be confirmed in a dialogue
 	    Then "CQA114.2" should not appear in the "Related Media Handling Records" area 
 
@@ -69,7 +69,7 @@ Feature: Media Handling Page Tab
 
 
 	Scenario: Warning when navigating away from new Media Handling record #4
-  		Given the user is in the "My CollectionSpace" page
+  		Given user is in the "My CollectionSpace" page
 		And user goes to the record with identification number "CQA114_NE"
 	    Then "CQA114_NE" should be in the "Identification Number" field
 	    And user selects the "Media Handling" tab
@@ -90,7 +90,7 @@ Feature: Media Handling Page Tab
 
 		#Variation B
 		And user selects the "Current Record" tab
-	    Then a leave confirmation dialogue should appear #needs StepDef
+	    Then a leave confirmation dialogue should appear  
 	    And user clicks the "cancel" button  #might not work
 	    Then the "Identification Number" field should contain "CQA114.4"
 
@@ -112,14 +112,14 @@ Feature: Media Handling Page Tab
 	    Then "CQA114.4" should appear in the "Related Media Handling Records" area 
 
 	    And user goes to the record with identification number "CQA114.4"
-	    And the user clicks the delete button
+	    And user clicks the delete button
 	    Then a delete confirmation dialogue should appear
-	    And the user clicks the delete button 
+	    And user clicks the delete button 
 	    Then the deletion should be confirmed in a dialogue
 	    Then close the browser
 
 	Scenario: Cancel changes button #5
-		Given the user is in the "My CollectionSpace" page
+		Given user is in the "My CollectionSpace" page
 		And user goes to the record with identification number "CQA114_NE"
 		And user selects the "Media Handling" tab
 	    And user clicks the "Add record" button #needs step def
@@ -144,7 +144,7 @@ Feature: Media Handling Page Tab
 	    And user clicks the "Go to record" button
 	    And user clicks the "Delete" button 
 	    Then a delete confirmation dialogue should appear
-	    And the user clicks the confirmation delete button
+	    And user clicks the confirmation delete button
 	    Then a deletion should be confirmed in a dialogue
 	    Then close the browser
 
@@ -157,7 +157,7 @@ Feature: Media Handling Page Tab
 
         And user clicks the "+ Add Record" button
         And clicks on the Create button
-        And the user saves the record # click the save button
+        And user saves the record # click the save button
         Then the message "Please specify an Identification Number" should appear #fail
         And user enters "CQA114.11" in the "Identification Number" field
         And user saves the record
@@ -279,14 +279,14 @@ Feature: Media Handling Page Tab
         And user clicks the "Go To Record" button	    
 	    And user clicks the "Delete" button
 	    Then a delete confirmation dialogue should appear #needs Step
-	    And the user clicks the delete button         
+	    And user clicks the delete button         
         Then close the browser
 
 	Scenario: Testing links and "Go To Record" works #10
-		Given the user is in the "My CollectionSpace" page
+		Given user is in the "My CollectionSpace" page
 	    And user goes to the record with identification number "CQA114_NE"
 	    And user selects the "Media Handling" tab 
-	    And the user clicks on result with text "CQA114.1"
+	    And user clicks on result with text "CQA114.1"
 	    Then the "Identification Number" field should contain "CQA114.1"
 	    And user clicks the "Go to record" button
 	    Then the titlebar should contain "CQA114.1"
@@ -294,14 +294,14 @@ Feature: Media Handling Page Tab
 	    Then close the browser	
 
 	Scenario: Deleting relation via list #11
-		Given the user is in the "My CollectionSpace" page
+		Given user is in the "My CollectionSpace" page
 	    And user goes to the record with identification number "CQA114_NE"
 	    And user selects the "Media Handling" tab 
 
 	    And user clicks the "Add record" button 
 	    And clicks on the Create button
 	    And user enters "CQA114.7" in the "Identification Number" field 
-	    And the user saves the record
+	    And user saves the record
 	    
 	    And user clicks the "Delete Relation" button on the row that reads "CQA114.7" #Green "X" button. Needs step def
 	    Then delete confirmation dialogue should appear # Then the dialogue should appear asking you to delete this relation
@@ -311,7 +311,7 @@ Feature: Media Handling Page Tab
 
 	    And user clicks the "Delete Relation" button on the row that reads "CQA114.7" #Green "X" button. Needs step def. Again
 	    Then delete confirmation dialogue should appear
-	    And user clicks the "close" button # close button == close symbol? #Needs stepdef???
+	    And user clicks the "close" button # close button == close symbol?  ???
 	    Then the dialogue should be dismissed
 	    Then the "Related Media Handling Records" area should contain "CQA114.7"
 
@@ -319,22 +319,22 @@ Feature: Media Handling Page Tab
 	    And user clicks the "Delete Relation" button on the row that reads "CQA114.7" #Green "X" button. Needs step def. Last time.
 	    Then delete confirmation dialogue should appear
 	    And user clicks on the delete button
-	    Then "CQA114.7" should not appear in the "Procedures" area #needs StepDef #notlogged
-	    Then "CQA114.7" should not appear in the "Related Media Handling Records" area #needs Stepdef #not logged
+	    Then "CQA114.7" should not appear in the "Procedures" area   #notlogged
+	    Then "CQA114.7" should not appear in the "Related Media Handling Records" area   #not logged
 
     	And user goes to the record with identification number "CQA114.7"
         And user selects the "Media Handling" tab 
-	    Then "CQA114_NE" should not appear in the "Related Media Handling Records" area  #needs Stepdef
+	    Then "CQA114_NE" should not appear in the "Related Media Handling Records" area   
 	    And user selects the "Current Record" tab
 
-	    And the user clicks the delete button
+	    And user clicks the delete button
 	    Then a delete confirmation dialogue should appear
-	    And the user clicks the delete button 
+	    And user clicks the delete button 
 	    Then the deletion should be confirmed in a dialogue
 	    Then close the browser
 
 	Scenario: Deleting relation via record editor #Test 27
-		Given the user is in the "My CollectionSpace" page
+		Given user is in the "My CollectionSpace" page
 	    And user goes to the record with identification number "CQA114_NE"
 	    Then "CQA114_NE" should be in the "Identification Number" field
 
@@ -342,8 +342,8 @@ Feature: Media Handling Page Tab
 	    And user clicks the "Add record" button #needs step def
 	    And clicks on the Create button
 	    And user enters "CQA114.8" in the "Identification Number" field #might not work 
-	    And the user saves the record
-	    And the user clicks on result with text "CQA114.8"
+	    And user saves the record
+	    And user clicks on result with text "CQA114.8"
 	    
 	    And user clicks the "Delete this relation" button
 	    Then a delete confirmation dialogue should appear
@@ -359,10 +359,10 @@ Feature: Media Handling Page Tab
 
 	    And user clicks the "Delete this relation" button
 	    Then a delete confirmation dialogue should appear #needs Step
-	    And the user clicks the delete button 
+	    And user clicks the delete button 
 	    Then the deletion should be confirmed in a dialogue
 
-	    Then "CQA114.8" should not appear in the "Procedures" area  #needs Stepdef
+	    Then "CQA114.8" should not appear in the "Procedures" area   
 	    Then "CQA114.8" should not appear in the "Related Media Handling Records" area
 
 	    And user goes to the record with identification number "CQA114.8"
@@ -370,9 +370,9 @@ Feature: Media Handling Page Tab
 	    Then the "Related Media Handling Records" area should be empty
 	    
 	    And user selects the "Current Record" tab 
-	    And the user clicks the delete button
+	    And user clicks the delete button
 	    Then a delete confirmation dialogue should appear
-	    And the user clicks the delete button 
+	    And user clicks the delete button 
 	    Then the deletion should be confirmed in a dialogue
 	    Then close the browser 
 

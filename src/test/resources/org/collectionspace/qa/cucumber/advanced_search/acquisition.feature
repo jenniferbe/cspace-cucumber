@@ -5,7 +5,7 @@ Feature: Advanced Search ­ Acquisition
     Searching for a record based on boolean-search as well as regular search terms
 
 	Scenario: Advanced Search Fields and wildcard
-	Given the user is in the "Create New" page
+	Given user is in the "Create New" page
         And user selects the "Acquisition" radio button on the Create New page
         And user enters "CQA71.1" in the "Acquisition Reference Number" field 
         And user enters "2016-01-01" in the "Accession date" field
@@ -17,7 +17,7 @@ Feature: Advanced Search ­ Acquisition
         And user selects "CQA-71 Funding source" from autocomplete options
         And user enters "CQA-71 Test" in the "Field collection event name" field 
         And user enters "textbook" in the "Credit Line" field 
-        And the user saves the record
+        And user saves the record
 
         # Record Title
         And clicks the "Advanced Search" button 
@@ -88,13 +88,13 @@ Feature: Advanced Search ­ Acquisition
 
 
 	Scenario: Boolean field­-based search
-        Given the user is in the "Create New" page
+        Given user is in the "Create New" page
         And user selects the "Acquisition" radio button on the Create New page
         And user enters "CQA71.2" in the "Acquisition Reference Number" field
         And user selects "Purchase" from the "Acquisition Method" drop down box  
         And user enters "testtest" in the "Acquisition Reason" field
         And user enters "thank you" in the "Credit Line" field        
-        And the user saves the record
+        And user saves the record
 
         And user goes to the "Create New" page # Stepdef
         And user selects the "Acquisition" radio button on the Create New page
@@ -102,7 +102,7 @@ Feature: Advanced Search ­ Acquisition
         And user selects "Purchase" from the "Acquisition Method" drop down box  
         And user enters "testtest" in the "Acquisition Note" field
         And user enters "thank you" in the "Credit Line" field
-        And the user saves the record
+        And user saves the record
 
         And user goes to the "Create New" page # Stepdef
         And user selects the "Acquisition" radio button on the Create New page
@@ -110,7 +110,7 @@ Feature: Advanced Search ­ Acquisition
         And user selects "Gift" from the "Acquisition Method" drop down box  
         And user enters "testtest" in the "Acquisition Provisos" field
         And user enters "thank you" in the "Credit Line" field
-        And the user saves the record
+        And user saves the record
 
 		And clicks the "Advanced Search" button
         And user selects "Acquisition" from the "Record Type Select" drop down box
@@ -135,7 +135,7 @@ Feature: Advanced Search ­ Acquisition
 
 
 	Scenario: Boolean and Keyword Search
-        Given the user is in the "My CollectionSpace" page
+        Given user is in the "My CollectionSpace" page
 		And clicks the "Advanced Search" button
         And user selects "Acquisition" from the "Record Type Select" drop down box
         And user selects "any (OR)" from the "Field-based Search" drop down box
@@ -158,24 +158,24 @@ Feature: Advanced Search ­ Acquisition
 
 
         And user goes to the record with identification number "71.1"
-        And the user clicks the delete button
+        And user clicks the delete button
         Then a delete confirmation dialogue should appear
-        And the user clicks the delete button 
+        And user clicks the delete button 
         Then the deletion should be confirmed in a dialogue
         And user goes to the record with identification number "71.2"
-        And the user clicks the delete button
+        And user clicks the delete button
         Then a delete confirmation dialogue should appear
-        And the user clicks the delete button 
+        And user clicks the delete button 
         Then the deletion should be confirmed in a dialogue
         And user goes to the record with identification number "71.3"
-        And the user clicks the delete button
+        And user clicks the delete button
         Then a delete confirmation dialogue should appear
-        And the user clicks the delete button 
+        And user clicks the delete button 
         Then the deletion should be confirmed in a dialogue
         And user goes to the record with identification number "71.3"
-        And the user clicks the delete button
+        And user clicks the delete button
         Then a delete confirmation dialogue should appear
-        And the user clicks the delete button 
+        And user clicks the delete button 
         Then the deletion should be confirmed in a dialogue        
         Then close the browser
 

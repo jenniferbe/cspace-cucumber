@@ -65,7 +65,7 @@ Feature: Term List Management
     Then the titlebar should contain "Intake"
       And user enters "Existing Term Test" in the "Intake" "Intake Entry Number" field
       And user enters "found dead" in the "Intake" "Field Collection Method" field
-      And the user saves the record
+      And user saves the record
     Given user is on the "Administration page"
       And user selects the "Term List Management" tab
       And user clicks on "collectionmethod" term list
@@ -74,7 +74,7 @@ Feature: Term List Management
       And user enters "Existing Term Test" in the top nav search field
       And selects "Intake" from the top nav search record type select field
       And clicks on the top nav search submit button
-      And the user clicks on result with text "Existing Term Test"
+      And user clicks on result with text "Existing Term Test"
     Then the titlebar should contain "Intake"
     Then "found deadest" should be in the "Intake" "Field Collection Method" field
     Then close the browser
@@ -99,7 +99,7 @@ Feature: Term List Management
       And selects the "Intake" radio button on the Create New page
       And clicks on the Create button
       And user enters "Fillmeup" in the "Intake" "Intake Entry Number" field
-      And the user saves the record
+      And user saves the record
     Given user is on the "Administration" page
       And user selects the "Term List Management" tab
       And user clicks on "Entry Method" 

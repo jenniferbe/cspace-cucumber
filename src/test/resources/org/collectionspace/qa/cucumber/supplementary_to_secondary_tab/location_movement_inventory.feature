@@ -11,14 +11,14 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory Secondary Tab
       And user enters "Dummy Location" in the "Location/Movement/Inventory" "Current Location" vocab field
   # Not a known stepdef
       And user adds "Dummy Location" to "Local Storage Locations" from vocabulary autocomplete
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
     Given user is on the "Create New" page
       And selects the "Cataloging" radio button on the Create New page
       And clicks on the create button
     Then the titlebar should contain "Cataloging"
       And enters "Dummy Record" in the "Cataloging" "Identification Number" field
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
     Then close the browser
   
@@ -53,7 +53,7 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory Secondary Tab
     Then the vocabulary autocomplete should contain "Dummy Location"
       And user clicks on "Dummy Location" from autocomplete options
       And user fills in required fields for "Location/Movement/Inventory" record
-      And the user saves the record
+      And user saves the record
   # Not a known stepdef
     Then the record listing should contain the entry
     Then the "Cancel changes" button at the top of the page should be clickable
@@ -107,7 +107,7 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory Secondary Tab
       And user selects "Location" from dropdown in "Reference Number" row
   # Not a known stepdef
     Then the "Location/Movement/Inventory" "Reference Number" field should have changed
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
     Then close the browser
 

@@ -9,7 +9,7 @@ Feature: Valuation Control Secondary Tab
       And selects the "Cataloging" radio button on the Create New page
       And clicks on the Create button
       And user enters "1234321" in the "Cataloging" "Identification Number" field
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
       And user selects the "Valuation" tab
     Then "No related record selected" should be displayed
@@ -28,7 +28,7 @@ Feature: Valuation Control Secondary Tab
     Then the "Delete this relation." button at the top of the page should be clickable
     Then the "Delete this relation." button at the bottom of the page should be clickable
       And user fills in required fields for "Valuation Control" record
-      And the user saves the record
+      And user saves the record
     Then the record entry should be displayed under "Related Valuation Control Records"
       And user clicks the newly created record 
     Then the "Cancel changes" button at the top of the page should not be clickable
@@ -36,13 +36,13 @@ Feature: Valuation Control Secondary Tab
     Then the "Delete this relation." button at the top of the page should be clickable
     Then the "Delete this relation." button at the bottom of the page should be clickable
       And user selects the "Current Record" tab
-      And the user saves the record
+      And user saves the record
     Given user is on the "My Collectionspace" page
       And user enters "1234321" in the top nav search field
       And selects "Cataloging" from the top nav search record type select field
-      And the user clicks on result with text "1234321"
+      And user clicks on result with text "1234321"
     Then the related record should appear in the sidebar
-      And the user clicks on the related record
+      And user clicks on the related record
     Then "1234321" should appear in the sidebar
     Then close the browser
 
@@ -51,7 +51,7 @@ Feature: Valuation Control Secondary Tab
     Given user is on the "My Collectionspace" page
       And user enters "1234231" in the top nav search field
       And selects "Cataloging" from the top nav search record type select field
-      And the user clicks on result with text "1234231"
+      And user clicks on result with text "1234231"
       And user selects the "Valuation" tab
       And user clicks the "+ Add Record" button
       And user presses the "Esc" key
@@ -75,9 +75,11 @@ Feature: Valuation Control Secondary Tab
       And user presses enter
       And user tabs to the "+ Add New" button
       And user presses enter
-    Then each field should be reachable by keyboard
+    # Then each field should be reachable by keyboard
+    # The following may first require entering data in required fields; see
+    # the related location_movement_inventory.feature for a possible approach
       And user tabs to the "Save" button
       And user presses enter
     Then the record is successfully saved
-    Then the newly created record should be reachable by keyboard
+    # Then the newly created record should be reachable by keyboard
     Then close the record

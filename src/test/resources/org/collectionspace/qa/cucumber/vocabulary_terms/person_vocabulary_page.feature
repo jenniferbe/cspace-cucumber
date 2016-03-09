@@ -27,7 +27,7 @@ Feature: Person Vocabulary Data Entry
       And user clicks the plus to repeat the "Person" "Occupation" field
       And user enters "<school/style2>" in the repeated "Person" "School/Style" field
       And user enters "<occupation2>" in the repeated "Person" "Occupation" field
-      And the user saves the record
+      And user saves the record
     Then a "New Record successfully created" message should appear with the current time at the bottom of the page
     Then "Ancient Greek" should be in "Language" row
     Then "Hello" should be in "Salutation" row
@@ -182,7 +182,7 @@ Feature: Person Vocabulary Data Entry
       And user adds "Samuel Langhorne Clemens" in the "Display Name" field of the third "Person Term Group" form
 # Uncertain stepdef 
       And user marks the second "Person Term Group" form as preferred
-      And the user saves the record
+      And user saves the record
 # Uncertain stepdef 
       And user navigates to the "Create New" page
       And selects the "Loan In" radio button on the "Create New" page
@@ -199,7 +199,7 @@ Feature: Person Vocabulary Data Entry
     Then "Mark Twain" should not be clickable
       And user clicks on "Samuel Clemens" from dropdown in "Lender" row
     Then "Samuel Clemens" should be in the "Loan In" "Lender" field
-      And the user saves the record
+      And user saves the record
     Then "Samuel Clemens" should appear in the Terms Used sidebar
       And user clicks on "Samuel Clemens" in the Terms Used sidebar
     Then the titlebar should contain "Samuel Clemens"
@@ -216,7 +216,7 @@ Feature: Person Vocabulary Data Entry
       And user adds "Samuel Langhorne Clemens" in the "Display Name" field of the third "Person Term Group" form
 # Uncertain stepdef 
       And user marks the second "Person Term Group" form as preferred
-      And the user saves the record
+      And user saves the record
 # Uncertain stepdef 
       And user navigates to the "Create New" page
       And selects the "Loan In" radio button on the "Create New" page
@@ -233,7 +233,7 @@ Feature: Person Vocabulary Data Entry
     Then "Mark Twain" should be clickable
       And user clicks on "Mark Twain" from dropdown in "Lender" row
     Then "Mark Twain" should be in the "Loan In" "Lender" field
-      And the user saves the record
+      And user saves the record
     Then "Mark Twain" should appear in the Terms Used sidebar
       And user clicks on "Mark Twain" in the Terms Used sidebar
     Then the titlebar should contain "Samuel Clemens"
@@ -256,7 +256,7 @@ Feature: Person Vocabulary Data Entry
     Then a drop down list should appear in the second "Narrower Context" row
 # Uncertain stepdef
       And user adds "Foo Kids" to Local Persons from dropdown in second "Narrower Context" row
-      And the user saves the record
+      And user saves the record
     Then "Foo Clan" should be in the "Person" "Broader Context" field
     Then "Foo Family" should be in the "Person" "Narrower Context" field
     Then "Foo Kids" should be in the second "Person" "Narrower Context" field
@@ -274,7 +274,7 @@ Feature: Person Vocabulary Data Entry
     Then a drop down list should appear in the second "Narrower Context" row
 # Uncertain stepdef
       And user adds "Sally Foo" to Local Persons from dropdown in second "Narrower Context" row
-      And the user saves the record
+      And user saves the record
     Then "Johnny Foo" should be in the "Person" "Narrower Context" field
     Then "Sally Foo" should be in the second "Person" "Narrower Context" field
     Then "Foo Parents" should be in the "Person" "Equivalent Context" field
@@ -285,7 +285,7 @@ Feature: Person Vocabulary Data Entry
     Then a drop down list should appear in the third "Narrower Context" row
 # Uncertain stepdef
       And user adds "Cindy Loo Foo" to Local Persons from dropdown in second "Narrower Context" row
-      And the user saves the record
+      And user saves the record
     Then "Foo Kids" should be in the "Person" "Broader Context" field
     Then "Cindy Loo Foo" should be in the third "Person" "Narrower Context" field
       And user enters "Sally Foo" in the top nav search field

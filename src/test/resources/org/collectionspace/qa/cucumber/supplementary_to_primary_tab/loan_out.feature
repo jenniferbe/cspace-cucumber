@@ -47,7 +47,7 @@ Feature: Supplementary Manual QA - Loan Out
       And clicks on the Create button
       And user enters "1234" in the "Loan Out" "Loan Out Number" field
       And user enters "John Doe" in the "Loan Out" "Lender" vocab field
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
     Then "GMT-0800 (PST)" should be displayed in the message bar
     Then disables top and bottom "cancel" buttons
@@ -90,7 +90,7 @@ Feature: Supplementary Manual QA - Loan Out
       And clicks on the Create button
       And user enters "1.2.3.4.5" in the "Loan Out" "Loan Out Number" field
       And user adds "John Doe" to the "Loan Out" "Borrower" vocab field
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
     Then disables top and bottom "cancel" buttons
     Then enables top and bottom "delete" buttons
@@ -109,11 +109,14 @@ Feature: Supplementary Manual QA - Loan Out
       And user clicks delete confirmation OK button
     Then close the browser
 
-  Scenario: Keyboard Accessibility
-    # doesn't work, need to do later
-    When user uses tab through the entire formula
-    Then each of the fields should be reachable
-    Then the two save buttons and Cancel button should be reachable
-    Then the folding functionality should be usable # tab to it and hit space
-    Then the focus is visible at all times
-    Then the terms used in the right frame should be reachable
+## The remainder of this feature file, below, needs to be converted from narrative (broad declarative steps)
+## to testable steps
+#
+  # Scenario: Keyboard Accessibility
+  #   # doesn't work, need to do later
+  #   When user uses tab through the entire formula
+  #   Then each of the fields should be reachable
+  #   Then the two save buttons and Cancel button should be reachable
+  #   Then the folding functionality should be usable # tab to it and hit space
+  #   Then the focus is visible at all times
+  #   Then the terms used in the right frame should be reachable

@@ -11,7 +11,7 @@ Feature: Place Authority Data Entry
     And clicks on the Create button
     Then the titlebar should contain "Local Places"
     And user enters "New York" in the "Place" "Display Name" field
-    And the user saves the record
+    And user saves the record
     Then the record is successfully saved
     Then "New York" should be in the "Place" "Display Name" field
     Then the titlebar should contain "Local Places"
@@ -25,7 +25,7 @@ Feature: Place Authority Data Entry
     And clicks on the Create button
     Then the titlebar should contain "Thesaurus of Geographic Names (TGN)"
     And user enters "New York City" in the "Place" "Display Name" field
-    And the user saves the record
+    And user saves the record
     Then the record is successfully saved
     Then "New York City" should be in the "Place" "Display Name" field
     Then the titlebar should contain "Thesaurus of Geographic Names (TGN)"
@@ -46,7 +46,7 @@ Feature: Place Authority Data Entry
     And selects "<vocabulary>" from the top nav search vocabulary select field
     And clicks on the top nav search submit button
     Then the search results should contain "<result>"
-    And the user clicks on result with text "<result>"
+    And user clicks on result with text "<result>"
     Then "<result>" should be in the "<recordType>" "Display Name" field
     Then the titlebar should contain "<vocabulary>"
     Then close the browser

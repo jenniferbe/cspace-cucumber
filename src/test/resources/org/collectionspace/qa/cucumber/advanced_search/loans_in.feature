@@ -17,7 +17,7 @@ Feature: Advanced Search - Loans In
       And user enters "2011-01-01" in the "Loan In" "Loan In Date" field
       And user enters "2011-01-01" in the "Loan In" "Loan In Return Date" field
       And user enters "2011-01-01" in the "Loan In" "Loan Renewal Application Date" field
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
       And user clicks on link to "Advanced Search" in upper right corner
     Then the titlebar should contain "Advanced Search"
@@ -112,7 +112,7 @@ Feature: Advanced Search - Loans In
       And user selects "Research" from dropdown in "Loan Purpose" row
       And user enters "testtest" in the "Loan In" "Loan In Conditions" field
       And user enters "2001-01-01" in the "Loan In" "Loan In Date" field
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
     Given user is on the "Create New" page
       And selects the "Loan In" radio button on the Create New page
@@ -124,7 +124,7 @@ Feature: Advanced Search - Loans In
       And user selects "Research" from dropdown in "Loan Purpose" row
       And user enters "testtest" in the "Loan In" "Loan In Conditions" field
       And user enters "2001-01-01" in the "Loan In" "Loan In Date" field
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
     Given user is on the "Create New" page
       And selects the "Loan In" radio button on the Create New page
@@ -136,7 +136,7 @@ Feature: Advanced Search - Loans In
       And user selects "Photography" from dropdown in "Loan Purpose" row
       And user enters "testtest" in the "Loan In" "Loan In Conditions" field
       And user enters "2001-01-01" in the "Loan In" "Loan In Date" field
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
       And user clicks on link to "Advanced Search" in upper right corner
     Then the titlebar should contain "Advanced Search"

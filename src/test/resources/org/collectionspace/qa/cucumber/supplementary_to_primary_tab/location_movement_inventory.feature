@@ -45,7 +45,7 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory
       And selects the "Location/Movement/Inventory" radio button on the Create New page
       And clicks on the Create button
       And user adds "New York Theater" to the "Location/Movement/Inventory" "Current Location" vocab field
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
     Then "GMT-0800 (PST)" should be displayed in the message bar
     Then disables top and bottom "cancel" buttons
@@ -96,9 +96,9 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory
       And clicks on the Create button
       And user enters "1.2.3.4.5" in the "Location/Movement/Inventory" "Reference Number" field
       And user adds "New York Theater" to the "Location/Movement/Inventory" "Current Location" vocab field
-      And the user saves the record
+      And user saves the record
       Then the message "Please note that "Hard Save" will make the record read-only." should be displayed
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
     Then disables top and bottom "cancel" buttons
     Then enables top and bottom "delete" buttons
@@ -123,15 +123,15 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory
       And clicks on the Create button
       And user enters "1.2.3.4.5" in the "Location/Movement/Inventory" "Reference Number" field
       And user adds "New York Theater" to the "Location/Movement/Inventory" "Current Location" vocab field
-      And the user saves the record
+      And user saves the record
     Then the message "Please note that "Hard Save" will make the record read-only." should be displayed
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
       And user adds "2016-01-01" to the "Location/Movement/Inventory" "Location Date" field
-      And the user saves the record
+      And user saves the record
     Then the message "Please note that "Hard Save" will make the record read-only." should be displayed
       # hard save not implemented
-      And the user hard saves the record
+      And user hard saves the record
     Then the record is read-only
     Given user is on the "My CollectionSpace" page
       And enters "New York Theater" in the top nav search field
@@ -139,7 +139,7 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory
       And clicks on the top nav search submit button
     # locked not implemented
     Then the search results should contain a locked "1.2.3.4.5" 
-      And the user clicks on result with text "1.2.3.4.5"
+      And user clicks on result with text "1.2.3.4.5"
     # not implemented read-only
     Then the record should be read-only
 
@@ -149,29 +149,29 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory
       And clicks on the Create button
       And user enters "123123123" in the "Location/Movement/Inventory" "Reference Number" field
       And user adds "Metro Pictures Corporation" to the "Location/Movement/Inventory" "Current Location" vocab field
-      And the user saves the record
+      And user saves the record
     Then the message "Please note that "Hard Save" will make the record read-only." should be displayed
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
       And user selects the "Acquisitions" tab
       # not stepdefs
       And user selects "Add record" button
       And user selects "create" button
       And user enters "456.456.456" in the "Acquisition" "Acquisition Reference Number" field
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
       And user selects the "Cataloging" tab
       # not stepdefs
       And user selects "Add record" button
       And user selects "create" button
       And user enters "987.987.987" in the "Cataloging" "Identification Number" field
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
       And user selects the "Current Record" tab
-      And the user saves the record
+      And user saves the record
     Then the message "Please note that "Hard Save" will make the record read-only." should be displayed
       # hard save not implemented
-      And the user hard saves the record
+      And user hard saves the record
     Then the record is read-only
     Given user is on the "My CollectionSpace" page
       And enters "Metro Pictures Corporation" in the top nav search field
@@ -179,25 +179,28 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory
       And clicks on the top nav search submit button
     # locked not implemented
     Then the search results should contain a locked "123123123" 
-      And the user clicks on result with text "123123123"
+      And user clicks on result with text "123123123"
     # not implemented read-only
     Then the record should be read-only
     And user selects the "Acquisitions" tab
-    And the user clicks on result with text "456.456.456"
+    And user clicks on result with text "456.456.456"
     And user enters "3242342" in the "Acquisition" "Acquisition Reference Number" field
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
       And user selects the "Cataloging" tab
-      And the user clicks on result with text "987.987.987"
+      And user clicks on result with text "987.987.987"
       And user enters "3rrew42342" in the "Cataloging" "Identification Number" field
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
 
-  Scenario: Keyboard Accessibility
-    # doesn't work, need to do later
-    When user uses tab through the entire formula
-    Then each of the fields should be reachable
-    Then the two save buttons and Cancel button should be reachable
-    Then the folding functionality should be usable # tab to it and hit space
-    Then the focus is visible at all times
-    Then the terms used in the right frame should be reachable
+## The remainder of this feature file, below, needs to be converted from narrative (broad declarative steps)
+## to testable steps
+#
+  # Scenario: Keyboard Accessibility
+  #   # doesn't work, need to do later
+  #   When user uses tab through the entire formula
+  #   Then each of the fields should be reachable
+  #   Then the two save buttons and Cancel button should be reachable
+  #   Then the folding functionality should be usable # tab to it and hit space
+  #   Then the focus is visible at all times
+  #   Then the terms used in the right frame should be reachable

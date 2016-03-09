@@ -10,7 +10,7 @@ Feature: Intake Secondary Tab
       And clicks on the Create button
     Then the titlebar should contain "Cataloging"
       And user enters "NeedleDrop" in the "Cataloging" "Identification Number" field
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
       And user selects the "Intake" tab
     Then "No related record selected" should be displayed
@@ -29,7 +29,7 @@ Feature: Intake Secondary Tab
       And user fills in required fields for "Intake" record
       And user enters "Darko" in the "Cataloging" "Current Owner" vocab field
       And user adds "Darko" to "Local Persons"
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
     Then the record entry should be displayed under "Related Intake Records"
       And user clicks on related record entry "Donnie"
@@ -38,11 +38,11 @@ Feature: Intake Secondary Tab
     Then the "Delete this relation." button at the bottom of the record should be clickable
     Then the "Delete this relation." button at the top of the record should be clickable
       And user selects the "Current Record" tab
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
       And user enters "NeedleDrop" in the top nav search field 
       And selects "Cataloging" from top nav search record type select field
-      And the user clicks on result with text "NeedleDrop"
+      And user clicks on result with text "NeedleDrop"
     Then the titlebar should contain "Cataloging"
     Then "Donnie" should appear in the Procedures sidebar
       And user clicks on "Donnie" from Procedures sidebar
@@ -74,9 +74,11 @@ Feature: Intake Secondary Tab
       And user presses enter
       And user tabs to the "+ Add New" button
       And user presses enter
-    Then each field should be reachable by keyboard
+    # Then each field should be reachable by keyboard
+    # The following may first require entering data in required fields; see
+    # the related location_movement_inventory.feature for a possible approach
       And user tabs to the "Save" button
       And user presses enter
     Then the record is successfully saved
-    Then the newly created record should be reachable by keyboard
+    # Then the newly created record should be reachable by keyboard
     Then close the record

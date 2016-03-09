@@ -5,7 +5,7 @@ Feature: Advanced Search ­ Condition Check
 	# Enter feature description here
 
 	Scenario: Advanced Search Fields
-		Given the user is in the "Create New" page
+		Given user is in the "Create New" page
         And user selects the "Condition Check" radio button on the Create New page
         And user enters "CQA73.1" in the "Condition Check/Assessment Reference Number" field 
         And user selects "Low" from the "Object Audit Category" drop down box        
@@ -14,7 +14,7 @@ Feature: Advanced Search ­ Condition Check
         And user enters "2016-01-01" in the "Next Condition Check/Assessment Date" field 
         And user enters "2016-02-02" in the "Condition Check/Assessment Date" field 
         And user enters "textbook" in the "Condition Check/Assessment Date" field
-        And the user saves the record
+        And user saves the record
 
         And clicks the "Advanced Search" Button
         And user selects "Condition Check" from the "Record Type Select" drop down box
@@ -73,13 +73,13 @@ Feature: Advanced Search ­ Condition Check
 	    Then close the browser
 
 	Scenario: Boolean field­-based search
-        Given the user is in the "Create New" page
+        Given user is in the "Create New" page
         And user selects the "Condition Check" radio button on the Create New page
         And user enters "CQA73.2" in the "Condition Check/Assessment Reference Number" field
         And user selects "Low" from the "Object Audit Category" drop down box
         And user selects "Needs no work" from the "Condition" drop down box
         And user enters "testtest" in the "Condition Check/Assessment Note" field
-        And the user saves the record
+        And user saves the record
 
 
         And user goes to the "Create New" page # Stepdef
@@ -88,7 +88,7 @@ Feature: Advanced Search ­ Condition Check
         And user selects "Low" from the "Object Audit Category" drop down box
         And user selects "Needs no work" from the "Condition" drop down box
         And user enters "testtest" in the "Display Recommendations" field
-        And the user saves the record        
+        And user saves the record        
       
         And user goes to the "Create New" page # Stepdef
  		And user selects the "Condition Check" radio button on the Create New page
@@ -96,7 +96,7 @@ Feature: Advanced Search ­ Condition Check
         And user selects "Low" from the "Object Audit Category" drop down box
         And user selects "In jeopardy" from the "Condition" drop down box
         And user enters "testtest" in the "Handling Recommendations" field
-        And the user saves the record     
+        And user saves the record     
 
         And clicks the "Advanced Search Button"
         And user selects "Condition Check" from the "Record Type Select" drop down box
@@ -120,7 +120,7 @@ Feature: Advanced Search ­ Condition Check
         Then close the browser
 
 	Scenario: Boolean and Keyword Search
-        Given the user is in the "My CollectionSpace" page
+        Given user is in the "My CollectionSpace" page
         And clicks the "Advanced Search" button
         And user enters "testtest" in the "Keyword Search" field
         And user selects "any (OR)" from the "Field-based Search" drop down box
@@ -142,24 +142,24 @@ Feature: Advanced Search ­ Condition Check
         Then the search results should not contain "CQA73.4"
 
         And user goes to the record with identification number "CQA73.1"
-        And the user clicks the delete button
+        And user clicks the delete button
         Then a delete confirmation dialogue should appear
-        And the user clicks the delete button 
+        And user clicks the delete button 
         Then the deletion should be confirmed in a dialogue
         And user goes to the record with identification number "CQA73.2"
-        And the user clicks the delete button
+        And user clicks the delete button
         Then a delete confirmation dialogue should appear
-        And the user clicks the delete button 
+        And user clicks the delete button 
         Then the deletion should be confirmed in a dialogue
         And user goes to the record with identification number "CQA73.3"
-        And the user clicks the delete button
+        And user clicks the delete button
         Then a delete confirmation dialogue should appear
-        And the user clicks the delete button 
+        And user clicks the delete button 
         Then the deletion should be confirmed in a dialogue
         And user goes to the record with identification number "CQA73.3"
-        And the user clicks the delete button
+        And user clicks the delete button
         Then a delete confirmation dialogue should appear
-        And the user clicks the delete button 
+        And user clicks the delete button 
         Then the deletion should be confirmed in a dialogue        
         Then close the browser
 

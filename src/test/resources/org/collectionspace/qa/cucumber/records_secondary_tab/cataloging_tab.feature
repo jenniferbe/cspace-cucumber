@@ -5,7 +5,7 @@ Feature: #Enter feature name here
   # Enter feature description here
 
 	Scenario: Working cataloging tab #1 
-        Given the user is in the "My CollectionSpace" page
+        Given user is in the "My CollectionSpace" page
        
         And user goes to the record with identification number "CQA99_E" #not empty
         And user selects the "Cataloging" tab     
@@ -17,7 +17,7 @@ Feature: #Enter feature name here
         Then close the browser
 
 	Scenario: Dismissing the dialogue #3 
-        Given the user is in the "My CollectionSpace" page
+        Given user is in the "My CollectionSpace" page
         And user goes to the record with identification number "CQA99_NE"
 
         #Variation A
@@ -27,7 +27,7 @@ Feature: #Enter feature name here
 
         #Variation B
         And user clicks the "Add record" button
-        And the user presses the "ESC" key 
+        And user presses the "ESC" key 
         Then the "Related Cataloging Records" area should only contain "CQA99.1"
 
 
@@ -37,8 +37,8 @@ Feature: #Enter feature name here
         Then the search results should contain "CQA99.3" 
         Then the search results should contain "CQA99.2" 
 
-        And the user selects the box with result "CQA99.3" 
-        And the user selects the box with result "CQA99.2"  
+        And user selects the box with result "CQA99.3" 
+        And user selects the box with result "CQA99.2"  
         And user clicks the "Add to current record" button #needs Step def #7
 
         #Expected, Group #1
@@ -48,7 +48,7 @@ Feature: #Enter feature name here
         Then "CQA99.3" should appear in the "Procedures" area 
         Then "CQA99.2" should appear in the "Procedures" area 
 
-        And the user clicks on result with text "CQA99.3" 
+        And user clicks on result with text "CQA99.3" 
         Then an "Edit Cataloging Record" form should be displayed 
         Then the "Identification Number" field should contain "CQA99.3"
         And user clicks the "Delete this relation." button
@@ -57,7 +57,7 @@ Feature: #Enter feature name here
         Then the deletion should be confirmed in a dialogue
         Then "CQA99.3" should not appear in the "Related Cataloging Records" area 
 
-        And the user clicks on result with text "CQA99.2" 
+        And user clicks on result with text "CQA99.2" 
         Then an "Edit Cataloging Record" form should be displayed 
         Then the "Identification Number" field should contain "CQA99.2"
         And user clicks the "Delete this relation." button
@@ -68,7 +68,7 @@ Feature: #Enter feature name here
         Then close the browser
 
 	Scenario: Warning when navigating away from new cataloging records #7 
-        Given the user is in the "My CollectionSpace" page
+        Given user is in the "My CollectionSpace" page
         And user goes to the record with identification number "CQA99_NE"
         Then "CQA99_NE" should be in the "Identification Number" field
         And user selects the "Cataloging" tab 
@@ -90,7 +90,7 @@ Feature: #Enter feature name here
 
         #Variation B
         And user selects the "Current Record" tab
-        Then a leave confirmation dialogue should appear #needs StepDef
+        Then a leave confirmation dialogue should appear  
         And user clicks the "cancel" button  #might not work
         Then the "Identification Number" field should contain "CQA99.4"
 
@@ -118,7 +118,7 @@ Feature: #Enter feature name here
         Then close the browser
 
 	Scenario: Cancel changes button #9 
-        Given the user is in the "My CollectionSpace" page
+        Given user is in the "My CollectionSpace" page
         And user goes to the record with identification number "CQA99_NE"
         And user selects the "Cataloging" tab
         And user clicks the "Add record" button #needs step def
@@ -142,7 +142,7 @@ Feature: #Enter feature name here
         And user clicks the "Go to record" button
         And user clicks the "Delete" button 
         Then a delete confirmation dialogue should appear
-        And the user clicks the confirmation delete button
+        And user clicks the confirmation delete button
         Then a deletion should be confirmed in a dialogue
         Then close the browser
 
@@ -154,7 +154,7 @@ Feature: #Enter feature name here
 
         And user clicks the "+ Add Record" button
         And clicks on the Create button
-        And the user saves the record # click the save button
+        And user saves the record # click the save button
         Then the message "Please specify an Identification Number" should appear #fail
         And user enters "CQA99.11" in the "Identification Number" field
         And user saves the record
@@ -219,7 +219,7 @@ Feature: #Enter feature name here
         And user enters "African Polyester doll with blood diamonds" in the "Description" field
         And user selects "French" from the "Language" drop down box
         And user enters "moving" in the "Activity" field        
-        And user enters "Testing" in the "Concept" field                ####
+        And user enters "Testing" in the "Concept" field
         And user selects "Testing" from autocomplete options
         And user enters "2016-02-02" in the "Date" field
         And user selects "back" from the "Position" drop down box
@@ -231,7 +231,7 @@ Feature: #Enter feature name here
         And user enters "Orange County" in the "Place" field
         And user selects "Gothic script" from the "Script" drop down box
         And user enters "Water Tribe" in the "Organization" field
-        And user selects "Water Tribe" from autocomplete options #not cesar
+        And user selects "Water Tribe" from autocomplete options
         And user enters "CQA-99 Testing" in the "Event Name" field
         And user enters "CQA-99 Test" in the "Event Name Type" field
         And user enters "CQA-99 Other" in the "Other" field
@@ -244,7 +244,7 @@ Feature: #Enter feature name here
         And user enters "X-Ray" in the "Method" field
         And user enters "2016-03-03" in the "Date" field        
         And user enters "Cesar Villalobos" in the "Inscriber" field
-        And user selects "Cesar Villalobos" from autocomplete options #Cesar Villalobos
+        And user selects "Cesar Villalobos" from autocomplete options
         And user selects "back" from the "Position" drop down box                        
         And user selects "Gothic script" from the "Script" drop down box                        
         And user selects "decoration" from the "Type" drop down box                        
@@ -254,7 +254,7 @@ Feature: #Enter feature name here
         And user enters "X-Ray" in the "Method" field
         And user enters "2016-03-03" in the "Date" field        
         And user enters "Cesar Villalobos" in the "Inscriber" field
-        And user selects "Cesar Villalobos" from autocomplete options #Cesar Villalobos
+        And user selects "Cesar Villalobos" from autocomplete options
         And user selects "back" from the "Position" drop down box                                          
         And user selects "decoration" from the "Type" drop down box                    
         #Obj Production Info
@@ -583,7 +583,7 @@ Feature: #Enter feature name here
         And user enters "African Fabric doll with blood diamonds" in the "Description" field
         And user selects "German" from the "Language" drop down box
         And user enters "moving" in the "Activity" field        
-        And user enters "Testing" in the "Concept" field                ####
+        And user enters "Testing" in the "Concept" field
         And user selects "Testing" from autocomplete options
         And user enters "2017-02-02" in the "Date" field
         And user selects "back" from the "Position" drop down box
@@ -608,7 +608,7 @@ Feature: #Enter feature name here
         And user enters "X-Ray" in the "Method" field
         And user enters "2017-03-03" in the "Date" field        
         And user enters "Cesar Villalobos" in the "Inscriber" field
-        And user selects "Cesar Villalobos" from autocomplete options #Cesar Villalobos
+        And user selects "Cesar Villalobos" from autocomplete options
         And user selects "back" from the "Position" drop down box                        
         And user selects "Gothic script" from the "Script" drop down box                        
         And user selects "decoration" from the "Type" drop down box                        
@@ -618,7 +618,7 @@ Feature: #Enter feature name here
         And user enters "X-Ray" in the "Method" field
         And user enters "2017-03-03" in the "Date" field        
         And user enters "Cesar Villalobos" in the "Inscriber" field
-        And user selects "Cesar Villalobos" from autocomplete options #Cesar Villalobos
+        And user selects "Cesar Villalobos" from autocomplete options
         And user selects "back" from the "Position" drop down box                                          
         And user selects "decoration" from the "Type" drop down box                    
         #Obj Production Info
@@ -895,10 +895,10 @@ Feature: #Enter feature name here
 
 
 	Scenario: Testing links and "Go To Record" works #23 
-        Given the user is in the "My CollectionSpace" page
+        Given user is in the "My CollectionSpace" page
         And user goes to the record with identification number "CQA99_NE"
         And user selects the "Cataloging" tab
-        And the user clicks on result with text "CQA99.1"
+        And user clicks on result with text "CQA99.1"
         Then the "Identification Number" field should contain "CQA99.1"
         And user clicks the "Go to record" button
         Then the titlebar should contain "CQA99.1"
@@ -906,14 +906,14 @@ Feature: #Enter feature name here
         Then close the browser
 
 	Scenario: Deleting relation via list #25 
-        Given the user is in the "My CollectionSpace" page
+        Given user is in the "My CollectionSpace" page
         And user goes to the record with identification number "CQA99_NE"
         And user selects the "Cataloging" tab 
 
         And user clicks the "Add record" button
         And clicks on the Create button
         And user enters "CQA99.7" in the "Identification Number" field
-        And the user saves the record
+        And user saves the record
         
         And user clicks the "Delete Relation" button on the row that reads "CQA99.7" #Green "X" button. Needs step def
         Then delete confirmation dialogue should appear 
@@ -930,12 +930,12 @@ Feature: #Enter feature name here
         And user clicks the "Delete Relation" button on the row that reads "CQA99.7" #Green "X" button. Needs step def. Last time.
         Then delete confirmation dialogue should appear
         And user clicks on the delete button
-        Then "CQA99.7" should not appear in the "Procedures" area #needs StepDef #notlogged
-        Then "CQA99.7" should not appear in the "Related Cataloging Records" area #needs Stepdef #not logged
+        Then "CQA99.7" should not appear in the "Procedures" area   #notlogged
+        Then "CQA99.7" should not appear in the "Related Cataloging Records" area   #not logged
 
         And user goes to the record with identification number "CQA99.7"
         And user selects the "Cataloging" tab 
-        Then "CQA99_NE" should not appear in the "Related Cataloging Records" area  #needs Stepdef
+        Then "CQA99_NE" should not appear in the "Related Cataloging Records" area   
         And user selects the "Current Record" tab
 
         And user clicks on the delete button
@@ -945,7 +945,7 @@ Feature: #Enter feature name here
         Then close the browser
 
 	Scenario: Deleting relation via record editor #27 
-        Given the user is in the "My CollectionSpace" page
+        Given user is in the "My CollectionSpace" page
         And user goes to the record with identification number "CQA99_NE"
         Then "CQA99_NE" should be in the "Identification Number" field
 
@@ -953,8 +953,8 @@ Feature: #Enter feature name here
         And user clicks the "Add record" button
         And clicks on the Create button
         And user enters "CQA99.8" in the "Identification Number" field
-        And the user saves the record
-        And the user clicks on result with text "CQA99.8"
+        And user saves the record
+        And user clicks on result with text "CQA99.8"
         
         And user clicks the "Delete this relation" button
         Then a delete confirmation dialogue should appear
@@ -963,9 +963,9 @@ Feature: #Enter feature name here
         Then the "Related Cataloging Records" area should contain "CQA99.8"
 
         And user clicks the "Delete this relation" button
-        Then a delete confirmation dialogue should appear #needs Stepdef
+        Then a delete confirmation dialogue should appear  
         And user clicks close button # close button == close symbol?
-        Then the dialogue should be dismissed #needs stepdef
+        Then the dialogue should be dismissed  
         Then the "Related Cataloging Records" area should contain "CQA99.8"
 
         And user clicks the "Delete this relation" button
@@ -973,7 +973,7 @@ Feature: #Enter feature name here
         And user clicks on the delete button 
         Then the deletion should be confirmed in a dialogue
         # Then the record editor should no longer be displayed (below list)
-        Then "CQA99.8" should not appear in the "Procedures" area  #needs Stepdef
+        Then "CQA99.8" should not appear in the "Procedures" area   
         Then "CQA99.8" should not appear in the "Related Cataloging Records" area
 
         And user goes to the record with identification number "CQA99.8"

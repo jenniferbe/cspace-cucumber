@@ -5,7 +5,7 @@ Feature: Loan Out Tab
   # Enter feature description here
 
 	Scenario: Working Loan Out Secondary Tab #Test 1
-		Given the user is in the "My CollectionSpace" page
+		Given user is in the "My CollectionSpace" page
 	   
 	    And user goes to the record with identification number "CQA112_E" #not empty
    	    And user selects the "Loan Out" tab
@@ -18,7 +18,7 @@ Feature: Loan Out Tab
 	    Then close the browser
 
 	Scenario: Dismissing the dialogue #Test 3
-		Given the user is in the "My CollectionSpace" page
+		Given user is in the "My CollectionSpace" page
 		And user goes to the record with identification number "CQA112_NE"
  
 		#Variation A
@@ -28,7 +28,7 @@ Feature: Loan Out Tab
 
 	    #Variation B
 	    And user clicks the "Add record" button
-	    And the user presses the "ESC" key 
+	    And user presses the "ESC" key 
 	    Then the "Related Loan Out Records" area should only contain "CQA112.1"
 
 
@@ -38,8 +38,8 @@ Feature: Loan Out Tab
 	    Then the search results should contain "CQA112.3" 
 	    Then the search results should contain "CQA112.2" 
 
-	    And the user selects the box with result "CQA112.3" 
-	    And the user selects the box with result "CQA112.2"  
+	    And user selects the box with result "CQA112.3" 
+	    And user selects the box with result "CQA112.2"  
 	    And user clicks the "Add to current record" button #needs Step def #7
 
 	    #Expected, Group #1
@@ -50,29 +50,29 @@ Feature: Loan Out Tab
 	    Then "CQA112.2" should appear in the "Procedures" area 
 
 
-	    And the user clicks on result with text "CQA112.3" 
+	    And user clicks on result with text "CQA112.3" 
 	    Then an "Edit Loan Out Record" form should be displayed 
 	    Then the "Loan Out Number" field should contain "CQA112.3"
 	    And user clicks the "Delete this relation." button
 	    Then a delete confirmation dialogue should appear
-	    And the user clicks the delete button 
+	    And user clicks the delete button 
 	    Then the deletion should be confirmed in a dialogue
 	    Then "CQA112.3" should not appear in the "Related Loan Out Records" area 
 
 
-	    And the user clicks on result with text "CQA112.2" 
+	    And user clicks on result with text "CQA112.2" 
 	    Then an "Edit Loan Out Record" form should be displayed 
 	    Then the "Loan Out Number" field should contain "CQA112.2"
 	    And user clicks the "Delete this relation." button
 	    Then a delete confirmation dialogue should appear
-	    And the user clicks the delete button 
+	    And user clicks the delete button 
 	    Then the deletion should be confirmed in a dialogue
 	    Then "CQA112.2" should not appear in the "Related Loan Out Records" area 
 
 	    Then close the browser
 
 	Scenario: Warning when navigating away from new Loan Out record #Test 7 
-		Given the user is in the "My CollectionSpace" page
+		Given user is in the "My CollectionSpace" page
 		And user goes to the record with identification number "CQA112_NE"
 	    Then "CQA112_NE" should be in the "Identification Number" field
 	    And user selects the "Loan Out" tab 
@@ -96,7 +96,7 @@ Feature: Loan Out Tab
 
 		#Variation B
 			And user selects the "Current Record" tab
-		    Then a leave confirmation dialogue should appear #needs StepDef
+		    Then a leave confirmation dialogue should appear  
 		    And user clicks the "cancel" button  #might not work
 		    Then the "Loan Out Number" field should contain "CQA112.4"
 
@@ -118,14 +118,14 @@ Feature: Loan Out Tab
 		    Then "CQA112.4" should appear in the "Related Loan Out Records" area 
 
 		    And user goes to the record with identification number "CQA112.4"
-		    And the user clicks the delete button
+		    And user clicks the delete button
 		    Then a delete confirmation dialogue should appear
-		    And the user clicks the delete button 
+		    And user clicks the delete button 
 		    Then the deletion should be confirmed in a dialogue
 		    Then close the browser
 
 	Scenario: Cancel changes button #Test 9
-		Given the user is in the "My CollectionSpace" page
+		Given user is in the "My CollectionSpace" page
 		And user goes to the record with identification number "CQA112_NE"
 		And user selects the "Loan Out" tab
 	    And user clicks the "Add record" button #needs step def
@@ -150,7 +150,7 @@ Feature: Loan Out Tab
 	    And user clicks the "Go to record" button
 	    And user clicks the "Delete" button 
 	    Then a delete confirmation dialogue should appear
-	    And the user clicks the confirmation delete button
+	    And user clicks the confirmation delete button
 	    Then a deletion should be confirmed in a dialogue
 	    Then close the browser
 
@@ -166,7 +166,7 @@ Feature: Loan Out Tab
 
         And user clicks the "+ Add Record" button
         And clicks on the Create button
-        And the user saves the record # click the save button
+        And user saves the record # click the save button
         Then the message "Please specify a Loan Out Number" should appear 
 
         And user enters "CQA112.11" in the "Loan Out Number" field
@@ -269,14 +269,14 @@ Feature: Loan Out Tab
         And user clicks the "Go To Record" button        
         And user clicks the "Delete" button
         Then a delete confirmation dialogue should appear #needs Step
-        And the user clicks the delete button
+        And user clicks the delete button
         Then close the browser
 
 	Scenario: Testing links and "Go To Record" works #Test 23
-	    Given the user is in the "My CollectionSpace" page
+	    Given user is in the "My CollectionSpace" page
 	    And user goes to the record with identification number "CQA112_NE"
 	    And user selects the "Loan Out" tab 
-	    And the user clicks on result with text "CQA112.1"
+	    And user clicks on result with text "CQA112.1"
 	    Then the "Loan Out Number" field should contain "CQA112.1"
 	    And user clicks the "Go to record" button
 	    Then the titlebar should contain "CQA112.1"
@@ -284,14 +284,14 @@ Feature: Loan Out Tab
 	    Then close the browser	
 
 	Scenario: Deleting relation via list #Test 25
-		Given the user is in the "My CollectionSpace" page
+		Given user is in the "My CollectionSpace" page
 	    And user goes to the record with identification number "CQA112_NE"
 	    And user selects the "Loan Out" tab 
 
 	    And user clicks the "Add record" button #needs step def
 	    And clicks on the Create button
 	    And user enters "CQA112.7" in the "Loan Out Number" field #might not work 
-	    And the user saves the record
+	    And user saves the record
 	    
 	    And user clicks the "Delete Relation" button on the row that reads "CQA112.7" #Green "X" button. Needs step def
 	    Then delete confirmation dialogue should appear # Then the dialogue should appear asking you to delete this relation
@@ -301,7 +301,7 @@ Feature: Loan Out Tab
 
 	    And user clicks the "Delete Relation" button on the row that reads "CQA112.7" #Green "X" button. Needs step def. Again
 	    Then delete confirmation dialogue should appear
-	    And user clicks the "close" button # close button == close symbol? #Needs stepdef???
+	    And user clicks the "close" button # close button == close symbol?  ???
 	    Then the dialogue should be dismissed
 	    Then the "Related Loan Out Records" area should contain "CQA112.7"
 
@@ -309,22 +309,22 @@ Feature: Loan Out Tab
 	    And user clicks the "Delete Relation" button on the row that reads "CQA112.7" #Green "X" button. Needs step def. Last time.
 	    Then delete confirmation dialogue should appear
 	    And user clicks on the delete button
-	    Then "CQA112.7" should not appear in the "Procedures" area #needs StepDef #notlogged
-	    Then "CQA112.7" should not appear in the "Related Loan Out Records" area #needs Stepdef #not logged
+	    Then "CQA112.7" should not appear in the "Procedures" area   #notlogged
+	    Then "CQA112.7" should not appear in the "Related Loan Out Records" area   #not logged
 
     	And user goes to the record with identification number "CQA112.7"
         And user selects the "Loan Out" tab 
-	    Then "CQA112_NE" should not appear in the "Related Loan Out Records" area  #needs Stepdef
+	    Then "CQA112_NE" should not appear in the "Related Loan Out Records" area   
 	    And user selects the "Current Record" tab
 
-	    And the user clicks the delete button
+	    And user clicks the delete button
 	    Then a delete confirmation dialogue should appear
-	    And the user clicks the delete button 
+	    And user clicks the delete button 
 	    Then the deletion should be confirmed in a dialogue
 	    Then close the browser
 
 	Scenario: Deleting relation via record editor #Test 27
-		Given the user is in the "My CollectionSpace" page
+		Given user is in the "My CollectionSpace" page
 	    And user goes to the record with identification number "CQA112_NE"
 	    Then "CQA112_NE" should be in the "Identification Number" field
 
@@ -332,27 +332,27 @@ Feature: Loan Out Tab
 	    And user clicks the "Add record" button #needs step def
 	    And clicks on the Create button
 	    And user enters "CQA112.8" in the "Loan Out Number" field #might not work 
-	    And the user saves the record
-	    And the user clicks on result with text "CQA112.8"
+	    And user saves the record
+	    And user clicks on result with text "CQA112.8"
 	    
 	    And user clicks the "Delete this relation" button
-	    Then a delete confirmation dialogue should appear #needs Stepdef
+	    Then a delete confirmation dialogue should appear  
 	    And user clicks cancel button # click cancel
-	    Then the dialogue should be dismissed #needs stepdef
+	    Then the dialogue should be dismissed  
 	    Then the "Related Loan Out Records" area should contain "CQA112.8"
 
 	    And user clicks the "Delete this relation" button
-	    Then a delete confirmation dialogue should appear #needs Stepdef
+	    Then a delete confirmation dialogue should appear  
 	    And user clicks close button # close button == close symbol?
-	    Then the dialogue should be dismissed #needs stepdef
+	    Then the dialogue should be dismissed  
 	    Then the "Related Loan Out Records" area should contain "CQA112.8"
 
 	    And user clicks the "Delete this relation" button
 	    Then a delete confirmation dialogue should appear #needs Step
-	    And the user clicks the delete button 
+	    And user clicks the delete button 
 	    Then the deletion should be confirmed in a dialogue
 	    # Then the record editor should no longer be displayed (below list)
-	    Then "CQA112.8" should not appear in the "Procedures" area  #needs Stepdef
+	    Then "CQA112.8" should not appear in the "Procedures" area   
 	    Then "CQA112.8" should not appear in the "Related Loan Out Records" area
 
 	    And user goes to the record with identification number "CQA112.8"
@@ -360,9 +360,9 @@ Feature: Loan Out Tab
 	    Then the "Related Loan Out Records" area should be empty
 	    
 	    And user selects the "Current Record" tab 
-	    And the user clicks the delete button
+	    And user clicks the delete button
 	    Then a delete confirmation dialogue should appear
-	    And the user clicks the delete button 
+	    And user clicks the delete button 
 	    Then the deletion should be confirmed in a dialogue
 	    Then close the browser 
 
