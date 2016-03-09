@@ -17,14 +17,14 @@ Feature: Advanced Search ­– Exhibition Planning
         And user saves the record
 
         # Record Title
-        And clicks the "Advanced Search Button"
+        And clicks the "Advanced Search button"
         And user selects "Exhibition" from the "Record Type Select" drop down box
         And user enters "CQA74 Test" in the "Exhibition Title" field
         And clicks the "search" button
         Then the search results should contain "CQA74.1"
 
         # Record ID number
-        And clicks the "Advanced Search Button"
+        And clicks the "Advanced Search button"
         And user selects "Exhibition" from the "Record Type Select" drop down box
         And user enters "CQA74.1" in the "Exhibition Number" field
         And clicks the "search" button
@@ -38,7 +38,7 @@ Feature: Advanced Search ­– Exhibition Planning
         Then the search results should contain "CQA74.1"
 
         # Venue
-        And clicks the "Advanced Search Button"
+        And clicks the "Advanced Search button"
         And user selects "Exhibition" from the "Record Type Select" drop down box
         And user enters "CQA74 Venue" in the "Venues" field 
         And user selects "CQA74 Venue" from autocomplete options
@@ -46,21 +46,21 @@ Feature: Advanced Search ­– Exhibition Planning
         Then the search results should contain "CQA74.1"
 
         # Venue
-        And clicks the "Advanced Search Button"
+        And clicks the "Advanced Search button"
         And user selects "Exhibition" from the "Record Type Select" drop down box
         And user enters "2016-01-01" in the "Earliest Opening Date" field 
         And clicks the "search" button
         Then the search results should contain "CQA74.1"
 
         #Earliest Modified
-        And clicks the "Advanced Search Button"
+        And clicks the "Advanced Search button"
         And user selects "Exhibition" from the "Record Type Select" drop down
         And user enters today's date in the "Earliest Modified Date" field
         And clicks the "search" button
         Then the search results should contain "CQA74.1"
 
         #Earliest Modified
-        And clicks the "Advanced Search Button"
+        And clicks the "Advanced Search button"
         And user selects "Exhibition" from the "Record Type Select" drop down
         And user enters "admin@Collectionspace.org" in the "Record last modified by" date
         And clicks the "search" button
@@ -78,7 +78,7 @@ Feature: Advanced Search ­– Exhibition Planning
         And user enters "testtest" in the "Boilerplate Text" field
         And user saves the record
 
-        And user goes to the "Create New" page # Stepdef
+        And user goes to the "Create New" page 
         And user selects the "Exhibition" radio button on the Create New page
         And user enters "CQA74.3" in the "Exhibition Number" field
         And user selects "Permanent" from the "Exhibition Type" drop down box  
@@ -87,7 +87,7 @@ Feature: Advanced Search ­– Exhibition Planning
         And user enters "testtest" in the "Planning Notes" field 
         And user saves the record
 
-        And user goes to the "Create New" page # Stepdef
+        And user goes to the "Create New" page 
         And user selects the "Exhibition" radio button on the Create New page
         And user enters "CQA74.4" in the "Exhibition Number" field
         And user selects "Permanent" from the "Exhibition Type" drop down box  
@@ -97,7 +97,7 @@ Feature: Advanced Search ­– Exhibition Planning
         And user saves the record
 
 
-        And clicks the "Advanced Search Button"
+        And clicks the "Advanced Search button"
         And user selects "Exhibition" from the "Record Type Select" drop down box
         And user enters "Globex Corporation" in the "Sponsor" field 
         And user selects "Globex Corporation" from autocomplete options
@@ -108,7 +108,7 @@ Feature: Advanced Search ­– Exhibition Planning
         Then the search results should contain "CQA74.4"
 
 
-        And clicks the "Advanced Search Button"
+        And clicks the "Advanced Search button"
         And user selects "Exhibition" from the "Record Type Select" drop down box
         And user selects "all (AND)" from the "Field-based Search" drop down box
         And user selects "Permanent" from the "Exhibition Type" drop down box          

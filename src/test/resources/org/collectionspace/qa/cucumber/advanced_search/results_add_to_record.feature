@@ -9,8 +9,8 @@ Feature: Advanced Search results Add to Record
         And user selects the "Group" radio button on the Create New page
         And user enters "CQA-86 Group" in the "Title" field
         And user saves the record
-        And clicks the "Advanced Search Button"
-        And user enters "CQA86" in the in the search field #stepDef
+        And clicks the "Advanced Search button"
+        And user enters "CQA86" in the in the search field
         Then the results should contain "CQA86.1"
         Then the results should contain "CQA86.2"
         Then the results should contain "CQA86.3"
@@ -18,7 +18,7 @@ Feature: Advanced Search results Add to Record
         And clicks the "Add to Record" button
         And user selects "Group" from the "Record Type Select" drop down box
         And user enters "CQA-86 Group" in the search field
-        And user selects "CQA-86 Group" # Like, the box next to it. Stepdef
+        And user selects "CQA-86 Group"
         And clicks the "Add search results" button
         Then the message "Added 3 records to test group" should appear
         Then close the browser
@@ -26,7 +26,7 @@ Feature: Advanced Search results Add to Record
     Scenario: View procedure record to see related records
         # Using seach or advanced search search for "CQA-86 Group"
         Given user is in the "Find and Edit" page
-        And clicks the "Advanced Search Button"
+        And clicks the "Advanced Search button"
         And user enters "CQA-86 Group" in the "search" field
         And user clicks on result with text "CQA-86 Group"
         And user selects the "Cataloging" tab 
@@ -51,8 +51,8 @@ Feature: Advanced Search results Add to Record
 
     Scenario: Keyboard accessibility:
         Given user is in the "Create New" page
-        And clicks the "Advanced Search Button"
-        And user enters "CQA86" in the in the search field #stepDef
+        And clicks the "Advanced Search button"
+        And user enters "CQA86" in the in the search field
         Then the results should contain "CQA86.1"
         Then the results should contain "CQA86.2"
         Then the results should contain "CQA86.3"

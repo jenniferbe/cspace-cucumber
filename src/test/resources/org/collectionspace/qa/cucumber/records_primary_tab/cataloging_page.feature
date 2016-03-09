@@ -183,15 +183,15 @@ Scenario: Deletion of Record
     When user creates a new cataloging record and fill in at least the identification number
     And take note of the identification number of the record
     And user saves the record
-    And user clicks on the "Add" button # + a related Loan In record
+    And user clicks on the "Add" button
     And user saves the record
     And user clicks on the "Delete" button 
     Then a dialog should appear asking you to delete this record and its relationships
-    And user clicks on the "cancel button
+    And user clicks on the "cancel" button
     Then the "Dialog" should be dismissed
     Then no other changes should occur.
     And user clicks on the "delete" button
-    And cuser licks oclosebutton
+    And user clicks on the "close" button
     Then "Dialog" should be dismissed
     Then no other changes should occur.
     And user clicks on the "delete" button

@@ -96,7 +96,7 @@ Feature: Advanced Search ­ Acquisition
         And user enters "thank you" in the "Credit Line" field        
         And user saves the record
 
-        And user goes to the "Create New" page # Stepdef
+        And user goes to the "Create New" page 
         And user selects the "Acquisition" radio button on the Create New page
         And user enters "CQA71.3" in the "Acquisition Reference Number" field
         And user selects "Purchase" from the "Acquisition Method" drop down box  
@@ -104,7 +104,7 @@ Feature: Advanced Search ­ Acquisition
         And user enters "thank you" in the "Credit Line" field
         And user saves the record
 
-        And user goes to the "Create New" page # Stepdef
+        And user goes to the "Create New" page 
         And user selects the "Acquisition" radio button on the Create New page
         And user enters "CQA71.4" in the "Acquisition Reference Number" field
         And user selects "Gift" from the "Acquisition Method" drop down box  
