@@ -134,5 +134,5 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory Secondary Tab
       And user presses enter
       And user tabs to "Save" button
       And user presses enter
-    Then the record is saved successfully
+    Then the record is successfully saved
     Then close the browser 

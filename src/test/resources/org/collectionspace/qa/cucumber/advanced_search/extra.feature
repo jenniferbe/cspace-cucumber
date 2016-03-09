@@ -14,7 +14,7 @@ Feature: Advanced_Search - Extras
       And user clicks on "James Adams" from autocomplete options
       And user enters "Goodbye" in the "Object Exit" "Exit Note" field
       And user saves the record
-    Then the record is saved successfully
+    Then the record is successfully saved
     Then close the browser
 
   #Test1
