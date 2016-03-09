@@ -16,12 +16,12 @@ Feature: #Enter feature name here
         Then "CQA99.1" should appear in the "Related Cataloging Records" area
         Then close the browser
 
-	Scenario: Dismissing the dialogue #3 
+	Scenario: Dismissing the dialog #3 
         Given user is in the "My CollectionSpace" page
         And goes to the record with identification number "CQA99_NE"
 
         #Variation A
-        And clicks the "Add record" button 
+        And clicks the "Add record" button
         And clicks the "close" button 
         Then the "Related Cataloging Records" area should only contain "CQA99.1"
 
@@ -42,7 +42,7 @@ Feature: #Enter feature name here
         And clicks the "Add to current record" button  
 
         #Expected, Group #1
-        Then the dialogue should be dismissed 
+        Then the dialog should be dismissed 
         Then "CQA99.3" should appear in the "Related Cataloging Records" area
         Then "CQA99.2" should appear in the "Related Cataloging Records" area 
         Then "CQA99.3" should appear in the "Procedures" area 
@@ -52,18 +52,18 @@ Feature: #Enter feature name here
         Then an "Edit Cataloging Record" form should be displayed 
         Then the "Identification Number" field should contain "CQA99.3"
         And clicks the "Delete this relation." button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And clicks on the delete button 
-        Then the deletion should be confirmed in a dialogue
+        Then the deletion should be confirmed in a dialog
         Then "CQA99.3" should not appear in the "Related Cataloging Records" area 
 
         And clicks on result with text "CQA99.2" 
         Then an "Edit Cataloging Record" form should be displayed 
         Then the "Identification Number" field should contain "CQA99.2"
         And clicks the "Delete this relation." button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And clicks on the delete button 
-        Then the deletion should be confirmed in a dialogue
+        Then the deletion should be confirmed in a dialog
         Then "CQA99.2" should not appear in the "Related Cataloging Records" area 
         Then close the browser
 
@@ -76,7 +76,7 @@ Feature: #Enter feature name here
         And clicks the "Add record" button
         And clicks the "Create New" button
         
-        Then the dialogue should be dismissed
+        Then the dialog should be dismissed
         Then the message "Creating new record..." should be displayed
         
         Then the "Identification Number" field should be empty
@@ -84,13 +84,13 @@ Feature: #Enter feature name here
 
         #Variation A
         And selects the "Current Record" tab
-        Then a leave confirmation dialogue should appear 
+        Then a leave confirmation dialog should appear 
         And clicks the "close" button  
         Then the "Identification Number" field should contain "CQA99.4"
 
         #Variation B
         And selects the "Current Record" tab
-        Then a leave confirmation dialogue should appear  
+        Then a leave confirmation dialog should appear  
         And clicks the "cancel" button
         Then the "Identification Number" field should contain "CQA99.4"
 
@@ -112,9 +112,9 @@ Feature: #Enter feature name here
 
         And goes to the record with identification number "CQA99.4"
         And clicks on the delete button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And clicks on the delete button 
-        Then the deletion should be confirmed in a dialogue
+        Then the deletion should be confirmed in a dialog
         Then close the browser
 
 	Scenario: Cancel changes button #9 
@@ -141,9 +141,9 @@ Feature: #Enter feature name here
    
         And clicks the "Go to record" button
         And clicks the "Delete" button 
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And clicks the confirmation delete button
-        Then a deletion should be confirmed in a dialogue
+        Then a deletion should be confirmed in a dialog
         Then close the browser
 
 	Scenario: Ensure all fields are properly saved #13 
@@ -240,14 +240,14 @@ Feature: #Enter feature name here
         And enters "Il y a une baguette magique" in the "Inscription Content" field
         And enters "There's a magic wand" in the "Interpretation" field
         And enters "There is a magic wand" in the "Translation" field
-        And enters "CQA-99 Transliteration box" in the "Transliteration" field        
+        And enters "CQA-99 Transliteration box" in the "Transliteration" field
         And enters "X-Ray" in the "Method" field
-        And enters "2016-03-03" in the "Date" field        
+        And enters "2016-03-03" in the "Date" field
         And enters "Cesar Villalobos" in the "Inscriber" field
         And selects "Cesar Villalobos" from autocomplete options
-        And selects "back" from the "Position" drop down box                        
-        And selects "Gothic script" from the "Script" drop down box                        
-        And selects "decoration" from the "Type" drop down box                        
+        And selects "back" from the "Position" drop down box
+        And selects "Gothic script" from the "Script" drop down box
+        And selects "decoration" from the "Type" drop down box
         #Non-Textual Inscription
         And enters "CQA-99 Inscription Box" in the "Inscription Description" field
         And enters "CQA-99 Transliteration box" in the "Transliteration" field        
@@ -595,7 +595,7 @@ Feature: #Enter feature name here
         And enters "Orange County" in the "Place" field
         And selects "Gothic script" from the "Script" drop down box
         And enters "Water Tribe" in the "Organization" field
-        And selects "Water Tribe" from autocomplete options #not cesar
+        And selects "Water Tribe" from autocomplete options 
         And enters "CQA-99.13 Testing" in the "Event Name" field
         And enters "CQA-99.13 Test" in the "Event Name Type" field
         And enters "CQA-99.13 Other" in the "Other" field
@@ -888,9 +888,9 @@ Feature: #Enter feature name here
 
         And clicks the "Go To Record" button       
         And clicks the "Delete" button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And clicks on the delete button 
-        Then the deletion should be confirmed in a dialogue   
+        Then the deletion should be confirmed in a dialog   
         Then close the browser
 
 
@@ -916,19 +916,19 @@ Feature: #Enter feature name here
         And saves the record
         
         And clicks the "Delete Relation" button on the row that reads "CQA99.7"
-        Then delete confirmation dialogue should appear 
+        Then delete confirmation dialog should appear 
         And clicks cancel button
-        Then the dialogue should be dismissed
+        Then the dialog should be dismissed
         Then the "Related Cataloging Records" area should contain "CQA99.7"
 
         And clicks the "Delete Relation" button on the row that reads "CQA99.7". Again
-        Then delete confirmation dialogue should appear
+        Then delete confirmation dialog should appear
         And clicks the "close" button
-        Then the dialogue should be dismissed
+        Then the dialog should be dismissed
         Then the "Related Cataloging Records" area should contain "CQA99.7"
 
         And clicks the "Delete Relation" button on the row that reads "CQA99.7". Last time.
-        Then delete confirmation dialogue should appear
+        Then delete confirmation dialog should appear
         And clicks on the delete button
         Then "CQA99.7" should not appear in the "Procedures" area
         Then "CQA99.7" should not appear in the "Related Cataloging Records" area
@@ -939,9 +939,9 @@ Feature: #Enter feature name here
         And selects the "Current Record" tab
 
         And clicks on the delete button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And clicks on the delete button 
-        Then the deletion should be confirmed in a dialogue
+        Then the deletion should be confirmed in a dialog
         Then close the browser
 
 	Scenario: Deleting relation via record editor #27 
@@ -957,21 +957,21 @@ Feature: #Enter feature name here
         And clicks on result with text "CQA99.8"
         
         And clicks the "Delete this relation" button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And clicks cancel button
-        Then the dialogue should be dismissed
+        Then the dialog should be dismissed
         Then the "Related Cataloging Records" area should contain "CQA99.8"
 
         And clicks the "Delete this relation" button
-        Then a delete confirmation dialogue should appear  
+        Then a delete confirmation dialog should appear  
         And clicks close button
-        Then the dialogue should be dismissed  
+        Then the dialog should be dismissed  
         Then the "Related Cataloging Records" area should contain "CQA99.8"
 
         And clicks the "Delete this relation" button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And clicks on the delete button 
-        Then the deletion should be confirmed in a dialogue
+        Then the deletion should be confirmed in a dialog
         # Then the record editor should no longer be displayed (below list)
         Then "CQA99.8" should not appear in the "Procedures" area   
         Then "CQA99.8" should not appear in the "Related Cataloging Records" area
@@ -982,9 +982,9 @@ Feature: #Enter feature name here
         
         And selects the "Current Record" tab 
         And clicks on the delete button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And clicks on the delete button 
-        Then the deletion should be confirmed in a dialogue
+        Then the deletion should be confirmed in a dialog
         Then close the browser 
 
 

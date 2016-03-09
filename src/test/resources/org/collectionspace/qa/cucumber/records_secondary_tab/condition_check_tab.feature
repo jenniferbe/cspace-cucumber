@@ -16,7 +16,7 @@ Feature: Condition Check Tab Test Plan
 
         Then close the browser
 
-	Scenario: Dismissing the dialogue #3
+	Scenario: Dismissing the dialog #3
         Given user is in the "My CollectionSpace" page
         And goes to the record with identification number "CQA103_NE"
 
@@ -42,7 +42,7 @@ Feature: Condition Check Tab Test Plan
         And clicks the "Add to current record" button
 
         #Expected, Group #1
-        Then the dialogue should be dismissed 
+        Then the dialog should be dismissed 
         Then "CQA103.3" should appear in the "Related Condition Check Records" area
         Then "CQA103.2" should appear in the "Related Condition Check Records" area 
         Then "CQA103.3" should appear in the "Procedures" area 
@@ -53,18 +53,18 @@ Feature: Condition Check Tab Test Plan
         Then an "Edit Condition Check Record" form should be displayed 
         Then the "Condition Check/Assessment Reference Number" field should contain "CQA103.3"
         And clicks the "Delete this relation." button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And clicks the delete button 
-        Then the deletion should be confirmed in a dialogue
+        Then the deletion should be confirmed in a dialog
         Then "CQA103.3" should not appear in the "Related Condition Check Records" area 
 
         And clicks on result with text "CQA103.2" 
         Then an "Edit Condition Check Record" form should be displayed 
         Then the "Condition Check/Assessment Reference Number" field should contain "CQA103.2"
         And clicks the "Delete this relation." button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And clicks the delete button 
-        Then the deletion should be confirmed in a dialogue
+        Then the deletion should be confirmed in a dialog
         Then "CQA103.2" should not appear in the "Related Condition Check Records" area 
         Then close the browser
 
@@ -77,7 +77,7 @@ Feature: Condition Check Tab Test Plan
         And clicks the "Add record" button
         And clicks the "Create New" button
         
-        Then the dialogue should be dismissed
+        Then the dialog should be dismissed
         Then the message "Creating new record..." should be displayed
         
         Then the "Condition Check/Assessment Reference Number" field should be empty
@@ -85,13 +85,13 @@ Feature: Condition Check Tab Test Plan
 
         #Variation A
         And selects the "Current Record" tab
-        Then a leave confirmation dialogue should appear 
+        Then a leave confirmation dialog should appear 
         And clicks the "close" button  
         Then the "Condition Check/Assessment Reference Number" field should contain "CQA103.4"
 
         #Variation B
         And selects the "Current Record" tab
-        Then a leave confirmation dialogue should appear  
+        Then a leave confirmation dialog should appear  
         And clicks the "cancel" button
         Then the "Condition Check/Assessment Reference Number" field should contain "CQA103.4"
 
@@ -113,9 +113,9 @@ Feature: Condition Check Tab Test Plan
 
         And goes to the record with identification number "CQA103.4"
         And clicks the delete button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And clicks the delete button 
-        Then the deletion should be confirmed in a dialogue
+        Then the deletion should be confirmed in a dialog
         Then close the browser
 
 	Scenario: Cancel changes button #9
@@ -142,9 +142,9 @@ Feature: Condition Check Tab Test Plan
    
         And clicks the "Go to record" button
         And clicks the "Delete" button 
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And clicks the confirmation delete button
-        Then a deletion should be confirmed in a dialogue
+        Then a deletion should be confirmed in a dialog
         Then close the browser
 
 	Scenario: Check Condition Check/Assessment Reference Number and successful save and fields saved on edited Condition Check record #13
@@ -330,9 +330,9 @@ Feature: Condition Check Tab Test Plan
         Then the "Salvage Priority Code" field should contain "102"
         And clicks the "Go To Record" button        
         And clicks the "Delete" button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And clicks the delete button 
-        Then the deletion should be confirmed in a dialogue        
+        Then the deletion should be confirmed in a dialog        
         Then close the browser
 
 
@@ -358,20 +358,20 @@ Feature: Condition Check Tab Test Plan
         And saves the record
         
         And clicks the "Delete Relation" button on the row that reads "CQA103.7"
-        Then delete confirmation dialogue should appear
+        Then delete confirmation dialog should appear
         And clicks cancel button
-        Then the dialogue should be dismissed
+        Then the dialog should be dismissed
         Then the "Related Condition Check Records" area should contain "CQA103.7"
 
         And clicks the "Delete Relation" button on the row that reads "CQA103.7". Again
-        Then delete confirmation dialogue should appear
+        Then delete confirmation dialog should appear
         And clicks the "close" button
-        Then the dialogue should be dismissed
+        Then the dialog should be dismissed
         Then the "Related Condition Check Records" area should contain "CQA103.7"
 
 
         And clicks the "Delete Relation" button on the row that reads "CQA103.7". Last time.
-        Then delete confirmation dialogue should appear
+        Then delete confirmation dialog should appear
         And clicks on the delete button
         Then "CQA103.7" should not appear in the "Procedures" area
         Then "CQA103.7" should not appear in the "Related Condition Check Records" area
@@ -382,9 +382,9 @@ Feature: Condition Check Tab Test Plan
         And selects the "Current Record" tab
 
         And clicks the delete button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And clicks the delete button 
-        Then the deletion should be confirmed in a dialogue
+        Then the deletion should be confirmed in a dialog
         Then close the browser
 
 	Scenario: Deleting relation via record editor #27
@@ -400,21 +400,21 @@ Feature: Condition Check Tab Test Plan
         And clicks on result with text "CQA103.8"
         
         And clicks the "Delete this relation" button
-        Then a delete confirmation dialogue should appear  
+        Then a delete confirmation dialog should appear  
         And clicks cancel button
-        Then the dialogue should be dismissed  
+        Then the dialog should be dismissed  
         Then the "Related Condition Check Records" area should contain "CQA103.8"
 
         And clicks the "Delete this relation" button
-        Then a delete confirmation dialogue should appear  
+        Then a delete confirmation dialog should appear  
         And clicks close button
-        Then the dialogue should be dismissed  
+        Then the dialog should be dismissed  
         Then the "Related Condition Check Records" area should contain "CQA103.8"
 
         And clicks the "Delete this relation" button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And clicks the delete button 
-        Then the deletion should be confirmed in a dialogue
+        Then the deletion should be confirmed in a dialog
         # Then the record editor should no longer be displayed (below list)
         Then "CQA103.8" should not appear in the "Procedures" area   
         Then "CQA103.8" should not appear in the "Related Condition Check Records" area
@@ -425,9 +425,9 @@ Feature: Condition Check Tab Test Plan
         
         And selects the "Current Record" tab 
         And clicks the delete button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And clicks the delete button 
-        Then the deletion should be confirmed in a dialogue
+        Then the deletion should be confirmed in a dialog
         Then close the browser 
 
 

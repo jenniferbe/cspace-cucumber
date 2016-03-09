@@ -13,7 +13,7 @@ Feature: General Administration
     Then close the browser
 
   #Test2
-
+  
   #Likely a crippling lack of stepdefs
 
   Scenario: Administration is unavailable for user account without administrative privileges
@@ -42,7 +42,7 @@ Feature: General Administration
 
   #Test 21
   Scenario: Navigation to Administration tab possible with keys
-    Given user is on the "My CollectionSpace" page
+    Given user is on "My CollectionSpace" page
       And tabs to "Administration" tab
       And presses enter
     Then the titlebar should contain "Administration"

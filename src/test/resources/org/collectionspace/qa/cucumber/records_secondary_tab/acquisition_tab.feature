@@ -17,7 +17,7 @@ Feature: Acquisition Tab
 
         Then close the browser
 
-    Scenario: Dismissing the dialogue #3 
+    Scenario: Dismissing the dialog #3 
         Given user is in the "My CollectionSpace" page
         And goes to the record with identification number "CQA93_NE"
 
@@ -42,7 +42,7 @@ Feature: Acquisition Tab
         And clicks the "Add to current record" button  
 
         #Expected, Group #1
-        Then the dialogue should be dismissed 
+        Then the dialog should be dismissed 
         Then "CQA93.3" should appear in the "Related Acquisition Records" area
         Then "CQA93.2" should appear in the "Related Acquisition Records" area 
         Then "CQA93.3" should appear in the "Procedures" area 
@@ -53,9 +53,9 @@ Feature: Acquisition Tab
         Then an "Edit Acquisition Record" form should be displayed 
         Then the "Acquisition Reference Number" field should contain "CQA93.3"
         And clicks the "Delete this relation." button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And clicks on the delete button 
-        Then the deletion should be confirmed in a dialogue
+        Then the deletion should be confirmed in a dialog
         Then "CQA93.3" should not appear in the "Related Acquisition Records" area 
 
 
@@ -63,9 +63,9 @@ Feature: Acquisition Tab
         Then an "Edit Acquisition Record" form should be displayed 
         Then the "Acquisition Reference Number" field should contain "CQA93.2"
         And clicks the "Delete this relation." button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And clicks on the delete button 
-        Then the deletion should be confirmed in a dialogue
+        Then the deletion should be confirmed in a dialog
         Then "CQA93.2" should not appear in the "Related Acquisition Records" area 
         Then close the browser
 
@@ -78,7 +78,7 @@ Feature: Acquisition Tab
         And clicks the "Add record" button
         And clicks the "Create New" button
         
-        Then the dialogue should be dismissed
+        Then the dialog should be dismissed
         Then the message "Creating new record..." should be displayed
         
         Then the "Acquisition Reference Number" field should be empty
@@ -87,14 +87,14 @@ Feature: Acquisition Tab
 
         #Variation A
         And selects the "Current Record" tab
-        Then a leave confirmation dialogue should appear 
+        Then a leave confirmation dialog should appear 
         And clicks the5e "close" button  
         Then the "Acquisition Reference Number" field should contain "CQA93.4"
 
 
         #Variation B
         And selects the "Current Record" tab
-        Then a leave confirmation dialogue should appear  
+        Then a leave confirmation dialog should appear  
         And clicks the "cancel" button
         Then the "Acquisition Reference Number" field should contain "CQA93.4"
 
@@ -117,9 +117,9 @@ Feature: Acquisition Tab
 
         And goes to the record with identification number "CQA93.4"
         And clicks on the delete button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And clicks on the delete button 
-        Then the deletion should be confirmed in a dialogue
+        Then the deletion should be confirmed in a dialog
         Then close the browser
 
     Scenario: Cancel changes button #9 
@@ -147,9 +147,9 @@ Feature: Acquisition Tab
    
         And clicks the "Go to record" button
         And clicks the "Delete" button 
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And clicks the confirmation delete button
-        Then a deletion should be confirmed in a dialogue
+        Then a deletion should be confirmed in a dialog
         Then close the browser
 
     Scenario: Check Acquisition Reference Number and successful save and All fields saved on edited Acquisition record 
@@ -275,7 +275,7 @@ Feature: Acquisition Tab
         Then the "Field collection event name" field should contain "CQA93 Digging Event"
         And clicks the "Go To Record" button
         And clicks the "Delete" button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And clicks on the delete button        
         Then close the browser
         
@@ -302,20 +302,20 @@ Feature: Acquisition Tab
         And saves the record
         
         And clicks the "Delete Relation" button on the row that reads "CQA93.7"
-        Then delete confirmation dialogue should appear
+        Then delete confirmation dialog should appear
         And clicks the "cancel" button
-        Then the dialogue should be dismissed 
+        Then the dialog should be dismissed 
         Then the "Related Acquisition Records" area should contain "CQA93.7"
 
         And clicks the "Delete Relation" button on the row that reads "CQA93.7". Again
-        Then delete confirmation dialogue should appear
+        Then delete confirmation dialog should appear
         And clicks the "close" button
-        Then the dialogue should be dismissed
+        Then the dialog should be dismissed
         Then the "Related Acquisition Records" area should contain "CQA93.7"
 
 
         And clicks the "Delete Relation" button on the row that reads "CQA93.7". Last time.
-        Then delete confirmation dialogue should appear
+        Then delete confirmation dialog should appear
         And clicks the "delete" button
         Then "CQA93.7" should not appear in the "Procedures" sidebar
         Then "CQA93.7" should not appear in the "Related Acquisition Records" area
@@ -326,9 +326,9 @@ Feature: Acquisition Tab
         And selects the "Current Record" tab
 
         And clicks on the delete button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And clicks on the delete button 
-        Then the deletion should be confirmed in a dialogue
+        Then the deletion should be confirmed in a dialog
         Then close the browser
 
     Scenario: Deleting Relation via record editor #27 
@@ -344,21 +344,21 @@ Feature: Acquisition Tab
         And clicks on result with text "CQA93.8"
         
         And clicks the "Delete this relation" button
-        Then a delete confirmation dialogue should appear  
+        Then a delete confirmation dialog should appear  
         And clicks the "cancel" button
-        Then the dialogue should be dismissed  
+        Then the dialog should be dismissed  
         Then the "Related Acquisition Records" area should contain "CQA93.8"
 
         And clicks the "Delete this relation" button
-        Then a delete confirmation dialogue should appear  
+        Then a delete confirmation dialog should appear  
         And clicks the "close" button
-        Then the dialogue should be dismissed  
+        Then the dialog should be dismissed  
         Then the "Related Acquisition Records" area should contain "CQA93.8"
 
         And clicks the "Delete this relation" button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And clicks on the delete button 
-        Then the deletion should be confirmed in a dialogue
+        Then the deletion should be confirmed in a dialog
         Then "CQA93.8" should not appear in the "Procedures" area   
         Then "CQA93.8" should not appear in the "Related Acquisition Records" area
 
@@ -368,8 +368,8 @@ Feature: Acquisition Tab
         
         And selects the "Current Record" tab 
         And clicks on the delete button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And clicks on the delete button 
-        Then the deletion should be confirmed in a dialogue
+        Then the deletion should be confirmed in a dialog
         Then close the browser 
 

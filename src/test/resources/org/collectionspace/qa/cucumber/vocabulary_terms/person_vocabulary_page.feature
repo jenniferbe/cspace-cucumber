@@ -88,7 +88,7 @@ Feature: Person Vocabulary Data Entry
     Given user is on a "Person" record
       And enters "Saved Change" in the "Person" "Display name" field
       And clicks on "Find and Edit" menu item
-    Then a confirmation dialogue should appear
+    Then a confirmation dialog should appear
       And clicks on the Save button
     Then the record is successfully saved
     Then user should be redirected to the page navigated to
@@ -99,7 +99,7 @@ Feature: Person Vocabulary Data Entry
     Given user is on a "Person" record
       And enters "Unsaved Change" in the "Person" "Display name" field
       And clicks on "Find and Edit" menu item
-    Then a confirmation dialogue should appear
+    Then a confirmation dialog should appear
       And clicks on the Don't Save button
     Then the record is not successfully saved
     Then user should be redirected to the page navigated to
@@ -110,9 +110,9 @@ Feature: Person Vocabulary Data Entry
     Given user is on a "Person" record
       And enters "Tentative Change" in the "Person" "Display name" field
       And clicks on "Find and Edit" menu item
-    Then a confirmation dialogue should appear
+    Then a confirmation dialog should appear
       And clicks on the Cancel button
-    Then the dialogue is dismissed
+    Then the dialog is dismissed
     Then close the browser
 
 #Test 21, not sure on which stepdefs are appropriate

@@ -136,7 +136,7 @@ Feature: Term List Management
 
   #Test 8
   Scenario: Keyboard accessibility
-    Given user is on the "Administration" page
+    Given user is on the "Administration page"
       And tabs to "Term List Management" tab
       And presses enter
       And tabs to the "Administration" "Name" field

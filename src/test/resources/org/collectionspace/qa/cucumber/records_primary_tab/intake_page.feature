@@ -84,19 +84,19 @@ Feature: Intake Page Testing
     When user clicks on the Save button
     Then the record is successfully saved
     When user clicks on the delete button
-    Then delete confirmation dialogue should appear
+    Then delete confirmation dialog should appear
     When user clicks cancel button
-    Then the delete confirmation dialogue should disappear
+    Then the delete confirmation dialog should disappear
     # And #nothing else should happen
     When user clicks on the delete button
-    Then delete confirmation dialogue should appear
+    Then delete confirmation dialog should appear
     When user clicks close button
-    Then the delete confirmation dialogue should disappear
+    Then the delete confirmation dialog should disappear
     # And #nothing else should happen
     When user clicks on the delete button
-    Then delete confirmation dialogue should appear
+    Then delete confirmation dialog should appear
     When user clicks the confirmation delete button
-    Then deletion should be confirmed in a dialogue
+    Then deletion should be confirmed in a dialog
     # And #you should be redirected to Find and Edit page
     When selects "Intake" from the top nav search record type select field
     And enters "delete123" in the top nav search field
@@ -117,22 +117,22 @@ Feature: Intake Page Testing
     And clicks on the Save button
     And selects the "Current Record" tab
     And clicks on the delete button
-    Then deletion should be confirmed in a dialogue
-    And the deletion dialogue should contain "and its relationships" #New step def
+    Then deletion should be confirmed in a dialog
+    And the deletion dialog should contain "and its relationships" #New step def
     When user clicks cancel button
-    Then the delete confirmation dialogue should disappear
+    Then the delete confirmation dialog should disappear
     # And #nothing else should happen
     When user clicks on the delete button
-    Then delete confirmation dialogue should appear
-    And the deletion dialogue should contain "and its relationships"
+    Then delete confirmation dialog should appear
+    And the deletion dialog should contain "and its relationships"
     When user clicks close button
-    Then the delete confirmation dialogue should disappear
+    Then the delete confirmation dialog should disappear
     # And #nothing else should happen
     When user clicks on the delete button
-    Then delete confirmation dialogue should appear
-    And the deletion dialogue should contain "and its relationships"
+    Then delete confirmation dialog should appear
+    And the deletion dialog should contain "and its relationships"
     When user clicks the confirmation delete button
-    Then deletion should be confirmed in a dialogue
+    Then deletion should be confirmed in a dialog
     # And #you should be redirected to Find and Edit page
     When selects "Intake" from the top nav search record type select field
     And enters "deleteloan1" in the top nav search field

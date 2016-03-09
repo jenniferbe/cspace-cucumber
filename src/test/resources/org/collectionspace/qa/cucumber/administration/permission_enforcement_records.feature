@@ -272,7 +272,7 @@ Feature: Permission Enforcement
     Then the vocabulary autocomplete should not contain the option to add a new term
       And clicks on something from autocomplete options
       And saves the record
-    Then the record is saved successfully
+    Then the record is successfully saved
     Then the "Used Terms" list should contain the vocabulary term
     Then close the browser
 
@@ -287,14 +287,14 @@ Feature: Permission Enforcement
     Then the "Used Terms" list should contain the vocabulary term
       And deletes the vocabulary term
       And saves the record
-    Then the record is succesfully saved
+    Then the record is successfully saved
     Then the "Used Terms" list should not contain the vocabulary term
       And enters "Jam" in the deleted vocab field
     Then the vocabulary autocomplete should not contain "Vocabulary A" terms
     Then the vocabulary autocomplete should contain the option to add a new term
       And clicks on something from autocomplete options
       And saves the record
-    Then the record is saved successfully
+    Then the record is successfully saved
     Then the "Used Terms" list should contain the vocabulary term
     Then close the browser
 
@@ -309,12 +309,12 @@ Feature: Permission Enforcement
     Then the "Used Terms" list should contain the vocabulary term
       And deletes the vocabulary term
       And saves the record
-    Then the record is succesfully saved
+    Then the record is successfully saved
     Then the "Used Terms" list should not contain the vocabulary term
       And enters "Jam" in the deleted vocab field
     Then the vocabulary autocomplete should contain the option to add a new term
       And clicks on something from autocomplete options
       And saves the record
-    Then the record is saved successfully
+    Then the record is successfully saved
     Then the "Used Terms" list should contain the vocabulary term
     Then close the browser  

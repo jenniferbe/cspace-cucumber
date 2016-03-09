@@ -55,7 +55,7 @@ Feature: Permission Enforcement
       And fills out required fields
       And assigns an existing Role
       And clicks on the Save button
-    Then then user is successfully saved
+    Then user is successfully saved
     Then a confirmation message should appear
       And clicks the recently created sser
       And assigns a different role

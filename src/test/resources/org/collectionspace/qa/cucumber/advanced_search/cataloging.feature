@@ -303,23 +303,23 @@ Feature: Advanced Search ­Cataloging
 
         And goes to the record with identification number "CQA72.1"
         And clicks the delete button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And clicks the delete button 
-        Then the deletion should be confirmed in a dialogue
+        Then the deletion should be confirmed in a dialog
         And goes to the record with identification number "CQA72.2"
         And clicks the delete button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And clicks the delete button 
-        Then the deletion should be confirmed in a dialogue
+        Then the deletion should be confirmed in a dialog
         And goes to the record with identification number "CQA72.3"
         And clicks the delete button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And clicks the delete button 
-        Then the deletion should be confirmed in a dialogue
+        Then the deletion should be confirmed in a dialog
         And goes to the record with identification number "CQA72.3"
         And clicks the delete button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And clicks the delete button 
-        Then the deletion should be confirmed in a dialogue        
+        Then the deletion should be confirmed in a dialog        
         Then close the browser
 

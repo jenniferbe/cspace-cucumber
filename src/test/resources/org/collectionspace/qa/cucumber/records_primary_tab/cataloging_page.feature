@@ -100,7 +100,7 @@ Scenario: Removing values from all fields
 Scenario: Warning on attempting to leave edited page with 4 variations: Variation I: click Save button; II: click Don't Save button; III: click the Cancel button; IV: click the close symbol in NE corner
     When user enters "2" in the "Cataloging" "Date Period" field
     And clicks "Create New"
-    Then delete confirmation dialogue should appear # using this step def since dialog css same for delete and leave 
+    Then delete confirmation dialog should appear # using this step def since dialog css same for delete and leave 
       And clicks the confirmation save button
     Then the record is successfully saved   
     Given user is on the "Create New" page 
@@ -108,7 +108,7 @@ Scenario: Warning on attempting to leave edited page with 4 variations: Variatio
       And clicks Select number pattern
       And selects "Intake" from dropdown in "Object Identification Information" row
       And clicks "Create New"
-    Then delete confirmation dialogue should appear 
+    Then delete confirmation dialog should appear 
       And clicks the confirmation don't save button
     Then the message "Find and Edit" should be displayed
     Given user is on the "Create New" page 
@@ -116,7 +116,7 @@ Scenario: Warning on attempting to leave edited page with 4 variations: Variatio
       And clicks Select number pattern
       And selects "Intake" from dropdown in "Object Identification Information" row
       And clicks "Create New"
-    Then delete confirmation dialogue should appear 
+    Then delete confirmation dialog should appear 
       And clicks cancel button 
     Then the message "Find and Edit" should be displayed
     Given user is on the "Create New" page 
@@ -124,7 +124,7 @@ Scenario: Warning on attempting to leave edited page with 4 variations: Variatio
       And clicks Select number pattern
       And selects "Intake" from dropdown in "Object Identification Information" row
       And clicks "Create New"
-    Then delete confirmation dialogue should appear 
+    Then delete confirmation dialog should appear 
       And clicks close button 
    Then the message "Find and Edit" should be displayed
 
@@ -165,14 +165,14 @@ Scenario: Deletion of Record
     Then disables top and bottom "delete" buttons
       And saves the record
       And clicks on the delete button
-    Then delete confirmation dialogue should appear
+    Then delete confirmation dialog should appear
       And clicks cancel button
     # This checks that dialog is dismissed & no other changes occurred:
     Then the record is successfully saved
       And clicks on the delete button
-    Then delete confirmation dialogue should appear
+    Then delete confirmation dialog should appear
       And clicks the confirmation delete button
-    Then deletion should be confirmed in a dialogue
+    Then deletion should be confirmed in a dialog
       And clicks close button
     Then the record is successfully saved
       And clicks on the delete button
