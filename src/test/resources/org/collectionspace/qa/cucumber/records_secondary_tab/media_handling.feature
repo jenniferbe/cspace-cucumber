@@ -6,38 +6,38 @@ Feature: Media Handling Page Tab
 
 	Scenario:  Working Media Handling Secondary tab #1
 		Given user is in the "My CollectionSpace" page
-		And user goes to the record with identification number "CQA114_NE"
+		And goes to the record with identification number "CQA114_NE"
 
-	    And user selects the "Media Handling" tab
+	    And selects the "Media Handling" tab
 	    Then "CQA114.1" should appear in the "Related Media Handling Records" area
 
-	    And user goes to the record with identification number "CQA114_E"
+	    And goes to the record with identification number "CQA114_E"
 	    Then the "Related Media Handling Records" area should be empty
 	    Then close the browser
 
 	Scenario:  Dismissing the dialogue #2
   		Given user is in the "My CollectionSpace" page
-		And user goes to the record with identification number "CQA114_NE"
+		And goes to the record with identification number "CQA114_NE"
 
 		#Variation A
-		And user clicks the "Add record" button 
-	    And user clicks the "close" button 
+		And clicks the "Add record" button 
+	    And clicks the "close" button 
 	    Then the "Related Media Handling Records" area should only contain "CQA114.1"
 
 	    #Variation B
-	    And user clicks the "Add record" button
-	    And user presses the "ESC" key 
+	    And clicks the "Add record" button
+	    And presses the "ESC" key 
 	    Then the "Related Media Handling Records" area should only contain "CQA114.1"
 
 	Scenario: Searching and adding multiple Media Handling records #3
-		And user clicks the "Add record" button 
-	    And user clicks the "search" button   maybe? 
+		And clicks the "Add record" button 
+	    And clicks the "search" button   maybe? 
 	    Then the search results should contain "CQA114.3" 
 	    Then the search results should contain "CQA114.2" 
 
-	    And user selects the box with result "CQA114.3" 
-	    And user selects the box with result "CQA114.2"  
-	    And user clicks the "Add to current record" button  
+	    And selects the box with result "CQA114.3" 
+	    And selects the box with result "CQA114.2"  
+	    And clicks the "Add to current record" button  
 
 	    #Expected, Group #1
 	    Then the dialogue should be dismissed 
@@ -46,21 +46,21 @@ Feature: Media Handling Page Tab
 	    Then "CQA114.3" should appear in the "Procedures" area   
 	    Then "CQA114.2" should appear in the "Procedures" area   
 
-	    And user clicks on result with text "CQA114.3" 
+	    And clicks on result with text "CQA114.3" 
 	    Then an "Edit Media Record" form should be displayed 
 	    Then the "Identification Number" field should contain "CQA114.3"
-	    And user clicks the "Delete this relation." button
+	    And clicks the "Delete this relation." button
 	    Then a delete confirmation dialogue should appear
-	    And user clicks the delete button 
+	    And clicks the delete button 
 	    Then the deletion should be confirmed in a dialogue
 	    Then "CQA114.3" should not appear in the "Related Media Handling Records" area
 
-	    And user clicks on result with text "CQA114.2" 
+	    And clicks on result with text "CQA114.2" 
 	    Then an "Edit Media Record" form should be displayed 
 	    Then the "Identification Number" field should contain "CQA114.2"
-	    And user clicks the "Delete this relation." button
+	    And clicks the "Delete this relation." button
 	    Then a delete confirmation dialogue should appear
-	    And user clicks the delete button 
+	    And clicks the delete button 
 	    Then the deletion should be confirmed in a dialogue
 	    Then "CQA114.2" should not appear in the "Related Media Handling Records" area 
 
@@ -70,81 +70,81 @@ Feature: Media Handling Page Tab
 
 	Scenario: Warning when navigating away from new Media Handling record #4
   		Given user is in the "My CollectionSpace" page
-		And user goes to the record with identification number "CQA114_NE"
+		And goes to the record with identification number "CQA114_NE"
 	    Then "CQA114_NE" should be in the "Identification Number" field
-	    And user selects the "Media Handling" tab
+	    And selects the "Media Handling" tab
 
-	    And user clicks the "Add record" button 
-		And user clicks the "Create New" button
+	    And clicks the "Add record" button 
+		And clicks the "Create New" button
 
 		Then the dialogue should be dismissed
 		Then the message "Creating new record..." should be displayed 
-		And user enters "CQA114.4" in the "Media Handling Number" field 
+		And enters "CQA114.4" in the "Media Handling Number" field 
 
 
 	    #Variation A
-    	And user selects the "Current Record" tab
+    	And selects the "Current Record" tab
 	    Then a leave confirmation dialogue should appear 
-	    And user clicks the "close" button  
+	    And clicks the "close" button  
 	    Then the "Identification Number" field should contain "CQA114.4"
 
 		#Variation B
-		And user selects the "Current Record" tab
+		And selects the "Current Record" tab
 	    Then a leave confirmation dialogue should appear  
-	    And user clicks the "cancel" button
+	    And clicks the "cancel" button
 	    Then the "Identification Number" field should contain "CQA114.4"
 
 	    ## Variation D
-	    And user selects the "Current Record" tab
-	    And user clicks the "Don't save" button 
-	   	And user selects the "Media Handling" tab 
+	    And selects the "Current Record" tab
+	    And clicks the "Don't save" button 
+	   	And selects the "Media Handling" tab 
 	    Then "CQA114.4" should not appear in the "Related Media Handling Records" area
 
 
 		#Variation C
-		And user clicks the "Add record" button
+		And clicks the "Add record" button
     	And clicks on the Create button
-    	And user enters "CQA114.4" in the "Identification Number" field 
-		And user selects the "Current Record" tab
-		And user clicks the "save" button
+    	And enters "CQA114.4" in the "Identification Number" field 
+		And selects the "Current Record" tab
+		And clicks the "save" button
 
-	    And user selects the "Media Handling" tab 
+	    And selects the "Media Handling" tab 
 	    Then "CQA114.4" should appear in the "Related Media Handling Records" area 
 
-	    And user goes to the record with identification number "CQA114.4"
-	    And user clicks the delete button
+	    And goes to the record with identification number "CQA114.4"
+	    And clicks the delete button
 	    Then a delete confirmation dialogue should appear
-	    And user clicks the delete button 
+	    And clicks the delete button 
 	    Then the deletion should be confirmed in a dialogue
 	    Then close the browser
 
 	Scenario: Cancel changes button #5
 		Given user is in the "My CollectionSpace" page
-		And user goes to the record with identification number "CQA114_NE"
-		And user selects the "Media Handling" tab
-	    And user clicks the "Add record" button 
-	    And user clicks the "Create new" button
+		And goes to the record with identification number "CQA114_NE"
+		And selects the "Media Handling" tab
+	    And clicks the "Add record" button 
+	    And clicks the "Create new" button
 
 	    # Variation A
 	    Then the message "Creating new record..." should be displayed
 	   	Then the "cancel changes" button at the bottom of the page should not be clickable
 	    Then the "cancel changes" button at the top of the page should not be clickable
 	    
-	    And user enters "CQA114.5" in the "Identification Number" field
-	    And user clicks the "cancel changes" button 
+	    And enters "CQA114.5" in the "Identification Number" field
+	    And clicks the "cancel changes" button 
     	Then the "Identification Number" field should be empty
 
 	    # Variation B 
-	    And user enters "CQA114.5" in the "Identification Number" field
-	    And user clicks the "save" button 
+	    And enters "CQA114.5" in the "Identification Number" field
+	    And clicks the "save" button 
 	    Then the "cancel changes" button at the top of the page should not be clickable 
     	Then the "cancel changes" button at the bottom of the page should not be clickable 
    
 
-	    And user clicks the "Go to record" button
-	    And user clicks the "Delete" button 
+	    And clicks the "Go to record" button
+	    And clicks the "Delete" button 
 	    Then a delete confirmation dialogue should appear
-	    And user clicks the confirmation delete button
+	    And clicks the confirmation delete button
 	    Then a deletion should be confirmed in a dialogue
 	    Then close the browser
 
@@ -152,46 +152,46 @@ Feature: Media Handling Page Tab
 	Scenario: Check Identification Number and successful save, and edited Media Handling record 
         # Scenario: Test 11--> Successful save
         Given user is on the "My CollectionSpace" page 
-        And user goes to the record with identification number "CQA114_NE" 
-        And user selects the "Media Handling" tab 
+        And goes to the record with identification number "CQA114_NE" 
+        And selects the "Media Handling" tab 
 
-        And user clicks the "+ Add Record" button
+        And clicks the "+ Add Record" button
         And clicks on the Create button
-        And user saves the record
+        And saves the record
         Then the message "Please specify an Identification Number" should appear
-        And user enters "CQA114.11" in the "Identification Number" field
-        And user saves the record
+        And enters "CQA114.11" in the "Identification Number" field
+        And saves the record
         Then the message "Relation successfully created." should appear  
         
-        And user enters "CQA114 Form Filling" in the "Title" field
-        And user selects "base" from the "Part" drop down box
-        And user selects "area" from the "Dimension" drop down box
-        And user selects "Ruler" from the "Method" drop down box
-        And user selects "carats" from the "Dimension Unit" drop down box
-        And user enters "Cesar Villalobos" in the "Measured By" field
-        And user selects "Cesar Villalobos" from autocomplete options
-        And user enters "114.2" in the "Value" field
-        And user enters "114.3" in the "Value Quantifier" field
-        And user enters "2016-01-01" in the "Date" field
-        And user enters "CQA114 Summary box" in the "Summary" field
-        And user enters "Cesar Villalobos" in the "Contributor" field
-        And user selects "Cesar Villalobos" from autocomplete options
-        And user enters "Cesar Villalobos" in the "Creator" field
-        And user selects "Cesar Villalobos" from autocomplete options
-        And user enters "Cesar Villalobos" in the "Publisher" field
-        And user selects "Cesar Villalobos" from autocomplete options
-        And user selects "Dataset" from the "Types" drop down box
-        And user enters "CQA114 Coverage Box" in the "Coverage" field
-        And user enters "2016-02-02" in the "Dates" field
-        And user enters "CQA114 Source Box" in the "Source" field
-        And user enters "CQA114.1" in the "Relations" field
-        And user enters "None" in the "Subjects" field     
-        And user selects "French" from the "Languages" drop down box
-        And user enters "No copyright here" in the "Copyright statement" field
-        And user enters "Cesar Villalobos" in the "Rights holder" field
-        And user selects "Cesar Villalobos" from autocomplete options
-        And user enters "CQA114 description box" in the "Description" field   
-        And user saves the record
+        And enters "CQA114 Form Filling" in the "Title" field
+        And selects "base" from the "Part" drop down box
+        And selects "area" from the "Dimension" drop down box
+        And selects "Ruler" from the "Method" drop down box
+        And selects "carats" from the "Dimension Unit" drop down box
+        And enters "Cesar Villalobos" in the "Measured By" field
+        And selects "Cesar Villalobos" from autocomplete options
+        And enters "114.2" in the "Value" field
+        And enters "114.3" in the "Value Quantifier" field
+        And enters "2016-01-01" in the "Date" field
+        And enters "CQA114 Summary box" in the "Summary" field
+        And enters "Cesar Villalobos" in the "Contributor" field
+        And selects "Cesar Villalobos" from autocomplete options
+        And enters "Cesar Villalobos" in the "Creator" field
+        And selects "Cesar Villalobos" from autocomplete options
+        And enters "Cesar Villalobos" in the "Publisher" field
+        And selects "Cesar Villalobos" from autocomplete options
+        And selects "Dataset" from the "Types" drop down box
+        And enters "CQA114 Coverage Box" in the "Coverage" field
+        And enters "2016-02-02" in the "Dates" field
+        And enters "CQA114 Source Box" in the "Source" field
+        And enters "CQA114.1" in the "Relations" field
+        And enters "None" in the "Subjects" field     
+        And selects "French" from the "Languages" drop down box
+        And enters "No copyright here" in the "Copyright statement" field
+        And enters "Cesar Villalobos" in the "Rights holder" field
+        And selects "Cesar Villalobos" from autocomplete options
+        And enters "CQA114 description box" in the "Description" field   
+        And saves the record
         Then the message "Media Handling successfully saved" should appear
 
         ## test 11 thens
@@ -221,35 +221,35 @@ Feature: Media Handling Page Tab
         Then the "Languages" field should contain "French"
 
         #### Test 13
-        And user enters "CQA114 Form Filling Part 1" in the "Title" 
-        And user selects "frame" from the "Part" drop down box
-        And user selects "base" from the "Dimension" drop down box
-        And user selects "Odometers" from the "Method" drop down box
-        And user selects "feet" from the "Dimension Unit" drop down box
-        And user enters "Jennifer Be" in the "Measured By" field
-        And user selects "Jennifer Be" from autocomplete options
-        And user enters "114.2.2" in the "Value" field
-        And user enters "114.3.3" in the "Value Quantifier" field
-        And user enters "2017-01-01" in the "Date" field
-        And user enters "CQA114 Summary box Pt 2" in the "Summary" field
-        And user enters "Jennifer Be" in the "Contributor" field
-        And user selects "Jennifer Be" from autocomplete options
-        And user enters "Jennifer Be" in the "Creator" field
-        And user selects "Jennifer Be" from autocomplete options
-        And user enters "Jennifer Be" in the "Publisher" field
-        And user selects "Jennifer Be" from autocomplete options
-        And user selects "Dataset" from the "Types" drop down box
-        And user enters "CQA114 Coverage Box edited" in the "Coverage" field
-        And user enters "2017-02-02" in the "Dates" field
-        And user enters "CQA114 Source Box edited" in the "Source" field
-        And user enters "CQA114.1" in the "Relations" field
-        And user enters "None" in the "Subjects" field     
-        And user selects "German" from the "Languages" drop down box
-        And user enters "All copyrights deserved" in the "Copyright statement" field
-        And user enters "Jennifer Be" in the "Rights holder" field
-        And user selects "Jennifer Be" from autocomplete options
-        And user enters "CQA114 description box pt 2" in the "Description" field   
-        And user saves the record
+        And enters "CQA114 Form Filling Part 1" in the "Title" 
+        And selects "frame" from the "Part" drop down box
+        And selects "base" from the "Dimension" drop down box
+        And selects "Odometers" from the "Method" drop down box
+        And selects "feet" from the "Dimension Unit" drop down box
+        And enters "Jennifer Be" in the "Measured By" field
+        And selects "Jennifer Be" from autocomplete options
+        And enters "114.2.2" in the "Value" field
+        And enters "114.3.3" in the "Value Quantifier" field
+        And enters "2017-01-01" in the "Date" field
+        And enters "CQA114 Summary box Pt 2" in the "Summary" field
+        And enters "Jennifer Be" in the "Contributor" field
+        And selects "Jennifer Be" from autocomplete options
+        And enters "Jennifer Be" in the "Creator" field
+        And selects "Jennifer Be" from autocomplete options
+        And enters "Jennifer Be" in the "Publisher" field
+        And selects "Jennifer Be" from autocomplete options
+        And selects "Dataset" from the "Types" drop down box
+        And enters "CQA114 Coverage Box edited" in the "Coverage" field
+        And enters "2017-02-02" in the "Dates" field
+        And enters "CQA114 Source Box edited" in the "Source" field
+        And enters "CQA114.1" in the "Relations" field
+        And enters "None" in the "Subjects" field     
+        And selects "German" from the "Languages" drop down box
+        And enters "All copyrights deserved" in the "Copyright statement" field
+        And enters "Jennifer Be" in the "Rights holder" field
+        And selects "Jennifer Be" from autocomplete options
+        And enters "CQA114 description box pt 2" in the "Description" field   
+        And saves the record
         Then the message "Media Handling successfully saved" should appear
 
         ## test 13 thens
@@ -276,103 +276,103 @@ Feature: Media Handling Page Tab
         Then the "Rights holder" field should contain "Jennifer Be"
         Then the "Description" field should contain "CQA114 description box pt 2"
         Then the "Languages" field should contain "German"
-        And user clicks the "Go To Record" button	    
-	    And user clicks the "Delete" button
+        And clicks the "Go To Record" button	    
+	    And clicks the "Delete" button
 	    Then a delete confirmation dialogue should appear
-	    And user clicks the delete button         
+	    And clicks the delete button         
         Then close the browser
 
 	Scenario: Testing links and "Go To Record" works #10
 		Given user is in the "My CollectionSpace" page
-	    And user goes to the record with identification number "CQA114_NE"
-	    And user selects the "Media Handling" tab 
-	    And user clicks on result with text "CQA114.1"
+	    And goes to the record with identification number "CQA114_NE"
+	    And selects the "Media Handling" tab 
+	    And clicks on result with text "CQA114.1"
 	    Then the "Identification Number" field should contain "CQA114.1"
-	    And user clicks the "Go to record" button
+	    And clicks the "Go to record" button
 	    Then the titlebar should contain "CQA114.1"
 	    Then the "Identification Number" field should contain "CQA114.1"
 	    Then close the browser	
 
 	Scenario: Deleting relation via list #11
 		Given user is in the "My CollectionSpace" page
-	    And user goes to the record with identification number "CQA114_NE"
-	    And user selects the "Media Handling" tab 
+	    And goes to the record with identification number "CQA114_NE"
+	    And selects the "Media Handling" tab 
 
-	    And user clicks the "Add record" button 
+	    And clicks the "Add record" button 
 	    And clicks on the Create button
-	    And user enters "CQA114.7" in the "Identification Number" field 
-	    And user saves the record
+	    And enters "CQA114.7" in the "Identification Number" field 
+	    And saves the record
 	    
-	    And user clicks the "Delete Relation" button on the row that reads "CQA114.7"
+	    And clicks the "Delete Relation" button on the row that reads "CQA114.7"
 	    Then delete confirmation dialogue should appear
-	    And user clicks cancel button
+	    And clicks cancel button
 	    Then the dialogue should be dismissed 
 	    Then the "Related Media Handling Records" area should contain "CQA114.7"
 
-	    And user clicks the "Delete Relation" button on the row that reads "CQA114.7". Again
+	    And clicks the "Delete Relation" button on the row that reads "CQA114.7". Again
 	    Then delete confirmation dialogue should appear
-	    And user clicks the "close" button
+	    And clicks the "close" button
 	    Then the dialogue should be dismissed
 	    Then the "Related Media Handling Records" area should contain "CQA114.7"
 
 
-	    And user clicks the "Delete Relation" button on the row that reads "CQA114.7". Last time.
+	    And clicks the "Delete Relation" button on the row that reads "CQA114.7". Last time.
 	    Then delete confirmation dialogue should appear
-	    And user clicks on the delete button
+	    And clicks on the delete button
 	    Then "CQA114.7" should not appear in the "Procedures" area
 	    Then "CQA114.7" should not appear in the "Related Media Handling Records" area
 
-    	And user goes to the record with identification number "CQA114.7"
-        And user selects the "Media Handling" tab 
+    	And goes to the record with identification number "CQA114.7"
+        And selects the "Media Handling" tab 
 	    Then "CQA114_NE" should not appear in the "Related Media Handling Records" area   
-	    And user selects the "Current Record" tab
+	    And selects the "Current Record" tab
 
-	    And user clicks the delete button
+	    And clicks the delete button
 	    Then a delete confirmation dialogue should appear
-	    And user clicks the delete button 
+	    And clicks the delete button 
 	    Then the deletion should be confirmed in a dialogue
 	    Then close the browser
 
 	Scenario: Deleting relation via record editor #Test 27
 		Given user is in the "My CollectionSpace" page
-	    And user goes to the record with identification number "CQA114_NE"
+	    And goes to the record with identification number "CQA114_NE"
 	    Then "CQA114_NE" should be in the "Identification Number" field
 
-	    And user selects the "Media Handling" tab
-	    And user clicks the "Add record" button 
+	    And selects the "Media Handling" tab
+	    And clicks the "Add record" button 
 	    And clicks on the Create button
-	    And user enters "CQA114.8" in the "Identification Number" field
-	    And user saves the record
-	    And user clicks on result with text "CQA114.8"
+	    And enters "CQA114.8" in the "Identification Number" field
+	    And saves the record
+	    And clicks on result with text "CQA114.8"
 	    
-	    And user clicks the "Delete this relation" button
+	    And clicks the "Delete this relation" button
 	    Then a delete confirmation dialogue should appear
-	    And user clicks cancel button 
+	    And clicks cancel button 
 	    Then the dialogue should be dismissed
 	    Then the "Related Media Handling Records" area should contain "CQA114.8"
 
-	    And user clicks the "Delete this relation" button
+	    And clicks the "Delete this relation" button
 	    Then a delete confirmation dialogue should appear 
-	    And user clicks close button
+	    And clicks close button
 	    Then the dialogue should be dismissed 
 	    Then the "Related Media Handling Records" area should contain "CQA114.8"
 
-	    And user clicks the "Delete this relation" button
+	    And clicks the "Delete this relation" button
 	    Then a delete confirmation dialogue should appear
-	    And user clicks the delete button 
+	    And clicks the delete button 
 	    Then the deletion should be confirmed in a dialogue
 
 	    Then "CQA114.8" should not appear in the "Procedures" area   
 	    Then "CQA114.8" should not appear in the "Related Media Handling Records" area
 
-	    And user goes to the record with identification number "CQA114.8"
-	    And user selects the "Media Handling" tab
+	    And goes to the record with identification number "CQA114.8"
+	    And selects the "Media Handling" tab
 	    Then the "Related Media Handling Records" area should be empty
 	    
-	    And user selects the "Current Record" tab 
-	    And user clicks the delete button
+	    And selects the "Current Record" tab 
+	    And clicks the delete button
 	    Then a delete confirmation dialogue should appear
-	    And user clicks the delete button 
+	    And clicks the delete button 
 	    Then the deletion should be confirmed in a dialogue
 	    Then close the browser 
 

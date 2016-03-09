@@ -20,11 +20,11 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory
     Given user is on the "Create New" page
       And selects the "Location/Movement/Inventory" radio button on the Create New page
       And clicks on the Create button
-      And user clicks Select number pattern
-      And user selects "Inventory" from dropdown in "Reference Number" row
+      And clicks Select number pattern
+      And selects "Inventory" from dropdown in "Reference Number" row
     Then enables top and bottom "cancel" buttons
-      And user clicks Select number pattern
-      And user selects "Inventory" from dropdown in "Reference Number" row
+      And clicks Select number pattern
+      And selects "Inventory" from dropdown in "Reference Number" row
     # cannot detect incrementing numbers (next line)
     Then the number pattern incremented by one should be in the "Location/Movement/Inventory" "Reference Number" field
     Then enables top and bottom "cancel" buttons
@@ -34,8 +34,8 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory
     Given user is on the "Create New" page
       And selects the "Location/Movement/Inventory" radio button on the Create New page
       And clicks on the Create button
-      And user adds "New York Theater" to the "Location/Movement/Inventory" "Current Location" vocab field
-      And user adds "2016-01-01" to the "Location/Movement/Inventory" "Location Date" field
+      And adds "New York Theater" to the "Location/Movement/Inventory" "Current Location" vocab field
+      And adds "2016-01-01" to the "Location/Movement/Inventory" "Location Date" field
     Then the titlebar should contain "New York Theater"
     Then the titlebar should contain "2016-01-01"
     Then close the browser
@@ -44,8 +44,8 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory
     Given user is on the "Create New" page
       And selects the "Location/Movement/Inventory" radio button on the Create New page
       And clicks on the Create button
-      And user adds "New York Theater" to the "Location/Movement/Inventory" "Current Location" vocab field
-      And user saves the record
+      And adds "New York Theater" to the "Location/Movement/Inventory" "Current Location" vocab field
+      And saves the record
     Then the record is successfully saved
     Then "GMT-0800 (PST)" should be displayed in the message bar
     Then disables top and bottom "cancel" buttons
@@ -56,10 +56,10 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory
     Given user is on the "Create New" page
       And selects the "Location/Movement/Inventory" radio button on the Create New page
       And clicks on the Create button
-      And user adds "New York Theater" to the "Location/Movement/Inventory" "Current Location" vocab field
-      And user adds "2016-01-01" to the "Location/Movement/Inventory" "Location Date" field
+      And adds "New York Theater" to the "Location/Movement/Inventory" "Current Location" vocab field
+      And adds "2016-01-01" to the "Location/Movement/Inventory" "Location Date" field
       # cannot enable a scroll to bottom of page
-      And user clicks on the "Contact" field
+      And clicks on the "Contact" field
     # not sure if titlebar term works for docking bar
     Then the titlebar should contain "New York Theater"
     Then the titlebar should contain "2016-01-01"
@@ -94,11 +94,11 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory
     Given user is on the "Create New" page
       And selects the "Location/Movement/Inventory" radio button on the Create New page
       And clicks on the Create button
-      And user enters "1.2.3.4.5" in the "Location/Movement/Inventory" "Reference Number" field
-      And user adds "New York Theater" to the "Location/Movement/Inventory" "Current Location" vocab field
-      And user saves the record
+      And enters "1.2.3.4.5" in the "Location/Movement/Inventory" "Reference Number" field
+      And adds "New York Theater" to the "Location/Movement/Inventory" "Current Location" vocab field
+      And saves the record
       Then the message "Please note that "Hard Save" will make the record read-only." should be displayed
-      And user saves the record
+      And saves the record
     Then the record is successfully saved
     Then disables top and bottom "cancel" buttons
     Then enables top and bottom "delete" buttons
@@ -106,32 +106,32 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory
     Then "New York Theater" should appear in the Terms Used sidebar
     Then "organization" should appear in the Terms Used sidebar
     Then "currentLocation" should appear in the Terms Used sidebar
-      And user clicks on "New York Theater" in the Terms Used sidebar
+      And clicks on "New York Theater" in the Terms Used sidebar
     Then the titlebar should contain "New York Theater"
     # Used By steps do not exist
     Then "1.2.3.4.5" should appear in the Used By sidebar
-      And user clicks on "1.2.3.4.5" in the Used By sidebar
+      And clicks on "1.2.3.4.5" in the Used By sidebar
     Then the titlebar should contain "1.2.3.4.5"
-      And user clicks on the delete button
-      And user clicks the confirmation delete button
-      And user clicks delete confirmation OK button
+      And clicks on the delete button
+      And clicks the confirmation delete button
+      And clicks delete confirmation OK button
     Then close the browser
 
   Scenario: Hard Save
     Given user is on the "Create New" page
       And selects the "Location/Movement/Inventory" radio button on the Create New page
       And clicks on the Create button
-      And user enters "1.2.3.4.5" in the "Location/Movement/Inventory" "Reference Number" field
-      And user adds "New York Theater" to the "Location/Movement/Inventory" "Current Location" vocab field
-      And user saves the record
+      And enters "1.2.3.4.5" in the "Location/Movement/Inventory" "Reference Number" field
+      And adds "New York Theater" to the "Location/Movement/Inventory" "Current Location" vocab field
+      And saves the record
     Then the message "Please note that "Hard Save" will make the record read-only." should be displayed
-      And user saves the record
+      And saves the record
     Then the record is successfully saved
-      And user adds "2016-01-01" to the "Location/Movement/Inventory" "Location Date" field
-      And user saves the record
+      And adds "2016-01-01" to the "Location/Movement/Inventory" "Location Date" field
+      And saves the record
     Then the message "Please note that "Hard Save" will make the record read-only." should be displayed
       # hard save not implemented
-      And user hard saves the record
+      And hard saves the record
     Then the record is read-only
     Given user is on the "My CollectionSpace" page
       And enters "New York Theater" in the top nav search field
@@ -139,7 +139,7 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory
       And clicks on the top nav search submit button
     # locked not implemented
     Then the search results should contain a locked "1.2.3.4.5" 
-      And user clicks on result with text "1.2.3.4.5"
+      And clicks on result with text "1.2.3.4.5"
     # not implemented read-only
     Then the record should be read-only
 
@@ -147,31 +147,31 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory
     Given user is on the "Create New" page
       And selects the "Location/Movement/Inventory" radio button on the Create New page
       And clicks on the Create button
-      And user enters "123123123" in the "Location/Movement/Inventory" "Reference Number" field
-      And user adds "Metro Pictures Corporation" to the "Location/Movement/Inventory" "Current Location" vocab field
-      And user saves the record
+      And enters "123123123" in the "Location/Movement/Inventory" "Reference Number" field
+      And adds "Metro Pictures Corporation" to the "Location/Movement/Inventory" "Current Location" vocab field
+      And saves the record
     Then the message "Please note that "Hard Save" will make the record read-only." should be displayed
-      And user saves the record
+      And saves the record
     Then the record is successfully saved
-      And user selects the "Acquisitions" tab
+      And selects the "Acquisitions" tab
       # not stepdefs
-      And user selects "Add record" button
-      And user selects "create" button
-      And user enters "456.456.456" in the "Acquisition" "Acquisition Reference Number" field
-      And user saves the record
+      And selects "Add record" button
+      And selects "create" button
+      And enters "456.456.456" in the "Acquisition" "Acquisition Reference Number" field
+      And saves the record
     Then the record is successfully saved
-      And user selects the "Cataloging" tab
+      And selects the "Cataloging" tab
       # not stepdefs
-      And user selects "Add record" button
-      And user selects "create" button
-      And user enters "987.987.987" in the "Cataloging" "Identification Number" field
-      And user saves the record
+      And selects "Add record" button
+      And selects "create" button
+      And enters "987.987.987" in the "Cataloging" "Identification Number" field
+      And saves the record
     Then the record is successfully saved
-      And user selects the "Current Record" tab
-      And user saves the record
+      And selects the "Current Record" tab
+      And saves the record
     Then the message "Please note that "Hard Save" will make the record read-only." should be displayed
       # hard save not implemented
-      And user hard saves the record
+      And hard saves the record
     Then the record is read-only
     Given user is on the "My CollectionSpace" page
       And enters "Metro Pictures Corporation" in the top nav search field
@@ -179,18 +179,18 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory
       And clicks on the top nav search submit button
     # locked not implemented
     Then the search results should contain a locked "123123123" 
-      And user clicks on result with text "123123123"
+      And clicks on result with text "123123123"
     # not implemented read-only
     Then the record should be read-only
-    And user selects the "Acquisitions" tab
-    And user clicks on result with text "456.456.456"
-    And user enters "3242342" in the "Acquisition" "Acquisition Reference Number" field
-      And user saves the record
+    And selects the "Acquisitions" tab
+    And clicks on result with text "456.456.456"
+    And enters "3242342" in the "Acquisition" "Acquisition Reference Number" field
+      And saves the record
     Then the record is successfully saved
-      And user selects the "Cataloging" tab
-      And user clicks on result with text "987.987.987"
-      And user enters "3rrew42342" in the "Cataloging" "Identification Number" field
-      And user saves the record
+      And selects the "Cataloging" tab
+      And clicks on result with text "987.987.987"
+      And enters "3rrew42342" in the "Cataloging" "Identification Number" field
+      And saves the record
     Then the record is successfully saved
 
 ## The remainder of this feature file, below, needs to be converted from narrative (broad declarative steps)

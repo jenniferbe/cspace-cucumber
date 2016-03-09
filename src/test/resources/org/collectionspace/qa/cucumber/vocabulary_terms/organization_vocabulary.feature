@@ -254,8 +254,8 @@ Feature: Organization Vocabulary Page
 #         Variation III: click the Cancel button
 #         Variation IV: click the close symbol in NE corner
 #     Expected:
-#         on (I): Organization should be saved and user redirected to the page you were navigating to. Check whether saved by navigating back to the record.
-#         on (II): Organization should not be saved and user should be redirected to he page you were navigating to. Check whether saved by navigating back to the authority.
+#         on (I): Organization should be saved And redirected to the page you were navigating to. Check whether saved by navigating back to the record.
+#         on (II): Organization should not be saved And should be redirected to he page you were navigating to. Check whether saved by navigating back to the authority.
 #         on (III) and (IV): dialog should be dismissed without any changes (no saves or redirects).
 #
 # Keyboard Navigation:

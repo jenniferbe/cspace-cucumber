@@ -11,8 +11,8 @@ Feature: #Enter feature name here
     Then the list in the "Person" row should contain "Local Persons, ULAN Persons"
       And clicks on the Create button
     Then the titlebar should contain "Local Person"
-      And user enters "Rob Miller_y" in the "Person" "Display Name" field
-      And user saves the record
+      And enters "Rob Miller_y" in the "Person" "Display Name" field
+      And saves the record
     Then the record is successfully saved
     Then "Rob Miller_y" should be in the "Person" "Display Name" field
     Then the titlebar should contain "Local Person"

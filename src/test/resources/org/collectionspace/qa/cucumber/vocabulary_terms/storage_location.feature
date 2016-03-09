@@ -253,8 +253,8 @@ Feature: Storage Location Authority Page
 #         Variation III: click the Cancel button
 #         Variation IV: click the close symbol in NE corner
 #     Expected:
-#         on (I): Storage Location should be saved and user redirected to the page navigated to. Check whether saved by navigating back to the record.
-#         on (II): Storage Location should not be saved and user should be redirected to the page navigated to. Check whether saved by navigating back to the authority.
+#         on (I): Storage Location should be saved And redirected to the page navigated to. Check whether saved by navigating back to the record.
+#         on (II): Storage Location should not be saved And should be redirected to the page navigated to. Check whether saved by navigating back to the authority.
 #         on (III) and (IV): dialog should be dismissed without any changes (no saves or redirects).
 #
 # Keyboard Navigation:
