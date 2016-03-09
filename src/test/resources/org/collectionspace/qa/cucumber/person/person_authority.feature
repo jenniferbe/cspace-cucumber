@@ -115,17 +115,17 @@ Feature: Person Vocabulary Data Entry
         And user saves the record		
       Then the record is successfully saved		
         And user clicks on the delete button		
-      Then delete confirmation dialogue should appear		
+      Then delete confirmation dialog should appear		
         And user clicks cancel button		
       Then "Delete Me" should be in the "Person" "Display Name" field		
         And user clicks on the delete button		
-      Then delete confirmation dialogue should appear		
+      Then delete confirmation dialog should appear		
         And user clicks close button		
       Then "Delete Me" should be in the "Person" "Display Name" field		
         And user clicks on the delete button		
-      Then delete confirmation dialogue should appear		
+      Then delete confirmation dialog should appear		
         And user clicks the confirmation delete button		
-      Then deletion should be confirmed in a dialogue		
+      Then deletion should be confirmed in a dialog		
         And user clicks delete confirmation OK button		
         And user enters "Delete Me" in the top nav search field		
         And clicks on the top nav search submit button		

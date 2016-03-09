@@ -13,7 +13,7 @@ Feature: General Administration
     Then close the browser
 
   #Test2
-
+  
   #Likely a crippling lack of stepdefs
 
   Scenario: Administration is unavailable for user account without administrative privileges

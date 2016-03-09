@@ -15,7 +15,7 @@ Feature: Location/Movement/Inventory Control Tab
         Then the "Related Location/Movement/Inventory" are should be empty
         Then close the browser
 
-    Scenario: Dismissing the dialogue 
+    Scenario: Dismissing the dialog 
         Given user is in the "My CollectionSpace" page
         And user goes to the record with identification number "CQA113_NE"
 
@@ -41,7 +41,7 @@ Feature: Location/Movement/Inventory Control Tab
         And user clicks the "Add to current record" button
 
         #Expected, Group #1
-        Then the dialogue should be dismissed 
+        Then the dialog should be dismissed 
         Then "CQA113.3" should appear in the "Related Location/Movement/Inventory Records" area   
         Then "CQA113.2" should appear in the "Related Location/Movement/Inventory Records" area   
         Then "CQA113.3" should appear in the "Procedures" area   
@@ -53,9 +53,9 @@ Feature: Location/Movement/Inventory Control Tab
         Then the "Reference Number" field should contain "CQA113.3"
 
         And user clicks the "Delete this relation." button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And user clicks the delete button 
-        Then the deletion should be confirmed in a dialogue
+        Then the deletion should be confirmed in a dialog
         Then "CQA113.3" should not appear in the "Related Location/Movement/Inventory Records" area 
 
 
@@ -64,9 +64,9 @@ Feature: Location/Movement/Inventory Control Tab
         Then the "Reference Number" field should contain "CQA113.2"
 
         And user clicks the "Delete this relation." button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And user clicks the delete button 
-        Then the deletion should be confirmed in a dialogue
+        Then the deletion should be confirmed in a dialog
         Then "CQA113.3" should not appear in the "Related Location/Movement/Inventory Records" area 
 
         Then close the browser
@@ -88,15 +88,15 @@ Feature: Location/Movement/Inventory Control Tab
 
         #Variation A
         And user selects the "Current Record" tab
-        Then a leave confirmation dialogue should appear  
+        Then a leave confirmation dialog should appear  
         And user clicks the "close" button
         Then the "Reference Number" field should contain "CQA113.4" 
 
         #Variation B
         And user selects the "Current Record" tab
-        Then a leave confirmation dialogue should appear  
+        Then a leave confirmation dialog should appear  
         And user clicks the "cancel" button
-        Then the dialogue should be dismissed
+        Then the dialog should be dismissed
 
         #Variation D
         And user selects the "Current Record" tab
@@ -112,7 +112,7 @@ Feature: Location/Movement/Inventory Control Tab
         And user selects "CQA113.2" from the drop down options 
 
         And user selects the "Current Record" tab
-        Then a leave confirmation dialogue should appear
+        Then a leave confirmation dialog should appear
         And user clicks the save button
 
         And user selects the "Location/Movement/Inventory" tab 
@@ -121,9 +121,9 @@ Feature: Location/Movement/Inventory Control Tab
         ## Deleting records so we can reuse
         And user goes to the record with identification number "CQA113.4"
         And user clicks the delete button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And user clicks the delete button 
-        Then the deletion should be confirmed in a dialogue
+        Then the deletion should be confirmed in a dialog
         Then close the browser
 
 
@@ -160,9 +160,9 @@ Feature: Location/Movement/Inventory Control Tab
    
         And user clicks the "Go to record" button
         And user clicks the "Delete" button 
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And user clicks the confirmation delete button
-        Then a deletion should be confirmed in a dialogue
+        Then a deletion should be confirmed in a dialog
         Then close the browser
 
 
@@ -269,7 +269,7 @@ Feature: Location/Movement/Inventory Control Tab
         Then the "Note" field should contain "CQA113 Third Note Box Test 13" 
         And user clicks the "Go To Record" button       
         And user clicks the "Delete" button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And user clicks the delete button         
 
         Then close the browser
@@ -302,19 +302,19 @@ Feature: Location/Movement/Inventory Control Tab
 
         And user saves the record
         And user clicks the "Delete Relation" button on the row that reads "CQA113.7"
-        Then delete confirmation dialogue should appear
+        Then delete confirmation dialog should appear
         And user clicks cancel button
-        Then the dialogue should be dismissed 
+        Then the dialog should be dismissed 
         Then no changes should occur 
 
         And user clicks the "Delete Relation" button on the row that reads "CQA113.7". Again
-        Then delete confirmation dialogue should appear
+        Then delete confirmation dialog should appear
         And user clicks the "close" button
-        Then the dialogue should be dismissed
+        Then the dialog should be dismissed
         Then no changes should occur 
 
         And user clicks the "Delete Relation" button on the row that reads "CQA113.7". Last time.
-        Then delete confirmation dialogue should appear
+        Then delete confirmation dialog should appear
         And user clicks on the delete button
         Then "CQA113.7" should not appear in the "Procedures" area
         Then "CQA113.7" should not appear in the "Related Location/Movement/Inventory Records" area
@@ -325,9 +325,9 @@ Feature: Location/Movement/Inventory Control Tab
         And user selects the "Current Record" tab
 
         And user clicks the delete button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And user clicks the delete button 
-        Then the deletion should be confirmed in a dialogue
+        Then the deletion should be confirmed in a dialog
         Then close the browser
 
 
@@ -347,21 +347,21 @@ Feature: Location/Movement/Inventory Control Tab
         And user clicks the result with text "CQA113.8"
         
         And user clicks the "Delete this relation." button
-        Then a delete confirmation dialogue should appear  
+        Then a delete confirmation dialog should appear  
         And user clicks cancel button
-        Then the dialogue should be dismissed  
+        Then the dialog should be dismissed  
         Then the "Related Location/Movement/Inventory Records" area should contain "CQA113.8"
 
         And user clicks the "Delete this relation" button
-        Then a delete confirmation dialogue should appear  
+        Then a delete confirmation dialog should appear  
         And user clicks close button
-        Then the dialogue should be dismissed  
+        Then the dialog should be dismissed  
         Then the "Related Location/Movement/Inventory Records" area should contain "CQA113.8"
 
         And user clicks the "Delete this relation" button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And user clicks the delete button 
-        Then the deletion should be confirmed in a dialogue
+        Then the deletion should be confirmed in a dialog
        
         Then "CQA113.8" should not appear in the "Procedures" area   
         Then "CQA113.8" should not appear in the "Related Location/Movement/Inventory Records" area
@@ -374,9 +374,9 @@ Feature: Location/Movement/Inventory Control Tab
         
         And user selects the "Current Record" tab 
         And user clicks the delete button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And user clicks the delete button 
-        Then the deletion should be confirmed in a dialogue
+        Then the deletion should be confirmed in a dialog
         Then close the browser  
 
 

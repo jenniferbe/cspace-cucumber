@@ -476,7 +476,7 @@ Feature: Search Results and Pagination
   # not a step def
         And clicks "add record"
   # not a step def
-        And in the resulting dialogue, user searches for "known item" 
+        And in the resulting dialog, user searches for "known item" 
       Then the search results should contain "12341"
       Then the search results should contain "12342"
       Then the search results should contain "12343"

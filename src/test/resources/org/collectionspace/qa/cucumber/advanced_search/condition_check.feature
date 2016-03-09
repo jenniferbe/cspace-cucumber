@@ -143,24 +143,24 @@ Feature: Advanced Search ­ Condition Check
 
         And user goes to the record with identification number "CQA73.1"
         And user clicks the delete button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And user clicks the delete button 
-        Then the deletion should be confirmed in a dialogue
+        Then the deletion should be confirmed in a dialog
         And user goes to the record with identification number "CQA73.2"
         And user clicks the delete button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And user clicks the delete button 
-        Then the deletion should be confirmed in a dialogue
+        Then the deletion should be confirmed in a dialog
         And user goes to the record with identification number "CQA73.3"
         And user clicks the delete button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And user clicks the delete button 
-        Then the deletion should be confirmed in a dialogue
+        Then the deletion should be confirmed in a dialog
         And user goes to the record with identification number "CQA73.3"
         And user clicks the delete button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And user clicks the delete button 
-        Then the deletion should be confirmed in a dialogue        
+        Then the deletion should be confirmed in a dialog        
         Then close the browser
 
 

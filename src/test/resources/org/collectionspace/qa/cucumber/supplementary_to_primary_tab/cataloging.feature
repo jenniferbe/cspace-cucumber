@@ -69,7 +69,7 @@ Feature: Supplementary Manual QA - Cataloging
     Then close the browser
 
   Scenario: Structured Date
-    # not sure how to address pop-up dialogue features/checks
+    # not sure how to address pop-up dialog features/checks
     Given user is on the "Create New" page
       And clicks on the Create button
       And user enters "1234" in the "Cataloging" "Identification Number" field

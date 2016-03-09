@@ -43,9 +43,9 @@ Feature: Advanced Search results Add to Record
 
         And user selects the "Current Record" tab 
         And user clicks the delete button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And user clicks the delete button 
-        Then the deletion should be confirmed in a dialogue
+        Then the deletion should be confirmed in a dialog
         Then close the browser 
 
 

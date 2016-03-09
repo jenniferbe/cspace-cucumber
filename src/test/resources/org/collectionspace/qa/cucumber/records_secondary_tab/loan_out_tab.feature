@@ -17,7 +17,7 @@ Feature: Loan Out Tab
 
 	    Then close the browser
 
-	Scenario: Dismissing the dialogue #Test 3
+	Scenario: Dismissing the dialog #Test 3
 		Given user is in the "My CollectionSpace" page
 		And user goes to the record with identification number "CQA112_NE"
  
@@ -43,7 +43,7 @@ Feature: Loan Out Tab
 	    And user clicks the "Add to current record" button  
 
 	    #Expected, Group #1
-	    Then the dialogue should be dismissed 
+	    Then the dialog should be dismissed 
 	    Then "CQA112.3" should appear in the "Related Loan Out Records" area
 	    Then "CQA112.2" should appear in the "Related Loan Out Records" area 
 	    Then "CQA112.3" should appear in the "Procedures" area 
@@ -54,9 +54,9 @@ Feature: Loan Out Tab
 	    Then an "Edit Loan Out Record" form should be displayed 
 	    Then the "Loan Out Number" field should contain "CQA112.3"
 	    And user clicks the "Delete this relation." button
-	    Then a delete confirmation dialogue should appear
+	    Then a delete confirmation dialog should appear
 	    And user clicks the delete button 
-	    Then the deletion should be confirmed in a dialogue
+	    Then the deletion should be confirmed in a dialog
 	    Then "CQA112.3" should not appear in the "Related Loan Out Records" area 
 
 
@@ -64,9 +64,9 @@ Feature: Loan Out Tab
 	    Then an "Edit Loan Out Record" form should be displayed 
 	    Then the "Loan Out Number" field should contain "CQA112.2"
 	    And user clicks the "Delete this relation." button
-	    Then a delete confirmation dialogue should appear
+	    Then a delete confirmation dialog should appear
 	    And user clicks the delete button 
-	    Then the deletion should be confirmed in a dialogue
+	    Then the deletion should be confirmed in a dialog
 	    Then "CQA112.2" should not appear in the "Related Loan Out Records" area 
 
 	    Then close the browser
@@ -80,7 +80,7 @@ Feature: Loan Out Tab
 	    And user clicks the "Add record" button
 		And use clicks the "Create New" button
 		
-		Then the dialogue should be dismissed
+		Then the dialog should be dismissed
 		Then the message "Creating new record..." should be displayed
 	    
 		Then the "Loan Out Number" field should be empty
@@ -89,14 +89,14 @@ Feature: Loan Out Tab
 
 	    #Variation A
 	    	And user selects the "Current Record" tab
-		    Then a leave confirmation dialogue should appear 
+		    Then a leave confirmation dialog should appear 
 		    And user clicks the "close" button  
 		    Then the "Loan Out Number" field should contain "CQA112.4"
 
 
 		#Variation B
 			And user selects the "Current Record" tab
-		    Then a leave confirmation dialogue should appear  
+		    Then a leave confirmation dialog should appear  
 		    And user clicks the "cancel" button
 		    Then the "Loan Out Number" field should contain "CQA112.4"
 
@@ -119,9 +119,9 @@ Feature: Loan Out Tab
 
 		    And user goes to the record with identification number "CQA112.4"
 		    And user clicks the delete button
-		    Then a delete confirmation dialogue should appear
+		    Then a delete confirmation dialog should appear
 		    And user clicks the delete button 
-		    Then the deletion should be confirmed in a dialogue
+		    Then the deletion should be confirmed in a dialog
 		    Then close the browser
 
 	Scenario: Cancel changes button #Test 9
@@ -149,9 +149,9 @@ Feature: Loan Out Tab
    
 	    And user clicks the "Go to record" button
 	    And user clicks the "Delete" button 
-	    Then a delete confirmation dialogue should appear
+	    Then a delete confirmation dialog should appear
 	    And user clicks the confirmation delete button
-	    Then a deletion should be confirmed in a dialogue
+	    Then a deletion should be confirmed in a dialog
 	    Then close the browser
 
 
@@ -268,7 +268,7 @@ Feature: Loan Out Tab
         Then the "Loan Renewal Application Date" field should contain "2017-06-01"
         And user clicks the "Go To Record" button        
         And user clicks the "Delete" button
-        Then a delete confirmation dialogue should appear
+        Then a delete confirmation dialog should appear
         And user clicks the delete button
         Then close the browser
 
@@ -294,20 +294,20 @@ Feature: Loan Out Tab
 	    And user saves the record
 	    
 	    And user clicks the "Delete Relation" button on the row that reads "CQA112.7"
-	    Then delete confirmation dialogue should appear
+	    Then delete confirmation dialog should appear
 	    And user clicks cancel button
-	    Then the dialogue should be dismissed 
+	    Then the dialog should be dismissed 
 	    Then the "Related Loan Out Records" area should contain "CQA112.7"
 
 	    And user clicks the "Delete Relation" button on the row that reads "CQA112.7". Again
-	    Then delete confirmation dialogue should appear
+	    Then delete confirmation dialog should appear
 	    And user clicks the "close" button
-	    Then the dialogue should be dismissed
+	    Then the dialog should be dismissed
 	    Then the "Related Loan Out Records" area should contain "CQA112.7"
 
 
 	    And user clicks the "Delete Relation" button on the row that reads "CQA112.7". Last time.
-	    Then delete confirmation dialogue should appear
+	    Then delete confirmation dialog should appear
 	    And user clicks on the delete button
 	    Then "CQA112.7" should not appear in the "Procedures" area
 	    Then "CQA112.7" should not appear in the "Related Loan Out Records" area
@@ -318,9 +318,9 @@ Feature: Loan Out Tab
 	    And user selects the "Current Record" tab
 
 	    And user clicks the delete button
-	    Then a delete confirmation dialogue should appear
+	    Then a delete confirmation dialog should appear
 	    And user clicks the delete button 
-	    Then the deletion should be confirmed in a dialogue
+	    Then the deletion should be confirmed in a dialog
 	    Then close the browser
 
 	Scenario: Deleting relation via record editor #Test 27
@@ -336,21 +336,21 @@ Feature: Loan Out Tab
 	    And user clicks on result with text "CQA112.8"
 	    
 	    And user clicks the "Delete this relation" button
-	    Then a delete confirmation dialogue should appear  
+	    Then a delete confirmation dialog should appear  
 	    And user clicks cancel button
-	    Then the dialogue should be dismissed  
+	    Then the dialog should be dismissed  
 	    Then the "Related Loan Out Records" area should contain "CQA112.8"
 
 	    And user clicks the "Delete this relation" button
-	    Then a delete confirmation dialogue should appear  
+	    Then a delete confirmation dialog should appear  
 	    And user clicks close button
-	    Then the dialogue should be dismissed  
+	    Then the dialog should be dismissed  
 	    Then the "Related Loan Out Records" area should contain "CQA112.8"
 
 	    And user clicks the "Delete this relation" button
-	    Then a delete confirmation dialogue should appear
+	    Then a delete confirmation dialog should appear
 	    And user clicks the delete button 
-	    Then the deletion should be confirmed in a dialogue
+	    Then the deletion should be confirmed in a dialog
 	    # Then the record editor should no longer be displayed (below list)
 	    Then "CQA112.8" should not appear in the "Procedures" area   
 	    Then "CQA112.8" should not appear in the "Related Loan Out Records" area
@@ -361,9 +361,9 @@ Feature: Loan Out Tab
 	    
 	    And user selects the "Current Record" tab 
 	    And user clicks the delete button
-	    Then a delete confirmation dialogue should appear
+	    Then a delete confirmation dialog should appear
 	    And user clicks the delete button 
-	    Then the deletion should be confirmed in a dialogue
+	    Then the deletion should be confirmed in a dialog
 	    Then close the browser 
 
 

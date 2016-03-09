@@ -15,7 +15,7 @@ Feature: Media Handling Page Tab
 	    Then the "Related Media Handling Records" area should be empty
 	    Then close the browser
 
-	Scenario:  Dismissing the dialogue #2
+	Scenario:  Dismissing the dialog #2
   		Given user is in the "My CollectionSpace" page
 		And user goes to the record with identification number "CQA114_NE"
 
@@ -40,7 +40,7 @@ Feature: Media Handling Page Tab
 	    And user clicks the "Add to current record" button  
 
 	    #Expected, Group #1
-	    Then the dialogue should be dismissed 
+	    Then the dialog should be dismissed 
 	    Then "CQA114.3" should appear in the "Related Media Handling Records" area   
 	    Then "CQA114.2" should appear in the "Related Media Handling Records" area   
 	    Then "CQA114.3" should appear in the "Procedures" area   
@@ -50,18 +50,18 @@ Feature: Media Handling Page Tab
 	    Then an "Edit Media Record" form should be displayed 
 	    Then the "Identification Number" field should contain "CQA114.3"
 	    And user clicks the "Delete this relation." button
-	    Then a delete confirmation dialogue should appear
+	    Then a delete confirmation dialog should appear
 	    And user clicks the delete button 
-	    Then the deletion should be confirmed in a dialogue
+	    Then the deletion should be confirmed in a dialog
 	    Then "CQA114.3" should not appear in the "Related Media Handling Records" area
 
 	    And user clicks on result with text "CQA114.2" 
 	    Then an "Edit Media Record" form should be displayed 
 	    Then the "Identification Number" field should contain "CQA114.2"
 	    And user clicks the "Delete this relation." button
-	    Then a delete confirmation dialogue should appear
+	    Then a delete confirmation dialog should appear
 	    And user clicks the delete button 
-	    Then the deletion should be confirmed in a dialogue
+	    Then the deletion should be confirmed in a dialog
 	    Then "CQA114.2" should not appear in the "Related Media Handling Records" area 
 
 	    Then close the browser
@@ -77,20 +77,20 @@ Feature: Media Handling Page Tab
 	    And user clicks the "Add record" button 
 		And user clicks the "Create New" button
 
-		Then the dialogue should be dismissed
+		Then the dialog should be dismissed
 		Then the message "Creating new record..." should be displayed 
 		And user enters "CQA114.4" in the "Media Handling Number" field 
 
 
 	    #Variation A
     	And user selects the "Current Record" tab
-	    Then a leave confirmation dialogue should appear 
+	    Then a leave confirmation dialog should appear 
 	    And user clicks the "close" button  
 	    Then the "Identification Number" field should contain "CQA114.4"
 
 		#Variation B
 		And user selects the "Current Record" tab
-	    Then a leave confirmation dialogue should appear  
+	    Then a leave confirmation dialog should appear  
 	    And user clicks the "cancel" button
 	    Then the "Identification Number" field should contain "CQA114.4"
 
@@ -113,9 +113,9 @@ Feature: Media Handling Page Tab
 
 	    And user goes to the record with identification number "CQA114.4"
 	    And user clicks the delete button
-	    Then a delete confirmation dialogue should appear
+	    Then a delete confirmation dialog should appear
 	    And user clicks the delete button 
-	    Then the deletion should be confirmed in a dialogue
+	    Then the deletion should be confirmed in a dialog
 	    Then close the browser
 
 	Scenario: Cancel changes button #5
@@ -143,9 +143,9 @@ Feature: Media Handling Page Tab
 
 	    And user clicks the "Go to record" button
 	    And user clicks the "Delete" button 
-	    Then a delete confirmation dialogue should appear
+	    Then a delete confirmation dialog should appear
 	    And user clicks the confirmation delete button
-	    Then a deletion should be confirmed in a dialogue
+	    Then a deletion should be confirmed in a dialog
 	    Then close the browser
 
 
@@ -278,7 +278,7 @@ Feature: Media Handling Page Tab
         Then the "Languages" field should contain "German"
         And user clicks the "Go To Record" button	    
 	    And user clicks the "Delete" button
-	    Then a delete confirmation dialogue should appear
+	    Then a delete confirmation dialog should appear
 	    And user clicks the delete button         
         Then close the browser
 
@@ -304,20 +304,20 @@ Feature: Media Handling Page Tab
 	    And user saves the record
 	    
 	    And user clicks the "Delete Relation" button on the row that reads "CQA114.7"
-	    Then delete confirmation dialogue should appear
+	    Then delete confirmation dialog should appear
 	    And user clicks cancel button
-	    Then the dialogue should be dismissed 
+	    Then the dialog should be dismissed 
 	    Then the "Related Media Handling Records" area should contain "CQA114.7"
 
 	    And user clicks the "Delete Relation" button on the row that reads "CQA114.7". Again
-	    Then delete confirmation dialogue should appear
+	    Then delete confirmation dialog should appear
 	    And user clicks the "close" button
-	    Then the dialogue should be dismissed
+	    Then the dialog should be dismissed
 	    Then the "Related Media Handling Records" area should contain "CQA114.7"
 
 
 	    And user clicks the "Delete Relation" button on the row that reads "CQA114.7". Last time.
-	    Then delete confirmation dialogue should appear
+	    Then delete confirmation dialog should appear
 	    And user clicks on the delete button
 	    Then "CQA114.7" should not appear in the "Procedures" area
 	    Then "CQA114.7" should not appear in the "Related Media Handling Records" area
@@ -328,9 +328,9 @@ Feature: Media Handling Page Tab
 	    And user selects the "Current Record" tab
 
 	    And user clicks the delete button
-	    Then a delete confirmation dialogue should appear
+	    Then a delete confirmation dialog should appear
 	    And user clicks the delete button 
-	    Then the deletion should be confirmed in a dialogue
+	    Then the deletion should be confirmed in a dialog
 	    Then close the browser
 
 	Scenario: Deleting relation via record editor #Test 27
@@ -346,21 +346,21 @@ Feature: Media Handling Page Tab
 	    And user clicks on result with text "CQA114.8"
 	    
 	    And user clicks the "Delete this relation" button
-	    Then a delete confirmation dialogue should appear
+	    Then a delete confirmation dialog should appear
 	    And user clicks cancel button 
-	    Then the dialogue should be dismissed
+	    Then the dialog should be dismissed
 	    Then the "Related Media Handling Records" area should contain "CQA114.8"
 
 	    And user clicks the "Delete this relation" button
-	    Then a delete confirmation dialogue should appear 
+	    Then a delete confirmation dialog should appear 
 	    And user clicks close button
-	    Then the dialogue should be dismissed 
+	    Then the dialog should be dismissed 
 	    Then the "Related Media Handling Records" area should contain "CQA114.8"
 
 	    And user clicks the "Delete this relation" button
-	    Then a delete confirmation dialogue should appear
+	    Then a delete confirmation dialog should appear
 	    And user clicks the delete button 
-	    Then the deletion should be confirmed in a dialogue
+	    Then the deletion should be confirmed in a dialog
 
 	    Then "CQA114.8" should not appear in the "Procedures" area   
 	    Then "CQA114.8" should not appear in the "Related Media Handling Records" area
@@ -371,8 +371,8 @@ Feature: Media Handling Page Tab
 	    
 	    And user selects the "Current Record" tab 
 	    And user clicks the delete button
-	    Then a delete confirmation dialogue should appear
+	    Then a delete confirmation dialog should appear
 	    And user clicks the delete button 
-	    Then the deletion should be confirmed in a dialogue
+	    Then the deletion should be confirmed in a dialog
 	    Then close the browser 
 

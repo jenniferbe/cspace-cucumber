@@ -145,7 +145,7 @@ Feature: Structured Objects- QA Test Plan
 
 	## 2B
 		And user clicks the "No" button
-		Then the dialogue should be dismissed
+		Then the dialog should be dismissed
 		Then the "Object component" field should contain ""
 
 	## 2c
@@ -153,7 +153,7 @@ Feature: Structured Objects- QA Test Plan
 		And user selects "2012.12.1a.2b" from dropdown 
 		Then a dialog containing the message "Warning: null currently has broader term 2012.12.1a.2. Change broader term?" should be displayed
 		And user clicks the "Close" button
-		Then the dialogue should be dismissed
+		Then the dialog should be dismissed
 		Then the "Object component" field should contain ""
 
 	## 2d
@@ -185,9 +185,9 @@ Feature: Structured Objects- QA Test Plan
 		And user clicks the "Delete"  button in the "Object component" field in the row containing "2012.12.1a.2b.0000" 
 		And user clicks the "Delete"  button in the "Object component" field in the row containing "2012.12.1a.2b" 
 		And user clicks on the delete button
-		Then a delete confirmation dialogue should appear
+		Then a delete confirmation dialog should appear
     	And user clicks the delete button 
-		Then the deletion should be confirmed in a dialogue
+		Then the deletion should be confirmed in a dialog
 
 		Given user is on the "My CollectionSpace" page
 		And user enters "00002012.12.1a" in the top nav search field
@@ -200,69 +200,69 @@ Feature: Structured Objects- QA Test Plan
 		Given user is on the "Create New" page
 		And user goes to the record with Identification Number "012.12.1"
 		And user clicks the delete button
-	    Then a delete confirmation dialogue should appear  
+	    Then a delete confirmation dialog should appear  
 	    And user clicks the delete button 
-	    Then the deletion should be confirmed in a dialogue
+	    Then the deletion should be confirmed in a dialog
 
 		And user goes to the record with Identification Number "2012.12.1a"
 		And user clicks the delete button
-	    Then a delete confirmation dialogue should appear  
+	    Then a delete confirmation dialog should appear  
 	    And user clicks the delete button 
-	    Then the deletion should be confirmed in a dialogue
+	    Then the deletion should be confirmed in a dialog
 
 		And user goes to the record with Identification Number "2012.12.1a.1"
 		And user clicks the delete button
-	    Then a delete confirmation dialogue should appear  
+	    Then a delete confirmation dialog should appear  
 	    And user clicks the delete button 
-	    Then the deletion should be confirmed in a dialogue
+	    Then the deletion should be confirmed in a dialog
 
 		And user goes to the record with Identification Number "2012.12.1a.1a"
 		And user clicks the delete button
-	    Then a delete confirmation dialogue should appear  
+	    Then a delete confirmation dialog should appear  
 	    And user clicks the delete button 
-	    Then the deletion should be confirmed in a dialogue
+	    Then the deletion should be confirmed in a dialog
 
 		And user goes to the record with Identification Number "2012.12.1a.1b"
 		And user clicks the delete button
-	    Then a delete confirmation dialogue should appear  
+	    Then a delete confirmation dialog should appear  
 	    And user clicks the delete button 
-	    Then the deletion should be confirmed in a dialogue
+	    Then the deletion should be confirmed in a dialog
 
 		And user goes to the record with Identification Number "2012.12.1a.2"
 		And user clicks the delete button
-	    Then a delete confirmation dialogue should appear  
+	    Then a delete confirmation dialog should appear  
 	    And user clicks the delete button 
-	    Then the deletion should be confirmed in a dialogue
+	    Then the deletion should be confirmed in a dialog
 
 		And user goes to the record with Identification Number "2012.12.1a.2a"
 		And user clicks the delete button
-    	Then a delete confirmation dialogue should appear  
+    	Then a delete confirmation dialog should appear  
     	And user clicks the delete button 
-    	Then the deletion should be confirmed in a dialogue
+    	Then the deletion should be confirmed in a dialog
 
 		And user goes to the record with Identification Number "2012.12.1a.2b"
 		And user clicks the delete button
-	    Then a delete confirmation dialogue should appear  
+	    Then a delete confirmation dialog should appear  
 	    And user clicks the delete button 
-	    Then the deletion should be confirmed in a dialogue
+	    Then the deletion should be confirmed in a dialog
 
 		And user goes to the record with Identification Number "2012.12.1a.2c"
 		And user clicks the delete button
-	    Then a delete confirmation dialogue should appear  
+	    Then a delete confirmation dialog should appear  
 	    And user clicks the delete button 
-	    Then the deletion should be confirmed in a dialogue
+	    Then the deletion should be confirmed in a dialog
 
 		And user goes to the record with Identification Number "2012.12.1a.2b.0000"
 		And user clicks the delete button
-	    Then a delete confirmation dialogue should appear  
+	    Then a delete confirmation dialog should appear  
 	    And user clicks the delete button 
-	    Then the deletion should be confirmed in a dialogue
+	    Then the deletion should be confirmed in a dialog
 
 	    And user goes to the record with Identification Number "00002012.12.1a"
 		And user clicks the delete button
-	    Then a delete confirmation dialogue should appear  
+	    Then a delete confirmation dialog should appear  
 	    And user clicks the delete button 
-	    Then the deletion should be confirmed in a dialogue
+	    Then the deletion should be confirmed in a dialog
 	    Then close the browser
 
 

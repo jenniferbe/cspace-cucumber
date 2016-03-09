@@ -48,7 +48,7 @@ Feature: Supplementary Secondary Manual Acquisition Secondary Tab
 		Then "CQA81" should appear in the "Cataloging" area 
 		Then close the browser
 
-  Scenario: Search to relate dialogue
+  Scenario: Search to relate dialog
   	Given user is on the "Create New" page
   	And user goes to the record with identification number "CQA81"
   	And user clicks the "Add New" button
@@ -83,27 +83,27 @@ Feature: Supplementary Secondary Manual Acquisition Secondary Tab
     	Given user is in the "Create New" page
       And user goes to the record with identification number "CQA81"
       And user clicks the delete button
-      Then a delete confirmation dialogue should appear
+      Then a delete confirmation dialog should appear
       And user clicks the delete button 
-      Then the deletion should be confirmed in a dialogue
+      Then the deletion should be confirmed in a dialog
 
       And user goes to the record with identification number "CQA81.2"
       And user clicks the delete button
-      Then a delete confirmation dialogue should appear
+      Then a delete confirmation dialog should appear
       And user clicks the delete button 
-      Then the deletion should be confirmed in a dialogue
+      Then the deletion should be confirmed in a dialog
 
       And user goes to the record with identification number "CQA81.3"
       And user clicks the delete button
-      Then a delete confirmation dialogue should appear
+      Then a delete confirmation dialog should appear
       And user clicks the delete button 
-      Then the deletion should be confirmed in a dialogue
+      Then the deletion should be confirmed in a dialog
       
       And user goes to the record with identification number "CQA81.4"
       And user clicks the delete button
-      Then a delete confirmation dialogue should appear
+      Then a delete confirmation dialog should appear
       And user clicks the delete button 
-      Then the deletion should be confirmed in a dialogue
+      Then the deletion should be confirmed in a dialog
       Then close the browser
 
 

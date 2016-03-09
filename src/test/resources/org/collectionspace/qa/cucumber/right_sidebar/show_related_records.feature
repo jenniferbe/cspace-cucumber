@@ -37,20 +37,20 @@ Feature: Right Frame - Show Related Records
     Given user is in the "Create New" page
     And user goes to the record with identification number "CQA16.1"
     And user clicks the delete button
-    Then a delete confirmation dialogue should appear
+    Then a delete confirmation dialog should appear
     And user clicks the delete button 
-    Then the deletion should be confirmed in a dialogue
+    Then the deletion should be confirmed in a dialog
 
     And user goes to the record with identification number "CQA16.2"
     And user clicks the delete button
-    Then a delete confirmation dialogue should appear
+    Then a delete confirmation dialog should appear
     And user clicks the delete button 
-    Then the deletion should be confirmed in a dialogue
+    Then the deletion should be confirmed in a dialog
 
     And user goes to the record with identification number "CQA16.3"
     And user clicks the delete button
-    Then a delete confirmation dialogue should appear
+    Then a delete confirmation dialog should appear
     And user clicks the delete button 
-    Then the deletion should be confirmed in a dialogue
+    Then the deletion should be confirmed in a dialog
     
     Then close the browser
