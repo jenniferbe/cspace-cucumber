@@ -363,14 +363,14 @@ Feature: Condition Check Tab Test Plan
         Then the dialog should be dismissed
         Then the "Related Condition Check Records" area should contain "CQA103.7"
 
-        And clicks the "Delete Relation" button on the row that reads "CQA103.7". Again
+        And clicks the "Delete Relation" button on the row that reads "CQA103.7"
         Then delete confirmation dialog should appear
         And clicks the "close" button
         Then the dialog should be dismissed
         Then the "Related Condition Check Records" area should contain "CQA103.7"
 
 
-        And clicks the "Delete Relation" button on the row that reads "CQA103.7". Last time.
+        And clicks the "Delete Relation" button on the row that reads "CQA103.7"
         Then delete confirmation dialog should appear
         And clicks on the delete button
         Then "CQA103.7" should not appear in the "Procedures" area

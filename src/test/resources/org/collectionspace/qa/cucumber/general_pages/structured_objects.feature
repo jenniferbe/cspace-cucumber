@@ -14,12 +14,12 @@ Feature: Structured Objects- QA Test Plan
 	    And selects "Word (verso)" from dropdown in "Broader object type" row
 	    And enters "2012.12.1a.1" in the "Object component" field
 		And clicks on the "Create new" button
-		And selects "Separable part" in the "Object component type"  row
+		And selects "Separable part" in the "Object component type" row
 
-		And clicks the plus to repeat the "Object component" form   ??
+		And clicks the plus to repeat the "Object component" form   
 		And enters "2012.12.1a.2" in the "Object component" field
 		And clicks on the "Create new" button
-		And selects "Separable part" in the "Object component type"  row
+		And selects "Separable part" in the "Object component type" row
 		And saves the record
 
 		# For the following "Thens", they might not be specific enough
@@ -34,7 +34,7 @@ Feature: Structured Objects- QA Test Plan
 		###################
 		##### BEGIN 1B#####
 		###################
-		And clicks on the "Go To" button next to the "Broader Object" field  , RETURN.
+		And clicks on the "Go To" button next to the "Broader Object" field
 		Then the "Object component" field should contain "2012.12.1a"
 		Then the "Object component type" field should contain "Verso"
 		Then the "Broader Object" field should be empty
@@ -53,7 +53,7 @@ Feature: Structured Objects- QA Test Plan
 
 		And enters "2012.12.1a.2a" in the "Object component" field
 		And clicks on the "Create new" button
-		And clicks the plus to repeat the "Object component" form   ??
+		And clicks the plus to repeat the "Object component" form   
 		
 		And enters "2012.12.1a.2b" in the "Object component" field
 		And clicks on the "Create new" button
@@ -91,7 +91,7 @@ Feature: Structured Objects- QA Test Plan
 	###################
 		And enters "2012.12.1a.1a" in the "Object component" field
 		And clicks on the "Create new" button
-		And clicks the plus to repeat the "Object component" form   ??
+		And clicks the plus to repeat the "Object component" form   
 		And enters "2012.12.1a.1b" in the "Object component" field
 		And clicks on the "Create new" button
 		And saves the record
@@ -174,7 +174,7 @@ Feature: Structured Objects- QA Test Plan
 		Then a dialog containing the message "This Cataloging record can not be removed. It has a Narrower Context." should be displayed
 
 	#2g
-		And clicks the plus to repeat the "Object component" form   ??
+		And clicks the plus to repeat the "Object component" form   
 		And enters "2012.12.1a.2b.0000" in the "Object component" field 
  		And clicks on the "Create new" button
 		And saves the record
@@ -284,15 +284,15 @@ Feature: Structured Objects- QA Test Plan
 		And enters "2013.12.2" in the "Object component" field
 		And clicks on the "Create new" button
 		And saves the record
-		And clicks on the "Go To" button next to the "Broader Object" field  , RETURN.
+		And clicks on the "Go To" button next to the "Broader Object" field
 
 		Then the "Identification Number" field should contain "2013.12.2"
-		# then the files should be the same. BUG????
+		# then the files should be the same. BUG
 
 		And goes to the record with Identification Number "2013.12.1"
 		Then the "Identification Number" field should contain "2013.12.1"
 
-		# then the files should be the same. BUG???
+		# then the files should be the same. BUG?
 		Then close the browser
 
 
@@ -308,7 +308,7 @@ Feature: Structured Objects- QA Test Plan
 		# then a message will flash saying to not forget --> doesnt happen
 
 		And saves the record
-		And clicks on the "Go To" button next to the "Object component" field  , RETURN.
+		And clicks on the "Go To" button next to the "Object component" field
 
 		Then the "Identification Number" field should contain "2013.12.1a.1"
 		# then te record should match 2013.12.a1 but with ID "2013.12.1a.1" and w/o related records

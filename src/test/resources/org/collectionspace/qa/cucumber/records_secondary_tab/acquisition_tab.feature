@@ -307,14 +307,14 @@ Feature: Acquisition Tab
         Then the dialog should be dismissed 
         Then the "Related Acquisition Records" area should contain "CQA93.7"
 
-        And clicks the "Delete Relation" button on the row that reads "CQA93.7". Again
+        And clicks the "Delete Relation" button on the row that reads "CQA93.7"
         Then delete confirmation dialog should appear
         And clicks the "close" button
         Then the dialog should be dismissed
         Then the "Related Acquisition Records" area should contain "CQA93.7"
 
 
-        And clicks the "Delete Relation" button on the row that reads "CQA93.7". Last time.
+        And clicks the "Delete Relation" button on the row that reads "CQA93.7"
         Then delete confirmation dialog should appear
         And clicks the "delete" button
         Then "CQA93.7" should not appear in the "Procedures" sidebar

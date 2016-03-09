@@ -88,7 +88,7 @@ Scenario: Removing values from all fields
       And saves the record
     Then the record is successfully saved   
     Then the message "IN2016.2" should be displayed
-    Then the "Terms Used" area in the right sidebar should be empty.
+    Then the "Terms Used" area in the right sidebar should be empty
     # Check the following step by browsing to the object record via find and edit
     # We may need to add intervening steps for this
     Then all the fields should be saved as empty

@@ -309,14 +309,14 @@ Feature: Media Handling Page Tab
 	    Then the dialog should be dismissed 
 	    Then the "Related Media Handling Records" area should contain "CQA114.7"
 
-	    And clicks the "Delete Relation" button on the row that reads "CQA114.7". Again
+	    And clicks the "Delete Relation" button on the row that reads "CQA114.7"
 	    Then delete confirmation dialog should appear
 	    And clicks the "close" button
 	    Then the dialog should be dismissed
 	    Then the "Related Media Handling Records" area should contain "CQA114.7"
 
 
-	    And clicks the "Delete Relation" button on the row that reads "CQA114.7". Last time.
+	    And clicks the "Delete Relation" button on the row that reads "CQA114.7"
 	    Then delete confirmation dialog should appear
 	    And clicks on the delete button
 	    Then "CQA114.7" should not appear in the "Procedures" area

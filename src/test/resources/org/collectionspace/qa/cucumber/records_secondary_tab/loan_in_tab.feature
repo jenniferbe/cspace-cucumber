@@ -298,13 +298,13 @@ Feature: Loan In Tab
 	    Then the dialog should be dismissed 
 	    Then the "Related Loan In Records" area should contain "CQA111.6"
 
-	    And clicks the "Delete Relation" button on the row that reads "CQA111.6". Again
+	    And clicks the "Delete Relation" button on the row that reads "CQA111.6"
 	    Then delete confirmation dialog should appear
 	    And clicks the "close" button
 	    Then the dialog should be dismissed
 	    Then the "Related Loan In Records" area should contain "CQA111.6"
 
-	    And clicks the "Delete Relation" button on the row that reads "CQA111.6". Last time.
+	    And clicks the "Delete Relation" button on the row that reads "CQA111.6"
 	    Then delete confirmation dialog should appear
 	    And clicks on the delete button
 	    Then "CQA111.6" should not appear in the "Procedures" area
