@@ -154,31 +154,31 @@ Feature: Reporting
     Then the "Run" button under "Run Report" should be disabled
     Then close the browser
 
-  #Test15
-  Scenario: Keyboard accessibility 
-    Given user is on the "My CollectionSpace" page
-      And tabs to top nav search field
-      And enters "10293847" in the top nav search field
-      And tabs to top nav search submit button
-      And presses the "Enter" key
-    Then the titlebar should contain "10293847"
-    Then the titlebar should contain "Acquisition" 
-      And tabs to the dropdown under "Run Report"
-      And presses the "Enter" key
-      And uses arrow keys to select "Acquisition Summary (PDF)" from dropdown under "Run Report"
-      And presses the "Enter" key
-      And tabs to "Run" button under "Run Report"
-      And presses the "Enter" key
-    Then a confirmation dialog should appear
-      And tabs to the "Cancel" button in the confirmation dialog
-      And presses the "Enter" key
-    Then the dialog should be dismissed
-      And tabs to "Run" button under "Run Report"
-      And presses the "Enter" key
-    Then a confirmation dialog should appear
-      And tabs to the "Run" button in the confirmation dialog
-      And presses the "Enter" key
-    Then a progress bar should appear
-    Then a browser dialog should appear
-    Then user should be able to view report using keyboard only
-    Then close the browser
+  # #Test15
+  # Scenario: Keyboard accessibility 
+  #    user is on the "My CollectionSpace" page
+  #      tabs to top nav search field
+  #      enters "10293847" in the top nav search field
+  #      tabs to top nav search submit button
+  #      presses the "Enter" key
+  #    the titlebar should contain "10293847"
+  #    the titlebar should contain "Acquisition" 
+  #      tabs to the dropdown under "Run Report"
+  #      presses the "Enter" key
+  #      uses arrow keys to select "Acquisition Summary (PDF)" from dropdown under "Run Report"
+  #      presses the "Enter" key
+  #      tabs to "Run" button under "Run Report"
+  #      presses the "Enter" key
+  #    a confirmation dialog should appear
+  #      tabs to the "Cancel" button in the confirmation dialog
+  #      presses the "Enter" key
+  #    the dialog should be dismissed
+  #      tabs to "Run" button under "Run Report"
+  #      presses the "Enter" key
+  #    a confirmation dialog should appear
+  #      tabs to the "Run" button in the confirmation dialog
+  #      presses the "Enter" key
+  #    a progress bar should appear
+  #    a browser dialog should appear
+  #    user should be able to view report using keyboard only
+  #    close the browser

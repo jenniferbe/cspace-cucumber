@@ -69,18 +69,3 @@ Feature: Loan In Secondary Tab
     Then an "Edit Record" form for the newly added record should be displayed
     Then close the browser
 
-  #Test 9
-  Scenario: Keyboard Navigation
-    Given user is on a blank "Cataloging" record
-      And tabs to "Loan In" tab
-      And presses the "Enter" key
-      And tabs to the "+ Add New" button
-      And presses the "Enter" key
-    # Then each field should be reachable by keyboard
-    # The following may first require entering data in required fields; see
-    # the related location_movement_inventory.feature for a possible approach
-      And tabs to the "Save" button
-      And presses the "Enter" key
-    Then the record is successfully saved
-    # Then the newly created record should be reachable by keyboard
-    Then close the record

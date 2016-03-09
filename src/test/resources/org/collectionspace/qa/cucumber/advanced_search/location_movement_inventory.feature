@@ -38,7 +38,7 @@ Feature: Advanced Search - Location / Movement / Inventory
       And enters "3357" in the "Location/Movement/Inventory" "Reference Number" field
       And saves the record
     Then the record is successfully saved
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Location/Movement/Inventory" from record type dropdown
       And enters "Ssidweet" in the "Advanced Search" "Current Location" vocab field
@@ -49,7 +49,7 @@ Feature: Advanced Search - Location / Movement / Inventory
 
   Scenario: Search by Location Date
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Location/Movement/Inventory" from record type dropdown
       And enters "1002-01-01" in the "Advanced Search" "Location Date" field
@@ -59,7 +59,7 @@ Feature: Advanced Search - Location / Movement / Inventory
 
   Scenario: Search by Normal Location
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Location/Movement/Inventory" from record type dropdown
       And enters "Teewdiss" in the "Advanced Search" "Normal Location" vocab field
@@ -70,7 +70,7 @@ Feature: Advanced Search - Location / Movement / Inventory
 
   Scenario: Search by Movement Contact
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Location/Movement/Inventory" from record type dropdown
       And enters "hobinrood" in the "Advanced Search" "Movement Contact" vocab field
@@ -81,7 +81,7 @@ Feature: Advanced Search - Location / Movement / Inventory
 
   Scenario: Search by Movement Method
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Location/Movement/Inventory" from record type dropdown
       And clicks on the "Advanced Search" "Movement Method" field
@@ -93,7 +93,7 @@ Feature: Advanced Search - Location / Movement / Inventory
 
   Scenario: Search by Planned removal date
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Location/Movement/Inventory" from record type dropdown
       And enters "1002-01-01" in the "Advanced Search" "Planned removal date" field
@@ -103,7 +103,7 @@ Feature: Advanced Search - Location / Movement / Inventory
 
   Scenario: Search by Removal date
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Location/Movement/Inventory" from record type dropdown
       And enters "1002-01-01" in the "Advanced Search" "Removal Date" field
@@ -113,7 +113,7 @@ Feature: Advanced Search - Location / Movement / Inventory
 
   Scenario: Search by Reason for move
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Location/Movement/Inventory" from record type dropdown
       And clicks on the "Advanced Search" "Reason for move" field
@@ -125,7 +125,7 @@ Feature: Advanced Search - Location / Movement / Inventory
 
   Scenario: Search by Inventory Date
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Location/Movement/Inventory" from record type dropdown
       And enters "1002-01-01" in the "Advanced Search" "Inventory Date" field
@@ -135,7 +135,7 @@ Feature: Advanced Search - Location / Movement / Inventory
 
   Scenario: Search by Inventory Contact
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Location/Movement/Inventory" from record type dropdown
       And enters "hobinrood" in the "Advanced Search" "Inventory Contact" vocab field
@@ -146,7 +146,7 @@ Feature: Advanced Search - Location / Movement / Inventory
 
   Scenario: Search by Inventory action required
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Location/Movement/Inventory" from record type dropdown
       And clicks on the "Advanced Search" "Inventory Action Required" field
@@ -158,7 +158,7 @@ Feature: Advanced Search - Location / Movement / Inventory
 
   Scenario: Search by Inventory Note
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Location/Movement/Inventory" from record type dropdown
       And enters "irrelevant" in the "Advanced Search" "Inventory Note" field
@@ -168,7 +168,7 @@ Feature: Advanced Search - Location / Movement / Inventory
 
   Scenario: Search by Inventory Frequency
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Location/Movement/Inventory" from record type dropdown
       And clicks on the "Advanced Search" "Inventory Frequency" field
@@ -180,7 +180,7 @@ Feature: Advanced Search - Location / Movement / Inventory
 
   Scenario: Search by Next Inventory Date
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Location/Movement/Inventory" from record type dropdown
       And enters "1002-01-01" in the "Advanced Search" "Next Inventory Date" field
@@ -190,7 +190,7 @@ Feature: Advanced Search - Location / Movement / Inventory
 
   Scenario: Search by Modified Date
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Location/Movement/Inventory" from record type dropdown
       And enters today's date in the "Modified Date" field
@@ -200,7 +200,7 @@ Feature: Advanced Search - Location / Movement / Inventory
 
   Scenario: Search by username
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Location/Movement/Inventory" from record type dropdown
       And enters username in the "Advanced Search" "Record last modified by" field
@@ -210,7 +210,7 @@ Feature: Advanced Search - Location / Movement / Inventory
 
   Scenario: search by reference number
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Location/Movement/Inventory" from record type dropdown
       And enters "3357" in the "Advanced Search" "Reference Number" field
@@ -220,7 +220,7 @@ Feature: Advanced Search - Location / Movement / Inventory
 
   Scenario: search by reference number fragment
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Location/Movement/Inventory" from record type dropdown
       And enters "33*" in the "Advanced Search" "Reference Number" field
@@ -266,7 +266,7 @@ Feature: Advanced Search - Location / Movement / Inventory
       And enters "testtest" in the "Location/Movement/Inventory" "Movement Information -> Note" field
       And saves the record
     Then the record is successfully saved
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search" 
       And selects "Location/Movement/Inventory" from record type dropdown
       And selects "any (OR)" from boolean dropdown
@@ -278,7 +278,7 @@ Feature: Advanced Search - Location / Movement / Inventory
     Then the search results should contain "7533"
     Then the search results should contain "7534"
     Then the search results should contain "7535"
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
       And selects "Location/Movement/Inventory" from record type dropdown
       And selects "and (ALL)" from boolean dropdown
       And enters "Jane Doe" in the "Advanced Search" "Movement Contact" vocab field
@@ -294,7 +294,7 @@ Feature: Advanced Search - Location / Movement / Inventory
   #Test3
   Scenario: Boolean and Keyword Search
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And enters "testtest" in the keyword search field
       And selects "Location/Movement/Inventory" from record type dropdown
@@ -307,7 +307,7 @@ Feature: Advanced Search - Location / Movement / Inventory
     Then the search results should contain "7533"
     Then the search results should contain "7534"
     Then the search results should contain "7535"
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And enters "testtest" in the keyword search field
       And selects "Location/Movement/Inventory" from record type dropdown

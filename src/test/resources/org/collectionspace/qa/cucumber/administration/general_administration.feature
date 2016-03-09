@@ -40,12 +40,4 @@ Feature: General Administration
       And clicks the "Sign In" button
     Then the Adminstration tab should not appear
 
-  #Test 21
-  Scenario: Navigation to Administration tab possible with keys
-    Given user is on the "My CollectionSpace" page
-      And tabs to "Administration" tab
-      And presses the "Enter" key
-    Then the titlebar should contain "Administration"
-      And presses the "Space" key
-    Then nothing should happen
-    Then the url should contain "collectionspace/ui/core/html/administration.html"
+

@@ -31,7 +31,7 @@ Feature: Advanced Search - Media Handling
       And enters "textbook" in the "Media Handling" "Subjects" field
       And saves the record
     Then the record is successfully saved
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Media Handling" from record type dropdown
       And enters "685934" in the "Advanced Search" "Identification Number" field
@@ -41,7 +41,7 @@ Feature: Advanced Search - Media Handling
 
   Scenario: Search by Title
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Media Handling" from record type dropdown    
       And enters "hailstorm" in the "Advanced Search" "Title" field
@@ -51,7 +51,7 @@ Feature: Advanced Search - Media Handling
 
   Scenario: Search by Types
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Media Handling" from record type dropdown
       And clicks on the "Advanced Search" "Types" field
@@ -63,7 +63,7 @@ Feature: Advanced Search - Media Handling
 
   Scenario: Search by Creator
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Media Handling" from record type dropdown
       And enters "Lord Jesus" in the "Advanced Search" "Creator" vocab field
@@ -74,7 +74,7 @@ Feature: Advanced Search - Media Handling
 
   Scenario: Search by Languages
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Media Handling" from record type dropdown
       And clicks on the "Advanced Search" "Languages" field
@@ -86,7 +86,7 @@ Feature: Advanced Search - Media Handling
 
   Scenario: Search by Dates
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Media Handling" from record type dropdown
       And enters "0-0-0" in the "Advanced Search" "Dates" field
@@ -96,7 +96,7 @@ Feature: Advanced Search - Media Handling
 
   Scenario: Search by Publisher
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Media Handling" from record type dropdown
       And enters "Lord Lucifer" in the "Advanced Search" "Publisher" vocab field
@@ -107,7 +107,7 @@ Feature: Advanced Search - Media Handling
 
   Scenario: Search by Source
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Media Handling" from record type dropdown
       And enters "Pearly Gates" in the "Advanced Search" "Title" field
@@ -117,7 +117,7 @@ Feature: Advanced Search - Media Handling
 
   Scenario: Search by Rights holder
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Media Handling" from record type dropdown
       And enters "Yahweh" in the "Advanced Search" "Rights holder" vocab field
@@ -128,7 +128,7 @@ Feature: Advanced Search - Media Handling
 
   Scenario: Search by subjects
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Media Handling" from record type dropdown
       And enters "textbook" in the "Advanced Search" "Subjects" field
@@ -138,7 +138,7 @@ Feature: Advanced Search - Media Handling
 
   Scenario: Search by Modified Date
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Media Handling" from record type dropdown
       And enters today's date in the "Modified Date" field
@@ -148,7 +148,7 @@ Feature: Advanced Search - Media Handling
 
   Scenario: Search by username
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Media Handling" from record type dropdown
       And enters username in the "Advanced Search" "Record last modified by" field
@@ -158,7 +158,7 @@ Feature: Advanced Search - Media Handling
 
   Scenario: textb**
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Media Handling" from record type dropdown
       And enters "textb*" in the "Advanced Search" "Subjects" field
@@ -233,7 +233,7 @@ Feature: Advanced Search - Media Handling
   #Test3
   Scenario: Boolean and Keyword Search
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And enters "testtest" in the keyword search field
       And selects "Media Handling" from record type dropdown
@@ -246,7 +246,7 @@ Feature: Advanced Search - Media Handling
     Then the search results should contain "4639"
     Then the search results should contain "3246"
     Then the search results should contain "4245"
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And enters "testtest" in the keyword search field
       And selects "Media Handling" from record type dropdown

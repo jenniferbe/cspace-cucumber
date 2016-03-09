@@ -111,28 +111,3 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory Secondary Tab
     Then the record is successfully saved
     Then close the browser
 
-  # Requires massive use of tabbing
-  Scenario: Keyboard Navigation
-    Given user is on the "My CollectionSpace" page
-      And enters "Dummy Record" in the top nav search field
-      And selects "Cataloging" from the top nav search record select type field
-      And clicks on the top nav search submit button
-    Then the search results should contain "Dummy Record" 
-  # Not a known stepdef
-      And clicks "Dummy Record" to load the record
-    Then the titlebar should contain "Dummy Record"
-      And tabs to "Loc/Mov/Inv" tab
-      And presses the "Enter" key
-    Then related records should be displayed
-      And tabs to + Add Record" button
-      And presses the "Enter" key
-      And tabs to "Create" button
-      And presses the "Enter" key
-      And tabs to "Select number pattern" button
-      And presses the "Enter" key
-      And tabs to "Location" from dropdown in "Reference Number" row
-      And presses the "Enter" key
-      And tabs to "Save" button
-      And presses the "Enter" key
-    Then the record is successfully saved
-    Then close the browser 

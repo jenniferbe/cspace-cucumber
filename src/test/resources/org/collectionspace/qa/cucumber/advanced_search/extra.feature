@@ -20,7 +20,7 @@ Feature: Advanced_Search - Extras
   #Test1
   Scenario: Recent Searches
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Object Exit" from record type dropdown
       And enters "Goodbye" in the keyword search field

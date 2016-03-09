@@ -115,9 +115,9 @@ Feature: Supplementary Manual QA - Media Handling
 #
   # Scenario: Keyboard Accessibility
   #   # doesn't work, need to do later
-  #   When user uses tab through the entire formula
-  #   Then each of the fields should be reachable
-  #   Then the two save buttons and Cancel button should be reachable
-  #   Then the folding functionality should be usable # tab to it and hit space
-  #   Then the focus is visible at all times
-  #   Then the terms used in the right frame should be reachable
+  #    user uses tab through the entire formula
+  #    each of the fields should be reachable
+  #    the two save buttons and Cancel button should be reachable
+  #    the folding functionality should be usable # tab to it and hit space
+  #    the focus is visible at all times
+  #    the terms used in the right frame should be reachable

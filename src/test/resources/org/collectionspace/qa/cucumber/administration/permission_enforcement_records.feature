@@ -189,7 +189,7 @@ Feature: Permission Enforcement
       And deletes a "Vocabulary A" vocab field
       And saves the record
     Then the record is successfully saved
-    Then the "Used Terms" list should not contain the vocabulary
+    Then the "Used Terms" list should not contain the vocabulary term
       And enters "Jam" in the deleted vocab field
     Then the vocabulary autocomplete should appear
     Then the vocabulary autocomplete should not contain the option to add a new term

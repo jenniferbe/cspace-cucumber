@@ -133,19 +133,3 @@ Feature: Term List Management
     Then the term list should have the new default
     Then the term list should not contain a "Please select a value" entry
     Then close the browser
-
-  #Test 8
-  Scenario: Keyboard accessibility
-    Given user is on the "Administration" page
-      And tabs to "Term List Management" tab
-      And presses the "Enter" key
-      And tabs to the "Administration" "Name" field
-      And types "Keyboard only name"
-      And tabs to the "+" button above the "Terms (values)" table
-      And presses the "Enter" key
-    Then "Keyboard only name" should be in the "Administration" "Name" field
-    Then there should be a blank row
-    Then the "Save" button should be reachable
-    Then the "Cancel changes" button should be reachable
-    Then the "Delete" button should be reachable
-    Then close the browser

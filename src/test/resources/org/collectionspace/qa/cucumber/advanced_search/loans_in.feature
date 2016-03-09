@@ -19,7 +19,7 @@ Feature: Advanced Search - Loans In
       And enters "2011-01-01" in the "Loan In" "Loan Renewal Application Date" field
       And saves the record
     Then the record is successfully saved
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Loan In" from record type dropdown
       And enters "textbook" in the "Advanced Search" "Loan In Number" field
@@ -29,7 +29,7 @@ Feature: Advanced Search - Loans In
 
   Scenario: Search by Loan Purpose
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Loan In" from record type dropdown
       And clicks on the "Advanced Search" "Loan Purpose" field
@@ -41,7 +41,7 @@ Feature: Advanced Search - Loans In
 
   Scenario: Search by Lender
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Loan In" from record type dropdown
       And enters "textbook" in the "Advanced Search" "Lender" vocab field
@@ -52,7 +52,7 @@ Feature: Advanced Search - Loans In
 
   Scenario: Search by Loan In Date
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Loan In" from record type dropdown
       And enters "2011-01-01" in the "Advanced Search" "Loan In Date" field
@@ -62,7 +62,7 @@ Feature: Advanced Search - Loans In
 
   Scenario: Search by Loan In Return Date
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Loan In" from record type dropdown
       And enters "2011-01-01" in the "Advanced Search" "Loan In Return Date" field
@@ -72,7 +72,7 @@ Feature: Advanced Search - Loans In
 
   Scenario: Search by Loan In Renewal Application Date
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Loan In" from record type dropdown
       And enters "2011-01-01" in the "Advanced Search" "Loan In Renewal Application" field
@@ -82,7 +82,7 @@ Feature: Advanced Search - Loans In
 
   Scenario: Search by Edit Date
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Loan In" from record type dropdown
       And enters today's date in the "Modified Date" field
@@ -92,7 +92,7 @@ Feature: Advanced Search - Loans In
 
   Scenario: Search by username
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Loan In" from record type dropdown
       And enters username in the "Advanced Search" "Record last modified by" field
@@ -138,7 +138,7 @@ Feature: Advanced Search - Loans In
       And enters "2001-01-01" in the "Loan In" "Loan In Date" field
       And saves the record
     Then the record is successfully saved
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Loan In" from record type dropdown
       And selects "any (OR)" from boolean dropdown
@@ -152,7 +152,7 @@ Feature: Advanced Search - Loans In
     Then the search results should contain "textbook3"
     Then the search results should contain "textbook4"
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Loan In" from record type dropdown
       And selects "all (AND)" from boolean dropdown
@@ -170,7 +170,7 @@ Feature: Advanced Search - Loans In
   #Test3
   Scenario: Boolean and Keyword Search
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And enters "testtest" in the keyword search field
       And clicks the "Search button" 
@@ -178,7 +178,7 @@ Feature: Advanced Search - Loans In
     Then the search results should contain "textbook3"
     Then the search results should contain "textbook4" 
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And enters "testtest" in the keyword search field
       And selects "Loan In" from record type dropdown
@@ -193,7 +193,7 @@ Feature: Advanced Search - Loans In
     Then the search results should contain "textbook3"
     Then the search results should contain "textbook4"
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And enters "testtest" in the keyword search field
       And selects "Loan In" from record type dropdown
