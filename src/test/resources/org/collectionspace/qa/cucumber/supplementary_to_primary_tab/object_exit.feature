@@ -51,7 +51,7 @@ Feature: Supplementary Manual QA - Object Exit
       And selects the "Object Exit" radio button on the Create New page
       And clicks on the Create button
       And user enters "1234" in the "Object Exit" "Exit Number" field
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
     Then "GMT-0800 (PST)" should be displayed in the message bar
     Then disables top and bottom "cancel" buttons
@@ -97,7 +97,7 @@ Feature: Supplementary Manual QA - Object Exit
       And clicks on the Create button
       And user enters "1.2.3.4.5" in the "Object Exit" "Exit Number" field
       And user adds "Abbott Publishing Company" to the "Object Exit" "Current Owner" vocab field
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
     Then disables top and bottom "cancel" buttons
     Then enables top and bottom "delete" buttons

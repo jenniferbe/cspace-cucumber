@@ -21,7 +21,7 @@ Feature: Advanced Search - Work
       And user selects "Built" from dropdown in "Work type" row
       And user enters "Rae" in the "Work" "Creator" vocab field
       And user adds "Rae" to "Local Persons"
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
       And user clicks on link to "Advanced Search" in upper right corner
     Then the titlebar should contain "Advanced Search"

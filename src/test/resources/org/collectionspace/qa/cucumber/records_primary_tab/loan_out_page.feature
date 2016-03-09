@@ -44,12 +44,12 @@ Feature: Loan Out Page Testing
     Given user is on the "Create New" page
     And selects the "Loan Out" radio button on the Create New page
     And clicks on the Create button
-    And #all fields should be filled in
+    # And #all fields should be filled in
     And user clicks on the bottom Save button
-    Then #A "New Record successfully created" message should appear along with the current time
-    And #After the success message appear, All the fields should contain the same value as you entered/selected
-    And #After the success message appear, The name authorities should be displayed under Integrated Vocabularies
-    And #After the success message appear, The newlines should still be present in text areas
+    # Then #A "New Record successfully created" message should appear along with the current time
+    # And #After the success message appear, All the fields should contain the same value as you entered/selected
+    # And #After the success message appear, The name authorities should be displayed under Integrated Vocabularies
+    # And #After the success message appear, The newlines should still be present in text areas
     And close the browser
 
   #Incomplete
@@ -57,13 +57,13 @@ Feature: Loan Out Page Testing
     Given user is on the "Find and Edit" page
     And selects "Loan Out" from the top nav search record type select field
     And clicks on the top nav search submit button
-    And #selects one of the loan out records
-    And #all fields should be filled in
+    # And #selects one of the loan out records
+    # And #all fields should be filled in
     And user clicks on the bottom Save button
-    Then #A "New Record successfully created" message should appear along with the current time
-    And #After the success message appear, All the fields should contain the same value as you entered/selected
-    And #After the success message appear, The name authorities should be displayed under Integrated Vocabularies
-    And #After the success message appear, The newlines should still be present in text areas
+    # Then #A "New Record successfully created" message should appear along with the current time
+    # And #After the success message appear, All the fields should contain the same value as you entered/selected
+    # And #After the success message appear, The name authorities should be displayed under Integrated Vocabularies
+    # And #After the success message appear, The newlines should still be present in text areas
     And close the browser
 
   #To Do
@@ -78,7 +78,7 @@ Feature: Loan Out Page Testing
     And user clears all fields of the "xxx" record
     And user enters "xxx" in the "Loan Out Number" field
     And user clicks on the Save button
-    Then #a success message from save should appear
+    # Then #a success message from save should appear
     And the titlebar should contain "xxx"
     And all fields of the "xxx" record should be empty
     When user clears the "Loan Out Number" field
@@ -100,20 +100,20 @@ Feature: Loan Out Page Testing
     When user clicks on the Save button
     Then the record is successfully saved
     When user clicks on the delete button
-    Then delete confirmation dialogue should appear
+    Then delete confirmation dialog should appear
     When user clicks cancel button
-    Then the delete confirmation dialogue should disappear
-    And #nothing else should happen
+    Then the delete confirmation dialog should disappear
+    # And #nothing else should happen
     When user clicks on the delete button
-    Then delete confirmation dialogue should appear
+    Then delete confirmation dialog should appear
     When user clicks close button
-    Then the delete confirmation dialogue should disappear
-    And #nothing else should happen
+    Then the delete confirmation dialog should disappear
+    # And #nothing else should happen
     When user clicks on the delete button
-    Then delete confirmation dialogue should appear
+    Then delete confirmation dialog should appear
     When user clicks the confirmation delete button
-    Then deletion should be confirmed in a dialogue
-    And #you should be redirected to Find and Edit page
+    Then deletion should be confirmed in a dialog
+    # And #you should be redirected to Find and Edit page
     When selects "Loan Out" from the top nav search record type select field
     And user enters "deleteloanouttest123" in the top nav search field
     And clicks on the top nav search submit button
@@ -134,23 +134,23 @@ Feature: Loan Out Page Testing
     And user clicks on the Save button
     And user selects the "Current Record" tab
     And user clicks on the delete button
-    Then deletion should be confirmed in a dialogue
-    And the deletion dialogue should contain "and its relationships" #New step def
+    Then deletion should be confirmed in a dialog
+    And the deletion dialog should contain "and its relationships" #New step def
     When user clicks cancel button
-    Then the delete confirmation dialogue should disappear
-    And #nothing else should happen
+    Then the delete confirmation dialog should disappear
+    # And #nothing else should happen
     When user clicks on the delete button
-    Then delete confirmation dialogue should appear
-    And the deletion dialogue should contain "and its relationships"
+    Then delete confirmation dialog should appear
+    And the deletion dialog should contain "and its relationships"
     When user clicks close button
-    Then the delete confirmation dialogue should disappear
-    And #nothing else should happen
+    Then the delete confirmation dialog should disappear
+    # And #nothing else should happen
     When user clicks on the delete button
-    Then delete confirmation dialogue should appear
-    And the deletion dialogue should contain "and its relationships"
+    Then delete confirmation dialog should appear
+    And the deletion dialog should contain "and its relationships"
     When user clicks the confirmation delete button
-    Then deletion should be confirmed in a dialogue
-    And #you should be redirected to Find and Edit page
+    Then deletion should be confirmed in a dialog
+    # And #you should be redirected to Find and Edit page
     When selects "Loan Out" from the top nav search record type select field
     And user enters "loandelete2" in the top nav search field
     And clicks on the top nav search submit button
@@ -176,7 +176,7 @@ Feature: Loan Out Page Testing
     Given user is on the "Find and Edit" page
     And selects "Loan Out" from the top nav search record type select field
     And clicks on the top nav search submit button
-    And #selects one of the loan out records
+    # And #selects one of the loan out records
     And user clicks the "Cancel Changes" button on the top
     Then the "Cancel Changes" button on the top should not be clickable
     When user clicks the "Cancel Changes" button on the bottom
@@ -207,7 +207,7 @@ Feature: Loan Out Page Testing
     Given user is on the "Find and Edit" page
     And selects "Loan Out" from the top nav search record type select field
     And clicks on the top nav search submit button
-    And #selects one of the loan out records
+    # And #selects one of the loan out records
     #Finish
 
   Scenario: Warning on attempting to add related object/procedures to unsaved Loans Out
@@ -228,9 +228,9 @@ Feature: Loan Out Page Testing
     And selects the "Loan Out" radio button on the Create New page
     And clicks on the Create button
     And user presses "Tab"
-    Then #the first field should be accessable
+    # Then #the first field should be accessable
     When #user repeats pressing "Tab" on all repeatable fields
-    Then #all fields should be accessable
+    # Then #all fields should be accessable
     #Finish and add the other buttons that are special cases
     And close the browser
 
@@ -241,6 +241,6 @@ Feature: Loan Out Page Testing
     And clicks on the Create button
     And user presses "Tab" #until reaching the "Borrower" field
     And user enters "James" in the "Borrower" field #possibly incorrect
-    Then #FINISH
+    
     And close the browser
 

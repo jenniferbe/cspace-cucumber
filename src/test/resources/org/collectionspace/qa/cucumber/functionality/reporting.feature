@@ -13,7 +13,7 @@ Feature: Reporting
       And user adds to "Local Persons" from vocabulary autocomplete
       And user enters "1000-01-01" in the "Acquisition" "Acquisition authorizer date" field
       And user enters "Wild Encounter" in the "Acquisition" "Acquisition Date" field 
-      And the user saves the record
+      And user saves the record
     Then a dropdown should appear under "Run Report"
   #Probably no stepdefs for phrase : under run report
       And user selects "Acquisition Summary (PDF)" from dropdown under "Run Report"
@@ -102,7 +102,7 @@ Feature: Reporting
       And user clicks the "Run" button in the confirmation dialog
     Then a progress bar should appear
     Then a browser dialog should appear
-      And user views the report with Excel
+      And user views the report with Microsoft Excel
     Then the report should contain the correct information
 
   #---- Space added for clarity  
@@ -119,7 +119,7 @@ Feature: Reporting
       And user clicks the "Run" button in the confirmation dialog
     Then a progress bar should appear
     Then a browser dialog should appear
-      And user views the report with Excel
+      And user views the report with Microsoft Excel
     Then the report should contain the correct information
 
   #Test 5

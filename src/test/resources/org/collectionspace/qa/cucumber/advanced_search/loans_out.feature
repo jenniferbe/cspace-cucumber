@@ -21,7 +21,7 @@ Feature: Advanced Search - Loans Out
       And user enters "2022-01-01" in the "Loan Out" "Loan Out Date" field
       And user enters "2022-01-01" in the "Loan Out" "Loan Return Date" field
       And user enters "2022-01-01" in the "Loan Out" "Loan Renewal Application Date" field
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
       And user clicks on link to "Advanced Search" in upper right corner
     Then the titlebar should contain "Advanced Search"
@@ -139,7 +139,7 @@ Feature: Advanced Search - Loans Out
     Then a drop down list should appear in the "Loan Purpose" row
       And user selects "Research" from dropdown in "Loan Purpose" row
       And user enters "testtest" in the "Loan Out" "Loan Out Note" field
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
     Given user is on the "Create New" page
       And selects the "Loan Out" radio button on the Create New page
@@ -152,7 +152,7 @@ Feature: Advanced Search - Loans Out
     Then a drop down list should appear in the "Loan Purpose" row
       And user selects "Research" from dropdown in "Loan Purpose" row
       And user enters "testtest" in the "Loan Out" "Loan Out Conditions" field
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
     Given user is on the "Create New" page
       And selects the "Loan Out" radio button on the Create New page
@@ -165,7 +165,7 @@ Feature: Advanced Search - Loans Out
     Then a drop down list should appear in the "Loan Purpose" row
       And user selects "Photography" from dropdown in "Loan Purpose" row
       And user enters "testtest" in the "Loan Out" "Loan Out Note" field
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
       And user clicks on link to "Advanced Search" in upper right corner
     Then the titlebar should contain "Advanced Search" 

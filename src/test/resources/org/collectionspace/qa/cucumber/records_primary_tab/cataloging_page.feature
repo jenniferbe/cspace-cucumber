@@ -6,7 +6,7 @@ Feature: Cataloging Page Test Plan
 Scenario: Identification number
     Given user is on the "Create New" page
       And clicks on the Create button
-      And the user saves the record
+      And user saves the record
     Then the message "Please specify an Identification Number" should be displayed
       And user clicks Select number pattern
       And user selects "Intake" from dropdown in "Object Identification Information" row
@@ -17,12 +17,12 @@ Scenario: Identification number
 
 Scenario: Correct Display of header on new
     When user enters "test" in the "Cataloging" "Object Name" field
-     And the user saves the record
+     And user saves the record
     # currently not displayed:
     Then the message "IN2016.1 - test" should be displayed
 
     When user enters "test1" in the "Cataloging" "Object Name" field
-     And the user saves the record
+     And user saves the record
     Then the message "IN2016.1 - test1" should be displayed
 
 Scenario: All fields saved on new cataloging record and edited record
@@ -67,7 +67,7 @@ Scenario: All fields saved on new cataloging record and edited record
     When user enters "test7" in the "Cataloging" "Associated People" field
     When user enters "test8" in the "Cataloging" "Associated Person" field
       And user selects "Local Persons" from dropdown in "Associated Person"
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved   
     # checks that time is also shownin bottom message bar
     Then "GMT-0800 (PST)" should be displayed in the message bar   
@@ -85,7 +85,7 @@ Scenario: All fields saved on new cataloging record and edited record
 # How to remove values from fields? 
 Scenario: Removing values from all fields 
     When user removes the values from all the fields in the formula, except the Identification number
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved   
     Then the message "IN2016.2" should be displayed
     Then the "Terms Used" area in the right sidebar should be empty.
@@ -93,14 +93,14 @@ Scenario: Removing values from all fields
     # We may need to add intervening steps for this
     Then all the fields should be saved as empty
     When user Deletes the Identification Number
-      And the user saves the record
+      And user saves the record
     Then the message "Please specify an Identification Number" should be displayed above object formula
     Then Object should not be saved
 
 Scenario: Warning on attempting to leave edited page with 4 variations: Variation I: click Save button; II: click Don't Save button; III: click the Cancel button; IV: click the close symbol in NE corner
     When user enters "2" in the "Cataloging" "Date Period" field
     And user clicks "Create New"
-    Then delete confirmation dialogue should appear # using this step def since dialog css same for delete and leave 
+    Then delete confirmation dialog should appear # using this step def since dialog css same for delete and leave 
       And user clicks the confirmation save button
     Then the record is successfully saved   
     Given user is on the "Create New" page 
@@ -108,7 +108,7 @@ Scenario: Warning on attempting to leave edited page with 4 variations: Variatio
       And user clicks Select number pattern
       And user selects "Intake" from dropdown in "Object Identification Information" row
       And user clicks "Create New"
-    Then delete confirmation dialogue should appear 
+    Then delete confirmation dialog should appear 
       And user clicks the confirmation don't save button
     Then the message "Find and Edit" should be displayed
     Given user is on the "Create New" page 
@@ -116,7 +116,7 @@ Scenario: Warning on attempting to leave edited page with 4 variations: Variatio
       And user clicks Select number pattern
       And user selects "Intake" from dropdown in "Object Identification Information" row
       And user clicks "Create New"
-    Then delete confirmation dialogue should appear 
+    Then delete confirmation dialog should appear 
       And user clicks cancel button 
     Then the message "Find and Edit" should be displayed
     Given user is on the "Create New" page 
@@ -124,7 +124,7 @@ Scenario: Warning on attempting to leave edited page with 4 variations: Variatio
       And user clicks Select number pattern
       And user selects "Intake" from dropdown in "Object Identification Information" row
       And user clicks "Create New"
-    Then delete confirmation dialogue should appear 
+    Then delete confirmation dialog should appear 
       And user clicks close button 
    Then the message "Find and Edit" should be displayed
 
@@ -133,7 +133,7 @@ Scenario: Structured Date
       And clicks on the Create button
       And user clicks Select number pattern
       And user selects "Intake" from dropdown in "Object Identification Information" row
-      And the user saves the record
+      And user saves the record
     And user clicks on the "Production Date" field
     When user enters "test1" in the "Cataloging" "Display Date" field
     When user enters "test2" in the "Cataloging" "Date Period" field
@@ -142,7 +142,7 @@ Scenario: Structured Date
     When user enters "1975" in the "Cataloging" "Year" field
     When user enters "4" in the "Cataloging" "Month" field
     When user enters "5" in the "Cataloging" "Day" field
-      And the user saves the record
+      And user saves the record
     Then "test1" should appear in the "Production Date" area
     And user clicks on the "Production Date" field
     Then "test1" should appear in the "Display Date" area
@@ -154,7 +154,7 @@ Scenario: Cancel Changes buttons
     Then disables top and bottom "cancel" buttons
     When user enters "2" in the "Cataloging" "Display Date" field
     Then enables top and bottom "cancel" buttons
-      And the user saves the record 
+      And user saves the record 
     Then disables top and bottom "cancel" buttons
 
 Scenario: Deletion of Record
@@ -163,35 +163,35 @@ Scenario: Deletion of Record
       And user clicks Select number pattern
       And user selects "Intake" from dropdown in "Object Identification Information" row
     Then disables top and bottom "delete" buttons
-      And the user saves the record
-      And the user clicks on the delete button
-    Then delete confirmation dialogue should appear
+      And user saves the record
+      And user clicks on the delete button
+    Then delete confirmation dialog should appear
       And user clicks cancel button
     # This checks that dialog is dismissed & no other changes occurred:
     Then the record is successfully saved
-      And the user clicks on the delete button
-    Then delete confirmation dialogue should appear
+      And user clicks on the delete button
+    Then delete confirmation dialog should appear
       And user clicks the confirmation delete button
-    Then deletion should be confirmed in a dialogue
+    Then deletion should be confirmed in a dialog
       And user clicks close button
     Then the record is successfully saved
-      And the user clicks on the delete button
+      And user clicks on the delete button
     Then the message "Find and Edit" should be displayed
 
     When using the top right search area, select "Object" from the drop down and enter the identification number of the deleted record
     Then the Object should not be found.
     When user creates a new cataloging record and fill in at least the identification number
     And take note of the identification number of the record
-    And the user saves the record
-    And user clicks on the "Add" button # + a related Loan In record
-    And the user saves the record
+    And user saves the record
+    And user clicks on the "Add" button
+    And user saves the record
     And user clicks on the "Delete" button 
     Then a dialog should appear asking you to delete this record and its relationships
-    And user clicks on the "cancel button
+    And user clicks on the "cancel" button
     Then the "Dialog" should be dismissed
     Then no other changes should occur.
     And user clicks on the "delete" button
-    And cuser licks oclosebutton
+    And user clicks on the "close" button
     Then "Dialog" should be dismissed
     Then no other changes should occur.
     And user clicks on the "delete" button

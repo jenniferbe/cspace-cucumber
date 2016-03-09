@@ -25,7 +25,7 @@ Feature: Advanced Search - Intake
       And user enters "Azkaban" in the "Intake" "Current Location" vocab field
       And user adds "Azkaban" to "Local Storage Locations"
       And user enters "textbook" in the "Intake" "Field collection event name" field
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
       And user clicks on link to "Advanced Search" in upper right corner
     Then the titlebar should contain "Advanced Search"
@@ -72,7 +72,7 @@ Feature: Advanced Search - Intake
       And user clicks on link to "Advanced Search" in upper right corner
     Then the titlebar should contain "Advanced Search"
       And user selects "Intake" from record type dropdown
-      And user enters "2011-01-01" in the Advanced Search" "Return Date" field
+      And user enters "2011-01-01" in the Advanced Search "Return Date" field
       And user clicks the "Search" button
     Then the search results should contain "Lagume"
     Then close the browser
@@ -155,7 +155,7 @@ Feature: Advanced Search - Intake
     Then a drop down list should appear in the "Entry Reason" row
       And user selects "Consideration" from dropdown in "Entry Reason" row
       And user enters "testtest" in the "Intake" "Entry Note" field
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
     Given user is on the "Create New" page
       And selects the "Intake" radio button on the Create New page
@@ -168,7 +168,7 @@ Feature: Advanced Search - Intake
     Then a drop down list should appear in the "Entry Reason" row
       And user selects "Consideration" from dropdown in "Entry Reason" row
       And user enters "testtest" in the "Intake" "Packing Note" field
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
     Given user is on the "Create New" page
       And selects the "Intake" radio button on the Create New page
@@ -181,7 +181,7 @@ Feature: Advanced Search - Intake
     Then a drop down list should appear in the "Entry Reason" row
       And user selects "Loan" from dropdown in "Entry Reason" row
       And user enters "testtest" in the "Intake" "Field collection note" field
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
       And user clicks on link to "Advanced Search" in upper right corner
     Then the titlebar should contain "Advanced Search"

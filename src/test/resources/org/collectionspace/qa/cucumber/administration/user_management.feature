@@ -47,7 +47,7 @@ Feature: User Management
 #     Actions:
 #         login as administrative user
 #         go to the administrative area by clicking the Administration tab in the UI or simply http://qa.collectionspace.org:8180/collectionspace/ui/html/administration.html
-#         Verify that the Users tab is the active tab. (If not, click that tab.)
+#         Verify that users tab is the active tab. (If not, click that tab.)
 #         click the "+ User" (Create New User) button
 #         variation 1: Fill out all fields but Email Address
 #         variation 2: Fill out all fields but Full Name
@@ -114,12 +114,12 @@ Feature: User Management
 #
 #     Actions:
 #         Continue from Scenario 7 (or log in as administrative user, go to the Administration pages and click the "+ User" (Create New User) button)
-#         Enter text in each of the fields in the User record
+#         Enter text in each of the fields in user record
 #         Set Status to Inactive
 #         Click the box next to at least one role, in the list of Roles at right
 #         Click Cancel changes
 #     Expected:
-#         Any text you've entered is removed and all of the text fields in the User record are blank (empty)
+#         Any text you've entered is removed and all of the text fields in user record are blank (empty)
 #         The Status has reverted to Active
 #         No boxes are checked in the list of Roles at right
 #
@@ -131,7 +131,7 @@ Feature: User Management
 #         click "+ User" (Create New User)
 #         Fill in valid Email Address, Full Name, Password, Confirm Password
 #         Let status be active
-#         Select at least two roles for the user
+#         Select at least two roles for user
 #         Click delete
 #     Expected:
 #         The delete button should be inactive and nothing should happen
@@ -143,7 +143,7 @@ Feature: User Management
 #     Actions:
 #         Click user on list to the left
 #     Expected:
-#         User data should appear in the user details box
+#         User data should appear in user details box
 #         All the data should be the same as entered earlier. (Note: the Password and Confirm Password values will be hidden.)
 #         The roles should match those you set
 #     Actions:
@@ -162,7 +162,7 @@ Feature: User Management
 #         if no user exists, create one according to steps in Scenario "Successful user creation"
 #         click on a user name from list of users
 #     Expected:
-#         All fields but the "User Id" field in the User Details area should be active. The "User Id" field should be greyed-out (read-only).
+#         All fields but the "User Id" field in user Details area should be active. The "User Id" field should be greyed-out (read-only).
 #     Actions:
 #         Change Email Address, Full Name fields
 #         Change the roles assigned to user
@@ -170,7 +170,7 @@ Feature: User Management
 #     Expected:
 #         The old username should not be on list of users
 #         The new username should be on list of users
-#         The user details should contain the changed values
+#         user details should contain the changed values
 #         The newly selected roles should be selected
 #
 # User Deletion
@@ -194,10 +194,10 @@ Feature: User Management
 #     Expected:
 #         User should not appear on list of users
 #         Text should appear that user was deleted successfully
-#         The user details area should not display details for any user
+#         user details area should not display details for any user
 #     Actions:
 #         Click the Log Out button
-#         Fill in the username and password of the deleted user
+#         Fill in username and password of the deleted user
 #     Expected:
 #         Error message explaining "Invalid email/password combination"
 #
@@ -206,7 +206,7 @@ Feature: User Management
 #     Actions:
 #         login as administrative user
 #         go to collectionspace/ui/html/administration.html
-#         Select the user you are logged in as, from the users list
+#         Select user you are logged in as, from users list
 #     Expected:
 #         No delete button should appear
 #
@@ -257,7 +257,7 @@ Feature: User Management
 #         click Administration tab
 #     Expected:
 #         New user should be on list
-#         The user should contain the user details you entered
+#         user should contain user details you entered
 #
 # Scenario: "Don't Save" functionality of confirmation dialog when leaving page after unsaved changes
 #
@@ -304,7 +304,7 @@ Feature: User Management
 #         Click Save
 #     Expected:
 #         A successfully saved message should appear
-#         Status should be active on the user list to the left
+#         Status should be active on user list to the left
 #     Actions:
 #         click the log out link top right corner of screen
 #         attempt to login using activated user
@@ -316,7 +316,7 @@ Feature: User Management
 #     Actions:
 #         login as administrative user
 #         go to collectionspace/ui/html/administration.html
-#         click on the user you logged in as on the list to the left
+#         click on user you logged in as on the list to the left
 #     Expected:
 #         The status select-box should be missing or disabled
 #         The delete button should be disabled
@@ -339,7 +339,7 @@ Feature: User Management
 #
 #     Actions:
 #         If you haven't already, follow the steps in "Scenario: Search area prerequisite" (should only be done once)
-#         go to the user administration
+#         go to user administration
 #         Variation 1: enter "Big" in the find area (Scenario full word)
 #         Variation 2: enter "big" in the find area (Scenario case sensitivity)
 #         Variation 3: enter "big lebowski" in the find area (Scenario multiple words)
@@ -349,7 +349,7 @@ Feature: User Management
 #         Variation 7: enter "" in the find area
 #         click find user
 #     Expected
-#         The user "The Big Lebowski" should appear on list of users
+#         user "The Big Lebowski" should appear on list of users
 #
 # Scenario: Show All users button
 #
@@ -357,7 +357,7 @@ Feature: User Management
 #         Continue from Scenario (or login as administrative user, go to user administration pages)
 #         enter "snth" in the find area
 #     Expected:
-#         The user "The Big Lebowski" should not appear on list of users
+#         user "The Big Lebowski" should not appear on list of users
 #         The Show all users button should be visible
 #     Actions:
 #         Click the Show all users button
@@ -413,4 +413,4 @@ Feature: User Management
 #         enter "Big" in the find area
 #         Hit the enter button
 #     Expected
-#         The user "The Big Lebowski" should appear on list of users (ie. enter should trigger search) (known bug: CSPACE-3817)
+#         user "The Big Lebowski" should appear on list of users (ie. enter should trigger search) (known bug: CSPACE-3817)

@@ -29,7 +29,7 @@ Feature: Group Secondary Tab
       And user fills in required fields for "Group" record
       And user enters "ian" in the "Cataloging" "Group Owner" vocab field
       And user adds "ian" to "Local Persons"
-      And the user saves the record
+      And user saves the record
     Then the record entry should be displayed under "Related Group Records"
       And user clicks on related record entry "transpleb"
     Then the "Cancel changes" button at the bottom of the record should not be clickable
@@ -37,11 +37,11 @@ Feature: Group Secondary Tab
     Then the "Delete this relation." button at the bottom of the record should be clickable
     Then the "Delete this relation." button at the top of the record should be clickable
       And user selects the "Current Record" tab
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
       And user enters "Gnerar" in the top nav search field 
       And selects "Cataloging" from top nav search record type select field
-      And the user clicks on result with text "Gnerar"
+      And user clicks on result with text "Gnerar"
     Then the titlebar should contain "Cataloging"
     Then "transpleb" should appear in the Procedures sidebar
       And user clicks on "transpleb" from Procedures sidebar

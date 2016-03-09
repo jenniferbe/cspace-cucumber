@@ -14,7 +14,7 @@ Feature: Person Vocabulary Data Entry
       And clicks on the Create button
     Then the titlebar should contain "Local Person"
       And user enters "Pat Smaller" in the "Person" "Display Name" field
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
     Then "Pat Smaller" should be in the "Person" "Display Name" field
     Then the titlebar should contain "Local Person"
@@ -28,7 +28,7 @@ Feature: Person Vocabulary Data Entry
         And clicks on the Create button		
       Then the titlebar should contain "ULAN Persons"		
         And user enters "Joe Bean Jr" in the "Person" "Display Name" field		
-        And the user saves the record		
+        And user saves the record		
       Then the record is successfully saved		
       Then "Joe Bean Jr" should be in the "Person" "Display Name" field		
       Then the titlebar should contain "ULAN Person"		
@@ -49,7 +49,7 @@ Feature: Person Vocabulary Data Entry
         And selects "<vocabulary>" from the top nav search vocabulary select field		
         And clicks on the top nav search submit button		
       Then the search results should contain "<result>"		
-        And the user clicks on result with text "<result>"		
+        And user clicks on result with text "<result>"		
       Then "<result>" should be in the "Person" "Display Name" field		
       Then the titlebar should contain "<vocabulary>"		
       Then close the browser		
@@ -67,7 +67,7 @@ Feature: Person Vocabulary Data Entry
         And user enters "<text>" in the "Cataloging" "<field>" vocab field		
       Then the vocabulary autocomplete should contain "<options>"		
         And user clicks on "<choice>" from autocomplete options		
-        And the user saves the record		
+        And user saves the record		
       Then the record is successfully saved		
       Then "<choice>" should be in the "Cataloging" "<field>" vocab field		
       Then "<choice>" should appear in the Terms Used sidebar		
@@ -83,7 +83,7 @@ Feature: Person Vocabulary Data Entry
     Scenario: Display Name		
       Given user is on a blank "Person" record		
         And user enters "James" in the "Person" "Forename" field		
-        And the user saves the record		
+        And user saves the record		
       Then the error message bar should appear with "Please specify a Display Name"		
         And user clicks OK to cancel error message		
         And user enters "James Earl Jones" in the "Person" "Display Name" field		
@@ -100,11 +100,11 @@ Feature: Person Vocabulary Data Entry
       Given user is on a blank "Person" record		
         And user repeats all repeatable fields		
         And user fills in all the fields of the "Person" record		
-        And the user saves the record		
+        And user saves the record		
       Then the record is successfully saved		
       Then all fields in "Person" record should be filled in		
         And user clears all fields of the "Person" record		
-        And the user saves the record		
+        And user saves the record		
       Then all fields of the "Person" record should be empty		
       Then close the browser		
 		
@@ -112,20 +112,20 @@ Feature: Person Vocabulary Data Entry
       Given user is on a blank "Person" record		
         And user enters "Delete Me" in the "Person" "Display Name" field		
       Then the "delete" button should not be clickable		
-        And the user saves the record		
+        And user saves the record		
       Then the record is successfully saved		
         And user clicks on the delete button		
-      Then delete confirmation dialogue should appear		
+      Then delete confirmation dialog should appear		
         And user clicks cancel button		
       Then "Delete Me" should be in the "Person" "Display Name" field		
         And user clicks on the delete button		
-      Then delete confirmation dialogue should appear		
+      Then delete confirmation dialog should appear		
         And user clicks close button		
       Then "Delete Me" should be in the "Person" "Display Name" field		
         And user clicks on the delete button		
-      Then delete confirmation dialogue should appear		
+      Then delete confirmation dialog should appear		
         And user clicks the confirmation delete button		
-      Then deletion should be confirmed in a dialogue		
+      Then deletion should be confirmed in a dialog		
         And user clicks delete confirmation OK button		
         And user enters "Delete Me" in the top nav search field		
         And clicks on the top nav search submit button		

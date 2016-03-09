@@ -13,8 +13,8 @@ Feature: Advanced_Search - Extras
       And user enters "James Adams" in the "Object Exit" "Depositor" vocab field
       And user clicks on "James Adams" from autocomplete options
       And user enters "Goodbye" in the "Object Exit" "Exit Note" field
-      And the user saves the record
-    Then the record is saved successfully
+      And user saves the record
+    Then the record is successfully saved
     Then close the browser
 
   #Test1

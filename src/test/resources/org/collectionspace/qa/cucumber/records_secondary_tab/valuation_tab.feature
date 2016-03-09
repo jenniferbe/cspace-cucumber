@@ -5,9 +5,9 @@ Feature: Valuation Tab
   	# Enter feature description here
 # And user clicks the "___" button
   	Scenario: Working Valuation Control Secondary Tab #1
-		Given the user is in the "My CollectionSpace" page
+		Given user is in the "My CollectionSpace" page
 	   
-	    And user goes to the record with identification number "CQA116_E" #not empty
+	    And user goes to the record with identification number "CQA116_E"
 	    And user selects the "Valuation" tab	    
 	    Then the "Related Valuation Control Records" area should be empty
 	   
@@ -18,8 +18,8 @@ Feature: Valuation Tab
 	    Then close the browser
 
 
-  	Scenario: Dismissing the dialogue #3 
-		Given the user is in the "My CollectionSpace" page
+  	Scenario: Dismissing the dialog #3 
+		Given user is in the "My CollectionSpace" page
 		And user goes to the record with identification number "CQA116_NE"
 
 		#Variation A
@@ -29,7 +29,7 @@ Feature: Valuation Tab
 
 	    #Variation B
 	    And user clicks the "Add record" button
-	    And the user presses the "ESC" key 
+	    And user presses the "ESC" key 
 	    Then the "Related Valuation Control Records" area should only contain "CQA116.1"
 
 
@@ -39,42 +39,42 @@ Feature: Valuation Tab
 	    Then the search results should contain "CQA116.3" 
 	    Then the search results should contain "CQA116.2" 
 
-	    And the user selects the box with result "CQA116.3" 
-	    And the user selects the box with result "CQA116.2"  
-	    And user clicks the "Add to current record" button #needs Step def #7
+	    And user selects the box with result "CQA116.3" 
+	    And user selects the box with result "CQA116.2"  
+	    And user clicks the "Add to current record" button  
 
 	    #Expected, Group #1
-	    Then the dialogue should be dismissed 
+	    Then the dialog should be dismissed 
 	    Then "CQA116.3" should appear in the "Related Valuation Control Records" area
 	    Then "CQA116.2" should appear in the "Related Valuation Control Records" area 
 	    Then "CQA116.3" should appear in the "Procedures" area 
 	    Then "CQA116.2" should appear in the "Procedures" area 
 
 
-	    And the user clicks on result with text "CQA116.3" 
+	    And user clicks on result with text "CQA116.3" 
 	    Then an "Edit Valuation Control Record" form should be displayed 
 	    Then the "Valuation Control Reference Number" field should contain "CQA116.3"
 	    And user clicks the "Delete this relation." button
-	    Then a delete confirmation dialogue should appear
-	    And the user clicks the delete button 
-	    Then the deletion should be confirmed in a dialogue
+	    Then a delete confirmation dialog should appear
+	    And user clicks the delete button 
+	    Then the deletion should be confirmed in a dialog
 	    Then "CQA116.3" should not appear in the "Related Valuation Control Records" area 
 
 
-	    And the user clicks on result with text "CQA116.2" 
+	    And user clicks on result with text "CQA116.2" 
 	    Then an "Edit Valuation Control Record" form should be displayed 
 	    Then the "Valuation Control Reference Number" field should contain "CQA116.2"
 	    And user clicks the "Delete this relation." button
-	    Then a delete confirmation dialogue should appear
-	    And the user clicks the delete button 
-	    Then the deletion should be confirmed in a dialogue
+	    Then a delete confirmation dialog should appear
+	    And user clicks the delete button 
+	    Then the deletion should be confirmed in a dialog
 	    Then "CQA116.2" should not appear in the "Related Valuation Control Records" area 
 
 	    Then close the browser
 
 
-  	Scenario: Warning when navigating away from new Valuation Control record #7
-		Given the user is in the "My CollectionSpace" page
+  	Scenario: Warning when navigating away from new Valuation Control record 
+		Given user is in the "My CollectionSpace" page
 		And user goes to the record with identification number "CQA116_NE"
 	    Then "CQA116_NE" should be in the "Identification Number" field
 	    And user selects the "Valuation" tab 
@@ -82,7 +82,7 @@ Feature: Valuation Tab
 	    And user clicks the "Add record" button
 		And user clicks the "Create New" button
 		
-		Then the dialogue should be dismissed
+		Then the dialog should be dismissed
 		Then the message "Creating new record..." should be displayed
 	    
 		Then the "Valuation Control Reference Number" field should be empty
@@ -91,15 +91,15 @@ Feature: Valuation Tab
 
 	    #Variation A
     	And user selects the "Current Record" tab
-	    Then a leave confirmation dialogue should appear 
+	    Then a leave confirmation dialog should appear 
 	    And user clicks the "close" button  
 	    Then the "Valuation Control Reference Number" field should contain "CQA116.4"
 
 
 		#Variation B
 		And user selects the "Current Record" tab
-	    Then a leave confirmation dialogue should appear #needs StepDef
-	    And user clicks the "cancel" button  #might not work
+	    Then a leave confirmation dialog should appear
+	    And user clicks the "cancel" button
 	    Then the "Valuation Control Reference Number" field should contain "CQA116.4"
 
 	    ## Variation D
@@ -120,17 +120,17 @@ Feature: Valuation Tab
 	    Then "CQA116.4" should appear in the "Related Valuation Control Records" area 
 
 	    And user goes to the record with identification number "CQA116.4"
-	    And the user clicks the delete button
-	    Then a delete confirmation dialogue should appear
-	    And the user clicks the delete button 
-	    Then the deletion should be confirmed in a dialogue
+	    And user clicks the delete button
+	    Then a delete confirmation dialog should appear
+	    And user clicks the delete button 
+	    Then the deletion should be confirmed in a dialog
 	    Then close the browser
 
  	Scenario: Cancel changes button #9
-		Given the user is in the "My CollectionSpace" page
+		Given user is in the "My CollectionSpace" page
 		And user goes to the record with identification number "CQA116_NE"
 		And user selects the "Valuation" tab
-	    And user clicks the "Add record" button #needs step def
+	    And user clicks the "Add record" button 
 	    And user clicks the "Create new" button
 
 	    # Variation A
@@ -138,12 +138,12 @@ Feature: Valuation Tab
 	   	Then the "cancel changes" button at the bottom of the page should not be clickable
 	    Then the "cancel changes" button at the top of the page should not be clickable
 	    
-	    And user enters "CQA116.5" in the "Valuation Control Reference Number" field #might not work
+	    And user enters "CQA116.5" in the "Valuation Control Reference Number" field
 	    And user clicks the "cancel changes" button 
     	Then the "Valuation Control Reference Number" field should be empty
 
 	    # Variation B
-	    And user enters "CQA116.5" in the "Valuation Control Reference Number" field #might not work
+	    And user enters "CQA116.5" in the "Valuation Control Reference Number" field
 	    And user clicks the "save" button 
 	    Then the "cancel changes" button at the top of the page should not be clickable 
     	Then the "cancel changes" button at the bottom of the page should not be clickable 
@@ -151,9 +151,9 @@ Feature: Valuation Tab
    
 	    And user clicks the "Go to record" button
 	    And user clicks the "Delete" button 
-	    Then a delete confirmation dialogue should appear
-	    And the user clicks the confirmation delete button
-	    Then a deletion should be confirmed in a dialogue
+	    Then a delete confirmation dialog should appear
+	    And user clicks the confirmation delete button
+	    Then a deletion should be confirmed in a dialog
 
 	    Then close the browser
 
@@ -166,11 +166,11 @@ Feature: Valuation Tab
 
         And user clicks the "+ Add Record" button
         And clicks on the Create button
-        And the user saves the record # click the save button
-        Then the message "Please specify a Valuation Control Reference Number" should appear #fail
+        And user saves the record
+        Then the message "Please specify a Valuation Control Reference Number" should appear
         And user enters "CQA116.11" in the "Evaluation Control Reference Number" field
         And user saves the record
-        Then the message "Relation successfully created." should appear #success!
+        Then the message "Relation successfully created." should appear
 
         And user selects "Danish Krone" from the "Currency" drop down box
         And user enters "116" in the "Amount" field
@@ -181,7 +181,7 @@ Feature: Valuation Tab
         And user selects "Current Value" from the "Type" drop down box
         And user enters "CQA116 \n Test" in the "Note" field
         And user saves the record
-        Then the message "Valuation Control successfully saved" should appear #success!
+        Then the message "Valuation Control successfully saved" should appear
 
         Then the "Currency" field should contain "Danish Krone"
         Then the "Amount" field should contain "116"
@@ -209,7 +209,7 @@ Feature: Valuation Tab
         And user enters "CQA116 \n Test \n for subtest Test 13" in the "Note" field
         
         And user saves the record
-        Then the message "Valuation Control successfully saved" should appear #success!
+        Then the message "Valuation Control successfully saved" should appear
 
         Then the "Currency" field should contain "Euro"
         Then the "Amount" field should contain "120"
@@ -220,17 +220,17 @@ Feature: Valuation Tab
         Then the "Note" field should contain "CQA116 \n Test \n for subtest Test 13"	    
 	    And user clicks the "Go To Record" button
 	    And user clicks the "Delete" button 
-	    Then delete confirmation dialogue should appear
+	    Then delete confirmation dialog should appear
 	    And user clicks on the delete button
         Then close the browser
 
 
 
 	Scenario: Testing links and "Go To Record" works #23
-	    Given the user is in the "My CollectionSpace" page
+	    Given user is in the "My CollectionSpace" page
 	    And user goes to the record with identification number "CQA116_NE"
 	    And user selects the "Valuation" tab
-	    And the user clicks on result with text "CQA116.1"
+	    And user clicks on result with text "CQA116.1"
 	    Then the "Valuation Control Reference Number" field should contain "CQA116.1"
 	    And user clicks the "Go to record" button
 	    Then the titlebar should contain "CQA116.1"
@@ -238,76 +238,76 @@ Feature: Valuation Tab
 	    Then close the browser	
 
 	Scenario: Deleting relation via list #25
-		Given the user is in the "My CollectionSpace" page
+		Given user is in the "My CollectionSpace" page
 	    And user goes to the record with identification number "CQA116_NE"
 	    And user selects the "Valuation" tab 
 
-	    And user clicks the "Add record" button #needs step def
+	    And user clicks the "Add record" button 
 	    And clicks on the Create button
-	    And user enters "CQA116.7" in the "Valuation Control Reference Number" field #might not work 
-	    And the user saves the record
+	    And user enters "CQA116.7" in the "Valuation Control Reference Number" field
+	    And user saves the record
 	    
-	    And user clicks the "Delete Relation" button on the row that reads "CQA116.7" #Green "X" button. Needs step def
-	    Then delete confirmation dialogue should appear # Then the dialogue should appear asking you to delete this relation
+	    And user clicks the "Delete Relation" button on the row that reads "CQA116.7"
+	    Then delete confirmation dialog should appear
 	    And user clicks cancel button
-	    Then the dialogue should be dismissed #needs Step def
+	    Then the dialog should be dismissed 
 	    Then the "Related Valuation Control Records" area should contain "CQA116.7"
 
-	    And user clicks the "Delete Relation" button on the row that reads "CQA116.7" #Green "X" button. Needs step def. Again
-	    Then delete confirmation dialogue should appear
-	    And user clicks the "close" button # close button == close symbol? #Needs stepdef???
-	    Then the dialogue should be dismissed
+	    And user clicks the "Delete Relation" button on the row that reads "CQA116.7"
+	    Then delete confirmation dialog should appear
+	    And user clicks the "close" button
+	    Then the dialog should be dismissed
 	    Then the "Related Valuation Control Records" area should contain "CQA116.7"
 
 
-	    And user clicks the "Delete Relation" button on the row that reads "CQA116.7" #Green "X" button. Needs step def. Last time.
-	    Then delete confirmation dialogue should appear
+	    And user clicks the "Delete Relation" button on the row that reads "CQA116.7"
+	    Then delete confirmation dialog should appear
 	    And user clicks on the delete button
-	    Then "CQA116.7" should not appear in the "Procedures" sidebar #needs StepDef #notlogged
-	    Then "CQA116.7" should not appear in the "Related Valuation Control Records" area #needs Stepdef #not logged
+	    Then "CQA116.7" should not appear in the "Procedures" sidebar
+	    Then "CQA116.7" should not appear in the "Related Valuation Control Records" area
 
     	And user goes to the record with identification number "CQA116.7"
         And user selects the "Valuation" tab 
-	    Then "CQA116_NE" should not appear in the "Related Valuation Control Records" area  #needs Stepdef
+	    Then "CQA116_NE" should not appear in the "Related Valuation Control Records" area
 	    And user selects the "Current Record" tab
 
-	    And the user clicks the delete button
-	    Then a delete confirmation dialogue should appear
-	    And the user clicks the delete button 
-	    Then the deletion should be confirmed in a dialogue
+	    And user clicks the delete button
+	    Then a delete confirmation dialog should appear
+	    And user clicks the delete button 
+	    Then the deletion should be confirmed in a dialog
 	    Then close the browser
 
 
 	Scenario: Deleting relation via record editor #27
-		Given the user is in the "My CollectionSpace" page
+		Given user is in the "My CollectionSpace" page
 	    And user goes to the record with identification number "CQA116_NE"
 	    Then "CQA116_NE" should be in the "Identification Number" field
 
 	    And user selects the "Valuation" tab 
-	    And user clicks the "Add record" button #needs step def
+	    And user clicks the "Add record" button 
 	    And clicks on the Create button
-	    And user enters "CQA116.8" in the "Valuation Control Reference Number" field #might not work 
-	    And the user saves the record
-	    And the user clicks on result with text "CQA116.8"
+	    And user enters "CQA116.8" in the "Valuation Control Reference Number" field
+	    And user saves the record
+	    And user clicks on result with text "CQA116.8"
 	    
 	    And user clicks the "Delete this relation" button
-	    Then a delete confirmation dialogue should appear #needs Stepdef
-	    And user clicks cancel button # click cancel
-	    Then the dialogue should be dismissed #needs stepdef
+	    Then a delete confirmation dialog should appear
+	    And user clicks cancel button
+	    Then the dialog should be dismissed
 	    Then the "Related Valuation Control Records" area should contain "CQA116.8"
 
 	    And user clicks the "Delete this relation" button
-	    Then a delete confirmation dialogue should appear #needs Stepdef
-	    And user clicks close button # close button == close symbol?
-	    Then the dialogue should be dismissed #needs stepdef
+	    Then a delete confirmation dialog should appear
+	    And user clicks close button
+	    Then the dialog should be dismissed
 	    Then the "Related Valuation Control Records" area should contain "CQA116.8"
 
 	    And user clicks the "Delete this relation" button
-	    Then a delete confirmation dialogue should appear #needs Step
-	    And the user clicks the delete button 
-	    Then the deletion should be confirmed in a dialogue
+	    Then a delete confirmation dialog should appear
+	    And user clicks the delete button 
+	    Then the deletion should be confirmed in a dialog
 	    # Then the record editor should no longer be displayed (below list)
-	    Then "CQA116.8" should not appear in the "Procedures" area  #needs Stepdef
+	    Then "CQA116.8" should not appear in the "Procedures" area 
 	    Then "CQA116.8" should not appear in the "Related Valuation Control Records" area
 
 	    And user goes to the record with identification number "CQA116.8"
@@ -315,10 +315,10 @@ Feature: Valuation Tab
 	    Then the "Related Valuation Control Records" area should be empty
 	    
 	    And user selects the "Current Record" tab 
-	    And the user clicks the delete button
-	    Then a delete confirmation dialogue should appear
-	    And the user clicks the delete button 
-	    Then the deletion should be confirmed in a dialogue
+	    And user clicks the delete button
+	    Then a delete confirmation dialog should appear
+	    And user clicks the delete button 
+	    Then the deletion should be confirmed in a dialog
 	    Then close the browser 
 
 

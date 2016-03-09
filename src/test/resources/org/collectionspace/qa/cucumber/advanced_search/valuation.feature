@@ -18,7 +18,7 @@ Feature: Advanced Search - Valuation
       And user enters "sarcastish" in the "Valuation Control" "Source" vocab field
       And user adds "sarcastish" to "Local Persons" 
       And user enters "textbook" in the "Valuation Control" "Note" field
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
       And user clicks on link to "Advanced Search" in upper right corner
     Then the titlebar should contain "Advanced Search"
@@ -125,8 +125,8 @@ Feature: Advanced Search - Valuation
     Then a drop down list should appear in the "Type" row
       And user selects "Current Value" from dropdown in "Type" row
       And user enters "testtest" in the "Valuation Control" "Note" field
-      And the user saves the record
-    Then the record is saved successfully
+      And user saves the record
+    Then the record is successfully saved
     Given user is on the "Create New" page
       And selects the "Valuation Control" radio button on the Create New page
       And clicks on the Create button
@@ -138,8 +138,8 @@ Feature: Advanced Search - Valuation
     Then a drop down list should appear in the "Type" row
       And user selects "Current Value" from dropdown in "Type" row
       And user enters "testtest" in the "Valuation Control" "Note" field
-      And the user saves the record
-    Then the record is saved successfully
+      And user saves the record
+    Then the record is successfully saved
     Given user is on the "Create New" page
       And selects the "Valuation Control" radio button on the Create New page
       And clicks on the Create button
@@ -151,8 +151,8 @@ Feature: Advanced Search - Valuation
     Then a drop down list should appear in the "Type" row
       And user selects "Original Value" from dropdown in "Type" row
       And user enters "testtest" in the "Valuation Control" "Note" field
-      And the user saves the record
-    Then the record is saved successfully
+      And user saves the record
+    Then the record is successfully saved
       And user clicks on link to "Advanced Search" in upper right corner
     Then the titlebar should contain "Advanced Search"
       And user selects "Valuation Control" from record type dropdown

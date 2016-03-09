@@ -5,9 +5,9 @@ Feature: Exhibition Planning Tab
   # Enter feature description here
 
  	Scenario: Working Exhibition Secondary Tab #1
-        Given the user is in the "My CollectionSpace" page
+        Given user is in the "My CollectionSpace" page
        
-        And user goes to the record with identification number "CQA105_E" #not empty
+        And user goes to the record with identification number "CQA105_E"
         And user selects the "Exhibition" tab     
         Then the "Related Exhibition Records" area should be empty
        
@@ -17,8 +17,8 @@ Feature: Exhibition Planning Tab
 
         Then close the browser
 
-	Scenario: Dismissing the dialogue #3
-        Given the user is in the "My CollectionSpace" page
+	Scenario: Dismissing the dialog #3
+        Given user is in the "My CollectionSpace" page
         And user goes to the record with identification number "CQA105_NE"
 
         #Variation A
@@ -28,7 +28,7 @@ Feature: Exhibition Planning Tab
 
         #Variation B
         And user clicks the "Add record" button
-        And the user presses the "ESC" key 
+        And user presses the "ESC" key 
         Then the "Related Exhibition Records" area should only contain "CQA105.1"
 
 
@@ -38,40 +38,40 @@ Feature: Exhibition Planning Tab
         Then the search results should contain "CQA105.3" 
         Then the search results should contain "CQA105.2" 
 
-        And the user selects the box with result "CQA105.3" 
-        And the user selects the box with result "CQA105.2"  
-        And user clicks the "Add to current record" button #needs Step def #7
+        And user selects the box with result "CQA105.3" 
+        And user selects the box with result "CQA105.2"  
+        And user clicks the "Add to current record" button
 
         #Expected, Group #1
-        Then the dialogue should be dismissed 
+        Then the dialog should be dismissed 
         Then "CQA105.3" should appear in the "Related Exhibition Records" area
         Then "CQA105.2" should appear in the "Related Exhibition Records" area 
         Then "CQA105.3" should appear in the "Procedures" area 
         Then "CQA105.2" should appear in the "Procedures" area 
 
 
-        And the user clicks on result with text "CQA105.3" 
+        And user clicks on result with text "CQA105.3" 
         Then an "Edit Exhibition Record" form should be displayed 
         Then the "Exhibition Number" field should contain "CQA105.3"
         And user clicks the "Delete this relation." button
-        Then a delete confirmation dialogue should appear
-        And the user clicks the delete button 
-        Then the deletion should be confirmed in a dialogue
+        Then a delete confirmation dialog should appear
+        And user clicks the delete button 
+        Then the deletion should be confirmed in a dialog
         Then "CQA105.3" should not appear in the "Related Exhibition Records" area 
 
 
-        And the user clicks on result with text "CQA105.2" 
+        And user clicks on result with text "CQA105.2" 
         Then an "Edit Exhibition Record" form should be displayed 
         Then the "Exhibition Number" field should contain "CQA105.2"
         And user clicks the "Delete this relation." button
-        Then a delete confirmation dialogue should appear
-        And the user clicks the delete button 
-        Then the deletion should be confirmed in a dialogue
+        Then a delete confirmation dialog should appear
+        And user clicks the delete button 
+        Then the deletion should be confirmed in a dialog
         Then "CQA105.2" should not appear in the "Related Exhibition Records" area 
         Then close the browser
 
-	Scenario: Warning when navigating away from new Exhibition record #7
-        Given the user is in the "My CollectionSpace" page
+	Scenario: Warning when navigating away from new Exhibition record 
+        Given user is in the "My CollectionSpace" page
         And user goes to the record with identification number "CQA105_NE"
         Then "CQA105_NE" should be in the "Identification Number" field
         And user selects the "Exhibition" tab 
@@ -79,7 +79,7 @@ Feature: Exhibition Planning Tab
         And user clicks the "Add record" button
         And user clicks the "Create New" button
         
-        Then the dialogue should be dismissed
+        Then the dialog should be dismissed
         Then the message "Creating new record..." should be displayed
         
         Then the "Exhibition Number" field should be empty
@@ -88,15 +88,15 @@ Feature: Exhibition Planning Tab
 
         #Variation A
         And user selects the "Current Record" tab
-        Then a leave confirmation dialogue should appear 
+        Then a leave confirmation dialog should appear 
         And user clicks the "close" button  
         Then the "Exhibition Number" field should contain "CQA105.4"
 
 
         #Variation B
         And user selects the "Current Record" tab
-        Then a leave confirmation dialogue should appear #needs StepDef
-        And user clicks the "cancel" button  #might not work
+        Then a leave confirmation dialog should appear  
+        And user clicks the "cancel" button
         Then the "Exhibition Number" field should contain "CQA105.4"
 
         ## Variation D
@@ -117,14 +117,14 @@ Feature: Exhibition Planning Tab
         Then "CQA105.4" should appear in the "Related Exhibition Records" area 
 
         And user goes to the record with identification number "CQA105.4"
-        And the user clicks the delete button
-        Then a delete confirmation dialogue should appear
-        And the user clicks the delete button 
-        Then the deletion should be confirmed in a dialogue
+        And user clicks the delete button
+        Then a delete confirmation dialog should appear
+        And user clicks the delete button 
+        Then the deletion should be confirmed in a dialog
         Then close the browser
 
 	Scenario: Cancel Changes button #9
-        Given the user is in the "My CollectionSpace" page
+        Given user is in the "My CollectionSpace" page
         And user goes to the record with identification number "CQA105_NE"
         And user selects the "Exhibition" tab
         And user clicks the "Add record" button
@@ -148,9 +148,9 @@ Feature: Exhibition Planning Tab
    
         And user clicks the "Go to record" button
         And user clicks the "Delete" button 
-        Then a delete confirmation dialogue should appear
-        And the user clicks the confirmation delete button
-        Then a deletion should be confirmed in a dialogue
+        Then a delete confirmation dialog should appear
+        And user clicks the confirmation delete button
+        Then a deletion should be confirmed in a dialog
         Then close the browser
 
 
@@ -163,11 +163,11 @@ Feature: Exhibition Planning Tab
 
         And user clicks the "+ Add Record" button
         And clicks on the Create button
-        And the user saves the record # click the save button
-        Then the message "Please specify an Exhibition Number" should appear #fail
+        And user saves the record
+        Then the message "Please specify an Exhibition Number" should appear
         And user enters "CQA105.11" in the "Exhibition Number" field
         And user saves the record
-        Then the message "Relation successfully created." should appear #success!
+        Then the message "Relation successfully created." should appear
       
 
         And user enters "CQA105_Test_11" in the "Exhibition Title" field
@@ -204,7 +204,7 @@ Feature: Exhibition Planning Tab
         And user enters "CQA105.11.4" in the "Location" field
         And user enters "CQA105.11.5" in the "Objects" field
         And user enters "CQA105.11.6" in the "Remarks" field
-        And user selects "Labels written" from the "Status" drop down box #Conflicting status boxes?
+        And user selects "Labels written" from the "Status" drop down box
         And user enters "2016-05-05" in the "Status Date" field
         And user enters "CQA105.11.6" in the "Remarks" field
         And user enters "Yes" in the "Object" field
@@ -219,7 +219,7 @@ Feature: Exhibition Planning Tab
         And user enters "CQA105.11.12" in the "Note" field
 
         And user saves the record
-        Then the message "Exhibition successfully saved" should appear #succes
+        Then the message "Exhibition successfully saved" should appear
 
         Then the "Exhibition Title" field should contain "CQA105_Test_11"
         Then the "Exhibition Type" field should contain "Permanent"
@@ -295,7 +295,7 @@ Feature: Exhibition Planning Tab
         And user enters "CQA105.11.13.4" in the "Location" field
         And user enters "CQA105.11.13.5" in the "Objects" field
         And user enters "CQA105.11.13.6" in the "Remarks" field
-        And user selects "Labels written" from the "Status" drop down box #Conflicting status boxes?
+        And user selects "Labels written" from the "Status" drop down box
         And user enters "2017-05-05" in the "Status Date" field
         And user enters "CQA105.11.13.6" in the "Remarks" field
         And user enters "No" in the "Object" field
@@ -310,7 +310,7 @@ Feature: Exhibition Planning Tab
         And user enters "CQA105.11.13.12" in the "Note" field
 
         And user saves the record
-        Then the message "Exhibition successfully saved" should appear #succes
+        Then the message "Exhibition successfully saved" should appear
 
         Then the "Exhibition Title" field should contain "CQA105_Test_11 Test 13"
         Then the "Exhibition Type" field should contain "Temporary"
@@ -352,9 +352,9 @@ Feature: Exhibition Planning Tab
         Then the "Case" field should contain "CQA105.11.13.9"
         And user clicks the "Go To Record" button        
         And user clicks the "Delete" button
-        Then a delete confirmation dialogue should appear
-        And the user clicks the delete button 
-        Then the deletion should be confirmed in a dialogue        
+        Then a delete confirmation dialog should appear
+        And user clicks the delete button 
+        Then the deletion should be confirmed in a dialog        
         Then close the browser
 
 
@@ -362,10 +362,10 @@ Feature: Exhibition Planning Tab
 		#skip
 
 	Scenario: Testing links and "Go To Record" works #23
-        Given the user is in the "My CollectionSpace" page
+        Given user is in the "My CollectionSpace" page
         And user goes to the record with identification number "CQA105_NE"
         And user selects the "Exhibition" tab 
-        And the user clicks on result with text "CQA105.1"
+        And user clicks on result with text "CQA105.1"
         Then the "Exhibition Number" field should contain "CQA105.1"
         And user clicks the "Go to record" button
         Then the titlebar should contain "CQA105.1"
@@ -373,74 +373,74 @@ Feature: Exhibition Planning Tab
         Then close the browser  
 
 	Scenario: Deleting Relation via list #25
-        Given the user is in the "My CollectionSpace" page
+        Given user is in the "My CollectionSpace" page
         And user goes to the record with identification number "CQA105_NE"
         And user selects the "Exhibition" tab 
 
         And user clicks the "Add record" button
         And clicks on the Create button
         And user enters "CQA105.7" in the "Exhibition Number" field
-        And the user saves the record
+        And user saves the record
         
-        And user clicks the "Delete Relation" button on the row that reads "CQA105.7" #Green "X" button. Needs step def
-        Then delete confirmation dialogue should appear # Then the dialogue should appear asking you to delete this relation
+        And user clicks the "Delete Relation" button on the row that reads "CQA105.7"
+        Then delete confirmation dialog should appear
         And user clicks cancel button
-        Then the dialogue should be dismissed
+        Then the dialog should be dismissed
         Then the "Related Exhibition Records" area should contain "CQA105.7"
 
-        And user clicks the "Delete Relation" button on the row that reads "CQA105.7" #Green "X" button. Needs step def. Again
-        Then delete confirmation dialogue should appear
-        And user clicks the "close" button # close button == close symbol? #Needs stepdef???
-        Then the dialogue should be dismissed
+        And user clicks the "Delete Relation" button on the row that reads "CQA105.7". Again
+        Then delete confirmation dialog should appear
+        And user clicks the "close" button
+        Then the dialog should be dismissed
         Then the "Related Exhibition Records" area should contain "CQA105.7"
 
 
-        And user clicks the "Delete Relation" button on the row that reads "CQA105.7" #Green "X" button. Needs step def. Last time.
-        Then delete confirmation dialogue should appear
+        And user clicks the "Delete Relation" button on the row that reads "CQA105.7". Last time.
+        Then delete confirmation dialog should appear
         And user clicks on the delete button
         Then "CQA105.7" should not appear in the "Procedures" area
-        Then "CQA105.7" should not appear in the "Related Exhibition Records" area #needs Stepdef #not logged
+        Then "CQA105.7" should not appear in the "Related Exhibition Records" area
 
         And user goes to the record with identification number "CQA105.7"
         And user selects the "Exhibition" tab 
-        Then "CQA105_NE" should not appear in the "Related Exhibition Records" area  #needs Stepdef
+        Then "CQA105_NE" should not appear in the "Related Exhibition Records" area   
         And user selects the "Current Record" tab
 
-        And the user clicks the delete button
-        Then a delete confirmation dialogue should appear
-        And the user clicks the delete button 
-        Then the deletion should be confirmed in a dialogue
+        And user clicks the delete button
+        Then a delete confirmation dialog should appear
+        And user clicks the delete button 
+        Then the deletion should be confirmed in a dialog
         Then close the browser
 
-	Scenario: Deleting relation via record editor #27 Given the user is in the "My CollectionSpace" page
+	Scenario: Deleting relation via record editor #27 Given user is in the "My CollectionSpace" page
         And user goes to the record with identification number "CQA105_NE"
         Then "CQA105_NE" should be in the "Identification Number" field
 
         And user selects the "Exhibition" tab 
-        And user clicks the "Add record" button #needs step def
+        And user clicks the "Add record" button 
         And clicks on the Create button
-        And user enters "CQA105.8" in the "Exhibition Number" field #might not work 
-        And the user saves the record
-        And the user clicks on result with text "CQA105.8"
+        And user enters "CQA105.8" in the "Exhibition Number" field
+        And user saves the record
+        And user clicks on result with text "CQA105.8"
         
         And user clicks the "Delete this relation" button
-        Then a delete confirmation dialogue should appear #needs Stepdef
-        And user clicks cancel button # click cancel
-        Then the dialogue should be dismissed #needs stepdef
+        Then a delete confirmation dialog should appear  
+        And user clicks cancel button
+        Then the dialog should be dismissed  
         Then the "Related Exhibition Records" area should contain "CQA105.8"
 
         And user clicks the "Delete this relation" button
-        Then a delete confirmation dialogue should appear #needs Stepdef
-        And user clicks close button # close button == close symbol?
-        Then the dialogue should be dismissed #needs stepdef
+        Then a delete confirmation dialog should appear  
+        And user clicks close button
+        Then the dialog should be dismissed  
         Then the "Related Exhibition Records" area should contain "CQA105.8"
 
         And user clicks the "Delete this relation" button
-        Then a delete confirmation dialogue should appear #needs Step
-        And the user clicks the delete button 
-        Then the deletion should be confirmed in a dialogue
+        Then a delete confirmation dialog should appear
+        And user clicks the delete button 
+        Then the deletion should be confirmed in a dialog
         # Then the record editor should no longer be displayed (below list)
-        Then "CQA105.8" should not appear in the "Procedures" area  #needs Stepdef
+        Then "CQA105.8" should not appear in the "Procedures" area   
         Then "CQA105.8" should not appear in the "Related Exhibition Records" area
 
         And user goes to the record with identification number "CQA105.8"
@@ -448,35 +448,35 @@ Feature: Exhibition Planning Tab
         Then the "Related Exhibition Records" area should be empty
         
         And user selects the "Current Record" tab 
-        And the user clicks the delete button
-        Then a delete confirmation dialogue should appear
-        And the user clicks the delete button 
-        Then the deletion should be confirmed in a dialogue
+        And user clicks the delete button
+        Then a delete confirmation dialog should appear
+        And user clicks the delete button 
+        Then the deletion should be confirmed in a dialog
         Then close the browser 
 
 	Scenario: Testing functional Accessibility #31
-	    Given the user is in the "My CollectionSpace" page
+	    Given user is in the "My CollectionSpace" page
 	    And user goes to the record with identification number "CQA105_NE"
 	    And user selects the "Exhibition" tab 
 
-	    And the user presses the "Tab" key until reaching the "Add record" button  #needs Stepdef
-	    And the user presses the "Enter" key #needs Stepdef
-	    And the user presses the "Tab" key until reaching the "Create" button #needs Stepdef
-	    And the user presses the "Enter" key #needs Stepdef
-	    And the user presses the "Tab" key until reaching the "Run" button #needs Stepdef
-	    Then everything should have been clickable #needs Stepdef
-	    And user enters "CQA105.9" in the "Exhibition Number" field #might not work 
-	    And the user saves the record
-	    And the user presses the "Tab" key until reaching the text field containing "CQA105.9" #needs Stepdef
-	    Then the text field should be clickable  #needs Stepdef
+	    And user presses the "Tab" key until reaching the "Add record" button
+	    And user presses the "Enter" key
+	    And user presses the "Tab" key until reaching the "Create" button
+	    And user presses the "Enter" key  
+	    And user presses the "Tab" key until reaching the "Run" button
+	    Then everything should have been clickable  
+	    And user enters "CQA105.9" in the "Exhibition Number" field
+	    And user saves the record
+	    And user presses the "Tab" key until reaching the text field containing "CQA105.9"  
+	    Then the text field should be clickable   
 
 	    And selects "Exhibition" from the top nav search record type select field # And using the top right search area, select Exhibition from the drop down
 	    And user enters "CQA105.9" in the top nav search field
 	    Then the search results should contain "CQA105.9"
-	    And the user clicks on result with text "CQA105.9"
-	    Then "CQA105.9" should be in the "Identification Number" field   #needs Stepdef
-	    And the user clicks the delete button
-	    Then a delete confirmation dialogue should appear #needs Stepdef
-	    And the user clicks the delete button 
-	    Then the deletion should be confirmed in a dialogue
+	    And user clicks on result with text "CQA105.9"
+	    Then "CQA105.9" should be in the "Identification Number" field
+	    And user clicks the delete button
+	    Then a delete confirmation dialog should appear  
+	    And user clicks the delete button 
+	    Then the deletion should be confirmed in a dialog
 	    Then close the browser 

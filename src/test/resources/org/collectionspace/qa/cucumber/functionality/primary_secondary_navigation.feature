@@ -10,7 +10,7 @@ Feature: Navigating between Primary and Secondary Tabs
       And clicks on the Create button
     Then the titlebar should contain "Cataloging"
       And user enters "0923102" in the "Cataloging" "Identification Number" field
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
       And user enters "15" in the "Cataloging" "Number of Objects" field
       And user selects the "Acquisition" tab
@@ -36,7 +36,7 @@ Feature: Navigating between Primary and Secondary Tabs
       And user enters "0923102" in the top nav search field
       And selects "Cataloging" from the top nav search record type select field
       And clicks on the top nav search submit button
-      And the user clicks on result with text "0923102"
+      And user clicks on result with text "0923102"
     Then the titlebar should contain "Cataloging"
       And user enters "16" in the "Cataloging" "Number of Objects" field
       And user selects the "Cataloging" tab
@@ -61,7 +61,7 @@ Feature: Navigating between Primary and Secondary Tabs
       And user enters "0923102" in the top nav search field
       And selects "Cataloging" from the top nav search record type select field
       And clicks on the top nav search submit button
-      And the user clicks on result with text "0923102"
+      And user clicks on result with text "0923102"
     Then the titlebar should contain "Cataloging"
       And user enters "17" in the "Cataloging" "Number of Objects" field
       And user selects the "Condition" tab
@@ -86,7 +86,7 @@ Feature: Navigating between Primary and Secondary Tabs
       And user enters "0923102" in the top nav search field
       And selects "Cataloging" from the top nav search record type select field
       And clicks on the top nav search submit button
-      And the user clicks on result with text "0923102"
+      And user clicks on result with text "0923102"
     Then the titlebar should contain "Cataloging"
       And user enters "18" in the "Cataloging" "Number of Objects" field
       And user selects the "Exhibition" tab
@@ -111,7 +111,7 @@ Feature: Navigating between Primary and Secondary Tabs
       And user enters "0923102" in the top nav search field
       And selects "Cataloging" from the top nav search record type select field
       And clicks on the top nav search submit button
-      And the user clicks on result with text "0923102"
+      And user clicks on result with text "0923102"
     Then the titlebar should contain "Cataloging"
       And user enters "19" in the "Cataloging" "Number of Objects" field
       And user selects the "Intake" tab
@@ -136,7 +136,7 @@ Feature: Navigating between Primary and Secondary Tabs
       And user enters "0923102" in the top nav search field
       And selects "Cataloging" from the top nav search record type select field
       And clicks on the top nav search submit button
-      And the user clicks on result with text "0923102"
+      And user clicks on result with text "0923102"
     Then the titlebar should contain "Cataloging"
       And user enters "20" in the "Cataloging" "Number of Objects" field
       And user selects the "Group" tab
@@ -161,7 +161,7 @@ Feature: Navigating between Primary and Secondary Tabs
       And user enters "0923102" in the top nav search field
       And selects "Cataloging" from the top nav search record type select field
       And clicks on the top nav search submit button
-      And the user clicks on result with text "0923102"
+      And user clicks on result with text "0923102"
     Then the titlebar should contain "Cataloging"
       And user enters "21" in the "Cataloging" "Number of Objects" field
       And user selects the "Loan In" tab
@@ -186,7 +186,7 @@ Feature: Navigating between Primary and Secondary Tabs
       And user enters "0923102" in the top nav search field
       And selects "Cataloging" from the top nav search record type select field
       And clicks on the top nav search submit button
-      And the user clicks on result with text "0923102"
+      And user clicks on result with text "0923102"
     Then the titlebar should contain "Cataloging"
       And user enters "22" in the "Cataloging" "Number of Objects" field
       And user selects the "Loan Out" tab
@@ -211,7 +211,7 @@ Feature: Navigating between Primary and Secondary Tabs
       And user enters "0923102" in the top nav search field
       And selects "Cataloging" from the top nav search record type select field
       And clicks on the top nav search submit button
-      And the user clicks on result with text "0923102"
+      And user clicks on result with text "0923102"
     Then the titlebar should contain "Cataloging"
       And user enters "23" in the "Cataloging" "Number of Objects" field
       And user selects the "Media Handling" tab
@@ -236,7 +236,7 @@ Feature: Navigating between Primary and Secondary Tabs
       And user enters "0923102" in the top nav search field
       And selects "Cataloging" from the top nav search record type select field
       And clicks on the top nav search submit button
-      And the user clicks on result with text "0923102"
+      And user clicks on result with text "0923102"
     Then the titlebar should contain "Cataloging"
       And user enters "24" in the "Cataloging" "Number of Objects" field
       And user selects the "Loc/Mov/Inv" tab
@@ -261,7 +261,7 @@ Feature: Navigating between Primary and Secondary Tabs
       And user enters "0923102" in the top nav search field
       And selects "Cataloging" from the top nav search record type select field
       And clicks on the top nav search submit button
-      And the user clicks on result with text "0923102"
+      And user clicks on result with text "0923102"
     Then the titlebar should contain "Cataloging"
       And user enters "25" in the "Cataloging" "Number of Objects" field
       And user selects the "Object Exit" tab
@@ -286,7 +286,7 @@ Feature: Navigating between Primary and Secondary Tabs
       And user enters "0923102" in the top nav search field
       And selects "Cataloging" from the top nav search record type select field
       And clicks on the top nav search submit button
-      And the user clicks on result with text "0923102"
+      And user clicks on result with text "0923102"
     Then the titlebar should contain "Cataloging"
       And user enters "26" in the "Cataloging" "Number of Objects" field
       And user selects the "Valuation" tab
