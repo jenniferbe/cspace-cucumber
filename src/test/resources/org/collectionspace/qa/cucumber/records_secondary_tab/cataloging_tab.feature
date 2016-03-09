@@ -7,18 +7,18 @@ Feature: #Enter feature name here
 	Scenario: Working cataloging tab #1 
         Given user is in the "My CollectionSpace" page
        
-        And goes to the record with identification number "CQA99_E"
+        And navigates to the record with identification number "CQA99_E"
         And selects the "Cataloging" tab     
         Then the "Related Cataloging Records" area should be empty
        
-        And goes to the record with identification number "CQA99_NE"
+        And navigates to the record with identification number "CQA99_NE"
         And selects the "Cataloging" tab
         Then "CQA99.1" should appear in the "Related Cataloging Records" area
         Then close the browser
 
 	Scenario: Dismissing the dialog #3 
         Given user is in the "My CollectionSpace" page
-        And goes to the record with identification number "CQA99_NE"
+        And navigates to the record with identification number "CQA99_NE"
 
         #Variation A
         And clicks the "Add record" button
@@ -69,7 +69,7 @@ Feature: #Enter feature name here
 
 	Scenario: Warning when navigating away from new cataloging records  
         Given user is in the "My CollectionSpace" page
-        And goes to the record with identification number "CQA99_NE"
+        And navigates to the record with identification number "CQA99_NE"
         Then "CQA99_NE" should be in the "Identification Number" field
         And selects the "Cataloging" tab 
         
@@ -110,7 +110,7 @@ Feature: #Enter feature name here
         And selects the "Cataloging" tab 
         Then "CQA99.4" should appear in the "Related Cataloging Records" area 
 
-        And goes to the record with identification number "CQA99.4"
+        And navigates to the record with identification number "CQA99.4"
         And clicks on the delete button
         Then a delete confirmation dialog should appear
         And clicks on the delete button 
@@ -119,7 +119,7 @@ Feature: #Enter feature name here
 
 	Scenario: Cancel changes button #9 
         Given user is in the "My CollectionSpace" page
-        And goes to the record with identification number "CQA99_NE"
+        And navigates to the record with identification number "CQA99_NE"
         And selects the "Cataloging" tab
         And clicks the "Add record" button 
         And clicks the "Create new" button
@@ -149,7 +149,7 @@ Feature: #Enter feature name here
 	Scenario: Ensure all fields are properly saved #13 
         # Scenario: Test 11--> Successful save
         Given user is on the "My CollectionSpace" page 
-        And goes to the record with identification number "CQA99_NE" 
+        And navigates to the record with identification number "CQA99_NE" 
         And selects the "Cataloging" tab 
 
         And clicks the "+ Add Record" button
@@ -896,7 +896,7 @@ Feature: #Enter feature name here
 
 	Scenario: Testing links and "Go To Record" works #23 
         Given user is in the "My CollectionSpace" page
-        And goes to the record with identification number "CQA99_NE"
+        And navigates to the record with identification number "CQA99_NE"
         And selects the "Cataloging" tab
         And clicks on result with text "CQA99.1"
         Then the "Identification Number" field should contain "CQA99.1"
@@ -907,7 +907,7 @@ Feature: #Enter feature name here
 
 	Scenario: Deleting relation via list #25 
         Given user is in the "My CollectionSpace" page
-        And goes to the record with identification number "CQA99_NE"
+        And navigates to the record with identification number "CQA99_NE"
         And selects the "Cataloging" tab 
 
         And clicks the "Add record" button
@@ -933,7 +933,7 @@ Feature: #Enter feature name here
         Then "CQA99.7" should not appear in the "Procedures" area
         Then "CQA99.7" should not appear in the "Related Cataloging Records" area
 
-        And goes to the record with identification number "CQA99.7"
+        And navigates to the record with identification number "CQA99.7"
         And selects the "Cataloging" tab 
         Then "CQA99_NE" should not appear in the "Related Cataloging Records" area   
         And selects the "Current Record" tab
@@ -946,7 +946,7 @@ Feature: #Enter feature name here
 
 	Scenario: Deleting relation via record editor #27 
         Given user is in the "My CollectionSpace" page
-        And goes to the record with identification number "CQA99_NE"
+        And navigates to the record with identification number "CQA99_NE"
         Then "CQA99_NE" should be in the "Identification Number" field
 
         And selects the "Cataloging" tab 
@@ -976,7 +976,7 @@ Feature: #Enter feature name here
         Then "CQA99.8" should not appear in the "Procedures" area   
         Then "CQA99.8" should not appear in the "Related Cataloging Records" area
 
-        And goes to the record with identification number "CQA99.8"
+        And navigates to the record with identification number "CQA99.8"
         And selects the "Cataloging" tab 
         Then the "Related Cataloging Records" area should be empty
         

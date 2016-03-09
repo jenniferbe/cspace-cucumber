@@ -82,7 +82,7 @@ Feature: Advanced Search ­ Condition Check
         And saves the record
 
 
-        And goes to the "Create New" page 
+        And navigates to the "Create New" page 
  		And selects the "Condition Check" radio button on the Create New page
         And enters "CQA73.3" in the "Condition Check/Assessment Reference Number" field
         And selects "Low" from the "Object Audit Category" drop down box
@@ -90,7 +90,7 @@ Feature: Advanced Search ­ Condition Check
         And enters "testtest" in the "Display Recommendations" field
         And saves the record        
       
-        And goes to the "Create New" page 
+        And navigates to the "Create New" page 
  		And selects the "Condition Check" radio button on the Create New page
         And enters "CQA73.4" in the "Condition Check/Assessment Reference Number" field
         And selects "Low" from the "Object Audit Category" drop down box
@@ -141,22 +141,22 @@ Feature: Advanced Search ­ Condition Check
         Then the search results should contain "CQA73.3"
         Then the search results should not contain "CQA73.4"
 
-        And goes to the record with identification number "CQA73.1"
+        And navigates to the record with identification number "CQA73.1"
         And clicks the delete button
         Then a delete confirmation dialog should appear
         And clicks the delete button 
         Then the deletion should be confirmed in a dialog
-        And goes to the record with identification number "CQA73.2"
+        And navigates to the record with identification number "CQA73.2"
         And clicks the delete button
         Then a delete confirmation dialog should appear
         And clicks the delete button 
         Then the deletion should be confirmed in a dialog
-        And goes to the record with identification number "CQA73.3"
+        And navigates to the record with identification number "CQA73.3"
         And clicks the delete button
         Then a delete confirmation dialog should appear
         And clicks the delete button 
         Then the deletion should be confirmed in a dialog
-        And goes to the record with identification number "CQA73.3"
+        And navigates to the record with identification number "CQA73.3"
         And clicks the delete button
         Then a delete confirmation dialog should appear
         And clicks the delete button 

@@ -7,19 +7,19 @@ Feature: Object Exit Page Tab
   Scenario: Working Object Exit Secondary Tab #1
 		Given user is in the "My CollectionSpace" page
 	   
-	    And goes to the record with identification number "CQA115_E"
+	    And navigates to the record with identification number "CQA115_E"
 	    And selects the "Object Exit" tab	    
 	    Then the "Related Object Exit Records" area should be empty
 	   
 
-		And goes to the record with identification number "CQA115_NE"
+		And navigates to the record with identification number "CQA115_NE"
 	    And selects the "Object Exit" tab
 	    Then "CQA115.1" should appear in the "Related Object Exit Records" area
 	    Then close the browser
 
   Scenario: Dismissing the dialog #3
 		Given user is in the "My CollectionSpace" page
-		And goes to the record with identification number "CQA115_NE"
+		And navigates to the record with identification number "CQA115_NE"
 
 		#Variation A
 		And clicks the "Add record" button 
@@ -74,7 +74,7 @@ Feature: Object Exit Page Tab
 
   Scenario: Warning when navigating away from Object Exit record 
 		Given user is in the "My CollectionSpace" page
-		And goes to the record with identification number "CQA115_NE"
+		And navigates to the record with identification number "CQA115_NE"
 	    Then "CQA115_NE" should be in the "Identification Number" field
 	    And selects the "Object Exit" tab 
 	    
@@ -118,7 +118,7 @@ Feature: Object Exit Page Tab
 	    And selects the "Object Exit" tab 
 	    Then "CQA115.4" should appear in the "Related Object Exit Records" area 
 
-	    And goes to the record with identification number "CQA115.4"
+	    And navigates to the record with identification number "CQA115.4"
 	    And clicks the delete button
 	    Then a delete confirmation dialog should appear
 	    And clicks the delete button 
@@ -127,7 +127,7 @@ Feature: Object Exit Page Tab
 
   Scenario: Cancel changes button #9
 		Given user is in the "My CollectionSpace" page
-		And goes to the record with identification number "CQA115_NE"
+		And navigates to the record with identification number "CQA115_NE"
 		And selects the "Object Exit" tab
 	    And clicks the "Add record" button 
 	    And clicks the "Create new" button
@@ -159,7 +159,7 @@ Feature: Object Exit Page Tab
 
         # Scenario: Test 11--> Successful save
         Given user is on the "My CollectionSpace" page 
-        And goes to the record with identification number "CQA115_NE"
+        And navigates to the record with identification number "CQA115_NE"
         And selects the "Object Exit" tab 
 
         And clicks the "+ Add Record" button
@@ -230,7 +230,7 @@ Feature: Object Exit Page Tab
 
   Scenario: Testing links and "Go To Record" works #23
 	    Given user is in the "My CollectionSpace" page
-	    And goes to the record with identification number "CQA115_NE"
+	    And navigates to the record with identification number "CQA115_NE"
 	    And selects the "Object Exit" tab 
 	    And clicks on result with text "CQA115.1"
 	    Then the "Exit Number" field should contain "CQA115.1"
@@ -240,7 +240,7 @@ Feature: Object Exit Page Tab
 
 	Scenario: Deleting relation via list #25
 		Given user is in the "My CollectionSpace" page
-	    And goes to the record with identification number "CQA115_NE"
+	    And navigates to the record with identification number "CQA115_NE"
 	    And selects the "Object Exit" tab 
 
 	    And clicks the "Add record" button 
@@ -266,7 +266,7 @@ Feature: Object Exit Page Tab
 	    Then "CQA115.7" should not appear in the "Procedures" area
 	    Then "CQA115.7" should not appear in the "Related Object Exit Records" area
 
-		And goes to the record with identification number "CQA115.7"
+		And navigates to the record with identification number "CQA115.7"
 	    And selects the "Object Exit" tab 
 	    Then "CQA115_NE" should not appear in the "Related Object Exit Records" area   
 	    And selects the "Current Record" tab
@@ -279,7 +279,7 @@ Feature: Object Exit Page Tab
 
 	Scenario: Deleting relation via record editor #27
 		Given user is in the "My CollectionSpace" page
-	    And goes to the record with identification number "CQA115_NE"
+	    And navigates to the record with identification number "CQA115_NE"
 	    Then "CQA115_NE" should be in the "Identification Number" field
 
 	    And selects the "Object Exit" tab 
@@ -309,7 +309,7 @@ Feature: Object Exit Page Tab
 	    Then "CQA115.8" should not appear in the "Procedures" area   
 	    Then "CQA115.8" should not appear in the "Related Object Exit Records" area
 
-	    And goes to the record with identification number "CQA115.8"
+	    And navigates to the record with identification number "CQA115.8"
 	    And selects the "Object Exit" tab 
 	    Then the "Related Object Exit Records" area should be empty
 	    

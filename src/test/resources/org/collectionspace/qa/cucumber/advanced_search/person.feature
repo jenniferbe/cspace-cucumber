@@ -121,7 +121,7 @@ Feature: Advanced Search - Person
       And clicks on link to "Advanced Search" in upper right corner
     Then the titlebar should contain "Advanced Search"
       And selects "Person" from record type dropdown
-      And enters today's date in the "Advanced Search" "Modified Date" field
+      And enters today's date in the "Modified Date" field
       And clicks the "Search" button
     Then the search results should contain "Fleet Foxes"
     Then close the browser

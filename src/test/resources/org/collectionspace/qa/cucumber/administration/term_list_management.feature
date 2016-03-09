@@ -138,11 +138,11 @@ Feature: Term List Management
   Scenario: Keyboard accessibility
     Given user is on the "Administration" page
       And tabs to "Term List Management" tab
-      And presses enter
+      And presses the "Enter" key
       And tabs to the "Administration" "Name" field
       And types "Keyboard only name"
       And tabs to the "+" button above the "Terms (values)" table
-      And presses enter
+      And presses the "Enter" key
     Then "Keyboard only name" should be in the "Administration" "Name" field
     Then there should be a blank row
     Then the "Save" button should be reachable

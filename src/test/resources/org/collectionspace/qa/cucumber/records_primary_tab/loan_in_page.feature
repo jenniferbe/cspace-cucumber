@@ -225,7 +225,7 @@ Feature: Loan In Page Testing
   	Given user is on the "Create New" page
     And selects the "Loan In" radio button on the Create New page
     And clicks on the Create button
-    And presses "Tab"
+    presses the "Tab" key
     # Then #the first field should be accessable
     When #user repeats pressing "Tab" on all repeatable fields
     # Then #all fields should be accessable
@@ -236,7 +236,7 @@ Feature: Loan In Page Testing
   	Given user is on the "Create New" page
     And selects the "Loan In" radio button on the Create New page
     And clicks on the Create button
-    And presses "Tab" #until reaching the "Depositor" field
+    presses the "Tab" key #until reaching the "Depositor" field
     And enters "James" in the "Depositor" field #possibly incorrect
     
     And close the browser

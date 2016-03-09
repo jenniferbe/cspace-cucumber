@@ -50,7 +50,7 @@ Feature: Supplementary Secondary Manual Acquisition Secondary Tab
 
   Scenario: Search to relate dialog
   	Given user is on the "Create New" page
-  	And goes to the record with identification number "CQA81"
+  	And navigates to the record with identification number "CQA81"
   	And clicks the "Add New" button
   	And presses the "Esc" key
   	Then the "Related Acquisition Records" area should only contain "	CQA81"
@@ -81,25 +81,25 @@ Feature: Supplementary Secondary Manual Acquisition Secondary Tab
 
     Scenario: Deleting Used Records
     	Given user is in the "Create New" page
-      And goes to the record with identification number "CQA81"
+      And navigates to the record with identification number "CQA81"
       And clicks the delete button
       Then a delete confirmation dialog should appear
       And clicks the delete button 
       Then the deletion should be confirmed in a dialog
 
-      And goes to the record with identification number "CQA81.2"
+      And navigates to the record with identification number "CQA81.2"
       And clicks the delete button
       Then a delete confirmation dialog should appear
       And clicks the delete button 
       Then the deletion should be confirmed in a dialog
 
-      And goes to the record with identification number "CQA81.3"
+      And navigates to the record with identification number "CQA81.3"
       And clicks the delete button
       Then a delete confirmation dialog should appear
       And clicks the delete button 
       Then the deletion should be confirmed in a dialog
       
-      And goes to the record with identification number "CQA81.4"
+      And navigates to the record with identification number "CQA81.4"
       And clicks the delete button
       Then a delete confirmation dialog should appear
       And clicks the delete button 

@@ -7,11 +7,11 @@ Feature: Intake Tab
   Scenario: user will be working in the Intake Secondary Tab. They Will then try to add a record and is able to dismiss the dialog.
 
     Given user is on the "My CollectionSpace" page 
-    And goes to the record with identification number "04131995"
+    And navigates to the record with identification number "04131995"
     And selects the "Intake" tab 
     Then "041319951" should appear in the "Related Intake Records" area
 
-    And goes to the record with identification number "CQA110_E"
+    And navigates to the record with identification number "CQA110_E"
     And selects the "Intake" tab 
     Then the "Related Intake Records" area should be empty
 
@@ -98,7 +98,7 @@ Feature: Intake Tab
 
     
 
-    And goes to the record with identification number "04131995"
+    And navigates to the record with identification number "04131995"
     And selects the "Intake" tab 
 
     And clicks the "Add record" button
@@ -110,7 +110,7 @@ Feature: Intake Tab
     And selects the "Intake" tab 
     Then "041319953.4" should appear in the "Related Intake Records" area 
 
-    And goes to the record with identification number "041319953.4"
+    And navigates to the record with identification number "041319953.4"
     And clicks the delete button
     Then a delete confirmation dialog should appear
     And clicks the delete button 
@@ -120,7 +120,7 @@ Feature: Intake Tab
   # Test 9
   Scenario: Testing the cancel changes button
     Given user is in the "My CollectionSpace" page
-    And goes to the record with identification number "04131995"
+    And navigates to the record with identification number "04131995"
     Then "04131995" should be in the "Identification Number" field
 
     And selects the "Intake" tab 
@@ -155,7 +155,7 @@ Feature: Intake Tab
     # Test 11 
     Scenario: Check Intake Entry Number and successful save
         Given user is on the "My CollectionSpace" page 
-        And goes to the record with identification number "04131995"
+        And navigates to the record with identification number "04131995"
         And selects the "Intake" tab 
 
         And clicks the "+ Add Record" button
@@ -352,7 +352,7 @@ Feature: Intake Tab
   # Test 23
   Scenario: Testing links and "Go To Record" works 
     Given user is in the "My CollectionSpace" page
-    And goes to the record with identification number "04131995"
+    And navigates to the record with identification number "04131995"
     And selects the "Intake" tab 
     And clicks on result with text "041319951"
     Then the "Intake Entry Number" field should contain "041319951"
@@ -364,7 +364,7 @@ Feature: Intake Tab
   # Test 25
   Scenario: Deleting relation via list
     Given user is in the "My CollectionSpace" page
-    And goes to the record with identification number "04131995"
+    And navigates to the record with identification number "04131995"
 
 
     And selects the "Intake" tab 
@@ -392,7 +392,7 @@ Feature: Intake Tab
     Then "0413199525" should not appear in the "Procedures" area 
     Then "0413199525" should not appear in the "Related Intake Records" area
 
-    And goes to the record with identification number "0413199525"
+    And navigates to the record with identification number "0413199525"
     And clicks the delete button
     Then a delete confirmation dialog should appear
     And clicks the delete button 
@@ -403,7 +403,7 @@ Feature: Intake Tab
   # Test 27
   Scenario: Deleting relation via record editor
     Given user is in the "My CollectionSpace" page
-    And goes to the record with identification number "04131995"
+    And navigates to the record with identification number "04131995"
 
     And selects the "Intake" tab 
     And clicks the "Add record" button 
@@ -432,7 +432,7 @@ Feature: Intake Tab
     Then "0413199527" should not appear in the "Procedures" area  
     Then "0413199527" should not appear in the "Related Intake Records" area
 
-    And goes to the record with identification number "0413199527"
+    And navigates to the record with identification number "0413199527"
     And selects the "Intake" tab 
     Then the "Related Intake Records" area should be empty
     And selects the "Current Record" tab 

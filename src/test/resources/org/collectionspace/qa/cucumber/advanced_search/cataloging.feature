@@ -239,7 +239,7 @@ Feature: Advanced Search ­Cataloging
         And enters "testtest" in the "Brief Description" field
         And saves the record
 
-        And goes to the "Create New" page 
+        And navigates to the "Create New" page 
         And selects the "Cataloging" radio button on the Create New page
         And enters "CQA72.3" in the "Cataloging/Assessment Reference Number" field
         And selects "Study Collection" from the "Collection" drop down box
@@ -247,7 +247,7 @@ Feature: Advanced Search ­Cataloging
         And enters "testtest" in the "Distinguishing Features" field
         And saves the record     
     
-        And goes to the "Create New" page 
+        And navigates to the "Create New" page 
         And selects the "Cataloging" radio button on the Create New page
         And enters "CQA72.4" in the "Cataloging/Assessment Reference Number" field
         And selects "Study Collection" from the "Collection" drop down box
@@ -301,22 +301,22 @@ Feature: Advanced Search ­Cataloging
         Then the search results should not contain "CQA72.4"
 
 
-        And goes to the record with identification number "CQA72.1"
+        And navigates to the record with identification number "CQA72.1"
         And clicks the delete button
         Then a delete confirmation dialog should appear
         And clicks the delete button 
         Then the deletion should be confirmed in a dialog
-        And goes to the record with identification number "CQA72.2"
+        And navigates to the record with identification number "CQA72.2"
         And clicks the delete button
         Then a delete confirmation dialog should appear
         And clicks the delete button 
         Then the deletion should be confirmed in a dialog
-        And goes to the record with identification number "CQA72.3"
+        And navigates to the record with identification number "CQA72.3"
         And clicks the delete button
         Then a delete confirmation dialog should appear
         And clicks the delete button 
         Then the deletion should be confirmed in a dialog
-        And goes to the record with identification number "CQA72.3"
+        And navigates to the record with identification number "CQA72.3"
         And clicks the delete button
         Then a delete confirmation dialog should appear
         And clicks the delete button 

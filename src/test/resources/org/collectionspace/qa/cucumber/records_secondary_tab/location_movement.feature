@@ -6,18 +6,18 @@ Feature: Location/Movement/Inventory Control Tab
 
     Scenario: Working Location/Movement/Inventory Secondary Tab #1
         Given user is in the "My CollectionSpace" page
-        And goes to the record with identification number "CQA113_NE"
+        And navigates to the record with identification number "CQA113_NE"
         And selects the "Location/Movement/Inventory" tab
         Then "CQA113.1" should appear in the "Related Location/Movement/Inventory Records" area
      
-        And goes to the record with identification number "CQA113_E"
+        And navigates to the record with identification number "CQA113_E"
         And selects the "Location/Movement/Inventory" tab
         Then the "Related Location/Movement/Inventory" area should be empty
         Then close the browser
 
     Scenario: Dismissing the dialog 
         Given user is in the "My CollectionSpace" page
-        And goes to the record with identification number "CQA113_NE"
+        And navigates to the record with identification number "CQA113_NE"
 
         #Variation A
         And clicks the "Add record" button 
@@ -73,7 +73,7 @@ Feature: Location/Movement/Inventory Control Tab
 
     Scenario: Warning when navigating away from new Location/Movement/Inventory record 
         Given user is in the "My CollectionSpace" page
-        And goes to the record with identification number "CQA113_NE"
+        And navigates to the record with identification number "CQA113_NE"
         Then "CQA113_NE" should be in the "Identification Number" field
         And selects the "Location/Movement/Inventory" tab 
         
@@ -119,7 +119,7 @@ Feature: Location/Movement/Inventory Control Tab
         Then "CQA113.4" should appear in the "Related Location/Movement/Inventory Records" area 
 
         ## Deleting records so we can reuse
-        And goes to the record with identification number "CQA113.4"
+        And navigates to the record with identification number "CQA113.4"
         And clicks the delete button
         Then a delete confirmation dialog should appear
         And clicks the delete button 
@@ -130,7 +130,7 @@ Feature: Location/Movement/Inventory Control Tab
 
     Scenario: Cancel changes button #9
         Given user is in the "My CollectionSpace" page
-        And goes to the record with identification number "CQA113_NE"
+        And navigates to the record with identification number "CQA113_NE"
         And selects the "Location/Movement/Inventory" tab
         And clicks the "Add record" button 
         And clicks the "Create new" button
@@ -170,7 +170,7 @@ Feature: Location/Movement/Inventory Control Tab
 
         # Scenario: Test 11--> Successful save
         Given user is on the "My CollectionSpace" page 
-        And goes to the record with identification number "CQA113_NE"
+        And navigates to the record with identification number "CQA113_NE"
         And selects the "Location/Movement/Inventory" tab 
 
         And clicks the "+ Add Record" button
@@ -279,7 +279,7 @@ Feature: Location/Movement/Inventory Control Tab
 
     Scenario: Testing links and "Go To Record" works
         Given user is in the "My CollectionSpace" page
-        And goes to the record with identification number "CQA113_NE"
+        And navigates to the record with identification number "CQA113_NE"
         And selects the "Location/Movement/Inventory" tab
         Then "CQA113.1" should appear in the "Related Location/Movement/Inventory Records" area   
         And clicks on result with text "CQA113.1"
@@ -291,7 +291,7 @@ Feature: Location/Movement/Inventory Control Tab
 
     Scenario: Deleting relation via list
         Given user is in the "My CollectionSpace" page
-        And goes to the record with identification number "CQA113_NE"
+        And navigates to the record with identification number "CQA113_NE"
         And selects the "Location/Movement/Inventory" tab 
 
         And clicks the "Add record" button 
@@ -319,7 +319,7 @@ Feature: Location/Movement/Inventory Control Tab
         Then "CQA113.7" should not appear in the "Procedures" area
         Then "CQA113.7" should not appear in the "Related Location/Movement/Inventory Records" area
 
-        And goes to the record with identification number "CQA113.6"
+        And navigates to the record with identification number "CQA113.6"
         And selects the "Location/Movement/Inventory" tab 
         Then "CQA113_NE" should not appear in the "Related Location/Movement/Inventory Records" area   
         And selects the "Current Record" tab
@@ -333,7 +333,7 @@ Feature: Location/Movement/Inventory Control Tab
 
     Scenario: Deleting relation via record editor
         Given user is in the "My CollectionSpace" page
-        And goes to the record with identification number "CQA113_NE"
+        And navigates to the record with identification number "CQA113_NE"
         Then "CQA113_NE" should be in the "Identification Number" field
 
         And selects the "Location/Movement/Inventory" tab 
@@ -368,7 +368,7 @@ Feature: Location/Movement/Inventory Control Tab
 
 
 
-        And goes to the record with identification number "CQA113.8"
+        And navigates to the record with identification number "CQA113.8"
         And selects the "Location/Movement/Inventory" tab 
         Then the "Related Location/Movement/Inventory Records" area should be empty
         

@@ -7,11 +7,11 @@ Feature: Loan Out Tab
 	Scenario: Working Loan Out Secondary Tab #Test 1
 		Given user is in the "My CollectionSpace" page
 	   
-	    And goes to the record with identification number "CQA112_E"
+	    And navigates to the record with identification number "CQA112_E"
    	    And selects the "Loan Out" tab
 	    Then the "Related Loan Out Records" area should be empty
 
-		And goes to the record with identification number "CQA112_NE"
+		And navigates to the record with identification number "CQA112_NE"
 	    And selects the "Loan Out" tab
 	    Then "CQA112.1" should appear in the "Related Loan Out Records" area
 
@@ -19,7 +19,7 @@ Feature: Loan Out Tab
 
 	Scenario: Dismissing the dialog #Test 3
 		Given user is in the "My CollectionSpace" page
-		And goes to the record with identification number "CQA112_NE"
+		And navigates to the record with identification number "CQA112_NE"
  
 		#Variation A
 		And clicks the "Add record" button 
@@ -73,7 +73,7 @@ Feature: Loan Out Tab
 
 	Scenario: Warning when navigating away from new Loan Out record #Test 7 
 		Given user is in the "My CollectionSpace" page
-		And goes to the record with identification number "CQA112_NE"
+		And navigates to the record with identification number "CQA112_NE"
 	    Then "CQA112_NE" should be in the "Identification Number" field
 	    And selects the "Loan Out" tab 
 	    
@@ -117,7 +117,7 @@ Feature: Loan Out Tab
 		    And selects the "Loan Out" tab 
 		    Then "CQA112.4" should appear in the "Related Loan Out Records" area 
 
-		    And goes to the record with identification number "CQA112.4"
+		    And navigates to the record with identification number "CQA112.4"
 		    And clicks the delete button
 		    Then a delete confirmation dialog should appear
 		    And clicks the delete button 
@@ -126,7 +126,7 @@ Feature: Loan Out Tab
 
 	Scenario: Cancel changes button #Test 9
 		Given user is in the "My CollectionSpace" page
-		And goes to the record with identification number "CQA112_NE"
+		And navigates to the record with identification number "CQA112_NE"
 		And selects the "Loan Out" tab
 	    And clicks the "Add record" button 
 	    And use clicks the "Create new" button
@@ -161,7 +161,7 @@ Feature: Loan Out Tab
 
         # Scenario: Test 11--> Successful save
         Given user is on the "My CollectionSpace" page 
-        And goes to the record with identification number "CQA112_NE"
+        And navigates to the record with identification number "CQA112_NE"
         And selects the "Loan Out" tab 
 
         And clicks the "+ Add Record" button
@@ -274,7 +274,7 @@ Feature: Loan Out Tab
 
 	Scenario: Testing links and "Go To Record" works #Test 23
 	    Given user is in the "My CollectionSpace" page
-	    And goes to the record with identification number "CQA112_NE"
+	    And navigates to the record with identification number "CQA112_NE"
 	    And selects the "Loan Out" tab 
 	    And clicks on result with text "CQA112.1"
 	    Then the "Loan Out Number" field should contain "CQA112.1"
@@ -285,7 +285,7 @@ Feature: Loan Out Tab
 
 	Scenario: Deleting relation via list #Test 25
 		Given user is in the "My CollectionSpace" page
-	    And goes to the record with identification number "CQA112_NE"
+	    And navigates to the record with identification number "CQA112_NE"
 	    And selects the "Loan Out" tab 
 
 	    And clicks the "Add record" button 
@@ -312,7 +312,7 @@ Feature: Loan Out Tab
 	    Then "CQA112.7" should not appear in the "Procedures" area
 	    Then "CQA112.7" should not appear in the "Related Loan Out Records" area
 
-    	And goes to the record with identification number "CQA112.7"
+    	And navigates to the record with identification number "CQA112.7"
         And selects the "Loan Out" tab 
 	    Then "CQA112_NE" should not appear in the "Related Loan Out Records" area   
 	    And selects the "Current Record" tab
@@ -325,7 +325,7 @@ Feature: Loan Out Tab
 
 	Scenario: Deleting relation via record editor #Test 27
 		Given user is in the "My CollectionSpace" page
-	    And goes to the record with identification number "CQA112_NE"
+	    And navigates to the record with identification number "CQA112_NE"
 	    Then "CQA112_NE" should be in the "Identification Number" field
 
 	    And selects the "Loan Out" tab 
@@ -355,7 +355,7 @@ Feature: Loan Out Tab
 	    Then "CQA112.8" should not appear in the "Procedures" area   
 	    Then "CQA112.8" should not appear in the "Related Loan Out Records" area
 
-	    And goes to the record with identification number "CQA112.8"
+	    And navigates to the record with identification number "CQA112.8"
 	    And selects the "Loan Out" tab 
 	    Then the "Related Loan Out Records" area should be empty
 	    

@@ -7,11 +7,11 @@ Feature: Valuation Tab
   	Scenario: Working Valuation Control Secondary Tab #1
 		Given user is in the "My CollectionSpace" page
 	   
-	    And goes to the record with identification number "CQA116_E"
+	    And navigates to the record with identification number "CQA116_E"
 	    And selects the "Valuation" tab	    
 	    Then the "Related Valuation Control Records" area should be empty
 	   
-		And goes to the record with identification number "CQA116_NE"
+		And navigates to the record with identification number "CQA116_NE"
 	    And selects the "Valuation" tab
 	    Then "CQA116.1" should appear in the "Related Valuation Control Records" area
 
@@ -20,7 +20,7 @@ Feature: Valuation Tab
 
   	Scenario: Dismissing the dialog #3 
 		Given user is in the "My CollectionSpace" page
-		And goes to the record with identification number "CQA116_NE"
+		And navigates to the record with identification number "CQA116_NE"
 
 		#Variation A
 		And clicks the "Add record" button 
@@ -75,7 +75,7 @@ Feature: Valuation Tab
 
   	Scenario: Warning when navigating away from new Valuation Control record 
 		Given user is in the "My CollectionSpace" page
-		And goes to the record with identification number "CQA116_NE"
+		And navigates to the record with identification number "CQA116_NE"
 	    Then "CQA116_NE" should be in the "Identification Number" field
 	    And selects the "Valuation" tab 
 	    
@@ -119,7 +119,7 @@ Feature: Valuation Tab
 	    And selects the "Valuation" tab 
 	    Then "CQA116.4" should appear in the "Related Valuation Control Records" area 
 
-	    And goes to the record with identification number "CQA116.4"
+	    And navigates to the record with identification number "CQA116.4"
 	    And clicks the delete button
 	    Then a delete confirmation dialog should appear
 	    And clicks the delete button 
@@ -128,7 +128,7 @@ Feature: Valuation Tab
 
  	Scenario: Cancel changes button #9
 		Given user is in the "My CollectionSpace" page
-		And goes to the record with identification number "CQA116_NE"
+		And navigates to the record with identification number "CQA116_NE"
 		And selects the "Valuation" tab
 	    And clicks the "Add record" button 
 	    And clicks the "Create new" button
@@ -161,7 +161,7 @@ Feature: Valuation Tab
 	Scenario: Check Valuation Control Reference Number and successful save  And All fields saved on edited Valuation Control record #13
         # Scenario: Test 11--> Successful save
         Given user is on the "My CollectionSpace" page 
-        And goes to the record with identification number "CQA116_NE"
+        And navigates to the record with identification number "CQA116_NE"
         And selects the "Valuation" tab 
 
         And clicks the "+ Add Record" button
@@ -228,7 +228,7 @@ Feature: Valuation Tab
 
 	Scenario: Testing links and "Go To Record" works #23
 	    Given user is in the "My CollectionSpace" page
-	    And goes to the record with identification number "CQA116_NE"
+	    And navigates to the record with identification number "CQA116_NE"
 	    And selects the "Valuation" tab
 	    And clicks on result with text "CQA116.1"
 	    Then the "Valuation Control Reference Number" field should contain "CQA116.1"
@@ -239,7 +239,7 @@ Feature: Valuation Tab
 
 	Scenario: Deleting relation via list #25
 		Given user is in the "My CollectionSpace" page
-	    And goes to the record with identification number "CQA116_NE"
+	    And navigates to the record with identification number "CQA116_NE"
 	    And selects the "Valuation" tab 
 
 	    And clicks the "Add record" button 
@@ -266,7 +266,7 @@ Feature: Valuation Tab
 	    Then "CQA116.7" should not appear in the "Procedures" sidebar
 	    Then "CQA116.7" should not appear in the "Related Valuation Control Records" area
 
-    	And goes to the record with identification number "CQA116.7"
+    	And navigates to the record with identification number "CQA116.7"
         And selects the "Valuation" tab 
 	    Then "CQA116_NE" should not appear in the "Related Valuation Control Records" area
 	    And selects the "Current Record" tab
@@ -280,7 +280,7 @@ Feature: Valuation Tab
 
 	Scenario: Deleting relation via record editor #27
 		Given user is in the "My CollectionSpace" page
-	    And goes to the record with identification number "CQA116_NE"
+	    And navigates to the record with identification number "CQA116_NE"
 	    Then "CQA116_NE" should be in the "Identification Number" field
 
 	    And selects the "Valuation" tab 
@@ -310,7 +310,7 @@ Feature: Valuation Tab
 	    Then "CQA116.8" should not appear in the "Procedures" area 
 	    Then "CQA116.8" should not appear in the "Related Valuation Control Records" area
 
-	    And goes to the record with identification number "CQA116.8"
+	    And navigates to the record with identification number "CQA116.8"
 	    And selects the "Valuation" tab 
 	    Then the "Related Valuation Control Records" area should be empty
 	    
