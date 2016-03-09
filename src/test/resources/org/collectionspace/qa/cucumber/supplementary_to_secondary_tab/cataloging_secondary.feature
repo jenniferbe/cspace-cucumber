@@ -21,13 +21,13 @@ Feature: Supplementary Manual QA - Cataloging Secondary Tab
     # Then the top and bottom "Cancel" buttons are enabled
     # In a vocabulary field, either add an existing vocabulary term or create a new term
     # Make sure all required fields are filled out
-    And user saves the record
+    And saves the record
     # And the titlebar should not contain "Creating new record..."
     # entry for the new record should appear under the related records header
     # Select the record you just created
     Then the top and bottom "Cancel" buttons are disabled
     # Then the top and bottom "Delete" buttons are enabled
-    # And user enters "" in the top nav search fields
+    # And enters "" in the top nav search fields
         # Search for the record you just created via the Search box.
     # Click its link.
     # Verify that you can see a (newly) related, second record in the right sidebar.
@@ -61,5 +61,5 @@ Feature: Supplementary Manual QA - Cataloging Secondary Tab
     # And clicks any Secondary Tab
     # And clicks the "+ Add New" button
     # Tab through the form, to make sure everything is reachable and authorities and dates can be handled using the keyboard
-    And user saves the record
+    And saves the record
     # Make sure the link to the newly created record (in the listing in the top of the page) is reachable by keyboard

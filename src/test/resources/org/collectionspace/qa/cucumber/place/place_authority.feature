@@ -10,8 +10,8 @@ Feature: Place Authority Data Entry
     Then the list in the "Place" row should contain "Local Places, Thesaurus of Geographic Names (TGN)"
     And clicks on the Create button
     Then the titlebar should contain "Local Places"
-    And user enters "New York" in the "Place" "Display Name" field
-    And user saves the record
+    And enters "New York" in the "Place" "Display Name" field
+    And saves the record
     Then the record is successfully saved
     Then "New York" should be in the "Place" "Display Name" field
     Then the titlebar should contain "Local Places"
@@ -21,11 +21,11 @@ Feature: Place Authority Data Entry
     Given user is on the "Create New" page
     And selects the "Place" radio button on the Create New page
     Then a drop down list should appear in the "Place" row
-    And user selects "Thesaurus of Geographic Names (TGN)" from dropdown in "Place" row
+    And selects "Thesaurus of Geographic Names (TGN)" from dropdown in "Place" row
     And clicks on the Create button
     Then the titlebar should contain "Thesaurus of Geographic Names (TGN)"
-    And user enters "New York City" in the "Place" "Display Name" field
-    And user saves the record
+    And enters "New York City" in the "Place" "Display Name" field
+    And saves the record
     Then the record is successfully saved
     Then "New York City" should be in the "Place" "Display Name" field
     Then the titlebar should contain "Thesaurus of Geographic Names (TGN)"
@@ -33,7 +33,7 @@ Feature: Place Authority Data Entry
 
   Scenario: Searching for known records works as expected
     Given user is on the "My CollectionSpace" page
-    And user enters "New York" in the top nav search field
+    And enters "New York" in the top nav search field
     And selects "Place" from the top nav search record type select field
     And clicks on the top nav search submit button
     Then the search results should contain "New York; New York City"
@@ -41,12 +41,12 @@ Feature: Place Authority Data Entry
 
   Scenario Outline: Scoping search for known records works as expected
     Given user is on the "My CollectionSpace" page
-    And user enters "<searchTerm>" in the top nav search field
+    And enters "<searchTerm>" in the top nav search field
     And selects "<recordType>" from the top nav search record type select field
     And selects "<vocabulary>" from the top nav search vocabulary select field
     And clicks on the top nav search submit button
     Then the search results should contain "<result>"
-    And user clicks on result with text "<result>"
+    And clicks on result with text "<result>"
     Then "<result>" should be in the "<recordType>" "Display Name" field
     Then the titlebar should contain "<vocabulary>"
     Then close the browser

@@ -20,11 +20,11 @@ Feature: Supplementary Manual QA - Valuation
     Given user is on the "Create New" page
       And selects the "Valuation Control" radio button on the Create New page
       And clicks on the Create button
-      And user clicks Select number pattern
-      And user selects "Valuation Control" from dropdown in "Valuation Control Reference Number" row
+      And clicks Select number pattern
+      And selects "Valuation Control" from dropdown in "Valuation Control Reference Number" row
     Then enables top and bottom "cancel" buttons
-      And user clicks Select number pattern
-      And user selects "Valuation Control" from dropdown in "Valuation Control Reference Number" row
+      And clicks Select number pattern
+      And selects "Valuation Control" from dropdown in "Valuation Control Reference Number" row
     # cannot detect incrementing numbers (next line)
     Then the number pattern incremented by one should be in the "Valuation Control" "Valuation Control Reference Number" field
     Then enables top and bottom "cancel" buttons
@@ -34,8 +34,8 @@ Feature: Supplementary Manual QA - Valuation
     Given user is on the "Create New" page
       And selects the "Valuation Control" radio button on the Create New page
       And clicks on the Create button
-      And user enters "1234" in the "Valuation Control" "Valuation Control Reference Number" field
-      And user selects "Original Value" from dropdown in "Type" row
+      And enters "1234" in the "Valuation Control" "Valuation Control Reference Number" field
+      And selects "Original Value" from dropdown in "Type" row
     Then the titlebar should contain "Original Value"
     Then the titlebar should contain "testing"
     Then close the browser
@@ -44,8 +44,8 @@ Feature: Supplementary Manual QA - Valuation
     Given user is on the "Create New" page
       And selects the "Valuation Control" radio button on the Create New page
       And clicks on the Create button
-      And user enters "1234" in the "Valuation Control" "Vaulation Control Reference Number" field
-      And user saves the record
+      And enters "1234" in the "Valuation Control" "Vaulation Control Reference Number" field
+      And saves the record
     Then the record is successfully saved
     Then "GMT-0800 (PST)" should be displayed in the message bar
     Then disables top and bottom "cancel" buttons
@@ -55,18 +55,18 @@ Feature: Supplementary Manual QA - Valuation
   Scenario: Docking Title Bar
     Given user is on the "Create New" page
       And clicks on the Create button
-      And user enters "1234" in the "Valuation Control" "Valustion Control Reference Number" field
-      And user clicks the plus to repeat the "Amounts" form
-      And user clicks the plus to repeat the "Amounts" form
-      And user clicks the plus to repeat the "Amounts" form
-      And user clicks the plus to repeat the "Amounts" form
-      And user clicks the plus to repeat the "Amounts" form
-      And user clicks the plus to repeat the "Amounts" form
-      And user clicks the plus to repeat the "Amounts" form
-      And user clicks the plus to repeat the "Amounts" form
-      And user clicks the plus to repeat the "Amounts" form
+      And enters "1234" in the "Valuation Control" "Valustion Control Reference Number" field
+      And clicks the plus to repeat the "Amounts" form
+      And clicks the plus to repeat the "Amounts" form
+      And clicks the plus to repeat the "Amounts" form
+      And clicks the plus to repeat the "Amounts" form
+      And clicks the plus to repeat the "Amounts" form
+      And clicks the plus to repeat the "Amounts" form
+      And clicks the plus to repeat the "Amounts" form
+      And clicks the plus to repeat the "Amounts" form
+      And clicks the plus to repeat the "Amounts" form
       # cannot enable a scroll to bottom of page, following line is not defined
-      And user clicks on the "Renewal Date" field
+      And clicks on the "Renewal Date" field
     # not sure if titlebar term works for docking bar
     Then the titlebar should contain "1234"
     Then the titlebar should contain "Valuation Control"
@@ -89,9 +89,9 @@ Feature: Supplementary Manual QA - Valuation
     Given user is on the "Create New" page
       And selects the "Valuation Control" radio button on the Create New page
       And clicks on the Create button
-      And user enters "1.2.3.4.5" in the "Valuation Control" "Valuation Control Reference Number" field
-      And user adds "Foo Clan" to the "Valuation Control" "Source" vocab field
-      And user saves the record
+      And enters "1.2.3.4.5" in the "Valuation Control" "Valuation Control Reference Number" field
+      And adds "Foo Clan" to the "Valuation Control" "Source" vocab field
+      And saves the record
     Then the record is successfully saved
     Then disables top and bottom "cancel" buttons
     Then enables top and bottom "delete" buttons
@@ -99,15 +99,15 @@ Feature: Supplementary Manual QA - Valuation
     Then "Foo Clan" should appear in the Terms Used sidebar
     Then "person" should appear in the Terms Used sidebar
     Then "valueSource" should appear in the Terms Used sidebar
-      And user clicks on "Foo Clan" in the Terms Used sidebar
+      And clicks on "Foo Clan" in the Terms Used sidebar
     Then the titlebar should contain "Foo Clan"
     # Used By steps do not exist
     Then "1.2.3.4.5" should in the Used By sidebar
-      And user clicks on "1.2.3.4.5" in the Used By sidebar
+      And clicks on "1.2.3.4.5" in the Used By sidebar
     Then the titlebar should contain "1.2.3.4.5"
-      And user clicks on the delete button
-      And user clicks the confirmation delete button
-      And user clicks delete confirmation OK button
+      And clicks on the delete button
+      And clicks the confirmation delete button
+      And clicks delete confirmation OK button
     Then close the browser
 
 ## The remainder of this feature file, below, needs to be converted from narrative (broad declarative steps)

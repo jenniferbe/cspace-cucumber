@@ -11,23 +11,23 @@ Feature: Person Vocabulary Data Entry
       And selects "Artist" from dropdown in "Team Type" row
       And selects "Accepted" from dropdown in "Status" row
       And selects "Female" from dropdown in "Gender" row
-      And user enters "<source>" in the "Person" "Source" field
-      And user enters "<occupation>" in the "Person" "Occupation" field
-      And user enters "<school/style>" in the "Person" "School/Style" field
-      And user enters "<group>" in the "Person" "Group" field
-      And user enters "<nationality>" in the "Person" "Nationality" field
-      And user enters "<place of birth>" in the "Person" "Place of Birth" field
-      And user enters "<place of death>" in the "Person" "Place of Death" field
+      And enters "<source>" in the "Person" "Source" field
+      And enters "<occupation>" in the "Person" "Occupation" field
+      And enters "<school/style>" in the "Person" "School/Style" field
+      And enters "<group>" in the "Person" "Group" field
+      And enters "<nationality>" in the "Person" "Nationality" field
+      And enters "<place of birth>" in the "Person" "Place of Birth" field
+      And enters "<place of death>" in the "Person" "Place of Death" field
 
       #consider using pystring
 
-      And user enters "This person \n was a steel-drivin' man" in the "Person" "Biographical Note" field
-      And user enters "Hallowed \n Provenance" in the "Person" "Name Notes" field
-      And user clicks the plus to repeat the "Person" "School/Style" field
-      And user clicks the plus to repeat the "Person" "Occupation" field
-      And user enters "<school/style2>" in the repeated "Person" "School/Style" field
-      And user enters "<occupation2>" in the repeated "Person" "Occupation" field
-      And user saves the record
+      And enters "This person \n was a steel-drivin' man" in the "Person" "Biographical Note" field
+      And enters "Hallowed \n Provenance" in the "Person" "Name Notes" field
+      And clicks the plus to repeat the "Person" "School/Style" field
+      And clicks the plus to repeat the "Person" "Occupation" field
+      And enters "<school/style2>" in the repeated "Person" "School/Style" field
+      And enters "<occupation2>" in the repeated "Person" "Occupation" field
+      And saves the record
     Then a "New Record successfully created" message should appear with the current time at the bottom of the page
     Then "Ancient Greek" should be in "Language" row
     Then "Hello" should be in "Salutation" row
@@ -51,11 +51,11 @@ Feature: Person Vocabulary Data Entry
 #Test 9
   Scenario: Repeat groups and check for alternating shading
     Given user is on a "Person" record
-      And user clicks on the plus to repeat the "Person Term Group" form 
-      And user clicks on the plus to repeat the "Person Term Group" form 
+      And clicks on the plus to repeat the "Person Term Group" form 
+      And clicks on the plus to repeat the "Person Term Group" form 
     Then the new "Person Term Group" forms should alternate between dark and light shading
-      And user clicks on the plus to repeat the "Address" form
-      And user clicks on the plug to repeat the "Address" form
+      And clicks on the plus to repeat the "Address" form
+      And clicks on the plug to repeat the "Address" form
     Then the new "Address" forms should alternate between dark and light shading
     Then close the browser
 
@@ -69,14 +69,14 @@ Feature: Person Vocabulary Data Entry
     Then nothing should happen
     Then the Cancel changes button at top of page should not be clickable
     Then the Cancel changes button at bottom of page should not be clickable
-      And user enters "revert this" in the "Display name" field
-      And user selects "Yoruba" from dropdown in  "Language" row
+      And enters "revert this" in the "Display name" field
+      And selects "Yoruba" from dropdown in  "Language" row
       And clicks on the Cancel changes button at bottom of page
     Then the Cancel changes button at top of page should be clickable
     Then the Cancel changes button at bottom of page should be clickable
     Then record should be reverted to before changes were made
-     And user enters "Revertica Notica" in the "Display name" field
-     And user clicks on the Save button
+     And enters "Revertica Notica" in the "Display name" field
+     And clicks on the Save button
      And clicks on the Cancel changes button at bottom of page
     Then nothing should happen
     Then the Cancel changes button at top of page should not be clickable
@@ -86,10 +86,10 @@ Feature: Person Vocabulary Data Entry
 #Test 13
   Scenario: Edit page and attempt to leave. Warning appears, save.
     Given user is on a "Person" record
-      And user enters "Saved Change" in the "Person" "Display name" field
-      And user clicks on "Find and Edit" menu item
+      And enters "Saved Change" in the "Person" "Display name" field
+      And clicks on "Find and Edit" menu item
     Then a confirmation dialog should appear
-      And user clicks on the Save button
+      And clicks on the Save button
     Then the record is successfully saved
     Then user should be redirected to the page navigated to
     Then "Saved Change" should be in the "Person" "Display name" field
@@ -97,10 +97,10 @@ Feature: Person Vocabulary Data Entry
 
   Scenario: Edit page and attempt to leave. Warning appears, do not save.
     Given user is on a "Person" record
-      And user enters "Unsaved Change" in the "Person" "Display name" field
-      And user clicks on "Find and Edit" menu item
+      And enters "Unsaved Change" in the "Person" "Display name" field
+      And clicks on "Find and Edit" menu item
     Then a confirmation dialog should appear
-      And user clicks on the Don't Save button
+      And clicks on the Don't Save button
     Then the record is not successfully saved
     Then user should be redirected to the page navigated to
     Then "Unsaved Change" should not be in the "Person" "Display name" field  
@@ -108,21 +108,21 @@ Feature: Person Vocabulary Data Entry
 
   Scenario: Edit page and attempt to leave. Warning appears, user cancels.
     Given user is on a "Person" record
-      And user enters "Tentative Change" in the "Person" "Display name" field
-      And user clicks on "Find and Edit" menu item
+      And enters "Tentative Change" in the "Person" "Display name" field
+      And clicks on "Find and Edit" menu item
     Then a confirmation dialog should appear
-      And user clicks on the Cancel button
+      And clicks on the Cancel button
     Then the dialog is dismissed
     Then close the browser
 
 #Test 21, not sure on which stepdefs are appropriate
   Scenario: User tabs to "Forename", enters something and then tabs to save and saves.
     Given user is on a "Person" record
-      And user tabs to "Person" "Occupation" field
+      And tabs to "Person" "Occupation" field
     Then user should be able to enter "Tabber" in the "Person" "Occupation" field
-      And user enters "Tabber" in the "Person" "Occupation" field
-      And user tabs to the Save button at bottom of page
-      And user hits enter
+      And enters "Tabber" in the "Person" "Occupation" field
+      And tabs to the Save button at bottom of page
+      And hits enter
     Then the record is successfully saved
     Then "Tabber" should be in the "Person" "Occupation" field
     Then close the browser
@@ -133,10 +133,10 @@ Feature: Person Vocabulary Data Entry
       And selects the "Loan In" radio button on the "Create New" page
       And clicks on the Create button
     Then the titlebar should contain "Loan In"
-      And user enters "Joe" in the "Loan In" "Lender" field
+      And enters "Joe" in the "Loan In" "Lender" field
     Then a drop down menu should appear in the "Lender" row
 #need to decide on stepdef for select using keyboard only
-      And user selects "Joe Bean" from dropdown in "Lender" row 
+      And selects "Joe Bean" from dropdown in "Lender" row 
     Then "Joe Bean" should be in the "Loan In" "Lender" field
     Then close the browser
 
@@ -145,11 +145,11 @@ Feature: Person Vocabulary Data Entry
       And selects the "Loan In" radio button on the "Create New" page
       And clicks on the Create button
     Then the titlebar should contain "Loan In"
-      And user enters "Does Not Exist" in the "Loan In" "Lender" field
+      And enters "Does Not Exist" in the "Loan In" "Lender" field
     Then a drop down menu should appear in the "Lender" row
-      And user selects "Local Persons" from dropdown in "Lender" row
+      And selects "Local Persons" from dropdown in "Lender" row
     Then the titlebar should contain "Does Not Exist"
-      And user enters "Does Not Exist" in the top nav search field
+      And enters "Does Not Exist" in the top nav search field
       And selects "Person" from the top nav search record type select field
       And clicks on the top nav search submit button
     Then the search results should contain "Does Not Exist"
@@ -159,13 +159,13 @@ Feature: Person Vocabulary Data Entry
 #Assumes that the stepdef exists: user tabs to ____  ____ field 
   Scenario: Make change to date field using keyboard only
     Given user is on a blank "Person" record
-      And user tabs to "Person" "Birth Date" field
+      And tabs to "Person" "Birth Date" field
     Then a drop down form should appear in the "Birth Date" row
-      And user tabs to "Person" "Display Date" field
-      And user enters "1/1/2011" in the "Person" "Display Date" field 
+      And tabs to "Person" "Display Date" field
+      And enters "1/1/2011" in the "Person" "Display Date" field 
 # Below is tentative, do not know stepdef for this yet
-# And user tabs to the "Year", "Earliest/Single Date" box in the "Person" "Date" table
-# And user enters "1234" in the "Year", "Earliest/Single Date" box in the "Person" "Date" table
+# And tabs to the "Year", "Earliest/Single Date" box in the "Person" "Date" table
+# And enters "1234" in the "Year", "Earliest/Single Date" box in the "Person" "Date" table
     Then "1/1/2011" should be in the "Person" "Birth Date" field
     Then close the browser
 
@@ -173,121 +173,121 @@ Feature: Person Vocabulary Data Entry
   Scenario: Preferred term is "Samuel Clemens." NPT "Mark Twain" should not be clickable (LifeSci tenant)
 # Uncertain stepdef
     Given user is logged on to the LifeSci tenant
-      And user is on a blank "Person" record
-      And user enters "Mark Twain" in the "Person" "Display Name" field
-      And user clicks the plus to repeat the "Person Term Group" form
+      And is on a blank "Person" record
+      And enters "Mark Twain" in the "Person" "Display Name" field
+      And clicks the plus to repeat the "Person Term Group" form
     Then an additional "Person Term Group" record should be present
-      And user adds "Samuel Clemens" in the "Display Name" field of the second "Person Term Group" form
-      And user clicks the plus to repeat the "Person Term Group" form
-      And user adds "Samuel Langhorne Clemens" in the "Display Name" field of the third "Person Term Group" form
+      And adds "Samuel Clemens" in the "Display Name" field of the second "Person Term Group" form
+      And clicks the plus to repeat the "Person Term Group" form
+      And adds "Samuel Langhorne Clemens" in the "Display Name" field of the third "Person Term Group" form
 # Uncertain stepdef 
-      And user marks the second "Person Term Group" form as preferred
-      And user saves the record
+      And marks the second "Person Term Group" form as preferred
+      And saves the record
 # Uncertain stepdef 
-      And user navigates to the "Create New" page
+      And navigates to the "Create New" page
       And selects the "Loan In" radio button on the "Create New" page
       And clicks on the Create button
     Then the titlebar should contain "Loan In" 
-      And user fills in required fields for "Loan In" record
+      And fills in required fields for "Loan In" record
 #types vs enters for stepdef?
-      And user types "Mark" in the "Loan In" "Lender" field
+      And types "Mark" in the "Loan In" "Lender" field
     Then a drop down list should appear in the "Lender" row
 # Uncertain stepdef
     Then "Samuel Clemens" should appear in black in the dropdown in "Lender" row
 # Uncertain stepdef
     Then "Mark Twain" should appear indented in grey in the dropdown in "Lender" row
     Then "Mark Twain" should not be clickable
-      And user clicks on "Samuel Clemens" from dropdown in "Lender" row
+      And clicks on "Samuel Clemens" from dropdown in "Lender" row
     Then "Samuel Clemens" should be in the "Loan In" "Lender" field
-      And user saves the record
+      And saves the record
     Then "Samuel Clemens" should appear in the Terms Used sidebar
-      And user clicks on "Samuel Clemens" in the Terms Used sidebar
+      And clicks on "Samuel Clemens" in the Terms Used sidebar
     Then the titlebar should contain "Samuel Clemens"
     Then close the browser
 
 #Test 27
   Scenario: Preferred term is "Samuel Clemens." NPT "Mark Twain" should be clickable
     Given user is on a blank "Person" record
-      And user enters "Mark Twain" in the "Person" "Display Name" field
-      And user clicks the plus to repeat the "Person Term Group" form
+      And enters "Mark Twain" in the "Person" "Display Name" field
+      And clicks the plus to repeat the "Person Term Group" form
     Then an additional "Person Term Group" record should be present
-      And user adds "Samuel Clemens" in the "Display Name" field of the second "Person Term Group" form
-      And user clicks the plus to repeat the "Person Term Group" form
-      And user adds "Samuel Langhorne Clemens" in the "Display Name" field of the third "Person Term Group" form
+      And adds "Samuel Clemens" in the "Display Name" field of the second "Person Term Group" form
+      And clicks the plus to repeat the "Person Term Group" form
+      And adds "Samuel Langhorne Clemens" in the "Display Name" field of the third "Person Term Group" form
 # Uncertain stepdef 
-      And user marks the second "Person Term Group" form as preferred
-      And user saves the record
+      And marks the second "Person Term Group" form as preferred
+      And saves the record
 # Uncertain stepdef 
-      And user navigates to the "Create New" page
+      And navigates to the "Create New" page
       And selects the "Loan In" radio button on the "Create New" page
       And clicks on the Create button
     Then the titlebar should contain "Loan In" 
-      And user fills in required fields for "Loan In" record
+      And fills in required fields for "Loan In" record
 #types vs enters for stepdef?
-      And user types "Mark" in the "Loan In" "Lender" field
+      And types "Mark" in the "Loan In" "Lender" field
     Then a drop down list should appear in the "Lender" row
 # Uncertain stepdef
     Then "Samuel Clemens" should appear in black in the dropdown in "Lender" row
 # Uncertain stepdef
     Then "Mark Twain" should appear indented in black in the dropdown in "Lender" row
     Then "Mark Twain" should be clickable
-      And user clicks on "Mark Twain" from dropdown in "Lender" row
+      And clicks on "Mark Twain" from dropdown in "Lender" row
     Then "Mark Twain" should be in the "Loan In" "Lender" field
-      And user saves the record
+      And saves the record
     Then "Mark Twain" should appear in the Terms Used sidebar
-      And user clicks on "Mark Twain" in the Terms Used sidebar
+      And clicks on "Mark Twain" in the Terms Used sidebar
     Then the titlebar should contain "Samuel Clemens"
     Then close the browser
 
 #Test PLAN
   Scenario: Hierarchical Authorities
     Given user is on a blank "Person" record
-      And user enters "Foo Family" in the "Person" "Display Name" field
-      And user enters "Foo Clan" in the "Person" "Broader Context" field
+      And enters "Foo Family" in the "Person" "Display Name" field
+      And enters "Foo Clan" in the "Person" "Broader Context" field
     Then a drop down list should appear in the "Broader Context" row
 # Uncertain stepdef
-      And user adds "Foo Family" to Local Persons
-      And user enters "Foo Parents" in the "Person" "Narrower Context" field
+      And adds "Foo Family" to Local Persons
+      And enters "Foo Parents" in the "Person" "Narrower Context" field
     Then a drop down list should appear in the "Narrower Context" row
 # Uncertain stepdef
-      And user adds "Foo Parents" to Local Persons from dropdown in "Narrower Context" row
-      And user clicks the plus to repeat the "Person" "Narrower Context" field
-      And user enters "Foo Kids" in the second "Person" "Narrower Context" field
+      And adds "Foo Parents" to Local Persons from dropdown in "Narrower Context" row
+      And clicks the plus to repeat the "Person" "Narrower Context" field
+      And enters "Foo Kids" in the second "Person" "Narrower Context" field
     Then a drop down list should appear in the second "Narrower Context" row
 # Uncertain stepdef
-      And user adds "Foo Kids" to Local Persons from dropdown in second "Narrower Context" row
-      And user saves the record
+      And adds "Foo Kids" to Local Persons from dropdown in second "Narrower Context" row
+      And saves the record
     Then "Foo Clan" should be in the "Person" "Broader Context" field
     Then "Foo Family" should be in the "Person" "Narrower Context" field
     Then "Foo Kids" should be in the second "Person" "Narrower Context" field
 # Uncertain stepdef
     Then the record should not contain the "Person" "Equivalent Context" field
 # Uncertain stepdef
-      And user clicks the "go to" button in the "Narrower Context" row
+      And clicks the "go to" button in the "Narrower Context" row
     Then the titlebar should contain "Foo Kids"
-      And user enters "Johnny Foo" in the "Person" "Narrower Context" field
+      And enters "Johnny Foo" in the "Person" "Narrower Context" field
     Then a drop down list should appear in the "Narrower Context" row
 # Uncertain stepdef
-      And user adds "Johnny Foo" to Local Persons from dropdown in "Narrower Context" row
-      And user clicks the plus to repeat the "Person" "Narrower Context" field
-      And user enters "Sally Foo" in the second "Person" "Narrower Context" field
+      And adds "Johnny Foo" to Local Persons from dropdown in "Narrower Context" row
+      And clicks the plus to repeat the "Person" "Narrower Context" field
+      And enters "Sally Foo" in the second "Person" "Narrower Context" field
     Then a drop down list should appear in the second "Narrower Context" row
 # Uncertain stepdef
-      And user adds "Sally Foo" to Local Persons from dropdown in second "Narrower Context" row
-      And user saves the record
+      And adds "Sally Foo" to Local Persons from dropdown in second "Narrower Context" row
+      And saves the record
     Then "Johnny Foo" should be in the "Person" "Narrower Context" field
     Then "Sally Foo" should be in the second "Person" "Narrower Context" field
     Then "Foo Parents" should be in the "Person" "Equivalent Context" field
 # Uncertain stepdef
     Then the "Person" "Equivalent Context" field should be read only
-      And user clicks the plus to repeat the "Person" "Narrower Context" field
-      And user enters "Cindy Loo Foo" in the third "Person" "Narrower Context" field
+      And clicks the plus to repeat the "Person" "Narrower Context" field
+      And enters "Cindy Loo Foo" in the third "Person" "Narrower Context" field
     Then a drop down list should appear in the third "Narrower Context" row
 # Uncertain stepdef
-      And user adds "Cindy Loo Foo" to Local Persons from dropdown in second "Narrower Context" row
-      And user saves the record
+      And adds "Cindy Loo Foo" to Local Persons from dropdown in second "Narrower Context" row
+      And saves the record
     Then "Foo Kids" should be in the "Person" "Broader Context" field
     Then "Cindy Loo Foo" should be in the third "Person" "Narrower Context" field
-      And user enters "Sally Foo" in the top nav search field
+      And enters "Sally Foo" in the top nav search field
       And selects "Person" from the top nav search record type select field
       And clicks on the top nav search submit button

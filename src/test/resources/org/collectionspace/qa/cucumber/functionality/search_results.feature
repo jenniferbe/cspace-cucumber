@@ -9,13 +9,13 @@ Feature: Search Results and Pagination
       Given user is on the "Create New" page
           And selects the "Cataloging" radio button on the Create New page
           And clicks on the Create button
-          And user enters "1234" in the "Cataloging" "Identification Number" field
-          And user saves the record
+          And enters "1234" in the "Cataloging" "Identification Number" field
+          And saves the record
       Given user is on the "Create New" page
           And selects the "Cataloging" radio button on the Create New page
           And clicks on the Create button
-          And user enters "2345" in the "Cataloging" "Identification Number" field
-          And user saves the record
+          And enters "2345" in the "Cataloging" "Identification Number" field
+          And saves the record
       Given user is on the "My CollectionSpace" page
   #No Stepdef
       Then "1234" should appear in the "Cataloging Records" form
@@ -30,21 +30,21 @@ Feature: Search Results and Pagination
       Given user is on the "My CollectionSpace" page
   # No Stepdef
           And clicks "1234" to load the record
-          And user enters "sesame" in the "Cataloging" "Brief Description" field
-          And user saves the record
+          And enters "sesame" in the "Cataloging" "Brief Description" field
+          And saves the record
       Given user is on the "My CollectionSpace" page
   # No Stepdef
           And clicks "2345" to load the record
-          And user enters "sesame" in the "Cataloging" "Distinguishing Features" field
-          And user saves the record
+          And enters "sesame" in the "Cataloging" "Distinguishing Features" field
+          And saves the record
       Given user is on the "Create New" page
           And selects the "Cataloging" radio button on the Create New page
           And clicks on the Create button
-          And user enters "sesame" in the "Cataloging" "Title" field
-          And user enters "3456" in the "Cataloging" "Identification Number" field
-          And user saves the record
+          And enters "sesame" in the "Cataloging" "Title" field
+          And enters "3456" in the "Cataloging" "Identification Number" field
+          And saves the record
       Given user is on the "My CollectionSpace" page
-          And user enters "sesame" in the top nav search field
+          And enters "sesame" in the top nav search field
           And selects "Cataloging" from the top nav search record type select field
           And clicks on the top nav search submit button
 
@@ -57,45 +57,45 @@ Feature: Search Results and Pagination
       Given user is on the "Create New" page
           And selects the "Cataloging" radio button on the Create New page
           And clicks on the Create button
-          And user enters "sesame" in the "Cataloging" "Title" field
-          And user enters "4567" in the "Cataloging" "Identification Number" field
-          And user saves the record
-          And user enters "sesame" in the top nav search field
+          And enters "sesame" in the "Cataloging" "Title" field
+          And enters "4567" in the "Cataloging" "Identification Number" field
+          And saves the record
+          And enters "sesame" in the top nav search field
           And selects "Cataloging" from the top nav search record type select field
           And clicks on the top nav search submit button
   # No Stepdef
       Then the search results should contain "4567"
   # Skipping Advanced search section of the test.. No stepdefs at all
   # No Stepdef
-          And user clicks the "Identification Number" heading above the list results
+          And clicks the "Identification Number" heading above the list results
   # No Stepdef
       Then results should sort by "Identification Number" in descending order
   # No Stepdef
-          And user clicks the "Identification Number" heading above the list results
+          And clicks the "Identification Number" heading above the list results
   # No Stepdef
       Then results should sort by "Identification Number" in ascending order
   # No Stepdef
-          And user clicks the "Summary" heading above the list results
+          And clicks the "Summary" heading above the list results
   # No Stepdef
       Then results should sort by "Title" in descending order
   # No Stepdef
-          And user clicks the "Summary" heading above the list results
+          And clicks the "Summary" heading above the list results
   # No Stepdef
       Then results should sort by "Title" in ascending order
   # No Stepdef
-          And user clicks the "Record Type" heading above the list results
+          And clicks the "Record Type" heading above the list results
   # No Stepdef
       Then results should sort by "Record Type" in ascending order
   # No Stepdef
-          And user clicks the "Record Type" heading above the list results
+          And clicks the "Record Type" heading above the list results
   # No Stepdef
       Then results should sort by "Record Type" in descending order
   # No Stepdef
-          And user clicks the "Updated At" heading above the list results
+          And clicks the "Updated At" heading above the list results
   # No Stepdef
       Then results should sort by "Updated At" in ascending order
   # No Stepdef
-          And user clicks the "Updated At" heading above the list results
+          And clicks the "Updated At" heading above the list results
   # No Stepdef
       Then results should sort by "Updated At" in descending order
       Then close the browser
@@ -109,21 +109,21 @@ Feature: Search Results and Pagination
       Given user is on the "My CollectionSpace" page
   # No Stepdef
           And clicks "1234" to load the record
-          And user enters "sesame street" in the "Cataloging" "Brief Description" field
-          And user saves the record
+          And enters "sesame street" in the "Cataloging" "Brief Description" field
+          And saves the record
       Given user is on the "My CollectionSpace" page
   # No Stepdef
           And clicks "2345" to load the record
-          And user enters "sesame street" in the "Cataloging" "Distinguishing Features" field
-          And user saves the record
+          And enters "sesame street" in the "Cataloging" "Distinguishing Features" field
+          And saves the record
       Given user is on the "Create New" page
           And selects the "Cataloging" radio button on the Create New page
           And clicks on the Create button
-          And user enters "sesame street" in the "Cataloging" "Brief Description" field
-          And user enters "3456" in the "Cataloging" "Identification Number" field
-          And user saves the record
+          And enters "sesame street" in the "Cataloging" "Brief Description" field
+          And enters "3456" in the "Cataloging" "Identification Number" field
+          And saves the record
       Given user is on the "My CollectionSpace" page
-          And user enters "sesame street" in the top nav search field
+          And enters "sesame street" in the top nav search field
           And selects "Cataloging" from the top nav search record type select field
           And clicks on the top nav search submit button
   # No Stepdef
@@ -136,10 +136,10 @@ Feature: Search Results and Pagination
       Given user is on the "Create New" page
           And selects the "Cataloging" radio button on the Create New page
           And clicks on the Create button
-          And user enters "sesame" in the "Cataloging" "Brief Description" field
-          And user enters "1029" in the "Cataloging" "Identification Number" field
-          And user saves the record
-          And user enters "sesame street" in the top nav search field
+          And enters "sesame" in the "Cataloging" "Brief Description" field
+          And enters "1029" in the "Cataloging" "Identification Number" field
+          And saves the record
+          And enters "sesame street" in the top nav search field
           And selects "Cataloging" from the top nav search record type select field
           And clicks on the top nav search submit button
   # No Stepdef
@@ -150,17 +150,17 @@ Feature: Search Results and Pagination
       Given user is on the "Create New" page
           And selects the "Person" radio button on the Create New page
           And clicks on the Create button
-          And user enters "James Fanboy" in the "Person" "Display Name" field
-          And user saves the record
+          And enters "James Fanboy" in the "Person" "Display Name" field
+          And saves the record
       Given user is on the "Create New" page
           And selects the "Cataloging" radio button on the Create New page
           And clicks on the Create button
-          And user enters "6677" in the "Cataloging" "Identification Number" field
-          And user enters "James Fanboy" in the "Cataloging" "Owner" vocab field
-          And user clicks on "James Fanboy" from autocomplete options
+          And enters "6677" in the "Cataloging" "Identification Number" field
+          And enters "James Fanboy" in the "Cataloging" "Owner" vocab field
+          And clicks on "James Fanboy" from autocomplete options
       Given user is on the "Find and Edit" page
   # No stepdef
-          And user enters "James Fanboy" in the search field
+          And enters "James Fanboy" in the search field
   # No stepdef
       Then the search results should contain "6677"
   # No stepdef
@@ -170,13 +170,13 @@ Feature: Search Results and Pagination
 
   Scenario: Perform a wildcard search
       Given user is on the "My CollectionSpace" page
-          And user enters "*" in the top nav search field
+          And enters "*" in the top nav search field
           And selects "Cataloging" from the top nav search record type select field
           And clicks on the top nav search submit button
   # No Stepdef
       Then all Cataloging records are displayed
       Given user is on the "My CollectionSpace" page
-          And user enters "" in the top nav search field
+          And enters "" in the top nav search field
           And selects "Cataloging" from the top nav search record type select field
           And clicks on the top nav search submit button
   # No Stepdef
@@ -186,18 +186,18 @@ Feature: Search Results and Pagination
   Scenario: Search for a user
       Given user is on the "Administration" page
   # No Stepdef
-          And user clicks the "+ User" button
-          And user enters "Mary Poppins" in the "Full Name" field
-          And user enters "fakeemail@fakeaddress.com" in the "Email Address" field
-          And user enters "12341234" in the "Password" field
-          And user enters "12341234" in the "Confirm Password" field
-          And user clicks on the Save button
-          And user enters "Mary Poppins" in the "find" field
+          And clicks the "+ User" button
+          And enters "Mary Poppins" in the "Full Name" field
+          And enters "fakeemail@fakeaddress.com" in the "Email Address" field
+          And enters "12341234" in the "Password" field
+          And enters "12341234" in the "Confirm Password" field
+          And clicks on the Save button
+          And enters "Mary Poppins" in the "find" field
   # No Stepdef
-          And user clicks the "Find User" button
+          And clicks the "Find User" button
   # Find user not exactly a search, so may not be right stepdef
       Then the search results should contain "Mary Poppins"
-          And user clicks the "Show All Users" button
+          And clicks the "Show All Users" button
   # No Stepdef for all users
       Then the search results should contain all users
       Then close the browser
@@ -206,55 +206,55 @@ Feature: Search Results and Pagination
       Given user is on the "Create New" page
           And selects the "Loan out" radio button on the Create New page
           And clicks on the create button
-          And user enters "King size bed q" in the "Loan Out" "Loan Out Conditions" field
-          And user enters "11262015" in the "Loan Out" "Loan Out Number" field
-          And user saves the record
+          And enters "King size bed q" in the "Loan Out" "Loan Out Conditions" field
+          And enters "11262015" in the "Loan Out" "Loan Out Number" field
+          And saves the record
       Given user is on the "Create New" page
           And selects the "Loan out" radio button on the Create New page
           And clicks on the create button
-          And user enters "King size bed qa" in the "Loan Out" "Loan Out Conditions" field
-          And user enters "11272015" in the "Loan Out" "Loan Out Number" field
-          And user saves the record
+          And enters "King size bed qa" in the "Loan Out" "Loan Out Conditions" field
+          And enters "11272015" in the "Loan Out" "Loan Out Number" field
+          And saves the record
       Given user is on the "Create New" page
           And selects the "Loan out" radio button on the Create New page
           And clicks on the create button
-          And user enters "King size bed qwa" in the "Loan Out" "Loan Out Conditions" field
-          And user enters "11282015" in the "Loan Out" "Loan Out Number" field
-          And user saves the record
+          And enters "King size bed qwa" in the "Loan Out" "Loan Out Conditions" field
+          And enters "11282015" in the "Loan Out" "Loan Out Number" field
+          And saves the record
       Given user is on the "Create New" page
           And selects the "Loan out" radio button on the Create New page
           And clicks on the create button
-          And user enters "Queen size bed q" in the "Loan Out" "Loan Out Conditions" field
-          And user enters "11292015" in the "Loan Out" "Loan Out Number" field
-          And user saves the record
+          And enters "Queen size bed q" in the "Loan Out" "Loan Out Conditions" field
+          And enters "11292015" in the "Loan Out" "Loan Out Number" field
+          And saves the record
       Given user is on the "Create New" page
           And selects the "Loan out" radio button on the Create New page
           And clicks on the create button
-          And user enters "Queen size bed qa" in the "Loan Out" "Loan Out Conditions" field
-          And user enters "11302015" in the "Loan Out" "Loan Out Number" field
-          And user saves the record
+          And enters "Queen size bed qa" in the "Loan Out" "Loan Out Conditions" field
+          And enters "11302015" in the "Loan Out" "Loan Out Number" field
+          And saves the record
       Given user is on the "Create New" page
           And selects the "Loan out" radio button on the Create New page
           And clicks on the create button
-          And user enters "Queen size bed qwa" in the "Loan Out" "Loan Out Conditions" field
-          And user enters "11312015" in the "Loan Out" "Loan Out Number" field
-          And user saves the record
+          And enters "Queen size bed qwa" in the "Loan Out" "Loan Out Conditions" field
+          And enters "11312015" in the "Loan Out" "Loan Out Number" field
+          And saves the record
       Given user is on the "My CollectionSpace" page
-          And user enters "queen and bed" in the top nav search field
+          And enters "queen and bed" in the top nav search field
           And selects "Loan Out" from the top nav search record type select field
           And clicks on the top nav search submit button
       Then the search results should contain "11292015"
       Then the search results should contain "11302015"
       Then the search results should contain "11312015"
       Given user is on the "My CollectionSpace" page
-          And user enters "king and bed not queen" in the top nav search field
+          And enters "king and bed not queen" in the top nav search field
           And selects "Loan Out" from the top nav search record type select field
           And clicks on the top nav search submit button
       Then the search results should contain "11262015"
       Then the search results should contain "11272015"
       Then the search results should contain "11282015"
       Given user is on the "My CollectionSpace" page
-          And user enters "king or queen" in the top nav search field
+          And enters "king or queen" in the top nav search field
           And selects "Loan Out" from the top nav search record type select field
           And clicks on the top nav search submit button
       Then the search results should contain "11292015"
@@ -271,148 +271,148 @@ Feature: Search Results and Pagination
         And selects the "Acquisition" radio button on the Create New page
         And clicks on the create button
       Then the titlebar should contain "Acquisition"
-        And user enters "12341" in the "Acquisition" "Acquisition Reference Number" field
+        And enters "12341" in the "Acquisition" "Acquisition Reference Number" field
   # text field?
-        And user enters "known item" in the "Acquisition" "Acquisition Reason" field
-        And user enters "Made up name" in the "Acquisition" "Acquisition Source" vocab field
+        And enters "known item" in the "Acquisition" "Acquisition Reason" field
+        And enters "Made up name" in the "Acquisition" "Acquisition Source" vocab field
   # Don't know if this is a stepdef
-        And user adds "Made up name" to "Local Persons" from vocabulary autocomplete
-        And user saves the record
+        And adds "Made up name" to "Local Persons" from vocabulary autocomplete
+        And saves the record
       Then the record is successfully saved
       Given user is on the "Create New" page
         And selects the "Acquisition" radio button on the Create New page
         And clicks on the create button
       Then the titlebar should contain "Acquisition"
-        And user enters "12342" in the "Acquisition" "Acquisition Reference Number" field
+        And enters "12342" in the "Acquisition" "Acquisition Reference Number" field
   # text field?
-        And user enters "known item" in the "Acquisition" "Acquisition Reason" field
-        And user enters "Made up name" in the "Acquisition" "Acquisition Source" vocab field
+        And enters "known item" in the "Acquisition" "Acquisition Reason" field
+        And enters "Made up name" in the "Acquisition" "Acquisition Source" vocab field
   # Don't know if this is a stepdef
-        And user adds "Made up name" to "Local Persons" from vocabulary autocomplete
-        And user saves the record
+        And adds "Made up name" to "Local Persons" from vocabulary autocomplete
+        And saves the record
       Then the record is successfully saved
       Given user is on the "Create New" page
         And selects the "Acquisition" radio button on the Create New page
         And clicks on the create button
       Then the titlebar should contain "Acquisition"
-        And user enters "12343" in the "Acquisition" "Acquisition Reference Number" field
+        And enters "12343" in the "Acquisition" "Acquisition Reference Number" field
   # text field?
-        And user enters "known item" in the "Acquisition" "Acquisition Reason" field
-        And user enters "Made up name" in the "Acquisition" "Acquisition Source" vocab field
+        And enters "known item" in the "Acquisition" "Acquisition Reason" field
+        And enters "Made up name" in the "Acquisition" "Acquisition Source" vocab field
   # Don't know if this is a stepdef
-        And user adds "Made up name" to "Local Persons" from vocabulary autocomplete
-        And user saves the record
+        And adds "Made up name" to "Local Persons" from vocabulary autocomplete
+        And saves the record
       Then the record is successfully saved
       Given user is on the "Create New" page
         And selects the "Acquisition" radio button on the Create New page
         And clicks on the create button
       Then the titlebar should contain "Acquisition"
-        And user enters "12344" in the "Acquisition" "Acquisition Reference Number" field
+        And enters "12344" in the "Acquisition" "Acquisition Reference Number" field
   # text field?
-        And user enters "known item" in the "Acquisition" "Acquisition Reason" field
-        And user enters "Made up name" in the "Acquisition" "Acquisition Source" vocab field
+        And enters "known item" in the "Acquisition" "Acquisition Reason" field
+        And enters "Made up name" in the "Acquisition" "Acquisition Source" vocab field
   # Don't know if this is a stepdef
-        And user adds "Made up name" to "Local Persons" from vocabulary autocomplete
-        And user saves the record
+        And adds "Made up name" to "Local Persons" from vocabulary autocomplete
+        And saves the record
       Then the record is successfully saved
       Given user is on the "Create New" page
         And selects the "Acquisition" radio button on the Create New page
         And clicks on the create button
       Then the titlebar should contain "Acquisition"
-        And user enters "12345" in the "Acquisition" "Acquisition Reference Number" field
+        And enters "12345" in the "Acquisition" "Acquisition Reference Number" field
   # text field?
-        And user enters "known item" in the "Acquisition" "Acquisition Reason" field
-        And user enters "Made up name" in the "Acquisition" "Acquisition Source" vocab field
+        And enters "known item" in the "Acquisition" "Acquisition Reason" field
+        And enters "Made up name" in the "Acquisition" "Acquisition Source" vocab field
   # Don't know if this is a stepdef
-        And user adds "Made up name" to "Local Persons" from vocabulary autocomplete
-        And user saves the record
+        And adds "Made up name" to "Local Persons" from vocabulary autocomplete
+        And saves the record
       Then the record is successfully saved
       Given user is on the "Create New" page
         And selects the "Acquisition" radio button on the Create New page
         And clicks on the create button
       Then the titlebar should contain "Acquisition"
-        And user enters "12346" in the "Acquisition" "Acquisition Reference Number" field
+        And enters "12346" in the "Acquisition" "Acquisition Reference Number" field
   # text field?
-        And user enters "known item" in the "Acquisition" "Acquisition Reason" field
-        And user enters "Made up name" in the "Acquisition" "Acquisition Source" vocab field
+        And enters "known item" in the "Acquisition" "Acquisition Reason" field
+        And enters "Made up name" in the "Acquisition" "Acquisition Source" vocab field
   # Don't know if this is a stepdef
-        And user adds "Made up name" to "Local Persons" from vocabulary autocomplete
-        And user saves the record
+        And adds "Made up name" to "Local Persons" from vocabulary autocomplete
+        And saves the record
       Then the record is successfully saved
       Given user is on the "Create New" page
         And selects the "Acquisition" radio button on the Create New page
         And clicks on the create button
       Then the titlebar should contain "Acquisition"
-        And user enters "12347" in the "Acquisition" "Acquisition Reference Number" field
+        And enters "12347" in the "Acquisition" "Acquisition Reference Number" field
   # text field?
-        And user enters "known item" in the "Acquisition" "Acquisition Reason" field
-        And user enters "Made up name" in the "Acquisition" "Acquisition Source" vocab field
+        And enters "known item" in the "Acquisition" "Acquisition Reason" field
+        And enters "Made up name" in the "Acquisition" "Acquisition Source" vocab field
   # Don't know if this is a stepdef
-        And user adds "Made up name" to "Local Persons" from vocabulary autocomplete
-        And user saves the record
+        And adds "Made up name" to "Local Persons" from vocabulary autocomplete
+        And saves the record
       Then the record is successfully saved
       Given user is on the "Create New" page
         And selects the "Acquisition" radio button on the Create New page
         And clicks on the create button
       Then the titlebar should contain "Acquisition"
-        And user enters "12348" in the "Acquisition" "Acquisition Reference Number" field
+        And enters "12348" in the "Acquisition" "Acquisition Reference Number" field
   # text field?
-        And user enters "known item" in the "Acquisition" "Acquisition Reason" field
-        And user enters "Made up name" in the "Acquisition" "Acquisition Source" vocab field
+        And enters "known item" in the "Acquisition" "Acquisition Reason" field
+        And enters "Made up name" in the "Acquisition" "Acquisition Source" vocab field
   # Don't know if this is a stepdef
-        And user adds "Made up name" to "Local Persons" from vocabulary autocomplete
-        And user saves the record
+        And adds "Made up name" to "Local Persons" from vocabulary autocomplete
+        And saves the record
       Then the record is successfully saved
       Given user is on the "Create New" page
         And selects the "Acquisition" radio button on the Create New page
         And clicks on the create button
       Then the titlebar should contain "Acquisition"
-        And user enters "12349" in the "Acquisition" "Acquisition Reference Number" field
+        And enters "12349" in the "Acquisition" "Acquisition Reference Number" field
   # text field?
-        And user enters "known item" in the "Acquisition" "Acquisition Reason" field
-        And user enters "Made up name" in the "Acquisition" "Acquisition Source" vocab field
+        And enters "known item" in the "Acquisition" "Acquisition Reason" field
+        And enters "Made up name" in the "Acquisition" "Acquisition Source" vocab field
   # Don't know if this is a stepdef
-        And user adds "Made up name" to "Local Persons" from vocabulary autocomplete
-        And user saves the record
+        And adds "Made up name" to "Local Persons" from vocabulary autocomplete
+        And saves the record
       Then the record is successfully saved
       Given user is on the "Create New" page
         And selects the "Acquisition" radio button on the Create New page
         And clicks on the create button
       Then the titlebar should contain "Acquisition"
-        And user enters "12350" in the "Acquisition" "Acquisition Reference Number" field
+        And enters "12350" in the "Acquisition" "Acquisition Reference Number" field
   # text field?
-        And user enters "known item" in the "Acquisition" "Acquisition Reason" field
-        And user enters "Made up name" in the "Acquisition" "Acquisition Source" vocab field
+        And enters "known item" in the "Acquisition" "Acquisition Reason" field
+        And enters "Made up name" in the "Acquisition" "Acquisition Source" vocab field
   # Don't know if this is a stepdef
-        And user adds "Made up name" to "Local Persons" from vocabulary autocomplete
-        And user saves the record
+        And adds "Made up name" to "Local Persons" from vocabulary autocomplete
+        And saves the record
       Then the record is successfully saved
       Given user is on the "Create New" page
         And selects the "Acquisition" radio button on the Create New page
         And clicks on the create button
       Then the titlebar should contain "Acquisition"
-        And user enters "12351" in the "Acquisition" "Acquisition Reference Number" field
+        And enters "12351" in the "Acquisition" "Acquisition Reference Number" field
   # text field?
-        And user enters "known item" in the "Acquisition" "Acquisition Reason" field
-        And user enters "Made up name" in the "Acquisition" "Acquisition Source" vocab field
+        And enters "known item" in the "Acquisition" "Acquisition Reason" field
+        And enters "Made up name" in the "Acquisition" "Acquisition Source" vocab field
   # Don't know if this is a stepdef
-        And user adds "Made up name" to "Local Persons" from vocabulary autocomplete
-        And user saves the record
+        And adds "Made up name" to "Local Persons" from vocabulary autocomplete
+        And saves the record
       Then the record is successfully saved
       Given user is on the "Create New" page
         And selects the "Acquisition" radio button on the Create New page
         And clicks on the create button
       Then the titlebar should contain "Acquisition"
-        And user enters "12352" in the "Acquisition" "Acquisition Reference Number" field
+        And enters "12352" in the "Acquisition" "Acquisition Reference Number" field
   # text field?
-        And user enters "known item" in the "Acquisition" "Acquisition Reason" field
-        And user enters "Made up name" in the "Acquisition" "Acquisition Source" vocab field
+        And enters "known item" in the "Acquisition" "Acquisition Reason" field
+        And enters "Made up name" in the "Acquisition" "Acquisition Source" vocab field
   # Don't know if this is a stepdef
-        And user adds "Made up name" to "Local Persons" from vocabulary autocomplete
-        And user saves the record
+        And adds "Made up name" to "Local Persons" from vocabulary autocomplete
+        And saves the record
       Then the record is successfully saved
       Given user is on the "My CollectionSpace" page
-        And user enters "known item" in the top nav search field
+        And enters "known item" in the top nav search field
         And selects "Acquisition" from the top nav search record type select field
         And clicks on the top nav search submit button
       Then the search results should contain "12341"
@@ -426,7 +426,7 @@ Feature: Search Results and Pagination
       Then the search results should contain "12349"
       Then the search results should contain "12350"
   # Probably not a stepdef
-        And user clicks "next"
+        And clicks "next"
       Then the search results should contain "12351"
       Then the search results should contain "12352"
       Then close the browser
@@ -434,7 +434,7 @@ Feature: Search Results and Pagination
   #Crucial stepdefs do not exist
   Scenario: Traverse through search results from within records
       Given user is on the "My CollectionSpace" page
-        And user enters "known item" in the top nav search field
+        And enters "known item" in the top nav search field
         And selects "Acquisition" from the top nav search record type select field
         And clicks on the top nav search submit button
       Then the search results should contain "12345"
@@ -468,8 +468,8 @@ Feature: Search Results and Pagination
         And selects the "Cataloging" radio button on the Create New page
         And clicks on the create button
       Then the titlebar should contain "Cataloging"
-        And user enters "Remember Me" in the "Cataloging" "Identification Number" field
-        And user saves the record
+        And enters "Remember Me" in the "Cataloging" "Identification Number" field
+        And saves the record
       Then the record is successfully saved
   # i think this is (not) stepdef
         And selects the "Acquisition" tab
@@ -483,7 +483,7 @@ Feature: Search Results and Pagination
       Then the search results should contain "12344"
       Then the search results should contain "12345"
   # not a step def
-        And user adds all search results to record
+        And adds all search results to record
   # none of these are stepdefs
       Then the list of related records should contain "12341"
       Then the list of related records should contain "12342"
@@ -496,7 +496,7 @@ Feature: Search Results and Pagination
       Then the list of related procedures should contain "12344"
       Then the list of related procedures should contain "12345"
       Given user is on the "My CollectionSpace" page
-        And user enters "Made up name" in the top nav search field
+        And enters "Made up name" in the top nav search field
         And selects "Person" from the top nav search record type select field
         And clicks "Made up name" to load the record
   # none of these are stepdefs
