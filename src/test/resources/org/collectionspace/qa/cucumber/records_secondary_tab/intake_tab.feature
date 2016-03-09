@@ -4,7 +4,7 @@
 Feature: Intake Tab 
   
   # Test 1
-  Scenario: The user will be working in the Intake Secondary Tab. They Will then try to add a record and is able to dismiss the dialog.
+  Scenario: user will be working in the Intake Secondary Tab. They Will then try to add a record and is able to dismiss the dialog.
 
     Given user is on the "My CollectionSpace" page 
     And user goes to the record with identification number "04131995"
@@ -22,7 +22,7 @@ Feature: Intake Tab
     Then no changes to the record will occur 
 
     And user clicks the "Add record" button
-    And the user presses the "ESC" key 
+    And user presses the "ESC" key 
     Then No changes to the record will occur 
 
   #Test 5 Scenario: Trying to add search for and add multiple intake records
@@ -31,8 +31,8 @@ Feature: Intake Tab
     Then the search results should contain "041319951.2" 
     Then the search results should contain "041319951.3"
 
-    And the user selects the box with result "041319951.3"  
-    And the user selects the box with result "041319951.2"  
+    And user selects the box with result "041319951.3"  
+    And user selects the box with result "041319951.2"  
     And user clicks the "Add to current record" button 
     Then the dialogue should be dismissed
 
@@ -41,24 +41,24 @@ Feature: Intake Tab
     Then "041319951.2" should appear in the "Procedures" area 
     Then "041319951.3" should appear in the "Procedures" area
     
-    And the user clicks on result with text "041319951.2"
+    And user clicks on result with text "041319951.2"
     Then an "Edit Intake Record" form should be displayed 
     Then the "Intake Entry Number" field should contain "041319951.2"
 
-    And the user clicks on the result with text "041319951.3"
+    And user clicks on the result with text "041319951.3"
     Then an "Edit Intake Record" form should be displayed 
     Then the "Intake Entry Number" field should contain "041319951.3"
 
     And user clicks the "Delete this relation." button
     Then a delete confirmation dialogue should appear
-    And the user clicks the delete button 
+    And user clicks the delete button 
     Then the deletion should be confirmed in a dialogue
     Then "041319951.3" should not appear in the "Related Intake Records" area 
 
-    And the user clicks on result with text "041319951.2"
+    And user clicks on result with text "041319951.2"
     And user clicks the "Delete this relation." button
     Then a delete confirmation dialogue should appear 
-    And the user clicks the delete button 
+    And user clicks the delete button 
     Then the deletion should be confirmed in a dialogue
     Then "041319951.2" should not appear in the "Related Intake Records" area 
 
@@ -67,11 +67,11 @@ Feature: Intake Tab
   # Test 7
   # this test might be wrong because it says that a new line should should be displayed below the listing of records
   Scenario: Warning when nagivating away form the new intake record
-    Given the user is in the "My CollectionSpace" page
+    Given user is in the "My CollectionSpace" page
     And user enters "04131995" in the top nav search field
     And clicks on the top nav search submit button
     Then the search results should contain "04131995"
-    And the user clicks on result with text "04131995"
+    And user clicks on result with text "04131995"
     Then "04131995" should be in the "Identification Number" field
     And user selects the "Intake" tab 
     
@@ -86,9 +86,9 @@ Feature: Intake Tab
  
     
     Then a leave confirmation dialogue should appear 
-    And the user clicks the close button  
+    And user clicks the close button  
     Then the dialogue should be dismissed 
-    And the user clicks the cancel button 
+    And user clicks the cancel button 
     Then the "Intake Entry Number" should contain "04131995.4"
 
     And user selects the "Current Record" tab
@@ -106,20 +106,20 @@ Feature: Intake Tab
     And user enters "041319953.4" in the "Intake Entry Number" field 
     And user selects the "Current Record" tab
     Then a leave confirmation dialogue should appear
-    And the user clicks the save button
+    And user clicks the save button
     And user selects the "Intake" tab 
     Then "041319953.4" should appear in the "Related Intake Records" area 
 
     And user goes to the record with identification number "041319953.4"
-    And the user clicks the delete button
+    And user clicks the delete button
     Then a delete confirmation dialogue should appear
-    And the user clicks the delete button 
+    And user clicks the delete button 
     Then the deletion should be confirmed in a dialogue
     Then close the browser
 
   # Test 9
   Scenario: Testing the cancel changes button
-    Given the user is in the "My CollectionSpace" page
+    Given user is in the "My CollectionSpace" page
     And user goes to the record with identification number "04131995"
     Then "04131995" should be in the "Identification Number" field
 
@@ -147,7 +147,7 @@ Feature: Intake Tab
     And user clicks the "Go to record" button
     And user clicks the "Delete" button 
     Then a delete confirmation dialogue should appear
-    And the user clicks the confirmation delete button
+    And user clicks the confirmation delete button
     Then a deletion should be confirmed in a dialogue
     Then close the browser
 
@@ -160,7 +160,7 @@ Feature: Intake Tab
 
         And user clicks the "+ Add Record" button
         And clicks on the Create button
-        And the user saves the record # click the save button
+        And user saves the record # click the save button
         Then the message "Please specify an Intake Entry Number" should appear 
 
         And user enters "CQA110_11" in the "Intake Entry Number" field
@@ -345,16 +345,16 @@ Feature: Intake Tab
         And user clicks the "Go To Record" button        
         And user clicks the "Delete" button
         Then a delete confirmation dialogue should appear #needs Step
-        And the user clicks the delete button        
+        And user clicks the delete button        
         Then close the browser
 
 
   # Test 23
   Scenario: Testing links and "Go To Record" works 
-    Given the user is in the "My CollectionSpace" page
+    Given user is in the "My CollectionSpace" page
     And user goes to the record with identification number "04131995"
     And user selects the "Intake" tab 
-    And the user clicks on result with text "041319951"
+    And user clicks on result with text "041319951"
     Then the "Intake Entry Number" field should contain "041319951"
     And user clicks the "Go to record" button
     Then the titlebar should contain "041319951"
@@ -363,7 +363,7 @@ Feature: Intake Tab
 
   # Test 25
   Scenario: Deleting relation via list
-    Given the user is in the "My CollectionSpace" page
+    Given user is in the "My CollectionSpace" page
     And user goes to the record with identification number "04131995"
 
 
@@ -371,7 +371,7 @@ Feature: Intake Tab
     And user clicks the "Add record" button #needs step def
     And clicks on the Create button
     And user enters "0413199525" in the "Intake Entry Number" field #might not work 
-    And the user saves the record
+    And user saves the record
    
     And user clicks the "Delete Relation" button on the row that reads "0413199525" #Green "X" button. Needs step def
     Then delete confirmation dialogue should appear 
@@ -393,41 +393,41 @@ Feature: Intake Tab
     Then "0413199525" should not appear in the "Related Intake Records" area
 
     And user goes to the record with identification number "0413199525"
-    And the user clicks the delete button
+    And user clicks the delete button
     Then a delete confirmation dialogue should appear
-    And the user clicks the delete button 
+    And user clicks the delete button 
     Then the deletion should be confirmed in a dialogue
     Then close the browser
 
 
   # Test 27
   Scenario: Deleting relation via record editor
-    Given the user is in the "My CollectionSpace" page
+    Given user is in the "My CollectionSpace" page
     And user goes to the record with identification number "04131995"
 
     And user selects the "Intake" tab 
     And user clicks the "Add record" button 
     And clicks on the Create button
     And user enters "0413199527" in the "Intake Entry Number" field
-    And the user saves the record
-    And the user clicks on result with text "0413199527"
+    And user saves the record
+    And user clicks on result with text "0413199527"
 
     
     And user clicks the "Delete this relation." button
-    Then a delete confirmation dialogue should appear #needs Stepdef
+    Then a delete confirmation dialogue should appear  
     And user clicks cancel button 
     Then the dialogue should be dismissed 
     Then the "Related Intake Records" area should contain "0413199527"
 
     And user clicks the "Delete this relation." button
-    Then a delete confirmation dialogue should appear #needs Stepdef
+    Then a delete confirmation dialogue should appear  
     And user clicks close button 
     Then the dialogue should be dismissed 
     Then the "Related Intake Records" area should contain "0413199527"
 
     And user clicks the "Delete this relation." button
     Then a delete confirmation dialogue should appear
-    And the user clicks the delete button 
+    And user clicks the delete button 
     Then the deletion should be confirmed in a dialogue
     Then "0413199527" should not appear in the "Procedures" area  
     Then "0413199527" should not appear in the "Related Intake Records" area
@@ -436,9 +436,9 @@ Feature: Intake Tab
     And user selects the "Intake" tab 
     Then the "Related Intake Records" area should be empty
     And user selects the "Current Record" tab 
-    And the user clicks the delete button
+    And user clicks the delete button
     Then a delete confirmation dialogue should appear
-    And the user clicks the delete button 
+    And user clicks the delete button 
     Then the deletion should be confirmed in a dialogue
     Then close the browser 
 

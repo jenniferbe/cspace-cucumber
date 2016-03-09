@@ -31,7 +31,7 @@ Feature: Supplementary Manual QA - Group
       And selects the "Group" radio button on the Create New page
       And clicks on the Create button
       And user enters "Red" in the "Group" "Title" field
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
     Then "GMT-0800 (PST)" should be displayed in the message bar
     Then disables top and bottom "cancel" buttons
@@ -69,7 +69,7 @@ Feature: Supplementary Manual QA - Group
       And clicks on the Create button
       And user enters "Blue" in the "Group" "Title" field
       And user adds "Albert Smith" to the "Group" "Group Owner" vocab field
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
     Then disables top and bottom "cancel" buttons
     Then enables top and bottom "delete" buttons

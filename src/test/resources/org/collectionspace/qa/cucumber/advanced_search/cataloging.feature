@@ -4,7 +4,7 @@
 Feature: Advanced Search ­Cataloging
 
     Scenario: Advanced Search Fields
-        Given the user is in the "Create New" page
+        Given user is in the "Create New" page
         And user selects the "Cataloging" radio button on the Create New page
         And user enters "CQA72.1" in the "Identification Number" field 
         And user enters "Nameless Object" in the "Object Name" field
@@ -34,7 +34,7 @@ Feature: Advanced Search ­Cataloging
         And user enters "Mexico" in the "Production place" field
         And user enters "Hydration" in the "Technique" field
         And user enters "textbook" in the "Field collection event name" field
-        And the user saves the record
+        And user saves the record
 
         # Identification Number 
         And clicks the "Advanced Search" Button
@@ -231,13 +231,13 @@ Feature: Advanced Search ­Cataloging
 
     Scenario: Boolean field-­based search
 
-        Given the user is in the "Create New" page
+        Given user is in the "Create New" page
         And user selects the "Cataloging" radio button on the Create New page
         And user enters "CQA72.2" in the "Cataloging/Assessment Reference Number" field
         And user selects "Study Collection" from the "Collection" drop down box
         And user selects "New" from the "Record Status" drop down box
         And user enters "testtest" in the "Brief Description" field
-        And the user saves the record
+        And user saves the record
 
         And user goes to the "Create New" page # Stepdef
         And user selects the "Cataloging" radio button on the Create New page
@@ -245,7 +245,7 @@ Feature: Advanced Search ­Cataloging
         And user selects "Study Collection" from the "Collection" drop down box
         And user selects "New" from the "Record Status" drop down box
         And user enters "testtest" in the "Distinguishing Features" field
-        And the user saves the record     
+        And user saves the record     
     
         And user goes to the "Create New" page # Stepdef
         And user selects the "Cataloging" radio button on the Create New page
@@ -253,7 +253,7 @@ Feature: Advanced Search ­Cataloging
         And user selects "Study Collection" from the "Collection" drop down box
         And user selects "Temporary" from the "Record Status" drop down box
         And user enters "testtest" in the "Comments" field
-        And the user saves the record  
+        And user saves the record  
 
 
         And clicks the "Advanced Search Button"
@@ -279,7 +279,7 @@ Feature: Advanced Search ­Cataloging
 
 
     Scenario: Boolean and Keyword Search
-        Given the user is in the "My CollectionSpace" page
+        Given user is in the "My CollectionSpace" page
         And clicks the "Advanced Search" button
         And user enters "testtest" in the "Keyword Search" field
         And user selects "any (OR)" from the "Field-based Search" drop down box
@@ -302,24 +302,24 @@ Feature: Advanced Search ­Cataloging
 
 
         And user goes to the record with identification number "CQA72.1"
-        And the user clicks the delete button
+        And user clicks the delete button
         Then a delete confirmation dialogue should appear
-        And the user clicks the delete button 
+        And user clicks the delete button 
         Then the deletion should be confirmed in a dialogue
         And user goes to the record with identification number "CQA72.2"
-        And the user clicks the delete button
+        And user clicks the delete button
         Then a delete confirmation dialogue should appear
-        And the user clicks the delete button 
+        And user clicks the delete button 
         Then the deletion should be confirmed in a dialogue
         And user goes to the record with identification number "CQA72.3"
-        And the user clicks the delete button
+        And user clicks the delete button
         Then a delete confirmation dialogue should appear
-        And the user clicks the delete button 
+        And user clicks the delete button 
         Then the deletion should be confirmed in a dialogue
         And user goes to the record with identification number "CQA72.3"
-        And the user clicks the delete button
+        And user clicks the delete button
         Then a delete confirmation dialogue should appear
-        And the user clicks the delete button 
+        And user clicks the delete button 
         Then the deletion should be confirmed in a dialogue        
         Then close the browser
 

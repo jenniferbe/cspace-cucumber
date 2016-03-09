@@ -45,7 +45,7 @@ Feature: Supplementary Manual QA - Exhibition Planning
       And selects the "Exhibition" radio button on the Create New page
       And clicks on the Create button
       And user enters "1234" in the "Exhibition" "Exhibition Number" field
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
     Then "GMT-0800 (PST)" should be displayed in the message bar
     Then disables top and bottom "cancel" buttons
@@ -94,7 +94,7 @@ Feature: Supplementary Manual QA - Exhibition Planning
       And clicks on the Create button
       And user enters "1.2.3.4.5" in the "Exhibition" "Exhibition Number" field
       And user adds "John Doe" to the "Exhibition" "Sponsor" vocab field
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
     Then disables top and bottom "cancel" buttons
     Then enables top and bottom "delete" buttons

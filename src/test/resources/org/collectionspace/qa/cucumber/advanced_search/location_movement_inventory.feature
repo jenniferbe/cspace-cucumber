@@ -36,7 +36,7 @@ Feature: Advanced Search - Location / Movement / Inventory
       And user selects "Daily" from dropdown in "Inventory Frequency" row
       And user enters "1002-01-01" in the "Location/Movement/Inventory" "Next Inventory Date" field
       And user enters "3357" in the "Location/Movement/Inventory" "Reference Number" field
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
       And user clicks on link to "Advanced Search" in upper right corner
     Then the titlebar should contain "Advanced Search"
@@ -240,7 +240,7 @@ Feature: Advanced Search - Location / Movement / Inventory
       And user enters "In a Shoebox" in the "Location/Movement/Inventory" "Current Location" vocab field
       And user adds "In a Shoebox" to "Local Storage Locations"
       And user enters "testtest" in the "Location/Movement/Inventory" "Movement Information -> Note" field
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
     Given user is on the "Create New" page
       And selects the "Location/Movement/Inventory" radio button on the Create New page
@@ -252,7 +252,7 @@ Feature: Advanced Search - Location / Movement / Inventory
       And user enters "In a Shoebox" in the "Location/Movement/Inventory" "Current Location" vocab field
       And user adds "In a Shoebox" to "Local Storage Locations"
       And user enters "testtest" in the "Location/Movement/Inventory" "Movement Information -> Note" field
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
     Given user is on the "Create New" page
       And selects the "Location/Movement/Inventory" radio button on the Create New page
@@ -264,7 +264,7 @@ Feature: Advanced Search - Location / Movement / Inventory
       And user enters "In my Pocket" in the "Location/Movement/Inventory" "Current Location" vocab field
       And user adds "In my Pocket" to "Local Storage Locations"
       And user enters "testtest" in the "Location/Movement/Inventory" "Movement Information -> Note" field
-      And the user saves the record
+      And user saves the record
     Then the record is successfully saved
       And user clicks on link to "Advanced Search" in upper right corner
     Then the titlebar should contain "Advanced Search" 

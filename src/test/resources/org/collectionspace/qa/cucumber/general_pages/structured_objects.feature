@@ -16,11 +16,11 @@ Feature: Structured Objects- QA Test Plan
 		And clicks on the "Create new" button # might not be specific enough
 		And user selects "Separable part" in the "Object component type"  row # might not work 
 
-		And user clicks the plus to repeat the "Object component" form #needs stepdef ??
+		And user clicks the plus to repeat the "Object component" form   ??
 		And enters "2012.12.1a.2" in the "Object component" field
 		And clicks on the "Create new" button # might not be specific enough	
 		And user selects "Separable part" in the "Object component type"  row # might not work 
-		And the user saves the record
+		And user saves the record
 
 		# For the following "Thens", they might not be specific enough
 		# In the Webpage, there are different rows and I'm not entirely sure how to discriminate amongst them
@@ -34,7 +34,7 @@ Feature: Structured Objects- QA Test Plan
 		###################
 		##### BEGIN 1B#####
 		###################
-		And clicks on the "Go To" button next to the "Broader Object" field #needs Stepdef, RETURN.
+		And clicks on the "Go To" button next to the "Broader Object" field  , RETURN.
 		Then the "Object component" field should contain "2012.12.1a" # this might not work
 		Then the "Object component type" field should contain "Verso" # this might not work
 		Then the "Broader Object" field should be empty #neds step def
@@ -44,16 +44,16 @@ Feature: Structured Objects- QA Test Plan
 		###################
 
 	Scenario: User searches for "family member" and makes sure everything is in place after adding some relations
-		Given the user is on the "My CollectionSpace" page
+		Given user is on the "My CollectionSpace" page
 		And user enters "2012.12.1a.2" in the top nav search field
 		And clicks on the top nav search submit button
-		And the user clicks on result with text "2012.12.1a.2"
-		Then the "Equivalent component" field should not be editable #needs stepdef
+		And user clicks on result with text "2012.12.1a.2"
+		Then the "Equivalent component" field should not be editable  
 		Then the "Equivalent component" field should contain "2012.12.1a.1" # might not work
 
 		And enters "2012.12.1a.2a" in the "Object component" field
 		And clicks on the "Create new" button # might not be specific enough
-		And user clicks the plus to repeat the "Object component" form #needs stepdef ??
+		And user clicks the plus to repeat the "Object component" form   ??
 		
 		And enters "2012.12.1a.2b" in the "Object component" field
 		And clicks on the "Create new" button
@@ -62,13 +62,13 @@ Feature: Structured Objects- QA Test Plan
 		And enters "2012.12.1a.2c" in the "Object component" field
 		And clicks on the "Create new" button # might not be specific enough
 		And user clicks the plus to repeat the "Object component" form
-		And the user saves the record
+		And user saves the record
 
 		Then the "Broader Object" field should contain "2012.12.1a.2a"
 		Then the "Object component" field should contain "2012.12.1a.2b"
 		Then the "Object component" field should contain "2012.12.1a.2c"
 
-		And clicks on the "Go to" button next to the "Broader Object" field in the row containing "2012.12.1a.2b" #needs stepdef
+		And clicks on the "Go to" button next to the "Broader Object" field in the row containing "2012.12.1a.2b"  
 		Then the "Broader object" field should contain "2012.12.1a.2" # this might not work
 		Then the "Equivalent component" field should contain "2012.12.1a.2a" # this might not work
 		Then the "Equivalent component" field should contain "2012.12.1a.2c" # this might not work
@@ -78,10 +78,10 @@ Feature: Structured Objects- QA Test Plan
 	##### BEGIN 1D#####
 	###################
 	Scenario: User searches for a "family" member and proceeds to edit it. 
-		Given the user is on the "My CollectionSpace" page
+		Given user is on the "My CollectionSpace" page
 		And user enters "2012.12.1a.1" in the top nav search field
 		And clicks on the top nav search submit button
-		And the user clicks on result with text "2012.12.1a.1"
+		And user clicks on result with text "2012.12.1a.1"
 		Then the "Broader component" field should contain "2012.12.1a" # this might not work
 		Then the "Equivalent component" field should contain "2012.12.1a.2" # might not work
 
@@ -91,10 +91,10 @@ Feature: Structured Objects- QA Test Plan
 	###################
 		And enters "2012.12.1a.1a" in the "Object component" field
 		And clicks on the "Create new" button # might not be specific enough
-		And user clicks the plus to repeat the "Object component" form #needs stepdef ??
+		And user clicks the plus to repeat the "Object component" form   ??
 		And enters "2012.12.1a.1b" in the "Object component" field
 		And clicks on the "Create new" button # might not be specific enough
-		And the user saves the record
+		And user saves the record
 
 		Then the "Broader object" field should contain "2012.12.1a" # this might not work
 		Then the "Equivalent component" field should contain "2012.12.1a.2" # this might not work
@@ -112,7 +112,7 @@ Feature: Structured Objects- QA Test Plan
 	##### BEGIN 1F#####
 	###################
 	Scenario: User searches for a "family" member and makes sure hierarchy is correct
-		Given the user is on the "My CollectionSpace" page
+		Given user is on the "My CollectionSpace" page
 		And user enters "2012.12" in the top nav search field
 		And clicks on the top nav search submit button
 
@@ -162,7 +162,7 @@ Feature: Structured Objects- QA Test Plan
 		Then a dialog containing the message "Warning: null currently has broader term 2012.12.1a.2. Change broader term?" should be displayed
 
 		And user clicks the "Yes" button # symbol == button?
-		And the user saves the record
+		And user saves the record
 
 		Then the "Object component" field should contain "012.12.1a.2b" 
 		And user goes to the record with Identification Number "012.12.1a.2b" # needs step def
@@ -174,10 +174,10 @@ Feature: Structured Objects- QA Test Plan
 		Then a dialog containing the message "This Cataloging record can not be removed. It has a Narrower Context." should be displayed #stepdef AF
 
 	#2g
-		And user clicks the plus to repeat the "Object component" form #needs stepdef ??
+		And user clicks the plus to repeat the "Object component" form   ??
 		And enters "2012.12.1a.2b.0000" in the "Object component" field 
  		And clicks on the "Create new" button # might not be specific enough
-		And the user saves the record
+		And user saves the record
 		And user clicks on the delete button
 		Then a dialog containing the message "This Cataloging record can not be removed. It has a Narrower Context." should be displayed #stepdef AF
 
@@ -186,82 +186,82 @@ Feature: Structured Objects- QA Test Plan
 		And user clicks the "Delete"  button in the "Object component" field in the row containing "2012.12.1a.2b" 
 		And user clicks on the delete button
 		Then a delete confirmation dialogue should appear #needs Step
-    	And the user clicks the delete button 
+    	And user clicks the delete button 
 		Then the deletion should be confirmed in a dialogue
 
-		Given the user is on the "My CollectionSpace" page
+		Given user is on the "My CollectionSpace" page
 		And user enters "00002012.12.1a" in the top nav search field
 		And clicks on the top nav search submit button
 		Then the search results should not contain "00002012.12.1a"
 		Then close the browser
 
 	# TO DO:
-	Scenario: The user deletes all the previously made records
+	Scenario: user deletes all the previously made records
 		Given user is on the "Create New" page
 		And user goes to the record with Identification Number "012.12.1" # needs step def
-		And the user clicks the delete button
-	    Then a delete confirmation dialogue should appear #needs Stepdef
-	    And the user clicks the delete button 
+		And user clicks the delete button
+	    Then a delete confirmation dialogue should appear  
+	    And user clicks the delete button 
 	    Then the deletion should be confirmed in a dialogue
 
 		And user goes to the record with Identification Number "2012.12.1a" # needs step def
-		And the user clicks the delete button
-	    Then a delete confirmation dialogue should appear #needs Stepdef
-	    And the user clicks the delete button 
+		And user clicks the delete button
+	    Then a delete confirmation dialogue should appear  
+	    And user clicks the delete button 
 	    Then the deletion should be confirmed in a dialogue
 
 		And user goes to the record with Identification Number "2012.12.1a.1" # needs step def
-		And the user clicks the delete button
-	    Then a delete confirmation dialogue should appear #needs Stepdef
-	    And the user clicks the delete button 
+		And user clicks the delete button
+	    Then a delete confirmation dialogue should appear  
+	    And user clicks the delete button 
 	    Then the deletion should be confirmed in a dialogue
 
 		And user goes to the record with Identification Number "2012.12.1a.1a" # needs step def
-		And the user clicks the delete button
-	    Then a delete confirmation dialogue should appear #needs Stepdef
-	    And the user clicks the delete button 
+		And user clicks the delete button
+	    Then a delete confirmation dialogue should appear  
+	    And user clicks the delete button 
 	    Then the deletion should be confirmed in a dialogue
 
 		And user goes to the record with Identification Number "2012.12.1a.1b" # needs step def
-		And the user clicks the delete button
-	    Then a delete confirmation dialogue should appear #needs Stepdef
-	    And the user clicks the delete button 
+		And user clicks the delete button
+	    Then a delete confirmation dialogue should appear  
+	    And user clicks the delete button 
 	    Then the deletion should be confirmed in a dialogue
 
 		And user goes to the record with Identification Number "2012.12.1a.2" # needs step def
-		And the user clicks the delete button
-	    Then a delete confirmation dialogue should appear #needs Stepdef
-	    And the user clicks the delete button 
+		And user clicks the delete button
+	    Then a delete confirmation dialogue should appear  
+	    And user clicks the delete button 
 	    Then the deletion should be confirmed in a dialogue
 
 		And user goes to the record with Identification Number "2012.12.1a.2a" # needs step def
-		And the user clicks the delete button
-    	Then a delete confirmation dialogue should appear #needs Stepdef
-    	And the user clicks the delete button 
+		And user clicks the delete button
+    	Then a delete confirmation dialogue should appear  
+    	And user clicks the delete button 
     	Then the deletion should be confirmed in a dialogue
 
 		And user goes to the record with Identification Number "2012.12.1a.2b" # needs step def
-		And the user clicks the delete button
-	    Then a delete confirmation dialogue should appear #needs Stepdef
-	    And the user clicks the delete button 
+		And user clicks the delete button
+	    Then a delete confirmation dialogue should appear  
+	    And user clicks the delete button 
 	    Then the deletion should be confirmed in a dialogue
 
 		And user goes to the record with Identification Number "2012.12.1a.2c" # needs step def
-		And the user clicks the delete button
-	    Then a delete confirmation dialogue should appear #needs Stepdef
-	    And the user clicks the delete button 
+		And user clicks the delete button
+	    Then a delete confirmation dialogue should appear  
+	    And user clicks the delete button 
 	    Then the deletion should be confirmed in a dialogue
 
 		And user goes to the record with Identification Number "2012.12.1a.2b.0000" # needs step def
-		And the user clicks the delete button
-	    Then a delete confirmation dialogue should appear #needs Stepdef
-	    And the user clicks the delete button 
+		And user clicks the delete button
+	    Then a delete confirmation dialogue should appear  
+	    And user clicks the delete button 
 	    Then the deletion should be confirmed in a dialogue
 
 	    And user goes to the record with Identification Number "00002012.12.1a" # needs step def
-		And the user clicks the delete button
-	    Then a delete confirmation dialogue should appear #needs Stepdef
-	    And the user clicks the delete button 
+		And user clicks the delete button
+	    Then a delete confirmation dialogue should appear  
+	    And user clicks the delete button 
 	    Then the deletion should be confirmed in a dialogue
 	    Then close the browser
 
@@ -277,14 +277,14 @@ Feature: Structured Objects- QA Test Plan
 		And enters "test" in the "Brief Description" field
 		And enters "2013.12.1" in the "Broader object" field
 		And clicks on the "Create new" button # might not be specific enough
-		And the user saves the record
+		And user saves the record
 
 		And clicks on the "Add" button in the "Procedures" box # (to the right) needs stepdef
-		# And the user adds any related procedural record of any kind
+		# And user adds any related procedural record of any kind
 		And enters "2013.12.2" in the "Object component" field
 		And clicks on the "Create new" button
-		And the user saves the record
-		And clicks on the "Go To" button next to the "Broader Object" field #needs Stepdef, RETURN.
+		And user saves the record
+		And clicks on the "Go To" button next to the "Broader Object" field  , RETURN.
 
 		Then the "Identification Number" field should contain "2013.12.2"
 		# then the files should be the same. BUG????
@@ -307,8 +307,8 @@ Feature: Structured Objects- QA Test Plan
 		And enters "2013.12.1a.1" in the "Object component" field
 		# then a message will flash saying to not forget --> doesnt happen
 
-		And the user saves the record
-		And clicks on the "Go To" button next to the "Object component" field #needs Stepdef, RETURN.
+		And user saves the record
+		And clicks on the "Go To" button next to the "Object component" field  , RETURN.
 
 		Then the "Identification Number" field should contain "2013.12.1a.1"
 		# then te record should match 2013.12.a1 but with ID "2013.12.1a.1" and w/o related records

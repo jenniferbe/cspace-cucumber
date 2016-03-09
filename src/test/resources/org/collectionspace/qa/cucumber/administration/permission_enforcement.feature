@@ -55,12 +55,12 @@ Feature: Permission Enforcement
       And user fills out required fields
       And user assigns an existing Role
       And user clicks on the Save button
-    Then then the user is successfully saved
+    Then then user is successfully saved
     Then a confirmation message should appear
       And user clicks the recently created sser
       And user assigns a different role
       And user clicks on the Save button
-    Then the user is not successfully saved
+    Then user is not successfully saved
     Then an error message containing "You do not have permission to edit user roles" should appear
 
   #Continued from above: Test8: Write access to Roles & Permissions
@@ -119,7 +119,7 @@ Feature: Permission Enforcement
       And user enters "test@collectionspace.org" in the "Confirm Password" field
       And user assigns an existing role
       And user clicks on the Save button
-    Then the user is successfully saved
+    Then user is successfully saved
       And user opens a different browser
     Given user is logged in as "test@collectionspace.org" with the password "test@collectionspace.org" on the second browser
       And user clicks the "test@collectionspace.org" user

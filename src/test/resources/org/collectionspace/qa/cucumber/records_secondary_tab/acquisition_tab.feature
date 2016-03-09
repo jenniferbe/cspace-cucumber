@@ -5,7 +5,7 @@ Feature: Acquisition Tab
   # Enter feature description here
 
     Scenario: Working Acquisition Secondary Tab #1 
-        Given the user is in the "My CollectionSpace" page
+        Given user is in the "My CollectionSpace" page
        
         And user goes to the record with identification number "CQA93_E" #not empty
         And user selects the "Acquisition" tab     
@@ -18,7 +18,7 @@ Feature: Acquisition Tab
         Then close the browser
 
     Scenario: Dismissing the dialogue #3 
-        Given the user is in the "My CollectionSpace" page
+        Given user is in the "My CollectionSpace" page
         And user goes to the record with identification number "CQA93_NE"
 
         #Variation A
@@ -28,7 +28,7 @@ Feature: Acquisition Tab
 
         #Variation B
         And user clicks the "Add record" button
-        And the user presses the "ESC" key 
+        And user presses the "ESC" key 
         Then the "Related Acquisition Records" area should only contain "CQA93.1"
 
     Scenario: Searching and adding multiple Acquisition records #5 
@@ -37,8 +37,8 @@ Feature: Acquisition Tab
         Then the search results should contain "CQA93.3" 
         Then the search results should contain "CQA93.2" 
 
-        And the user selects the box with result "CQA93.3" 
-        And the user selects the box with result "CQA93.2"  
+        And user selects the box with result "CQA93.3" 
+        And user selects the box with result "CQA93.2"  
         And user clicks the "Add to current record" button #needs Step def #7
 
         #Expected, Group #1
@@ -49,7 +49,7 @@ Feature: Acquisition Tab
         Then "CQA93.2" should appear in the "Procedures" area 
 
 
-        And the user clicks on result with text "CQA93.3" 
+        And user clicks on result with text "CQA93.3" 
         Then an "Edit Acquisition Record" form should be displayed 
         Then the "Acquisition Reference Number" field should contain "CQA93.3"
         And user clicks the "Delete this relation." button
@@ -59,7 +59,7 @@ Feature: Acquisition Tab
         Then "CQA93.3" should not appear in the "Related Acquisition Records" area 
 
 
-        And the user clicks on result with text "CQA93.2" 
+        And user clicks on result with text "CQA93.2" 
         Then an "Edit Acquisition Record" form should be displayed 
         Then the "Acquisition Reference Number" field should contain "CQA93.2"
         And user clicks the "Delete this relation." button
@@ -70,7 +70,7 @@ Feature: Acquisition Tab
         Then close the browser
 
     Scenario: Warning when navigating away from new Acquisition record #7 
-        Given the user is in the "My CollectionSpace" page
+        Given user is in the "My CollectionSpace" page
         And user goes to the record with identification number "CQA93_NE"
         Then the "Identification Number" field should contain "CQA93_NE"
         And user selects the "Acquisition" tab 
@@ -88,13 +88,13 @@ Feature: Acquisition Tab
         #Variation A
         And user selects the "Current Record" tab
         Then a leave confirmation dialogue should appear 
-        And the user clicks the5e "close" button  
+        And user clicks the5e "close" button  
         Then the "Acquisition Reference Number" field should contain "CQA93.4"
 
 
         #Variation B
         And user selects the "Current Record" tab
-        Then a leave confirmation dialogue should appear #needs StepDef
+        Then a leave confirmation dialogue should appear  
         And user clicks the "cancel" button  #might not work
         Then the "Acquisition Reference Number" field should contain "CQA93.4"
 
@@ -123,7 +123,7 @@ Feature: Acquisition Tab
         Then close the browser
 
     Scenario: Cancel changes button #9 
-        Given the user is in the "My CollectionSpace" page
+        Given user is in the "My CollectionSpace" page
         And user goes to the record with identification number "CQA93_NE"
         And user selects the "Acquisition" tab
         And user clicks the "Add record" button #needs step def
@@ -148,7 +148,7 @@ Feature: Acquisition Tab
         And user clicks the "Go to record" button
         And user clicks the "Delete" button 
         Then a delete confirmation dialogue should appear
-        And the user clicks the confirmation delete button
+        And user clicks the confirmation delete button
         Then a deletion should be confirmed in a dialogue
         Then close the browser
 
@@ -161,7 +161,7 @@ Feature: Acquisition Tab
 
         And user clicks the "+ Add Record" button
         And clicks on the Create button
-        And the user saves the record # click the save button
+        And user saves the record # click the save button
         Then the message "Please specify an Acquisition Reference Number" should appear #fail
         And user enters "CQA93.11" in the "Acquisition Reference Number" field
         And user saves the record
@@ -281,10 +281,10 @@ Feature: Acquisition Tab
         
 
     Scenario: Testing links and "Go To Record" works #23 
-        Given the user is in the "My CollectionSpace" page
+        Given user is in the "My CollectionSpace" page
         And user goes to the record with identification number "CQA93_NE"
         And user selects the "Acquisition" tab 
-        And the user clicks on result with text "CQA93.1"
+        And user clicks on result with text "CQA93.1"
         Then the "Acquisition Reference Number" field should contain "CQA93.1"
         And user clicks the "Go to record" button
         Then the titlebar should contain "CQA93.1"
@@ -292,14 +292,14 @@ Feature: Acquisition Tab
         Then close the browser  
 
     Scenario: Deleting Relation via List #25 
-        Given the user is in the "My CollectionSpace" page
+        Given user is in the "My CollectionSpace" page
         And user goes to the record with identification number "CQA93_NE"
         And user selects the "Acquisition" tab 
 
         And user clicks the "Add record" button #needs step def
         And clicks on the Create button
         And user enters "CQA93.7" in the "Acquisition Reference Number" field #might not work 
-        And the user saves the record
+        And user saves the record
         
         And user clicks the "Delete Relation" button on the row that reads "CQA93.7" #Green "X" button. Needs step def
         Then delete confirmation dialogue should appear # Then the dialogue should appear asking you to delete this relation
@@ -309,7 +309,7 @@ Feature: Acquisition Tab
 
         And user clicks the "Delete Relation" button on the row that reads "CQA93.7" #Green "X" button. Needs step def. Again
         Then delete confirmation dialogue should appear
-        And user clicks the "close" button # close button == close symbol? #Needs stepdef???
+        And user clicks the "close" button # close button == close symbol?  ???
         Then the dialogue should be dismissed
         Then the "Related Acquisition Records" area should contain "CQA93.7"
 
@@ -317,12 +317,12 @@ Feature: Acquisition Tab
         And user clicks the "Delete Relation" button on the row that reads "CQA93.7" #Green "X" button. Needs step def. Last time.
         Then delete confirmation dialogue should appear
         And user clicks the "delete" button
-        Then "CQA93.7" should not appear in the "Procedures" sidebar #needs StepDef #notlogged
-        Then "CQA93.7" should not appear in the "Related Acquisition Records" area #needs Stepdef #not logged
+        Then "CQA93.7" should not appear in the "Procedures" sidebar   #notlogged
+        Then "CQA93.7" should not appear in the "Related Acquisition Records" area   #not logged
 
         And user goes to the record with identification number "CQA93.7"
         And user selects the "Acquisition" tab 
-        Then "CQA93_NE" should not appear in the "Related Acquisition Records" area  #needs Stepdef
+        Then "CQA93_NE" should not appear in the "Related Acquisition Records" area   
         And user selects the "Current Record" tab
 
         And user clicks on the delete button
@@ -332,7 +332,7 @@ Feature: Acquisition Tab
         Then close the browser
 
     Scenario: Deleting Relation via record editor #27 
-        Given the user is in the "My CollectionSpace" page
+        Given user is in the "My CollectionSpace" page
         And user goes to the record with identification number "CQA93_NE"
         Then "CQA93_NE" should be in the "Identification Number" field
 
@@ -340,26 +340,26 @@ Feature: Acquisition Tab
         And user clicks the "Add record" button #needs step def
         And clicks on the Create button
         And user enters "CQA93.8" in the "Acquisition Reference Number" field #might not work 
-        And the user saves the record
-        And the user clicks on result with text "CQA93.8"
+        And user saves the record
+        And user clicks on result with text "CQA93.8"
         
         And user clicks the "Delete this relation" button
-        Then a delete confirmation dialogue should appear #needs Stepdef
+        Then a delete confirmation dialogue should appear  
         And user clicks the "cancel" button # click cancel
-        Then the dialogue should be dismissed #needs stepdef
+        Then the dialogue should be dismissed  
         Then the "Related Acquisition Records" area should contain "CQA93.8"
 
         And user clicks the "Delete this relation" button
-        Then a delete confirmation dialogue should appear #needs Stepdef
+        Then a delete confirmation dialogue should appear  
         And user clicks the "close" button # close button == close symbol?
-        Then the dialogue should be dismissed #needs stepdef
+        Then the dialogue should be dismissed  
         Then the "Related Acquisition Records" area should contain "CQA93.8"
 
         And user clicks the "Delete this relation" button
         Then a delete confirmation dialogue should appear #needs Step
         And user clicks on the delete button 
         Then the deletion should be confirmed in a dialogue
-        Then "CQA93.8" should not appear in the "Procedures" area  #needs Stepdef
+        Then "CQA93.8" should not appear in the "Procedures" area   
         Then "CQA93.8" should not appear in the "Related Acquisition Records" area
 
         And user goes to the record with identification number "CQA93.8"
