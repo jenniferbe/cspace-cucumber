@@ -72,11 +72,13 @@ Feature: Condition Check Secondary Tab
       And user presses enter
       And user tabs to the "+ Add New" button
       And user presses enter
-    Then each field should be reachable by keyboard
+    # Then each field should be reachable by keyboard
+    # The following may first require entering data in required fields; see
+    # the related location_movement_inventory.feature for a possible approach
       And user tabs to the "Save" button
       And user presses enter
     Then the record is successfully saved
-    Then the newly created record should be reachable by keyboard
+    # Then the newly created record should be reachable by keyboard
     Then close the record
 
 
