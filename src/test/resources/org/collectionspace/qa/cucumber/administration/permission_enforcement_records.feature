@@ -57,7 +57,7 @@ Feature: Permission Enforcement
     Then the sidebar should contain "Record Type B"
     Then the sidebar should contain "Record Type D"
    #Test39 continued from Test37: Adding records from Write Record
-    Then the add button is present for "Record Type D"
+    Then the "add" button is present for "Record Type D"
       And clicks the add button for "Record Type D"
     Then the dropdown in the dialog should contain "Record Type D"
     Then the dropdown in the dialog should not contain "Record Type A"
@@ -75,7 +75,7 @@ Feature: Permission Enforcement
       And selects the "Record Type D" tab
       And clicks on a "Record Type D" record
     Then the record should be editable
-    Then the add button is present
+    Then the "add" button is present
     Then the "Create New" button is present
    #Test43 continued from Test41: Record Read Only Mode
       And clicks on a "Record Type B" related record that has a record of Type A, C, and D related
@@ -189,10 +189,10 @@ Feature: Permission Enforcement
       And deletes a "Vocabulary A" vocab field
       And saves the record
     Then the record is successfully saved
-    Then the "Used Terms" list should not contain the vocabulary
+    Then the "Used Terms" list should not contain the vocabulary term
       And enters "Jam" in the deleted vocab field
     Then the vocabulary autocomplete should appear
-    Then the vocabulary autocomplete should not contain the option to add a new term
+    Then the vocabulary autocomplete "should not" contain the option to add a new term
       And clicks on something from autocomplete options
       And saves the record
     Then the record is successfully saved
@@ -247,7 +247,7 @@ Feature: Permission Enforcement
     Then the record is successfully saved
     Then the "Used Terms" list should not contain the vocabulary term
       And enters "Jam" in the deleted vocab field
-    Then the vocabulary autocomplete should contain the option to add a new term
+    Then the vocabulary autocomplete "should" contain the option to add a new term
       And adds "Jam" to a vocabulary
       And saves the record
     Then the record is successfully saved
@@ -269,7 +269,7 @@ Feature: Permission Enforcement
     Then the "Used Terms" list should not contain the vocabulary term
       And enters "Jam" in the deleted vocab field
     Then the vocabulary autocomplete should not contain "Vocabulary A" terms
-    Then the vocabulary autocomplete should not contain the option to add a new term
+    Then the vocabulary autocomplete "should not" contain the option to add a new term
       And clicks on something from autocomplete options
       And saves the record
     Then the record is successfully saved
@@ -291,7 +291,7 @@ Feature: Permission Enforcement
     Then the "Used Terms" list should not contain the vocabulary term
       And enters "Jam" in the deleted vocab field
     Then the vocabulary autocomplete should not contain "Vocabulary A" terms
-    Then the vocabulary autocomplete should contain the option to add a new term
+    Then the vocabulary autocomplete "should" contain the option to add a new term
       And clicks on something from autocomplete options
       And saves the record
     Then the record is successfully saved
@@ -312,7 +312,7 @@ Feature: Permission Enforcement
     Then the record is successfully saved
     Then the "Used Terms" list should not contain the vocabulary term
       And enters "Jam" in the deleted vocab field
-    Then the vocabulary autocomplete should contain the option to add a new term
+    Then the vocabulary autocomplete "should" contain the option to add a new term
       And clicks on something from autocomplete options
       And saves the record
     Then the record is successfully saved

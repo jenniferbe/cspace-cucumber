@@ -55,7 +55,7 @@ Feature: Object Exit Page Tab
 	    Then the "Object Exit Number" field should contain "CQA115.3"
 	    And clicks the "Delete this relation." button
 	    Then a delete confirmation dialog should appear
-	    And clicks the delete button 
+	    And clicks on the delete button 
 	    Then the deletion should be confirmed in a dialog
 	    Then "CQA115.3" should not appear in the "Related Object Exit Records" area 
 
@@ -65,7 +65,7 @@ Feature: Object Exit Page Tab
 	    Then the "Object Exit Number" field should contain "CQA115.2"
 	    And clicks the "Delete this relation." button
 	    Then a delete confirmation dialog should appear
-	    And clicks the delete button 
+	    And clicks on the delete button 
 	    Then the deletion should be confirmed in a dialog
 	    Then "CQA115.2" should not appear in the "Related Object Exit Records" area 
 
@@ -119,9 +119,10 @@ Feature: Object Exit Page Tab
 	    Then "CQA115.4" should appear in the "Related Object Exit Records" area 
 
 	    And navigates to the record with identification number "CQA115.4"
-	    And clicks the delete button
+	    And clicks on the delete button 
+
 	    Then a delete confirmation dialog should appear
-	    And clicks the delete button 
+	    And clicks on the delete button 
 	    Then the deletion should be confirmed in a dialog
 	    Then close the browser
 
@@ -134,8 +135,8 @@ Feature: Object Exit Page Tab
 
 	    # Variation A
 	    Then the message "Creating new record..." should be displayed
-	   	Then the "cancel changes" button at the bottom of the page should not be clickable
-	    Then the "cancel changes" button at the top of the page should not be clickable
+	   	Then the "cancel changes" button at the "bottom" of the page "should not" be clickable
+	    Then the "cancel changes" button at the "top" of the page "should not" be clickable
 	    
 	    And enters "CQA115.5" in the "Exit Number" field
 	    And clicks the "cancel changes" button 
@@ -144,15 +145,15 @@ Feature: Object Exit Page Tab
 	    # Variation B
 	    And enters "CQA115.5" in the "Exit Number" field
 	    And clicks the "save" button 
-	    Then the "cancel changes" button at the top of the page should not be clickable 
-    	Then the "cancel changes" button at the bottom of the page should not be clickable 
+	    Then the "cancel changes" button at the "top" of the page "should not" be clickable 
+    	Then the "cancel changes" button at the "bottom" of the page "should not" be clickable 
    
    
 	    And clicks the "Go to record" button
 	    And clicks the "Delete" button 
 	    Then a delete confirmation dialog should appear
 	    And clicks the confirmation delete button
-	    Then a deletion should be confirmed in a dialog
+	    Then the deletion should be confirmed in a dialog
 	    Then close the browser
 
 	Scenario: Check Exit Number and successful save and All fields saved on edited Object Exit record #13
@@ -174,7 +175,7 @@ Feature: Object Exit Page Tab
         And enters "Cesar Villalobos" in the "Current Owner" field
         And clicks on "Cesar Villalobos" from autocomplete options
         And enters "Jennifer Be" in the "Depositor" field
-        And clicks on "Jennifer Be" from the autocomplete options
+        And clicks on "Jennifer Be" from autocomplete options
         And selects "Courier" from the "Exit Method" drop down box
         And selects "Deaccession" from the "Exit Reason" drop down box
         And enters "This \n is \n CQA115" in the "Exit Note" field
@@ -200,7 +201,7 @@ Feature: Object Exit Page Tab
         And enters "Jennifer Be" in the "Current Owner" field
         And clicks on "Jennifer Be" from autocomplete options
         And enters "Cesar Villalobos" in the "Depositor" field
-        And clicks on "Cesar Villalobos" from the autocomplete options
+        And clicks on "Cesar Villalobos" from autocomplete options
         And selects "Post" from the "Exit Method" drop down box
         And selects "Disposal" from the "Exit Reason" drop down box
         And enters "This \n is \n CQA115 \n Test 13" in the "Exit Note" field
@@ -220,7 +221,7 @@ Feature: Object Exit Page Tab
         And clicks the "Go To Record" button	    
 	    And clicks the "Delete" button
 	    Then a delete confirmation dialog should appear
-	    And clicks the delete button 
+	    And clicks on the delete button 
 	    Then the deletion should be confirmed in a dialog   
 
         Then close the browser
@@ -262,7 +263,8 @@ Feature: Object Exit Page Tab
 
 	    And clicks the "Delete Relation" button on the row that reads "CQA115.7"
 	    Then delete confirmation dialog should appear
-	    And clicks on the delete button
+	    And clicks on the delete button 
+
 	    Then "CQA115.7" should not appear in the "Procedures" area
 	    Then "CQA115.7" should not appear in the "Related Object Exit Records" area
 
@@ -271,9 +273,10 @@ Feature: Object Exit Page Tab
 	    Then "CQA115_NE" should not appear in the "Related Object Exit Records" area   
 	    And selects the "Current Record" tab
 
-	    And clicks the delete button
+	    And clicks on the delete button 
+
 	    Then a delete confirmation dialog should appear
-	    And clicks the delete button 
+	    And clicks on the delete button 
 	    Then the deletion should be confirmed in a dialog
 	    Then close the browser
 
@@ -303,7 +306,7 @@ Feature: Object Exit Page Tab
 
 	    And clicks the "Delete this relation" button
 	    Then a delete confirmation dialog should appear
-	    And clicks the delete button 
+	    And clicks on the delete button 
 	    Then the deletion should be confirmed in a dialog
 	    # Then the record editor should no longer be displayed (below list)
 	    Then "CQA115.8" should not appear in the "Procedures" area   
@@ -314,9 +317,10 @@ Feature: Object Exit Page Tab
 	    Then the "Related Object Exit Records" area should be empty
 	    
 	    And selects the "Current Record" tab 
-	    And clicks the delete button
+	    And clicks on the delete button 
+
 	    Then a delete confirmation dialog should appear
-	    And clicks the delete button 
+	    And clicks on the delete button 
 	    Then the deletion should be confirmed in a dialog
 	    Then close the browser 
 

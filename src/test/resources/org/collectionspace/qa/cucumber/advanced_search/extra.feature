@@ -20,7 +20,7 @@ Feature: Advanced_Search - Extras
   #Test1
   Scenario: Recent Searches
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Object Exit" from record type dropdown
       And enters "Goodbye" in the keyword search field
@@ -38,13 +38,13 @@ Feature: Advanced_Search - Extras
     Then the search results should contain "Remember me 1234"
       And clicks the "Edit existing advanced search" button
     Then the titlebar should contain "Advanced Search"
-    Then "Goodbye" should be in the keyword search field
+    Then "Goodbye" should be in the "keyword search" field
       And clicks on the "Recent searches" entry containing "{"initialState":false, "keywords":"""
     Then the search results should not contain "Remember me 1234"
       And clicks the "Edit existing advanced search" button
     Then the titlebar should contain "Advanced Search"
-  #the wiki says goodbye should be in the keyword search field.. but according to the instructions. second search didn't put anything in keyword search field.
-    #Then "Goodbye" should be in the keyword search field 
+  #the wiki says goodbye should be in the "keyword search" field.. but according to the instructions. second search didn't put anything in keyword search field.
+    #Then "Goodbye" should be in the "keyword search" field 
     Then "remember me 1234" should be in the "Advanced Search" "Exit Number" field
     Then "James Blish" should be in the "Advanced Search" "Depositor" vocab field
     Then close the browser

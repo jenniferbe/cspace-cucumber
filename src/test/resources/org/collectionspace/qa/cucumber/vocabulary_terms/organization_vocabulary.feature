@@ -155,7 +155,7 @@ Feature: Organization Vocabulary Page
 #         Take note of the Display Name of the record
 #         Click the "Delete" button in the very bottom of the organization record
 #     Expected:
-#         The delete button should be disabled and nothing should happen
+#         The clicks on the delete button should be disabled and nothing should happen
 #     Actions:
 #         Save the record
 #         Click the "Delete" button in the very bottom of the organization record
@@ -167,14 +167,14 @@ Feature: Organization Vocabulary Page
 #         Dialog should be dismissed
 #         no other changes should occur.
 #     Actions:
-#         Click the delete button again
+#         Click the clicks on the delete button again
 #     Actions:
 #         click the close symbol
 #     Expected
 #         Dialog should be dismissed
 #         no other changes should occur.
 #     Actions:
-#         Click the delete button again
+#         Click the clicks on the delete button again
 #         In the appearing dialog, click Delete
 #     Expected:
 #         A dialog should appear requesting Confirmation of your delete. Click Delete
@@ -220,22 +220,22 @@ Feature: Organization Vocabulary Page
 #
 #     Actions:
 #         Open an existing Organization Vocabulary record, do not make any changes
-#         Variation A: Click Cancel changes button at the top of the page
-#         Variation B: Click Cancel changes button at the bottom of the page
+#         Variation A: Click Cancel changes button at the "top" of the page
+#         Variation B: Click Cancel changes button at the "bottom" of the page
 #     Expected:
 #         Cancel changes buttons should be disabled and nothing should happen
 #     Actions:
 #         Edit at least one field, and click or Tab out of that field
-#         Variation A: Click Cancel changes button at the top of the page
-#         Variation B: Click Cancel changes button at the bottom of the page
+#         Variation A: Click Cancel changes button at the "top" of the page
+#         Variation B: Click Cancel changes button at the "bottom" of the page
 #     Expected:
 #         Cancel changes button should be active
 #         Record should be reverted to before changes were made
 #     Actions:
 #         Edit at least one field, and click or Tab out of that field
 #         Click the Save button
-#         Variation A: After successful save, click the Cancel changes button at the top of the page
-#         Variation B: After successful save, click the Cancel changes button at the bottom of the page
+#         Variation A: After successful save, click the "Cancel changes" button at the "top" of the page
+#         Variation B: After successful save, click the "Cancel changes" button at the "bottom" of the page
 #     Expected:
 #         Cancel changes button should be disabled and nothing should happen
 #
@@ -310,11 +310,11 @@ Feature: Organization Vocabulary Page
 #     Actions:
 #         Click on "Museum of the Moving Image"
 #     Expected:
-#         "Museum of the Moving Image" should not be clickable and nothing should happen
+#         "Museum of the Moving Image" "should not" be clickable and nothing should happen
 #     Actions:
 #         Click on "American Museum of the Moving Image"
 #     Expected:
-#         "American Museum of the Moving Image" should not be clickable and nothing should happen
+#         "American Museum of the Moving Image" "should not" be clickable and nothing should happen
 #     Actions:
 #         Click on "Moving Image"
 #     Expected:

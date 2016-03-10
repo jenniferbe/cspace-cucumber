@@ -24,7 +24,7 @@ Feature: Advanced Search - Object Exit
       And enters "textbook" in the "Object Exit" "Exit Note" field
       And saves the record
     Then the record is successfully saved
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Object Exit" from record type dropdown
       And enters "desiderium" in the "Advanced Search" "Exit Number" field
@@ -34,7 +34,7 @@ Feature: Advanced Search - Object Exit
 
   Scenario: Search by Current owner
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Object Exit" from record type dropdown
       And enters "tishas" in the "Advanced Search" "Current Owner" vocab field
@@ -45,7 +45,7 @@ Feature: Advanced Search - Object Exit
 
   Scenario: Search by Depositor
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Object Exit" from record type dropdown
       And enters "oar" in the "Advanced Search" "Depositor" vocab field
@@ -56,7 +56,7 @@ Feature: Advanced Search - Object Exit
 
   Scenario: Search by Exit Date
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search" 
       And selects "Object Exit" from record type dropdown
       And enters "01-01-2011" in the "Advanced Search" "Exit Date" field
@@ -66,7 +66,7 @@ Feature: Advanced Search - Object Exit
 
   Scenario: Search by Exit Method
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Object Exit" from record type dropdown
       And clicks on the "Advanced Search" "Exit Method" field
@@ -78,7 +78,7 @@ Feature: Advanced Search - Object Exit
 
   Scenario: Search by Exit Reason
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Object Exit" from record type dropdown
       And clicks on the "Advanced Search" "Exit Reason" field
@@ -90,7 +90,7 @@ Feature: Advanced Search - Object Exit
 
   Scenario: Search by Exit Note
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Object Exit" from record type dropdown
       And enters "textbook" in the "Advanced Search" "Exit Note" field
@@ -100,7 +100,7 @@ Feature: Advanced Search - Object Exit
 
   Scenario: Search by Exit Note (partial)
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search" 
       And selects "Object Exit" from record type dropdown
       And enters "textb*" in the "Advanced Search" "Exit Note" field
@@ -110,7 +110,7 @@ Feature: Advanced Search - Object Exit
 
   Scenario: Search by Modified Date
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Object Exit" from record type dropdown
       And enters today's date in the "Modified Date" field
@@ -120,7 +120,7 @@ Feature: Advanced Search - Object Exit
 
   Scenario: Search by username
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Object Exit" from record type dropdown
       And enters username in the "Advanced Search" "Record last modified by" field
@@ -169,7 +169,7 @@ Feature: Advanced Search - Object Exit
       And enters "testtest" in the "Exit Note" field
       And saves the record
     Then the record is successfully saved
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Object Exit" from record type dropdown
       And selects "any (OR)" from boolean dropdown
@@ -182,7 +182,7 @@ Feature: Advanced Search - Object Exit
     Then the search results should contain "Lifestyle"
     Then the search results should contain "Bestfriend"
     Then the search results should contain "ThiefintheNight"
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Object Exit" from record type dropdown
       And selects "all (AND)" from boolean dropdown
@@ -200,7 +200,7 @@ Feature: Advanced Search - Object Exit
   #Test3
   Scenario: Boolean and Keyword Search
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Object Exit" from record type dropdown
       And selects "any (OR)" from record type dropdown
@@ -214,7 +214,7 @@ Feature: Advanced Search - Object Exit
     Then the search results should contain "Lifestyle"
     Then the search results should contain "Bestfriend"
     Then the search results should contain "ThiefintheNight"
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search" 
       And selects "Object Exit" from record type dropdown
       And selects "and (ALL)" from record type dropdown
@@ -244,35 +244,35 @@ Feature: Advanced Search - Object Exit
       And enters "19" in the "Object Exit" "Exit Date" "Latest Day" field
       And saves the record
     Then the record is successfully saved
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Object Exit" from record type dropdown
       And enters "6-5-1986" in the "Advanced Search" "Exit Date" "Earliest/Single Date" field
       And enters "6-7-1994" in the "Advanced Search" "Exit Date" "Latest Date" field
       And clicks the "Search" button
     Then the search results should contain "Lovehoneybear"
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Object Exit" from record type dropdown
       And enters "6-5-1987" in the "Advanced Search" "Exit Date" "Earliest/Single Date" field
       And enters "4-19-1993" in the "Advanced Search" "Exit Date" "Latest Date" field
       And clicks the "Search" button
     Then the search results should contain "Lovehoneybear"
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Object Exit" from record type dropdown
       And enters "6-6-1987" in the "Advanced Search" "Exit Date" "Earliest/Single Date" field
       And enters "4-20-1994" in the "Advanced Search" "Exit Date" "Latest Date" field
       And clicks the "Search" button
     Then the search results should contain "Lovehoneybear"
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Object Exit" from record type dropdown
       And enters "6-3-1987" in the "Advanced Search" "Exit Date" "Earliest/Single Date" field
       And enters "6-4-1987" in the "Advanced Search" "Exit Date" "Latest Date" field
       And clicks the "Search" button
     Then the search results should not contain "Lovehoneybear"
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Object Exit" from record type dropdown
       And enters "4-21-1993" in the "Advanced Search" "Exit Date" "Earliest/Single Date" field

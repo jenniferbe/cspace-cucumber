@@ -38,17 +38,17 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory Secondary Tab
   # Not a known stepdef
       And clicks the "+ Add Record" button
       And clicks on the create button
-    Then the "Cancel changes" button at the top of the page should not be clickable
-    Then the "Cancel changes" button at the bottom of the page should not be clickable
-    Then the "Delete this relation." button at the top of the page should be clickable
-    Then the "Delte this relation." button at the bottom of the page should be clickable
+    Then the "Cancel changes" button at the "top" of the page "should not" be clickable
+    Then the "Cancel changes" button at the "bottom" of the page "should not" be clickable
+    Then the "Delete this relation." button at the "top" of the page "should" be clickable
+    Then the "Delte this relation." button at the "bottom" of the page "should" be clickable
   # Not a known stepdef
     Then a "Creating New Related Record" meessage should appear
   # Not a known stepdef
       And clicks the "Select number pattern" button
       And selects "Inventory" from dropdown in "Reference Number" row
-    Then the "Cancel changes" button at the top of the page should be clickable
-    Then the "Cancel changes" button at the bottom of the page should be clickable
+    Then the "Cancel changes" button at the "top" of the page "should" be clickable
+    Then the "Cancel changes" button at the "bottom" of the page "should" be clickable
       And enters "Dummy Location" in the "Location/Movement/Inventory" "Current Location" vocab field
     Then the vocabulary autocomplete should contain "Dummy Location"
       And clicks on "Dummy Location" from autocomplete options
@@ -56,8 +56,8 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory Secondary Tab
       And saves the record
   # Not a known stepdef
     Then the record listing should contain the entry
-    Then the "Cancel changes" button at the top of the page should be clickable
-    Then the "Cancel changes" button at the bottom of the page should be clickable
+    Then the "Cancel changes" button at the "top" of the page "should" be clickable
+    Then the "Cancel changes" button at the "bottom" of the page "should" be clickable
       And enters "Dummy Location" in the top nav search field
       And selects "Location/Movement/Inventory" from the top nav search record select type field
       And clicks on the top nav search submit button
@@ -67,9 +67,9 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory Secondary Tab
       And clicks the entry to load the record
     Then the titlebar should contain "Location/Movement/Inventory"
       And selects the "Cataloging" tab
-    Then "Dummy Record" should appear in the "Cataloging" sidebar
+    Then "Dummy Record" should appear in the "Cataloging" area
   # Not a step def
-      And clicks the link to "Dummy Record" in the "Cataloging" sidebar
+      And clicks the link to "Dummy Record" in the "Cataloging" area
     Then the titlebar should contain "Cataloging"
   # same the entry reference issue
     Then the entry should appear in the "Procedures" sidebar
@@ -111,28 +111,3 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory Secondary Tab
     Then the record is successfully saved
     Then close the browser
 
-  # Requires massive use of tabbing
-  Scenario: Keyboard Navigation
-    Given user is on the "My CollectionSpace" page
-      And enters "Dummy Record" in the top nav search field
-      And selects "Cataloging" from the top nav search record select type field
-      And clicks on the top nav search submit button
-    Then the search results should contain "Dummy Record" 
-  # Not a known stepdef
-      And clicks "Dummy Record" to load the record
-    Then the titlebar should contain "Dummy Record"
-      And tabs to "Loc/Mov/Inv" tab
-      And presses the "Enter" key
-    Then related records should be displayed
-      And tabs to + Add Record" button
-      And presses the "Enter" key
-      And tabs to "Create" button
-      And presses the "Enter" key
-      And tabs to "Select number pattern" button
-      And presses the "Enter" key
-      And tabs to "Location" from dropdown in "Reference Number" row
-      And presses the "Enter" key
-      And tabs to "Save" button
-      And presses the "Enter" key
-    Then the record is successfully saved
-    Then close the browser 

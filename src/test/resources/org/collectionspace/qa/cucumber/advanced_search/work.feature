@@ -23,7 +23,7 @@ Feature: Advanced Search - Work
       And adds "Rae" to "Local Persons"
       And saves the record
     Then the record is successfully saved
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Work" from record type dropdown
       And enters "Carly" in the "Advanced Search" "Display Name" field
@@ -33,7 +33,7 @@ Feature: Advanced Search - Work
 
   Scenario: Search by language
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Work" from record type dropdown
       And clicks on the "Advanced Search" "Language" field
@@ -45,7 +45,7 @@ Feature: Advanced Search - Work
 
   Scenario: Search by Status
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Work" from record type dropdown
       And clicks on the "Advanced Search" "Status" field
@@ -57,7 +57,7 @@ Feature: Advanced Search - Work
 
   Scenario: Search by Work type
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Work" from record type dropdown
       And clicks on the "Advanced Search" "Work type" field
@@ -69,7 +69,7 @@ Feature: Advanced Search - Work
 
   Scenario: Search by Creator
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Work" from record type dropdown
       And enters "Rae" in the "Advanced Search" "Creator" vocab field
@@ -80,7 +80,7 @@ Feature: Advanced Search - Work
 
   Scenario: Search by Modified Date
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Work" from record type dropdown
       And enters today's date in the "Modified Date" field
@@ -90,7 +90,7 @@ Feature: Advanced Search - Work
 
   Scenario: Search by username
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Work" from record type dropdown
       And enters username in the "Advanced Search" "Record last modified by" field
@@ -100,7 +100,7 @@ Feature: Advanced Search - Work
 
   Scenario: Search by Modified Date
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Work" from record type dropdown
       And enters today's date in the "Modified Date" field
@@ -110,7 +110,7 @@ Feature: Advanced Search - Work
 
   Scenario: Search by username
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Work" from record type dropdown
       And enters username in the "Advanced Search" "Record last modified by" field

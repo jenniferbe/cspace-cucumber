@@ -20,7 +20,7 @@ Feature: Advanced Search - Valuation
       And enters "textbook" in the "Valuation Control" "Note" field
       And saves the record
     Then the record is successfully saved
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Valuation Control" from record type dropdown
       And clicks on the "Advanced Search" "Type" field
@@ -32,7 +32,7 @@ Feature: Advanced Search - Valuation
 
   Scenario: Search by ref no
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Valuation Control" from record type dropdown
       And enters "multi-love" in the "Advanced Search" "Valuation Control" field
@@ -42,7 +42,7 @@ Feature: Advanced Search - Valuation
 
   Scenario: Search by Date
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Valuation Control" from record type dropdown
       And enters "1666-06-06" in the "Advanced Search" "Date" field
@@ -52,7 +52,7 @@ Feature: Advanced Search - Valuation
 
   Scenario: Search by Renewal Date
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Valuation Control" from record type dropdown
       And enters "1666-06-06" in the "Advanced Search" "Renewal Date" field
@@ -62,7 +62,7 @@ Feature: Advanced Search - Valuation
 
   Scenario: Search by Source
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Valuation Control" from record type dropdown
       And enters "sarcastish" in the "Advanced Search" "Source" vocab field
@@ -73,7 +73,7 @@ Feature: Advanced Search - Valuation
 
   Scenario: Search by note
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Valuation Control" from record type dropdown
       And enters "textbook" in the "Advanced Search" "Note" field
@@ -83,7 +83,7 @@ Feature: Advanced Search - Valuation
 
   Scenario: Search by partial note
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Valuation Control" from record type dropdown
       And enters "textb*" in the "Advanced Search" "Note" field
@@ -93,7 +93,7 @@ Feature: Advanced Search - Valuation
 
   Scenario: Search by Modified Date
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Valuation Control" from record type dropdown
       And enters today's date in the "Modified Date" field
@@ -103,7 +103,7 @@ Feature: Advanced Search - Valuation
 
   Scenario: Search by username
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Valuation Control" from record type dropdown
       And enters username in the "Advanced Search" "Record last modified by" field
@@ -153,7 +153,7 @@ Feature: Advanced Search - Valuation
       And enters "testtest" in the "Valuation Control" "Note" field
       And saves the record
     Then the record is successfully saved
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Valuation Control" from record type dropdown
       And selects "any (OR)" from boolean dropdown
@@ -166,7 +166,7 @@ Feature: Advanced Search - Valuation
     Then the search results should contain "Extreme Wealth"
     Then the search results should contain "Casual Cruelty"
     Then the search results should contain "Unknown Mortal"
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Valuation Control" from record type dropdown
       And selects "all (AND)" from boolean dropdown
@@ -184,7 +184,7 @@ Feature: Advanced Search - Valuation
   #Test3
   Scenario: Boolean and Keyword Search
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Valuation Control" from record type dropdown
       And selects "any (OR)" from boolean dropdown
@@ -198,7 +198,7 @@ Feature: Advanced Search - Valuation
     Then the search results should contain "Extreme Wealth"
     Then the search results should contain "Casual Cruelty"
     Then the search results should contain "Unknown Mortal"
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Valuation Control" from record type dropdown
       And selects "all (AND)" from boolean dropdown
@@ -206,7 +206,7 @@ Feature: Advanced Search - Valuation
       And enters "Jane Doe" in the "Advanced Search" "Source" vocab field
       And clicks on "Jane Doe" from autocomplete options
       And clicks on the "Advanced Search" "Type" field
-    Then a drop down lis should appear in the "Type" row
+    Then a drop down list should appear in the "Type" row
       And selects "Current Value" from dropdown in "Type" row
       And clicks the "Search" button
     Then the search results should contain "Extreme Wealth"

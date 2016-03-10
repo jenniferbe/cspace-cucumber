@@ -27,7 +27,7 @@ Feature: Advanced Search - Intake
       And enters "textbook" in the "Intake" "Field collection event name" field
       And saves the record
     Then the record is successfully saved
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Intake" from record type dropdown
       And enters "Samwise" in the "Advanced Search" "Current Owner" vocab field
@@ -38,7 +38,7 @@ Feature: Advanced Search - Intake
 
   Scenario: Search by Intake Entry Number
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Intake" from record type dropdown
       And enters "Lagume" in the "Advanced Search" "Intake Entry Number" field
@@ -48,7 +48,7 @@ Feature: Advanced Search - Intake
 
   Scenario: Search by Depositor
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Intake" from record type dropdown
       And enters "Anathema" in the "Intake" "Depositor" vocab field
@@ -59,7 +59,7 @@ Feature: Advanced Search - Intake
 
   Scenario: Search by Entry Date
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Intake" from record type dropdown
       And enters "2011-01-01" in the "Advanced Search" "Entry Date" field
@@ -69,7 +69,7 @@ Feature: Advanced Search - Intake
 
   Scenario: Search by Return Date
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Intake" from record type dropdown
       And enters "2011-01-01" in the Advanced Search "Return Date" field
@@ -79,7 +79,7 @@ Feature: Advanced Search - Intake
 
   Scenario: Search by Entry Method
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Intake" from record type dropdown
       And clicks on the "Advanced Search" "Entry Method" field
@@ -91,7 +91,7 @@ Feature: Advanced Search - Intake
 
   Scenario: Search by Entry Reason
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Intake" from record type dropdown
       And clicks on the "Advanced Search" "Entry Reason" field
@@ -103,7 +103,7 @@ Feature: Advanced Search - Intake
 
   Scenario: Search by Current Location
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Intake" from record type dropdown
       And enters "Azkaban" in the "Advanced Search" "Current Location" vocab field
@@ -114,7 +114,7 @@ Feature: Advanced Search - Intake
 
   Scenario: Search by Field collection event name
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Intake" from record type dropdown
       And enters "textbook" in the "Advanced Search" "Field collection event name" field
@@ -124,7 +124,7 @@ Feature: Advanced Search - Intake
 
   Scenario: Search by Edit Date
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Intake" from record type dropdown
       And enters today's date in the "Modified Date" field
@@ -134,7 +134,7 @@ Feature: Advanced Search - Intake
 
   Scenario: Search by username
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Intake" from record type dropdown
       And enters username in the "Advanced Search" "Record last modified by" field
@@ -183,7 +183,7 @@ Feature: Advanced Search - Intake
       And enters "testtest" in the "Intake" "Field collection note" field
       And saves the record
     Then the record is successfully saved
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Intake" from record type dropdown
       And selects "any (OR)" from boolean dropdown
@@ -196,7 +196,7 @@ Feature: Advanced Search - Intake
     Then the search results should contain "maSkArA"
     Then the search results should contain "KaNoRrA"
     Then the search results should contain "AnkORrA"
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Intake" from record type dropdown
       And selects "all (AND)" from boolean dropdown
@@ -214,7 +214,7 @@ Feature: Advanced Search - Intake
   #Test3
   Scenario: Boolean and Keyword Search
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Intake" from record type dropdown
       And selects "any (OR)" boolean dropdown
@@ -228,7 +228,7 @@ Feature: Advanced Search - Intake
     Then the search results should contain "maSkArA"
     Then the search results should contain "KaNoRrA"
     Then the search results should contain "AnkORrA"
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Intake" from record type dropdown
       And selects "all (AND)" boolean dropdown

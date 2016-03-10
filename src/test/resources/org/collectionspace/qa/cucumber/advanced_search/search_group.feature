@@ -33,9 +33,10 @@ Feature: Advanced Search Group
         Then the search results should contain "CQA-75"
 
         And navigates to the record with identification number "textbook75"
-        And clicks the delete button
+        And clicks on the delete button 
+
         Then a delete confirmation dialog should appear
-        And clicks the delete button 
+        And clicks on the delete button 
         Then the deletion should be confirmed in a dialog
         
         Then close the browser

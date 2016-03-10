@@ -8,8 +8,8 @@ Feature: Supplementary Manual QA - Valuation
     Given user is on the "Create New" page
       And selects the "Valuation Control" radio button on the Create New page
       And clicks on the Create button
-    Then the "cancel" button should not be clickable
-    Then the "delete" button should not be clickable
+    Then the "cancel" button "should not" be clickable
+    Then the "delete" button "should not" be clickable
     When user clicks the "add" button on the "Cataloging" area to the right
     Then the message "Please save the record you are creating before trying to relate other records to it." should be displayed
     When user clicks the "add" button on the "Procedures" area to the right
@@ -96,16 +96,17 @@ Feature: Supplementary Manual QA - Valuation
     Then disables top and bottom "cancel" buttons
     Then enables top and bottom "delete" buttons
     # not sure if types should be specified
-    Then "Foo Clan" should appear in the Terms Used sidebar
-    Then "person" should appear in the Terms Used sidebar
-    Then "valueSource" should appear in the Terms Used sidebar
-      And clicks on "Foo Clan" in the Terms Used sidebar
+    Then "Foo Clan" should appear in the "Terms Used" area
+    Then "person" should appear in the "Terms Used" area
+    Then "valueSource" should appear in the "Terms Used" area
+      And clicks on "Foo Clan" in the "Terms Used" area
     Then the titlebar should contain "Foo Clan"
     # Used By steps do not exist
     Then "1.2.3.4.5" should in the Used By sidebar
       And clicks on "1.2.3.4.5" in the Used By sidebar
     Then the titlebar should contain "1.2.3.4.5"
-      And clicks on the delete button
+      And clicks on the delete button 
+
       And clicks the confirmation delete button
       And clicks delete confirmation OK button
     Then close the browser
@@ -115,9 +116,9 @@ Feature: Supplementary Manual QA - Valuation
 #
   # Scenario: Keyboard Accessibility
   #   # doesn't work, need to do later
-  #   When user uses tab through the entire formula
-  #   Then each of the fields should be reachable
-  #   Then the two save buttons and Cancel button should be reachable
-  #   Then the folding functionality should be usable # tab to it and hit space
-  #   Then the focus is visible at all times
-  #   Then the terms used in the right frame should be reachable
+  #    user uses tab through the entire formula
+  #    each of the fields should be reachable
+  #    the two save buttons and Cancel button should be reachable
+  #    the folding functionality should be usable # tab to it and hit space
+  #    the focus is visible at all times
+  #    the terms used in the right frame should be reachable

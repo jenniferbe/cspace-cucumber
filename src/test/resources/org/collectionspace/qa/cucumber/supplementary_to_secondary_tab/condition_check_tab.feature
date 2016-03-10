@@ -17,13 +17,13 @@ Feature: Condition Check Secondary Tab
       And clicks the "Create" button
     Then an empty form should be present
     Then "Creating a new record..." should be displayed
-    Then the "Cancel changes" button at the bottom of the record should not be clickable
-    Then the "Cancel changes" button at the top of the record should not be clickable
-    Then the "Delete this relation." button at the bottom of the record should not be clickable
-    Then the "Delete this relation." button at the top of the record should not be clickable
+    Then the "Cancel changes" button at the bottom of the record "should not" be clickable
+    Then the "Cancel changes" button at the top of the record "should not" be clickable
+    Then the "Delete this relation." button at the bottom of the record "should not" be clickable
+    Then the "Delete this relation." button at the top of the record "should not" be clickable
       And enters "blastphemie" in the "Cataloging" "Condition Check/Assessment Reference Number" field
-    Then the "Cancel changes" button at the bottom of the record should be clickable
-    Then the "Cancel changes" button at the top of the record should be clickable
+    Then the "Cancel changes" button at the bottom of the record "should" be clickable
+    Then the "Cancel changes" button at the top of the record "should" be clickable
     Then "blastphemie" should be in the "Cataloging" "Condition Check/Assessment Reference Number" field
       And fills in all the fields of the "Condition Check" record
       And enters "alagrofortei" in the "Cataloging" "Condition Checker/Assessor" vocab field
@@ -31,10 +31,10 @@ Feature: Condition Check Secondary Tab
       And saves the record
     Then the record entry should be displayed under "Related Condition Check Records"
       And clicks on related record entry "blastphemie"
-    Then the "Cancel changes" button at the bottom of the record should not be clickable
-    Then the "Cancel changes" button at the top of the record should not be clickable
-    Then the "Delete this relation." button at the bottom of the record should be clickable
-    Then the "Delete this relation." button at the top of the record should be clickable
+    Then the "Cancel changes" button at the bottom of the record "should not" be clickable
+    Then the "Cancel changes" button at the top of the record "should not" be clickable
+    Then the "Delete this relation." button at the bottom of the record "should" be clickable
+    Then the "Delete this relation." button at the top of the record "should" be clickable
       And selects the "Current Record" tab
       And saves the record
     Then the record is successfully saved
@@ -43,10 +43,10 @@ Feature: Condition Check Secondary Tab
       And clicks on result with text "Aligeiers"
     Then the titlebar should contain "Cataloging"
     Then "blastphemie" should appear in the "Procedures" sidebar
-      And clicks on "blastphemie" from Procedures sidebar
+      And clicks on "blastphemie" from "Procedures" area
     Then the titlebar should contain "Condition Check" 
-    Then "Aligeiers" should appear in the Cataloging sidebar
-      And clicks on "Aligeiers" from Cataloging sidebar
+    Then "Aligeiers" should appear in the "Cataloging" area
+      And clicks on "Aligeiers" from "Cataloging" area
     Then the titlebar should contain "Cataloging"
   #Test3: Search to relate Dialog
       And selects the "Condition" tab
@@ -60,25 +60,9 @@ Feature: Condition Check Secondary Tab
       And clicks the "Add to Current Record" button
     Then the dialog should be dismissed
     Then the newly added records should be displayed under "Related Condition Check Records"
-    Then the newly added records should be in the Procedures sidebar
+    Then the newly added records should be in the "Procedures" area
       And clicks on a newly added record 
     Then an "Edit Record" form for the newly added record should be displayed
     Then close the browser
-
-    #Test 9
-  Scenario: Keyboard Navigation
-    Given user is on a blank "Cataloging" record
-      And tabs to "Condition" tab
-      And presses the "Enter" key
-      And tabs to the "+ Add New" button
-      And presses the "Enter" key
-    # Then each field should be reachable by keyboard
-    # The following may first require entering data in required fields; see
-    # the related location_movement_inventory.feature for a possible approach
-      And tabs to the "Save" button
-      And presses the "Enter" key
-    Then the record is successfully saved
-    # Then the newly created record should be reachable by keyboard
-    Then close the record
 
 

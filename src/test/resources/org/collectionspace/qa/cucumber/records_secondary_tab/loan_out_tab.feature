@@ -55,7 +55,7 @@ Feature: Loan Out Tab
 	    Then the "Loan Out Number" field should contain "CQA112.3"
 	    And clicks the "Delete this relation." button
 	    Then a delete confirmation dialog should appear
-	    And clicks the delete button 
+	    And clicks on the delete button 
 	    Then the deletion should be confirmed in a dialog
 	    Then "CQA112.3" should not appear in the "Related Loan Out Records" area 
 
@@ -65,7 +65,7 @@ Feature: Loan Out Tab
 	    Then the "Loan Out Number" field should contain "CQA112.2"
 	    And clicks the "Delete this relation." button
 	    Then a delete confirmation dialog should appear
-	    And clicks the delete button 
+	    And clicks on the delete button 
 	    Then the deletion should be confirmed in a dialog
 	    Then "CQA112.2" should not appear in the "Related Loan Out Records" area 
 
@@ -78,7 +78,7 @@ Feature: Loan Out Tab
 	    And selects the "Loan Out" tab 
 	    
 	    And clicks the "Add record" button
-		And use clicks the "Create New" button
+		And clicks the "Create New" button
 		
 		Then the dialog should be dismissed
 		Then the message "Creating new record..." should be displayed
@@ -118,9 +118,10 @@ Feature: Loan Out Tab
 		    Then "CQA112.4" should appear in the "Related Loan Out Records" area 
 
 		    And navigates to the record with identification number "CQA112.4"
-		    And clicks the delete button
+		    And clicks on the delete button 
+
 		    Then a delete confirmation dialog should appear
-		    And clicks the delete button 
+		    And clicks on the delete button 
 		    Then the deletion should be confirmed in a dialog
 		    Then close the browser
 
@@ -129,12 +130,12 @@ Feature: Loan Out Tab
 		And navigates to the record with identification number "CQA112_NE"
 		And selects the "Loan Out" tab
 	    And clicks the "Add record" button 
-	    And use clicks the "Create new" button
+	    And clicks the "Create new" button
 
 	    # Variation A
 	    Then the message "Creating new record..." should be displayed
-	   	Then the "cancel changes" button at the bottom of the page should not be clickable
-	    Then the "cancel changes" button at the top of the page should not be clickable
+	   	Then the "cancel changes" button at the "bottom" of the page "should not" be clickable
+	    Then the "cancel changes" button at the "top" of the page "should not" be clickable
 	    
 	    And enters "CQA112.5" in the "Loan Out Number" field
 	    And clicks the "cancel changes" button 
@@ -143,15 +144,15 @@ Feature: Loan Out Tab
 	    # Variation B
 	    And enters "CQA112.5" in the "Loan Out Number" field
 	    And clicks the "save" button 
-	    Then the "cancel changes" button at the top of the page should not be clickable 
-    	Then the "cancel changes" button at the bottom of the page should not be clickable 
+	    Then the "cancel changes" button at the "top" of the page "should not" be clickable 
+    	Then the "cancel changes" button at the "bottom" of the page "should not" be clickable 
    
    
 	    And clicks the "Go to record" button
 	    And clicks the "Delete" button 
 	    Then a delete confirmation dialog should appear
 	    And clicks the confirmation delete button
-	    Then a deletion should be confirmed in a dialog
+	    Then the deletion should be confirmed in a dialog
 	    Then close the browser
 
 
@@ -269,7 +270,8 @@ Feature: Loan Out Tab
         And clicks the "Go To Record" button        
         And clicks the "Delete" button
         Then a delete confirmation dialog should appear
-        And clicks the delete button
+        And clicks on the delete button 
+
         Then close the browser
 
 	Scenario: Testing links and "Go To Record" works #Test 23
@@ -308,7 +310,8 @@ Feature: Loan Out Tab
 
 	    And clicks the "Delete Relation" button on the row that reads "CQA112.7"
 	    Then delete confirmation dialog should appear
-	    And clicks on the delete button
+	    And clicks on the delete button 
+
 	    Then "CQA112.7" should not appear in the "Procedures" area
 	    Then "CQA112.7" should not appear in the "Related Loan Out Records" area
 
@@ -317,9 +320,10 @@ Feature: Loan Out Tab
 	    Then "CQA112_NE" should not appear in the "Related Loan Out Records" area   
 	    And selects the "Current Record" tab
 
-	    And clicks the delete button
+	    And clicks on the delete button 
+
 	    Then a delete confirmation dialog should appear
-	    And clicks the delete button 
+	    And clicks on the delete button 
 	    Then the deletion should be confirmed in a dialog
 	    Then close the browser
 
@@ -349,7 +353,7 @@ Feature: Loan Out Tab
 
 	    And clicks the "Delete this relation" button
 	    Then a delete confirmation dialog should appear
-	    And clicks the delete button 
+	    And clicks on the delete button 
 	    Then the deletion should be confirmed in a dialog
 	    # Then the record editor should no longer be displayed (below list)
 	    Then "CQA112.8" should not appear in the "Procedures" area   
@@ -360,9 +364,10 @@ Feature: Loan Out Tab
 	    Then the "Related Loan Out Records" area should be empty
 	    
 	    And selects the "Current Record" tab 
-	    And clicks the delete button
+	    And clicks on the delete button 
+
 	    Then a delete confirmation dialog should appear
-	    And clicks the delete button 
+	    And clicks on the delete button 
 	    Then the deletion should be confirmed in a dialog
 	    Then close the browser 
 

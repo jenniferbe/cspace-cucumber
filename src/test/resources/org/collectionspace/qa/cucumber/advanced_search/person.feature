@@ -24,7 +24,7 @@ Feature: Advanced Search - Person
       And enters "Banger" in the "Person" "School/Style" field
       And saves the record
     Then the record is successfully saved
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Person" from record type dropdown
       And enters "Fleet Foxes" in the "Advanced Search" "Display Name" field
@@ -34,7 +34,7 @@ Feature: Advanced Search - Person
 
   Scenario: Search by Status
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Person" from record type dropdown
       And clicks on the "Advanced Search" "Status" field
@@ -46,7 +46,7 @@ Feature: Advanced Search - Person
 
   Scenario: Search by Birth Date
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Person" from record type dropdown
       And enters "2011-01-01" in the "Advanced Search" "Birth Date" field
@@ -56,7 +56,7 @@ Feature: Advanced Search - Person
 
   Scenario: Search by Death Date
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Person" from record type dropdown
       And enters "2011-01-01" in the "Advanced Search" "Death Date" field
@@ -66,7 +66,7 @@ Feature: Advanced Search - Person
 
   Scenario: Search by Group
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Person" from record type dropdown
       And enters "Fetty Wap" in the "Advanced Search" "Group" field
@@ -76,7 +76,7 @@ Feature: Advanced Search - Person
 
   Scenario: Search by Occupation
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Person" from record type dropdown
       And enters "Emcee" in the "Advanced Search" "Occupation" field
@@ -86,7 +86,7 @@ Feature: Advanced Search - Person
 
   Scenario: Search by Nationality
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Person" from record type dropdown
       And enters "Trapanese" in the "Advanced Search" "Nationality" field
@@ -96,7 +96,7 @@ Feature: Advanced Search - Person
 
   Scenario: Search by Gender
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Person" from record type dropdown
       And clicks on the "Advanced Search" "Gender" field
@@ -108,7 +108,7 @@ Feature: Advanced Search - Person
 
   Scenario: Search by School/Style
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Person" from record type dropdown
       And enters "Banger" in the "Advanced Search" "School/Style" field
@@ -118,7 +118,7 @@ Feature: Advanced Search - Person
 
   Scenario: Search by Modified Date
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Person" from record type dropdown
       And enters today's date in the "Modified Date" field
@@ -128,7 +128,7 @@ Feature: Advanced Search - Person
 
   Scenario: Search by username
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Person" from record type dropdown
       And enters username in the "Advanced Search" "Record last modified by" field
@@ -174,7 +174,7 @@ Feature: Advanced Search - Person
       And enters "textbook" in the "Person" "Name Notes" field
       And saves the record
     Then the record is successfully saved
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search" 
       And selects "Person" from record type dropdown
       And selects "any (OR)" from boolean dropdown
@@ -187,7 +187,7 @@ Feature: Advanced Search - Person
     Then the search results should contain "Lorelai"
     Then the search results should contain "Andrea"
     Then the search results should contain "DD"
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Person" from record type dropdown
       And selects "all (AND)" from boolean dropdown
@@ -204,7 +204,7 @@ Feature: Advanced Search - Person
   #Test3
   Scenario: Boolean and Keyword Search
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Person" from record type dropdown
       And selects "any (OR)" from boolean dropdown
@@ -217,7 +217,7 @@ Feature: Advanced Search - Person
     Then the search results should contain "Lorelai"
     Then the search results should contain "Andrea"
     Then the search results should not contain "DD"
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Person" from record type dropdown
       And selects "all (AND)" from boolean dropdown

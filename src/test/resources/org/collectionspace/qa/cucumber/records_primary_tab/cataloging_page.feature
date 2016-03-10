@@ -71,16 +71,16 @@ Scenario: All fields saved on new cataloging record and edited record
     Then the record is successfully saved   
     # checks that time is also shownin bottom message bar
     Then "GMT-0800 (PST)" should be displayed in the message bar   
-    Then "test5" should appear in the Terms Used sidebar
-    Then "assocEventPerson" should appear in the Terms Used sidebar
-    Then "test13" should appear in the Terms Used sidebar
-    Then "inscriptionContentInscriber" should appear in the Terms Used sidebar
-    Then "test9" should appear in the Terms Used sidebar
-    Then "contentConcept" should appear in the Terms Used sidebar
-    Then "test1" should appear in the Terms Used sidebar
-    Then "objectProductionPerson" should appear in the Terms Used sidebar
-    Then "test8" should appear in the Terms Used sidebar
-    Then "objectProductionPerson" should appear in the Terms Used sidebar
+    Then "test5" should appear in the "Terms Used" area
+    Then "assocEventPerson" should appear in the "Terms Used" area
+    Then "test13" should appear in the "Terms Used" area
+    Then "inscriptionContentInscriber" should appear in the "Terms Used" area
+    Then "test9" should appear in the "Terms Used" area
+    Then "contentConcept" should appear in the "Terms Used" area
+    Then "test1" should appear in the "Terms Used" area
+    Then "objectProductionPerson" should appear in the "Terms Used" area
+    Then "test8" should appear in the "Terms Used" area
+    Then "objectProductionPerson" should appear in the "Terms Used" area
 
 # How to remove values from fields? 
 Scenario: Removing values from all fields 
@@ -164,18 +164,21 @@ Scenario: Deletion of Record
       And selects "Intake" from dropdown in "Object Identification Information" row
     Then disables top and bottom "delete" buttons
       And saves the record
-      And clicks on the delete button
+      And clicks on the delete button 
+
     Then delete confirmation dialog should appear
       And clicks cancel button
-    # This checks that dialog is dismissed & no other changes occurred:
+
     Then the record is successfully saved
-      And clicks on the delete button
+      And clicks on the delete button 
+
     Then delete confirmation dialog should appear
       And clicks the confirmation delete button
-    Then deletion should be confirmed in a dialog
+    Then the deletion should be confirmed in a dialog
       And clicks close button
     Then the record is successfully saved
-      And clicks on the delete button
+      And clicks on the delete button 
+
     Then the message "Find and Edit" should be displayed
 
     When using the top right search area, select "Object" from the drop down and enter the identification number of the deleted record

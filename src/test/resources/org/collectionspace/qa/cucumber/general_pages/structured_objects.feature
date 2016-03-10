@@ -170,7 +170,8 @@ Feature: Structured Objects- QA Test Plan
 
 	# 2e
 		And navigates to the record with identification number "00002012.12.1a"
-		And clicks on the delete button
+		And clicks on the delete button 
+
 		Then a dialog containing the message "This Cataloging record can not be removed. It has a Narrower Context." should be displayed
 
 	#2g
@@ -178,15 +179,17 @@ Feature: Structured Objects- QA Test Plan
 		And enters "2012.12.1a.2b.0000" in the "Object component" field 
  		And clicks on the "Create new" button
 		And saves the record
-		And clicks on the delete button
+		And clicks on the delete button 
+
 		Then a dialog containing the message "This Cataloging record can not be removed. It has a Narrower Context." should be displayed
 
 	# 2h
 		And clicks the "Delete"  button in the "Object component" field in the row containing "2012.12.1a.2b.0000" 
 		And clicks the "Delete"  button in the "Object component" field in the row containing "2012.12.1a.2b" 
-		And clicks on the delete button
+		And clicks on the delete button 
+
 		Then a delete confirmation dialog should appear
-    	And clicks the delete button 
+    	And clicks on the delete button 
 		Then the deletion should be confirmed in a dialog
 
 		Given user is on the "My CollectionSpace" page
@@ -199,69 +202,80 @@ Feature: Structured Objects- QA Test Plan
 	Scenario: user deletes all the previously made records
 		Given user is on the "Create New" page
 		And navigates to the record with identification number "012.12.1"
-		And clicks the delete button
+		And clicks on the delete button 
+
 	    Then a delete confirmation dialog should appear  
-	    And clicks the delete button 
+	    And clicks on the delete button 
 	    Then the deletion should be confirmed in a dialog
 
 		And navigates to the record with identification number "2012.12.1a"
-		And clicks the delete button
+		And clicks on the delete button 
+
 	    Then a delete confirmation dialog should appear  
-	    And clicks the delete button 
+	    And clicks on the delete button 
 	    Then the deletion should be confirmed in a dialog
 
 		And navigates to the record with identification number "2012.12.1a.1"
-		And clicks the delete button
+		And clicks on the delete button 
+
 	    Then a delete confirmation dialog should appear  
-	    And clicks the delete button 
+	    And clicks on the delete button 
 	    Then the deletion should be confirmed in a dialog
 
 		And navigates to the record with identification number "2012.12.1a.1a"
-		And clicks the delete button
+		And clicks on the delete button 
+
 	    Then a delete confirmation dialog should appear  
-	    And clicks the delete button 
+	    And clicks on the delete button 
 	    Then the deletion should be confirmed in a dialog
 
 		And navigates to the record with identification number "2012.12.1a.1b"
-		And clicks the delete button
+		And clicks on the delete button 
+
 	    Then a delete confirmation dialog should appear  
-	    And clicks the delete button 
+	    And clicks on the delete button 
 	    Then the deletion should be confirmed in a dialog
 
 		And navigates to the record with identification number "2012.12.1a.2"
-		And clicks the delete button
+		And clicks on the delete button 
+
 	    Then a delete confirmation dialog should appear  
-	    And clicks the delete button 
+	    And clicks on the delete button 
 	    Then the deletion should be confirmed in a dialog
 
 		And navigates to the record with identification number "2012.12.1a.2a"
-		And clicks the delete button
+		And clicks on the delete button 
+
     	Then a delete confirmation dialog should appear  
-    	And clicks the delete button 
+    	And clicks on the delete button 
     	Then the deletion should be confirmed in a dialog
 
 		And navigates to the record with identification number "2012.12.1a.2b"
-		And clicks the delete button
+		And clicks on the delete button 
+
 	    Then a delete confirmation dialog should appear  
-	    And clicks the delete button 
+	    And clicks on the delete button 
 	    Then the deletion should be confirmed in a dialog
 
 		And navigates to the record with identification number "2012.12.1a.2c"
-		And clicks the delete button
+		And clicks on the delete button 
+
 	    Then a delete confirmation dialog should appear  
-	    And clicks the delete button 
+	    And clicks on the delete button 
 	    Then the deletion should be confirmed in a dialog
 
 		And navigates to the record with identification number "2012.12.1a.2b.0000"
-		And clicks the delete button
+		And clicks on the delete button 
+
 	    Then a delete confirmation dialog should appear  
-	    And clicks the delete button 
+	    And clicks on the delete button 
 	    Then the deletion should be confirmed in a dialog
 
 	    And navigates to the record with identification number "00002012.12.1a"
-		And clicks the delete button
+		And clicks on the delete button 
+
 	    Then a delete confirmation dialog should appear  
-	    And clicks the delete button 
+	    And clicks on the delete button 
 	    Then the deletion should be confirmed in a dialog
 	    Then close the browser
 

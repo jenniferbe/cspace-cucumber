@@ -8,7 +8,7 @@ Feature: Right Frame - Show Related Records
     Given user is in a blank "Acquisition" record
     And enters "CQA16.1" in the "Acquisition Reference Number" field
     And saves the record
-    Then the "Show" button in the "Cataloging" right area should be disabled
+    Then the "Show" button in the "Cataloging" area should be disabled
     
     And selects the "Cataloging" tab
     And clicks the "Add record" button
@@ -23,9 +23,9 @@ Feature: Right Frame - Show Related Records
     And enters "CQA16.3" in the "Identification Number" field
     And saves the record
     Then the "Related Cataloging Records" area should contain "CQA16.3"
-    Then the "Show" button in the "Cataloging" right area should be enabled
+    Then the "Show" button in the "Cataloging" area should be enabled
 
-    And clicks the "Show" button in the "Cataloging" right area
+    And clicks the "Show" button in the "Cataloging" area
 
     Then the titlebar should contain "Found 3 records related to CQA16.1" 
     Then the search results should contain "CQA16.2"
@@ -36,21 +36,24 @@ Feature: Right Frame - Show Related Records
   Scenario: Record Deletion for Recycling
     Given user is in the "Create New" page
     And navigates to the record with identification number "CQA16.1"
-    And clicks the delete button
+    And clicks on the delete button 
+
     Then a delete confirmation dialog should appear
-    And clicks the delete button 
+    And clicks on the delete button 
     Then the deletion should be confirmed in a dialog
 
     And navigates to the record with identification number "CQA16.2"
-    And clicks the delete button
+    And clicks on the delete button 
+
     Then a delete confirmation dialog should appear
-    And clicks the delete button 
+    And clicks on the delete button 
     Then the deletion should be confirmed in a dialog
 
     And navigates to the record with identification number "CQA16.3"
-    And clicks the delete button
+    And clicks on the delete button 
+
     Then a delete confirmation dialog should appear
-    And clicks the delete button 
+    And clicks on the delete button 
     Then the deletion should be confirmed in a dialog
     
     Then close the browser

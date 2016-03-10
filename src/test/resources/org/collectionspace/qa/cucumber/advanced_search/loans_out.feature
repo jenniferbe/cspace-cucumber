@@ -23,7 +23,7 @@ Feature: Advanced Search - Loans Out
       And enters "2022-01-01" in the "Loan Out" "Loan Renewal Application Date" field
       And saves the record
     Then the record is successfully saved
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Loan Out" from record type dropdown
       And enters "textbook" in the "Advanced Search" "Loan Out Number" field
@@ -33,7 +33,7 @@ Feature: Advanced Search - Loans Out
 
   Scenario: Search by Loan Purpose
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Loan Out" from record type dropdown
       And clicks on the "Advanced Search" "Loan Purpose" field
@@ -45,7 +45,7 @@ Feature: Advanced Search - Loans Out
 
   Scenario: Search by Borrower
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Loan Out" from record type dropdown
       And enters "textbook" in the "Advanced Search" "Borrower" vocab field
@@ -56,7 +56,7 @@ Feature: Advanced Search - Loans Out
 
   Scenario: Search by Loan Status
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Loan Out" from record type dropdown
       And clicks on the "Advanced Search" "Loan Status" field
@@ -68,7 +68,7 @@ Feature: Advanced Search - Loans Out
 
   Scenario: Search by Loan Out Date
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Loan Out" from record type dropdown
       And enters "2022-01-01" in the "Advanced Search" "Loan Out Date" field
@@ -78,7 +78,7 @@ Feature: Advanced Search - Loans Out
 
   Scenario: Search by Loan Return Date
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Loan Out" from record type dropdown
       And enters "2022-01-01" in the "Advanced Search" "Loan Return Date" field
@@ -88,7 +88,7 @@ Feature: Advanced Search - Loans Out
 
   Scenario: Search by Loan Renewal Application Date
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Loan Out" from record type dropdown
       And enters "2022-01-01" in the "Advanced Search" "Loan Renewal Application Date" field
@@ -98,7 +98,7 @@ Feature: Advanced Search - Loans Out
 
   Scenario: Search by Modified Date
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Loan Out" from record type dropdown
       And enters today's date in the "Modified Date" field
@@ -108,7 +108,7 @@ Feature: Advanced Search - Loans Out
 
   Scenario: Search by username
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Loan Out" from record type dropdown
       And enters username in the "Advanced Search" "Record last modified by" field
@@ -118,7 +118,7 @@ Feature: Advanced Search - Loans Out
 
   Scenario: textb**
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Loan Out" from record type dropdown
       And enters "textb*" in the "Advanced Search" "Loan Out Number" field
@@ -167,7 +167,7 @@ Feature: Advanced Search - Loans Out
       And enters "testtest" in the "Loan Out" "Loan Out Note" field
       And saves the record
     Then the record is successfully saved
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search" 
       And selects "any (OR)" from boolean dropdown
       And selects "Loan Out" from record type dropdown
@@ -180,7 +180,7 @@ Feature: Advanced Search - Loans Out
     Then the search results should contain "example"
     Then the search results should contain "exampleexample"
     Then the search results should contain "exampleexampleexample"
-      And clicks on link to "Advanced Search" in upper right corner 
+      And clicks the "Advanced search" button 
     Then the titlebar should contain "Advanced Search"
       And selects "Loan Out" from record type dropdown
       And selects "all (AND)" from boolean dropdown
@@ -198,7 +198,7 @@ Feature: Advanced Search - Loans Out
   #Test3
   Scenario: Boolean and Keyword Search
     Given user is on the "My Collectionspace" page
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And enters "testtest" in the keyword search field
       And selects "Loan Out" from record type dropdown
@@ -212,7 +212,7 @@ Feature: Advanced Search - Loans Out
     Then the search results should contain "example"
     Then the search results should contain "exampleexample"
     Then the search results should not contain "exampleexampleexample"
-      And clicks on link to "Advanced Search" in upper right corner
+      And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And enters "testtest" in the keyword search field
       And selects "Loan Out" from record type dropdown

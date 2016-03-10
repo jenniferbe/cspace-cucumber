@@ -8,7 +8,7 @@ Feature: Term List Management
     Given user is on the "Administration" page
       And selects the "Term List Management" tab
       And clicks on a term list
-    Then the "Cancel changes" button should not be clickable
+    Then the "Cancel changes" button "should not" be clickable
       And enters "Changedname" in the "Administration" "Name" field
       And enters "Changeddescription" in the "Administration" "Description" field
       And enters "Changedsource" in the "Administration" "Source" field
@@ -40,7 +40,7 @@ Feature: Term List Management
       And navigates to a procedure containing the term list
       And clicks relevant field
     Then the dropdown should contain the term
-    Then the term list should be clickable
+    Then the term list "should" be clickable
     Then close the browser
 
   #Test3
@@ -132,20 +132,4 @@ Feature: Term List Management
       And navigates to a procedure containing the term list
     Then the term list should have the new default
     Then the term list should not contain a "Please select a value" entry
-    Then close the browser
-
-  #Test 8
-  Scenario: Keyboard accessibility
-    Given user is on the "Administration" page
-      And tabs to "Term List Management" tab
-      And presses the "Enter" key
-      And tabs to the "Administration" "Name" field
-      And types "Keyboard only name"
-      And tabs to the "+" button above the "Terms (values)" table
-      And presses the "Enter" key
-    Then "Keyboard only name" should be in the "Administration" "Name" field
-    Then there should be a blank row
-    Then the "Save" button should be reachable
-    Then the "Cancel changes" button should be reachable
-    Then the "Delete" button should be reachable
     Then close the browser

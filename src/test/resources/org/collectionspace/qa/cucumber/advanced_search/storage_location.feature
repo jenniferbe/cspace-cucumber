@@ -24,7 +24,7 @@ Feature: Advanced Search - Storage Location
 	    And enters "textbook" in the "Storage Location" "Security Note" field
 	    And saves the record
 	  Then the record is successfully saved
-	    And clicks on link to "Advanced Search" in upper right corner
+	    And clicks the "Advanced search" button
 	  Then the titlebar should contain "Advanced Search"
 	    And selects "Storage Location" from record type dropdown
 	    And enters "LanaDelRey" in the "Advanced Search" "Display Name" field
@@ -34,7 +34,7 @@ Feature: Advanced Search - Storage Location
 
 	Scenario: Search by Name 
 	  Given user is on the "My Collectionspace" page
-	    And clicks on link to "Advanced Search" in upper right corner
+	    And clicks the "Advanced search" button
 	  Then the titlebar should contain "Advanced Search"
 	    And selects "Storage Location" from record type dropdown
 	    And enters "SadGirl" in the "Advanced Search" "Name" field
@@ -44,7 +44,7 @@ Feature: Advanced Search - Storage Location
 
 	Scenario: Search by Language
 	  Given user is on the "My Collectionspace" page
-	    And clicks on link to "Advanced Search" in upper right corner
+	    And clicks the "Advanced search" button
 	  Then the titlebar should contain "Advanced Search"
 	    And selects "Storage Location" from record type dropdown
 	    And clicks on the "Advanced Search" "Language" field
@@ -56,7 +56,7 @@ Feature: Advanced Search - Storage Location
 
 	Scenario: Search by Access Note
 	  Given user is on the "My Collectionspace" page
-	    And clicks on link to "Advanced Search" in upper right corner
+	    And clicks the "Advanced search" button
 	  Then the titlebar should contain "Advanced Search"
 	    And selects "Storage Location" from record type dropdown
 	    And enters "Rare Jazz Collection" in the "Advanced Search" "Access Note" field
@@ -66,7 +66,7 @@ Feature: Advanced Search - Storage Location
 
 	Scenario: Search by Address
 	  Given user is on the "My Collectionspace" page
-	    And clicks on link to "Advanced Search" in upper right corner
+	    And clicks the "Advanced search" button
 	  Then the titlebar should contain "Advanced Search"
 	    And selects "Storage Location" from record type dropdown
 	    And enters "Your Heart" in the "Advanced Search" "Address" field
@@ -76,7 +76,7 @@ Feature: Advanced Search - Storage Location
 
 	Scenario: Search by Condition Note
 	  Given user is on the "My Collectionspace" page
-	    And clicks on link to "Advanced Search" in upper right corner
+	    And clicks the "Advanced search" button
 	  Then the titlebar should contain "Advanced Search"
 	    And selects "Storage Location" from record type dropdown
 	    And enters "Sedated" in the "Advanced Search" "Condition Note" field
@@ -86,7 +86,7 @@ Feature: Advanced Search - Storage Location
 
 	Scenario: Search by Term Type
 	  Given user is on the "My Collectionspace" page
-	    And clicks on link to "Advanced Search" in upper right corner
+	    And clicks the "Advanced search" button
 	  Then the titlebar should contain "Advanced Search"
 	    And selects "Storage Location" from record type dropdown
 	    And clicks on the "Advanced Search" "Term Type" field
@@ -98,7 +98,7 @@ Feature: Advanced Search - Storage Location
 
 	Scenario: Search by Term Status
 	  Given user is on the "My Collectionspace" page
-	    And clicks on link to "Advanced Search" in upper right corner
+	    And clicks the "Advanced search" button
 	  Then the titlebar should contain "Advanced Search"
 	    And selects "Storage Location" from record type dropdown
 	    And clicks on the "Advanced Search" "Term Status" field
@@ -110,7 +110,7 @@ Feature: Advanced Search - Storage Location
 
 	Scenario: Search by Security Note
       Given user is on the "My Collectionspace" page
-		And clicks on link to "Advanced Search" in upper right corner
+		And clicks the "Advanced search" button
 	  Then the titlebar should contain "Advanced Search"
 		And selects "Storage Location" from record type dropdown
 	    And enters "textbook" in the "Advanced Search" "Security Note" field
@@ -120,7 +120,7 @@ Feature: Advanced Search - Storage Location
 
 	Scenario: Search by Modified Date
 	  Given user is on the "My Collectionspace" page
-	    And clicks on link to "Advanced Search" in upper right corner
+	    And clicks the "Advanced search" button
 	  Then the titlebar should contain "Advanced Search"
 	    And selects "Storage Location" from record type dropdown
 	    And enters today's date in the "Modified Date" field
@@ -130,7 +130,7 @@ Feature: Advanced Search - Storage Location
 
 	Scenario: Search by username
 	  Given user is on the "My Collectionspace" page
-	    And clicks on link to "Advanced Search" in upper right corner
+	    And clicks the "Advanced search" button
 	  Then the titlebar should contain "Advanced Search"
 	    And selects "Storage Location" from record type dropdown
 	    And enters username in the "Advanced Search" "Record last modified by" field
@@ -140,7 +140,7 @@ Feature: Advanced Search - Storage Location
 
 	Scenario: Search by partial Security Note
 	  Given user is on the "My Collectionspace" page
-	    And clicks on link to "Advanced Search" in upper right corner
+	    And clicks the "Advanced search" button
 	  Then the titlebar should contain "Advanced Search"
 	    And selects "Storage Location" from record type dropdown
 	    And enters "textb*" in the "Advanced Search" "Security Note" field
@@ -183,7 +183,7 @@ Feature: Advanced Search - Storage Location
 	    And enters "testtest" in the "Storage Location" "Condition Note" field
 	    And saves the record
 	  Then the record is successfully saved
-	    And clicks on link to "Advanced Search" in upper right corner
+	    And clicks the "Advanced search" button
 	  Then the titlebar should contain "Advanced Search"
 	    And selects "Storage Location" from record type dropdown
 	    And selects "any (OR)" from boolean dropdown
@@ -195,7 +195,7 @@ Feature: Advanced Search - Storage Location
 	  Then the search results should contain "Top Shelf1"
 	  Then the search results should contain "Top Shelf2"
 	  Then the search results should contain "Top Shelf3"
-	    And clicks on link to "Advanced Search" in upper right corner
+	    And clicks the "Advanced search" button
 	  Then the titlebar should contain "Advanced Search"
 	    And selects "Storage Location" from record type dropdown
 	    And selects "all (AND)" from boolean dropdown
@@ -212,7 +212,7 @@ Feature: Advanced Search - Storage Location
 	#Test3
 	Scenario: Boolean and Keyword Search
 	  Given user is on the "My Collectionspace" page
-	    And clicks on link to "Advanced Search" in upper right corner
+	    And clicks the "Advanced search" button
 	  Then the titlebar should contain "Advanced Search"
 	    And selects "Storage Location" from record type dropdown
 	    And selects "any (OR)" from boolean dropdown
@@ -225,7 +225,7 @@ Feature: Advanced Search - Storage Location
 	  Then the search results should contain "Top Shelf1" 
 	  Then the search results should contain "Top Shelf2"
 	  Then the search results should contain "Top Shelf3"
-	    And clicks on link to "Advanced Search" in upper right corner
+	    And clicks the "Advanced search" button
 	  Then the titlebar should contain "Advanced Search"
 	    And selects "Storage Location" from record type dropdown
 	    And selects "all (AND)" from boolean dropdown

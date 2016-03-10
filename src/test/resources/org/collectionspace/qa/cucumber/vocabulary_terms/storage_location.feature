@@ -150,7 +150,7 @@ Feature: Storage Location Authority Page
 #         Take note of the Display Name of the record
 #         Click the "Delete" button in the very bottom of the object record
 #     Expected:
-#         The delete button should be disabled and nothing should happen
+#         The clicks on the delete button should be disabled and nothing should happen
 #     Actions:
 #         Save the record
 #         Click the "Delete" button in the very bottom of the object record
@@ -162,14 +162,14 @@ Feature: Storage Location Authority Page
 #         Dialog should be dismissed
 #         no other changes should occur.
 #     Actions:
-#         Click the delete button again
+#         Click the clicks on the delete button again
 #     Actions:
 #         click the close symbol
 #     Expected
 #         Dialog should be dismissed
 #         no other changes should occur.
 #     Actions:
-#         Click the delete button again
+#         Click the clicks on the delete button again
 #         In the appearing dialog, click Delete
 #     Expected:
 #         Confirmation of deletion dialog should appear. Click "Delete"
@@ -220,21 +220,21 @@ Feature: Storage Location Authority Page
 #
 #     Actions:
 #         Open an existing Storage Location Authority record, do not make any changes
-#         Variation A: Click Cancel changes button at the top of the page
-#         Variation B: Click Cancel changes button at the bottom of the page
+#         Variation A: Click Cancel changes button at the "top" of the page
+#         Variation B: Click Cancel changes button at the "bottom" of the page
 #     Expected:
 #         Cancel changes buttons should be disabled and nothing should happen
 #     Actions:
 #         Edit at least one field, and click or tab out of that field
-#         Variation A: Click Cancel changes button at the top of the page
-#         Variation B: Click Cancel changes button at the bottom of the page
+#         Variation A: Click Cancel changes button at the "top" of the page
+#         Variation B: Click Cancel changes button at the "bottom" of the page
 #     Expected:
 #         Cancel changes button should be active
 #         Record should be reverted to before changes were made
 #     Actions:
 #         Click the Save button
-#         Variation A: After successful save, click the Cancel changes button at the top of the page
-#         Variation B: After successful save, click the Cancel changes button at the bottom of the page
+#         Variation A: After successful save, click the "Cancel changes" button at the "top" of the page
+#         Variation B: After successful save, click the "Cancel changes" button at the "bottom" of the page
 #     Expected:
 #         Cancel changes button should be disabled and nothing should happen
 #
@@ -309,7 +309,7 @@ Feature: Storage Location Authority Page
 #     Actions:
 #         Click on "Cellar Crypt"
 #     Expected:
-#         "Cellar Crypt" should not be clickable and nothing should happen
+#         "Cellar Crypt" "should not" be clickable and nothing should happen
 #     Actions:
 #         Click on "Cellar"
 #     Expected:

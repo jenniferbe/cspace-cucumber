@@ -31,8 +31,8 @@ Feature: Advanced Search results Add to Record
         And clicks on result with text "CQA-86 Group"
         And selects the "Cataloging" tab 
 
-        Then "120415.1" should appear in the "Cataloging" sidebar  
-        Then "120415.2" should appear in the "Cataloging" sidebar  
+        Then "120415.1" should appear in the "Cataloging" area  
+        Then "120415.2" should appear in the "Cataloging" area  
 
         Then "CQA86.1" should appear in the "Related Cataloging Records" area
         Then "CQA86.2" should appear in the "Related Cataloging Records" area
@@ -42,25 +42,26 @@ Feature: Advanced Search results Add to Record
         Then "CQA86.1" should not appear in the "Related Cataloging Records" area
 
         And selects the "Current Record" tab 
-        And clicks the delete button
+        And clicks on the delete button 
+
         Then a delete confirmation dialog should appear
-        And clicks the delete button 
+        And clicks on the delete button 
         Then the deletion should be confirmed in a dialog
         Then close the browser 
 
 
-    Scenario: Keyboard accessibility:
-        Given user is in the "Create New" page
-        And clicks the "Advanced Search button"
-        And enters "CQA86" in the search field
-        Then the results should contain "CQA86.1"
-        Then the results should contain "CQA86.2"
-        Then the results should contain "CQA86.3"
-        And presses the "Tab" key until reaching the "Add record" button
-        And presses the "Enter" key
-        Then an "Add Search Results to Record" menu should appear
+    # Scenario: Keyboard accessibility:
+    #     Given user is in the "Create New" page
+    #     And clicks the "Advanced Search button"
+    #     And enters "CQA86" in the search field
+    #     Then the results should contain "CQA86.1"
+    #     Then the results should contain "CQA86.2"
+    #     Then the results should contain "CQA86.3"
+    #     And presses the "Tab" key until reaching the "Add record" button
+    #     And presses the "Enter" key
+    #     Then an "Add Search Results to Record" menu should appear
         
-        Then close the browser
+    #     Then close the browser
 
 
 ## don't forget to delete the group!

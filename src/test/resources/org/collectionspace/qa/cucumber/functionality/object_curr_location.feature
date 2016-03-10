@@ -31,7 +31,7 @@ Feature: Object Current Location
   #not a stepdef
       And clicks the link to "Tango Object" on the Find and Edit page
     Then "Alpha Location" should appear in the "Procedures" sidebar
-    Then "Alpha Location" should appear in the Terms Used sidebar
+    Then "Alpha Location" should appear in the "Terms Used" area
     Then "Alpha Location" should be in the "Computed Current Location" field
     Then close the browser
 
@@ -52,7 +52,7 @@ Feature: Object Current Location
       And clicks on the top nav search submit button
       And clicks the link to "Tango Object" on the Find and Edit page
   #not a stepdef
-      And clicks the "Add" button in the Procedures sidebar
+      And clicks the "Add" button in the "Procedures" area
   #probably replace this one
     Then a confirmation dialog should appear
       And selects "Location/Movement/Inventory" from dropdown in "Search Existing" row
@@ -65,7 +65,7 @@ Feature: Object Current Location
     Then "Alpha Location" should be in the "Computed Current Location" field
       And reloads the page
     Then "Bravo Location" should be in the "Computed Current Location" field
-    Then "Bravo Location" should appear in the Terms Used sidebar
+    Then "Bravo Location" should appear in the "Terms Used" area
     Then close the browser
 
   #Test 1c
@@ -95,10 +95,10 @@ Feature: Object Current Location
     Then "Alpha Location" should appear in the "Procedures" sidebar
     Then "Bravo Location" should appear in the "Procedures" sidebar
     Then "Bravo Location" should be in the "Computed Current Location" field
-    Then "Bravo Location" should appear in the Terms Used sidebar
+    Then "Bravo Location" should appear in the "Terms Used" area
       And reloads the page
     Then "Charlie Organization" should be in the "Computed Current Location" field
-    Then "Charlie Organization" should appear in the Terms Used sidebar
+    Then "Charlie Organization" should appear in the "Terms Used" area
 
   #Test 2 continues from above: Object Current Location is updated when a related Location/Movement/Inventory record is updated
       And enters "Alpha Location" in the top nav search field
@@ -111,12 +111,12 @@ Feature: Object Current Location
     Then a confirmation dialog should appear
       And clicks the "Save" button in the confirmation dialog
   # probably not a stepdef
-      And clicks "Tango Object" in the Cataloging sidebar
-    Then "Alpha Location" should appear in the "Terms Used" sidebar
+      And clicks "Tango Object" in the "Cataloging" area
+    Then "Alpha Location" should appear in the "Terms Used" area
     Then "Alpha Location" should be in the "Computed Current Location" field
 
   #Test3 continues from above: Object Current Location is updated when a related Location/Movement/Inventory record is deleted
-      And clicks "Alpha Location" in the Procedures sidebar
+      And clicks "Alpha Location" in the "Procedures" area
       And clicks the "Delete" button 
     Then a confirmation dialog should appear
       And clicks the "Delete" button in the confirmation dialog
@@ -127,9 +127,9 @@ Feature: Object Current Location
       And clicks the link to "Tango Object" 
     Then "Charlie Organization" should appear in the "Procedures" sidebar
     Then "Bravo Location" should appear in the "Procedures" sidebar
-    Then "Alpha Location" should not appear in the "Procedures" sidebar
+    Then "Alpha Location" should not appear in the "Procedures" area
     Then "Charlie Organization" should be in the "Computed Current Location" field
-    Then "Charlie Organization" should appear in the Terms Used sidebar
+    Then "Charlie Organization" should appear in the "Terms Used" area
 
   #Test4 continues from above: Object Current Location is updated when a relationship to a "Location/Movement/Inventory" record is deleted
       And selects the "Loc/Mov/Inv" tab
@@ -142,10 +142,10 @@ Feature: Object Current Location
       And clicks on the top nav search submit button
       And clicks the link to "Tango Object"
     Then "Bravo Location" should appear in the "Procedures" sidebar
-    Then "Alpha Location" should not appear in the "Procedures" sidebar
-    Then "Charlie Organization" should not appear in the "Procedures" sidebar
+    Then "Alpha Location" should not appear in the "Procedures" area
+    Then "Charlie Organization" should not appear in the "Procedures" area
     Then "Bravo Location" should be in the "Computed Current Location" field
-    Then "Bravo Location" should appear in the Terms Used sidebar
+    Then "Bravo Location" should appear in the "Terms Used" area
     Then close the browser
 
 
