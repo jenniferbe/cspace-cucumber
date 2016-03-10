@@ -170,7 +170,7 @@ Feature: Advanced Search - Media Handling
   Scenario: Boolean field-based search
     Given user is on the "Create New" page
       And selects the "Media Handling" radio button on the Create New page
-      And clicks on the create button
+      And clicks on the Create button
     Then the titlebar should contain "Media Handling"
       And enters "4639" in the "Media Handling" "Identification Number" field
       And enters "Jane Doe" in the "Media Handling" "Creator" vocab field
@@ -182,7 +182,7 @@ Feature: Advanced Search - Media Handling
     Then the record is successfully saved
     Given user is on the "Create New" page
       And selects the "Media Handling" radio button on the Create New page
-      And clicks on the create button
+      And clicks on the Create button
     Then the titlebar should contain "Media Handling"
       And enters "3246" in the "Media Handling" "Identification Number" field
       And enters "Jane Doe" in the "Media Handling" "Creator" vocab field
@@ -194,7 +194,7 @@ Feature: Advanced Search - Media Handling
     Then the record is successfully saved
     Given user is on the "Create New" page
       And selects the "Media Handling" radio button on the Create New page
-      And clicks on the create button
+      And clicks on the Create button
     Then the titlebar should contain "Media Handling"
       And enters "4245" in the "Media Handling" "Identification Number" field
       And enters "Jane Doe" in the "Media Handling" "Creator" vocab field

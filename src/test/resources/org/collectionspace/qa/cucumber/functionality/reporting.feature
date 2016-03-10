@@ -6,7 +6,7 @@ Feature: Reporting
   Scenario: Creating a Report
     Given user is on the "Create New" page
       And selects the "Acquisition" radio button on the Create New page
-      And clicks on the create button
+      And clicks on the Create button
     Then the titlebar should contain "Acquisition"
       And enters "102938" in the "Acquisition" "Acquisition Reference Number" field
       And enters "Onyx Felidae" in the "Acquisition" "Acquisition Authorizer" vocab field
@@ -51,7 +51,7 @@ Feature: Reporting
       And clicks the "Run" button in the confirmation dialog
     Then a progress bar should appear
     Then a browser dialog should appear
-      And views the report with Microsoft Word
+      And views the report with "Microsoft Word"
     Then the report should contain the correct information
 
   #---- Space added for clarity
@@ -68,7 +68,7 @@ Feature: Reporting
       And clicks the "Run" button in the confirmation dialog
     Then a progress bar should appear
     Then a browser dialog should appear
-      And views the report with Microsoft Excel
+      And views the report with "Microsoft Excel"
     Then the report should contain the correct information
 
   #---- Space added for clarity  
@@ -85,7 +85,7 @@ Feature: Reporting
       And clicks the "Run" button in the confirmation dialog
     Then a progress bar should appear
     Then a browser dialog should appear
-      And views the report with Microsoft PowerPoint
+      And views the report with "Microsoft PowerPoint"
     Then the report should contain the correct information
 
   #---- Space added for clarity  
@@ -102,7 +102,7 @@ Feature: Reporting
       And clicks the "Run" button in the confirmation dialog
     Then a progress bar should appear
     Then a browser dialog should appear
-      And views the report with Microsoft Excel
+      And views the report with "Microsoft Excel"
     Then the report should contain the correct information
 
   #---- Space added for clarity  
@@ -119,7 +119,7 @@ Feature: Reporting
       And clicks the "Run" button in the confirmation dialog
     Then a progress bar should appear
     Then a browser dialog should appear
-      And views the report with Microsoft Excel
+      And views the report with "Microsoft Excel"
     Then the report should contain the correct information
 
   #Test 5
@@ -149,7 +149,7 @@ Feature: Reporting
   Scenario: Running a report prior to saving a new record
     Given user is on the "Create New" page
       And selects the "Acquisition" radio button on the Create New page
-      And clicks on the create button
+      And clicks on the Create button
     Then the titlebar should contain "Acquisition" 
     Then the "Run" button under "Run Report" should be disabled
     Then close the browser

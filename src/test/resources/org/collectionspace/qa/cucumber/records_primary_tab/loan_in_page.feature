@@ -9,7 +9,7 @@ Feature: Loan In Page Testing
   	Given user is on the "Create New" page
     And selects the "Loan In" radio button on the Create New page
     And clicks on the Create button
-    And clicks on the Save button
+    And clicks on the "Save" button
     Then the error message bar should appear with "Please specify an Loan In Number"
     When user clicks on the "Select number pattern" button
     And selects "Loan In" from dropdown in "Type" row
@@ -33,7 +33,7 @@ Feature: Loan In Page Testing
     And enters "Albert Smith" in the new "Lender" field
     And selects "Albert Smith" from dropdown in "Albert Smith" row
     And selects the radio button next to "Albert Smith"
-    And clicks on the Save button
+    And clicks on the "Save" button
     Then the titlebar should contain "test1234 - Albert Smith"
     And close the browser
   
@@ -75,12 +75,12 @@ Feature: Loan In Page Testing
     And selects Loan In "xxx" #fix
     And clears all fields of the "xxx" record
     And enters "xxx" in the "Loan In Number" field
-    And clicks on the Save button
+    And clicks on the "Save" button
     # Then #a success message from save should appear
     And the titlebar should contain "xxx"
     And all fields of the "xxx" record should be empty
     When user clears the "Loan In Number" field
-    And clicks on the Save button
+    And clicks on the "Save" button
     Then the error message bar should appear with "Please specify an Loan In Number"
     And the record should not be saved #NOT be saved
     And close the browser
@@ -97,23 +97,23 @@ Feature: Loan In Page Testing
     And clicks on the delete button 
 
     Then the "delete" button "should not" be clickable
-    When user clicks on the Save button
+    When user clicks on the "Save" button
     Then the record is successfully saved
     And clicks on the delete button 
 
-    Then delete confirmation dialog should appear
+    Then a delete confirmation dialog should appear
     When user clicks cancel button
     Then the delete confirmation dialog should disappear
     # And #nothing else should happen
     And clicks on the delete button 
 
-    Then delete confirmation dialog should appear
+    Then a delete confirmation dialog should appear
     When user clicks close button
     Then the delete confirmation dialog should disappear
     # And #nothing else should happen
     And clicks on the delete button 
 
-    Then delete confirmation dialog should appear
+    Then a delete confirmation dialog should appear
     And clicks the confirmation delete button
     Then the deletion should be confirmed in a dialog
     # And #you should be redirected to Find and Edit page
@@ -129,12 +129,12 @@ Feature: Loan In Page Testing
     And selects the "Loan In" radio button on the Create New page
     And clicks on the Create button
     And enters "loandelete1" in the "Loan In Number" field
-    And clicks on the Save button
+    And clicks on the "Save" button
     And selects the "Loan Out" tab
     And clicks the "Add record" button
     And clicks the "Create" button
     And enters "loanout123" in the "Loan Out Number" field
-    And clicks on the Save button
+    And clicks on the "Save" button
     And selects the "Current Record" tab
     And clicks on the delete button 
 
@@ -145,14 +145,14 @@ Feature: Loan In Page Testing
     # And #nothing else should happen
     And clicks on the delete button 
 
-    Then delete confirmation dialog should appear
+    Then a delete confirmation dialog should appear
     And the deletion dialog should contain "and its relationships"
     When user clicks close button
     Then the delete confirmation dialog should disappear
     # And #nothing else should happen
     And clicks on the delete button 
 
-    Then delete confirmation dialog should appear
+    Then a delete confirmation dialog should appear
     And the deletion dialog should contain "and its relationships"
     And clicks the confirmation delete button
     Then the deletion should be confirmed in a dialog
@@ -193,7 +193,7 @@ Feature: Loan In Page Testing
     When user enters "testnote" in the "Entry Note" field
     And clicks the "Cancel Changes" button on the bottom
     Then nothing should be in the "Loan In Note" field
-    When user clicks on the Save button
+    When user clicks on the "Save" button
     And clicks the "Cancel Changes" button on the top
     Then the "Cancel Changes" button on the top "should not" be clickable
     When user clicks the "Cancel Changes" button on the bottom

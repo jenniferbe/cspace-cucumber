@@ -25,7 +25,7 @@ Feature: General Administration
       And sets Permissions for "termlist" to None
       And sets Permissions for "users" to None
       And sets Permissions for "role" to None
-      And clicks the "Save" button
+      And clicks on the "Save" button
       And selects the "Users" tab
       And clicks the "+ User" button
       And enters "Notanemail@notanemail.com" in the "Administration" "Email Address" field
@@ -33,7 +33,7 @@ Feature: General Administration
       And enters "12341234" in the "Administration" "Password" field
       And enters "12341234" in the "Administration" "Confirm Password" field
       And clicks "No Admin"
-      And clicks the "Save" button
+      And clicks on the "Save" button
       And clicks the "Sign Out" button
       And enters "Notanemail@notanemail.com" in the "Email" field
       And enters "12341234" in the "Password" field

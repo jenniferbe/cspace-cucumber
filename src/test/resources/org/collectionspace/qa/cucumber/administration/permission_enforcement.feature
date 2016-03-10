@@ -47,21 +47,21 @@ Feature: Permission Enforcement
   Scenario: Write access to Users
     Given user is logged in as "User III"
       And clicks the "Administration" menu item
-    Then the "+ User" button should present
+    Then the "+ User" button should be present
       And clicks on a user
     Then the details should be editable
     Then the "Delete" button should not present
       And clicks the "+ User" button
       And fills out required fields
       And assigns an existing role
-      And clicks on the Save button
+      And clicks on the "Save" button
     Then user is successfully saved
-    Then a confirmation message should appear
+    Then a confirmation dialog should appear
       And clicks the recently created sser
       And assigns a different role
-      And clicks on the Save button
+      And clicks on the "Save" button
     Then user is not successfully saved
-    Then an error message containing "You do not have permission to edit user roles" should appear
+    Then the message "You do not have permission to edit user roles" should appear
 
   #Continued from above: Test8: Write access to Roles & Permissions
       And selects the "Roles & Permissions" 
@@ -72,28 +72,28 @@ Feature: Permission Enforcement
       And clicks the "+ Role" button
       And fills out required fields
       And changes a permission
-      And clicks on the Save button
+      And clicks on the "Save" button
     Then the role is successfully saved
-    Then a confirmation message should appear
+    Then a confirmation dialog should appear
       And clicks the recently created role
       And changes a role
-      And clicks on the Save button
+      And clicks on the "Save" button
     Then the role is not successfully saved
-    Then an error message containing "You do not have permission to edit roles" should appear
+    Then the message "You do not have permission to edit roles" should appear
 
   #Continued from above: Test10: Write access to Term List Management
       And selects the "Term List Management" tab
       And clicks on a term list
     Then the details should be editable
-    Then the "Save" button should present
-    Then the "Cancel" button should present
+    Then the "Save" button should be present
+    Then the "Cancel" button should be present
     Then the "Cancel" button "should not" be clickable
       And changes the "Name" field
       And changes the "Source" field
       And changes the "Destination" field
       And clicks the "+" button
       And fills out required fields
-      And clicks on the Save button
+      And clicks on the "Save" button
     Then the term list is successfully saved
     Then close the browser
 
@@ -104,7 +104,7 @@ Feature: Permission Enforcement
       And selects the "Roles & Permissions" tab
       And clicks the "+ Role" button
       And fills out required fields
-      And clicks on the Save button
+      And clicks on the "Save" button
     Then the role is successfully saved
       And clicks the recently created role
       And clicks the "Delete" button
@@ -118,7 +118,7 @@ Feature: Permission Enforcement
       And enters "test@collectionspace.org" in the "Password" field
       And enters "test@collectionspace.org" in the "Confirm Password" field
       And assigns an existing role
-      And clicks on the Save button
+      And clicks on the "Save" button
     Then user is successfully saved
       And opens a different browser
     Given user is logged in as "test@collectionspace.org" with the password "test@collectionspace.org" on the second browser

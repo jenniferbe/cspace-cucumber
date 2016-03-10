@@ -42,7 +42,7 @@ Feature: Condition Check Secondary Tab
       And selects "Cataloging" from top nav search record type select field
       And clicks on result with text "Aligeiers"
     Then the titlebar should contain "Cataloging"
-    Then "blastphemie" should appear in the "Procedures" sidebar
+    Then "blastphemie" should appear in the "Procedures" area
       And clicks on "blastphemie" from "Procedures" area
     Then the titlebar should contain "Condition Check" 
     Then "Aligeiers" should appear in the "Cataloging" area

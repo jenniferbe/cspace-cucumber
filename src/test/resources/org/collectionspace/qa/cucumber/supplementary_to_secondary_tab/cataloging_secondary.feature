@@ -41,7 +41,7 @@ Feature: Supplementary Manual QA - Cataloging Secondary Tab
     # And clicks "+ Add Record"
     # A pop up window will appear with the option to add a relationship to an existing record or create a new record
     # Hit ESC on your keyboard.
-    # Then no changes to the record will occur.
+    # Then no changes to the record should occur.
     # And clicks "+ Add Record"
     # Click the search button next to the search existing area
     # A list of records should appear

@@ -19,13 +19,13 @@ Feature: Term List Management
       And enters "Changeddescription" in the "Administration" "Description" field
       And enters "Changedsource" in the "Administration" "Source" field
       And clicks the "+" button above the "Terms (values)" table
-      And clicks the "Save" button
+      And clicks on the "Save" button
     Then "Changedname" should be in the "Administration" "Name" field
     Then "Changeddescription" should be in the "Administration" "Description" field
     Then "Changedsource" should be in the "Administration" "Source" field
   #Test2: Inactivating a term, continued from above
       And selects "Inactive" from dropdown in a term row under "Status"
-      And clicks the "Save" button
+      And clicks on the "Save" button
     Then the term's status should be displayed as "Inactive"
       And navigates to a procedure containing the term list
       And clicks relevant field
@@ -35,7 +35,7 @@ Feature: Term List Management
       And selects the "Term List Management" tab
       And clicks on the same term list
       And selects "Active" from dropdown in term row under "Status"
-      And clicks the "Save" button
+      And clicks on the "Save" button
     Then the term's status should be displayed as "Active"
       And navigates to a procedure containing the term list
       And clicks relevant field
@@ -52,7 +52,7 @@ Feature: Term List Management
     Then a new row should appear in the "Terms (values)" table
       And fills out the row
       And selects "Active" from dropdown in term row under "Status"
-      And clicks the "Save" button
+      And clicks on the "Save" button
     Then the "Terms (values)" table should contain the new term
     Then the "Terms (values)" table should be in alphabetical order
     Then close the browser
@@ -70,7 +70,7 @@ Feature: Term List Management
       And selects the "Term List Management" tab
       And clicks on "collectionmethod" term list
       And changes "Term Name" for "found dead" to "found deadest"
-      And clicks the "Save" button
+      And clicks on the "Save" button
       And enters "Existing Term Test" in the top nav search field
       And selects "Intake" from the top nav search record type select field
       And clicks on the top nav search submit button
@@ -86,7 +86,7 @@ Feature: Term List Management
       And clicks on a term list
       And clicks the "x" button in the first row of the "Terms (values)" table
     Then the "Terms (values)" table should not contain the term
-      And clicks the "Save" button
+      And clicks on the "Save" button
     Then the "Terms (values)" table should not contain the term
       And navigates to a procedure containing the term list
       And clicks relevant field
@@ -117,7 +117,7 @@ Feature: Term List Management
       And clicks on a term list
       And changes default value of a row in "Used By (field)" list
       And checks the checkbox under "Include null value"
-      And clicks the "Save" button
+      And clicks on the "Save" button
     Then the default value should still be selected
     Then the checkbox under "Include null value" should be checked
       And navigates to a procedure containing the term list
@@ -128,7 +128,7 @@ Feature: Term List Management
       And clicks on the same term list
       And changes default value of a row in "Used By (field)" list
       And unchecks the checkbox under "Include null value"
-      And clicks the "Save" button
+      And clicks on the "Save" button
       And navigates to a procedure containing the term list
     Then the term list should have the new default
     Then the term list should not contain a "Please select a value" entry

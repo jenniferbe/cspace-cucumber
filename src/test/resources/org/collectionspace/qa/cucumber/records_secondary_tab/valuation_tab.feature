@@ -114,7 +114,7 @@ Feature: Valuation Tab
     	And clicks on the Create button
     	And enters "CQA116.4" in the "Valuation Control Reference Number" field 
 		And selects the "Current Record" tab
-		And clicks the "save" button
+		And clicks on the "Save" button
 
 	    And selects the "Valuation" tab 
 	    Then "CQA116.4" should appear in the "Related Valuation Control Records" area 
@@ -145,7 +145,7 @@ Feature: Valuation Tab
 
 	    # Variation B
 	    And enters "CQA116.5" in the "Valuation Control Reference Number" field
-	    And clicks the "save" button 
+	    And clicks on the "Save" button 
 	    Then the "cancel changes" button at the "top" of the page "should not" be clickable 
     	Then the "cancel changes" button at the "bottom" of the page "should not" be clickable 
    
@@ -221,7 +221,7 @@ Feature: Valuation Tab
         Then the "Note" field should contain "CQA116 \n Test \n for subtest Test 13"	    
 	    And clicks the "Go To Record" button
 	    And clicks the "Delete" button 
-	    Then delete confirmation dialog should appear
+	    Then a delete confirmation dialog should appear
 	    And clicks on the delete button 
 
         Then close the browser
@@ -250,20 +250,20 @@ Feature: Valuation Tab
 	    And saves the record
 	    
 	    And clicks the "Delete Relation" button on the row that reads "CQA116.7"
-	    Then delete confirmation dialog should appear
+	    Then a delete confirmation dialog should appear
 	    And clicks cancel button
 	    Then the dialog should be dismissed 
 	    Then the "Related Valuation Control Records" area should contain "CQA116.7"
 
 	    And clicks the "Delete Relation" button on the row that reads "CQA116.7"
-	    Then delete confirmation dialog should appear
+	    Then a delete confirmation dialog should appear
 	    And clicks the "close" button
 	    Then the dialog should be dismissed
 	    Then the "Related Valuation Control Records" area should contain "CQA116.7"
 
 
 	    And clicks the "Delete Relation" button on the row that reads "CQA116.7"
-	    Then delete confirmation dialog should appear
+	    Then a delete confirmation dialog should appear
 	    And clicks on the delete button 
 
 	    Then "CQA116.7" should not appear in the "Procedures" area

@@ -106,7 +106,7 @@ Feature: Condition Check Tab Test Plan
         And clicks on the Create button
         And enters "CQA103.4" in the "Condition Check/Assessment Reference Number" field 
         And selects the "Current Record" tab
-        And clicks the "save" button
+        And clicks on the "Save" button
 
         And selects the "Condition" tab 
         Then "CQA103.4" should appear in the "Related Condition Check Records" area 
@@ -137,7 +137,7 @@ Feature: Condition Check Tab Test Plan
 
         # Variation B
         And enters "CQA103.5" in the "Condition Check/Assessment Reference Number" field
-        And clicks the "save" button 
+        And clicks on the "Save" button 
         Then the "cancel changes" button at the "top" of the page "should not" be clickable 
         Then the "cancel changes" button at the "bottom" of the page "should not" be clickable 
    
@@ -359,20 +359,20 @@ Feature: Condition Check Tab Test Plan
         And saves the record
         
         And clicks the "Delete Relation" button on the row that reads "CQA103.7"
-        Then delete confirmation dialog should appear
+        Then a delete confirmation dialog should appear
         And clicks cancel button
         Then the dialog should be dismissed
         Then the "Related Condition Check Records" area should contain "CQA103.7"
 
         And clicks the "Delete Relation" button on the row that reads "CQA103.7"
-        Then delete confirmation dialog should appear
+        Then a delete confirmation dialog should appear
         And clicks the "close" button
         Then the dialog should be dismissed
         Then the "Related Condition Check Records" area should contain "CQA103.7"
 
 
         And clicks the "Delete Relation" button on the row that reads "CQA103.7"
-        Then delete confirmation dialog should appear
+        Then a delete confirmation dialog should appear
         And clicks on the delete button 
 
         Then "CQA103.7" should not appear in the "Procedures" area

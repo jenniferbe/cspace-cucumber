@@ -19,11 +19,11 @@ Feature: Intake Tab
   # Begin Test 3:
     And clicks the "Add record" button 
     And clicks the "close" button 
-    Then no changes to the record will occur 
+    Then no changes to the record should occur 
 
     And clicks the "Add record" button
     And presses the "ESC" key 
-    Then No changes to the record will occur 
+    Then no changes to the record will occur 
 
   #Test 5 Scenario: Trying to add search for and add multiple intake records
     And clicks the "Add record" button 
@@ -106,7 +106,7 @@ Feature: Intake Tab
     And enters "041319953.4" in the "Intake Entry Number" field 
     And selects the "Current Record" tab
     Then a leave confirmation dialog should appear
-    And clicks the save button
+    And clicks on the "Save" button
     And selects the "Intake" tab 
     Then "041319953.4" should appear in the "Related Intake Records" area 
 
@@ -141,7 +141,7 @@ Feature: Intake Tab
 
 
     And enters "04131995.5" in the "Intake Entry Number" field
-    And clicks the "save" button
+    And clicks on the "Save" button
     Then the "cancel changes" button at the "top" of the page "should not" be clickable 
     Then the "cancel changes" button at the "bottom" of the page "should not" be clickable 
    
@@ -165,7 +165,7 @@ Feature: Intake Tab
         Then the message "Please specify an Intake Entry Number" should appear 
 
         And enters "CQA110_11" in the "Intake Entry Number" field
-        And clicks the "Save" button
+        And clicks on the "Save" button
 
         Then the message "Relation successfully created." should appear
         Then "CQA110_11" should appear in the "Related Intake Records" area
@@ -213,7 +213,7 @@ Feature: Intake Tab
         And enters "2016-01-22" in the "Location Date" field
         And enters "California" in the "Normal Location" field
         And selects "California" from autocomplete options
-        And clicks the "Save" button
+        And clicks on the "Save" button
 
         Then the message "Intake successfully saved" should appear
 
@@ -302,7 +302,7 @@ Feature: Intake Tab
         And enters "2016-07-22" in the "Location Date" field
         And enters "California" in the "Normal Location" field
         And selects "California" from autocomplete options
-        And clicks the "Save" button
+        And clicks on the "Save" button
 
         Then the message "Intake successfully saved" should appear
 
@@ -376,20 +376,20 @@ Feature: Intake Tab
     And saves the record
    
     And clicks the "Delete Relation" button on the row that reads "0413199525"
-    Then delete confirmation dialog should appear 
+    Then a delete confirmation dialog should appear 
     And clicks cancel button
     Then the dialog should be dismissed 
     Then the "Related Intake Records" area should contain "0413199525"
 
 
     And clicks the "Delete Relation" button on the row that reads "0413199525"
-    Then delete confirmation dialog should appear
+    Then a delete confirmation dialog should appear
     And clicks close button
     Then the dialog should be dismissed
     Then the "Related Intake Records" area should contain "0413199525"
 
     And clicks the "Delete Relation" button on the row that reads "0413199525"
-    Then delete confirmation dialog should appear
+    Then a delete confirmation dialog should appear
     And clicks on the delete button 
 
     Then "0413199525" should not appear in the "Procedures" area 
