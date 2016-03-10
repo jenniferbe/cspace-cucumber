@@ -6,7 +6,7 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory Secondary Tab
   Scenario: Create a dummy record
     Given user is on the "Create New" page
       And selects the "Location/Movement/Inventory" radio button on the Create New page
-      And clicks on the create button
+      And clicks on the Create button
     Then the titlebar should contain "Location/Movement/Inventory"
       And enters "Dummy Location" in the "Location/Movement/Inventory" "Current Location" vocab field
   # Not a known stepdef
@@ -15,7 +15,7 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory Secondary Tab
     Then the record is successfully saved
     Given user is on the "Create New" page
       And selects the "Cataloging" radio button on the Create New page
-      And clicks on the create button
+      And clicks on the Create button
     Then the titlebar should contain "Cataloging"
       And enters "Dummy Record" in the "Cataloging" "Identification Number" field
       And saves the record
@@ -37,7 +37,7 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory Secondary Tab
     Then a "No related records yet" message should appear
   # Not a known stepdef
       And clicks the "+ Add Record" button
-      And clicks on the create button
+      And clicks on the Create button
     Then the "Cancel changes" button at the "top" of the page "should not" be clickable
     Then the "Cancel changes" button at the "bottom" of the page "should not" be clickable
     Then the "Delete this relation." button at the "top" of the page "should" be clickable
@@ -72,8 +72,8 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory Secondary Tab
       And clicks the link to "Dummy Record" in the "Cataloging" area
     Then the titlebar should contain "Cataloging"
   # same the entry reference issue
-    Then the entry should appear in the "Procedures" sidebar
-      And clikcs the link to the entry in the "Procedures" sidebar
+    Then the entry should appear in the "Procedures" area
+      And clikcs the link to the entry in the "Procedures" area
     Then the titlebar should contain "Location/Movement/Inventory"
     Then close the browser
 

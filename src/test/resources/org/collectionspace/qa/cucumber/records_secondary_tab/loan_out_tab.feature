@@ -112,7 +112,7 @@ Feature: Loan Out Tab
 	    	And clicks on the Create button
 	    	And enters "CQA112.4" in the "Loan Out Number" field 
 			And selects the "Current Record" tab
-			And clicks the "save" button
+			And clicks on the "Save" button
 
 		    And selects the "Loan Out" tab 
 		    Then "CQA112.4" should appear in the "Related Loan Out Records" area 
@@ -143,7 +143,7 @@ Feature: Loan Out Tab
 
 	    # Variation B
 	    And enters "CQA112.5" in the "Loan Out Number" field
-	    And clicks the "save" button 
+	    And clicks on the "Save" button 
 	    Then the "cancel changes" button at the "top" of the page "should not" be clickable 
     	Then the "cancel changes" button at the "bottom" of the page "should not" be clickable 
    
@@ -171,7 +171,7 @@ Feature: Loan Out Tab
         Then the message "Please specify a Loan Out Number" should appear 
 
         And enters "CQA112.11" in the "Loan Out Number" field
-        And clicks the "Save" button
+        And clicks on the "Save" button
 
         Then the message "Relation successfully created." should appear
         Then "CQA112.11" should appear in the "Related Loan Out Records" area
@@ -199,7 +199,7 @@ Feature: Loan Out Tab
         And enters "2015-03-05" in the "Loan Out Date" field
         And enters "2016-05-03" in the "Loan Return Date" field
         And enters "2017-06-01" in the "Loan Renewal Application Date" field
-        And clicks the "Save" button
+        And clicks on the "Save" button
 
         Then the message "Loan Out successfully saved" should appear
 
@@ -245,7 +245,7 @@ Feature: Loan Out Tab
         And enters "2015-03-08" in the "Loan Out Date" field
         And enters "2018-05-03" in the "Loan Return Date" field
         And enters "2017-06-01" in the "Loan Renewal Application Date" field
-        And clicks the "Save" button
+        And clicks on the "Save" button
 
         Then the message "Loan Out successfully saved" should appear
 
@@ -296,20 +296,20 @@ Feature: Loan Out Tab
 	    And saves the record
 	    
 	    And clicks the "Delete Relation" button on the row that reads "CQA112.7"
-	    Then delete confirmation dialog should appear
+	    Then a delete confirmation dialog should appear
 	    And clicks cancel button
 	    Then the dialog should be dismissed 
 	    Then the "Related Loan Out Records" area should contain "CQA112.7"
 
 	    And clicks the "Delete Relation" button on the row that reads "CQA112.7"
-	    Then delete confirmation dialog should appear
+	    Then a delete confirmation dialog should appear
 	    And clicks the "close" button
 	    Then the dialog should be dismissed
 	    Then the "Related Loan Out Records" area should contain "CQA112.7"
 
 
 	    And clicks the "Delete Relation" button on the row that reads "CQA112.7"
-	    Then delete confirmation dialog should appear
+	    Then a delete confirmation dialog should appear
 	    And clicks on the delete button 
 
 	    Then "CQA112.7" should not appear in the "Procedures" area

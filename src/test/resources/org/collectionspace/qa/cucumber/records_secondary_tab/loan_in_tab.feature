@@ -109,7 +109,7 @@ Feature: Loan In Tab
 	    And enters "CQA111.4" in the "Loan In Number" field 
 	    And selects the "Current Record" tab
 	    Then a leave confirmation dialog should appear
-	    And clicks the save button
+	    And clicks on the "Save" button
 
 	    And selects the "Loan In" tab 
 	    Then "CQA111.4" should appear in the "Related Loan In Records" area 
@@ -144,7 +144,7 @@ Feature: Loan In Tab
 
 	    # Variation B
 	    And enters "CQA111.5" in the "Loan In Number" field
-	    And clicks the "save" button 
+	    And clicks on the "Save" button 
 	    Then the "cancel changes" button at the "top" of the page "should not" be clickable 
     	Then the "cancel changes" button at the "bottom" of the page "should not" be clickable 
    
@@ -169,7 +169,7 @@ Feature: Loan In Tab
         Then the message "Please specify a Loan In Number" should appear 
 
         And enters "CQA111.11" in the "Loan In Number" field
-        And clicks the "Save" button
+        And clicks on the "Save" button
 
         Then the message "Relation successfully created." should appear
         Then "CQA111.11" should appear in the "Related Loan In Records" area
@@ -196,7 +196,7 @@ Feature: Loan In Tab
         And enters "2015-03-05" in the "Loan In Date" field
         And enters "2016-05-03" in the "Loan Return Date" field
         And enters "2017-06-01" in the "Loan Renewal Application Date" field
-        And clicks the "Save" button
+        And clicks on the "Save" button
 
         Then the message "Loan In successfully saved" should appear
 
@@ -242,7 +242,7 @@ Feature: Loan In Tab
         And enters "2015-03-08" in the "Loan In Date" field
         And enters "2018-05-03" in the "Loan Return Date" field
         And enters "2017-06-01" in the "Loan Renewal Application Date" field
-        And clicks the "Save" button
+        And clicks on the "Save" button
 
         Then the message "Loan In successfully saved" should appear
 
@@ -295,19 +295,19 @@ Feature: Loan In Tab
 	    And saves the record
 
 	    And clicks the "Delete Relation" button on the row that reads "CQA111.6"
-	    Then delete confirmation dialog should appear
+	    Then a delete confirmation dialog should appear
 	    And clicks cancel button
 	    Then the dialog should be dismissed 
 	    Then the "Related Loan In Records" area should contain "CQA111.6"
 
 	    And clicks the "Delete Relation" button on the row that reads "CQA111.6"
-	    Then delete confirmation dialog should appear
+	    Then a delete confirmation dialog should appear
 	    And clicks the "close" button
 	    Then the dialog should be dismissed
 	    Then the "Related Loan In Records" area should contain "CQA111.6"
 
 	    And clicks the "Delete Relation" button on the row that reads "CQA111.6"
-	    Then delete confirmation dialog should appear
+	    Then a delete confirmation dialog should appear
 	    And clicks on the delete button 
 
 	    Then "CQA111.6" should not appear in the "Procedures" area

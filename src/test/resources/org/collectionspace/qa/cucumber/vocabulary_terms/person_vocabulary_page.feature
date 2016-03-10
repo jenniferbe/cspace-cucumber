@@ -76,7 +76,7 @@ Feature: Person Vocabulary Data Entry
     Then the "Cancel changes" button at the bottom of page "should" be clickable
     Then record should be reverted to before changes were made
      And enters "Revertica Notica" in the "Display name" field
-     And clicks on the Save button
+     And clicks on the "Save" button
      And clicks on the "Cancel changes" button at the bottom of page
     Then nothing should happen
     Then the "Cancel changes" button at top of page "should not" be clickable
@@ -89,7 +89,7 @@ Feature: Person Vocabulary Data Entry
       And enters "Saved Change" in the "Person" "Display name" field
       And clicks on "Find and Edit" menu item
     Then a confirmation dialog should appear
-      And clicks on the Save button
+      And clicks on the "Save" button
     Then the record is successfully saved
     Then user should be redirected to the page navigated to
     Then "Saved Change" should be in the "Person" "Display name" field
@@ -100,7 +100,7 @@ Feature: Person Vocabulary Data Entry
       And enters "Unsaved Change" in the "Person" "Display name" field
       And clicks on "Find and Edit" menu item
     Then a confirmation dialog should appear
-      And clicks on the Don't Save button
+      And clicks the "Don't Save" button
     Then the record is not successfully saved
     Then user should be redirected to the page navigated to
     Then "Unsaved Change" should not be in the "Person" "Display name" field  
@@ -111,7 +111,7 @@ Feature: Person Vocabulary Data Entry
       And enters "Tentative Change" in the "Person" "Display name" field
       And clicks on "Find and Edit" menu item
     Then a confirmation dialog should appear
-      And clicks on the Cancel button
+      And clicks cancel button
     Then the dialog should be dismissed
     Then close the browser
 
@@ -196,7 +196,7 @@ Feature: Person Vocabulary Data Entry
 # Uncertain stepdef
     Then "Samuel Clemens" should appear in black in the dropdown in "Lender" row
 # Uncertain stepdef
-    Then "Mark Twain" should appear indented in grey in the dropdown in "Lender" row
+    Then "Mark Twain" should appear indented in "grey" in the dropdown in "Lender" row
     Then "Mark Twain" "should not" be clickable
       And clicks on "Samuel Clemens" from dropdown in "Lender" row
     Then "Samuel Clemens" should be in the "Loan In" "Lender" field
@@ -230,7 +230,7 @@ Feature: Person Vocabulary Data Entry
 # Uncertain stepdef
     Then "Samuel Clemens" should appear in black in the dropdown in "Lender" row
 # Uncertain stepdef
-    Then "Mark Twain" should appear indented in black in the dropdown in "Lender" row
+    Then "Mark Twain" should appear indented in "black" in the dropdown in "Lender" row
     Then "Mark Twain" "should" be clickable
       And clicks on "Mark Twain" from dropdown in "Lender" row
     Then "Mark Twain" should be in the "Loan In" "Lender" field

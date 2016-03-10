@@ -13,8 +13,16 @@ Feature: Structured Dates Formatting
     Then the titlebar should contain "Cataloging" 
       And enters "1" in the "Cataloging" "Object Description Information" "Content" "Date" field
     Then the structured date popup should appear
-      And enters "9999" in the "Cataloging" "Object Description Information" "Content" "Date" "Earliest/Single Year" field
-    Then "9999" in "Cataloging" "Object Description Information" "Content" "Date" "Earliest/Single Year" field is not cut off
+      And enters "9999" in the "Cataloging" field
+      And enters "9999" in the "Object Description Information" field
+      And enters "9999" in the "Content" field
+      And enters "9999" in the "Date" field
+      And enters "9999" in the "Earliest/Single Year" field
+    Then "9999" in "Cataloging" field is not cut off
+    Then "9999" in "Object Description Information" field is not cut off
+    Then "9999" in "Content" field is not cut off
+    Then "9999" in "Date" field is not cut off
+    Then "9999" in "Earliest/Single Year" field is not cut off
       And clicks in "Era" column in "Cataloging" "Object Description Information" "Content" "Date" "Earliest/Single Date" row
     Then a drop down list should appear in the "Cataloging" "Object Description Information" "Content" "Date" "Earliest/Single Date" row
       And selects "BCE" from dropdown in "Cataloging" "Object Description Information" "Content" "Date" "Earliest/Single Date" row
@@ -38,8 +46,16 @@ Feature: Structured Dates Formatting
     Then the titlebar should contain "Cataloging" 
       And enters "1" in the "Cataloging" "Object Description Information" "Textual Inscription" "Date" field
     Then the structured date popup should appear
-      And enters "9999" in the "Cataloging" "Object Description Information" "Textual Inscription" "Date" "Earliest/Single Year" field
-    Then "9999" in "Cataloging" "Object Description Information" "Textual Inscription" "Date" "Earliest/Single Year" field is not cut off
+      And enters "9999" in the "Cataloging" field
+      And enters "9999" in the "Object Description Information" field
+      And enters "9999" in the "Textual Inscription" field
+      And enters "9999" in the "Date" field
+      And enters "9999" in the "Earliest/Single Year" field
+    Then "9999" in "Cataloging" field is not cut off
+    Then "9999" in "Object Description Information" field is not cut off
+    Then "9999" in "Textual Inscription" field is not cut off
+    Then "9999" in "Date" field is not cut off
+    Then "9999" in "Earliest/Single Year" field is not cut off
       And clicks in "Era" column in "Cataloging" "Object Description Information" "Textual Inscription" "Date" "Earliest/Single Date" row
     Then a drop down list should appear in the "Cataloging" "Object Description Information" "Textual Inscription" "Date" "Earliest/Single Date" row
       And selects "BCE" from dropdown in "Cataloging" "Object Description Information" "Textual Inscription" "Date" "Earliest/Single Date" row
@@ -63,8 +79,14 @@ Feature: Structured Dates Formatting
     Then the titlebar should contain "Cataloging" 
       And enters "1" in the "Cataloging" "Non-Textual Inscription" "Date" field
     Then the structured date popup should appear
-      And enters "9999" in the "Cataloging" "Non-Textual Inscription" "Date" "Earliest/Single Year" field
-    Then "9999" in "Cataloging" "Non-Textual Inscription" "Date" "Earliest/Single Year" field is not cut off
+      And enters "9999" in the "Cataloging" field
+      And enters "9999" in the "Non-Textual Inscription" field
+      And enters "9999" in the "Date"  field
+      And enters "9999" in the "Earliest/Single Year" field
+    Then "9999" in "Cataloging" field is not cut off
+    Then "9999" in "Non-Textual Inscription" field is not cut off
+    Then "9999" in "Date" field is not cut off
+    Then "9999" in "Earliest/Single Year" field is not cut off
       And clicks in "Era" column in "Cataloging" "Non-Textual Inscription" "Date" "Earliest/Single Date" row
     Then a drop down list should appear in the "Cataloging" "Non-Textual Inscription" "Date" "Earliest/Single Date" row
       And selects "BCE" from dropdown in "Cataloging" "Non-Textual Inscription" "Date" "Earliest/Single Date" row
@@ -88,8 +110,15 @@ Feature: Structured Dates Formatting
     Then the titlebar should contain "Cataloging" 
       And enters "1" in the "Cataloging" "Object Production Information" "Production date" field
     Then the structured date popup should appear
-      And enters "9999" in the "Cataloging" "Object Production Information" "Production date" "Earliest/Single Year" field
-    Then "9999" in "Cataloging" "Object Production Information" "Production date" "Earliest/Single Year" field is not cut off
+      And enters "9999" in the "Cataloging" field
+      And enters "9999" in the "Object Production Information" field
+      And enters "9999" in the "Production date" field
+      And enters "9999" in the "Date" field
+      And enters "9999" in the "Earliest/Single Year" field
+    Then "9999" in "Cataloging" field is not cut off
+    Then "9999" in "Object Production Information" field is not cut off
+    Then "9999" in "Production date" field is not cut off
+    Then "9999" in "Earliest/Single Year" field is not cut off
       And clicks in "Era" column in "Cataloging" "Object Production Information" "Production date" "Earliest/Single Date" row
     Then a drop down list should appear in the "Cataloging" "Object Production Information" "Production date" "Earliest/Single Date" row
       And selects "BCE" from dropdown in "Cataloging" "Object Production Information" "Production date" "Earliest/Single Date" row
@@ -114,8 +143,14 @@ Feature: Structured Dates Formatting
     Then the titlebar should contain "Cataloging" 
       And enters "1" in the "Cataloging" "Object History & Association" "Associated date" field
     Then the structured date popup should appear
-      And enters "9999" in the "Cataloging" "Object History & Association" "Associated date" "Earliest/Single Year" field
-    Then "9999" in "Cataloging" "Object History & Association" "Associated date" "Earliest/Single Year" field is not cut off
+      And enters "9999" in the "Cataloging" field
+      And enters "9999" in the "Object History & Association" field
+      And enters "9999" in the "Associated date" field
+      And enters "9999" in the "Earliest/Single Year" field
+    Then "9999" in "Cataloging" field is not cut off
+    Then "9999" in "Object History & Association" field is not cut off
+    Then "9999" in "Associated date" field is not cut off
+    Then "9999" in "Earliest/Single Year" field is not cut off
       And clicks in "Era" column in "Cataloging" "Object History & Association" "Associated date" "Earliest/Single Date" row
     Then a drop down list should appear in the "Cataloging" "Object History & Association" "Associated date" "Earliest/Single Date" row
       And selects "BCE" from dropdown in "Cataloging" "Object History & Association" "Associated date" "Earliest/Single Date" row
@@ -137,10 +172,15 @@ Feature: Structured Dates Formatting
       And selects the "Cataloging" radio button on the Create New page
       And clicks on the Create button
     Then the titlebar should contain "Cataloging" 
-      And enters "1" in the "Cataloging" "Object History & Association" "Ownership date" field
+      And enters "1" in the "Cataloging" field
+      And enters "1" in the "Object History & Association" field
+      And enters "1" in the "Ownership date" field
     Then the structured date popup should appear
       And enters "9999" in the "Cataloging" "Object History & Association" "Ownership date" "Earliest/Single Year" field
-    Then "9999" in "Cataloging" "Object History & Association" "Ownership date" "Earliest/Single Year" field is not cut off
+    Then "9999" in "Cataloging" field is not cut off
+    Then "9999" in "Object History & Association" field is not cut off
+    Then "9999" in "Ownership date" field is not cut off
+    Then "9999" in "Earliest/Single Year" field is not cut off
       And clicks in "Era" column in "Cataloging" "Object History & Association" "Ownership date" "Earliest/Single Date" row
     Then a drop down list should appear in the "Cataloging" "Object History & Association" "Ownership date" "Earliest/Single Date" row
       And selects "BCE" from dropdown in "Cataloging" "Object History & Association" "Ownership date" "Earliest/Single Date" row
@@ -163,10 +203,15 @@ Feature: Structured Dates Formatting
       And selects the "Cataloging" radio button on the Create New page
       And clicks on the Create button
     Then the titlebar should contain "Cataloging" 
-      And enters "1" in the "Cataloging" "Object Collection Information" "Field collection date" field
+      And enters "1" in the "Cataloging" field
+      And enters "1" in the "Object Collection Information" field
+      And enters "1" in the "Field collection date" field
     Then the structured date popup should appear
       And enters "9999" in the "Cataloging" "Object Collection Information" "Field collection date" "Earliest/Single Year" field
-    Then "9999" in "Cataloging" "Object Collection Information" "Field collection date" "Earliest/Single Year" field is not cut off
+    Then "9999" in "Cataloging" field is not cut off
+    Then "9999" in "Object Collection Information" field is not cut off
+    Then "9999" in "Field collection date" field is not cut off
+    Then "9999" in "Earliest/Single Year" field is not cut off
       And clicks in "Era" column in "Cataloging" "Object Collection Information" "Field collection date" "Earliest/Single Date" row
     Then a drop down list should appear in the "Cataloging" "Object Collection Information" "Field collection date" "Earliest/Single Date" row
       And selects "BCE" from dropdown in "Cataloging" "Object Collection Information" "Field collection date" "Earliest/Single Date" row
@@ -188,10 +233,15 @@ Feature: Structured Dates Formatting
       And selects the "Media Handling" radio button on the Create New page
       And clicks on the Create button
     Then the titlebar should contain "Media Handling" 
-      And enters "1" in the "Media Handling" "Dates" field
+      And enters "1" in the "Media Handling" field
+      And enters "1" in the "Dates" field
     Then the structured date popup should appear
-      And enters "9999" in the "Media Handling" "Dates" "Earliest/Single Year" field
-    Then "9999" in "Media Handling" "Dates" "Earliest/Single Year" field is not cut off
+      And enters "9999" in the "Media Handling" field
+      And enters "9999" in the "Dates" field
+      And enters "9999" in the "Earliest/Single Year" field
+    Then "9999" in "Media Handling" field is not cut off
+    Then "9999" in "Dates" field is not cut off
+    Then "9999" in "Earliest/Single Year" field is not cut off
       And clicks in "Era" column in "Media Handling" "Dates" "Earliest/Single Date" row
     Then a drop down list should appear in the "Media Handling" "Dates" "Earliest/Single Date" row
       And selects "BCE" from dropdown in "Media Handling" "Dates" "Earliest/Single Date" row
@@ -213,10 +263,15 @@ Feature: Structured Dates Formatting
       And selects the "Organization" radio button on the Create New page
       And clicks on the Create button
     Then the titlebar should contain "Organization" 
-      And enters "1" in the "Organization" "Foundation date" field
+      And enters "1" in the "Organization" field
+      And enters "1" in the "Foundation date" field
     Then the structured date popup should appear
-      And enters "9999" in the "Organization" "Foundation date" "Earliest/Single Year" field
-    Then "9999" in "Organization" "Foundation date" "Earliest/Single Year" field is not cut off
+      And enters "9999" in the "Organization" field
+      And enters "9999" in the "Foundation date" field
+      And enters "9999" in the "Earliest/Single Year" field
+    Then "9999" in "Organization" field is not cut off
+    Then "9999" in "Foundation date" field is not cut off
+    Then "9999" in "Earliest/Single Year" field is not cut off
       And clicks in "Era" column in "Organization" "Foundation date" "Earliest/Single Date" row
     Then a drop down list should appear in the "Organization" "Foundation date" "Earliest/Single Date" row
       And selects "BCE" from dropdown in "Organization" "Foundation date" "Earliest/Single Date" row
@@ -238,10 +293,15 @@ Feature: Structured Dates Formatting
       And selects the "Organization" radio button on the Create New page
       And clicks on the Create button
     Then the titlebar should contain "Organization" 
-      And enters "1" in the "Organization" "Dissolution date" field
+      And enters "1" in the "Organization" field
+      And enters "1" in the "Dissolution date" field
     Then the structured date popup should appear
-      And enters "9999" in the "Organization" "Dissolution date" "Earliest/Single Year" field
-    Then "9999" in "Organization" "Dissolution date" "Earliest/Single Year" field is not cut off
+      And enters "9999" in the "Organization" field
+      And enters "9999" in the "Dissolution date" field
+      And enters "9999" in the "Earliest/Single Year" field
+    Then "9999" in "Organization" field is not cut off
+    Then "9999" in "Dissolution date" field is not cut off
+    Then "9999" in "Earliest/Single Year" field is not cut off
       And clicks in "Era" column in "Organization" "Dissolution date" "Earliest/Single Date" row
     Then a drop down list should appear in the "Organization" "Dissolution date" "Earliest/Single Date" row
       And selects "BCE" from dropdown in "Organization" "Dissolution date" "Earliest/Single Date" row
@@ -263,10 +323,15 @@ Feature: Structured Dates Formatting
       And selects the "Person" radio button on the Create New page
       And clicks on the Create button
     Then the titlebar should contain "Person" 
-      And enters "1" in the "Person" "Birth date" field
+      And enters "1" in the "Person" field
+      And enters "1" in the "Birth date" field
     Then the structured date popup should appear
-      And enters "9999" in the "Person" "Birth date" "Earliest/Single Year" field
-    Then "9999" in "Person" "Birth date" "Earliest/Single Year" field is not cut off
+      And enters "9999" in the "Person" field
+      And enters "9999" in the "Birth date" field
+      And enters "9999" in the "Earliest/Single Year" field
+    Then "9999" in "Person" field is not cut off
+    Then "9999" in "Birth date" field is not cut off
+    Then "9999" in "Earliest/Single Year" field is not cut off
       And clicks in "Era" column in "Person" "Birth date" "Earliest/Single Date" row
     Then a drop down list should appear in the "Person" "Birth date" "Earliest/Single Date" row
       And selects "BCE" from dropdown in "Person" "Birth date" "Earliest/Single Date" row
@@ -288,10 +353,15 @@ Feature: Structured Dates Formatting
       And selects the "Person" radio button on the Create New page
       And clicks on the Create button
     Then the titlebar should contain "Person" 
-      And enters "1" in the "Person" "Death date" field
+      And enters "1" in the "Person" field
+      And enters "1" in the "Death date" field
     Then the structured date popup should appear
-      And enters "9999" in the "Person" "Death date" "Earliest/Single Year" field
-    Then "9999" in "Person" "Death date" "Earliest/Single Year" field is not cut off
+      And enters "9999" in the "Person" field
+      And enters "9999" in the "Death date" field
+      And enters "9999" in the "Earliest/Single Year" field
+    Then "9999" in "Person" field is not cut off
+    Then "9999" in "Death date" field is not cut off
+    Then "9999" in "Earliest/Single Year" field is not cut off
       And clicks in "Era" column in "Person" "Death date" "Earliest/Single Date" row
     Then a drop down list should appear in the "Person" "Death date" "Earliest/Single Date" row
       And selects "BCE" from dropdown in "Person" "Death date" "Earliest/Single Date" row
@@ -315,8 +385,12 @@ Feature: Structured Dates Formatting
     Then the titlebar should contain "Work" 
       And enters "1" in the "Work" "Work date" field
     Then the structured date popup should appear
-      And enters "9999" in the "Work" "Work date" "Earliest/Single Year" field
-    Then "9999" in "Work" "Work date" "Earliest/Single Year" field is not cut off
+      And enters "9999" in the "Work" field
+      And enters "9999" in the "Work date" field
+      And enters "9999" in the "Earliest/Single Year" field
+    Then "9999" in "Work" field is not cut off
+    Then "9999" in "Work date" field is not cut off
+    Then "9999" in "Earliest/Single Year" field is not cut off
       And clicks in "Era" column in "Work" "Work date" "Earliest/Single Date" row
     Then a drop down list should appear in the "Work" "Work date" "Earliest/Single Date" row
       And selects "BCE" from dropdown in "Work" "Work date" "Earliest/Single Date" row

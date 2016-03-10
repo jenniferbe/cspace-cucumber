@@ -113,7 +113,7 @@ Feature: Location/Movement/Inventory Control Tab
 
         And selects the "Current Record" tab
         Then a leave confirmation dialog should appear
-        And clicks the save button
+        And clicks on the "Save" button
 
         And selects the "Location/Movement/Inventory" tab 
         Then "CQA113.4" should appear in the "Related Location/Movement/Inventory Records" area 
@@ -154,7 +154,7 @@ Feature: Location/Movement/Inventory Control Tab
         And enters "CQA113.2" in the "Current Location" field
         And selects "CQA113.2" from the drop down options 
 
-        And clicks the "save" button 
+        And clicks on the "Save" button 
         Then the "cancel changes" button at the "top" of the page "should not" be clickable 
         Then the "cancel changes" button at the "bottom" of the page "should not" be clickable 
    
@@ -304,19 +304,19 @@ Feature: Location/Movement/Inventory Control Tab
 
         And saves the record
         And clicks the "Delete Relation" button on the row that reads "CQA113.7"
-        Then delete confirmation dialog should appear
+        Then a delete confirmation dialog should appear
         And clicks cancel button
         Then the dialog should be dismissed 
         Then no changes should occur 
 
         And clicks the "Delete Relation" button on the row that reads "CQA113.7"
-        Then delete confirmation dialog should appear
+        Then a delete confirmation dialog should appear
         And clicks the "close" button
         Then the dialog should be dismissed
         Then no changes should occur 
 
         And clicks the "Delete Relation" button on the row that reads "CQA113.7"
-        Then delete confirmation dialog should appear
+        Then a delete confirmation dialog should appear
         And clicks on the delete button 
 
         Then "CQA113.7" should not appear in the "Procedures" area

@@ -107,7 +107,7 @@ Feature: #Enter feature name here
         And clicks on the Create button
         And enters "CQA99.4" in the "Identification Number" field 
         And selects the "Current Record" tab
-        And clicks the "save" button
+        And clicks on the "Save" button
 
         And selects the "Cataloging" tab 
         Then "CQA99.4" should appear in the "Related Cataloging Records" area 
@@ -139,7 +139,7 @@ Feature: #Enter feature name here
 
         # Variation B
         And enters "CQA99.5" in the "Identification Number" field
-        And clicks the "save" button 
+        And clicks on the "Save" button 
         Then the "cancel changes" button at the "top" of the page "should not" be clickable 
         Then the "cancel changes" button at the "bottom" of the page "should not" be clickable 
    
@@ -921,19 +921,19 @@ Feature: #Enter feature name here
         And saves the record
         
         And clicks the "Delete Relation" button on the row that reads "CQA99.7"
-        Then delete confirmation dialog should appear 
+        Then a delete confirmation dialog should appear 
         And clicks cancel button
         Then the dialog should be dismissed
         Then the "Related Cataloging Records" area should contain "CQA99.7"
 
         And clicks the "Delete Relation" button on the row that reads "CQA99.7"
-        Then delete confirmation dialog should appear
+        Then a delete confirmation dialog should appear
         And clicks the "close" button
         Then the dialog should be dismissed
         Then the "Related Cataloging Records" area should contain "CQA99.7"
 
         And clicks the "Delete Relation" button on the row that reads "CQA99.7"
-        Then delete confirmation dialog should appear
+        Then a delete confirmation dialog should appear
         And clicks on the delete button 
 
         Then "CQA99.7" should not appear in the "Procedures" area

@@ -43,12 +43,12 @@ Feature: Numeric Fields - QA Test Plan
   Scenario: User Tests Invalid Integer Field Inputs
       And enters "123.0" in the "Cataloging" "Number of Objects" field 
       And saves the record
-    Then the error message bar should appear with "Number of Objects: The number you have entered is invalid. Please try again."
+    Then the message "Number of Objects: The number you have entered is invalid. Please try again." should appear
       And enters "1abc" in the "Cataloging" "Number of Objects" field 
       And saves the record
-    Then the error message bar should appear with "Number of Objects: The number you have entered is invalid. Please try again."
+    Then the message "Number of Objects: The number you have entered is invalid. Please try again." should appear
       And saves the record
-    Then the error message bar should appear with "Number of Objects: The number you have entered is invalid. Please try again."
+    Then the message "Number of Objects: The number you have entered is invalid. Please try again." should appear
 
 
   Scenario: User Tests Valid Integer Field Inputs
@@ -66,7 +66,7 @@ Feature: Numeric Fields - QA Test Plan
   Scenario: User Tests Multiple Invalid Fields
       And enters "123.0" in the "Cataloging" "Number of Objects" field 
       And saves the record
-    Then the error message bar should appear with  "Number of Objects: The number you have entered is invalid. Please try again."
+    Then the message "Number of Objects: The number you have entered is invalid. Please try again." should appear
       And enters "123.123.123" in the "Cataloging" "Price - value" field 
       And saves the record
     Then the error message bar should appear with "Number of Objects & Price - value: The number you have entered is invalid. Please try again."

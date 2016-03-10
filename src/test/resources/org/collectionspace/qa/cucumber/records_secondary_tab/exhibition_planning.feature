@@ -111,7 +111,7 @@ Feature: Exhibition Planning Tab
         And clicks on the Create button
         And enters "CQA105.4" in the "Exhibition Number" field 
         And selects the "Current Record" tab
-        And clicks the "save" button
+        And clicks on the "Save" button
 
         And selects the "Exhibition" tab 
         Then "CQA105.4" should appear in the "Related Exhibition Records" area 
@@ -142,7 +142,7 @@ Feature: Exhibition Planning Tab
 
         # Variation B
         And enters "CQA105.5" in the "Exhibition Number" field
-        And clicks the "save" button 
+        And clicks on the "Save" button 
         Then the "cancel changes" button at the "top" of the page "should not" be clickable 
         Then the "cancel changes" button at the "bottom" of the page "should not" be clickable 
    
@@ -384,20 +384,20 @@ Feature: Exhibition Planning Tab
         And saves the record
         
         And clicks the "Delete Relation" button on the row that reads "CQA105.7"
-        Then delete confirmation dialog should appear
+        Then a delete confirmation dialog should appear
         And clicks cancel button
         Then the dialog should be dismissed
         Then the "Related Exhibition Records" area should contain "CQA105.7"
 
         And clicks the "Delete Relation" button on the row that reads "CQA105.7"
-        Then delete confirmation dialog should appear
+        Then a delete confirmation dialog should appear
         And clicks the "close" button
         Then the dialog should be dismissed
         Then the "Related Exhibition Records" area should contain "CQA105.7"
 
 
         And clicks the "Delete Relation" button on the row that reads "CQA105.7"
-        Then delete confirmation dialog should appear
+        Then a delete confirmation dialog should appear
         And clicks on the delete button 
 
         Then "CQA105.7" should not appear in the "Procedures" area
@@ -474,7 +474,7 @@ Feature: Exhibition Planning Tab
 	    And presses the "Tab" key until reaching the text field containing "CQA105.9"  
 	    Then the text field "should" be clickable   
 
-	    And selects "Exhibition" from the top nav search record type select field # And using the top right search area, select Exhibition from the drop down
+	    And selects "Exhibition" from the top nav search record type select field
 	    And enters "CQA105.9" in the top nav search field
 	    Then the search results should contain "CQA105.9"
 	    And clicks on result with text "CQA105.9"

@@ -25,7 +25,7 @@ Feature: Navigating between Primary and Secondary Tabs
       And enters "15" in the "Cataloging" "Number of Objects" field
       And selects the "Acquisition" tab
     Then a dialog asking to save changes should appear
-      And clicks the "Save" button
+      And clicks on the "Save" button
       And selects the "Current Record" tab
     Then "15" should be in the "Cataloging" "Number of Objects" field
     Then close the record
@@ -51,7 +51,7 @@ Feature: Navigating between Primary and Secondary Tabs
       And enters "16" in the "Cataloging" "Number of Objects" field
       And selects the "Cataloging" tab
     Then a dialog asking to save changes should appear
-      And clicks the "Save" button
+      And clicks on the "Save" button
       And selects the "Current Record" tab
     Then "16" should be in the "Cataloging" "Number of Objects" field
     Then close the record
@@ -76,7 +76,7 @@ Feature: Navigating between Primary and Secondary Tabs
       And enters "17" in the "Cataloging" "Number of Objects" field
       And selects the "Condition" tab
     Then a dialog asking to save changes should appear
-      And clicks the "Save" button
+      And clicks on the "Save" button
       And selects the "Current Record" tab
     Then "17" should be in the "Cataloging" "Number of Objects" field
     Then close the record
@@ -101,7 +101,7 @@ Feature: Navigating between Primary and Secondary Tabs
       And enters "18" in the "Cataloging" "Number of Objects" field
       And selects the "Exhibition" tab
     Then a dialog asking to save changes should appear
-      And clicks the "Save" button
+      And clicks on the "Save" button
       And selects the "Current Record" tab
     Then "18" should be in the "Cataloging" "Number of Objects" field
     Then close the record
@@ -126,7 +126,7 @@ Feature: Navigating between Primary and Secondary Tabs
       And enters "19" in the "Cataloging" "Number of Objects" field
       And selects the "Intake" tab
     Then a dialog asking to save changes should appear
-      And clicks the "Save" button
+      And clicks on the "Save" button
       And selects the "Current Record" tab
     Then "19" should be in the "Cataloging" "Number of Objects" field
     Then close the record
@@ -151,7 +151,7 @@ Feature: Navigating between Primary and Secondary Tabs
       And enters "20" in the "Cataloging" "Number of Objects" field
       And selects the "Group" tab
     Then a dialog asking to save changes should appear
-      And clicks the "Save" button
+      And clicks on the "Save" button
       And selects the "Current Record" tab
     Then "20" should be in the "Cataloging" "Number of Objects" field
     Then close the record
@@ -176,7 +176,7 @@ Feature: Navigating between Primary and Secondary Tabs
       And enters "21" in the "Cataloging" "Number of Objects" field
       And selects the "Loan In" tab
     Then a dialog asking to save changes should appear
-      And clicks the "Save" button
+      And clicks on the "Save" button
       And selects the "Current Record" tab
     Then "21" should be in the "Cataloging" "Number of Objects" field
     Then close the record
@@ -201,7 +201,7 @@ Feature: Navigating between Primary and Secondary Tabs
       And enters "22" in the "Cataloging" "Number of Objects" field
       And selects the "Loan Out" tab
     Then a dialog asking to save changes should appear
-      And clicks the "Save" button
+      And clicks on the "Save" button
       And selects the "Current Record" tab
     Then "22" should be in the "Cataloging" "Number of Objects" field
     Then close the record
@@ -226,7 +226,7 @@ Feature: Navigating between Primary and Secondary Tabs
       And enters "23" in the "Cataloging" "Number of Objects" field
       And selects the "Media Handling" tab
     Then a dialog asking to save changes should appear
-      And clicks the "Save" button
+      And clicks on the "Save" button
       And selects the "Current Record" tab
     Then "23" should be in the "Cataloging" "Number of Objects" field
     Then close the record
@@ -251,7 +251,7 @@ Feature: Navigating between Primary and Secondary Tabs
       And enters "24" in the "Cataloging" "Number of Objects" field
       And selects the "Loc/Mov/Inv" tab
     Then a dialog asking to save changes should appear
-      And clicks the "Save" button
+      And clicks on the "Save" button
       And selects the "Current Record" tab
     Then "24" should be in the "Cataloging" "Number of Objects" field
     Then close the record
@@ -276,7 +276,7 @@ Feature: Navigating between Primary and Secondary Tabs
       And enters "25" in the "Cataloging" "Number of Objects" field
       And selects the "Object Exit" tab
     Then a dialog asking to save changes should appear
-      And clicks the "Save" button
+      And clicks on the "Save" button
       And selects the "Current Record" tab
     Then "25" should be in the "Cataloging" "Number of Objects" field
     Then close the record
@@ -301,7 +301,7 @@ Feature: Navigating between Primary and Secondary Tabs
       And enters "26" in the "Cataloging" "Number of Objects" field
       And selects the "Valuation" tab
     Then a dialog asking to save changes should appear
-      And clicks the "Save" button
+      And clicks on the "Save" button
       And selects the "Current Record" tab
     Then "26" should be in the "Cataloging" "Number of Objects" field
     Then close the record
