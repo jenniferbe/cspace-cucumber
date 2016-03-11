@@ -237,7 +237,7 @@ Feature: Exhibition Page Testing
     Given user is on the "Create New" page
       And selects the "Exhibition" radio button on the Create New page
       And clicks on the Create button
-      presses the "Tab" key #until reaching the "Sponsor" field
+      And presses the "Tab" key #until reaching the "Sponsor" field
       And enters "James" in the "Sponsor" field #possibly incorrect
     
       And close the browser

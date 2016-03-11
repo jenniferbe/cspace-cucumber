@@ -235,7 +235,7 @@ Feature: Loan Out Page Testing
     Given user is on the "Create New" page
     And selects the "Loan Out" radio button on the Create New page
     And clicks on the Create button
-    presses the "Tab" key
+    And presses the "Tab" key
     # Then #the first field should be accessable
     When #user repeats pressing "Tab" on all repeatable fields
     # Then #all fields should be accessable
@@ -247,7 +247,7 @@ Feature: Loan Out Page Testing
     Given user is on the "Create New" page
     And selects the "Loan Out" radio button on the Create New page
     And clicks on the Create button
-    presses the "Tab" key #until reaching the "Borrower" field
+    And presses the "Tab" key #until reaching the "Borrower" field
     And enters "James" in the "Borrower" field #possibly incorrect
     
     And close the browser
