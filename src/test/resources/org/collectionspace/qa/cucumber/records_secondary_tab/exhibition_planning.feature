@@ -457,31 +457,3 @@ Feature: Exhibition Planning Tab
         And clicks on the delete button 
         Then the deletion should be confirmed in a dialog
         Then close the browser 
-
-	Scenario: Testing functional Accessibility #31
-	    Given user is in the "My CollectionSpace" page
-	    And navigates to the record with identification number "CQA105_NE"
-	    And selects the "Exhibition" tab 
-
-	    And presses the "Tab" key until reaching the "Add record" button
-	    And presses the "Enter" key
-	    And presses the "Tab" key until reaching the "Create" button
-	    And presses the "Enter" key  
-	    And presses the "Tab" key until reaching the "Run" button
-	    Then everything should have been clickable  
-	    And enters "CQA105.9" in the "Exhibition Number" field
-	    And saves the record
-	    And presses the "Tab" key until reaching the text field containing "CQA105.9"  
-	    Then the text field "should" be clickable   
-
-	    And selects "Exhibition" from the top nav search record type select field
-	    And enters "CQA105.9" in the top nav search field
-	    Then the search results should contain "CQA105.9"
-	    And clicks on result with text "CQA105.9"
-	    Then "CQA105.9" should be in the "Identification Number" field
-	    And clicks on the delete button 
-
-	    Then a delete confirmation dialog should appear  
-	    And clicks on the delete button 
-	    Then the deletion should be confirmed in a dialog
-	    Then close the browser 

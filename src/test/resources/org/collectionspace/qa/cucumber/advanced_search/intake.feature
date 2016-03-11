@@ -218,7 +218,7 @@ Feature: Advanced Search - Intake
     Then the titlebar should contain "Advanced Search"
       And selects "Intake" from record type dropdown
       And selects "any (OR)" from the "Field-based Search" drop down
-      And enters "testtest" in the keyword search field
+      And enters "testtest" in the "keyword search" field
       And enters "Jane Doe" in the "Advanced Search" "Current Owner" vocab field
       And clicks on "Jane Doe" from autocomplete options
       And clicks on the "Advanced Search" "Entry Reason" field
@@ -232,7 +232,7 @@ Feature: Advanced Search - Intake
     Then the titlebar should contain "Advanced Search"
       And selects "Intake" from record type dropdown
       And selects "all (AND)" from the "Field-based Search" drop down
-      And enters "testtest" in the keyword search field
+      And enters "testtest" in the "keyword search" field
       And enters "Jane Doe" in the "Advanced Search" "Current Owner" vocab field
       And clicks on "Jane Doe" from autocomplete options
       And clicks on the "Advanced Search" "Entry Reason" field

@@ -141,7 +141,7 @@ Feature: Advanced Search - Loans In
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Loan In" from record type dropdown
-      And selects "any (OR)" from boolean dropdown
+      And selects "any (OR)" from the "Field-based Search" drop down
       And enters "2001-01-01" in the "Advanced Search" "Loan In Date" "Earliest" field
       And enters "2001-01-01" in the "Advanced Search" "Loan In Date" "Latest" field
       And clicks on the "Advanced Search" "Loan Purpose" field
@@ -155,7 +155,7 @@ Feature: Advanced Search - Loans In
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Loan In" from record type dropdown
-      And selects "all (AND)" from boolean dropdown
+      And selects "all (AND)" from the "Field-based Search" drop down
       And enters "2001-01-01" in the "Advanced Search" "Loan In Date" "Earliest" field
       And enters "2001-01-01" in the "Advanced Search" "Loan In Date" "Latest" field
       And clicks on the "Advanced Search" "Loan Purpose" field
@@ -172,7 +172,7 @@ Feature: Advanced Search - Loans In
     Given user is on the "My Collectionspace" page
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
-      And enters "testtest" in the keyword search field
+      And enters "testtest" in the "keyword search" field
       And clicks the "Search button" 
     Then the search results should contain "textbook2"
     Then the search results should contain "textbook3"
@@ -180,9 +180,9 @@ Feature: Advanced Search - Loans In
     Given user is on the "My Collectionspace" page
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
-      And enters "testtest" in the keyword search field
+      And enters "testtest" in the "keyword search" field
       And selects "Loan In" from record type dropdown
-      And selects "any (OR)" from boolean dropdown
+      And selects "any (OR)" from the "Field-based Search" drop down
       And enters "2001-01-01" in the "Advanced Search" "Loan In Date" "Earliest" field
       And enters "2001-01-01" in the "Advanced Search" "Loan In Date" "Latest" field
       And clicks on the "Advanced Search" "Loan Purpose" field
@@ -195,9 +195,9 @@ Feature: Advanced Search - Loans In
     Given user is on the "My Collectionspace" page
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
-      And enters "testtest" in the keyword search field
+      And enters "testtest" in the "keyword search" field
       And selects "Loan In" from record type dropdown
-      And selects "all (AND)" from boolean dropdown
+      And selects "all (AND)" from the "Field-based Search" drop down
       And enters "2001-01-01" in the "Advanced Search" "Loan In Date" "Earliest" field
       And enters "2001-01-01" in the "Advanced Search" "Loan In Date" "Latest" field
       And clicks on the "Advanced Search" "Loan Purpose" field

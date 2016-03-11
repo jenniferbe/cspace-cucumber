@@ -23,7 +23,7 @@ Feature: Intake Tab
 
     And clicks the "Add record" button
     And presses the "ESC" key 
-    Then no changes to the record will occur 
+    Then no changes to the record should occur 
 
   #Test 5 Scenario: Trying to add search for and add multiple intake records
     And clicks the "Add record" button 

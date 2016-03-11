@@ -23,7 +23,7 @@ Feature: Advanced_Search - Extras
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Object Exit" from record type dropdown
-      And enters "Goodbye" in the keyword search field
+      And enters "Goodbye" in the "keyword search" field
       And clicks the "Search" button
     Then the search results should contain "Remember me 1234"
       And clicks the "Edit existing advanced search" button

@@ -140,7 +140,7 @@ Feature: Search Results and Pagination
           And clicks on "James Fanboy" from autocomplete options
       Given user is on the "Find and Edit" page
   # No stepdef
-          And enters "James Fanboy" in the search field
+          And enters "James Fanboy" in the "search" field
   # No stepdef
       Then the search results should contain "6677"
   # No stepdef

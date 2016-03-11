@@ -200,7 +200,7 @@ Feature: Advanced Search - Loans Out
     Given user is on the "My Collectionspace" page
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
-      And enters "testtest" in the keyword search field
+      And enters "testtest" in the "keyword search" field
       And selects "Loan Out" from record type dropdown
       And selects "any (OR)" from the "Field-based Search" drop down
       And enters "John Doe" in the "Advanced Search" "Borrower" vocab field
@@ -214,7 +214,7 @@ Feature: Advanced Search - Loans Out
     Then the search results should not contain "exampleexampleexample"
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
-      And enters "testtest" in the keyword search field
+      And enters "testtest" in the "keyword search" field
       And selects "Loan Out" from record type dropdown
       And selects "all (AND)" from the "Field-based Search" drop down
       And enters "John Doe" in the "Advanced Search" "Borrower" vocab field

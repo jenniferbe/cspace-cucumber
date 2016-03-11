@@ -208,7 +208,7 @@ Feature: Advanced Search - Person
     Then the titlebar should contain "Advanced Search"
       And selects "Person" from record type dropdown
       And selects "any (OR)" from the "Field-based Search" drop down
-      And enters "testtest" in the keyword search field
+      And enters "testtest" in the "keyword search" field
       And enters "1975-06-05" in the "Advanced Search" "Birth Date" field
       And clicks on the "Advanced Search" "Gender" field
     Then a drop down list should appear in the "Gender" row
@@ -221,7 +221,7 @@ Feature: Advanced Search - Person
     Then the titlebar should contain "Advanced Search"
       And selects "Person" from record type dropdown
       And selects "all (AND)" from the "Field-based Search" drop down
-      And enters "textbook" in the keyword search field
+      And enters "textbook" in the "keyword search" field
       And enters "1975-06-05" in the "Advanced Search" "Birth Date" field
       And clicks on the "Advanced Search" "Gender" field
     Then a drop down list should appear in the "Gender" row

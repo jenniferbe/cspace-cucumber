@@ -172,7 +172,7 @@ Feature: Advanced Search - Object Exit
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Object Exit" from record type dropdown
-      And selects "any (OR)" from boolean dropdown
+      And selects "any (OR)" from the "Field-based Search" drop down
       And enters "Jane Doe" in the "Advanced Search" "Current Owner" vocab field
       And clicks on "Jane Doe" from autocomplete options
       And clicks on the "Advanced Search" "Exit Reason" field
@@ -185,7 +185,7 @@ Feature: Advanced Search - Object Exit
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Object Exit" from record type dropdown
-      And selects "all (AND)" from boolean dropdown
+      And selects "all (AND)" from the "Field-based Search" drop down
       And enters "Jane Doe" in the "Advanced Search" "Current Owner" vocab field
       And clicks on "Jane Doe" from autocomplete options
       And clicks on the "Advanced Search" "Exit Reason" field
@@ -204,7 +204,7 @@ Feature: Advanced Search - Object Exit
     Then the titlebar should contain "Advanced Search"
       And selects "Object Exit" from record type dropdown
       And selects "any (OR)" from record type dropdown
-      And enters "testtest" in the keyword search field
+      And enters "testtest" in the "keyword search" field
       And enters "Jane Doe" in the "Advanced Search" "Current Owner" vocab field
       And clicks on "Jane Doe" from autocomplete options
       And clicks on the "Advanced Search" "Exit Reason" field
@@ -218,7 +218,7 @@ Feature: Advanced Search - Object Exit
     Then the titlebar should contain "Advanced Search" 
       And selects "Object Exit" from record type dropdown
       And selects "and (ALL)" from record type dropdown
-      And enters "testtest" in the keyword search field
+      And enters "testtest" in the "keyword search" field
       And enters "Jane Doe" in the "Advanced Search" "Current Owner" vocab field
       And clicks on "Jane Doe" from autocomplete options
       And clicks the "Advanced Search" "Exit Reason" field
@@ -234,7 +234,7 @@ Feature: Advanced Search - Object Exit
   Scenario: Structured Date Search
     Given user is on the "Create New" page
       And selects the "Object Exit" radio button on the Create New page
-      And fills in all the fields of the "Object Exit" record
+      And fills out required fields
       And enters "Lovehoneybear" in the "Object Exit" "Exit Number" field
       And enters "1987" in the "Object Exit" "Exit Date" "Earliest/Single Year" field
       And enters "6" in the "Object Exit" "Exit Date" "Earliest/Single Month" field

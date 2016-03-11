@@ -307,13 +307,13 @@ Feature: Location/Movement/Inventory Control Tab
         Then a delete confirmation dialog should appear
         And clicks cancel button
         Then the dialog should be dismissed 
-        Then no changes should occur 
+        Then no changes to the record should occur 
 
         And clicks the "Delete Relation" button on the row that reads "CQA113.7"
         Then a delete confirmation dialog should appear
         And clicks the "close" button
         Then the dialog should be dismissed
-        Then no changes should occur 
+        Then no changes to the record should occur 
 
         And clicks the "Delete Relation" button on the row that reads "CQA113.7"
         Then a delete confirmation dialog should appear

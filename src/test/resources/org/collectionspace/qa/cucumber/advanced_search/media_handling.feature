@@ -235,7 +235,7 @@ Feature: Advanced Search - Media Handling
     Given user is on the "My Collectionspace" page
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
-      And enters "testtest" in the keyword search field
+      And enters "testtest" in the "keyword search" field
       And selects "Media Handling" from record type dropdown
       And selects "all (AND)" from the "Field-based Search" drop down
       And enters "Jane Doe" in the "Advanced Search" "Creator" vocab field
@@ -248,7 +248,7 @@ Feature: Advanced Search - Media Handling
     Then the search results should contain "4245"
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
-      And enters "testtest" in the keyword search field
+      And enters "testtest" in the "keyword search" field
       And selects "Media Handling" from record type dropdown
       And enters "all (AND)" from boolean dropdown
       And enters "Jane Doe" in the "Advanced Search" "Creator" vocab field

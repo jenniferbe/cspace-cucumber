@@ -26,7 +26,7 @@ Feature: Intake Secondary Tab
     Then the "Cancel changes" button at the bottom of the record "should" be clickable
     Then the "Cancel changes" button at the top of the record "should" be clickable
     Then "Donnie" should be in the "Cataloging" "Intake Entry Number" field
-      And fills in all the fields of the "Intake" record
+      And fills out required fields
       And enters "Darko" in the "Cataloging" "Current Owner" vocab field
       And adds "Darko" to "Local Persons"
       And saves the record
@@ -54,7 +54,7 @@ Feature: Intake Secondary Tab
       And selects the "Intake" tab
       And clicks the "+ Add Record" button
       And presses the "Esc" key
-    Then no changes should occur
+    Then no changes to the record should occur
       And clicks the "+ Add Record" button
       And clicks the search button
     Then a list of records should appear

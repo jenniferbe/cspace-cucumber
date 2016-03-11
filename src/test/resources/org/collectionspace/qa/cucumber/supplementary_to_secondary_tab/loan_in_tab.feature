@@ -28,7 +28,7 @@ Feature: Loan In Secondary Tab
     Then the "Cancel changes" button at the "bottom" of the page "should" be clickable
     Then the "Delete this relation." button at the "top" of the page "should" be clickable
     Then the "Delete this relation." button at the "bottom" of the page "should" be clickable
-      And fills in all the fields of the "Loan In" record
+      And fills out required fields
       And saves the record
     Then the record entry should be displayed under "Related Loan In Records"
       And clicks the newly created record 
@@ -56,7 +56,7 @@ Feature: Loan In Secondary Tab
       And selects the "Loan In" tab
       And clicks the "+ Add Record" button
       And presses the "Esc" key
-    Then no changes should occur
+    Then no changes to the record should occur
       And clicks the "+ Add Record" button
       And clicks the search button
     Then a list of records should appear

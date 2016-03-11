@@ -134,7 +134,7 @@ Feature: User Management
 #         Select at least two roles for user
 #         Click delete
 #     Expected:
-#         The clicks on the delete button should be inactive and nothing should happen
+#         The clicks on the delete button should be inactive and no changes to the record should occur
 #     Actions:
 #         Click Save
 #     Expected:

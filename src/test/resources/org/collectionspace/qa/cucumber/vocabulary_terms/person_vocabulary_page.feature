@@ -66,7 +66,7 @@ Feature: Person Vocabulary Data Entry
   Scenario: Check that changes are not saved
     Given user is on a "Person" record
       And clicks on the "Cancel changes" button at the bottom of page
-    Then nothing should happen
+    Then no changes to the record should occur
     Then the "Cancel changes" button at top of page "should not" be clickable
     Then the "Cancel changes" button at the bottom of page "should not" be clickable
       And enters "revert this" in the "Display name" field
@@ -78,7 +78,7 @@ Feature: Person Vocabulary Data Entry
      And enters "Revertica Notica" in the "Display name" field
      And clicks on the "Save" button
      And clicks on the "Cancel changes" button at the bottom of page
-    Then nothing should happen
+    Then no changes to the record should occur
     Then the "Cancel changes" button at top of page "should not" be clickable
     Then the "Cancel changes" button at the bottom of page "should not" be clickable
     Then close the browser
@@ -189,7 +189,7 @@ Feature: Person Vocabulary Data Entry
       And selects the "Loan In" radio button on the Create New page
       And clicks on the Create button
     Then the titlebar should contain "Loan In" 
-      And fills in all the fields of the "Loan In" record
+      And fills out required fields
 #types vs enters for stepdef?
       And types "Mark" in the "Loan In" "Lender" field
     Then a drop down list should appear in the "Lender" row
@@ -223,7 +223,7 @@ Feature: Person Vocabulary Data Entry
       And selects the "Loan In" radio button on the Create New page
       And clicks on the Create button
     Then the titlebar should contain "Loan In" 
-      And fills in all the fields of the "Loan In" record
+      And fills out required fields
 #types vs enters for stepdef?
       And types "Mark" in the "Loan In" "Lender" field
     Then a drop down list should appear in the "Lender" row

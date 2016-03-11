@@ -192,11 +192,11 @@ Scenario: Deletion of Record
     Then a dialog should appear asking you to delete this record and its relationships
     And clicks cancel button
     Then the "Dialog" should be dismissed
-    Then no other changes should occur.
+    Then no changes to the record should occur
     And clicks on the delete button
     And clicks on the "close" button
     Then "Dialog" should be dismissed
-    Then no other changes should occur.
+    Then no changes to the record should occur
     And clicks on the delete button
     Then the message "Find and Edit" should be displayed
     And selects Object from the drop down

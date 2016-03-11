@@ -52,7 +52,7 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory Secondary Tab
       And enters "Dummy Location" in the "Location/Movement/Inventory" "Current Location" vocab field
     Then the vocabulary autocomplete should contain "Dummy Location"
       And clicks on "Dummy Location" from autocomplete options
-      And fills in all the fields of the "Location/Movement/Inventory" record
+      And fills out required fields
       And saves the record
   # Not a known stepdef
     Then the record listing should contain the entry
