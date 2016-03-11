@@ -94,7 +94,7 @@ public class StepDefs {
         wait.until(visibilityOfElementLocated(By.className("saveButton")));
     }
 
-    @And("^user enters \"([^\"]*)\" in the \"([^\"]*)\" \"([^\"]*)\" field$")
+    @And("^(?:the )?(?:user )?enters \"([^\"]*)\" in the \"([^\"]*)\" \"([^\"]*)\" field$")
     public void user_enters_in_the_field(String value, String recordType , String fieldName) throws Throwable {
         record = loadRecordOfType(recordType);
         String selector = record.getFieldSelectorByLabel(fieldName);
