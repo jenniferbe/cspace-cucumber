@@ -163,18 +163,18 @@ Feature: Condition Check Tab Test Plan
         And saves the record
         Then the message "Relation successfully created." should appear
 
-        And selects "Medium" from the "Object Audit Category" drop down box
-        And selects "Medium" from the "Conservation Treatment Priority" drop down box
+        And selects "Medium" from the "Object Audit Category" drop down
+        And selects "Medium" from the "Conservation Treatment Priority" drop down
         And enters "2016-01-01" in the "Next Condition Check/Assessment Date" field
-        And selects "Complete" from the "Completeness" drop down box
+        And selects "Complete" from the "Completeness" drop down
         And enters "2016-02-02" in the "Completeness Date" field  
         And enters "This is complete" in the "Completeness Note" field
 
-        And selects "Needs no work" from the "Condition" drop down box
+        And selects "Needs no work" from the "Condition" drop down
         And enters "2016-03-03" in the "Condition Date" field
         And enters "This needs no work" in the "Condition Note" field
         
-        And selects "Poisonous" from the "Hazard" drop down box
+        And selects "Poisonous" from the "Hazard" drop down
         And enters "2016-04-04" in the "Hazard Date" field
         And enters "This is Poisonous" in the "Hazard Note" field
         And enters "2016-05-05" in the "Environmental Condition Date" field
@@ -182,8 +182,8 @@ Feature: Condition Check Tab Test Plan
         And enters "2016-06-06" in the "Technical Assessment Date" field
         And enters "This needs no tech sssessment yay" in the "Technical Assessment Note" field
         And enters "2016-07-07" in the "Condition Check/Assessment Date" field
-        And selects "Observed" from the "Condition Check/Assessment Method" drop down box
-        And selects "Damaged in transit" from the "Condition Check/Assessment Reason" drop down box
+        And selects "Observed" from the "Condition Check/Assessment Method" drop down
+        And selects "Damaged in transit" from the "Condition Check/Assessment Reason" drop down
         And enters "Cesar Villalobos" in the "Condition Checker/Assessor" field
         And clicks on "Cesar Villalobos" from autocomplete options
         And enters "Note for \n CQA-103" in the "Condition Check/Assessment Note" field
@@ -248,18 +248,18 @@ Feature: Condition Check Tab Test Plan
 
         #### Test 13
 
-        And selects "High" from the "Object Audit Category" drop down box
-        And selects "High" from the "Conservation Treatment Priority" drop down box
+        And selects "High" from the "Object Audit Category" drop down
+        And selects "High" from the "Conservation Treatment Priority" drop down
         And enters "2017-01-01" in the "Next Condition Check/Assessment Date" field
-        And selects "Fragmented" from the "Completeness" drop down box
+        And selects "Fragmented" from the "Completeness" drop down
         And enters "2017-02-02" in the "Completeness Date" field  
         And enters "This is fragmented" in the "Completeness Note" field
 
-        And selects "In jeopardy" from the "Condition" drop down box
+        And selects "In jeopardy" from the "Condition" drop down
         And enters "2017-03-03" in the "Condition Date" field
         And enters "This In jeopardy" in the "Condition Note" field
         
-        And selects "Radioactive" from the "Hazard" drop down box
+        And selects "Radioactive" from the "Hazard" drop down
         And enters "2017-04-04" in the "Hazard Date" field
         And enters "This is Radioactive" in the "Hazard Note" field
         And enters "2017-05-05" in the "Environmental Condition Date" field
@@ -267,8 +267,8 @@ Feature: Condition Check Tab Test Plan
         And enters "2017-06-06" in the "Technical Assessment Date" field
         And enters "This needs no tech sssessment yay except it's radioactive" in the "Technical Assessment Note" field
         And enters "2017-07-07" in the "Condition Check/Assessment Date" field
-        And selects "X-Rayed" from the "Condition Check/Assessment Method" drop down box
-        And selects "Loan in" from the "Condition Check/Assessment Reason" drop down box
+        And selects "X-Rayed" from the "Condition Check/Assessment Method" drop down
+        And selects "Loan in" from the "Condition Check/Assessment Reason" drop down
         And enters "Jennifer Be" in the "Condition Checker/Assessor" field
         And clicks on "Jennifer Be" from autocomplete options
         And enters "Note for \n CQA-103 Test 13" in the "Condition Check/Assessment Note" field

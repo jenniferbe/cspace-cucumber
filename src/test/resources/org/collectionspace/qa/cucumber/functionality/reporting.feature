@@ -154,31 +154,3 @@ Feature: Reporting
     Then the "Run" button under "Run Report" should be disabled
     Then close the browser
 
-  # #Test15
-  # Scenario: Keyboard accessibility 
-  #    user is on the "My CollectionSpace" page
-  #      tabs to top nav search field
-  #      enters "10293847" in the top nav search field
-  #      tabs to top nav search submit button
-  #      presses the "Enter" key
-  #    the titlebar should contain "10293847"
-  #    the titlebar should contain "Acquisition" 
-  #      tabs to the dropdown under "Run Report"
-  #      presses the "Enter" key
-  #      uses arrow keys to select "Acquisition Summary (PDF)" from dropdown under "Run Report"
-  #      presses the "Enter" key
-  #      tabs to "Run" button under "Run Report"
-  #      presses the "Enter" key
-  #    a confirmation dialog should appear
-  #      tabs to the "Cancel" button in the confirmation dialog
-  #      presses the "Enter" key
-  #    the dialog should be dismissed
-  #      tabs to "Run" button under "Run Report"
-  #      presses the "Enter" key
-  #    a confirmation dialog should appear
-  #      tabs to the "Run" button in the confirmation dialog
-  #      presses the "Enter" key
-  #    a progress bar should appear
-  #    a browser dialog should appear
-  #    user should be able to view report using keyboard only
-  #    close the browser

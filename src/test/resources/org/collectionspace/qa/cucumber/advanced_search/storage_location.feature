@@ -186,7 +186,7 @@ Feature: Advanced Search - Storage Location
 	    And clicks the "Advanced search" button
 	  Then the titlebar should contain "Advanced Search"
 	    And selects "Storage Location" from record type dropdown
-	    And selects "any (OR)" from boolean dropdown
+	    And selects "any (OR)" from the "Field-based Search" drop down
 	    And enters "Top Shelf3" in the "Advanced Search" "Display Name" field
 	    And clicks on the "Advanced Search" "Term Status" field
 	  Then a drop down list should appear in the "Term Status" row
@@ -198,7 +198,7 @@ Feature: Advanced Search - Storage Location
 	    And clicks the "Advanced search" button
 	  Then the titlebar should contain "Advanced Search"
 	    And selects "Storage Location" from record type dropdown
-	    And selects "all (AND)" from boolean dropdown
+	    And selects "all (AND)" from the "Field-based Search" drop down
 	    And enters "Top Shelf3" in the "Advanced Search" "Display Name" field
 	    And clicks on the "Advanced Search" "Term Status" field
 	  Then a drop down list should appear in the "Term Status" row
@@ -215,7 +215,7 @@ Feature: Advanced Search - Storage Location
 	    And clicks the "Advanced search" button
 	  Then the titlebar should contain "Advanced Search"
 	    And selects "Storage Location" from record type dropdown
-	    And selects "any (OR)" from boolean dropdown
+	    And selects "any (OR)" from the "Field-based Search" drop down
 	    And enters "testtest" in the keyword search field
 	    And enters "Top Shelf3" in the "Advanced Search" "Display Name" field
 	    And clicks on the "Advanced Search" "Term Status" field
@@ -228,7 +228,7 @@ Feature: Advanced Search - Storage Location
 	    And clicks the "Advanced search" button
 	  Then the titlebar should contain "Advanced Search"
 	    And selects "Storage Location" from record type dropdown
-	    And selects "all (AND)" from boolean dropdown
+	    And selects "all (AND)" from the "Field-based Search" drop down
 	    And enters "testtest" in the keyword search field
 	    And clicks on the "Advanced Search" "Term Status" field
 	  Then a drop down list should appear in the "Term Status" row

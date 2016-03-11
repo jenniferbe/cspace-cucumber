@@ -172,7 +172,7 @@ Feature: Exhibition Planning Tab
       
 
         And enters "CQA105_Test_11" in the "Exhibition Title" field
-        And selects "Permanent" from the "Exhibition Type" drop down box
+        And selects "Permanent" from the "Exhibition Type" drop down
 
         And enters "CQA105_Room" in the "Venues" field
         And selects "CQA105_Room" from autocomplete options
@@ -188,7 +188,7 @@ Feature: Exhibition Planning Tab
         And selects "Cesar Villalobos" from autocomplete options
         And enters "Cesar Villalobos" in the "Person" field
         And selects "Cesar Villalobos" from autocomplete options
-        And selects "Curator" from the "Role" drop down box
+        And selects "Curator" from the "Role" drop down
         And enters "CQA-105 Planning Notes" in the "Planning Notes" field
         And enters "CQA-105 Curatorial Notes" in the "Curatorial Notes" field
         And enters "CQA-105 Boilerplate Text" in the "Boilerplate Text" field
@@ -199,13 +199,13 @@ Feature: Exhibition Planning Tab
         And enters "CQA105 Notes Field" in the "Notes" field
         And enters "Cesar Villalobos" in the "Reference" field
         And selects "Cesar Villalobos" from autocomplete options
-        And selects "Catalog" from the "Reference Type" drop down box
+        And selects "Catalog" from the "Reference Type" drop down
         And enters "CQA105 Ref Box" in the "Reference Note" field
         And enters "CQA105.11.3" in the "Section" field
         And enters "CQA105.11.4" in the "Location" field
         And enters "CQA105.11.5" in the "Objects" field
         And enters "CQA105.11.6" in the "Remarks" field
-        And selects "Labels written" from the "Status" drop down box
+        And selects "Labels written" from the "Status" drop down
         And enters "2016-05-05" in the "Status Date" field
         And enters "CQA105.11.6" in the "Remarks" field
         And enters "Yes" in the "Object" field
@@ -264,7 +264,7 @@ Feature: Exhibition Planning Tab
         ###Test 13
         
         And enters "CQA105_Test_11 Test 13" in the "Exhibition Title" field
-        And selects "Temporary" from the "Exhibition Type" drop down box
+        And selects "Temporary" from the "Exhibition Type" drop down
         And enters "CQA105_Room" in the "Venues" field
         And selects "CQA105_Room" from autocomplete options
         And enters "2017-01-01" in the "Opening Date" field
@@ -279,7 +279,7 @@ Feature: Exhibition Planning Tab
         And selects "Jennifer Be" from autocomplete options
         And enters "Jennifer Be" in the "Person" field
         And selects "Jennifer Be" from autocomplete options
-        And selects "Educator" from the "Role" drop down box
+        And selects "Educator" from the "Role" drop down
         And enters "CQA-105_13 Planning Notes" in the "Planning Notes" field
         And enters "CQA-105_13 Curatorial Notes" in the "Curatorial Notes" field
         And enters "CQA-105_13 Boilerplate Text" in the "Boilerplate Text" field
@@ -290,13 +290,13 @@ Feature: Exhibition Planning Tab
         And enters "CQA105 Notes Field 13" in the "Notes" field
         And enters "Jennifer Be" in the "Reference" field
         And selects "Jennifer Be" from autocomplete options
-        And selects "Catalog" from the "Reference Type" drop down box
+        And selects "Catalog" from the "Reference Type" drop down
         And enters "CQA105 Ref Box Test 13" in the "Reference Note" field
         And enters "CQA105.11.13.3" in the "Section" field
         And enters "CQA105.11.13.4" in the "Location" field
         And enters "CQA105.11.13.5" in the "Objects" field
         And enters "CQA105.11.13.6" in the "Remarks" field
-        And selects "Labels written" from the "Status" drop down box
+        And selects "Labels written" from the "Status" drop down
         And enters "2017-05-05" in the "Status Date" field
         And enters "CQA105.11.13.6" in the "Remarks" field
         And enters "No" in the "Object" field

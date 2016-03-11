@@ -228,27 +228,5 @@ Feature: Loan Out Page Testing
     Then the error message bar should appear with "Please save the record you are creating before trying to relate other records to it"
     And close the browser
 
-#Keyboard Navigation
 
-  #Incomplete
-  Scenario: All fields available via the keyboard
-    Given user is on the "Create New" page
-    And selects the "Loan Out" radio button on the Create New page
-    And clicks on the Create button
-    And presses the "Tab" key
-    # Then #the first field should be accessable
-    When #user repeats pressing "Tab" on all repeatable fields
-    # Then #all fields should be accessable
-    #Finish and add the other buttons that are special cases
-    And close the browser
-
-  #Incomplete
-  Scenario: Vocabulary Fields usable via keyboard only
-    Given user is on the "Create New" page
-    And selects the "Loan Out" radio button on the Create New page
-    And clicks on the Create button
-    And presses the "Tab" key #until reaching the "Borrower" field
-    And enters "James" in the "Borrower" field #possibly incorrect
-    
-    And close the browser
 

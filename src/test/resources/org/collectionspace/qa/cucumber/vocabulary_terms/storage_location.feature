@@ -108,7 +108,7 @@ Feature: Storage Location Authority Page
 #         Variation a:Create a new Storage Location record
 #         Variation b:Edit an existing Storage Location record (Search for a Storage Location you know exists, using the top right search area)
 #         Enter values into each of the fields in the record, based on the following:
-#             In the select boxes (drop down boxes), select something other than the first
+#             In the select boxes (drop downes), select something other than the first
 #             In the authority fields, either write something and add it using the small dialog that appears. Or write something and select from the options that appears. The authority fields are:
 #                 Source (Citation authority)
 #                 Location broader context (Storage location authority)

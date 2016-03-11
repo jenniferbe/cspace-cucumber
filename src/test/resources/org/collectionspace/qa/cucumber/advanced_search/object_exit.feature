@@ -172,7 +172,7 @@ Feature: Advanced Search - Object Exit
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Object Exit" from record type dropdown
-      And selects "any (OR)" from boolean dropdown
+      And selects "any (OR)" from the "Field-based Search" drop down
       And enters "Jane Doe" in the "Advanced Search" "Current Owner" vocab field
       And clicks on "Jane Doe" from autocomplete options
       And clicks on the "Advanced Search" "Exit Reason" field
@@ -185,7 +185,7 @@ Feature: Advanced Search - Object Exit
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Object Exit" from record type dropdown
-      And selects "all (AND)" from boolean dropdown
+      And selects "all (AND)" from the "Field-based Search" drop down
       And enters "Jane Doe" in the "Advanced Search" "Current Owner" vocab field
       And clicks on "Jane Doe" from autocomplete options
       And clicks on the "Advanced Search" "Exit Reason" field
@@ -236,47 +236,47 @@ Feature: Advanced Search - Object Exit
       And selects the "Object Exit" radio button on the Create New page
       And fills in all the fields of the "Object Exit" record
       And enters "Lovehoneybear" in the "Object Exit" "Exit Number" field
-      And enters "1987" in the "Object Exit" "Exit Date" "Earliest/Single Year" field
-      And enters "6" in the "Object Exit" "Exit Date" "Earliest/Single Month" field
-      And enters "5" in the "Object Exit" "Exit Date" "Earliest/Single Day" field
-      And enters "1993" in the "Object Exit" "Exit Date" "Latest Year" field
-      And enters "4" in the "Object Exit" "Exit Date" "Latest Month" field
-      And enters "19" in the "Object Exit" "Exit Date" "Latest Day" field
+      And enters "1987" in the "Object Exit" "Exit Date Earliest/Single Year" field
+      And enters "6" in the "Object Exit" "Exit Date Earliest/Single Month" field
+      And enters "5" in the "Object Exit" "Exit Date Earliest/Single Day" field
+      And enters "1993" in the "Object Exit" "Exit Date Latest Year" field
+      And enters "4" in the "Object Exit" "Exit Date Latest Month" field
+      And enters "19" in the "Object Exit" "Exit Date Latest Day" field
       And saves the record
     Then the record is successfully saved
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Object Exit" from record type dropdown
-      And enters "6-5-1986" in the "Advanced Search" "Exit Date" "Earliest/Single Date" field
-      And enters "6-7-1994" in the "Advanced Search" "Exit Date" "Latest Date" field
+      And enters "6-5-1986" in the "Advanced Search" "Earliest Exit Date" field
+      And enters "6-7-1994" in the "Advanced Search" "Latest Exit Date" field
       And clicks the "Search" button
     Then the search results should contain "Lovehoneybear"
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Object Exit" from record type dropdown
-      And enters "6-5-1987" in the "Advanced Search" "Exit Date" "Earliest/Single Date" field
-      And enters "4-19-1993" in the "Advanced Search" "Exit Date" "Latest Date" field
+      And enters "6-5-1987" in the "Advanced Search" "Earliest Exit Date" field
+      And enters "4-19-1993" in the "Advanced Search" "Latest Exit Date" field
       And clicks the "Search" button
     Then the search results should contain "Lovehoneybear"
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Object Exit" from record type dropdown
-      And enters "6-6-1987" in the "Advanced Search" "Exit Date" "Earliest/Single Date" field
-      And enters "4-20-1994" in the "Advanced Search" "Exit Date" "Latest Date" field
+      And enters "6-6-1987" in the "Advanced Search" "Earliest Exit Date" field
+      And enters "4-20-1994" in the "Advanced Search" "Latest Exit Date" field
       And clicks the "Search" button
     Then the search results should contain "Lovehoneybear"
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Object Exit" from record type dropdown
-      And enters "6-3-1987" in the "Advanced Search" "Exit Date" "Earliest/Single Date" field
-      And enters "6-4-1987" in the "Advanced Search" "Exit Date" "Latest Date" field
+      And enters "6-3-1987" in the "Advanced Search" "Earliest Exit Date" field
+      And enters "6-4-1987" in the "Advanced Search" "Latest Exit Date" field
       And clicks the "Search" button
     Then the search results should not contain "Lovehoneybear"
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Object Exit" from record type dropdown
-      And enters "4-21-1993" in the "Advanced Search" "Exit Date" "Earliest/Single Date" field
-      And enters "4-22-1993" in the "Advanced Search" "Exit Date" "Latest Date" field
+      And enters "4-21-1993" in the "Advanced Search" "Earliest Exit Date" field
+      And enters "4-22-1993" in the "Advanced Search" "Latest Exit Date" field
       And clicks the "Search" button
     Then the search results should not contain "Lovehoneybear"
     Then close the browser

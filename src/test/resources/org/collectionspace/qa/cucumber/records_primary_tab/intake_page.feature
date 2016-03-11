@@ -234,8 +234,3 @@ Feature: Intake Page Testing
     When user clicks on "Add" on the sidebar next to "Procedures"
     Then the error message bar should appear with "Please save the record you are creating before trying to relate other records to it"
 
-  ###Keyboard Navigation###
-
-  Scenario: All fields available via the keyboard
-
-  Scenario: Vocabulary Fields usable via keyboard only

@@ -108,7 +108,7 @@ Feature: Organization Vocabulary Page
 #         Variation a: Create a new Organization record
 #         Variation b: Edit an existing Organization record (Search for an Organization you know exists, using the top right search area)
 #         Fill out the entire record (except for the Hierarchy section at bottom) based on the following:
-#             In the select boxes (drop down boxes), select something other than the first
+#             In the select boxes (drop downes), select something other than the first
 #             In the authority fields, either write something and add it using the small dialog that appears. Or write something and select from the options that appears.
 #             In the text areas (multiline text fields), write multiline text.
 #             In the regular text areas write regular text

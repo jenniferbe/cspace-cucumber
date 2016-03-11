@@ -141,9 +141,9 @@ Feature: Advanced Search - Loans In
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Loan In" from record type dropdown
-      And selects "any (OR)" from boolean dropdown
-      And enters "2001-01-01" in the "Advanced Search" "Loan In Date" "Earliest" field
-      And enters "2001-01-01" in the "Advanced Search" "Loan In Date" "Latest" field
+      And selects "any (OR)" from the "Field-based Search" drop down
+      And enters "2001-01-01" in the "Advanced Search" "Earliest Loan In Date" field
+      And enters "2001-01-01" in the "Advanced Search" "Latest Loan In Date" field
       And clicks on the "Advanced Search" "Loan Purpose" field
     Then a drop down list should appear in the "Loan Purpose" row
       And selects "Research" from dropdown in "Loan Purpose" row
@@ -155,9 +155,9 @@ Feature: Advanced Search - Loans In
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Loan In" from record type dropdown
-      And selects "all (AND)" from boolean dropdown
-      And enters "2001-01-01" in the "Advanced Search" "Loan In Date" "Earliest" field
-      And enters "2001-01-01" in the "Advanced Search" "Loan In Date" "Latest" field
+      And selects "all (AND)" from the "Field-based Search" drop down
+      And enters "2001-01-01" in the "Advanced Search" "Earliest Loan In Date"  field
+      And enters "2001-01-01" in the "Advanced Search" "Latest Loan In Date" field
       And clicks on the "Advanced Search" "Loan Purpose" field
     Then a drop down list should appear in the "Loan Purpose" row
       And selects "Research" from dropdown in "Loan Purpose" row
@@ -182,9 +182,9 @@ Feature: Advanced Search - Loans In
     Then the titlebar should contain "Advanced Search"
       And enters "testtest" in the keyword search field
       And selects "Loan In" from record type dropdown
-      And selects "any (OR)" from boolean dropdown
-      And enters "2001-01-01" in the "Advanced Search" "Loan In Date" "Earliest" field
-      And enters "2001-01-01" in the "Advanced Search" "Loan In Date" "Latest" field
+      And selects "any (OR)" from the "Field-based Search" drop down
+      And enters "2001-01-01" in the "Advanced Search" "Earliest Loan In Date" field
+      And enters "2001-01-01" in the "Advanced Search" "Latest Loan In Date" field
       And clicks on the "Advanced Search" "Loan Purpose" field
     Then a drop down list should appear in the "Loan Purpose" row
       And selects "Research" from dropdown in "Loan Purpose" row
@@ -197,9 +197,9 @@ Feature: Advanced Search - Loans In
     Then the titlebar should contain "Advanced Search"
       And enters "testtest" in the keyword search field
       And selects "Loan In" from record type dropdown
-      And selects "all (AND)" from boolean dropdown
-      And enters "2001-01-01" in the "Advanced Search" "Loan In Date" "Earliest" field
-      And enters "2001-01-01" in the "Advanced Search" "Loan In Date" "Latest" field
+      And selects "all (AND)" from the "Field-based Search" drop down
+      And enters "2001-01-01" in the "Advanced Search" "Earliest Loan In Date" field
+      And enters "2001-01-01" in the "Advanced Search" "Latest Loan In Date" field
       And clicks on the "Advanced Search" "Loan Purpose" field
     Then a drop down list should appear in the "Loan Purpose" row
       And selects "Research" from dropdown in "Loan Purpose" row

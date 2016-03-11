@@ -11,13 +11,14 @@ Feature: Structured Dates Formatting
       And selects the "Cataloging" radio button on the Create New page
       And clicks on the Create button
     Then the titlebar should contain "Cataloging" 
-      And enters "1" in the "Cataloging" "Object Description Information" "Content" "Date" field
+      And enters "1" in the "Cataloging" "Object Description Information" field
+      And enters "1" in the "Content" field
+      And enters "1" in the "Date" field
     Then the structured date popup should appear
-      And enters "9999" in the "Cataloging" field
-      And enters "9999" in the "Object Description Information" field
-      And enters "9999" in the "Content" field
-      And enters "9999" in the "Date" field
-      And enters "9999" in the "Earliest/Single Year" field
+      And enters "9999" in the "Cataloging" "Object Description Information" field
+      And enters "9999" in the "Cataloging" "Content" field
+      And enters "9999" in the "Cataloging" "Date" field
+      And enters "9999" in the "Cataloging" "Earliest/Single Year" field
     Then "9999" in "Cataloging" field is not cut off
     Then "9999" in "Object Description Information" field is not cut off
     Then "9999" in "Content" field is not cut off
@@ -44,10 +45,11 @@ Feature: Structured Dates Formatting
       And selects the "Cataloging" radio button on the Create New page
       And clicks on the Create button
     Then the titlebar should contain "Cataloging" 
-      And enters "1" in the "Cataloging" "Object Description Information" "Textual Inscription" "Date" field
+      And enters "1" in the "Cataloging" "Object Description Information" field
+      And enters "1" in the "Cataloging" "Textual Inscription" field
+      And enters "1" in the "Cataloging" "Date" field
     Then the structured date popup should appear
-      And enters "9999" in the "Cataloging" field
-      And enters "9999" in the "Object Description Information" field
+      And enters "9999" in the "Cataloging" "Object Description Information" field
       And enters "9999" in the "Textual Inscription" field
       And enters "9999" in the "Date" field
       And enters "9999" in the "Earliest/Single Year" field
@@ -77,7 +79,7 @@ Feature: Structured Dates Formatting
       And selects the "Cataloging" radio button on the Create New page
       And clicks on the Create button
     Then the titlebar should contain "Cataloging" 
-      And enters "1" in the "Cataloging" "Non-Textual Inscription" "Date" field
+      And enters "1" in the "Cataloging" "Non-Textual Inscription Date" field
     Then the structured date popup should appear
       And enters "9999" in the "Cataloging" field
       And enters "9999" in the "Non-Textual Inscription" field
@@ -108,7 +110,7 @@ Feature: Structured Dates Formatting
       And selects the "Cataloging" radio button on the Create New page
       And clicks on the Create button
     Then the titlebar should contain "Cataloging" 
-      And enters "1" in the "Cataloging" "Object Production Information" "Production date" field
+      And enters "1" in the "Cataloging" "Object Production Information Production date" field
     Then the structured date popup should appear
       And enters "9999" in the "Cataloging" field
       And enters "9999" in the "Object Production Information" field
@@ -141,7 +143,7 @@ Feature: Structured Dates Formatting
       And selects the "Cataloging" radio button on the Create New page
       And clicks on the Create button
     Then the titlebar should contain "Cataloging" 
-      And enters "1" in the "Cataloging" "Object History & Association" "Associated date" field
+      And enters "1" in the "Cataloging" "Object History & Association Associated date" field
     Then the structured date popup should appear
       And enters "9999" in the "Cataloging" field
       And enters "9999" in the "Object History & Association" field
@@ -172,11 +174,13 @@ Feature: Structured Dates Formatting
       And selects the "Cataloging" radio button on the Create New page
       And clicks on the Create button
     Then the titlebar should contain "Cataloging" 
-      And enters "1" in the "Cataloging" field
-      And enters "1" in the "Object History & Association" field
+      And enters "1" in the "Cataloging" "Object History & Association" field
       And enters "1" in the "Ownership date" field
     Then the structured date popup should appear
-      And enters "9999" in the "Cataloging" "Object History & Association" "Ownership date" "Earliest/Single Year" field
+      And enters "9999" in the "Cataloging" field
+      And enters "9999" in the "Object History & Association" field
+      And enters "9999" in the "Ownership date" field
+      And enters "9999" in the "Earliest/Single Year" field
     Then "9999" in "Cataloging" field is not cut off
     Then "9999" in "Object History & Association" field is not cut off
     Then "9999" in "Ownership date" field is not cut off
@@ -203,11 +207,13 @@ Feature: Structured Dates Formatting
       And selects the "Cataloging" radio button on the Create New page
       And clicks on the Create button
     Then the titlebar should contain "Cataloging" 
-      And enters "1" in the "Cataloging" field
-      And enters "1" in the "Object Collection Information" field
+      And enters "1" in the "Cataloging" "Object Collection Information" field
       And enters "1" in the "Field collection date" field
     Then the structured date popup should appear
-      And enters "9999" in the "Cataloging" "Object Collection Information" "Field collection date" "Earliest/Single Year" field
+      And enters "9999" in the "Cataloging" field
+      And enters "9999" in the "Object Collection Information" field
+      And enters "9999" in the "Field collection date" field
+      And enters "9999" in the "Earliest/Single Year" field
     Then "9999" in "Cataloging" field is not cut off
     Then "9999" in "Object Collection Information" field is not cut off
     Then "9999" in "Field collection date" field is not cut off

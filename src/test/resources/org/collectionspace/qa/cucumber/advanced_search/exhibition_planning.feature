@@ -9,7 +9,7 @@ Feature: Advanced Search ­– Exhibition Planning
         And selects the "Exhibition" radio button on the Create New page
         And enters "CQA74.1" in the "Exhibition Number" field 
         And enters "CQA74 Test" in the "Exhibition Title" field 
-        And selects "Permanent" from the "Exhibition Type" drop down box  
+        And selects "Permanent" from the "Exhibition Type" drop down  
         And enters "CQA74 Venue" in the "Venue" field 
         And selects "CQA74 Venue" from autocomplete options
         And enters "2016-01-01" in the "Venue Opening Date" field 
@@ -18,28 +18,28 @@ Feature: Advanced Search ­– Exhibition Planning
 
         # Record Title
         And clicks the "Advanced Search button"
-        And selects "Exhibition" from the "Record Type Select" drop down box
+        And selects "Exhibition" from the "Record Type Select" drop down
         And enters "CQA74 Test" in the "Exhibition Title" field
         And clicks the "search" button
         Then the search results should contain "CQA74.1"
 
         # Record ID number
         And clicks the "Advanced Search button"
-        And selects "Exhibition" from the "Record Type Select" drop down box
+        And selects "Exhibition" from the "Record Type Select" drop down
         And enters "CQA74.1" in the "Exhibition Number" field
         And clicks the "search" button
         Then the search results should contain "CQA74.1"
 
         # Exhibition Type
         And clicks the "Exhibition Type"
-        And selects "Exhibition" from the "Record Type Select" drop down box
-        And selects "Permanent" from the "Exhibition Type" drop down box
+        And selects "Exhibition" from the "Record Type Select" drop down
+        And selects "Permanent" from the "Exhibition Type" drop down
         And clicks the "search" button
         Then the search results should contain "CQA74.1"
 
         # Venue
         And clicks the "Advanced Search button"
-        And selects "Exhibition" from the "Record Type Select" drop down box
+        And selects "Exhibition" from the "Record Type Select" drop down
         And enters "CQA74 Venue" in the "Venues" field 
         And selects "CQA74 Venue" from autocomplete options
         And clicks the "search" button
@@ -47,7 +47,7 @@ Feature: Advanced Search ­– Exhibition Planning
 
         # Venue
         And clicks the "Advanced Search button"
-        And selects "Exhibition" from the "Record Type Select" drop down box
+        And selects "Exhibition" from the "Record Type Select" drop down
         And enters "2016-01-01" in the "Earliest Opening Date" field 
         And clicks the "search" button
         Then the search results should contain "CQA74.1"
@@ -72,7 +72,7 @@ Feature: Advanced Search ­– Exhibition Planning
         Given user is in the "Create New" page
         And selects the "Exhibition" radio button on the Create New page
         And enters "CQA74.2" in the "Exhibition Number" field
-        And selects "Permanent" from the "Exhibition Type" drop down box
+        And selects "Permanent" from the "Exhibition Type" drop down
         And enters "Globex Corporation" in the "Sponsor" field
         And selects "Globex Corporation" from autocomplete options
         And enters "testtest" in the "Boilerplate Text" field
@@ -81,7 +81,7 @@ Feature: Advanced Search ­– Exhibition Planning
         And navigates to the "Create New" page 
         And selects the "Exhibition" radio button on the Create New page
         And enters "CQA74.3" in the "Exhibition Number" field
-        And selects "Permanent" from the "Exhibition Type" drop down box  
+        And selects "Permanent" from the "Exhibition Type" drop down  
         And enters "Globex Corporation" in the "Sponsor" field 
         And selects "Globex Corporation" from autocomplete options
         And enters "testtest" in the "Planning Notes" field 
@@ -90,7 +90,7 @@ Feature: Advanced Search ­– Exhibition Planning
         And navigates to the "Create New" page 
         And selects the "Exhibition" radio button on the Create New page
         And enters "CQA74.4" in the "Exhibition Number" field
-        And selects "Permanent" from the "Exhibition Type" drop down box  
+        And selects "Permanent" from the "Exhibition Type" drop down  
         And enters "Osato Chemicals" in the "Sponsor" field 
         And selects "Osato Chemicals" from autocomplete options
         And enters "testtest" in the "Curatorial Notes" field 
@@ -98,10 +98,10 @@ Feature: Advanced Search ­– Exhibition Planning
 
 
         And clicks the "Advanced Search button"
-        And selects "Exhibition" from the "Record Type Select" drop down box
+        And selects "Exhibition" from the "Record Type Select" drop down
         And enters "Globex Corporation" in the "Sponsor" field 
         And selects "Globex Corporation" from autocomplete options
-        And selects "Permanent" from the "Exhibition Type" drop down box  
+        And selects "Permanent" from the "Exhibition Type" drop down  
         And clicks the "search" button
         Then the search results should contain "CQA74.2"
         Then the search results should contain "CQA74.3"
@@ -109,9 +109,9 @@ Feature: Advanced Search ­– Exhibition Planning
 
 
         And clicks the "Advanced Search button"
-        And selects "Exhibition" from the "Record Type Select" drop down box
-        And selects "all (AND)" from the "Field-based Search" drop down box
-        And selects "Permanent" from the "Exhibition Type" drop down box          
+        And selects "Exhibition" from the "Record Type Select" drop down
+        And selects "all (AND)" from the "Field-based Search" drop down
+        And selects "Permanent" from the "Exhibition Type" drop down          
         And enters "Globex Corporation" in the "Sponsor" field 
         And selects "Globex Corporation" from autocomplete options        
         And clicks the "search" button
@@ -126,7 +126,7 @@ Feature: Advanced Search ­– Exhibition Planning
         Given user is in the "My CollectionSpace" page
         And clicks the "Advanced Search" button
         And enters "testtest" in the "Keyword Search" field
-        And selects "Exhibition" from the "Record Type Select" drop down box
+        And selects "Exhibition" from the "Record Type Select" drop down
         And enters "Globex Corporation" in the "Sponsor" field 
         And selects "Globex Corporation" from autocomplete options            
         And clicks the "search" button
@@ -136,7 +136,7 @@ Feature: Advanced Search ­– Exhibition Planning
 
         And clicks the "Advanced Search" button
         And enters "testtest" in the "Keyword Search" field
-        And selects "all (AND)" from the "Field-based Search" drop down box
+        And selects "all (AND)" from the "Field-based Search" drop down
         And enters "Globex Corporation" in the "Sponsor" field 
         And selects "Globex Corporation" from autocomplete options
         And clicks the "search" button

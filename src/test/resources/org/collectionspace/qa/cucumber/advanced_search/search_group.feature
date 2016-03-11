@@ -14,20 +14,20 @@ Feature: Advanced Search Group
         And saves the record
 
         And clicks the "Advanced Search" button
-        And selects "Group" from the "Record Type Select" drop down box        
+        And selects "Group" from the "Record Type Select" drop down        
         And enters "textbook75" in the "Title" field
         And clicks the "search" button
         Then the search results should contain "textbook75"
 
         And clicks the "Advanced Search" button
-        And selects "Group" from the "Record Type Select" drop down box        
+        And selects "Group" from the "Record Type Select" drop down        
         And enters "CQA-75" in the "Owner" field
         And selects "CQA-75" from autocomplete field
         And clicks the "search" button
         Then the search results should contain "CQA-75"
 
         And clicks the "Advanced Search" button
-        And selects "Group" from the "Record Type Select" drop down box        
+        And selects "Group" from the "Record Type Select" drop down        
         And enters "textb*" in the "Title" field
         And clicks the "search" button
         Then the search results should contain "CQA-75"
