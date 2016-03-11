@@ -71,7 +71,7 @@ Feature: Permission Enforcement
       And selects the "Record Type B" tab
       And clicks on a "Record Type B" record
     Then the record should be read only
-    Then the add button should not be present
+    Then the "add" button should not be present
       And selects the "Record Type D" tab
       And clicks on a "Record Type D" record
     Then the record should be editable
@@ -96,11 +96,11 @@ Feature: Permission Enforcement
       And selects the "Record Type B" tab
       And clicks on a "Record Type B" record
     Then the record should be read only
-    Then the add button should not be present
+    Then the "add" button should not be present
       And selects the "Record Type D" tab
       And clicks on a "Record type D" record
     Then the record should be editable
-    Then the add button should not be present
+    Then the "add" button should not be present
     Then the "Delete" button should not be present
     Then close the browser
 

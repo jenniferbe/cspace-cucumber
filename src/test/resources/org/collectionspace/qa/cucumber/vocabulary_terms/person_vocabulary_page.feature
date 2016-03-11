@@ -35,7 +35,7 @@ Feature: Person Vocabulary Data Entry
     Then "Artist" should be in "Team Type" row
     Then "Accepted" should be in "Status" row
     Then "Female" should be in "Gender" row
-    Then "<source>" should be in the "Person" "Source field"
+    Then "<source>" should be in the "Person" "Source" field
     Then "<occupation>" should be in the "Person" "Occupation" field
     Then "<school/style>" should be in the "Person" "School/Style" field
     Then "<group>" should be in the "Person" "Group" field
