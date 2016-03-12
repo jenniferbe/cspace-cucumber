@@ -187,18 +187,18 @@ Feature: Location/Movement/Inventory Control Tab
         And enters "CQA113.11" in the "Reference Number" field
         And enters "CQA113_Loc" in the "Normal Location" field
         And clicks on "CQA113_Loc" from autocomplete options
-        And selects "Dangerous" from the "Fitness" drop down box
+        And selects "Dangerous" from the "Fitness" drop down
         And enters "CQA113 Test" in the "Note" field
         And enters "2016-01-04" in the "Location Date" field
-        And selects "Conservation" from the "Reason for move" drop down box
+        And selects "Conservation" from the "Reason for move" drop down
         And enters "Cesar Villalobos" in the "Contact" field
         And clicks on "Cesar Villalobos" from autocomplete options
-        And selects "Forklift" from the "Method" drop down box
+        And selects "Forklift" from the "Method" drop down
         And enters "2016-01-05" in the "Planned removal date" field
         And enters "2016-01-06" in the "Removal date" field
         And enters "Test for CQA113 note box 2" in the "Note" field
-        And selects "Conservation" from the "Inventory Action Required" drop down box
-        And selects "Monthly" from the "Inventory Frequency" drop down box
+        And selects "Conservation" from the "Inventory Action Required" drop down
+        And selects "Monthly" from the "Inventory Frequency" drop down
         And enters "Cesar Villalobos" in the "Contact" field
         And clicks on "Cesar Villalobos" from autocomplete options
         And enters "2016-01-11" in the "Inventory Date" field
@@ -231,18 +231,18 @@ Feature: Location/Movement/Inventory Control Tab
         And enters "CQA113.11" in the "Reference Number" field
         And enters "CQA113_Loc_2" in the "Normal Location" field
         And clicks on "CQA113_Loc_2" from autocomplete options
-        And selects "Suitable" from the "Fitness" drop down box
+        And selects "Suitable" from the "Fitness" drop down
         And enters "CQA113 Test 13" in the "Note" field
         And enters "2016-01-05" in the "Location Date" field
-        And selects "Preservation" from the "Reason for move" drop down box
+        And selects "Preservation" from the "Reason for move" drop down
         And enters "Cesar Villalobos" in the "Contact" field
         And clicks on "Cesar Villalobos" from autocomplete options
-        And selects "Trolley" from the "Method" drop down box
+        And selects "Trolley" from the "Method" drop down
         And enters "2016-02-05" in the "Planned removal date" field
         And enters "2016-02-06" in the "Removal date" field
         And enters "Test for CQA113 note box 2, Test 13" in the "Note" field
-        And selects "Preservation" from the "Inventory Action Required" drop down box
-        And selects "Daily" from the "Inventory Frequency" drop down box
+        And selects "Preservation" from the "Inventory Action Required" drop down
+        And selects "Daily" from the "Inventory Frequency" drop down
         And enters "Cesar Villalobos" in the "Contact" field
         And clicks on "Cesar Villalobos" from autocomplete options
         And enters "2016-02-11" in the "Inventory Date" field
@@ -307,13 +307,13 @@ Feature: Location/Movement/Inventory Control Tab
         Then a delete confirmation dialog should appear
         And clicks cancel button
         Then the dialog should be dismissed 
-        Then no changes should occur 
+        Then no changes to the record should occur 
 
         And clicks the "Delete Relation" button on the row that reads "CQA113.7"
         Then a delete confirmation dialog should appear
         And clicks the "close" button
         Then the dialog should be dismissed
-        Then no changes should occur 
+        Then no changes to the record should occur 
 
         And clicks the "Delete Relation" button on the row that reads "CQA113.7"
         Then a delete confirmation dialog should appear

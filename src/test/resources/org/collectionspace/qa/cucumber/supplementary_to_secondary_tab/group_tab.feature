@@ -26,7 +26,7 @@ Feature: Group Secondary Tab
     Then the "Cancel changes" button at the bottom of the record "should" be clickable
     Then the "Cancel changes" button at the top of the record "should" be clickable
     Then "transpleb" should be in the "Cataloging" "Title" field
-      And fills in all the fields of the "Group" record
+      And fills out required fields
       And enters "ian" in the "Cataloging" "Group Owner" vocab field
       And adds "ian" to "Local Persons"
       And saves the record
@@ -53,7 +53,7 @@ Feature: Group Secondary Tab
       And selects the "Group" tab
       And clicks the "+ Add Record" button
       And presses the "Esc" key
-    Then no changes should occur
+    Then no changes to the record should occur
       And clicks the "+ Add Record" button
       And clicks the search button
     Then a list of records should appear

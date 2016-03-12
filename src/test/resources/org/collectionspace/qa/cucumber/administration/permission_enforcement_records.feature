@@ -71,7 +71,7 @@ Feature: Permission Enforcement
       And selects the "Record Type B" tab
       And clicks on a "Record Type B" record
     Then the record should be read only
-    Then the add button should not be present
+    Then the "add" button should not be present
       And selects the "Record Type D" tab
       And clicks on a "Record Type D" record
     Then the record should be editable
@@ -96,11 +96,11 @@ Feature: Permission Enforcement
       And selects the "Record Type B" tab
       And clicks on a "Record Type B" record
     Then the record should be read only
-    Then the add button should not be present
+    Then the "add" button should not be present
       And selects the "Record Type D" tab
       And clicks on a "Record type D" record
     Then the record should be editable
-    Then the add button should not be present
+    Then the "add" button should not be present
     Then the "Delete" button should not be present
     Then close the browser
 
@@ -156,7 +156,7 @@ Feature: Permission Enforcement
       And saves the record
     Then the record is successfully saved
     Then the "Used Terms" list should not contain the vocabulary term
-      And enters "xxx" in the deleted vocab field
+      And enters "xxx" in the "deleted vocab" field
     Then the error message bar should appear
     Then close the browser
 
@@ -190,7 +190,7 @@ Feature: Permission Enforcement
       And saves the record
     Then the record is successfully saved
     Then the "Used Terms" list should not contain the vocabulary term
-      And enters "Jam" in the deleted vocab field
+      And enters "Jam" in the "deleted vocab" field
     Then the vocabulary autocomplete should appear
     Then the vocabulary autocomplete "should not" contain the option to add a new term
       And clicks on something from autocomplete options
@@ -246,7 +246,7 @@ Feature: Permission Enforcement
       And saves the record
     Then the record is successfully saved
     Then the "Used Terms" list should not contain the vocabulary term
-      And enters "Jam" in the deleted vocab field
+      And enters "Jam" in the "deleted vocab" field
     Then the vocabulary autocomplete "should" contain the option to add a new term
       And adds "Jam" to a vocabulary
       And saves the record
@@ -267,7 +267,7 @@ Feature: Permission Enforcement
       And saves the record
     Then the record is successfully saved
     Then the "Used Terms" list should not contain the vocabulary term
-      And enters "Jam" in the deleted vocab field
+      And enters "Jam" in the "deleted vocab" field
     Then the vocabulary autocomplete should not contain "Vocabulary A" terms
     Then the vocabulary autocomplete "should not" contain the option to add a new term
       And clicks on something from autocomplete options
@@ -289,7 +289,7 @@ Feature: Permission Enforcement
       And saves the record
     Then the record is successfully saved
     Then the "Used Terms" list should not contain the vocabulary term
-      And enters "Jam" in the deleted vocab field
+      And enters "Jam" in the "deleted vocab" field
     Then the vocabulary autocomplete should not contain "Vocabulary A" terms
     Then the vocabulary autocomplete "should" contain the option to add a new term
       And clicks on something from autocomplete options
@@ -311,7 +311,7 @@ Feature: Permission Enforcement
       And saves the record
     Then the record is successfully saved
     Then the "Used Terms" list should not contain the vocabulary term
-      And enters "Jam" in the deleted vocab field
+      And enters "Jam" in the "deleted vocab" field
     Then the vocabulary autocomplete "should" contain the option to add a new term
       And clicks on something from autocomplete options
       And saves the record

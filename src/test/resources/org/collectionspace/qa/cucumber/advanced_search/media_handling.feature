@@ -207,7 +207,7 @@ Feature: Advanced Search - Media Handling
       And clicks on link to "Advanced Search"
     Then the titlebar should contain "Advanced Search"
       And selects "Media Handling" from record type dropdown
-      And enters "any (OR)" from boolean dropdown
+      And selects "any (OR)" from the "Field-based Search" drop down
       And enters "Jane Doe" in the "Advanced Search" "Creator" vocab field
       And clicks on "Jane Doe" from autocomplete options
       And enters "Jane Doe" in the "Advanced Search" "Publisher" vocab field
@@ -219,7 +219,7 @@ Feature: Advanced Search - Media Handling
       And clicks on link to "Advanced Search"
     Then the titlebar should contain "Advanced Search"
       And selects "Media Handling" from record type dropdown
-      And enters "all (AND)" from boolean dropdown
+      And And selects "all (AND)" from the "Field-based Search" drop down
       And enters "Jane Doe" in the "Advanced Search" "Creator" vocab field
       And clicks on "Jane Doe" from autocomplete options
       And enters "Jane Doe" in the "Advanced Search" "Publisher" vocab field
@@ -235,9 +235,9 @@ Feature: Advanced Search - Media Handling
     Given user is on the "My Collectionspace" page
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
-      And enters "testtest" in the keyword search field
+      And enters "testtest" in the "keyword search" field
       And selects "Media Handling" from record type dropdown
-      And enters "any (OR)" from boolean dropdown
+      And selects "all (AND)" from the "Field-based Search" drop down
       And enters "Jane Doe" in the "Advanced Search" "Creator" vocab field
       And clicks on "Jane Doe" from autocomplete options
       And enters "Jane Doe" in the "Advanced Search" "Publisher" vocab field
@@ -248,9 +248,9 @@ Feature: Advanced Search - Media Handling
     Then the search results should contain "4245"
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
-      And enters "testtest" in the keyword search field
+      And enters "testtest" in the "keyword search" field
       And selects "Media Handling" from record type dropdown
-      And enters "and (ALL)" from boolean dropdown
+      And enters "all (AND)" from boolean dropdown
       And enters "Jane Doe" in the "Advanced Search" "Creator" vocab field
       And clicks on "Jane Doe" from autocomplete options
       And enters "Jane Doe" in the "Advanced Search" "Publisher" vocab field

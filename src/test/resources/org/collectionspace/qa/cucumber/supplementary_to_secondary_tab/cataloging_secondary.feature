@@ -56,10 +56,3 @@ Feature: Supplementary Manual QA - Cataloging Secondary Tab
     # The Edit Record form should be updated to correspond to the new record you clicked
 
 
-  Scenario: User Navigates Keyboard
-    Given user in a record
-    # And clicks any Secondary Tab
-    # And clicks the "+ Add New" button
-    # Tab through the form, to make sure everything is reachable and authorities and dates can be handled using the keyboard
-    And saves the record
-    # Make sure the link to the newly created record (in the listing in the top of the page) is reachable by keyboard

@@ -110,14 +110,4 @@ Feature: Supplementary Manual QA - Media Handling
       And clicks delete confirmation OK button
     Then close the browser
 
-## The remainder of this feature file, below, needs to be converted from narrative (broad declarative steps)
-## to testable steps
-#
-  # Scenario: Keyboard Accessibility
-  #   # doesn't work, need to do later
-  #    user uses tab through the entire formula
-  #    each of the fields should be reachable
-  #    the two save buttons and Cancel button should be reachable
-  #    the folding functionality should be usable # tab to it and hit space
-  #    the focus is visible at all times
-  #    the terms used in the right frame should be reachable
+

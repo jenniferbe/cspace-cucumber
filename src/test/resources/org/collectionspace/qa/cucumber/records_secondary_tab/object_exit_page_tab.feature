@@ -176,8 +176,8 @@ Feature: Object Exit Page Tab
         And clicks on "Cesar Villalobos" from autocomplete options
         And enters "Jennifer Be" in the "Depositor" field
         And clicks on "Jennifer Be" from autocomplete options
-        And selects "Courier" from the "Exit Method" drop down box
-        And selects "Deaccession" from the "Exit Reason" drop down box
+        And selects "Courier" from the "Exit Method" drop down
+        And selects "Deaccession" from the "Exit Reason" drop down
         And enters "This \n is \n CQA115" in the "Exit Note" field
         And enters "Packing for CQA115" in the "Packing Note" field
 
@@ -202,8 +202,8 @@ Feature: Object Exit Page Tab
         And clicks on "Jennifer Be" from autocomplete options
         And enters "Cesar Villalobos" in the "Depositor" field
         And clicks on "Cesar Villalobos" from autocomplete options
-        And selects "Post" from the "Exit Method" drop down box
-        And selects "Disposal" from the "Exit Reason" drop down box
+        And selects "Post" from the "Exit Method" drop down
+        And selects "Disposal" from the "Exit Reason" drop down
         And enters "This \n is \n CQA115 \n Test 13" in the "Exit Note" field
         And enters "Packing for CQA115 Test 13" in the "Packing Note" field
 

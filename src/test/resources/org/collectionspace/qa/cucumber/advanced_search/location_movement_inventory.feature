@@ -269,7 +269,7 @@ Feature: Advanced Search - Location / Movement / Inventory
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search" 
       And selects "Location/Movement/Inventory" from record type dropdown
-      And selects "any (OR)" from boolean dropdown
+      And selects "any (OR)" from the "Field-based Search" drop down
       And enters "Jane Doe" in the "Advanced Search" "Movement Contact" vocab field
       And clicks on "Jane Doe" from autocomplete options
       And enters "In a Shoebox" in the "Advanced Search" "Current Location" vocab field
@@ -296,9 +296,9 @@ Feature: Advanced Search - Location / Movement / Inventory
     Given user is on the "My Collectionspace" page
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
-      And enters "testtest" in the keyword search field
+      And enters "testtest" in the "keyword search" field
       And selects "Location/Movement/Inventory" from record type dropdown
-      And selects "any (OR)" from boolean dropdown
+      And selects "any (OR)" from the "Field-based Search" drop down
       And eneters "Jane Doe" in the "Advanced Search" "Movement Contact" vocab field
       And clicks on "Jane Doe" from autocomplete options
       And enters "In a Shoebox" in the "Advanced Search" "Current Location" vocab field
@@ -309,7 +309,7 @@ Feature: Advanced Search - Location / Movement / Inventory
     Then the search results should contain "7535"
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
-      And enters "testtest" in the keyword search field
+      And enters "testtest" in the "keyword search" field
       And selects "Location/Movement/Inventory" from record type dropdown
       And selects "and (ALL)" from boolean dropdown
       And enters "Jane Doe" in the "Advanced Search" "Movement Contact" vocab field

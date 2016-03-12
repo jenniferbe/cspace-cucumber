@@ -169,7 +169,7 @@ Feature: Advanced Search - Loans Out
     Then the record is successfully saved
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search" 
-      And selects "any (OR)" from boolean dropdown
+      And selects "any (OR)" from the "Field-based Search" drop down
       And selects "Loan Out" from record type dropdown
       And enters "John Doe" in the "Advanced Search" "Borrower" vocab field
       And clicks on "John Doe" from autocomplete options
@@ -183,7 +183,7 @@ Feature: Advanced Search - Loans Out
       And clicks the "Advanced search" button 
     Then the titlebar should contain "Advanced Search"
       And selects "Loan Out" from record type dropdown
-      And selects "all (AND)" from boolean dropdown
+      And selects "all (AND)" from the "Field-based Search" drop down
       And enters "John Doe" in the "Advanced Search" "Borrower" vocab field
       And clicks on "John Doe" from autocomplete options
       And clicks on the "Advanced Search" "Loan Purpose" field
@@ -200,9 +200,9 @@ Feature: Advanced Search - Loans Out
     Given user is on the "My Collectionspace" page
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
-      And enters "testtest" in the keyword search field
+      And enters "testtest" in the "keyword search" field
       And selects "Loan Out" from record type dropdown
-      And selects "any (OR)" from boolean dropdown
+      And selects "any (OR)" from the "Field-based Search" drop down
       And enters "John Doe" in the "Advanced Search" "Borrower" vocab field
       And clicks on "John Doe" from autocomplete options
       And clicks on the "Advanced Search" "Loan Purpose" field
@@ -214,9 +214,9 @@ Feature: Advanced Search - Loans Out
     Then the search results should not contain "exampleexampleexample"
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
-      And enters "testtest" in the keyword search field
+      And enters "testtest" in the "keyword search" field
       And selects "Loan Out" from record type dropdown
-      And selects "all (AND)" from boolean dropdown
+      And selects "all (AND)" from the "Field-based Search" drop down
       And enters "John Doe" in the "Advanced Search" "Borrower" vocab field
       And clicks on "John Doe" from autocomplete options
       And clicks on the "Advanced Search" "Loan Purpose" field

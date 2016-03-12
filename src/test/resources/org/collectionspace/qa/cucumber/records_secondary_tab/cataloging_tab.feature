@@ -167,35 +167,35 @@ Feature: #Enter feature name here
         #Object ID Information
         And enters "99" in the "Number of Objects" field
         And enters "99.1" in the "Number" field        
-        And selects "Lender" from the "Number Type" drop down box        
-        And selects "Antiquities" from the "Responsible Department" drop down box
-        And selects "Library collection" from the "Collection" drop down box
-        And selects "New" from the "Record Status" drop down box
+        And selects "Lender" from the "Number Type" drop down        
+        And selects "Antiquities" from the "Responsible Department" drop down
+        And selects "Library collection" from the "Collection" drop down
+        And selects "New" from the "Record Status" drop down
         And enters "CQA-99 Brief Description box" in the "Brief Description" field
         And enters "CQA-99 Distinguishing Features box" in the "Distinguishing Features" field
         And enters "CQA-99 Comments box" in the "Comments" field
         And enters "CQA-99 title field" in the "Title" field
-        And selects "French" from the "Title Language" drop down box
-        And selects "Generic" from the "Title Type" drop down box
-        And selects "French" from the "Title Translation Language" drop down box
+        And selects "French" from the "Title Language" drop down
+        And selects "Generic" from the "Title Type" drop down
+        And selects "French" from the "Title Translation Language" drop down
         And enters "Fr" in the "Title Translation" field
         And enters "CQA99.11" in the "Object Name" field        
-        And selects "Current" from the "Currency" drop down box
-        And selects "Group" from the "Level" drop down box
-        And selects "Nomenclature" from the "System" drop down box
-        And selects "Simple" from the "Type" drop down box
-        And selects "French" from the "Language" drop down box
-        And selects "CQA-99 Note box" from the "Note" drop down box
+        And selects "Current" from the "Currency" drop down
+        And selects "Group" from the "Level" drop down
+        And selects "Nomenclature" from the "System" drop down
+        And selects "Simple" from the "Type" drop down
+        And selects "French" from the "Language" drop down
+        And selects "CQA-99 Note box" from the "Note" drop down
         #Object Description Information Box
         And enters "99.1" in the "Copy Number" field
         And enters "99.2" in the "Edition Number" field                
-        And selects "copy" from the "Object Status" drop down box
+        And selects "copy" from the "Object Status" drop down
         And enters "99" in the "Age" field
-        And selects "older than" from the "Age Qualifier" drop down box
-        And selects "Years" from the "Unit" drop down box
-        And selects "male" from the "Sex" drop down box
-        And selects "adult" from the "Phase" drop down box
-        And selects "pinned" from the "Form" drop down box
+        And selects "older than" from the "Age Qualifier" drop down
+        And selects "Years" from the "Unit" drop down
+        And selects "male" from the "Sex" drop down
+        And selects "adult" from the "Phase" drop down
+        And selects "pinned" from the "Form" drop down
         And enters "French" in the "Style" field
         And enters "Blue" in the "Color" field
         And enters "Polyester" in the "Material" field
@@ -204,15 +204,15 @@ Feature: #Enter feature name here
         And enters "Polyester Doll" in the "Material Name" field
         And enters "Africa" in the "Material Source" field
         And enters "African Polyester doll with blood diamonds" in the "Physical Description" field
-        And selects "handle" from the "Object Component Name" drop down box
+        And selects "handle" from the "Object Component Name" drop down
         And enters "Blue Handle" in the "Information" field
-        And selects "record speed" from the "Technical Attribute" drop down box
-        And selects "metal" from the "Measurement" drop down box
-        And selects "rpm" from the "Unit" drop down box
-        And selects "base" from the "Part" drop down box
-        And selects "area" from the "Dimension" drop down box
-        And selects "Ruler" from the "Method" drop down box
-        And selects "carats" from the "Dimension Unit" drop down box
+        And selects "record speed" from the "Technical Attribute" drop down
+        And selects "metal" from the "Measurement" drop down
+        And selects "rpm" from the "Unit" drop down
+        And selects "base" from the "Part" drop down
+        And selects "area" from the "Dimension" drop down
+        And selects "Ruler" from the "Method" drop down
+        And selects "carats" from the "Dimension Unit" drop down
         And enters "base of doll" in the "Summary" field
         And enters "99.3" in the "Value" field
         And enters "Cesar Villalobos" in the "Measured By" field
@@ -221,19 +221,19 @@ Feature: #Enter feature name here
         And enters "2016-01-01" in the "Date" field
         #Content Box
         And enters "African Polyester doll with blood diamonds" in the "Description" field
-        And selects "French" from the "Language" drop down box
+        And selects "French" from the "Language" drop down
         And enters "moving" in the "Activity" field        
         And enters "Testing" in the "Concept" field
         And selects "Testing" from autocomplete options
         And enters "2016-02-02" in the "Date" field
-        And selects "back" from the "Position" drop down box
-        And selects "Furniture" from the "Object Type" drop down box
+        And selects "back" from the "Position" drop down
+        And selects "Furniture" from the "Object Type" drop down
         And enters "red chair" in the "Object" field
         And enters "Regina Xu, Jennifer Be" in the "People" field
         And enters "Cesar Villalobos" in the "Person" field
         And selects "Cesar Villalobos" from autocomplete options
         And enters "Orange County" in the "Place" field
-        And selects "Gothic script" from the "Script" drop down box
+        And selects "Gothic script" from the "Script" drop down
         And enters "Water Tribe" in the "Organization" field
         And selects "Water Tribe" from autocomplete options
         And enters "CQA-99 Testing" in the "Event Name" field
@@ -249,9 +249,9 @@ Feature: #Enter feature name here
         And enters "2016-03-03" in the "Date" field
         And enters "Cesar Villalobos" in the "Inscriber" field
         And selects "Cesar Villalobos" from autocomplete options
-        And selects "back" from the "Position" drop down box
-        And selects "Gothic script" from the "Script" drop down box
-        And selects "decoration" from the "Type" drop down box
+        And selects "back" from the "Position" drop down
+        And selects "Gothic script" from the "Script" drop down
+        And selects "decoration" from the "Type" drop down
         #Non-Textual Inscription
         And enters "CQA-99 Inscription Box" in the "Inscription Description" field
         And enters "CQA-99 Transliteration box" in the "Transliteration" field        
@@ -259,8 +259,8 @@ Feature: #Enter feature name here
         And enters "2016-03-03" in the "Date" field        
         And enters "Cesar Villalobos" in the "Inscriber" field
         And selects "Cesar Villalobos" from autocomplete options
-        And selects "back" from the "Position" drop down box                                          
-        And selects "decoration" from the "Type" drop down box                    
+        And selects "back" from the "Position" drop down                                          
+        And selects "decoration" from the "Type" drop down                    
         #Obj Production Info
         And enters "2016-04-04" in the "Production Date" field
         And enters "Watering" in the "Technique Type" field
@@ -324,12 +324,12 @@ Feature: #Enter feature name here
         And selects "Aang" from autocomplete options
         And enters "2016-07-06" in the "Ownership date" field
         And enters "worldwide" in the "Ownership place" field
-        And selects "limited" from the "Ownership access" drop down box                                          
-        And selects "company" from the "Ownership category" drop down box                                          
+        And selects "limited" from the "Ownership access" drop down                                          
+        And selects "company" from the "Ownership category" drop down                                          
         And enters "CQA-99 No note" in the "Note" field
         And enters "99" in the "Price - value" field
-        And selects "bequest" from the "Method" drop down box                                          
-        And selects "Euro" from the "Price - currency" drop down box                                          
+        And selects "bequest" from the "Method" drop down                                          
+        And selects "Euro" from the "Price - currency" drop down                                          
         #Associations
         #Object Owner's Contribution Information
         And enters "Never used it. He was dead." in the "Owner's Personal Experience" field
@@ -348,7 +348,7 @@ Feature: #Enter feature name here
         And enters "CQA-99 Reference note field" in the "Reference Note" field
         #Object Collection Info
         And enters "2016-07-07" in the "Field collection date" field
-        And selects "borehole" from the "Field collection method" drop down box
+        And selects "borehole" from the "Field collection method" drop down
         And enters "It was actually stolen from air temple" in the "Field collection note" field
         And enters "CQA-99.11" in the "Field collection number" field
         And enters "North Temple" in the "Field collection place" field
@@ -531,35 +531,35 @@ Feature: #Enter feature name here
         #Object ID Information
         And enters "99.13" in the "Number of Objects" field
         And enters "99.13.1" in the "Number" field        
-        And selects "Obsolte" from the "Number Type" drop down box        
-        And selects "Paleobotany" from the "Responsible Department" drop down box
-        And selects "Permanent collection" from the "Collection" drop down box
-        And selects "In process" from the "Record Status" drop down box
+        And selects "Obsolte" from the "Number Type" drop down        
+        And selects "Paleobotany" from the "Responsible Department" drop down
+        And selects "Permanent collection" from the "Collection" drop down
+        And selects "In process" from the "Record Status" drop down
         And enters "CQA-99.13 Brief Description box" in the "Brief Description" field
         And enters "CQA-99.13 Distinguishing Features box" in the "Distinguishing Features" field
         And enters "CQA-99.13 Comments box" in the "Comments" field
         And enters "CQA-99.13 title field" in the "Title" field
-        And selects "German" from the "Title Language" drop down box
-        And selects "Generic" from the "Title Type" drop down box
-        And selects "German" from the "Title Translation Language" drop down box
+        And selects "German" from the "Title Language" drop down
+        And selects "Generic" from the "Title Type" drop down
+        And selects "German" from the "Title Translation Language" drop down
         And enters "Ger" in the "Title Translation" field
         And enters "CQA99.13.11" in the "Object Name" field        
-        And selects "Current" from the "Currency" drop down box
-        And selects "Group" from the "Level" drop down box
-        And selects "Nomenclature" from the "System" drop down box
-        And selects "Simple" from the "Type" drop down box
-        And selects "German" from the "Language" drop down box
-        And selects "CQA-99.13 Note box" from the "Note" drop down box
+        And selects "Current" from the "Currency" drop down
+        And selects "Group" from the "Level" drop down
+        And selects "Nomenclature" from the "System" drop down
+        And selects "Simple" from the "Type" drop down
+        And selects "German" from the "Language" drop down
+        And selects "CQA-99.13 Note box" from the "Note" drop down
         #Object Description Information Box
         And enters "99.13.1" in the "Copy Number" field
         And enters "99.13.2" in the "Edition Number" field                
-        And selects "forgery" from the "Object Status" drop down box
+        And selects "forgery" from the "Object Status" drop down
         And enters "99.13" in the "Age" field
-        And selects "older than" from the "Age Qualifier" drop down box
-        And selects "Years" from the "Unit" drop down box
-        And selects "female" from the "Sex" drop down box
-        And selects "larva" from the "Phase" drop down box
-        And selects "dry" from the "Form" drop down box
+        And selects "older than" from the "Age Qualifier" drop down
+        And selects "Years" from the "Unit" drop down
+        And selects "female" from the "Sex" drop down
+        And selects "larva" from the "Phase" drop down
+        And selects "dry" from the "Form" drop down
         And enters "German" in the "Style" field
         And enters "Purple" in the "Color" field
         And enters "Fabric" in the "Material" field
@@ -568,15 +568,15 @@ Feature: #Enter feature name here
         And enters "Fabric Doll" in the "Material Name" field
         And enters "Africa" in the "Material Source" field
         And enters "African Fabric doll with blood diamonds" in the "Physical Description" field
-        And selects "handle" from the "Object Component Name" drop down box
+        And selects "handle" from the "Object Component Name" drop down
         And enters "Purple Handle" in the "Information" field
-        And selects "record speed" from the "Technical Attribute" drop down box
-        And selects "78" from the "Measurement" drop down box
-        And selects "rpm" from the "Unit" drop down box
-        And selects "base" from the "Part" drop down box
-        And selects "area" from the "Dimension" drop down box
-        And selects "Ruler" from the "Method" drop down box
-        And selects "carats" from the "Dimension Unit" drop down box
+        And selects "record speed" from the "Technical Attribute" drop down
+        And selects "78" from the "Measurement" drop down
+        And selects "rpm" from the "Unit" drop down
+        And selects "base" from the "Part" drop down
+        And selects "area" from the "Dimension" drop down
+        And selects "Ruler" from the "Method" drop down
+        And selects "carats" from the "Dimension Unit" drop down
         And enters "base of doll" in the "Summary" field
         And enters "99.13.3" in the "Value" field
         And enters "Cesar Villalobos" in the "Measured By" field
@@ -585,19 +585,19 @@ Feature: #Enter feature name here
         And enters "2017-01-01" in the "Date" field
         #Content Box
         And enters "African Fabric doll with blood diamonds" in the "Description" field
-        And selects "German" from the "Language" drop down box
+        And selects "German" from the "Language" drop down
         And enters "moving" in the "Activity" field        
         And enters "Testing" in the "Concept" field
         And selects "Testing" from autocomplete options
         And enters "2017-02-02" in the "Date" field
-        And selects "back" from the "Position" drop down box
-        And selects "Furniture" from the "Object Type" drop down box
+        And selects "back" from the "Position" drop down
+        And selects "Furniture" from the "Object Type" drop down
         And enters "red chair" in the "Object" field
         And enters "Regina Xu, Jennifer Be" in the "People" field
         And enters "Cesar Villalobos" in the "Person" field
         And selects "Cesar Villalobos" from autocomplete options
         And enters "Orange County" in the "Place" field
-        And selects "Gothic script" from the "Script" drop down box
+        And selects "Gothic script" from the "Script" drop down
         And enters "Water Tribe" in the "Organization" field
         And selects "Water Tribe" from autocomplete options 
         And enters "CQA-99.13 Testing" in the "Event Name" field
@@ -613,9 +613,9 @@ Feature: #Enter feature name here
         And enters "2017-03-03" in the "Date" field        
         And enters "Cesar Villalobos" in the "Inscriber" field
         And selects "Cesar Villalobos" from autocomplete options
-        And selects "back" from the "Position" drop down box                        
-        And selects "Gothic script" from the "Script" drop down box                        
-        And selects "decoration" from the "Type" drop down box                        
+        And selects "back" from the "Position" drop down                        
+        And selects "Gothic script" from the "Script" drop down                        
+        And selects "decoration" from the "Type" drop down                        
         #Non-Textual Inscription
         And enters "CQA-99.13 Inscription Box" in the "Inscription Description" field
         And enters "CQA-99.13 Transliteration box" in the "Transliteration" field        
@@ -623,8 +623,8 @@ Feature: #Enter feature name here
         And enters "2017-03-03" in the "Date" field        
         And enters "Cesar Villalobos" in the "Inscriber" field
         And selects "Cesar Villalobos" from autocomplete options
-        And selects "back" from the "Position" drop down box                                          
-        And selects "decoration" from the "Type" drop down box                    
+        And selects "back" from the "Position" drop down                                          
+        And selects "decoration" from the "Type" drop down                    
         #Obj Production Info
         And enters "2017-04-04" in the "Production Date" field
         And enters "Watering" in the "Technique Type" field
@@ -688,12 +688,12 @@ Feature: #Enter feature name here
         And selects "Aang" from autocomplete options
         And enters "2017-07-06" in the "Ownership date" field
         And enters "worldwide" in the "Ownership place" field
-        And selects "limited" from the "Ownership access" drop down box                                          
-        And selects "company" from the "Ownership category" drop down box                                          
+        And selects "limited" from the "Ownership access" drop down                                          
+        And selects "company" from the "Ownership category" drop down                                          
         And enters "CQA-99.13 No note" in the "Note" field
         And enters "99.13" in the "Price - value" field
-        And selects "bequest" from the "Method" drop down box                                          
-        And selects "Euro" from the "Price - currency" drop down box                                          
+        And selects "bequest" from the "Method" drop down                                          
+        And selects "Euro" from the "Price - currency" drop down                                          
         #Associations
         #Object Owner's Contribution Information
         And enters "Never used it. He was dead." in the "Owner's Personal Experience" field
@@ -712,7 +712,7 @@ Feature: #Enter feature name here
         And enters "CQA-99.13 Reference note field" in the "Reference Note" field
         #Object Collection Info
         And enters "2017-07-07" in the "Field collection date" field
-        And selects "borehole" from the "Field collection method" drop down box
+        And selects "borehole" from the "Field collection method" drop down
         And enters "It was actually stolen from air temple" in the "Field collection note" field
         And enters "CQA-99.13.11" in the "Field collection number" field
         And enters "North Temple" in the "Field collection place" field

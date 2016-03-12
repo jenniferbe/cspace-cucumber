@@ -10,14 +10,14 @@ Feature: Advanced Search results Add to Record
         And enters "CQA-86 Group" in the "Title" field
         And saves the record
         And clicks the "Advanced Search button"
-        And enters "CQA86" in the search field
+        And enters "CQA86" in the "search" field
         Then the results should contain "CQA86.1"
         Then the results should contain "CQA86.2"
         Then the results should contain "CQA86.3"
 
         And clicks the "Add to Record" button
-        And selects "Group" from the "Record Type Select" drop down box
-        And enters "CQA-86 Group" in the search field
+        And selects "Group" from the "Record Type Select" drop down
+        And enters "CQA-86 Group" in the "search" field
         And selects "CQA-86 Group"
         And clicks the "Add search results" button
         Then the message "Added 3 records to test group" should appear
@@ -48,20 +48,6 @@ Feature: Advanced Search results Add to Record
         And clicks on the delete button 
         Then the deletion should be confirmed in a dialog
         Then close the browser 
-
-
-    # Scenario: Keyboard accessibility:
-    #     Given user is in the "Create New" page
-    #     And clicks the "Advanced Search button"
-    #     And enters "CQA86" in the search field
-    #     Then the results should contain "CQA86.1"
-    #     Then the results should contain "CQA86.2"
-    #     Then the results should contain "CQA86.3"
-    #     And presses the "Tab" key until reaching the "Add record" button
-    #     And presses the "Enter" key
-    #     Then an "Add Search Results to Record" menu should appear
-        
-    #     Then close the browser
 
 
 ## don't forget to delete the group!

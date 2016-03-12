@@ -21,7 +21,7 @@ Feature: Navigating between Primary and Secondary Tabs
     Then a dialog asking to save changes should appear
       And clicks the "Don't Save" button
       And selects the "Current Record" tab
-    Then "" should be in the "Cataloging" "Number of Objects" field
+    Then the "Cataloging" "Number of Objects" field should be empty
       And enters "15" in the "Cataloging" "Number of Objects" field
       And selects the "Acquisition" tab
     Then a dialog asking to save changes should appear
@@ -47,7 +47,7 @@ Feature: Navigating between Primary and Secondary Tabs
     Then a dialog asking to save changes should appear
       And clicks the "Don't Save" button
       And selects the "Current Record" tab
-    Then "" should be in the "Cataloging" "Number of Objects" field
+    Then the "Cataloging" "Number of Objects" field should be empty
       And enters "16" in the "Cataloging" "Number of Objects" field
       And selects the "Cataloging" tab
     Then a dialog asking to save changes should appear
@@ -72,7 +72,7 @@ Feature: Navigating between Primary and Secondary Tabs
     Then a dialog asking to save changes should appear
       And clicks the "Don't Save" button
       And selects the "Current Record" tab
-    Then "" should be in the "Cataloging" "Number of Objects" field
+    Then the "Cataloging" "Number of Objects" field should be empty
       And enters "17" in the "Cataloging" "Number of Objects" field
       And selects the "Condition" tab
     Then a dialog asking to save changes should appear
@@ -97,7 +97,7 @@ Feature: Navigating between Primary and Secondary Tabs
     Then a dialog asking to save changes should appear
       And clicks the "Don't Save" button
       And selects the "Current Record" tab
-    Then "" should be in the "Cataloging" "Number of Objects" field
+    Then the "Cataloging" "Number of Objects" field should be empty
       And enters "18" in the "Cataloging" "Number of Objects" field
       And selects the "Exhibition" tab
     Then a dialog asking to save changes should appear
@@ -122,7 +122,7 @@ Feature: Navigating between Primary and Secondary Tabs
     Then a dialog asking to save changes should appear
       And clicks the "Don't Save" button
       And selects the "Current Record" tab
-    Then "" should be in the "Cataloging" "Number of Objects" field
+    Then the "Cataloging" "Number of Objects" field should be empty
       And enters "19" in the "Cataloging" "Number of Objects" field
       And selects the "Intake" tab
     Then a dialog asking to save changes should appear
@@ -147,7 +147,7 @@ Feature: Navigating between Primary and Secondary Tabs
     Then a dialog asking to save changes should appear
       And clicks the "Don't Save" button
       And selects the "Current Record" tab
-    Then "" should be in the "Cataloging" "Number of Objects" field
+    Then the "Cataloging" "Number of Objects" field should be empty
       And enters "20" in the "Cataloging" "Number of Objects" field
       And selects the "Group" tab
     Then a dialog asking to save changes should appear
@@ -172,7 +172,7 @@ Feature: Navigating between Primary and Secondary Tabs
     Then a dialog asking to save changes should appear
       And clicks the "Don't Save" button
       And selects the "Current Record" tab
-    Then "" should be in the "Cataloging" "Number of Objects" field
+    Then the "Cataloging" "Number of Objects" field should be empty
       And enters "21" in the "Cataloging" "Number of Objects" field
       And selects the "Loan In" tab
     Then a dialog asking to save changes should appear
@@ -197,7 +197,7 @@ Feature: Navigating between Primary and Secondary Tabs
     Then a dialog asking to save changes should appear
       And clicks the "Don't Save" button
       And selects the "Current Record" tab
-    Then "" should be in the "Cataloging" "Number of Objects" field
+    Then the "Cataloging" "Number of Objects" field should be empty
       And enters "22" in the "Cataloging" "Number of Objects" field
       And selects the "Loan Out" tab
     Then a dialog asking to save changes should appear
@@ -222,7 +222,7 @@ Feature: Navigating between Primary and Secondary Tabs
     Then a dialog asking to save changes should appear
       And clicks the "Don't Save" button
       And selects the "Current Record" tab
-    Then "" should be in the "Cataloging" "Number of Objects" field
+    Then the "Cataloging" "Number of Objects" field should be empty
       And enters "23" in the "Cataloging" "Number of Objects" field
       And selects the "Media Handling" tab
     Then a dialog asking to save changes should appear
@@ -247,7 +247,7 @@ Feature: Navigating between Primary and Secondary Tabs
     Then a dialog asking to save changes should appear
       And clicks the "Don't Save" button
       And selects the "Current Record" tab
-    Then "" should be in the "Cataloging" "Number of Objects" field
+    Then the "Cataloging" "Number of Objects" field should be empty
       And enters "24" in the "Cataloging" "Number of Objects" field
       And selects the "Loc/Mov/Inv" tab
     Then a dialog asking to save changes should appear
@@ -272,7 +272,7 @@ Feature: Navigating between Primary and Secondary Tabs
     Then a dialog asking to save changes should appear
       And clicks the "Don't Save" button
       And selects the "Current Record" tab
-    Then "" should be in the "Cataloging" "Number of Objects" field
+    Then the "Cataloging" "Number of Objects" field should be empty
       And enters "25" in the "Cataloging" "Number of Objects" field
       And selects the "Object Exit" tab
     Then a dialog asking to save changes should appear
@@ -297,7 +297,7 @@ Feature: Navigating between Primary and Secondary Tabs
     Then a dialog asking to save changes should appear
       And clicks the "Don't Save" button
       And selects the "Current Record" tab
-    Then "" should be in the "Cataloging" "Number of Objects" field
+    Then the "Cataloging" "Number of Objects" field should be empty
       And enters "26" in the "Cataloging" "Number of Objects" field
       And selects the "Valuation" tab
     Then a dialog asking to save changes should appear

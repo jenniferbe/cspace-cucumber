@@ -177,10 +177,10 @@ Feature: Loan Out Tab
         Then "CQA112.11" should appear in the "Related Loan Out Records" area
 
 
-        And selects "Exhibition" from the "Loan Purpose" drop down box        
+        And selects "Exhibition" from the "Loan Purpose" drop down        
         And enters "2016-01-27" in the "Loan Status Date" field
         And enters "CQA112: Loan Status" in the "Loan Status Note" field
-        And selects "Agreed" from the "Loan Status" drop down box
+        And selects "Agreed" from the "Loan Status" drop down
         And enters "Cesar Villalobos" in the "Lender" field
         And selects "Cesar Villalobos" from autocomplete options
         And enters "Cesar Villalobos" in the "Lender's Contact" field
@@ -224,10 +224,10 @@ Feature: Loan Out Tab
 
         
         Scenario: Test 13-->
-        And selects "Research" from the "Loan Purpose" drop down box        
+        And selects "Research" from the "Loan Purpose" drop down        
         And enters "2016-02-22" in the "Loan Status Date" field
         And enters "CQA112: Loan Status Test 13" in the "Loan Status Note" field
-        And selects "Authorized" from the "Loan Status" drop down box
+        And selects "Authorized" from the "Loan Status" drop down
         And enters "Cesar Villalobos" in the "Lender" field
         And selects "Cesar Villalobos" from autocomplete options
         And enters "Cesar Villalobos" in the "Lender's Contact" field

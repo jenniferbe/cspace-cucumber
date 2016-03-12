@@ -25,7 +25,7 @@ Feature: Condition Check Secondary Tab
     Then the "Cancel changes" button at the bottom of the record "should" be clickable
     Then the "Cancel changes" button at the top of the record "should" be clickable
     Then "blastphemie" should be in the "Cataloging" "Condition Check/Assessment Reference Number" field
-      And fills in all the fields of the "Condition Check" record
+      And fills out required fields
       And enters "alagrofortei" in the "Cataloging" "Condition Checker/Assessor" vocab field
       And adds "alagrofortei" to "Local Persons"
       And saves the record
@@ -52,7 +52,7 @@ Feature: Condition Check Secondary Tab
       And selects the "Condition" tab
       And clicks the "+ Add Record" button
       And presses the "Esc" key
-    Then no changes should occur
+    Then no changes to the record should occur
       And clicks the "+ Add Record" button
       And clicks the search button
     Then a list of records should appear

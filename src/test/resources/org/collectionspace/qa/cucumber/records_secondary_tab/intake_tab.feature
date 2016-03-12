@@ -23,7 +23,7 @@ Feature: Intake Tab
 
     And clicks the "Add record" button
     And presses the "ESC" key 
-    Then no changes to the record will occur 
+    Then no changes to the record should occur 
 
   #Test 5 Scenario: Trying to add search for and add multiple intake records
     And clicks the "Add record" button 
@@ -171,8 +171,8 @@ Feature: Intake Tab
         Then "CQA110_11" should appear in the "Related Intake Records" area
 
         And enters "2016-01-31" in the "Entry Date" field
-        And selects "Enquiry" from the "Entry Reason" drop down box
-        And selects "Found on doorstep" from the "Entry Method" drop down box
+        And selects "Enquiry" from the "Entry Reason" drop down
+        And selects "Found on doorstep" from the "Entry Method" drop down
         And enters "Cesar Villalobos" in the "Depositor" field
         And selects "Cesar Villalobos" from autocomplete options
         And enters "None" in the "Depositor Requirements" field
@@ -183,7 +183,7 @@ Feature: Intake Tab
         And enters "2016-02-31" in the "Return Date" field
         And enters "2015-12-31" in the "Field Collection Date" field
         And enters "California" in the "Field collection place" field
-        And selects "commissioned" from the "Field collection Method" drop down box
+        And selects "commissioned" from the "Field collection Method" drop down
         And enters "This is a test for CQA-110" in the "Field collection note" field
         And enters "110" in the "Field collection number" field
         And enters "CQA-110 Testing" in the "Field collection event name"
@@ -199,16 +199,16 @@ Feature: Intake Tab
         And enters "110110110" in the "Policy Number" field
         And enters "2016-01-04" in the "Renewal Date" field
         And enters "Taking care of CQA-110" in the "Insurance Note" field
-        And selects "Observed" from the "Condition Check Method" drop down box
-        And selects "Consideration" from the "Condition Check Reason" drop down box
+        And selects "Observed" from the "Condition Check Method" drop down
+        And selects "Consideration" from the "Condition Check Reason" drop down
         And enters "Jennifer Be" in the "Condition Check Assessor" field
         And selects "Jennifer Be" from autocomplete options
         And enters "This is \n a test \n for 110" in the "Condition Check Note" field
         And enters "2016-01-06" in the "Condition Check Date" field
         And enters "04131995" in the "Condition Check Reference Number" field
         And enters "CQA113.2" in the "Current Location" field
-        And selects "CQA113.2" from the "Current Location" drop down box
-        And selects "Dangerous" from the " Current Location Fitness" drop down box
+        And selects "CQA113.2" from the "Current Location" drop down
+        And selects "Dangerous" from the " Current Location Fitness" drop down
         And enters "For CQA-110" in the "Current Location Note" field
         And enters "2016-01-22" in the "Location Date" field
         And enters "California" in the "Normal Location" field
@@ -260,8 +260,8 @@ Feature: Intake Tab
 
     #Test 13: Editing a saved record
         And enters "2016-01-27" in the "Entry Date" field
-        And selects "Consideration" from the "Entry Reason" drop down box
-        And selects "In person" from the "Entry Method" drop down box
+        And selects "Consideration" from the "Entry Reason" drop down
+        And selects "In person" from the "Entry Method" drop down
         And enters "Cesar Villalobos" in the "Depositor" field
         And selects "Cesar Villalobos" from autocomplete options
         And enters "Take care of CQA110-13" in the "Depositor Requirements" field
@@ -272,7 +272,7 @@ Feature: Intake Tab
         And enters "2017-02-31" in the "Return Date" field
         And enters "2016-12-31" in the "Field Collection Date" field
         And enters "California" in the "Field collection place" field
-        And selects "netted" from the "Field collection Method" drop down box
+        And selects "netted" from the "Field collection Method" drop down
         And enters "This is a test for CQA-110 Test 13" in the "Field collection note" field
         And enters "110_13" in the "Field collection number" field
         And enters "CQA-110 Testing Test 13" in the "Field collection event name"
@@ -288,16 +288,16 @@ Feature: Intake Tab
         And enters "110110110.13" in the "Policy Number" field
         And enters "2016-01-06" in the "Renewal Date" field
         And enters "Taking care of CQA-110 Test 13" in the "Insurance Note" field
-        And selects "X-Rayed" from the "Condition Check Method" drop down box
-        And selects "Damaged in transit" from the "Condition Check Reason" drop down box
+        And selects "X-Rayed" from the "Condition Check Method" drop down
+        And selects "Damaged in transit" from the "Condition Check Reason" drop down
         And enters "Jennifer Be" in the "Condition Check Assessor" field
         And selects "Jennifer Be" from autocomplete options
         And enters "This is \n a test \n for 110 \n Test 13." in the "Condition Check Note" field
         And enters "2016-01-07" in the "Condition Check Date" field
         And enters "04131995.13" in the "Condition Check Reference Number" field
         And enters "CQA113.2" in the "Current Location" field
-        And selects "CQA113.2" from the "Current Location" drop down box
-        And selects "Reasonable" from the " Current Location Fitness" drop down box
+        And selects "CQA113.2" from the "Current Location" drop down
+        And selects "Reasonable" from the " Current Location Fitness" drop down
         And enters "For CQA-110 Test 13" in the "Current Location Note" field
         And enters "2016-07-22" in the "Location Date" field
         And enters "California" in the "Normal Location" field

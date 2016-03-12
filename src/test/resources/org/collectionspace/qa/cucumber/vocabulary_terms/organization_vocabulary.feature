@@ -108,7 +108,7 @@ Feature: Organization Vocabulary Page
 #         Variation a: Create a new Organization record
 #         Variation b: Edit an existing Organization record (Search for an Organization you know exists, using the top right search area)
 #         Fill out the entire record (except for the Hierarchy section at bottom) based on the following:
-#             In the select boxes (drop down boxes), select something other than the first
+#             In the select boxes (drop downes), select something other than the first
 #             In the authority fields, either write something and add it using the small dialog that appears. Or write something and select from the options that appears.
 #             In the text areas (multiline text fields), write multiline text.
 #             In the regular text areas write regular text
@@ -155,7 +155,7 @@ Feature: Organization Vocabulary Page
 #         Take note of the Display Name of the record
 #         Click the "Delete" button in the very bottom of the organization record
 #     Expected:
-#         The clicks on the delete button should be disabled and nothing should happen
+#         The clicks on the delete button should be disabled and no changes to the record should occur
 #     Actions:
 #         Save the record
 #         Click the "Delete" button in the very bottom of the organization record
@@ -165,14 +165,14 @@ Feature: Organization Vocabulary Page
 #         click cancel.
 #     Expected
 #         Dialog should be dismissed
-#         no other changes should occur.
+#         no changes to the record should occur
 #     Actions:
 #         Click the clicks on the delete button again
 #     Actions:
 #         click the close symbol
 #     Expected
 #         Dialog should be dismissed
-#         no other changes should occur.
+#         no changes to the record should occur
 #     Actions:
 #         Click the clicks on the delete button again
 #         In the appearing dialog, click Delete
@@ -223,7 +223,7 @@ Feature: Organization Vocabulary Page
 #         Variation A: Click Cancel changes button at the "top" of the page
 #         Variation B: Click Cancel changes button at the "bottom" of the page
 #     Expected:
-#         Cancel changes buttons should be disabled and nothing should happen
+#         Cancel changes buttons should be disabled and no changes to the record should occur
 #     Actions:
 #         Edit at least one field, and click or Tab out of that field
 #         Variation A: Click Cancel changes button at the "top" of the page
@@ -237,7 +237,7 @@ Feature: Organization Vocabulary Page
 #         Variation A: After successful save, click the "Cancel changes" button at the "top" of the page
 #         Variation B: After successful save, click the "Cancel changes" button at the "bottom" of the page
 #     Expected:
-#         Cancel changes button should be disabled and nothing should happen
+#         Cancel changes button should be disabled and no changes to the record should occur
 #
 # Scenario: Warning on attempting to leave edited page
 #
@@ -310,11 +310,11 @@ Feature: Organization Vocabulary Page
 #     Actions:
 #         Click on "Museum of the Moving Image"
 #     Expected:
-#         "Museum of the Moving Image" "should not" be clickable and nothing should happen
+#         "Museum of the Moving Image" "should not" be clickable and no changes to the record should occur
 #     Actions:
 #         Click on "American Museum of the Moving Image"
 #     Expected:
-#         "American Museum of the Moving Image" "should not" be clickable and nothing should happen
+#         "American Museum of the Moving Image" "should not" be clickable and no changes to the record should occur
 #     Actions:
 #         Click on "Moving Image"
 #     Expected:
@@ -374,7 +374,7 @@ Feature: Organization Vocabulary Page
 #     Actions:
 #         Try to type something in the equivalent context field
 #     Expected:
-#         Equivalent context field should either be hidden, or should be read-only and nothing should happen
+#         Equivalent context field should either be hidden, or should be read-only and no changes to the record should occur
 #
 #     Actions:
 #         Search for "Foo Subsidiary", and edit that record.
@@ -441,14 +441,14 @@ Feature: Organization Vocabulary Page
 #         Click No
 #     Expected:
 #         Dialog should be dismissed
-#         No changes should occur
+#         no changes to the record should occur
 #
 #     Actions:
 #         Change the Narrower context field to "Foo Two" again
 #         In the appearing dialog, click the close symbol
 #     Expected:
 #         Dialog should be dismissed
-#         No changes should occur
+#         no changes to the record should occur
 #
 #     Actions:
 #         Change the Narrower context field to "Foo Two" again

@@ -173,13 +173,13 @@ Feature: Valuation Tab
         And saves the record
         Then the message "Relation successfully created." should appear
 
-        And selects "Danish Krone" from the "Currency" drop down box
+        And selects "Danish Krone" from the "Currency" drop down
         And enters "116" in the "Amount" field
         And enters "Cesar Villalobos" in the "Source" field
         And clicks on "Cesar Villalobos" from autocomplete options
         And enters "2016-01-01" in the "Date" field
         And enters "2016-01-02" in the "Renewal Date" field
-        And selects "Current Value" from the "Type" drop down box
+        And selects "Current Value" from the "Type" drop down
         And enters "CQA116 \n Test" in the "Note" field
         And saves the record
         Then the message "Valuation Control successfully saved" should appear
@@ -200,13 +200,13 @@ Feature: Valuation Tab
         Then the "Packing Note" field should contain "Packing for CQA115"
 
         ## Test 13
-        And selects "Euro" from the "Currency" drop down box
+        And selects "Euro" from the "Currency" drop down
         And enters "120" in the "Amount" field
         And enters "Jennifer Be" in the "Source" field
         And clicks on "Jennifer Be" from autocomplete options
         And enters "2016-01-10" in the "Date" field
         And enters "2017-01-02" in the "Renewal Date" field
-        And selects "Original Value" from the "Type" drop down box
+        And selects "Original Value" from the "Type" drop down
         And enters "CQA116 \n Test \n for subtest Test 13" in the "Note" field
         
         And saves the record

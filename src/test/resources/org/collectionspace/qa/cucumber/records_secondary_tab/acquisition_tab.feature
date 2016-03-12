@@ -176,7 +176,7 @@ Feature: Acquisition Tab
         And selects "Cesar Villalobos" from autocomplete options
         And enters "2016-02-02" in the "Acquisition authorizer date" field
         And enters "2016-03-03" in the "Acquisition Date" field
-        And selects "Purchase" from the "Acquisition Method" drop down box
+        And selects "Purchase" from the "Acquisition Method" drop down
         And enters "Cesar Villalobos" in the "Acquisition Source" field
         And selects "Cesar Villalobos" from autocomplete options
         And enters "Cesar Villalobos" in the "Owner" field
@@ -190,7 +190,7 @@ Feature: Acquisition Tab
         And enters "CQA93_11 Reason \n none" in the "Acquisition Reason" field
         And enters "CQA93_11 Acquisition Note \n none" in the "Acquisition Note" field
         And enters "CQA93_11 Provisos \n none" in the "Acquisition Provisos" field
-        And selects "Euro" from the "Currency" drop down box
+        And selects "Euro" from the "Currency" drop down
         And enters "93.7" in the "Value" field
         And enters "CQA93 Fund" in the "Funding source" field
         And selects "CQA93 Fund" from autocomplete options
@@ -231,7 +231,7 @@ Feature: Acquisition Tab
         And selects "Jennifer Be" from autocomplete options
         And enters "2017-02-02" in the "Acquisition authorizer date" field
         And enters "2017-03-03" in the "Acquisition Date" field
-        And selects "Purchase" from the "Acquisition Method" drop down box
+        And selects "Purchase" from the "Acquisition Method" drop down
         And enters "Jennifer Be" in the "Acquisition Source" field
         And selects "Jennifer Be" from autocomplete options
         And enters "Jennifer Be" in the "Owner" field
@@ -245,7 +245,7 @@ Feature: Acquisition Tab
         And enters "CQA93_13 Reason \n none" in the "Acquisition Reason" field
         And enters "CQA93_13 Acquisition Note \n none" in the "Acquisition Note" field
         And enters "CQA93_13 Provisos \n none" in the "Acquisition Provisos" field
-        And selects "Euro" from the "Currency" drop down box
+        And selects "Euro" from the "Currency" drop down
         And enters "93.13.7" in the "Value" field
         And enters "CQA93 Fund" in the "Funding source" field
         And selects "CQA93 Fund" from autocomplete options

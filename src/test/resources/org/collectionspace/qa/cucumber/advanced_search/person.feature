@@ -177,7 +177,7 @@ Feature: Advanced Search - Person
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search" 
       And selects "Person" from record type dropdown
-      And selects "any (OR)" from boolean dropdown
+      And selects "any (OR)" from the "Field-based Search" drop down
   #should automatically go in earliest.. i think
       And enters "1975-06-05" in the "Advanced Search" "Birth Date" field
       And clicks on the "Advanced Search" "Gender" field
@@ -190,7 +190,7 @@ Feature: Advanced Search - Person
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Person" from record type dropdown
-      And selects "all (AND)" from boolean dropdown
+      And selects "all (AND)" from the "Field-based Search" drop down
       And enters "1975-06-06" in the "Advanced Search" "Birth Date" field
       And clicks on the "Advanced Search" "Gender" field
     Then a drop down list should appear in the "Gender" row
@@ -207,8 +207,8 @@ Feature: Advanced Search - Person
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Person" from record type dropdown
-      And selects "any (OR)" from boolean dropdown
-      And enters "testtest" in the keyword search field
+      And selects "any (OR)" from the "Field-based Search" drop down
+      And enters "testtest" in the "keyword search" field
       And enters "1975-06-05" in the "Advanced Search" "Birth Date" field
       And clicks on the "Advanced Search" "Gender" field
     Then a drop down list should appear in the "Gender" row
@@ -220,8 +220,8 @@ Feature: Advanced Search - Person
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
       And selects "Person" from record type dropdown
-      And selects "all (AND)" from boolean dropdown
-      And enters "textbook" in the keyword search field
+      And selects "all (AND)" from the "Field-based Search" drop down
+      And enters "textbook" in the "keyword search" field
       And enters "1975-06-05" in the "Advanced Search" "Birth Date" field
       And clicks on the "Advanced Search" "Gender" field
     Then a drop down list should appear in the "Gender" row

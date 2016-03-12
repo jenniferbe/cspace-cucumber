@@ -44,9 +44,9 @@ Scenario: All fields saved on new cataloging record and edited record
     When user enters "test10" in the "Cataloging" "Activity" field
     When user enters "test11" in the "Cataloging" "Event Name" field
     When user enters "test12" in the "Cataloging" "Event Name Type" field
-    When user enters "test13" in the "Cataloging" "Inscriber" field # in Inscription Content
+    When user enters "test13" in the "Cataloging" "Inscriber" field
       And selects "Local Persons" from dropdown in "Inscriber"
-    When user enters "test13" in the "Cataloging" "Inscriber" field # in Inscription Description
+    When user enters "test13" in the "Cataloging" "Inscriber" field
       And selects "Local Persons" from dropdown in "Inscriber"
 
     # all under Object Production Information
@@ -100,7 +100,7 @@ Scenario: Removing values from all fields
 Scenario: Warning on attempting to leave edited page with 4 variations: Variation I: click Save button; II: click Don't Save button; III: click the Cancel button; IV: click the close symbol in NE corner
     When user enters "2" in the "Cataloging" "Date Period" field
     And clicks "Create New"
-    Then a delete confirmation dialog should appear # using this step def since dialog css same for delete and leave 
+    Then a delete confirmation dialog should appear
       And clicks the confirmation save button
     Then the record is successfully saved   
     Given user is on the "Create New" page 
@@ -192,11 +192,11 @@ Scenario: Deletion of Record
     Then a dialog should appear asking you to delete this record and its relationships
     And clicks cancel button
     Then the "Dialog" should be dismissed
-    Then no other changes should occur.
+    Then no changes to the record should occur
     And clicks on the delete button
     And clicks on the "close" button
     Then "Dialog" should be dismissed
-    Then no other changes should occur.
+    Then no changes to the record should occur
     And clicks on the delete button
     Then the message "Find and Edit" should be displayed
     And selects Object from the drop down

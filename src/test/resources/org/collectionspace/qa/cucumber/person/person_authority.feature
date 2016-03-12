@@ -63,7 +63,7 @@ Feature: Person Vocabulary Data Entry
         And selects the "Cataloging" radio button on the Create New page		
         And clicks on the Create button		
       Then the titlebar should contain "Cataloging"		
-        And fills in all the fields of the "Cataloging" record		
+        And fills out required fields		
         And enters "<text>" in the "Cataloging" "<field>" vocab field		
       Then the vocabulary autocomplete should contain "<options>"		
         And clicks on "<choice>" from autocomplete options		
@@ -99,7 +99,7 @@ Feature: Person Vocabulary Data Entry
     Scenario: Create Person record with All fields filled in, then empty it		
       Given user is on a blank "Person" record		
         And repeats all repeatable fields		
-        And fills in all the fields of the "Person" record		
+        And fills out required fields		
         And saves the record		
       Then the record is successfully saved		
       Then all fields in "Person" record should be filled in		

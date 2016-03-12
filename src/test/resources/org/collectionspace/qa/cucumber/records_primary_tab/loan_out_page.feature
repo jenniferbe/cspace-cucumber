@@ -84,7 +84,7 @@ Feature: Loan Out Page Testing
     When user clears the "Loan Out Number" field
     And clicks on the "Save" button
     Then the error message bar should appear with "Please specify an Loan Out Number"
-    And the record should not be saved #NOT be saved
+    And the record should not be saved 
     And close the browser
 
   #Incomplete
@@ -185,21 +185,21 @@ Feature: Loan Out Page Testing
     And selects "Loan Out" from the top nav search record type select field
     And clicks on the top nav search submit button
     # And #selects one of the loan out records
-    And clicks the "Cancel Changes" button on the top
-    Then the "Cancel Changes" button on the top "should not" be clickable
-    When user clicks the "Cancel Changes" button on the bottom
-    Then the "Cancel Changes" button on the bottom "should not" be clickable
+    And clicks the "Cancel Changes" button on the "top"
+    Then the "Cancel Changes" button on the "top" "should not" be clickable
+    When user clicks the "Cancel Changes" button on the "bottom"
+    Then the "Cancel Changes" button on the "bottom" "should not" be clickable
     When user enters "testnote" in the "Loan Out Note" field
-    And clicks the "Cancel Changes" button on the top
+    And clicks the "Cancel Changes" button on the "top"
     Then nothing should be in the "Loan Out Note" field
     When user enters "testnote" in the "Entry Note" field
-    And clicks the "Cancel Changes" button on the bottom
+    And clicks the "Cancel Changes" button on the "bottom"
     Then nothing should be in the "Loan Out Note" field
     When user clicks on the "Save" button
-    And clicks the "Cancel Changes" button on the top
-    Then the "Cancel Changes" button on the top "should not" be clickable
-    When user clicks the "Cancel Changes" button on the bottom
-    Then the "Cancel Changes" button on the bottom "should not" be clickable
+    And clicks the "Cancel Changes" button on the "top"
+    Then the "Cancel Changes" button on the "top" "should not" be clickable
+    When user clicks the "Cancel Changes" button on the "bottom"
+    Then the "Cancel Changes" button on the "bottom" "should not" be clickable
     And close the browser
 
   #Incomplete
@@ -228,27 +228,5 @@ Feature: Loan Out Page Testing
     Then the error message bar should appear with "Please save the record you are creating before trying to relate other records to it"
     And close the browser
 
-#Keyboard Navigation
 
-  #Incomplete
-  Scenario: All fields available via the keyboard
-    Given user is on the "Create New" page
-    And selects the "Loan Out" radio button on the Create New page
-    And clicks on the Create button
-    And presses the "Tab" key
-    # Then #the first field should be accessable
-    When #user repeats pressing "Tab" on all repeatable fields
-    # Then #all fields should be accessable
-    #Finish and add the other buttons that are special cases
-    And close the browser
-
-  #Incomplete
-  Scenario: Vocabulary Fields usable via keyboard only
-    Given user is on the "Create New" page
-    And selects the "Loan Out" radio button on the Create New page
-    And clicks on the Create button
-    And presses the "Tab" key #until reaching the "Borrower" field
-    And enters "James" in the "Borrower" field #possibly incorrect
-    
-    And close the browser
 

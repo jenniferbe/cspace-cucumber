@@ -172,7 +172,7 @@ Feature: Exhibition Planning Tab
       
 
         And enters "CQA105_Test_11" in the "Exhibition Title" field
-        And selects "Permanent" from the "Exhibition Type" drop down box
+        And selects "Permanent" from the "Exhibition Type" drop down
 
         And enters "CQA105_Room" in the "Venues" field
         And selects "CQA105_Room" from autocomplete options
@@ -188,7 +188,7 @@ Feature: Exhibition Planning Tab
         And selects "Cesar Villalobos" from autocomplete options
         And enters "Cesar Villalobos" in the "Person" field
         And selects "Cesar Villalobos" from autocomplete options
-        And selects "Curator" from the "Role" drop down box
+        And selects "Curator" from the "Role" drop down
         And enters "CQA-105 Planning Notes" in the "Planning Notes" field
         And enters "CQA-105 Curatorial Notes" in the "Curatorial Notes" field
         And enters "CQA-105 Boilerplate Text" in the "Boilerplate Text" field
@@ -199,13 +199,13 @@ Feature: Exhibition Planning Tab
         And enters "CQA105 Notes Field" in the "Notes" field
         And enters "Cesar Villalobos" in the "Reference" field
         And selects "Cesar Villalobos" from autocomplete options
-        And selects "Catalog" from the "Reference Type" drop down box
+        And selects "Catalog" from the "Reference Type" drop down
         And enters "CQA105 Ref Box" in the "Reference Note" field
         And enters "CQA105.11.3" in the "Section" field
         And enters "CQA105.11.4" in the "Location" field
         And enters "CQA105.11.5" in the "Objects" field
         And enters "CQA105.11.6" in the "Remarks" field
-        And selects "Labels written" from the "Status" drop down box
+        And selects "Labels written" from the "Status" drop down
         And enters "2016-05-05" in the "Status Date" field
         And enters "CQA105.11.6" in the "Remarks" field
         And enters "Yes" in the "Object" field
@@ -264,7 +264,7 @@ Feature: Exhibition Planning Tab
         ###Test 13
         
         And enters "CQA105_Test_11 Test 13" in the "Exhibition Title" field
-        And selects "Temporary" from the "Exhibition Type" drop down box
+        And selects "Temporary" from the "Exhibition Type" drop down
         And enters "CQA105_Room" in the "Venues" field
         And selects "CQA105_Room" from autocomplete options
         And enters "2017-01-01" in the "Opening Date" field
@@ -279,7 +279,7 @@ Feature: Exhibition Planning Tab
         And selects "Jennifer Be" from autocomplete options
         And enters "Jennifer Be" in the "Person" field
         And selects "Jennifer Be" from autocomplete options
-        And selects "Educator" from the "Role" drop down box
+        And selects "Educator" from the "Role" drop down
         And enters "CQA-105_13 Planning Notes" in the "Planning Notes" field
         And enters "CQA-105_13 Curatorial Notes" in the "Curatorial Notes" field
         And enters "CQA-105_13 Boilerplate Text" in the "Boilerplate Text" field
@@ -290,13 +290,13 @@ Feature: Exhibition Planning Tab
         And enters "CQA105 Notes Field 13" in the "Notes" field
         And enters "Jennifer Be" in the "Reference" field
         And selects "Jennifer Be" from autocomplete options
-        And selects "Catalog" from the "Reference Type" drop down box
+        And selects "Catalog" from the "Reference Type" drop down
         And enters "CQA105 Ref Box Test 13" in the "Reference Note" field
         And enters "CQA105.11.13.3" in the "Section" field
         And enters "CQA105.11.13.4" in the "Location" field
         And enters "CQA105.11.13.5" in the "Objects" field
         And enters "CQA105.11.13.6" in the "Remarks" field
-        And selects "Labels written" from the "Status" drop down box
+        And selects "Labels written" from the "Status" drop down
         And enters "2017-05-05" in the "Status Date" field
         And enters "CQA105.11.13.6" in the "Remarks" field
         And enters "No" in the "Object" field
@@ -457,31 +457,3 @@ Feature: Exhibition Planning Tab
         And clicks on the delete button 
         Then the deletion should be confirmed in a dialog
         Then close the browser 
-
-	Scenario: Testing functional Accessibility #31
-	    Given user is in the "My CollectionSpace" page
-	    And navigates to the record with identification number "CQA105_NE"
-	    And selects the "Exhibition" tab 
-
-	    And presses the "Tab" key until reaching the "Add record" button
-	    And presses the "Enter" key
-	    And presses the "Tab" key until reaching the "Create" button
-	    And presses the "Enter" key  
-	    And presses the "Tab" key until reaching the "Run" button
-	    Then everything should have been clickable  
-	    And enters "CQA105.9" in the "Exhibition Number" field
-	    And saves the record
-	    And presses the "Tab" key until reaching the text field containing "CQA105.9"  
-	    Then the text field "should" be clickable   
-
-	    And selects "Exhibition" from the top nav search record type select field
-	    And enters "CQA105.9" in the top nav search field
-	    Then the search results should contain "CQA105.9"
-	    And clicks on result with text "CQA105.9"
-	    Then "CQA105.9" should be in the "Identification Number" field
-	    And clicks on the delete button 
-
-	    Then a delete confirmation dialog should appear  
-	    And clicks on the delete button 
-	    Then the deletion should be confirmed in a dialog
-	    Then close the browser 

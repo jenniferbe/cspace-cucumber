@@ -57,7 +57,7 @@ Feature: Permission Enforcement
       And clicks on the "Save" button
     Then user is successfully saved
     Then a confirmation dialog should appear
-      And clicks the recently created sser
+      And clicks the recently created user
       And assigns a different role
       And clicks on the "Save" button
     Then user is not successfully saved

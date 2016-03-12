@@ -165,10 +165,10 @@ Feature: Media Handling Page Tab
         Then the message "Relation successfully created." should appear  
         
         And enters "CQA114 Form Filling" in the "Title" field
-        And selects "base" from the "Part" drop down box
-        And selects "area" from the "Dimension" drop down box
-        And selects "Ruler" from the "Method" drop down box
-        And selects "carats" from the "Dimension Unit" drop down box
+        And selects "base" from the "Part" drop down
+        And selects "area" from the "Dimension" drop down
+        And selects "Ruler" from the "Method" drop down
+        And selects "carats" from the "Dimension Unit" drop down
         And enters "Cesar Villalobos" in the "Measured By" field
         And selects "Cesar Villalobos" from autocomplete options
         And enters "114.2" in the "Value" field
@@ -181,13 +181,13 @@ Feature: Media Handling Page Tab
         And selects "Cesar Villalobos" from autocomplete options
         And enters "Cesar Villalobos" in the "Publisher" field
         And selects "Cesar Villalobos" from autocomplete options
-        And selects "Dataset" from the "Types" drop down box
+        And selects "Dataset" from the "Types" drop down
         And enters "CQA114 Coverage Box" in the "Coverage" field
         And enters "2016-02-02" in the "Dates" field
         And enters "CQA114 Source Box" in the "Source" field
         And enters "CQA114.1" in the "Relations" field
         And enters "None" in the "Subjects" field     
-        And selects "French" from the "Languages" drop down box
+        And selects "French" from the "Languages" drop down
         And enters "No copyright here" in the "Copyright statement" field
         And enters "Cesar Villalobos" in the "Rights holder" field
         And selects "Cesar Villalobos" from autocomplete options
@@ -223,10 +223,10 @@ Feature: Media Handling Page Tab
 
         #### Test 13
         And enters "CQA114 Form Filling Part 1" in the "Title" 
-        And selects "frame" from the "Part" drop down box
-        And selects "base" from the "Dimension" drop down box
-        And selects "Odometers" from the "Method" drop down box
-        And selects "feet" from the "Dimension Unit" drop down box
+        And selects "frame" from the "Part" drop down
+        And selects "base" from the "Dimension" drop down
+        And selects "Odometers" from the "Method" drop down
+        And selects "feet" from the "Dimension Unit" drop down
         And enters "Jennifer Be" in the "Measured By" field
         And selects "Jennifer Be" from autocomplete options
         And enters "114.2.2" in the "Value" field
@@ -239,13 +239,13 @@ Feature: Media Handling Page Tab
         And selects "Jennifer Be" from autocomplete options
         And enters "Jennifer Be" in the "Publisher" field
         And selects "Jennifer Be" from autocomplete options
-        And selects "Dataset" from the "Types" drop down box
+        And selects "Dataset" from the "Types" drop down
         And enters "CQA114 Coverage Box edited" in the "Coverage" field
         And enters "2017-02-02" in the "Dates" field
         And enters "CQA114 Source Box edited" in the "Source" field
         And enters "CQA114.1" in the "Relations" field
         And enters "None" in the "Subjects" field     
-        And selects "German" from the "Languages" drop down box
+        And selects "German" from the "Languages" drop down
         And enters "All copyrights deserved" in the "Copyright statement" field
         And enters "Jennifer Be" in the "Rights holder" field
         And selects "Jennifer Be" from autocomplete options
