@@ -433,4 +433,17 @@ public class StepDefs {
                 By.className("csc-titleBar-value"), term));
     }
 
+    @And("^(?:the user )?(?:user )?presses the tab key until reaching the \"([^\"]*)\" button(?: )?(?:#.*)?$")
+    public void presses_the_tab_key_until_reaching_button(String button) throws Throwable {
+        WebElement destinationButton = driver.findElement(By.name(button));
+        int k = 0;
+        while (k < 500) {
+            k ++;
+            if(driver.switchTo().activeElement().equals(destinationButton)) {
+                return
+            }
+            driver.switchTo().activeElement().sendKeys(Keys.Tab);
+        }
+        assertTrue(driver.switchTo().activeElement().equals(destinationButton));
+    }
 }
