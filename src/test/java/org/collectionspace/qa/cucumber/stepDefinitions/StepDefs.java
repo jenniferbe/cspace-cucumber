@@ -10,6 +10,7 @@ import cucumber.api.java.en.When;
 
 import org.collectionspace.qa.utils.Pages;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -438,11 +439,11 @@ public class StepDefs {
         WebElement destinationButton = driver.findElement(By.name(button));
         int k = 0;
         while (k < 500) {
-            k ++;
+            k++;
             if(driver.switchTo().activeElement().equals(destinationButton)) {
-                return
+                return;
             }
-            driver.switchTo().activeElement().sendKeys(Keys.Tab);
+            driver.switchTo().activeElement().sendKeys(Keys.TAB);
         }
         assertTrue(driver.switchTo().activeElement().equals(destinationButton));
     }
