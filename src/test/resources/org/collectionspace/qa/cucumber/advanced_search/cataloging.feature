@@ -17,7 +17,7 @@ Feature: Advanced Search ­Cataloging
         And selects "dry" from the "Form" drop down
         And enters "Cesar Villalobos" in the "Inscriber" field
         And selects "Cesar Villalobos" from autocomplete options
-        And enters "Drawings" in the "Inscription Method" fieldnamed "Inscription Method" but rather just
+        And enters "Drawings" in the "Inscription Method" field named "Inscription Method"
         And enters "Polyester" in the "Material" field
         And selects "forgery" from the "Object Status" drop down
         And selects "larva" from the "Phase" drop down
@@ -110,7 +110,7 @@ Feature: Advanced Search ­Cataloging
         # Inscription Method (Non­Textual Inscription) 
         And clicks the "Advanced Search" button
         And selects "Cataloging" from the "Record Type Select" drop down
-        And enters "Drawings" in the "Inscription Method" fieldnamed "Inscription Method" but rather just
+        And enters "Drawings" in the "Inscription Method" field named "Inscription Method"
         And clicks the "search" button
         Then the search results should contain "CQA72.1"
 

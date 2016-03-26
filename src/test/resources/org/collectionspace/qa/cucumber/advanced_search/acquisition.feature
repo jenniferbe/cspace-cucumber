@@ -5,7 +5,7 @@ Feature: Advanced Search ­ Acquisition
     Searching for a record based on boolean-search as well as regular search terms
 
 	Scenario: Advanced Search Fields and wildcard
-	Given user is in the "Create New" page
+	    Given user is in the "Create New" page
         And selects the "Acquisition" radio button on the Create New page
         And enters "CQA71.1" in the "Acquisition Reference Number" field 
         And enters "2016-01-01" in the "Accession date" field

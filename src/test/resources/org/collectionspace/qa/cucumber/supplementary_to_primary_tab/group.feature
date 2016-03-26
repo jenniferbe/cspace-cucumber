@@ -56,11 +56,11 @@ Feature: Supplementary Manual QA - Group
       And selects the "Group" radio button on the Create New page
       And clicks on the Create button
     Given user clicks on the "Fold" symbol next to "Group Information"
-    Then the "Group Information" section should fold
-    Then the "Fold" symbol next to "Group Information" should be a folded symbol
+    Then the "Group Information" section should "fold"
+    Then the "Fold" symbol next to "Group Information"  should be a "folded" symbol
     Given user clicks on the "Fold" symbol next to "Group Information"
-    Then the "Group Information" section should unfold
-    Then the "Fold" symbol next to "Group Information" should be an unfolded symbol
+    Then the "Group Information" section should "unfold"
+    Then the "Fold" symbol next to "Group Information"  should be a "unfolded" symbol
     Then close the browser
 
   Scenario: Vocabulary Pivoting

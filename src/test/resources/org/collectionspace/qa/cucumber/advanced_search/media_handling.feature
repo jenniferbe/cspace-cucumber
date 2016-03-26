@@ -250,7 +250,7 @@ Feature: Advanced Search - Media Handling
     Then the titlebar should contain "Advanced Search"
       And enters "testtest" in the "keyword search" field
       And selects "Media Handling" from record type dropdown
-      And enters "all (AND)" from boolean dropdown
+      And And selects "all (AND)" from the "Field-based Search" drop down
       And enters "Jane Doe" in the "Advanced Search" "Creator" vocab field
       And clicks on "Jane Doe" from autocomplete options
       And enters "Jane Doe" in the "Advanced Search" "Publisher" vocab field

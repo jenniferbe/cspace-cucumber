@@ -48,7 +48,7 @@ Feature: Structured Objects- QA Test Plan
 		And enters "2012.12.1a.2" in the top nav search field
 		And clicks on the top nav search submit button
 		And clicks on result with text "2012.12.1a.2"
-		Then the "Equivalent component" field should not be editable  
+		Then Then the "Equivalent component" should be in "Read Only" mode  
 		Then the "Equivalent component" field should contain "2012.12.1a.1"
 
 		And enters "2012.12.1a.2a" in the "Object component" field
