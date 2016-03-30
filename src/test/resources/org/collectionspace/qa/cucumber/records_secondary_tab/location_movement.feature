@@ -176,11 +176,11 @@ Feature: Location/Movement/Inventory Control Tab
 
         And clicks the "+ Add Record" button
         And clicks on the Create button
-        And saves the record
+        And clicks the "Save" button
         Then the message "Please specify a Current Location" should appear 
         And enters "CQA113.2" in the "Current Location" field
         And clicks on "CQA113.2" from autocomplete options
-        And saves the record
+        And clicks the "Save" button
         Then the message "Relation successfully created." should appear
 
 
@@ -204,7 +204,7 @@ Feature: Location/Movement/Inventory Control Tab
         And enters "2016-01-11" in the "Inventory Date" field
         And enters "2016-01-12" in the "Next Inventory Date" field
         And enters "CQA113 Third Note Box" in the "Note" field
-        And saves the record
+        And clicks the "Save" button
         Then the message "Location/Movement/Inventory successfully saved" should appear
 
         Then the "Reference Number" field should contain "CQA113.11"
@@ -248,7 +248,7 @@ Feature: Location/Movement/Inventory Control Tab
         And enters "2016-02-11" in the "Inventory Date" field
         And enters "2016-02-12" in the "Next Inventory Date" field
         And enters "CQA113 Third Note Box Test 13" in the "Note" field
-        And saves the record
+        And clicks the "Save" button
         Then the message "Location/Movement/Inventory successfully saved" should appear
 
         Then the "Reference Number" field should contain "CQA113.11"
@@ -302,7 +302,7 @@ Feature: Location/Movement/Inventory Control Tab
         And enters "CQA113.2" in the "Current Location" field
         And selects "CQA113.2" from the drop down options 
 
-        And saves the record
+        And clicks the "Save" button
         And clicks the "Delete Relation" button on the row that reads "CQA113.7"
         Then a delete confirmation dialog should appear
         And clicks cancel button
@@ -347,7 +347,7 @@ Feature: Location/Movement/Inventory Control Tab
         And enters "CQA113.2" in the "Current Location" field
         And selects "CQA113.2" from the drop down options 
 
-        And saves the record
+        And clicks the "Save" button
         And clicks the result with text "CQA113.8"
         
         And clicks the "Delete this relation." button

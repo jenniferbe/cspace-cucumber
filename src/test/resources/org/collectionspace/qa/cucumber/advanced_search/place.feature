@@ -23,7 +23,7 @@ Feature: Advanced Search - Place
       And enters "I love you honeybear" in the "Place" "Place note" field
       And enters "Travvy" in the "Place" "Owner" vocab field
       And adds "Travvy" to "Local Persons"
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"

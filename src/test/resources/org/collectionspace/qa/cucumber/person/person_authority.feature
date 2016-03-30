@@ -14,7 +14,7 @@ Feature: Person Vocabulary Data Entry
       And clicks on the Create button
     Then the titlebar should contain "Local Person"
       And enters "Pat Smaller" in the "Person" "Display Name" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Then "Pat Smaller" should be in the "Person" "Display Name" field
     Then the titlebar should contain "Local Person"
@@ -28,7 +28,7 @@ Feature: Person Vocabulary Data Entry
         And clicks on the Create button		
       Then the titlebar should contain "ULAN Persons"		
         And enters "Joe Bean Jr" in the "Person" "Display Name" field		
-        And saves the record		
+        And clicks the "Save" button		
       Then the record is successfully saved		
       Then "Joe Bean Jr" should be in the "Person" "Display Name" field		
       Then the titlebar should contain "ULAN Person"		
@@ -67,7 +67,7 @@ Feature: Person Vocabulary Data Entry
         And enters "<text>" in the "Cataloging" "<field>" vocab field		
       Then the vocabulary autocomplete should contain "<options>"		
         And clicks on "<choice>" from autocomplete options		
-        And saves the record		
+        And clicks the "Save" button		
       Then the record is successfully saved		
       Then "<choice>" should be in the "Cataloging" "<field>" vocab field		
       Then "<choice>" should appear in the "Terms Used" area		
@@ -83,7 +83,7 @@ Feature: Person Vocabulary Data Entry
     Scenario: Display Name		
       Given user is on a blank "Person" record		
         And enters "James" in the "Person" "Forename" field		
-        And saves the record		
+        And clicks the "Save" button		
       Then the error message bar should appear with "Please specify a Display Name"		
         And clicks OK to cancel error message		
         And enters "James Earl Jones" in the "Person" "Display Name" field		
@@ -100,11 +100,11 @@ Feature: Person Vocabulary Data Entry
       Given user is on a blank "Person" record		
         And repeats all repeatable fields		
         And fills out required fields		
-        And saves the record		
+        And clicks the "Save" button		
       Then the record is successfully saved		
       Then all fields in "Person" record should be filled in		
         And clears all fields of the "Person" record		
-        And saves the record		
+        And clicks the "Save" button		
       Then all fields of the "Person" record should be empty		
       Then close the browser		
 		
@@ -112,7 +112,7 @@ Feature: Person Vocabulary Data Entry
       Given user is on a blank "Person" record		
         And enters "Delete Me" in the "Person" "Display Name" field		
       Then the "delete" button "should not" be clickable		
-        And saves the record		
+        And clicks the "Save" button		
       Then the record is successfully saved		
         And clicks on the delete button 
 		

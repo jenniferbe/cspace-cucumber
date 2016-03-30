@@ -22,7 +22,7 @@ Feature: Advanced Search - Object Exit
     Then a drop down list should appear in the "Exit Reason" row
       And selects "Deaccession" from dropdown in "Exit Reason" row
       And enters "textbook" in the "Object Exit" "Exit Note" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
@@ -141,7 +141,7 @@ Feature: Advanced Search - Object Exit
     Then a drop down list should appear in the "Exit Reason" row
       And selects "Return of Loan" from dropdown in "Exit Reason" row
       And enters "testtest" in the "Exit Note" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Given user is on the "Create New" page
       And selects the "Object Exit" radio button on the Create New page
@@ -154,7 +154,7 @@ Feature: Advanced Search - Object Exit
     Then a drop down list should appear in the "Exit Reason" row
       And selects "Return of Loan" from dropdown in "Exit Reason" row
       And enters "testtest" in the "Exit Note" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Given user is on the "Create New" page
       And selects the "Object Exit" radio button on the Create New page
@@ -167,7 +167,7 @@ Feature: Advanced Search - Object Exit
     Then a drop down list should appear in the "Exit Reason" row
       And selects "Disposal" from dropdown in "Exit Reason" row
       And enters "testtest" in the "Exit Note" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
@@ -242,7 +242,7 @@ Feature: Advanced Search - Object Exit
       And enters "1993" in the "Object Exit" "Exit Date" "Latest Year" field
       And enters "4" in the "Object Exit" "Exit Date" "Latest Month" field
       And enters "19" in the "Object Exit" "Exit Date" "Latest Day" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"

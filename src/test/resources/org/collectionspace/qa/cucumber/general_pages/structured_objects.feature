@@ -20,7 +20,7 @@ Feature: Structured Objects- QA Test Plan
 		And enters "2012.12.1a.2" in the "Object component" field
 		And clicks on the "Create new" button
 		And selects "Separable part" in the "Object component type" row
-		And saves the record
+		And clicks the "Save" button
 
 		# For the following "Thens", they might not be specific enough
 		# In the Webpage, there are different rows and I'm not entirely sure how to discriminate amongst them
@@ -62,7 +62,7 @@ Feature: Structured Objects- QA Test Plan
 		And enters "2012.12.1a.2c" in the "Object component" field
 		And clicks on the "Create new" button
 		And clicks the plus to repeat the "Object component" form
-		And saves the record
+		And clicks the "Save" button
 
 		Then the "Broader Object" field should contain "2012.12.1a.2a"
 		Then the "Object component" field should contain "2012.12.1a.2b"
@@ -94,7 +94,7 @@ Feature: Structured Objects- QA Test Plan
 		And clicks the plus to repeat the "Object component" form   
 		And enters "2012.12.1a.1b" in the "Object component" field
 		And clicks on the "Create new" button
-		And saves the record
+		And clicks the "Save" button
 
 		Then the "Broader object" field should contain "2012.12.1a"
 		Then the "Equivalent component" field should contain "2012.12.1a.2"
@@ -162,7 +162,7 @@ Feature: Structured Objects- QA Test Plan
 		Then a dialog containing the message "Warning: null currently has broader term 2012.12.1a.2. Change broader term?" should be displayed
 
 		And clicks the "Yes" button
-		And saves the record
+		And clicks the "Save" button
 
 		Then the "Object component" field should contain "012.12.1a.2b" 
 		And navigates to the record with identification number "012.12.1a.2b"
@@ -178,7 +178,7 @@ Feature: Structured Objects- QA Test Plan
 		And clicks the plus to repeat the "Object component" form   
 		And enters "2012.12.1a.2b.0000" in the "Object component" field 
  		And clicks on the "Create new" button
-		And saves the record
+		And clicks the "Save" button
 		And clicks on the delete button 
 
 		Then a dialog containing the message "This Cataloging record can not be removed. It has a Narrower Context." should be displayed
@@ -291,13 +291,13 @@ Feature: Structured Objects- QA Test Plan
 		And enters "test" in the "Brief Description" field
 		And enters "2013.12.1" in the "Broader object" field
 		And clicks on the "Create new" button
-		And saves the record
+		And clicks the "Save" button
 
 		And clicks on the "Add" button in the "Procedures" box
 		# And adds any related procedural record of any kind
 		And enters "2013.12.2" in the "Object component" field
 		And clicks on the "Create new" button
-		And saves the record
+		And clicks the "Save" button
 		And clicks on the "Go To" button next to the "Broader Object" field
 
 		Then the "Identification Number" field should contain "2013.12.2"
@@ -321,7 +321,7 @@ Feature: Structured Objects- QA Test Plan
 		And enters "2013.12.1a.1" in the "Object component" field
 		# then a message will flash saying to not forget --> doesnt happen
 
-		And saves the record
+		And clicks the "Save" button
 		And clicks on the "Go To" button next to the "Object component" field
 
 		Then the "Identification Number" field should contain "2013.12.1a.1"

@@ -18,7 +18,7 @@ Feature: Advanced Search - Valuation
       And enters "sarcastish" in the "Valuation Control" "Source" vocab field
       And adds "sarcastish" to "Local Persons" 
       And enters "textbook" in the "Valuation Control" "Note" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
@@ -125,7 +125,7 @@ Feature: Advanced Search - Valuation
     Then a drop down list should appear in the "Type" row
       And selects "Current Value" from dropdown in "Type" row
       And enters "testtest" in the "Valuation Control" "Note" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Given user is on the "Create New" page
       And selects the "Valuation Control" radio button on the Create New page
@@ -138,7 +138,7 @@ Feature: Advanced Search - Valuation
     Then a drop down list should appear in the "Type" row
       And selects "Current Value" from dropdown in "Type" row
       And enters "testtest" in the "Valuation Control" "Note" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Given user is on the "Create New" page
       And selects the "Valuation Control" radio button on the Create New page
@@ -151,7 +151,7 @@ Feature: Advanced Search - Valuation
     Then a drop down list should appear in the "Type" row
       And selects "Original Value" from dropdown in "Type" row
       And enters "testtest" in the "Valuation Control" "Note" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"

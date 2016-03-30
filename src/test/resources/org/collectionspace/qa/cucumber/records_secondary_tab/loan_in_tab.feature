@@ -165,7 +165,7 @@ Feature: Loan In Tab
 
         And clicks the "+ Add Record" button
         And clicks on the Create button
-        And saves the record
+        And clicks the "Save" button
         Then the message "Please specify a Loan In Number" should appear 
 
         And enters "CQA111.11" in the "Loan In Number" field
@@ -292,7 +292,7 @@ Feature: Loan In Tab
 	    And clicks the "Add record" button 
 	    And clicks on the Create button
 	    And enters "CQA111.6" in the "Loan In Number" field
-	    And saves the record
+	    And clicks the "Save" button
 
 	    And clicks the "Delete Relation" button on the row that reads "CQA111.6"
 	    Then a delete confirmation dialog should appear
@@ -336,7 +336,7 @@ Feature: Loan In Tab
 	    And clicks the "Add record" button 
 	    And clicks on the Create button
 	    And enters "CQA111.7" in the "Loan In Number" field
-	    And saves the record
+	    And clicks the "Save" button
 	    And clicks on result with text "CQA111.7"
 
 	    

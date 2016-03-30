@@ -18,7 +18,7 @@ Feature: Advanced Search - Organization
     Then a drop down list should appear in the "Status" row
       And selects "Under Review" from dropdown in "Status" row
       And enters "textbook" in the "Organization" "Foundation Place" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
@@ -133,7 +133,7 @@ Feature: Advanced Search - Organization
     Then a drop down list should appear in the "Status" row
       And selects "Accepted" from dropdown in "Status" row
       And enters "testtest" in the "Organization" "Foundation Place"
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Given user is on the "Create New" page
       And selects the "Organization" radio button on the Create New page
@@ -145,7 +145,7 @@ Feature: Advanced Search - Organization
     Then a drop down list should appear in the "Status" row
       And selects "Accepted" from dropdown in "Status" row
       And enters "testtest" in the "Organization" "Foundation Place"
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Given user is on the "Create New" page
       And selects the "Organization" radio button on the Create New page
@@ -157,7 +157,7 @@ Feature: Advanced Search - Organization
     Then a drop down list should appear in the "Status" row
       And selects "Rejected" from dropdown in "Status" row
       And enters "testtest" in the "Organization" "Foundation Place"
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"

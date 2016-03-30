@@ -7,18 +7,18 @@ Feature: Supplementary Secondary Manual Acquisition Secondary Tab
   Scenario: Record Prep 1
   	Given user is in a blank "Cataloging" record
   	And enters "CQA81.3" in the "Identification Number" field
-  	And saves the record
+  	And clicks the "Save" button
   	Then close the browser
 
   	Given user is in a blank "Cataloging" record
   	And enters "CQA81.4" in the "Identification Number" field
-  	And saves the record
+  	And clicks the "Save" button
   	Then close the browser
 
   Scenario: Basic Secondary tab Testing
   	Given user is in a blank "Cataloging" record
   	And enters "CQA81" in the "Identification Number" field
-  	And saves the record
+  	And clicks the "Save" button
   	Then the titlebar should contain "CQA81"
   	And selects the "Acquisition" tab
   	Then the "Related Acquisition Records" area should be empty
@@ -33,7 +33,7 @@ Feature: Supplementary Secondary Manual Acquisition Secondary Tab
 
   	And enters "Cesar Villalobos" in the "Acquisition Source" field
   	And clicks on "Cesar Villalobos" from autocomplete options
-  	And saves the record
+  	And clicks the "Save" button
   	Then the message "Creating new record..." should not be displayed
   	Then the "Related Acquisition Records" area should contain "CQA81.2"
 

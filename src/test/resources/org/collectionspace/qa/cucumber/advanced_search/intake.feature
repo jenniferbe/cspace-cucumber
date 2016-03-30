@@ -25,7 +25,7 @@ Feature: Advanced Search - Intake
       And enters "Azkaban" in the "Intake" "Current Location" vocab field
       And adds "Azkaban" to "Local Storage Locations"
       And enters "textbook" in the "Intake" "Field collection event name" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
@@ -155,7 +155,7 @@ Feature: Advanced Search - Intake
     Then a drop down list should appear in the "Entry Reason" row
       And selects "Consideration" from dropdown in "Entry Reason" row
       And enters "testtest" in the "Intake" "Entry Note" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Given user is on the "Create New" page
       And selects the "Intake" radio button on the Create New page
@@ -168,7 +168,7 @@ Feature: Advanced Search - Intake
     Then a drop down list should appear in the "Entry Reason" row
       And selects "Consideration" from dropdown in "Entry Reason" row
       And enters "testtest" in the "Intake" "Packing Note" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Given user is on the "Create New" page
       And selects the "Intake" radio button on the Create New page
@@ -181,7 +181,7 @@ Feature: Advanced Search - Intake
     Then a drop down list should appear in the "Entry Reason" row
       And selects "Loan" from dropdown in "Entry Reason" row
       And enters "testtest" in the "Intake" "Field collection note" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"

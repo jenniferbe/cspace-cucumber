@@ -164,10 +164,10 @@ Feature: Exhibition Planning Tab
 
         And clicks the "+ Add Record" button
         And clicks on the Create button
-        And saves the record
+        And clicks the "Save" button
         Then the message "Please specify an Exhibition Number" should appear
         And enters "CQA105.11" in the "Exhibition Number" field
-        And saves the record
+        And clicks the "Save" button
         Then the message "Relation successfully created." should appear
       
 
@@ -219,7 +219,7 @@ Feature: Exhibition Planning Tab
         And enters "CQA105.11.11" in the "Rotation" field
         And enters "CQA105.11.12" in the "Note" field
 
-        And saves the record
+        And clicks the "Save" button
         Then the message "Exhibition successfully saved" should appear
 
         Then the "Exhibition Title" field should contain "CQA105_Test_11"
@@ -310,7 +310,7 @@ Feature: Exhibition Planning Tab
         And enters "CQA105.11.13.11" in the "Rotation" field
         And enters "CQA105.11.13.12" in the "Note" field
 
-        And saves the record
+        And clicks the "Save" button
         Then the message "Exhibition successfully saved" should appear
 
         Then the "Exhibition Title" field should contain "CQA105_Test_11 Test 13"
@@ -381,7 +381,7 @@ Feature: Exhibition Planning Tab
         And clicks the "Add record" button
         And clicks on the Create button
         And enters "CQA105.7" in the "Exhibition Number" field
-        And saves the record
+        And clicks the "Save" button
         
         And clicks the "Delete Relation" button on the row that reads "CQA105.7"
         Then a delete confirmation dialog should appear
@@ -423,7 +423,7 @@ Feature: Exhibition Planning Tab
         And clicks the "Add record" button 
         And clicks on the Create button
         And enters "CQA105.8" in the "Exhibition Number" field
-        And saves the record
+        And clicks the "Save" button
         And clicks on result with text "CQA105.8"
         
         And clicks the "Delete this relation" button

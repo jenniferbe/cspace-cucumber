@@ -12,7 +12,7 @@ Feature: #Enter feature name here
       And clicks on the Create button
     Then the titlebar should contain "Local Person"
       And enters "Rob Miller_y" in the "Person" "Display Name" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Then "Rob Miller_y" should be in the "Person" "Display Name" field
     Then the titlebar should contain "Local Person"

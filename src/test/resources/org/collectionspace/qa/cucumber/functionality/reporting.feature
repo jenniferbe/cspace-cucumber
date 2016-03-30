@@ -13,7 +13,7 @@ Feature: Reporting
       And adds to "Local Persons" from vocabulary autocomplete
       And enters "1000-01-01" in the "Acquisition" "Acquisition authorizer date" field
       And enters "Wild Encounter" in the "Acquisition" "Acquisition Date" field 
-      And saves the record
+      And clicks the "Save" button
     Then a dropdown should appear under "Run Report"
   #Probably no stepdefs for phrase : under run report
       And selects "Acquisition Summary (PDF)" from dropdown under "Run Report"

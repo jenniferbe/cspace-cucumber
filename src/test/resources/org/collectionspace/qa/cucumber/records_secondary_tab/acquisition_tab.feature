@@ -165,10 +165,10 @@ Feature: Acquisition Tab
 
         And clicks the "+ Add Record" button
         And clicks on the Create button
-        And saves the record
+        And clicks the "Save" button
         Then the message "Please specify an Acquisition Reference Number" should appear
         And enters "CQA93.11" in the "Acquisition Reference Number" field
-        And saves the record
+        And clicks the "Save" button
         Then the message "Relation successfully created." should appear
         
         And enters "2016-01-01" in the "Accession Date" field
@@ -198,7 +198,7 @@ Feature: Acquisition Tab
         And enters "93.8" in the "Credit Line" field
         And enters "CQA93 Digging Event" in the "Field collection event name" field
         
-        And saves the record
+        And clicks the "Save" button
         Then the message "Acquisition successfully saved" should appear
 
         Then the "Accession Date" field should contain "2016-01-01"
@@ -252,7 +252,7 @@ Feature: Acquisition Tab
         And enters "Some" in the "Source provisos" field
         And enters "93.13.8" in the "Credit Line" field
         And enters "CQA93 Digging Event" in the "Field collection event name" field
-        And saves the record
+        And clicks the "Save" button
         Then the message "Acquisition successfully saved" should appear
 
         Then the "Accession Date" field should contain "2017-01-01"
@@ -304,7 +304,7 @@ Feature: Acquisition Tab
         And clicks the "Add record" button 
         And clicks on the Create button
         And enters "CQA93.7" in the "Acquisition Reference Number" field
-        And saves the record
+        And clicks the "Save" button
         
         And clicks the "Delete Relation" button on the row that reads "CQA93.7"
         Then a delete confirmation dialog should appear
@@ -347,7 +347,7 @@ Feature: Acquisition Tab
         And clicks the "Add record" button 
         And clicks on the Create button
         And enters "CQA93.8" in the "Acquisition Reference Number" field
-        And saves the record
+        And clicks the "Save" button
         And clicks on result with text "CQA93.8"
         
         And clicks the "Delete this relation" button

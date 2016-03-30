@@ -157,10 +157,10 @@ Feature: Condition Check Tab Test Plan
 
         And clicks on the "+ Add Record" button
         And clicks on the Create button
-        And saves the record
+        And clicks the "Save" button
         Then the message "Please specify a Condition Check Number" should appear
         And enters "CQA103.11" in the "Condition Check/Assessment Reference Number" field
-        And saves the record
+        And clicks the "Save" button
         Then the message "Relation successfully created." should appear
 
         And selects "Medium" from the "Object Audit Category" drop down
@@ -202,7 +202,7 @@ Feature: Condition Check Tab Test Plan
         And enters "2016-10-10" in the "Legal/License Requirements Held Renew Date" field
         And enters "2016-11-11" in the "Salvage Priority Code Date" field
         And enters "103103" in the "Salvage Priority Code" field
-        And saves the record
+        And clicks the "Save" button
         Then the message "Condition Check successfully saved" should appear        
         
         ## test 11 thens
@@ -288,7 +288,7 @@ Feature: Condition Check Tab Test Plan
         And enters "2017-10-10" in the "Legal/License Requirements Held Renew Date" field
         And enters "2017-11-11" in the "Salvage Priority Code Date" field
         And enters "102" in the "Salvage Priority Code" field
-        And saves the record
+        And clicks the "Save" button
         Then the message "Condition Check successfully saved" should appear  
 
         ## test 11 thens
@@ -356,7 +356,7 @@ Feature: Condition Check Tab Test Plan
         And clicks the "Add record" button 
         And clicks on the Create button
         And enters "CQA103.7" in the "Condition Check/Assessment Reference Number" field
-        And saves the record
+        And clicks the "Save" button
         
         And clicks the "Delete Relation" button on the row that reads "CQA103.7"
         Then a delete confirmation dialog should appear
@@ -399,7 +399,7 @@ Feature: Condition Check Tab Test Plan
         And clicks the "Add record" button 
         And clicks on the Create button
         And enters "CQA103.8" in the "Condition Check/Assessment Reference Number" field
-        And saves the record
+        And clicks the "Save" button
         And clicks on result with text "CQA103.8"
         
         And clicks the "Delete this relation" button

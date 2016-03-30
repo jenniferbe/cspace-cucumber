@@ -158,10 +158,10 @@ Feature: Media Handling Page Tab
 
         And clicks the "+ Add Record" button
         And clicks on the Create button
-        And saves the record
+        And clicks the "Save" button
         Then the message "Please specify an Identification Number" should appear
         And enters "CQA114.11" in the "Identification Number" field
-        And saves the record
+        And clicks the "Save" button
         Then the message "Relation successfully created." should appear  
         
         And enters "CQA114 Form Filling" in the "Title" field
@@ -192,7 +192,7 @@ Feature: Media Handling Page Tab
         And enters "Cesar Villalobos" in the "Rights holder" field
         And selects "Cesar Villalobos" from autocomplete options
         And enters "CQA114 description box" in the "Description" field   
-        And saves the record
+        And clicks the "Save" button
         Then the message "Media Handling successfully saved" should appear
 
         ## test 11 thens
@@ -250,7 +250,7 @@ Feature: Media Handling Page Tab
         And enters "Jennifer Be" in the "Rights holder" field
         And selects "Jennifer Be" from autocomplete options
         And enters "CQA114 description box pt 2" in the "Description" field   
-        And saves the record
+        And clicks the "Save" button
         Then the message "Media Handling successfully saved" should appear
 
         ## test 13 thens
@@ -303,7 +303,7 @@ Feature: Media Handling Page Tab
 	    And clicks the "Add record" button 
 	    And clicks on the Create button
 	    And enters "CQA114.7" in the "Identification Number" field 
-	    And saves the record
+	    And clicks the "Save" button
 	    
 	    And clicks the "Delete Relation" button on the row that reads "CQA114.7"
 	    Then a delete confirmation dialog should appear
@@ -346,7 +346,7 @@ Feature: Media Handling Page Tab
 	    And clicks the "Add record" button 
 	    And clicks on the Create button
 	    And enters "CQA114.8" in the "Identification Number" field
-	    And saves the record
+	    And clicks the "Save" button
 	    And clicks on result with text "CQA114.8"
 	    
 	    And clicks the "Delete this relation" button

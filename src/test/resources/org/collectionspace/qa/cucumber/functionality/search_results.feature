@@ -10,12 +10,12 @@ Feature: Search Results and Pagination
           And selects the "Cataloging" radio button on the Create New page
           And clicks on the Create button
           And enters "1234" in the "Cataloging" "Identification Number" field
-          And saves the record
+          And clicks the "Save" button
       Given user is on the "Create New" page
           And selects the "Cataloging" radio button on the Create New page
           And clicks on the Create button
           And enters "2345" in the "Cataloging" "Identification Number" field
-          And saves the record
+          And clicks the "Save" button
       Given user is on the "My CollectionSpace" page
       Then "1234" should appear in the "Cataloging Records" area
       Then "2345" should appear in the "Cataloging Records" area
@@ -28,17 +28,17 @@ Feature: Search Results and Pagination
       Given user is on the "My CollectionSpace" page
           And clicks "1234" to load the record
           And enters "sesame" in the "Cataloging" "Brief Description" field
-          And saves the record
+          And clicks the "Save" button
       Given user is on the "My CollectionSpace" page
           And clicks "2345" to load the record
           And enters "sesame" in the "Cataloging" "Distinguishing Features" field
-          And saves the record
+          And clicks the "Save" button
       Given user is on the "Create New" page
           And selects the "Cataloging" radio button on the Create New page
           And clicks on the Create button
           And enters "sesame" in the "Cataloging" "Title" field
           And enters "3456" in the "Cataloging" "Identification Number" field
-          And saves the record
+          And clicks the "Save" button
       Given user is on the "My CollectionSpace" page
           And enters "sesame" in the top nav search field
           And selects "Cataloging" from the top nav search record type select field
@@ -55,7 +55,7 @@ Feature: Search Results and Pagination
           And clicks on the Create button
           And enters "sesame" in the "Cataloging" "Title" field
           And enters "4567" in the "Cataloging" "Identification Number" field
-          And saves the record
+          And clicks the "Save" button
           And enters "sesame" in the top nav search field
           And selects "Cataloging" from the top nav search record type select field
           And clicks on the top nav search submit button
@@ -90,18 +90,18 @@ Feature: Search Results and Pagination
   # No Stepdef
           And clicks "1234" to load the record
           And enters "sesame street" in the "Cataloging" "Brief Description" field
-          And saves the record
+          And clicks the "Save" button
       Given user is on the "My CollectionSpace" page
   # No Stepdef
           And clicks "2345" to load the record
           And enters "sesame street" in the "Cataloging" "Distinguishing Features" field
-          And saves the record
+          And clicks the "Save" button
       Given user is on the "Create New" page
           And selects the "Cataloging" radio button on the Create New page
           And clicks on the Create button
           And enters "sesame street" in the "Cataloging" "Brief Description" field
           And enters "3456" in the "Cataloging" "Identification Number" field
-          And saves the record
+          And clicks the "Save" button
       Given user is on the "My CollectionSpace" page
           And enters "sesame street" in the top nav search field
           And selects "Cataloging" from the top nav search record type select field
@@ -118,7 +118,7 @@ Feature: Search Results and Pagination
           And clicks on the Create button
           And enters "sesame" in the "Cataloging" "Brief Description" field
           And enters "1029" in the "Cataloging" "Identification Number" field
-          And saves the record
+          And clicks the "Save" button
           And enters "sesame street" in the top nav search field
           And selects "Cataloging" from the top nav search record type select field
           And clicks on the top nav search submit button
@@ -131,7 +131,7 @@ Feature: Search Results and Pagination
           And selects the "Person" radio button on the Create New page
           And clicks on the Create button
           And enters "James Fanboy" in the "Person" "Display Name" field
-          And saves the record
+          And clicks the "Save" button
       Given user is on the "Create New" page
           And selects the "Cataloging" radio button on the Create New page
           And clicks on the Create button
@@ -188,37 +188,37 @@ Feature: Search Results and Pagination
           And clicks on the Create button
           And enters "King size bed q" in the "Loan Out" "Loan Out Conditions" field
           And enters "11262015" in the "Loan Out" "Loan Out Number" field
-          And saves the record
+          And clicks the "Save" button
       Given user is on the "Create New" page
           And selects the "Loan out" radio button on the Create New page
           And clicks on the Create button
           And enters "King size bed qa" in the "Loan Out" "Loan Out Conditions" field
           And enters "11272015" in the "Loan Out" "Loan Out Number" field
-          And saves the record
+          And clicks the "Save" button
       Given user is on the "Create New" page
           And selects the "Loan out" radio button on the Create New page
           And clicks on the Create button
           And enters "King size bed qwa" in the "Loan Out" "Loan Out Conditions" field
           And enters "11282015" in the "Loan Out" "Loan Out Number" field
-          And saves the record
+          And clicks the "Save" button
       Given user is on the "Create New" page
           And selects the "Loan out" radio button on the Create New page
           And clicks on the Create button
           And enters "Queen size bed q" in the "Loan Out" "Loan Out Conditions" field
           And enters "11292015" in the "Loan Out" "Loan Out Number" field
-          And saves the record
+          And clicks the "Save" button
       Given user is on the "Create New" page
           And selects the "Loan out" radio button on the Create New page
           And clicks on the Create button
           And enters "Queen size bed qa" in the "Loan Out" "Loan Out Conditions" field
           And enters "11302015" in the "Loan Out" "Loan Out Number" field
-          And saves the record
+          And clicks the "Save" button
       Given user is on the "Create New" page
           And selects the "Loan out" radio button on the Create New page
           And clicks on the Create button
           And enters "Queen size bed qwa" in the "Loan Out" "Loan Out Conditions" field
           And enters "11312015" in the "Loan Out" "Loan Out Number" field
-          And saves the record
+          And clicks the "Save" button
       Given user is on the "My CollectionSpace" page
           And enters "queen and bed" in the top nav search field
           And selects "Loan Out" from the top nav search record type select field
@@ -257,7 +257,7 @@ Feature: Search Results and Pagination
         And enters "Made up name" in the "Acquisition" "Acquisition Source" vocab field
   # Don't know if this is a stepdef
         And adds "Made up name" to "Local Persons" from vocabulary autocomplete
-        And saves the record
+        And clicks the "Save" button
       Then the record is successfully saved
       Given user is on the "Create New" page
         And selects the "Acquisition" radio button on the Create New page
@@ -269,7 +269,7 @@ Feature: Search Results and Pagination
         And enters "Made up name" in the "Acquisition" "Acquisition Source" vocab field
   # Don't know if this is a stepdef
         And adds "Made up name" to "Local Persons" from vocabulary autocomplete
-        And saves the record
+        And clicks the "Save" button
       Then the record is successfully saved
       Given user is on the "Create New" page
         And selects the "Acquisition" radio button on the Create New page
@@ -281,7 +281,7 @@ Feature: Search Results and Pagination
         And enters "Made up name" in the "Acquisition" "Acquisition Source" vocab field
   # Don't know if this is a stepdef
         And adds "Made up name" to "Local Persons" from vocabulary autocomplete
-        And saves the record
+        And clicks the "Save" button
       Then the record is successfully saved
       Given user is on the "Create New" page
         And selects the "Acquisition" radio button on the Create New page
@@ -293,7 +293,7 @@ Feature: Search Results and Pagination
         And enters "Made up name" in the "Acquisition" "Acquisition Source" vocab field
   # Don't know if this is a stepdef
         And adds "Made up name" to "Local Persons" from vocabulary autocomplete
-        And saves the record
+        And clicks the "Save" button
       Then the record is successfully saved
       Given user is on the "Create New" page
         And selects the "Acquisition" radio button on the Create New page
@@ -305,7 +305,7 @@ Feature: Search Results and Pagination
         And enters "Made up name" in the "Acquisition" "Acquisition Source" vocab field
   # Don't know if this is a stepdef
         And adds "Made up name" to "Local Persons" from vocabulary autocomplete
-        And saves the record
+        And clicks the "Save" button
       Then the record is successfully saved
       Given user is on the "Create New" page
         And selects the "Acquisition" radio button on the Create New page
@@ -317,7 +317,7 @@ Feature: Search Results and Pagination
         And enters "Made up name" in the "Acquisition" "Acquisition Source" vocab field
   # Don't know if this is a stepdef
         And adds "Made up name" to "Local Persons" from vocabulary autocomplete
-        And saves the record
+        And clicks the "Save" button
       Then the record is successfully saved
       Given user is on the "Create New" page
         And selects the "Acquisition" radio button on the Create New page
@@ -329,7 +329,7 @@ Feature: Search Results and Pagination
         And enters "Made up name" in the "Acquisition" "Acquisition Source" vocab field
   # Don't know if this is a stepdef
         And adds "Made up name" to "Local Persons" from vocabulary autocomplete
-        And saves the record
+        And clicks the "Save" button
       Then the record is successfully saved
       Given user is on the "Create New" page
         And selects the "Acquisition" radio button on the Create New page
@@ -341,7 +341,7 @@ Feature: Search Results and Pagination
         And enters "Made up name" in the "Acquisition" "Acquisition Source" vocab field
   # Don't know if this is a stepdef
         And adds "Made up name" to "Local Persons" from vocabulary autocomplete
-        And saves the record
+        And clicks the "Save" button
       Then the record is successfully saved
       Given user is on the "Create New" page
         And selects the "Acquisition" radio button on the Create New page
@@ -353,7 +353,7 @@ Feature: Search Results and Pagination
         And enters "Made up name" in the "Acquisition" "Acquisition Source" vocab field
   # Don't know if this is a stepdef
         And adds "Made up name" to "Local Persons" from vocabulary autocomplete
-        And saves the record
+        And clicks the "Save" button
       Then the record is successfully saved
       Given user is on the "Create New" page
         And selects the "Acquisition" radio button on the Create New page
@@ -365,7 +365,7 @@ Feature: Search Results and Pagination
         And enters "Made up name" in the "Acquisition" "Acquisition Source" vocab field
   # Don't know if this is a stepdef
         And adds "Made up name" to "Local Persons" from vocabulary autocomplete
-        And saves the record
+        And clicks the "Save" button
       Then the record is successfully saved
       Given user is on the "Create New" page
         And selects the "Acquisition" radio button on the Create New page
@@ -377,7 +377,7 @@ Feature: Search Results and Pagination
         And enters "Made up name" in the "Acquisition" "Acquisition Source" vocab field
   # Don't know if this is a stepdef
         And adds "Made up name" to "Local Persons" from vocabulary autocomplete
-        And saves the record
+        And clicks the "Save" button
       Then the record is successfully saved
       Given user is on the "Create New" page
         And selects the "Acquisition" radio button on the Create New page
@@ -389,7 +389,7 @@ Feature: Search Results and Pagination
         And enters "Made up name" in the "Acquisition" "Acquisition Source" vocab field
   # Don't know if this is a stepdef
         And adds "Made up name" to "Local Persons" from vocabulary autocomplete
-        And saves the record
+        And clicks the "Save" button
       Then the record is successfully saved
       Given user is on the "My CollectionSpace" page
         And enters "known item" in the top nav search field
@@ -449,7 +449,7 @@ Feature: Search Results and Pagination
         And clicks on the Create button
       Then the titlebar should contain "Cataloging"
         And enters "Remember Me" in the "Cataloging" "Identification Number" field
-        And saves the record
+        And clicks the "Save" button
       Then the record is successfully saved
   # i think this is (not) stepdef
         And selects the "Acquisition" tab
