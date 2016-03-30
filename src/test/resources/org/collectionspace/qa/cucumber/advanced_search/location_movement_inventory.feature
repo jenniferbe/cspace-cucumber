@@ -36,7 +36,7 @@ Feature: Advanced Search - Location / Movement / Inventory
       And selects "Daily" from dropdown in "Inventory Frequency" row
       And enters "1002-01-01" in the "Location/Movement/Inventory" "Next Inventory Date" field
       And enters "3357" in the "Location/Movement/Inventory" "Reference Number" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
@@ -240,7 +240,7 @@ Feature: Advanced Search - Location / Movement / Inventory
       And enters "In a Shoebox" in the "Location/Movement/Inventory" "Current Location" vocab field
       And adds "In a Shoebox" to "Local Storage Locations"
       And enters "testtest" in the "Location/Movement/Inventory" "Movement Information -> Note" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Given user is on the "Create New" page
       And selects the "Location/Movement/Inventory" radio button on the Create New page
@@ -252,7 +252,7 @@ Feature: Advanced Search - Location / Movement / Inventory
       And enters "In a Shoebox" in the "Location/Movement/Inventory" "Current Location" vocab field
       And adds "In a Shoebox" to "Local Storage Locations"
       And enters "testtest" in the "Location/Movement/Inventory" "Movement Information -> Note" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Given user is on the "Create New" page
       And selects the "Location/Movement/Inventory" radio button on the Create New page
@@ -264,7 +264,7 @@ Feature: Advanced Search - Location / Movement / Inventory
       And enters "In my Pocket" in the "Location/Movement/Inventory" "Current Location" vocab field
       And adds "In my Pocket" to "Local Storage Locations"
       And enters "testtest" in the "Location/Movement/Inventory" "Movement Information -> Note" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search" 

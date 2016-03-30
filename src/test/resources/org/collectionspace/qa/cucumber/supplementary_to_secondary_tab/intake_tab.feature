@@ -10,7 +10,7 @@ Feature: Intake Secondary Tab
       And clicks on the Create button
     Then the titlebar should contain "Cataloging"
       And enters "NeedleDrop" in the "Cataloging" "Identification Number" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
       And selects the "Intake" tab
     Then "No related record selected" should be displayed
@@ -29,7 +29,7 @@ Feature: Intake Secondary Tab
       And fills out required fields
       And enters "Darko" in the "Cataloging" "Current Owner" vocab field
       And adds "Darko" to "Local Persons"
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Then the record entry should be displayed under "Related Intake Records"
       And clicks on related record entry "Donnie"
@@ -38,7 +38,7 @@ Feature: Intake Secondary Tab
     Then the "Delete this relation." button at the bottom of the record "should" be clickable
     Then the "Delete this relation." button at the top of the record "should" be clickable
       And selects the "Current Record" tab
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
       And enters "NeedleDrop" in the top nav search field 
       And selects "Cataloging" from top nav search record type select field

@@ -21,7 +21,7 @@ Feature: Advanced Search - Loans Out
       And enters "2022-01-01" in the "Loan Out" "Loan Out Date" field
       And enters "2022-01-01" in the "Loan Out" "Loan Return Date" field
       And enters "2022-01-01" in the "Loan Out" "Loan Renewal Application Date" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
@@ -139,7 +139,7 @@ Feature: Advanced Search - Loans Out
     Then a drop down list should appear in the "Loan Purpose" row
       And selects "Research" from dropdown in "Loan Purpose" row
       And enters "testtest" in the "Loan Out" "Loan Out Note" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Given user is on the "Create New" page
       And selects the "Loan Out" radio button on the Create New page
@@ -152,7 +152,7 @@ Feature: Advanced Search - Loans Out
     Then a drop down list should appear in the "Loan Purpose" row
       And selects "Research" from dropdown in "Loan Purpose" row
       And enters "testtest" in the "Loan Out" "Loan Out Conditions" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Given user is on the "Create New" page
       And selects the "Loan Out" radio button on the Create New page
@@ -165,7 +165,7 @@ Feature: Advanced Search - Loans Out
     Then a drop down list should appear in the "Loan Purpose" row
       And selects "Photography" from dropdown in "Loan Purpose" row
       And enters "testtest" in the "Loan Out" "Loan Out Note" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search" 

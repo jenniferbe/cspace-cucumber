@@ -11,7 +11,7 @@ Feature: Advanced Search Group
         And enters "textbook75" in the "Title" field
         And enters "CQA-75" in the "Group Owner" field
         And selects "CQA-75" from autocomplete options
-        And saves the record
+        And clicks the "Save" button
 
         And clicks the "Advanced Search" button
         And selects "Group" from the "Record Type Select" drop down        

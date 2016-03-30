@@ -165,10 +165,10 @@ Feature: Object Exit Page Tab
 
         And clicks the "+ Add Record" button
         And clicks on the Create button
-        And saves the record
+        And clicks the "Save" button
         Then the message "Please specify an Exit Number" should appear
         And enters "CQA115.11" in the "Exit Number" field
-        And saves the record
+        And clicks the "Save" button
         Then the message "Relation successfully created." should appear
 
         And enters "2016-01-05" in the "Exit Date" field
@@ -181,7 +181,7 @@ Feature: Object Exit Page Tab
         And enters "This \n is \n CQA115" in the "Exit Note" field
         And enters "Packing for CQA115" in the "Packing Note" field
 
-        And saves the record
+        And clicks the "Save" button
         Then the message "Object Exit successfully saved" should appear
 
 
@@ -207,7 +207,7 @@ Feature: Object Exit Page Tab
         And enters "This \n is \n CQA115 \n Test 13" in the "Exit Note" field
         And enters "Packing for CQA115 Test 13" in the "Packing Note" field
 
-        And saves the record
+        And clicks the "Save" button
         Then the message "Object Exit successfully saved" should appear
 
         Then the "Exit Number" field should contain "CQA115.11"
@@ -247,7 +247,7 @@ Feature: Object Exit Page Tab
 	    And clicks the "Add record" button 
 	    And clicks on the Create button
 	    And enters "CQA115.7" in the "Exit Number" field
-	    And saves the record
+	    And clicks the "Save" button
 	    
 	    And clicks the "Delete Relation" button on the row that reads "CQA115.7"
 	    Then a delete confirmation dialog should appear
@@ -289,7 +289,7 @@ Feature: Object Exit Page Tab
 	    And clicks the "Add record" button 
 	    And clicks on the Create button
 	    And enters "CQA115.8" in the "Exit Number" field
-	    And saves the record
+	    And clicks the "Save" button
 	    And clicks on result with text "CQA115.8"
 
 	    And clicks the "Delete this relation" button

@@ -50,7 +50,7 @@ Feature: Supplementary Manual QA - Cataloging
     Given user is on the "Create New" page
       And clicks on the Create button
       And enters "1234" in the "Cataloging" "Identification Number" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Then "GMT-0800 (PST)" should be displayed in the message bar
     Then disables top and bottom "cancel" buttons
@@ -76,7 +76,7 @@ Feature: Supplementary Manual QA - Cataloging
       # following line does not exist
       And clicks on the "Production Date" field
       And enters "1500" in the "Cataloging" "Display Date" field
-      And saves the record
+      And clicks the "Save" button
     Then "1500" should be in the "Cataloging" "Production Date" field
 
   Scenario: Folding and Unfolding Boxes
@@ -156,7 +156,7 @@ Feature: Supplementary Manual QA - Cataloging
       And clicks on the Create button
       And enters "1.2.3.4.5" in the "Cataloging" "Identification Number" field
       And adds "Object" to the "Cataloging" "Concept" vocab field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Then disables top and bottom "cancel" buttons
     Then enables top and bottom "delete" buttons

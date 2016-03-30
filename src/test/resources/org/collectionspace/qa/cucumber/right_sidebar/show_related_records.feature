@@ -7,21 +7,21 @@ Feature: Right Frame - Show Related Records
   Scenario: Show Related Records
     Given user is in a blank "Acquisition" record
     And enters "CQA16.1" in the "Acquisition Reference Number" field
-    And saves the record
+    And clicks the "Save" button
     Then the "Show" button in the "Cataloging" area should be disabled
     
     And selects the "Cataloging" tab
     And clicks the "Add record" button
     And clicks the "Create" button
     And enters "CQA16.2" in the "Identification Number" field
-    And saves the record
+    And clicks the "Save" button
     Then the "Related Cataloging Records" area should contain "CQA16.2"
 
     And selects the "Cataloging" tab
     And clicks the "Add record" button
     And clicks the "Create" button
     And enters "CQA16.3" in the "Identification Number" field
-    And saves the record
+    And clicks the "Save" button
     Then the "Related Cataloging Records" area should contain "CQA16.3"
     Then the "Show" button in the "Cataloging" area should be enabled
 

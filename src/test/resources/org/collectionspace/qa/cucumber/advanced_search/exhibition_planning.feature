@@ -14,7 +14,7 @@ Feature: Advanced Search ­– Exhibition Planning
         And selects "CQA74 Venue" from autocomplete options
         And enters "2016-01-01" in the "Venue Opening Date" field 
         And enters "textbook" in the "Planning Notes" field 
-        And saves the record
+        And clicks the "Save" button
 
         # Record Title
         And clicks the "Advanced Search button"
@@ -76,7 +76,7 @@ Feature: Advanced Search ­– Exhibition Planning
         And enters "Globex Corporation" in the "Sponsor" field
         And selects "Globex Corporation" from autocomplete options
         And enters "testtest" in the "Boilerplate Text" field
-        And saves the record
+        And clicks the "Save" button
 
         And navigates to the "Create New" page 
         And selects the "Exhibition" radio button on the Create New page
@@ -85,7 +85,7 @@ Feature: Advanced Search ­– Exhibition Planning
         And enters "Globex Corporation" in the "Sponsor" field 
         And selects "Globex Corporation" from autocomplete options
         And enters "testtest" in the "Planning Notes" field 
-        And saves the record
+        And clicks the "Save" button
 
         And navigates to the "Create New" page 
         And selects the "Exhibition" radio button on the Create New page
@@ -94,7 +94,7 @@ Feature: Advanced Search ­– Exhibition Planning
         And enters "Osato Chemicals" in the "Sponsor" field 
         And selects "Osato Chemicals" from autocomplete options
         And enters "testtest" in the "Curatorial Notes" field 
-        And saves the record
+        And clicks the "Save" button
 
 
         And clicks the "Advanced Search button"

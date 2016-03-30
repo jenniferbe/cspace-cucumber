@@ -10,7 +10,7 @@ Feature: Group Secondary Tab
       And clicks on the Create button
     Then the titlebar should contain "Cataloging"
       And enters "Gnerar" in the "Cataloging" "Identification Number" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
       And selects the "Group" tab
     Then "No related record selected" should be displayed
@@ -29,7 +29,7 @@ Feature: Group Secondary Tab
       And fills out required fields
       And enters "ian" in the "Cataloging" "Group Owner" vocab field
       And adds "ian" to "Local Persons"
-      And saves the record
+      And clicks the "Save" button
     Then the record entry should be displayed under "Related Group Records"
       And clicks on related record entry "transpleb"
     Then the "Cancel changes" button at the bottom of the record "should not" be clickable
@@ -37,7 +37,7 @@ Feature: Group Secondary Tab
     Then the "Delete this relation." button at the bottom of the record "should" be clickable
     Then the "Delete this relation." button at the top of the record "should" be clickable
       And selects the "Current Record" tab
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
       And enters "Gnerar" in the top nav search field 
       And selects "Cataloging" from top nav search record type select field
