@@ -442,7 +442,7 @@ public class StepDefs {
         while (k < 500) {
             k++;
             if(driver.switchTo().activeElement().equals(destinationButton)) {
-                return;
+                break;
             }
             driver.switchTo().activeElement().sendKeys(Keys.TAB);
         }
