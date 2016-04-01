@@ -13,7 +13,7 @@ Feature: Advanced_Search - Extras
       And enters "James Adams" in the "Object Exit" "Depositor" vocab field
       And clicks on "James Adams" from autocomplete options
       And enters "Goodbye" in the "Object Exit" "Exit Note" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Then close the browser
 

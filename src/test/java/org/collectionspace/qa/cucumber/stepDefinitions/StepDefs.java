@@ -109,11 +109,6 @@ public class StepDefs {
         fillVocabFieldLocatedByID(selector, value, driver);
     }
     
-    @And("^the user saves the record$")
-    public void the_user_saves_the_record() throws Throwable {
-        driver.findElement(By.id("save")).click();
-    }
-
     @Then("^the record is successfully saved")
     public void the_record_is_successfully_saved() throws Throwable {
         wait.until(textToBePresentInElementLocated(
@@ -217,6 +212,12 @@ public class StepDefs {
         }
     }
 
+    @Then("^(?:the user )?(?:user )?clicks the \"([^\"]*)\" button$")
+    public void clicks_the_button(String button) throws Throwable {
+      String xpath = "//input[@value='" + button + "']";
+      driver.findElement(By.xpath(xpath)).click();
+    }
+    
     @When("^user clicks the \"([^\"]*)\" button on the \"([^\"]*)\" area to the right$")
     public void user_clicks_on_button_on_right(String button, String category) throws Throwable {
         String xpath = "//div[@class='csc-right-sidebar']//td/a[contains(text(), '" + button +"')]";
@@ -441,7 +442,7 @@ public class StepDefs {
         while (k < 500) {
             k++;
             if(driver.switchTo().activeElement().equals(destinationButton)) {
-                return;
+                break;
             }
             driver.switchTo().activeElement().sendKeys(Keys.TAB);
         }

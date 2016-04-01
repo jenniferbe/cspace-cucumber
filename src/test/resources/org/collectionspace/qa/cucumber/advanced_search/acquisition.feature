@@ -17,7 +17,7 @@ Feature: Advanced Search ­ Acquisition
         And selects "CQA-71 Funding source" from autocomplete options
         And enters "CQA-71 Test" in the "Field collection event name" field 
         And enters "textbook" in the "Credit Line" field 
-        And saves the record
+        And clicks the "Save" button
 
         # Record Title
         And clicks the "Advanced Search" button 
@@ -94,7 +94,7 @@ Feature: Advanced Search ­ Acquisition
         And selects "Purchase" from the "Acquisition Method" drop down  
         And enters "testtest" in the "Acquisition Reason" field
         And enters "thank you" in the "Credit Line" field        
-        And saves the record
+        And clicks the "Save" button
 
         And navigates to the "Create New" page 
         And selects the "Acquisition" radio button on the Create New page
@@ -102,7 +102,7 @@ Feature: Advanced Search ­ Acquisition
         And selects "Purchase" from the "Acquisition Method" drop down  
         And enters "testtest" in the "Acquisition Note" field
         And enters "thank you" in the "Credit Line" field
-        And saves the record
+        And clicks the "Save" button
 
         And navigates to the "Create New" page 
         And selects the "Acquisition" radio button on the Create New page
@@ -110,7 +110,7 @@ Feature: Advanced Search ­ Acquisition
         And selects "Gift" from the "Acquisition Method" drop down  
         And enters "testtest" in the "Acquisition Provisos" field
         And enters "thank you" in the "Credit Line" field
-        And saves the record
+        And clicks the "Save" button
 
 		And clicks the "Advanced Search" button
         And selects "Acquisition" from the "Record Type Select" drop down

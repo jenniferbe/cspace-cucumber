@@ -10,7 +10,7 @@ Feature: Navigating between Primary and Secondary Tabs
       And clicks on the Create button
     Then the titlebar should contain "Cataloging"
       And enters "0923102" in the "Cataloging" "Identification Number" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
       And enters "15" in the "Cataloging" "Number of Objects" field
       And selects the "Acquisition" tab

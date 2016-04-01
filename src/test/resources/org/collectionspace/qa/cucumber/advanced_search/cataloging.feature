@@ -34,7 +34,7 @@ Feature: Advanced Search ­Cataloging
         And enters "Mexico" in the "Production place" field
         And enters "Hydration" in the "Technique" field
         And enters "textbook" in the "Field collection event name" field
-        And saves the record
+        And clicks the "Save" button
 
         # Identification Number 
         And clicks the "Advanced Search" button
@@ -237,7 +237,7 @@ Feature: Advanced Search ­Cataloging
         And selects "Study Collection" from the "Collection" drop down
         And selects "New" from the "Record Status" drop down
         And enters "testtest" in the "Brief Description" field
-        And saves the record
+        And clicks the "Save" button
 
         And navigates to the "Create New" page 
         And selects the "Cataloging" radio button on the Create New page
@@ -245,7 +245,7 @@ Feature: Advanced Search ­Cataloging
         And selects "Study Collection" from the "Collection" drop down
         And selects "New" from the "Record Status" drop down
         And enters "testtest" in the "Distinguishing Features" field
-        And saves the record     
+        And clicks the "Save" button     
     
         And navigates to the "Create New" page 
         And selects the "Cataloging" radio button on the Create New page
@@ -253,7 +253,7 @@ Feature: Advanced Search ­Cataloging
         And selects "Study Collection" from the "Collection" drop down
         And selects "Temporary" from the "Record Status" drop down
         And enters "testtest" in the "Comments" field
-        And saves the record  
+        And clicks the "Save" button  
 
 
         And clicks the "Advanced Search button"

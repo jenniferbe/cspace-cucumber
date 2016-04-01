@@ -158,10 +158,10 @@ Feature: #Enter feature name here
 
         And clicks the "+ Add Record" button
         And clicks on the Create button
-        And saves the record
+        And clicks the "Save" button
         Then the message "Please specify an Identification Number" should appear
         And enters "CQA99.11" in the "Identification Number" field
-        And saves the record
+        And clicks the "Save" button
         Then the message "Relation successfully created." should appear
 
         #Object ID Information
@@ -359,7 +359,7 @@ Feature: #Enter feature name here
         And selects "Cesar Villalobos" from autocomplete options 
         And enters "Temple exploration" in the "Field collection event name" field
         #Object Hierarchy
-        And saves the record
+        And clicks the "Save" button
         
         Then the "Number of Objects" field should contain "99"
         Then the "Number" field should contain "99.1"
@@ -723,7 +723,7 @@ Feature: #Enter feature name here
         And selects "Cesar Villalobos" from autocomplete options 
         And enters "Temple exploration" in the "Field collection event name" field
         #Object Hierarchy
-        And saves the record
+        And clicks the "Save" button
         
         Then the "Number of Objects" field should contain "99.13"
         Then the "Number" field should contain "99.13.1"
@@ -918,7 +918,7 @@ Feature: #Enter feature name here
         And clicks the "Add record" button
         And clicks on the Create button
         And enters "CQA99.7" in the "Identification Number" field
-        And saves the record
+        And clicks the "Save" button
         
         And clicks the "Delete Relation" button on the row that reads "CQA99.7"
         Then a delete confirmation dialog should appear 
@@ -961,7 +961,7 @@ Feature: #Enter feature name here
         And clicks the "Add record" button
         And clicks on the Create button
         And enters "CQA99.8" in the "Identification Number" field
-        And saves the record
+        And clicks the "Save" button
         And clicks on result with text "CQA99.8"
         
         And clicks the "Delete this relation" button

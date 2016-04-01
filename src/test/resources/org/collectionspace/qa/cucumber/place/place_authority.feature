@@ -11,7 +11,7 @@ Feature: Place Authority Data Entry
     And clicks on the Create button
     Then the titlebar should contain "Local Places"
     And enters "New York" in the "Place" "Display Name" field
-    And saves the record
+    And clicks the "Save" button
     Then the record is successfully saved
     Then "New York" should be in the "Place" "Display Name" field
     Then the titlebar should contain "Local Places"
@@ -25,7 +25,7 @@ Feature: Place Authority Data Entry
     And clicks on the Create button
     Then the titlebar should contain "Thesaurus of Geographic Names (TGN)"
     And enters "New York City" in the "Place" "Display Name" field
-    And saves the record
+    And clicks the "Save" button
     Then the record is successfully saved
     Then "New York City" should be in the "Place" "Display Name" field
     Then the titlebar should contain "Thesaurus of Geographic Names (TGN)"

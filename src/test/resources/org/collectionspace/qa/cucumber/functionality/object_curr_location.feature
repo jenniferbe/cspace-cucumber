@@ -11,7 +11,7 @@ Feature: Object Current Location
     Then the titlebar should contain "Cataloging"
       And enters "34234" in the "Cataloging" "Identification Number" field
       And enters "Tango Object" in the "Cataloging" "Title" field
-      And saves the record
+      And clicks the "Save" button
     Then the titlebar should contain "34234 - Tango Object"
       And selects the "Loc/Mov/Inv" tab
       And clicks the "Add Record" button
@@ -22,7 +22,7 @@ Feature: Object Current Location
     Then a dropdown list should appear in the "Location/Movement/Inventory" "Current Location" row
       And selects "Offsite Storage Locations" from dropdown in "Location/Movement/Inventory" "Current Location" row
       And enters "1700-01-01" in the "Location/Movement/Inventory" "Location Date" field
-      And saves the record
+      And clicks the "Save" button
     Then a confirmation dialog should appear
   #not a stepdef
       And clicks on the "Save" button in the confirmation dialog
@@ -45,7 +45,7 @@ Feature: Object Current Location
     Then a dropdown list should appear in the "Location/Movement/Inventory" "Current Location" row
       And selects "Offsite Storage Locations" from dropdown in "Location/Movement/Inventory" "Current Location" row
       And enters "1800-01-01" in the "Location/Movement/Inventory" "Location Date" field
-      And saves the record
+      And clicks the "Save" button
     Then a confirmation dialog should appear
       And clicks on the "Save" button in the confirmation dialog
       And enters "Tango Object" in the top nav search field
@@ -78,7 +78,7 @@ Feature: Object Current Location
     Then a dropdown list should appear in the "Location/Movement/Inventory" "Current Location" row
       And selects "Offsite Storage Locations" from dropdown in "Location/Movement/Inventory" "Current Location" row
       And enters "1900-01-01" in the "Location/Movement/Inventory" "Location Date" field
-      And saves the record
+      And clicks the "Save" button
     Then a confirmation dialog should appear 
       And clicks on the "Save" button in the confirmation dialog
       And enters "Tango Object" in the top nav search field
@@ -107,7 +107,7 @@ Feature: Object Current Location
       And clicks the link to "Alpha Location" on the Find and Edit page
     Then the titlebar should contain "Location/Movement/Inventory"
       And enters "2000-01-01" in the "Location/Movement/Inventory" "Location Date" field
-      And saves the record
+      And clicks the "Save" button
     Then a confirmation dialog should appear
       And clicks on the "Save" button in the confirmation dialog
   # probably not a stepdef

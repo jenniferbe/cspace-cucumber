@@ -22,7 +22,7 @@ Feature: Advanced Search - Person
       And selects "Male" from dropdown in "Gender" row
       And enters "Emcee" in the "Person" "Occupation" field
       And enters "Banger" in the "Person" "School/Style" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
@@ -148,7 +148,7 @@ Feature: Advanced Search - Person
     Then a drop down list should appear in the "Gender" row
       And selects "Female" from dropdown in "Gender" row
       And enters "testtest" in the "Person" "Name Notes" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Given user is on the "Create New" page
       And selects the "Person" radio button on the Create New page
@@ -160,7 +160,7 @@ Feature: Advanced Search - Person
     Then a drop down list should appear in the "Gender" row
       And selects "Female" from dropdown in "Gender" row
       And enters "testtest" in the "Person" "Biographical Note" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Given user is on the "Create New" page
       And selects the "Person" radio button on the Create New page
@@ -172,7 +172,7 @@ Feature: Advanced Search - Person
     Then a drop down list should appear in the "Gender" row
       And selects "Male" from dropdown in "Gender" row
       And enters "textbook" in the "Person" "Name Notes" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search" 

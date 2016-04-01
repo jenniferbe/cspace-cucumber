@@ -29,7 +29,7 @@ Feature: Advanced Search - Media Handling
       And adds "Yahweh" to "Local Persons"
       # And uploads an image
       And enters "textbook" in the "Media Handling" "Subjects" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
@@ -178,7 +178,7 @@ Feature: Advanced Search - Media Handling
       And enters "Jane Doe" in the "Media Handling" "Publisher" vocab field
       And clicks on "Jane Doe" from autocomplete options
       And enters "testtest" in the "Media Handling" "Coverage" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Given user is on the "Create New" page
       And selects the "Media Handling" radio button on the Create New page
@@ -190,7 +190,7 @@ Feature: Advanced Search - Media Handling
       And enters "Jane Doe" in the "Media Handling" "Publisher" vocab field
       And clicks on "Jane Doe" from autocomplete options
       And enters "testtest" in the "Media Handling" "Coverage" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Given user is on the "Create New" page
       And selects the "Media Handling" radio button on the Create New page
@@ -202,7 +202,7 @@ Feature: Advanced Search - Media Handling
       And enters "James Dean" in the "Media Handling" "Publisher" vocab field
       And clicks on "James Dean" from autocomplete options
       And enters "testtest" in the "Media Handling" "Coverage" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
       And clicks on link to "Advanced Search"
     Then the titlebar should contain "Advanced Search"

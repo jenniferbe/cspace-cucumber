@@ -14,7 +14,7 @@ Feature: Advanced Search ­ Condition Check
         And enters "2016-01-01" in the "Next Condition Check/Assessment Date" field 
         And enters "2016-02-02" in the "Condition Check/Assessment Date" field 
         And enters "textbook" in the "Condition Check/Assessment Date" field
-        And saves the record
+        And clicks the "Save" button
 
         And clicks the "Advanced Search" button
         And selects "Condition Check" from the "Record Type Select" drop down
@@ -79,7 +79,7 @@ Feature: Advanced Search ­ Condition Check
         And selects "Low" from the "Object Audit Category" drop down
         And selects "Needs no work" from the "Condition" drop down
         And enters "testtest" in the "Condition Check/Assessment Note" field
-        And saves the record
+        And clicks the "Save" button
 
 
         And navigates to the "Create New" page 
@@ -88,7 +88,7 @@ Feature: Advanced Search ­ Condition Check
         And selects "Low" from the "Object Audit Category" drop down
         And selects "Needs no work" from the "Condition" drop down
         And enters "testtest" in the "Display Recommendations" field
-        And saves the record        
+        And clicks the "Save" button        
       
         And navigates to the "Create New" page 
  		And selects the "Condition Check" radio button on the Create New page
@@ -96,7 +96,7 @@ Feature: Advanced Search ­ Condition Check
         And selects "Low" from the "Object Audit Category" drop down
         And selects "In jeopardy" from the "Condition" drop down
         And enters "testtest" in the "Handling Recommendations" field
-        And saves the record     
+        And clicks the "Save" button     
 
         And clicks the "Advanced Search button"
         And selects "Condition Check" from the "Record Type Select" drop down

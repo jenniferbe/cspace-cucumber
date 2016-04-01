@@ -45,7 +45,7 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory
       And selects the "Location/Movement/Inventory" radio button on the Create New page
       And clicks on the Create button
       And adds "New York Theater" to the "Location/Movement/Inventory" "Current Location" vocab field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Then "GMT-0800 (PST)" should be displayed in the message bar
     Then disables top and bottom "cancel" buttons
@@ -96,9 +96,9 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory
       And clicks on the Create button
       And enters "1.2.3.4.5" in the "Location/Movement/Inventory" "Reference Number" field
       And adds "New York Theater" to the "Location/Movement/Inventory" "Current Location" vocab field
-      And saves the record
+      And clicks the "Save" button
       Then the message "Please note that "Hard Save" will make the record read-only." should be displayed
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Then disables top and bottom "cancel" buttons
     Then enables top and bottom "delete" buttons
@@ -124,15 +124,15 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory
       And clicks on the Create button
       And enters "1.2.3.4.5" in the "Location/Movement/Inventory" "Reference Number" field
       And adds "New York Theater" to the "Location/Movement/Inventory" "Current Location" vocab field
-      And saves the record
+      And clicks the "Save" button
     Then the message "Please note that "Hard Save" will make the record read-only." should be displayed
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
       And adds "2016-01-01" to the "Location/Movement/Inventory" "Location Date" field
-      And saves the record
+      And clicks the "Save" button
     Then the message "Please note that "Hard Save" will make the record read-only." should be displayed
       # hard save not implemented
-      And hard saves the record
+      And hard clicks the "Save" button
     Then the record is read-only
     Given user is on the "My CollectionSpace" page
       And enters "New York Theater" in the top nav search field
@@ -150,29 +150,29 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory
       And clicks on the Create button
       And enters "123123123" in the "Location/Movement/Inventory" "Reference Number" field
       And adds "Metro Pictures Corporation" to the "Location/Movement/Inventory" "Current Location" vocab field
-      And saves the record
+      And clicks the "Save" button
     Then the message "Please note that "Hard Save" will make the record read-only." should be displayed
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
       And selects the "Acquisitions" tab
       # not stepdefs
       And selects "Add record" button
       And selects "create" button
       And enters "456.456.456" in the "Acquisition" "Acquisition Reference Number" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
       And selects the "Cataloging" tab
       # not stepdefs
       And selects "Add record" button
       And selects "create" button
       And enters "987.987.987" in the "Cataloging" "Identification Number" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
       And selects the "Current Record" tab
-      And saves the record
+      And clicks the "Save" button
     Then the message "Please note that "Hard Save" will make the record read-only." should be displayed
       # hard save not implemented
-      And hard saves the record
+      And hard clicks the "Save" button
     Then the record is read-only
     Given user is on the "My CollectionSpace" page
       And enters "Metro Pictures Corporation" in the top nav search field
@@ -186,11 +186,11 @@ Feature: Supplementary Manual QA - Location-Movement-Inventory
     And selects the "Acquisitions" tab
     And clicks on result with text "456.456.456"
     And enters "3242342" in the "Acquisition" "Acquisition Reference Number" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
       And selects the "Cataloging" tab
       And clicks on result with text "987.987.987"
       And enters "3rrew42342" in the "Cataloging" "Identification Number" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
 

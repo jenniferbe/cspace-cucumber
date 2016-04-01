@@ -15,7 +15,7 @@ Feature: Permission Enforcement
       And clicks on the Create button 
     Then new record should be created
       And fills out required fields
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Then the "Delete" button should not be present
     Then close the browser
@@ -153,7 +153,7 @@ Feature: Permission Enforcement
       And clicks on a "Record Type C" record
     Then the "Used Terms" list should not link to vocabularies
       And deletes a "Vocabulary A" vocab field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Then the "Used Terms" list should not contain the vocabulary term
       And enters "xxx" in the "deleted vocab" field
@@ -187,14 +187,14 @@ Feature: Permission Enforcement
       And selects "Record Type C" from the top nav search record type select field
       And clicks on the top nav search submit button
       And deletes a "Vocabulary A" vocab field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Then the "Used Terms" list should not contain the vocabulary term
       And enters "Jam" in the "deleted vocab" field
     Then the vocabulary autocomplete should appear
     Then the vocabulary autocomplete "should not" contain the option to add a new term
       And clicks on something from autocomplete options
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Then the "Used Terms" list should contain the vocabulary term
     Then close the browser
@@ -206,7 +206,7 @@ Feature: Permission Enforcement
       And selects the "Vocabulary B" radio button on the Create New page
       And clicks on the Create button
       And enters "Hello it's me" in the "Vocabulary B" "Display Name" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Then the "Delete" button should not be present
       And selects "Vocabulary B" from the top nav search record type select field
@@ -214,7 +214,7 @@ Feature: Permission Enforcement
       And clicks on a "Vocabulary B" term
     Then the vocabulary term should be editable
       And edits a field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Then the dropdown in the top right row should contain "Record Type B"
     Then close the browser
@@ -243,13 +243,13 @@ Feature: Permission Enforcement
       And finds a "Vocabulary A" vocab term
     Then the "Used Terms" list should contain the vocabulary term
       And deletes the vocabulary term
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Then the "Used Terms" list should not contain the vocabulary term
       And enters "Jam" in the "deleted vocab" field
     Then the vocabulary autocomplete "should" contain the option to add a new term
       And adds "Jam" to a vocabulary
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Then the "Used Terms" list should contain "Jamm"
     Then close the browser
@@ -264,14 +264,14 @@ Feature: Permission Enforcement
       And finds a "Vocabulary A" vocab term
     Then the "Used Terms" list should contain the vocabulary term
       And deletes the vocabulary term
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Then the "Used Terms" list should not contain the vocabulary term
       And enters "Jam" in the "deleted vocab" field
     Then the vocabulary autocomplete should not contain "Vocabulary A" terms
     Then the vocabulary autocomplete "should not" contain the option to add a new term
       And clicks on something from autocomplete options
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Then the "Used Terms" list should contain the vocabulary term
     Then close the browser
@@ -286,14 +286,14 @@ Feature: Permission Enforcement
       And finds a "Vocabulary A" vocab term
     Then the "Used Terms" list should contain the vocabulary term
       And deletes the vocabulary term
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Then the "Used Terms" list should not contain the vocabulary term
       And enters "Jam" in the "deleted vocab" field
     Then the vocabulary autocomplete should not contain "Vocabulary A" terms
     Then the vocabulary autocomplete "should" contain the option to add a new term
       And clicks on something from autocomplete options
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Then the "Used Terms" list should contain the vocabulary term
     Then close the browser
@@ -308,13 +308,13 @@ Feature: Permission Enforcement
       And finds a "Vocabulary A" vocab term
     Then the "Used Terms" list should contain the vocabulary term
       And deletes the vocabulary term
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Then the "Used Terms" list should not contain the vocabulary term
       And enters "Jam" in the "deleted vocab" field
     Then the vocabulary autocomplete "should" contain the option to add a new term
       And clicks on something from autocomplete options
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Then the "Used Terms" list should contain the vocabulary term
     Then close the browser  

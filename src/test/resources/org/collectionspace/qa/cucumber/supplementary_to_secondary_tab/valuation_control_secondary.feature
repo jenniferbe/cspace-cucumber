@@ -9,7 +9,7 @@ Feature: Valuation Control Secondary Tab
       And selects the "Cataloging" radio button on the Create New page
       And clicks on the Create button
       And enters "1234321" in the "Cataloging" "Identification Number" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
       And selects the "Valuation" tab
     Then "No related record selected" should be displayed
@@ -28,7 +28,7 @@ Feature: Valuation Control Secondary Tab
     Then the "Delete this relation." button at the "top" of the page "should" be clickable
     Then the "Delete this relation." button at the "bottom" of the page "should" be clickable
       And fills out required fields
-      And saves the record
+      And clicks the "Save" button
     Then the record entry should be displayed under "Related Valuation Control Records"
       And clicks the newly created record 
     Then the "Cancel changes" button at the "top" of the page "should not" be clickable
@@ -36,7 +36,7 @@ Feature: Valuation Control Secondary Tab
     Then the "Delete this relation." button at the "top" of the page "should" be clickable
     Then the "Delete this relation." button at the "bottom" of the page "should" be clickable
       And selects the "Current Record" tab
-      And saves the record
+      And clicks the "Save" button
     Given user is on the "My Collectionspace" page
       And enters "1234321" in the top nav search field
       And selects "Cataloging" from the top nav search record type select field

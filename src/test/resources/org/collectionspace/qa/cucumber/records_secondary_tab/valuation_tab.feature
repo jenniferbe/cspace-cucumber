@@ -167,10 +167,10 @@ Feature: Valuation Tab
 
         And clicks the "+ Add Record" button
         And clicks on the Create button
-        And saves the record
+        And clicks the "Save" button
         Then the message "Please specify a Valuation Control Reference Number" should appear
         And enters "CQA116.11" in the "Evaluation Control Reference Number" field
-        And saves the record
+        And clicks the "Save" button
         Then the message "Relation successfully created." should appear
 
         And selects "Danish Krone" from the "Currency" drop down
@@ -181,7 +181,7 @@ Feature: Valuation Tab
         And enters "2016-01-02" in the "Renewal Date" field
         And selects "Current Value" from the "Type" drop down
         And enters "CQA116 \n Test" in the "Note" field
-        And saves the record
+        And clicks the "Save" button
         Then the message "Valuation Control successfully saved" should appear
 
         Then the "Currency" field should contain "Danish Krone"
@@ -209,7 +209,7 @@ Feature: Valuation Tab
         And selects "Original Value" from the "Type" drop down
         And enters "CQA116 \n Test \n for subtest Test 13" in the "Note" field
         
-        And saves the record
+        And clicks the "Save" button
         Then the message "Valuation Control successfully saved" should appear
 
         Then the "Currency" field should contain "Euro"
@@ -247,7 +247,7 @@ Feature: Valuation Tab
 	    And clicks the "Add record" button 
 	    And clicks on the Create button
 	    And enters "CQA116.7" in the "Valuation Control Reference Number" field
-	    And saves the record
+	    And clicks the "Save" button
 	    
 	    And clicks the "Delete Relation" button on the row that reads "CQA116.7"
 	    Then a delete confirmation dialog should appear
@@ -291,7 +291,7 @@ Feature: Valuation Tab
 	    And clicks the "Add record" button 
 	    And clicks on the Create button
 	    And enters "CQA116.8" in the "Valuation Control Reference Number" field
-	    And saves the record
+	    And clicks the "Save" button
 	    And clicks on result with text "CQA116.8"
 	    
 	    And clicks the "Delete this relation" button

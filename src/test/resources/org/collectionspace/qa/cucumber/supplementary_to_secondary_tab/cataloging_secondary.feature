@@ -21,7 +21,7 @@ Feature: Supplementary Manual QA - Cataloging Secondary Tab
     # Then the top and bottom "Cancel" buttons are enabled
     # In a vocabulary field, either add an existing vocabulary term or create a new term
     # Make sure all required fields are filled out
-    And saves the record
+    And clicks the "Save" button
     # And the titlebar should not contain "Creating new record..."
     # entry for the new record should appear under the related records header
     # Select the record you just created

@@ -6,7 +6,7 @@ Feature: Cataloging Page Test Plan
 Scenario: Identification number
     Given user is on the "Create New" page
       And clicks on the Create button
-      And saves the record
+      And clicks the "Save" button
     Then the message "Please specify an Identification Number" should be displayed
       And clicks Select number pattern
       And selects "Intake" from dropdown in "Object Identification Information" row
@@ -17,12 +17,12 @@ Scenario: Identification number
 
 Scenario: Correct Display of header on new
     When user enters "test" in the "Cataloging" "Object Name" field
-     And saves the record
+     And clicks the "Save" button
     # currently not displayed:
     Then the message "IN2016.1 - test" should be displayed
 
     When user enters "test1" in the "Cataloging" "Object Name" field
-     And saves the record
+     And clicks the "Save" button
     Then the message "IN2016.1 - test1" should be displayed
 
 Scenario: All fields saved on new cataloging record and edited record
@@ -67,7 +67,7 @@ Scenario: All fields saved on new cataloging record and edited record
     When user enters "test7" in the "Cataloging" "Associated People" field
     When user enters "test8" in the "Cataloging" "Associated Person" field
       And selects "Local Persons" from dropdown in "Associated Person"
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved   
     # checks that time is also shownin bottom message bar
     Then "GMT-0800 (PST)" should be displayed in the message bar   
@@ -85,7 +85,7 @@ Scenario: All fields saved on new cataloging record and edited record
 # How to remove values from fields? 
 Scenario: Removing values from all fields 
     When user removes the values from all the fields in the formula, except the Identification number
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved   
     Then the message "IN2016.2" should be displayed
     Then the "Terms Used" area in the right sidebar should be empty
@@ -133,7 +133,7 @@ Scenario: Structured Date
       And clicks on the Create button
       And clicks Select number pattern
       And selects "Intake" from dropdown in "Object Identification Information" row
-      And saves the record
+      And clicks the "Save" button
     And clicks on the "Production Date" field
     When user enters "test1" in the "Cataloging" "Display Date" field
     When user enters "test2" in the "Cataloging" "Date Period" field
@@ -142,7 +142,7 @@ Scenario: Structured Date
     When user enters "1975" in the "Cataloging" "Year" field
     When user enters "4" in the "Cataloging" "Month" field
     When user enters "5" in the "Cataloging" "Day" field
-      And saves the record
+      And clicks the "Save" button
     Then "test1" should appear in the "Production Date" area
     And clicks on the "Production Date" field
     Then "test1" should appear in the "Display Date" area
@@ -154,7 +154,7 @@ Scenario: Cancel Changes buttons
     Then disables top and bottom "cancel" buttons
     When user enters "2" in the "Cataloging" "Display Date" field
     Then enables top and bottom "cancel" buttons
-      And saves the record 
+      And clicks the "Save" button 
     Then disables top and bottom "cancel" buttons
 
 Scenario: Deletion of Record
@@ -163,7 +163,7 @@ Scenario: Deletion of Record
       And clicks Select number pattern
       And selects "Intake" from dropdown in "Object Identification Information" row
     Then disables top and bottom "delete" buttons
-      And saves the record
+      And clicks the "Save" button
       And clicks on the delete button 
 
     Then a delete confirmation dialog should appear
@@ -185,9 +185,9 @@ Scenario: Deletion of Record
     Then the Object should not be found.
     When user creates a new cataloging record and fill in at least the identification number
     And take note of the identification number of the record
-    And saves the record
+    And clicks the "Save" button
     And clicks on the "Add" button
-    And saves the record
+    And clicks the "Save" button
     And clicks on the "Delete" button 
     Then a dialog should appear asking you to delete this record and its relationships
     And clicks cancel button

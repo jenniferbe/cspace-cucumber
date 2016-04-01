@@ -17,7 +17,7 @@ Feature: Advanced Search - Loans In
       And enters "2011-01-01" in the "Loan In" "Loan In Date" field
       And enters "2011-01-01" in the "Loan In" "Loan In Return Date" field
       And enters "2011-01-01" in the "Loan In" "Loan Renewal Application Date" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"
@@ -112,7 +112,7 @@ Feature: Advanced Search - Loans In
       And selects "Research" from dropdown in "Loan Purpose" row
       And enters "testtest" in the "Loan In" "Loan In Conditions" field
       And enters "2001-01-01" in the "Loan In" "Loan In Date" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Given user is on the "Create New" page
       And selects the "Loan In" radio button on the Create New page
@@ -124,7 +124,7 @@ Feature: Advanced Search - Loans In
       And selects "Research" from dropdown in "Loan Purpose" row
       And enters "testtest" in the "Loan In" "Loan In Conditions" field
       And enters "2001-01-01" in the "Loan In" "Loan In Date" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Given user is on the "Create New" page
       And selects the "Loan In" radio button on the Create New page
@@ -136,7 +136,7 @@ Feature: Advanced Search - Loans In
       And selects "Photography" from dropdown in "Loan Purpose" row
       And enters "testtest" in the "Loan In" "Loan In Conditions" field
       And enters "2001-01-01" in the "Loan In" "Loan In Date" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
       And clicks the "Advanced search" button
     Then the titlebar should contain "Advanced Search"

@@ -45,7 +45,7 @@ Feature: Supplementary Manual QA - Intake
       And selects the "Intake" radio button on the Create New page
       And clicks on the Create button
       And enters "1234" in the "Intake" "Intake Entry Number" field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Then "GMT-0800 (PST)" should be displayed in the message bar
     Then disables top and bottom "cancel" buttons
@@ -113,7 +113,7 @@ Feature: Supplementary Manual QA - Intake
       And clicks on the Create button
       And enters "1.2.3.4.5" in the "Intake" "Intake Entry Number" field
       And adds "John Doe" to the "Intake" "Current Owner" vocab field
-      And saves the record
+      And clicks the "Save" button
     Then the record is successfully saved
     Then disables top and bottom "cancel" buttons
     Then enables top and bottom "delete" buttons

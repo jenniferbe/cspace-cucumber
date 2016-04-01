@@ -22,7 +22,7 @@ Feature: Advanced Search - Storage Location
 	  Then a drop down list should appear in the "Term Status" row
 	    And selects "Rejected" from dropdown in "Term Status" row
 	    And enters "textbook" in the "Storage Location" "Security Note" field
-	    And saves the record
+	    And clicks the "Save" button
 	  Then the record is successfully saved
 	    And clicks the "Advanced search" button
 	  Then the titlebar should contain "Advanced Search"
@@ -159,7 +159,7 @@ Feature: Advanced Search - Storage Location
 	  Then a drop down list should appear in the "Term Status" row
 	    And selects "Accepted" from dropdown in "Term Status" row
 	    And enters "testtest" in the "Storage Location" "Security Note" field
-	    And saves the record
+	    And clicks the "Save" button
 	  Then the record is successfully saved
 	  Given user is on the "Create New" page
 	    And selects the "Storage Location" radio button on the Create New page
@@ -170,7 +170,7 @@ Feature: Advanced Search - Storage Location
 	  Then a drop down list should appear in the "Term Status" row
 	    And selects "Accepted" from dropdown in "Term Status" row
 	    And enters "testtest" in the "Storage Location" "Access Note" field
-	    And saves the record
+	    And clicks the "Save" button
 	  Then the record is successfully saved
 	  Given user is on the "Create New" page
 	    And selects the "Storage Location" radio button on the Create New page
@@ -181,7 +181,7 @@ Feature: Advanced Search - Storage Location
 	  Then a drop down list should appear in the "Term Status" row
 	    And selects "Rejected" from dropdown in "Term Status" row
 	    And enters "testtest" in the "Storage Location" "Condition Note" field
-	    And saves the record
+	    And clicks the "Save" button
 	  Then the record is successfully saved
 	    And clicks the "Advanced search" button
 	  Then the titlebar should contain "Advanced Search"

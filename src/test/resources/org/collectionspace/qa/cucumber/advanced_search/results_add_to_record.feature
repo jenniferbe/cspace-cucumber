@@ -8,7 +8,7 @@ Feature: Advanced Search results Add to Record
         Given user is in the "Create New" page
         And selects the "Group" radio button on the Create New page
         And enters "CQA-86 Group" in the "Title" field
-        And saves the record
+        And clicks the "Save" button
         And clicks the "Advanced Search button"
         And enters "CQA86" in the "search" field
         Then the results should contain "CQA86.1"
