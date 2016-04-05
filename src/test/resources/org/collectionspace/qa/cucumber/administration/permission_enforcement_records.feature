@@ -9,8 +9,8 @@ Feature: Permission Enforcement
   Scenario: Create New Page
     Given user is logged in as "User I" 
     Given user is on the "Create New" page
-    Then the "Record Type A" radio button should "not be" presen
-    Then the "Record Type B" radio button should "not be" presen
+    Then the "Record Type A" radio button should "not be" present
+    Then the "Record Type B" radio button should "not be" present
     Then the "Record Type C" radio button should "be" present
       And clicks on the Create button 
     Then new record should be created
