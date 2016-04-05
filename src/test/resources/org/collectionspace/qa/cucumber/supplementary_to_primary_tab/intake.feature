@@ -71,40 +71,40 @@ Feature: Supplementary Manual QA - Intake
       And clicks on the Create button
     Given user clicks on the "Fold" symbol next to "Object Entry Information"
     Then the "Object Entry Information" section should "fold"
-    Then the "Fold" symbol next to "Object Entry Information"  should be a "folded" symbol
+    Then the "Fold" symbol next to "Object Entry Information" should be a "folded" symbol
     Given user clicks on the "Fold" symbol next to "Object Entry Information"
     Then the "Object Entry Information" section should "unfold"
-    Then the "Fold" symbol next to "Object Entry Information"  should be a "unfolded" symbol
+    Then the "Fold" symbol next to "Object Entry Information" should be a "unfolded" symbol
     Given user clicks on the "Fold" symbol next to "Object Collection Information"
     Then the "Object Collection Information" section should "fold"
-    Then the "Fold" symbol next to "Object Collection Information"  should be a "folded" symbol
+    Then the "Fold" symbol next to "Object Collection Information" should be a "folded" symbol
     Given user clicks on the "Fold" symbol next to "Object Collection Information"
     Then the "Object Collection Information" section should "unfold"
-    Then the "Fold" symbol next to "Object Collection Information"  should be a "unfolded" symbol
+    Then the "Fold" symbol next to "Object Collection Information" should be a "unfolded" symbol
     Given user clicks on the "Fold" symbol next to "Valuation"
     Then the "Valuation" section should "fold"
-    Then the "Fold" symbol next to "Valuation"  should be a "folded" symbol
+    Then the "Fold" symbol next to "Valuation" should be a "folded" symbol
     Given user clicks on the "Fold" symbol next to "Valuation"
     Then the "Valuation" section should "unfold"
-    Then the "Fold" symbol next to "Valuation"  should be a "unfolded" symbol
+    Then the "Fold" symbol next to "Valuation" should be a "unfolded" symbol
     Given user clicks on the "Fold" symbol next to "Insurance"
     Then the "Insurance" section should "fold"
-    Then the "Fold" symbol next to "Insurance"  should be a "folded" symbol
+    Then the "Fold" symbol next to "Insurance" should be a "folded" symbol
     Given user clicks on the "Fold" symbol next to "Insurance"
     Then the "Insurance" section should "unfold"
-    Then the "Fold" symbol next to "Insurance"  should be a "unfolded" symbol
+    Then the "Fold" symbol next to "Insurance" should be a "unfolded" symbol
     Given user clicks on the "Fold" symbol next to "Location"
     Then the "Location" section should "fold"
-    Then the "Fold" symbol next to "Location"  should be a "folded" symbol
+    Then the "Fold" symbol next to "Location" should be a "folded" symbol
     Given user clicks on the "Fold" symbol next to "Location"
     Then the "Location" section should "unfold"
-    Then the "Fold" symbol next to "Location"  should be a "unfolded" symbol
+    Then the "Fold" symbol next to "Location" should be a "unfolded" symbol
     Given user clicks on the "Fold" symbol next to "Condition"
     Then the "Condition" section should "fold"
-    Then the "Fold" symbol next to "Condition"  should be a "folded" symbol
+    Then the "Fold" symbol next to "Condition" should be a "folded" symbol
     Given user clicks on the "Fold" symbol next to "Condition"
     Then the "Condition" section should "unfold"
-    Then the "Fold" symbol next to "Condition"  should be a "unfolded" symbol
+    Then the "Fold" symbol next to "Condition" should be a "unfolded" symbol
     Then close the browser
 
   Scenario: Vocabulary Pivoting

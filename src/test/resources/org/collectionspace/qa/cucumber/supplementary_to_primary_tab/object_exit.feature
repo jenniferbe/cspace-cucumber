@@ -85,10 +85,10 @@ Feature: Supplementary Manual QA - Object Exit
       And clicks on the Create button
     Given user clicks on the "Fold" symbol next to "Object Exit Information"
     Then the "Object Exit Information" section should "fold"
-    Then the "Fold" symbol next to "Object Exit Information"  should be a "folded" symbol
+    Then the "Fold" symbol next to "Object Exit Information" should be a "folded" symbol
     Given user clicks on the "Fold" symbol next to "Object Exit Information"
     Then the "Object Exit Information" section should "unfold"
-    Then the "Fold" symbol next to "Object Exit Information"  should be a "unfolded" symbol
+    Then the "Fold" symbol next to "Object Exit Information" should be a "unfolded" symbol
     Then close the browser
 
   Scenario: Vocabulary Pivoting

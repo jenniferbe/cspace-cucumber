@@ -169,10 +169,10 @@ Feature: Loan In Page Testing
     And clicks on the Create button
     And clicks on the "Fold" symbol next to "Loans In Information"
     Then the "Loans In Information" section should "fold"
-    And the "Fold" symbol next to "Loans In Information"  should be a "folded" symbol
+    And the "Fold" symbol next to "Loans In Information" should be a "folded" symbol
     When user clicks on the "Fold" symbol next to "Loans In Information"
     Then the "Loans In Information" section should "unfold"
-    And the "Fold" symbol next to "Loans In Information"  should be a "unfolded" symbol
+    And the "Fold" symbol next to "Loans In Information" should be a "unfolded" symbol
     And close the browser
 
 #Warnings

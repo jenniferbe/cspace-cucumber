@@ -1,6 +1,6 @@
 #Created by Forest Yang on 12/302015
 # OBJECTS EXIT
-@advancedsearch
+#@advancedsearch
 Feature: Advanced Search - Object Exit
 
   #Test1

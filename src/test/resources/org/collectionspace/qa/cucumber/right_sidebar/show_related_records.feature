@@ -34,7 +34,7 @@ Feature: Right Frame - Show Related Records
     Then close the browser
 
   Scenario: Record Deletion for Recycling
-    Given user is in the "Create New" page
+    Given user is on the "Create New" page
     And navigates to the record with identification number "CQA16.1"
     And clicks on the delete button 
 

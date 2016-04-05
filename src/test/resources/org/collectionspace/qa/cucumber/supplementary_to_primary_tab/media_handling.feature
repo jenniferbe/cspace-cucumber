@@ -72,16 +72,16 @@ Feature: Supplementary Manual QA - Media Handling
       And clicks on the Create button
     Given user clicks on the "Fold" symbol next to "File Information"
     Then the "File Information" section should "fold"
-    Then the "Fold" symbol next to "File Information"  should be a "folded" symbol
+    Then the "Fold" symbol next to "File Information" should be a "folded" symbol
     Given user clicks on the "Fold" symbol next to "File Information"
     Then the "File Information" section should "unfold"
-    Then the "Fold" symbol next to "File Information"  should be a "unfolded" symbol
+    Then the "Fold" symbol next to "File Information" should be a "unfolded" symbol
     Given user clicks on the "Fold" symbol next to "Media Handling Information"
     Then the "Media Handling Information" section should "fold"
-    Then the "Fold" symbol next to "Media Handling Information"  should be a "folded" symbol
+    Then the "Fold" symbol next to "Media Handling Information" should be a "folded" symbol
     Given user clicks on the "Fold" symbol next to "Media Handling Information"
     Then the "Media Handling Information" section should "unfold"
-    Then the "Fold" symbol next to "Media Handling Information"  should be a "unfolded" symbol
+    Then the "Fold" symbol next to "Media Handling Information" should be a "unfolded" symbol
     Then close the browser
 
   Scenario: Vocabulary Pivoting
