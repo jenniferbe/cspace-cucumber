@@ -55,7 +55,7 @@ Feature: Person Vocabulary Data Entry
       And clicks on the plus to repeat the "Person Term Group" form 
     Then the new "Person Term Group" forms should alternate between dark and light shading
       And clicks on the plus to repeat the "Address" form
-      And clicks on the plug to repeat the "Address" form
+      And clicks on the plus to repeat the "Address" form
     Then the new "Address" forms should alternate between dark and light shading
     Then close the browser
 
@@ -111,7 +111,7 @@ Feature: Person Vocabulary Data Entry
       And enters "Tentative Change" in the "Person" "Display name" field
       And clicks on "Find and Edit" menu item
     Then a confirmation dialog should appear
-      And clicks cancel button
+      And clicks confirmation cancel button
     Then the dialog should be dismissed
     Then close the browser
 
