@@ -1,11 +1,11 @@
 # Created by Cesar Villalobos on 01/07/2016
 
-@advancedsearch
+#@advancedsearch
 Feature: Advanced Search results Add to Record
     Adding search results to a group
 
     Scenario: Relate cataloging records to an existing Group record.
-        Given user is in the "Create New" page
+        Given user is on the "Create New" page
         And selects the "Group" radio button on the Create New page
         And enters "CQA-86 Group" in the "Title" field
         And clicks the "Save" button

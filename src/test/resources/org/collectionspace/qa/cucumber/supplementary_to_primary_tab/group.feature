@@ -118,4 +118,3 @@ Feature: Supplementary Manual QA - Group
   #     And clicks the confirmation delete button
   #     And clicks delete confirmation OK button
   #   Then close the browser
-

@@ -6,7 +6,7 @@ Feature: Advanced Search Group
     Searching for a recently made group
 
     Scenario
-        Given user is in the "Create New" page
+        Given user is on the "Create New" page
         And selects the "Group" radio button on the Create New page
         And enters "textbook75" in the "Title" field
         And enters "CQA-75" in the "Group Owner" field

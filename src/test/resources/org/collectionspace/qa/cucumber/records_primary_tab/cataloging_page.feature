@@ -92,8 +92,8 @@ Scenario: Removing values from all fields
     # Check the following step by browsing to the object record via find and edit
     # We may need to add intervening steps for this
     Then all the fields should be saved as empty
-    When user Deletes the Identification Number
-      And clicks the "Save" button
+    When user clears the "Identification Number" field
+      And saves the record
     Then the message "Please specify an Identification Number" should be displayed above object formula
     Then object should not be saved
 
@@ -207,59 +207,59 @@ Scenario: Fold/Unfolding boxes
     Given user is on the "Create New" page
       And clicks on the Create button
     Given user clicks on the "Fold" symbol next to "Object Identification Information"
-    Then the "Object Identification Information" section should fold
-    Then the "Fold" symbol next to "Object Identification Information" should be a folded symbol
+    Then the "Object Identification Information" section should "fold"
+    Then the "Fold" symbol next to "Object Identification Information" should be a "folded" symbol
     Given user clicks on the "Fold" symbol next to "Object Identification Information"
-    Then the "Exhibition Information" section should unfold
-    Then the "Fold" symbol next to "Object Identification Information" should be an unfolded symbol
+    Then the "Exhibition Information" section should "unfold"
+    Then the "Fold" symbol next to "Object Identification Information" should be a "unfolded" symbol
     Given user clicks on the "Fold" symbol next to "Object Description Information"
-    Then the "Object Description Information" section should fold
-    Then the "Fold" symbol next to "Object Description Information" should be a folded symbol
+    Then the "Object Description Information" section should "fold"
+    Then the "Fold" symbol next to "Object Description Information" should be a "folded" symbol
     Given user clicks on the "Fold" symbol next to "Object Description Information"
-    Then the "Object Description Information" section should unfold
-    Then the "Fold" symbol next to "Object Description Information" should be an unfolded symbol
+    Then the "Object Description Information" section should "unfold"
+    Then the "Fold" symbol next to "Object Description Information" should be a "unfolded" symbol
     Given user clicks on the "Fold" symbol next to "Object Production Information"
-    Then the "Object Production Information" section should fold
-    Then the "Fold" symbol next to "Object Production Information" should be a folded symbol
+    Then the "Object Production Information" section should "fold"
+    Then the "Fold" symbol next to "Object Production Information" should be a "folded" symbol
     Given user clicks on the "Fold" symbol next to "Object Production Information"
-    Then the "Object Production Information" section should unfold
-    Then the "Fold" symbol next to "Object Production Information" should be an unfolded symbol
+    Then the "Object Production Information" section should "unfold"
+    Then the "Fold" symbol next to "Object Production Information" should be a "unfolded" symbol
     Given user clicks on the "Fold" symbol next to "Object History and Association Information"
-    Then the "Object History and Association Information" section should fold
-    Then the "Fold" symbol next to "Object History and Association Information" should be a folded symbol
+    Then the "Object History and Association Information" section should "fold"
+    Then the "Fold" symbol next to "Object History and Association Information" should be a "folded" symbol
     Given user clicks on the "Fold" symbol next to "Object History and Association Information"
-    Then the "Object History and Association Information" section should unfold
-    Then the "Fold" symbol next to "Object History and Association Information" should be an unfolded symbol
+    Then the "Object History and Association Information" section should "unfold"
+    Then the "Fold" symbol next to "Object History and Association Information" should be a "unfolded" symbol
     Given user clicks on the "Fold" symbol next to "Object Owner's Contribution Information"
-    Then the "Object Owner's Contribution Information" section should fold
-    Then the "Fold" symbol next to "Object Owner's Contribution Information" should be a folded symbol
+    Then the "Object Owner's Contribution Information" section should "fold"
+    Then the "Fold" symbol next to "Object Owner's Contribution Information" should be a "folded" symbol
     Given user clicks on the "Fold" symbol next to "Object Owner's Contribution Information"
-    Then the "Object Owner's Contribution Information" section should unfold
-    Then the "Fold" symbol next to "Object Owner's Contribution Information" should be an unfolded symbol
+    Then the "Object Owner's Contribution Information" section should "unfold"
+    Then the "Fold" symbol next to "Object Owner's Contribution Information" should be a "unfolded" symbol
     Given user clicks on the "Fold" symbol next to "Object Viewer's Contribution Information"
-    Then the "Object Viewer's Contribution Information" section should fold
-    Then the "Fold" symbol next to "Object Viewer's Contribution Information" should be a folded symbol
+    Then the "Object Viewer's Contribution Information" section should "fold"
+    Then the "Fold" symbol next to "Object Viewer's Contribution Information" should be a "folded" symbol
     Given user clicks on the "Fold" symbol next to "Object Viewer's Contribution Information"
-    Then the "Object Viewer's Contribution Information" section should unfold
-    Then the "Fold" symbol next to "Object Viewer's Contribution Information" should be an unfolded symbol
+    Then the "Object Viewer's Contribution Information" section should "unfold"
+    Then the "Fold" symbol next to "Object Viewer's Contribution Information" should be a "unfolded" symbol
     Given user clicks on the "Fold" symbol next to "Reference Information"
-    Then the "Reference Information" section should fold
-    Then the "Fold" symbol next to "Reference Information" should be a folded symbol
+    Then the "Reference Information" section should "fold"
+    Then the "Fold" symbol next to "Reference Information" should be a "folded" symbol
     Given user clicks on the "Fold" symbol next to "Reference Information"
-    Then the "Reference Information" section should unfold
-    Then the "Fold" symbol next to "Reference Information" should be an unfolded symbol
+    Then the "Reference Information" section should "unfold"
+    Then the "Fold" symbol next to "Reference Information" should be a "unfolded" symbol
     Given user clicks on the "Fold" symbol next to "Object Collection Information"
-    Then the "Object Collection Information" section should fold
-    Then the "Fold" symbol next to "Object Collection Information" should be a folded symbol
+    Then the "Object Collection Information" section should "fold"
+    Then the "Fold" symbol next to "Object Collection Information" should be a "folded" symbol
     Given user clicks on the "Fold" symbol next to "Object Collection Information"
-    Then the "Object Collection Information" section should unfold
-    Then the "Fold" symbol next to "Object Collection Information" should be an unfolded symbol
+    Then the "Object Collection Information" section should "unfold"
+    Then the "Fold" symbol next to "Object Collection Information" should be a "unfolded" symbol
     Given user clicks on the "Fold" symbol next to "Object Hierarchy"
-    Then the "Object Hierarchy" section should fold
-    Then the "Fold" symbol next to "Object Hierarchy" should be a folded symbol
+    Then the "Object Hierarchy" section should "fold"
+    Then the "Fold" symbol next to "Object Hierarchy" should be a "folded" symbol
     Given user clicks on the "Fold" symbol next to "Object Hierarchy"
-    Then the "Object Hierarchy" section should unfold
-    Then the "Fold" symbol next to "Object Hierarchy" should be an unfolded symbol
+    Then the "Object Hierarchy" section should "unfold"
+    Then the "Fold" symbol next to "Object Hierarchy" should be a "unfolded" symbol
 
 Scenario: Warning on attempting to add related object/procedures to unsaved object
     Given user is on the "Create New" page

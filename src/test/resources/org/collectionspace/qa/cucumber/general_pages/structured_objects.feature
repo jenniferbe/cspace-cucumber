@@ -48,7 +48,7 @@ Feature: Structured Objects- QA Test Plan
 		And enters "2012.12.1a.2" in the top nav search field
 		And clicks on the top nav search submit button
 		And clicks on result with text "2012.12.1a.2"
-		Then the "Equivalent component" field should not be editable  
+		Then the "Equivalent component" should be in "Read Only" mode  
 		Then the "Equivalent component" field should contain "2012.12.1a.1"
 
 		And enters "2012.12.1a.2a" in the "Object component" field
@@ -68,7 +68,7 @@ Feature: Structured Objects- QA Test Plan
 		Then the "Object component" field should contain "2012.12.1a.2b"
 		Then the "Object component" field should contain "2012.12.1a.2c"
 
-		And clicks on the "Go to" button next to the "Broader Object" field in the row containing "2012.12.1a.2b"  
+		And clicks on the "Go to" button next to the "Broader Object" field in the row containing "2012.12.1a.2b" 
 		Then the "Broader object" field should contain "2012.12.1a.2"
 		Then the "Equivalent component" field should contain "2012.12.1a.2a"
 		Then the "Equivalent component" field should contain "2012.12.1a.2c"
@@ -184,8 +184,8 @@ Feature: Structured Objects- QA Test Plan
 		Then a dialog containing the message "This Cataloging record can not be removed. It has a Narrower Context." should be displayed
 
 	# 2h
-		And clicks the "Delete"  button in the "Object component" field in the row containing "2012.12.1a.2b.0000" 
-		And clicks the "Delete"  button in the "Object component" field in the row containing "2012.12.1a.2b" 
+		And clicks the "Delete" button in the "Object component" field in the row containing "2012.12.1a.2b.0000" 
+		And clicks the "Delete" button in the "Object component" field in the row containing "2012.12.1a.2b" 
 		And clicks on the delete button 
 
 		Then a delete confirmation dialog should appear

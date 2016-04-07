@@ -1,10 +1,10 @@
 # Created by Cesar Villalobos on 01/07/2016
 
-@advancedsearch
+#@advancedsearch
 Feature: Advanced Search ­Cataloging
 
     Scenario: Advanced Search Fields
-        Given user is in the "Create New" page
+        Given user is on the "Create New" page
         And selects the "Cataloging" radio button on the Create New page
         And enters "CQA72.1" in the "Identification Number" field 
         And enters "Nameless Object" in the "Object Name" field
@@ -17,7 +17,7 @@ Feature: Advanced Search ­Cataloging
         And selects "dry" from the "Form" drop down
         And enters "Cesar Villalobos" in the "Inscriber" field
         And selects "Cesar Villalobos" from autocomplete options
-        And enters "Drawings" in the "Inscription Method" fieldnamed "Inscription Method" but rather just
+        And enters "Drawings" in the "Inscription Method" field named "Inscription Method"
         And enters "Polyester" in the "Material" field
         And selects "forgery" from the "Object Status" drop down
         And selects "larva" from the "Phase" drop down
@@ -110,7 +110,7 @@ Feature: Advanced Search ­Cataloging
         # Inscription Method (Non­Textual Inscription) 
         And clicks the "Advanced Search" button
         And selects "Cataloging" from the "Record Type Select" drop down
-        And enters "Drawings" in the "Inscription Method" fieldnamed "Inscription Method" but rather just
+        And enters "Drawings" in the "Inscription Method" field named "Inscription Method"
         And clicks the "search" button
         Then the search results should contain "CQA72.1"
 
@@ -231,7 +231,7 @@ Feature: Advanced Search ­Cataloging
 
     Scenario: Boolean field-­based search
 
-        Given user is in the "Create New" page
+        Given user is on the "Create New" page
         And selects the "Cataloging" radio button on the Create New page
         And enters "CQA72.2" in the "Cataloging/Assessment Reference Number" field
         And selects "Study Collection" from the "Collection" drop down
@@ -263,7 +263,7 @@ Feature: Advanced Search ­Cataloging
         And selects "New" from the "Record Status" drop down
         And clicks the "search" button
         Then the search results should contain "CQA72.2"
-        Then the search results should contain "CQA72.3"        
+        Then the search results should contain "CQA72.3"       
         Then the search results should contain "CQA72.4"
 
         And clicks the "Advanced Search button"
@@ -273,7 +273,7 @@ Feature: Advanced Search ­Cataloging
         And selects "New" from the "Record Status" drop down
         And clicks the "search" button
         Then the search results should contain "CQA72.2"
-        Then the search results should contain "CQA72.3"        
+        Then the search results should contain "CQA72.3"       
         Then the search results should not contain "CQA72.4"
         Then close the browser
 

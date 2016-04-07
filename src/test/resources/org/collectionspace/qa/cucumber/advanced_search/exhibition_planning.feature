@@ -1,11 +1,11 @@
 # Created by Cesar Villalobos on 01/07/2016
 
-@advancedsearch
+#@advancedsearch
 Feature: Advanced Search ­– Exhibition Planning
         Searching for records based on certain criteria on the advanced search page
 
     Scenario: Advanced Search Fields
-        Given user is in the "Create New" page
+        Given user is on the "Create New" page
         And selects the "Exhibition" radio button on the Create New page
         And enters "CQA74.1" in the "Exhibition Number" field 
         And enters "CQA74 Test" in the "Exhibition Title" field 
@@ -69,7 +69,7 @@ Feature: Advanced Search ­– Exhibition Planning
         Then close the browser
 
     Scenario: Boolean field­-based search
-        Given user is in the "Create New" page
+        Given user is on the "Create New" page
         And selects the "Exhibition" radio button on the Create New page
         And enters "CQA74.2" in the "Exhibition Number" field
         And selects "Permanent" from the "Exhibition Type" drop down
@@ -116,7 +116,7 @@ Feature: Advanced Search ­– Exhibition Planning
         And selects "Globex Corporation" from autocomplete options        
         And clicks the "search" button
         Then the search results should contain "CQA74.2"
-        Then the search results should contain "CQA74.3"        
+        Then the search results should contain "CQA74.3"       
         Then the search results should not contain "CQA74.4"
 
         Then close the browser
@@ -141,7 +141,7 @@ Feature: Advanced Search ­– Exhibition Planning
         And selects "Globex Corporation" from autocomplete options
         And clicks the "search" button
         Then the search results should contain "CQA74.2"
-        Then the search results should contain "CQA74.3"        
+        Then the search results should contain "CQA74.3"       
         Then the search results should not contain "CQA74.4"
 
         And navigates to the record with identification number "CQA74.1"

@@ -1,6 +1,6 @@
 #Created by Forest Yang on 12/29
 
-@advancedsearch
+#@advancedsearch
 Feature: Advanced Search - Loans Out
 
   #Test1

@@ -1,6 +1,6 @@
 # Created by Regina Xu on 2/26/16
 
-@advancedsearch
+# @advancedsearch
 Feature: Advanced Keyword Search 
 
 ## The remainder of this feature file, below, needs to be converted from narrative to steps

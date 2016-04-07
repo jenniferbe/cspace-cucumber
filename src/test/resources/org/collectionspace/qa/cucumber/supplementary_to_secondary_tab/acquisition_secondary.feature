@@ -80,7 +80,7 @@ Feature: Supplementary Secondary Manual Acquisition Secondary Tab
     Then close the browser
 
     Scenario: Deleting Used Records
-    	Given user is in the "Create New" page
+    	Given user is on the "Create New" page
       And navigates to the record with identification number "CQA81"
       And clicks on the delete button 
 

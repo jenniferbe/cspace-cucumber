@@ -9,6 +9,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 import org.collectionspace.qa.utils.Pages;
+import org.collectionspace.qa.utils.ElementMappings;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -16,7 +17,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.*;
+import com.thoughtworks.selenium.*;
 import static org.openqa.selenium.support.ui.ExpectedConditions.*;
 
 import static org.junit.Assert.assertEquals;
@@ -33,6 +36,8 @@ public class StepDefs {
     private final WebDriverWait wait;
     private Record record;
     private Pages pages = new Pages();
+    private Selenium selenium;
+    private ElementMappings mappings = new ElementMappings();
 
     public static String
             BASE_URL = "http://qa.collectionspace.org:8180/collectionspace/ui/core/html/";
@@ -43,6 +48,22 @@ public class StepDefs {
         wait = new WebDriverWait(driver, 10);
         login(driver, BASE_URL);
     }
+
+    @And("^enters \"([^\"]*)\" in the \"([^\"]*)\" field$")
+    public void enters_in_field(String value, String fieldName) throws Throwable{
+        String boxName = mappings.getElement(fieldName);
+
+        WebElement box = driver.findElement(By.className(boxName));
+        box.sendKeys(value);
+    } 
+
+    @And("^user waits$") 
+    public void waitAction() throws Throwable {
+        driver.wait(10);
+    }
+
+
+    // ##################################################################
 
 
     @And("^(?:the user )?(?:user )?is on the \"([^\"]*)\" page$")
@@ -97,6 +118,15 @@ public class StepDefs {
     @And("^(?:the user )?(?:user )?clicks (?:on )?the Save button$")
     public void clicks_the_Save_button() throws Throwable {
         driver.findElement(By.id("save")).click();
+        // Wait until the newly-created record's "Save" button appears
+        // before proceeding, to avoid timeout errors
+        wait.until(visibilityOfElementLocated(By.className("saveButton")));
+    }
+
+
+    @Given("^user is on a blank \"([^\"]*)\" record$")
+    public void user_is_on_a_blank_record_type_page(String pageName) throws Throwable {
+        driver.get(BASE_URL + pages.getPageUrls(pageName));
         // Wait until the newly-created record's "Save" button appears
         // before proceeding, to avoid timeout errors
         wait.until(visibilityOfElementLocated(By.className("saveButton")));
@@ -251,6 +281,7 @@ public class StepDefs {
         String xpath = "//li[@class='cs-autocomplete-matchItem csc-autocomplete-matchItem']/span[text()='" + option + "']";
         driver.findElement(By.xpath(xpath)).click();
     }
+
 
     @And("^\"([^\"]*)\" should appear in the Terms Used sidebar$")
     public void should_appear_in_the_Terms_Used_sidebar(String term) throws Throwable {

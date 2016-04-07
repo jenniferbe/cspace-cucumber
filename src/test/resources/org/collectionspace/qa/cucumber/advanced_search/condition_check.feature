@@ -1,11 +1,11 @@
 # Created by Cesar Villalobos on 01/07/2016
 
-@advancedsearch
+#@advancedsearch
 Feature: Advanced Search ­ Condition Check
 	# Enter feature description here
 
     Scenario: Advanced Search Fields
-	    Given user is in the "Create New" page
+	    Given user is on the "Create New" page
         And selects the "Condition Check" radio button on the Create New page
         And enters "CQA73.1" in the "Condition Check/Assessment Reference Number" field 
         And selects "Low" from the "Object Audit Category" drop down        
@@ -73,7 +73,7 @@ Feature: Advanced Search ­ Condition Check
 	    Then close the browser
 
 	Scenario: Boolean field­-based search
-        Given user is in the "Create New" page
+        Given user is on the "Create New" page
         And selects the "Condition Check" radio button on the Create New page
         And enters "CQA73.2" in the "Condition Check/Assessment Reference Number" field
         And selects "Low" from the "Object Audit Category" drop down
@@ -105,7 +105,7 @@ Feature: Advanced Search ­ Condition Check
         And selects "Needs no work" from the "Condition" drop down
         And clicks the "search" button
         Then the search results should contain "CQA73.2"
-        Then the search results should contain "CQA73.3"        
+        Then the search results should contain "CQA73.3"       
         Then the search results should contain "CQA73.4"
 
         And clicks the "Advanced Search button"
@@ -115,7 +115,7 @@ Feature: Advanced Search ­ Condition Check
         And selects "Needs no work" from the "Condition" drop down
         And clicks the "search" button
         Then the search results should contain "CQA73.2"
-        Then the search results should contain "CQA73.3"        
+        Then the search results should contain "CQA73.3"       
         Then the search results should not contain "CQA73.4"
         Then close the browser
 

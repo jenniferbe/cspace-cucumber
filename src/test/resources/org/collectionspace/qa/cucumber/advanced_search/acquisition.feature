@@ -1,11 +1,11 @@
 # Created by Cesar Villalobos on 01/07/2016
 
-@advancedsearch
+# @advancedsearch
 Feature: Advanced Search ­ Acquisition
     Searching for a record based on boolean-search as well as regular search terms
 
 	Scenario: Advanced Search Fields and wildcard
-	Given user is in the "Create New" page
+	    Given user is on the "Create New" page
         And selects the "Acquisition" radio button on the Create New page
         And enters "CQA71.1" in the "Acquisition Reference Number" field 
         And enters "2016-01-01" in the "Accession date" field
@@ -88,7 +88,7 @@ Feature: Advanced Search ­ Acquisition
 
 
 	Scenario: Boolean field­-based search
-        Given user is in the "Create New" page
+        Given user is on the "Create New" page
         And selects the "Acquisition" radio button on the Create New page
         And enters "CQA71.2" in the "Acquisition Reference Number" field
         And selects "Purchase" from the "Acquisition Method" drop down  
@@ -119,7 +119,7 @@ Feature: Advanced Search ­ Acquisition
         And selects "Purchase" from the "Acquisition Method" drop down  
         And clicks the "search" button
         Then the search results should contain "71.2"
-        Then the search results should contain "71.3"        
+        Then the search results should contain "71.3"       
         Then the search results should contain "71.4"
 
 		And clicks the "Advanced Search" button
@@ -128,7 +128,7 @@ Feature: Advanced Search ­ Acquisition
         And enters "thank you" in the "Credit Line" field
         And selects "Purchase" from the "Acquisition Method" drop down  
         Then the search results should contain "71.2"
-        Then the search results should contain "71.3"        
+        Then the search results should contain "71.3"       
         Then the search results should not contain "71.4"
 
         Then close the browser
@@ -143,7 +143,7 @@ Feature: Advanced Search ­ Acquisition
         And selects "Purchase" from the "Acquisition Method" drop down  
         And clicks the "search" button
         Then the search results should contain "71.2"
-        Then the search results should contain "71.3"        
+        Then the search results should contain "71.3"       
         Then the search results should contain "71.4"
         
         And clicks the "search" button
@@ -153,7 +153,7 @@ Feature: Advanced Search ­ Acquisition
         And enters "thank you" in the "Credit Line" field
         And selects "Purchase" from the "Acquisition Method" drop down  
         Then the search results should contain "71.2"
-        Then the search results should contain "71.3"        
+        Then the search results should contain "71.3"       
         Then the search results should not contain "71.4"
 
 
