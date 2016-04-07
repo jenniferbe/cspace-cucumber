@@ -102,13 +102,13 @@ Feature: Loan In Page Testing
     And clicks on the delete button 
 
     Then a delete confirmation dialog should appear
-    When user clicks cancel button
+    When user clicks confirmation cancel button
     Then the delete confirmation dialog should disappear
     # And #nothing else should happen
     And clicks on the delete button 
 
     Then a delete confirmation dialog should appear
-    When user clicks close button
+    When user clicks confirmation close button
     Then the delete confirmation dialog should disappear
     # And #nothing else should happen
     And clicks on the delete button 
@@ -140,14 +140,14 @@ Feature: Loan In Page Testing
 
     Then the deletion should be confirmed in a dialog
     And the deletion dialog should contain "and its relationships"
-    When user clicks cancel button
+    When user clicks confirmation cancel button
     Then the delete confirmation dialog should disappear
     # And #nothing else should happen
     And clicks on the delete button 
 
     Then a delete confirmation dialog should appear
     And the deletion dialog should contain "and its relationships"
-    When user clicks close button
+    When user clicks confirmation close button
     Then the delete confirmation dialog should disappear
     # And #nothing else should happen
     And clicks on the delete button 
