@@ -81,7 +81,9 @@ public class StepDefs {
 
     @And("^(?:the )?titlebar should contain \"([^\"]*)\"$")
     public void titlebar_should_contain(String expectedText) throws Throwable {
-        assertTrue(wait.until(textToBePresentInElementLocated(By.id("title-bar"), expectedText)));
+        // assertTrue(wait.until(textToBePresentInElementLocated(By.id("title-bar"), expectedText)));
+        wait.until(textToBePresentInElementLocated(
+                By.className("csc-titleBar-value"), expectedText));
     }
 
     @And("^(?:the user )?(?:user )?clicks (?:on )?the Create button$")
@@ -459,7 +461,12 @@ public class StepDefs {
         wait.until(textToBePresentInElementLocated(
                 By.className("csc-titleBar-value"), term));
     }
-
+    
+    @And("^(?:the user )?(?:user )?presses the Tab key$")
+    public void presses_the_tab_key() throws Throwable {
+        driver.switchTo().activeElement().sendKeys(Keys.TAB);
+    }
+      
     @And("^(?:the user )?(?:user )?presses the tab key until reaching the \"([^\"]*)\" button(?: )?(?:#.*)?$")
     public void presses_the_tab_key_until_reaching_button(String button) throws Throwable {
         WebElement destinationButton = driver.findElement(By.name(button));
