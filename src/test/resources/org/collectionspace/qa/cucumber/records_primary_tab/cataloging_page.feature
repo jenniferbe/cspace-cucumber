@@ -95,7 +95,7 @@ Scenario: Removing values from all fields
     When user clears the "Identification Number" field
       And saves the record
     Then the message "Please specify an Identification Number" should be displayed above object formula
-    Then Object should not be saved
+    Then object should not be saved
 
 Scenario: Warning on attempting to leave edited page with 4 variations: Variation I: click Save button; II: click Don't Save button; III: click the Cancel button; IV: click the close symbol in NE corner
     When user enters "2" in the "Cataloging" "Date Period" field
@@ -182,7 +182,7 @@ Scenario: Deletion of Record
     Then the message "Find and Edit" should be displayed
 
     When using the top right search area, select "Object" from the drop down and enter the identification number of the deleted record
-    Then the Object should not be found.
+    Then the object should not be found.
     When user creates a new cataloging record and fill in at least the identification number
     And take note of the identification number of the record
     And clicks the "Save" button
@@ -201,7 +201,7 @@ Scenario: Deletion of Record
     Then the message "Find and Edit" should be displayed
     And selects Object from the drop down
     And enters the identification number of the deleted record 
-    Then Object should not be found.
+    Then object should not be found.
 
 Scenario: Fold/Unfolding boxes
     Given user is on the "Create New" page

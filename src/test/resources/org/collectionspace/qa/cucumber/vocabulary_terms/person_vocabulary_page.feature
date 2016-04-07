@@ -111,7 +111,7 @@ Feature: Person Vocabulary Data Entry
       And enters "Tentative Change" in the "Person" "Display name" field
       And clicks on "Find and Edit" menu item
     Then a confirmation dialog should appear
-      And clicks cancel button
+      And clicks confirmation cancel button
     Then the dialog should be dismissed
     Then close the browser
 

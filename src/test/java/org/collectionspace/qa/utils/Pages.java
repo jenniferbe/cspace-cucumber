@@ -7,6 +7,7 @@ public class Pages {
     private HashMap<String, String> pageLoadedSelector = new HashMap<>();
 
     public Pages() {
+        pageUrls.put("Group", "group.html");
         pageUrls.put("Person", "person.html?vocab=person");
         pageUrls.put("ULAN Person", "person.html?vocab=ulan_person");
         pageUrls.put("Find and Edit", "findedit.html");

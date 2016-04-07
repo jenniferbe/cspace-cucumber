@@ -326,7 +326,7 @@ public class Utilities {
 
 
     /**
-     * Verify that a all fields with id containing selector have been filled with the correct value
+     * Verify that all fields with id containing selector have been filled with the correct value
      * @param selector id of the field that should be filled in
      */
     public static void verifyFieldLocatedByIDIsFilledIn(String selector, String expectedValue, WebDriver driver) {
@@ -362,6 +362,9 @@ public class Utilities {
                 break;
             case "GeneralPages":
                 record = new GeneralPages();
+                break;
+            case "Group":
+                record = new Group();
                 break;
             case "ImportExport":
                 record = new ImportExport();
