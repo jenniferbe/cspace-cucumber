@@ -15,6 +15,8 @@ public abstract class Record {
     protected Map<String, String> dateMap     = new HashMap<>();
     protected Map<String, String> tickBoxMap  = new HashMap<>();
 
+    protected Map<String, String> xpathMap    = new HashMap<>();
+
     protected Map<String, String> fieldSelectorByLabel = new HashMap<>();
 
     public Map<String, String> getRequiredMap() {return requiredMap; }
