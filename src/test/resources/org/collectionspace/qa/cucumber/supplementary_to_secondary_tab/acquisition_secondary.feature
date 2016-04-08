@@ -5,18 +5,18 @@ Feature: Supplementary Secondary Manual Acquisition Secondary Tab
   # Enter feature description here
 
   Scenario: Record Prep 1
-  	Given user is in a blank "Cataloging" record
+  	Given user is on a blank "Cataloging" record
   	And enters "CQA81.3" in the "Identification Number" field
   	And clicks the "Save" button
   	Then close the browser
 
-  	Given user is in a blank "Cataloging" record
+  	Given user is on a blank "Cataloging" record
   	And enters "CQA81.4" in the "Identification Number" field
   	And clicks the "Save" button
   	Then close the browser
 
   Scenario: Basic Secondary tab Testing
-  	Given user is in a blank "Cataloging" record
+  	Given user is on a blank "Cataloging" record
   	And enters "CQA81" in the "Identification Number" field
   	And clicks the "Save" button
   	Then the titlebar should contain "CQA81"
