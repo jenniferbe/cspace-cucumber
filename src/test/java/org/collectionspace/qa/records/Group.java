@@ -8,8 +8,9 @@ public class Group extends Record {
         
         fieldMap.put(".csc-group-owner", "Chris Hendricks");
 
-        fieldSelectorByLabel.put("Title", ".csc-group-title");
-        fieldSelectorByLabel.put("Group Owner", ".csc-group-owner");
-        
+     	fieldSelectorByLabel.put("Title", "csc-group-title");
+        fieldSelectorByLabel.put("Group Owner", "input-autocomplete csc-group-owner");
+        fieldSelectorByLabel.put("Scope Note", "input-textarea csc-group-scopeNote");
+           
     }
 }

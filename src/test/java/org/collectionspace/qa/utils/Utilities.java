@@ -345,6 +345,9 @@ public class Utilities {
     public static Record loadRecordOfType(String recordType) throws Exception{
         Record record;
         switch (recordType) {
+            case "Acquisition":
+                record = new Acquisition();
+                break;
             case "Administration":
                 record = new Administration();
                 break;
@@ -353,6 +356,12 @@ public class Utilities {
                 break;
             case "AdvancedSearchVocabulary":
                 record = new AdvancedSearchVocabulary();
+                break;
+            case "Condition Check":
+                record = new ConditionCheck();
+                break;
+            case "Exhibition":
+                record = new Exhibition();
                 break;
             case "FCTenant":
                 record = new FCTenant();
@@ -369,8 +378,26 @@ public class Utilities {
             case "ImportExport":
                 record = new ImportExport();
                 break;
+            case "Intake":
+                record = new Intake();
+                break;
             case "LifeSciTenant":
                 record = new LifeSciTenant();
+                break;
+            case "Loan In":
+                record = new LoanIn();
+                break;
+            case "Loan Out":
+                record = new LoanOut();
+                break;
+            case "Location/Movement/Inventory":
+                record = new LocationMovementInventory();
+                break;
+            case "Media Handling":
+                record = new MediaHandling();
+                break;
+            case "Object Exit":
+                record = new ObjectExit();
                 break;
             case "Person":
                 record = new Person();
@@ -392,6 +419,9 @@ public class Utilities {
                 break;
             case "SupplementaryPrimary":
                 record = new SupplementaryPrimary();
+                break;
+            case "Valuation Control":
+                record = new ValuationControl();
                 break;
             case "VocabularyTerms":
                 record = new VocabularyTerms();
