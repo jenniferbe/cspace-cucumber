@@ -7,6 +7,9 @@ package org.collectionspace.qa.records;
 public class AdvancedSearch extends Record {
 
     public AdvancedSearch(){
+    	dropDownMap.put("record type", "//*[@id=\"recordTypeSelect\"]");
+    	dropDownMap.put("Field-based search", "//*[@id=\"step2SubHeader2AndOr-selection\"]");
 
     }
 }
+		

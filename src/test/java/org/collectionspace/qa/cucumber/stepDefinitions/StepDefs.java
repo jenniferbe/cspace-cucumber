@@ -52,18 +52,38 @@ public class StepDefs {
     @And("^enters \"([^\"]*)\" in the \"([^\"]*)\" field$")
     public void enters_in_field(String value, String fieldName) throws Throwable{
         String boxName = mappings.getElement(fieldName);
-
-        WebElement box = driver.findElement(By.className(boxName));
-        box.sendKeys(value);
+        WebElement field = driver.findElement(By.className(boxName));
+        field.sendKeys(value);
     } 
 
     @And("^user waits$") 
     public void waitAction() throws Throwable {
-        driver.wait(10);
+        driver.wait(25);
+    }
+
+    // @And("^selects \"([^\"]*)\" from the record type select drop down$")
+    // public void selects_from_the_record_type_select_drop_down(String searchType) throws Throwable {
+    //     String xpath = "//*[@id=\"recordTypeSelect\"]";
+    //     Select select = new Select(driver.findElement(By.xpath(xpath)));
+    //     select.selectByVisibleText(searchType);
+    // }
+
+
+
+    // And selects "____" from the "____" drop down box
+    @And("^selects \"([^\"]*)\" from the \"([^\"]*)\" \"([^\"]*)\" dropdown$")
+    public void selects_from_the_drop_down(String selector, String recordType, String dropdownName) throws Throwable { 
+        record = loadRecordOfType(recordType);
+        String xpath = record.getDropDownBox(dropdownName);
+        Select select = new Select(driver.findElement(By.xpath(xpath)));
+        select.selectByVisibleText(selector);
+
     }
 
 
-    // ##################################################################
+
+
+
 
 
     @And("^(?:the user )?(?:user )?is on the \"([^\"]*)\" page$")
@@ -132,19 +152,30 @@ public class StepDefs {
         wait.until(visibilityOfElementLocated(By.className("saveButton")));
     }
 
-    @And("^(?:the user )?(?:user )?is on a blank \"([^\"]*)\" record$")
-    public void is_on_a_blank_of_type_record(String pageName) throws Throwable {
-        driver.get(BASE_URL + pages.getPageUrls(pageName));
-        // Wait until the newly-created record's "Save" button appears
-        // before proceeding, to avoid timeout errors
-        wait.until(visibilityOfElementLocated(By.className("saveButton")));
-    }
+    // @And("^(?:the user )?(?:user )?is on a blank \"([^\"]*)\" record$")
+    // public void is_on_a_blank_of_type_record(String pageName) throws Throwable {
+    //     driver.get(BASE_URL + pages.getPageUrls(pageName));
+    //     // Wait until the newly-created record's "Save" button appears
+    //     // before proceeding, to avoid timeout errors
+    //     wait.until(visibilityOfElementLocated(By.className("saveButton")));
+    // }
 
     @And("^(?:the )?(?:user )?enters \"([^\"]*)\" in the \"([^\"]*)\" \"([^\"]*)\" field$")
     public void enters_in_the_field(String value, String recordType , String fieldName) throws Throwable {
+        String selector;
+        WebElement field;
         record = loadRecordOfType(recordType);
-        String selector = record.getFieldSelectorByLabel(fieldName);
-        fillFieldLocatedById(selector, value, driver);
+        selector = record.getFieldSelectorByLabel(fieldName);
+        if (selector == null) {
+            selector = record.getXPath(fieldName);
+            field = driver.findElement(By.xpath(selector));
+        } else {
+            selector = record.getFieldSelectorByLabel(fieldName);
+            field = driver.findElement(By.className(selector));
+        }
+
+        field.sendKeys(value);
+
     }
 
     @And("^(?:the user )?(?:user )?enters \"([^\"]*)\" in the \"([^\"]*)\" \"([^\"]*)\" vocab field$")
@@ -259,8 +290,14 @@ public class StepDefs {
 
     @And("^(?:the user )?(?:user )?clicks (?:on )?the \"([^\"]*)\" button$")
     public void clicks_the_button(String button) throws Throwable {
-      String xpath = "//input[@value='" + button + "']";
-      driver.findElement(By.xpath(xpath)).click();
+        record = loadRecordOfType("GeneralPages");
+
+        String classID = record.getFieldSelectorByLabel(button);
+      // "//input[@value='" + button + "']";
+      // //*[@id="fluid-id-41i6ti3f-296"]/a;
+        WebElement e = driver.findElement(By.className(classID));
+        wait.until(elementToBeClickable(e));
+        e.click();
     }
     
     @When("^(?:the user )?(?:user )?clicks (?:on )?the \"([^\"]*)\" button on the \"([^\"]*)\" area to the right$")

@@ -5,17 +5,17 @@ public class LocationMovementInventory extends Record {
     public LocationMovementInventory(){
 
       fieldSelectorByLabel.put("Reference Number",         "csc-movement-movementReferenceNumber pattern-chooser-input");
-      fieldSelectorByLabel.put("Normal Location",          "input-alpha csc-movement-normalLocation"); //
-      fieldSelectorByLabel.put("Current Location",         "csc-movement-currentLocation"); //
+      // fieldSelectorByLabel.put("Normal Location",          "input-alpha csc-movement-normalLocation"); //
+      // fieldSelectorByLabel.put("Current Location",         "csc-movement-currentLocation"); //
       fieldSelectorByLabel.put("First Note",               "csc-movement-currentLocationNote");
       fieldSelectorByLabel.put("Location Date",            "csc-movement-locationDate fl-force-left input-date csc-calendar-date");
-      fieldSelectorByLabel.put("Contact",                  "input-alpha csc-movement-movementContact"); //
+      // fieldSelectorByLabel.put("Contact",                  "input-alpha csc-movement-movementContact"); //
       fieldSelectorByLabel.put("Planned removal date",     "csc-movement-plannedRemovalDate fl-force-left input-date csc-calendar-date");
       fieldSelectorByLabel.put("Removal date",             "csc-movement-removalDate fl-force-left input-date csc-calendar-date");
       fieldSelectorByLabel.put("Second Note",              "input-textarea csc-movement-movementNote");
       fieldSelectorByLabel.put("Inventory Date",           "csc-movement-inventoryDate fl-force-left input-date csc-calendar-date");
       fieldSelectorByLabel.put("Next Inventory Date",      "csc-movement-nextInventoryDate fl-force-left input-date csc-calendar-date");
-      fieldSelectorByLabel.put("Second Contact",           "input-alpha csc-movement-inventoryContact cs-repeatable-content"); //
+      // fieldSelectorByLabel.put("Second Contact",           "input-alpha csc-movement-inventoryContact cs-repeatable-content"); //
       fieldSelectorByLabel.put("Third Note",               "input-textarea csc-movement-inventoryNote");
 
 

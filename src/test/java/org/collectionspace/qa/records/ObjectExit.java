@@ -4,9 +4,9 @@ public class ObjectExit extends Record {
 
     public ObjectExit(){
 		fieldSelectorByLabel.put("Exit Number", "csc-objectexit-exitNumber pattern-chooser-input");
-		fieldSelectorByLabel.put("Current Owner", "input-alpha csc-objectexit-currentOwner");
+		// fieldSelectorByLabel.put("Current Owner", "input-alpha csc-objectexit-currentOwner");
 		fieldSelectorByLabel.put("Exit Date", "csc-objectexit-exitDateGroup cs-structuredDate-input");
-		fieldSelectorByLabel.put("Depositor", "input-alpha csc-objectexit-depositor");
+		// fieldSelectorByLabel.put("Depositor", "input-alpha csc-objectexit-depositor");
 		fieldSelectorByLabel.put("Exit Note", "input-textarea csc-objectexit-exitNote");
 		fieldSelectorByLabel.put("Packing Note", "input-textarea csc-objectexit-packingNote");
 
