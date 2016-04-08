@@ -66,14 +66,14 @@ public class StepDefs {
     // ##################################################################
 
 
-    @And("^(?:the user )?(?:user )?is on the \"([^\"]*)\" page$")
+    @And("^(?:the user |user )?is on the \"([^\"]*)\" page$")
     public void is_on_page(String pageName) throws Throwable {
         driver.get(BASE_URL + pages.getPageUrls(pageName));
         wait.until(elementToBeClickable(
                 By.className(pages.getPageLoadedSelector(pageName))));
     }
 
-    @And("^(?:the user )?(?:user )?selects the \"([^\"]*)\" radio button(?: on the Create New page)?$")
+    @And("^(?:the user |user )?selects the \"([^\"]*)\" radio button(?: on the Create New page)?$")
     public void selects_the_radio_button(String radioButton) throws Throwable {
         WebElement radio = wait.until(visibilityOfElementLocated(By.xpath("//input[@value='" + radioButton.toLowerCase() + "']")));
         // WebElement radio = driver.findElement(
@@ -107,7 +107,7 @@ public class StepDefs {
                 By.className("csc-titleBar-value"), expectedText));
     }
 
-    @And("^(?:the user )?(?:user )?clicks (?:on )?the Create button$")
+    @And("^(?:the user |user )?clicks (?:on )?the Create button$")
     public void clicks_the_Create_button() throws Throwable {
         driver.findElement(By.id("createButton")).click();
         // Wait until the newly-created record's "Save" button appears
@@ -115,7 +115,7 @@ public class StepDefs {
         wait.until(visibilityOfElementLocated(By.className("saveButton")));
     }
 
-    @And("^(?:the user )?(?:user )?clicks (?:on )?the Save button$")
+    @And("^(?:the user |user )?clicks (?:on )?the Save button$")
     public void clicks_the_Save_button() throws Throwable {
         driver.findElement(By.id("save")).click();
         // Wait until the newly-created record's "Save" button appears
@@ -123,16 +123,7 @@ public class StepDefs {
         wait.until(visibilityOfElementLocated(By.className("saveButton")));
     }
 
-
-    @Given("^user is on a blank \"([^\"]*)\" record$")
-    public void user_is_on_a_blank_record_type_page(String pageName) throws Throwable {
-        driver.get(BASE_URL + pages.getPageUrls(pageName));
-        // Wait until the newly-created record's "Save" button appears
-        // before proceeding, to avoid timeout errors
-        wait.until(visibilityOfElementLocated(By.className("saveButton")));
-    }
-
-    @And("^(?:the user )?(?:user )?is on a blank \"([^\"]*)\" record$")
+    @And("^(?:the user |user )?is on a blank \"([^\"]*)\" record$")
     public void is_on_a_blank_of_type_record(String pageName) throws Throwable {
         driver.get(BASE_URL + pages.getPageUrls(pageName));
         // Wait until the newly-created record's "Save" button appears
@@ -140,14 +131,14 @@ public class StepDefs {
         wait.until(visibilityOfElementLocated(By.className("saveButton")));
     }
 
-    @And("^(?:the )?(?:user )?enters \"([^\"]*)\" in the \"([^\"]*)\" \"([^\"]*)\" field$")
+    @And("^(?:the user |user )?enters \"([^\"]*)\" in the \"([^\"]*)\" \"([^\"]*)\" field$")
     public void enters_in_the_field(String value, String recordType , String fieldName) throws Throwable {
         record = loadRecordOfType(recordType);
         String selector = record.getFieldSelectorByLabel(fieldName);
         fillFieldLocatedById(selector, value, driver);
     }
 
-    @And("^(?:the user )?(?:user )?enters \"([^\"]*)\" in the \"([^\"]*)\" \"([^\"]*)\" vocab field$")
+    @And("^(?:the user |user )?enters \"([^\"]*)\" in the \"([^\"]*)\" \"([^\"]*)\" vocab field$")
     public void enters_in_the_vocab_field(String value, String recordType, String fieldName) throws Throwable {
         record = loadRecordOfType(recordType);
         String selector = record.getFieldSelectorByLabel(fieldName);
@@ -176,7 +167,7 @@ public class StepDefs {
         assertEquals(field.getAttribute("value"), value);
     }
 
-    @And("^(?:the user )?(?:user )?selects \"([^\"]*)\" from dropdown in \"([^\"]*)\" row$")
+    @And("^(?:the user |user )?selects \"([^\"]*)\" from dropdown in \"([^\"]*)\" row$")
     public void selects_Person_from_dropdown_in_row(String templateType, String recordType) throws Throwable {
         String xpath = buildCreateNewRecordTypeXpath(recordType);
         WebElement row = wait.until(visibilityOfElementLocated(By.xpath(xpath)));
@@ -189,20 +180,20 @@ public class StepDefs {
         driver.close();
     }
 
-    @And("^(?:the user )?(?:user )?enters \"([^\"]*)\" in the top nav search field$")
+    @And("^(?:the user |user )?enters \"([^\"]*)\" in the top nav search field$")
     public void enters_in_the_top_nav_search_field(String searchTerm) throws Throwable {
         String xpath = "//div[@class='csc-header-searchBox']/div/input[@type='text']";
         driver.findElement(By.xpath(xpath)).sendKeys(searchTerm);
     }
 
-    @And("^(?:the user )?(?:user )?selects \"([^\"]*)\" from the top nav search record type select field$")
+    @And("^(?:the user |user )?selects \"([^\"]*)\" from the top nav search record type select field$")
     public void selects_from_the_top_nav_record_type_select_field(String searchType) throws Throwable {
         String xpath = "//div[@class='csc-header-searchBox']/div/select[@name='recordTypeSelect-selection']";
         Select select = new Select(driver.findElement(By.xpath(xpath)));
         select.selectByVisibleText(searchType);
     }
 
-    @And("^(?:the user )?(?:user )?selects \"([^\"]*)\" from the top nav search vocabulary select field$")
+    @And("^(?:the user |user )?selects \"([^\"]*)\" from the top nav search vocabulary select field$")
     public void selects_from_the_top_nav_vocab_type_select_field(String searchType) throws Throwable {
         String xpath = "//div[@class='csc-header-searchBox']/div/select[@name='selectVocab-selection']";
         WebElement vocab = wait.until(visibilityOfElementLocated(By.xpath(xpath)));
@@ -210,7 +201,7 @@ public class StepDefs {
         vocabSelect.selectByVisibleText(searchType);
     }
     
-    @And("^(?:the user )?(?:user )?clicks on the top nav search submit button$")
+    @And("^(?:the user |user )?clicks on the top nav search submit button$")
     public void clicks_on_the_top_nav_search_submit_button() throws Throwable {
         String xpath = "//div[@class='csc-header-searchBox']/div/input[@type='button']";
         driver.findElement(By.xpath(xpath)).click();
@@ -241,7 +232,7 @@ public class StepDefs {
         }
     }
 
-    @And("^(?:the user )?(?:user )?clicks on result with text \"([^\"]*)\"$")
+    @And("^(?:the user |user )?clicks on result with text \"([^\"]*)\"$")
     public void clicks_on(String term) throws Throwable {
         String xpath = "(//tr[@class='csc-row']/td/a[text()='" + term +"'])[1]";
         driver.findElement(By.xpath(xpath)).click();
@@ -257,13 +248,13 @@ public class StepDefs {
         }
     }
 
-    @And("^(?:the user )?(?:user )?clicks (?:on )?the \"([^\"]*)\" button$")
+    @And("^(?:the user |user )?clicks (?:on )?the \"([^\"]*)\" button$")
     public void clicks_the_button(String button) throws Throwable {
       String xpath = "//input[@value='" + button + "']";
       driver.findElement(By.xpath(xpath)).click();
     }
     
-    @When("^(?:the user )?(?:user )?clicks (?:on )?the \"([^\"]*)\" button on the \"([^\"]*)\" area to the right$")
+    @When("^(?:the user |user )?clicks (?:on )?the \"([^\"]*)\" button on the \"([^\"]*)\" area to the right$")
     public void clicks_on_button_on_right(String button, String category) throws Throwable {
         String xpath = "//div[@class='csc-right-sidebar']//td/a[contains(text(), '" + button +"')]";
         if (category == "procedures")
@@ -271,12 +262,12 @@ public class StepDefs {
         driver.findElement(By.xpath(xpath)).click();
     } 
 
-    @And("^(?:the user )?(?:user )?fills in required fields for \"([^\"]*)\" record$")
+    @And("^(?:the user |user )?fills in required fields for \"([^\"]*)\" record$")
     public void fills_in_required_fields_for_record(String recordType) throws Throwable {
         fillRequiredFieldsFor(recordType, driver);
     }
 
-    @And("^(?:the user )?(?:user )?clicks on \"([^\"]*)\" from autocomplete options$")
+    @And("^(?:the user |user )?clicks on \"([^\"]*)\" from autocomplete options$")
     public void clicks_on_from_autocomplete_options(String option) throws Throwable {
         String xpath = "//li[@class='cs-autocomplete-matchItem csc-autocomplete-matchItem']/span[text()='" + option + "']";
         driver.findElement(By.xpath(xpath)).click();
@@ -294,7 +285,7 @@ public class StepDefs {
 
     }
 
-    @And("^(?:the user )?(?:user )?clicks on \"([^\"]*)\" in Terms Used sidebar$")
+    @And("^(?:the user |user )?clicks on \"([^\"]*)\" in Terms Used sidebar$")
     public void clicks_on_in_Terms_Used_sidebar(String term) throws Throwable {
        String xpath = "//div[@class='csc-related-record csc-related-vocabularies']//td/a[contains(text(), '" + term +"')]";
        driver.findElement(By.xpath(xpath)).click();
@@ -309,12 +300,12 @@ public class StepDefs {
                 .getText().equals(errorMessage));
     }
 
-    @And("^(?:the user )?(?:user )?clicks OK to cancel error message$")
+    @And("^(?:the user |user )?clicks OK to cancel error message$")
     public void clicks_OK_to_cancel_error_message() throws Throwable {
         driver.findElement(By.className("csc-messageBar-cancel")).click();
     }
 
-    @And("^(?:the user )?(?:user )?removes focus from \"([^\"]*)\" \"([^\"]*)\" field$")
+    @And("^(?:the user |user )?removes focus from \"([^\"]*)\" \"([^\"]*)\" field$")
     public void removes_focus_from_field(String recordType, String fieldName) throws Throwable {
         record = loadRecordOfType(recordType);
         String selector = record.getFieldSelectorByLabel(fieldName);
@@ -324,7 +315,7 @@ public class StepDefs {
 
     // This needs to be made generic, rather than having a hard-coded 'name' attribute.
     // Also check on whether the step def below might instead fulfill this task.
-    @And("^(?:the user )?(?:user )?clicks(?: on)? the plus to repeat the \"([^\"]*)\" form$")
+    @And("^(?:the user |user )?clicks(?: on)? the plus to repeat the \"([^\"]*)\" form$")
     public void clicks_plus_to_repeat_form(String repeatedElement) throws Throwable {
         String xpath =
                 "//input[@name='primary-fields.personTermGroup']/ancestor::div[1]/input[@type='button']";
@@ -332,7 +323,7 @@ public class StepDefs {
     }
     
     // Note: code cobbled together from other stepdefs and untested
-    @And("^(?:the user )?(?:user )?clicks(?: on)? the plus to repeat the \"([^\"]*)\" \"([^\"]*)\" field$")
+    @And("^(?:the user |user )?clicks(?: on)? the plus to repeat the \"([^\"]*)\" \"([^\"]*)\" field$")
     public void clicks_the_plus_to_repeat_the_field(String recordType, String fieldName) throws Throwable {
         record = loadRecordOfType(recordType);
         String selector = record.getFieldSelectorByLabel(fieldName);
@@ -347,21 +338,21 @@ public class StepDefs {
         assertTrue(group.size() > 1);
     }
 
-    @And("^(?:the user )?(?:user )?adds \"([^\"]*)\" in the \"([^\"]*)\" field of the second \"([^\"]*)\" form$")
+    @And("^(?:the user |user )?adds \"([^\"]*)\" in the \"([^\"]*)\" field of the second \"([^\"]*)\" form$")
     public void adds_in_the_field_of_the_second_repeated_form(String term, String field,  String repeatedElement) throws Throwable {
         String xpath =
                 "(//input[@name='primary-fields.personTermGroup'])[2]/ancestor::li//input[@class='csc-personAuthority-termDisplayName']";
         driver.findElement(By.xpath(xpath)).sendKeys(term);
     }
 
-    @And("^(?:the user )?(?:user )?selects the additional \"([^\"]*)\" as primary$")
+    @And("^(?:the user |user )?selects the additional \"([^\"]*)\" as primary$")
     public void selects_the_additional_as_primary(String repeatedElement) throws Throwable {
         String xpath =
                 "(//input[@name='primary-fields.personTermGroup'])[2]/ancestor::li/input[contains(@class,'cs-repeatable-primary')]";
         driver.findElement(By.xpath(xpath)).click();
     }
 
-    @And("^(?:the user )?(?:user )?fills in all the fields of the \"([^\"]*)\" record$")
+    @And("^(?:the user |user )?fills in all the fields of the \"([^\"]*)\" record$")
     public void fills_in_all_fields(String recordType) throws Throwable {
         fillInAllFieldsFor(recordType, driver);
     }
@@ -373,7 +364,7 @@ public class StepDefs {
     }
 
     // Clicks every '+' button
-    @And("^(?:the user )?(?:user )?repeats all repeatable fields$")
+    @And("^(?:the user |user )?repeats all repeatable fields$")
     public void repeats_all_repeatable_fields() throws Throwable {
         String xpath = "//input[@type='button'][@value='+']";
         for (WebElement plus : driver.findElements(By.xpath(xpath))) {
@@ -381,7 +372,7 @@ public class StepDefs {
         }
     }
 
-    @And("^(?:the user )?(?:user )?clears all fields of the \"([^\"]*)\" record$")
+    @And("^(?:the user |user )?clears all fields of the \"([^\"]*)\" record$")
     public void clears_all_fields_of_the_record(String recordType) throws Throwable {
         clearAllFieldsFor(recordType, driver);
     }
@@ -415,7 +406,7 @@ public class StepDefs {
         wait.until(elementToBeClickable(element));
     }
 
-    @And("^(?:the user )?(?:user )?clicks on the delete button$")
+    @And("^(?:the user |user )?clicks on the delete button$")
     public void clicks_on_the_delete_button() throws Throwable {
         driver.findElement(By.className("deleteButton")).click();
     }
@@ -425,27 +416,27 @@ public class StepDefs {
         wait.until(visibilityOfElementLocated(By.className("csc-confirmationDialog")));
     }
 
-    @And("^(?:the user )?(?:user )?clicks (?:the )?confirmation cancel button$")
+    @And("^(?:the user |user )?clicks (?:the )?confirmation cancel button$")
     public void clicks_cancel_button() throws Throwable {
         driver.findElement(By.className("csc-confirmationDialogButton-cancel")).click();
     }
 
-    @And("^(?:the user )?(?:user )?clicks (?:the )?confirmation close button$")
+    @And("^(?:the user |user )?clicks (?:the )?confirmation close button$")
     public void clicks_close_button() throws Throwable {
         driver.findElement(By.className("csc-confirmationDialog-closeBtn")).click();
     }
 
-    @And("^(?:the user )?(?:user )?clicks (?:the )?confirmation delete button$")
+    @And("^(?:the user |user )?clicks (?:the )?confirmation delete button$")
     public void clicks_the_confirmation_delete_button() throws Throwable {
         driver.findElement(By.className("csc-confirmationDialogButton-act")).click();
     }
 
-    @And("^(?:the user )?(?:user )?clicks (?:the )?confirmation don't save button$")
+    @And("^(?:the user |user )?clicks (?:the )?confirmation don't save button$")
     public void clicks_the_confirmation_dont_save_button() throws Throwable {
         driver.findElement(By.className("csc-confirmationDialogButton-proceed")).click();
     }
 
-    @And("^(?:the user )?(?:user )?clicks (?:the )?confirmation save button$")
+    @And("^(?:the user |user )?clicks (?:the )?confirmation save button$")
     public void clicks_the_confirmation_save_button() throws Throwable {
         driver.findElement(By.className("csc-confirmationDialogButton-act")).click();
     }
@@ -456,7 +447,7 @@ public class StepDefs {
         assertTrue(element.getText().equals("Person successfully deleted"));
     }
 
-    @And("^(?:the user )?(?:user )?clicks delete confirmation OK button$")
+    @And("^(?:the user |user )?clicks delete confirmation OK button$")
     public void clicks_delete_confirmation_OK_button() throws Throwable {
         driver.findElement(By.className("csc-confirmationDialogButton-act")).click();
         wait.until(textToBePresentInElementLocated(By.className("header-name"), "Find and Edit"));
@@ -468,12 +459,12 @@ public class StepDefs {
         assertTrue(element.getText().equals(message));
     }
 
-    @And("^(?:the user )?(?:user )?clicks Select number pattern$")
+    @And("^(?:the user |user )?clicks Select number pattern$")
     public void clicks_select_number_pattern_button() throws Throwable {
         driver.findElement(By.className("csc-numberPatternChooser-button")).click();
     }
 
-    @And("^(?:the user )?(?:user )?selects the \"([^\"]*)\" tab$")
+    @And("^(?:the user |user )?selects the \"([^\"]*)\" tab$")
     public void selects_the_tab(String tab) throws Throwable {
         String xpath = "//li[@class='csc-tabs-tab-link cs-tabs-tab-link']/span[text()='" + tab + "']";
         driver.findElement(By.xpath(xpath)).click();
@@ -485,7 +476,7 @@ public class StepDefs {
         assertTrue(element.getText().equals(message));
     }
 
-    @And("(?:the user )?(?:user )?clicks on \"([^\"]*)\" in the Used By sidebar")
+    @And("(?:the user |user )?clicks on \"([^\"]*)\" in the Used By sidebar")
     public void clicks_on_term_in_the_used_by_sidebar(String term) throws Throwable {
         String xpath = "//div[@class='csc-related-record csc-related-nonVocabularies']//td/a[contains(text(), '" + term +"')]";
         driver.findElement(By.xpath(xpath)).click();
@@ -493,12 +484,12 @@ public class StepDefs {
                 By.className("csc-titleBar-value"), term));
     }
     
-    @And("^(?:the user )?(?:user )?presses the Tab key$")
+    @And("^(?:the user |user )?presses the Tab key$")
     public void presses_the_tab_key() throws Throwable {
         driver.switchTo().activeElement().sendKeys(Keys.TAB);
     }
       
-    @And("^(?:the user )?(?:user )?presses the tab key until reaching the \"([^\"]*)\" button(?: )?(?:#.*)?$")
+    @And("^(?:the user |user )?presses the tab key until reaching the \"([^\"]*)\" button(?: )?(?:#.*)?$")
     public void presses_the_tab_key_until_reaching_button(String button) throws Throwable {
         WebElement destinationButton = driver.findElement(By.name(button));
         int k = 0;
