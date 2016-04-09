@@ -231,15 +231,27 @@ public class Utilities {
 
     public static void fillVocabFieldLocatedByID(String selector, String value, WebDriver driver) {
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        String xpath= "//*[input[contains(@id,'" + selector +"')]]/input[@class='cs-autocomplete-input']";
-
+        String xpath = "//div[@class='content']/input[contains(@id,'" + selector +"')]/following-sibling::input[@class='cs-autocomplete-input']";
         wait.until(visibilityOfElementLocated(By.xpath(xpath)));
-
         for (WebElement field : driver.findElements(By.xpath(xpath))) {
             field.sendKeys(value);
         }
     }
 
+    public static void fillVocabFieldLocatedByIDAndSelectVocab(String selector, String value,
+        String vocabName, WebDriver driver) {
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        String fieldXPath =
+            "//div[@class='content']/input[contains(@id,'" + selector +"')]/following-sibling::input[@class='cs-autocomplete-input']";
+        wait.until(visibilityOfElementLocated(By.xpath(fieldXPath)));
+        WebElement field = driver.findElement(By.xpath(fieldXPath));
+        field.sendKeys(value);
+        WebElement autocompleteDropdown = wait.until(visibilityOfElementLocated(By.className("cs-autocomplete-popup")));
+        String vocabXPath =
+            "//div[contains(@class,'csc-autocomplete-addToPanel')]/descendant::li[@id='authorityItem:'][text()='" + vocabName + "']";
+        WebElement vocabItem = driver.findElement(By.xpath(vocabXPath));
+        vocabItem.click();
+    }
 
     public static void clearFieldLocatedById(String id, String value, WebDriver driver) {
         String xpath = "(//input|//textarea)[contains(@id, '"  + id + "')]";
