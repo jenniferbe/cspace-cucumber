@@ -144,6 +144,13 @@ public class StepDefs {
         String selector = record.getFieldSelectorByLabel(fieldName);
         fillVocabFieldLocatedByID(selector, value, driver);
     }
+ 
+    @And("^(?:the user |user )?enters \"([^\"]*)\" in the \"([^\"]*)\" \"([^\"]*)\" vocab field and adds (?:it )to(?: the)? \"([^\"]*)\" vocab(?:ulary)?$")
+    public void enters_in_the_vocab_field(String value, String recordType, String fieldName, String vocabName) throws Throwable {
+        record = loadRecordOfType(recordType);
+        String selector = record.getFieldSelectorByLabel(fieldName);
+        fillVocabFieldLocatedByIDAndSelectVocab(selector, value, vocabName, driver);
+    }   
     
     @And("^(?:the )?record is successfully saved")
     public void record_is_successfully_saved() throws Throwable {
