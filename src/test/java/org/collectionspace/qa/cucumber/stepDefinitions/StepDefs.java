@@ -54,15 +54,16 @@ public class StepDefs {
         String boxName = mappings.getElement(fieldName);
         WebElement field = driver.findElement(By.className(boxName));
         field.sendKeys(value);
-    } 
-
-    @And("^user waits$") 
-    public void waitAction() throws Throwable {
-        driver.wait(20);
     }
 
+    @And("^user waits$")
+    public void waitAction() throws Throwable {
+        driver.wait(50);
+    }
+
+
     @And("^selects \"([^\"]*)\" from the \"([^\"]*)\" \"([^\"]*)\" dropdown$")
-    public void selects_from_the_drop_down(String selector, String recordType, String dropdownName) throws Throwable { 
+    public void selects_from_the_drop_down(String selector, String recordType, String dropdownName) throws Throwable {
         record = loadRecordOfType(recordType);
         String xpath = record.getDropDownBox(dropdownName);
         Select select = new Select(driver.findElement(By.xpath(xpath)));
@@ -160,7 +161,7 @@ public class StepDefs {
         String selector = record.getFieldSelectorByLabel(fieldName);
         fillVocabFieldLocatedByID(selector, value, driver);
     }
-    
+
     @And("^(?:the )?record is successfully saved")
     public void record_is_successfully_saved() throws Throwable {
         wait.until(textToBePresentInElementLocated(
@@ -216,7 +217,7 @@ public class StepDefs {
         Select vocabSelect = new Select(vocab);
         vocabSelect.selectByVisibleText(searchType);
     }
-    
+
     @And("^(?:the user |user )?clicks on the top nav search submit button$")
     public void clicks_on_the_top_nav_search_submit_button() throws Throwable {
         String xpath = "//div[@class='csc-header-searchBox']/div/input[@type='button']";
@@ -275,14 +276,14 @@ public class StepDefs {
         wait.until(elementToBeClickable(e));
         e.click();
     }
-    
+
     @When("^(?:the user |user )?clicks (?:on )?the \"([^\"]*)\" button on the \"([^\"]*)\" area to the right$")
     public void clicks_on_button_on_right(String button, String category) throws Throwable {
         String xpath = "//div[@class='csc-right-sidebar']//td/a[contains(text(), '" + button +"')]";
         if (category == "procedures")
             xpath = "//div[@class='csc-right-sidebar']//td/a[contains(text(), '" + button + "-2')]";
         driver.findElement(By.xpath(xpath)).click();
-    } 
+    }
 
     @And("^(?:the user |user )?fills in required fields for \"([^\"]*)\" record$")
     public void fills_in_required_fields_for_record(String recordType) throws Throwable {
@@ -343,7 +344,7 @@ public class StepDefs {
                 "//input[@name='primary-fields.personTermGroup']/ancestor::div[1]/input[@type='button']";
         driver.findElement(By.xpath(xpath)).click();
     }
-    
+
     // Note: code cobbled together from other stepdefs and untested
     @And("^(?:the user |user )?clicks(?: on)? the plus to repeat the \"([^\"]*)\" \"([^\"]*)\" field$")
     public void clicks_the_plus_to_repeat_the_field(String recordType, String fieldName) throws Throwable {
@@ -404,13 +405,13 @@ public class StepDefs {
         verifyAllFieldsCleared(recordType, driver);
     }
 
-    @And("^(?:the )?\"([^\"]*)\" button should not be clickable$") 
+    @And("^(?:the )?\"([^\"]*)\" button should not be clickable$")
     public void button_should_not_be_clickable(String button) throws Throwable {
         WebElement element = driver.findElement(By.className(button + "Button"));
         wait.until(not(elementToBeClickable(element)));
     }
 
-    @And("^disables top and bottom \"([^\"]*)\" buttons$") 
+    @And("^disables top and bottom \"([^\"]*)\" buttons$")
     public void top_bottom_buttons_should_not_be_clickable(String button) throws Throwable {
         String xpath = "//input[@type='button'][@id='" + button + "']";
         WebElement element = driver.findElement(By.xpath(xpath));
@@ -419,7 +420,7 @@ public class StepDefs {
         wait.until(not(elementToBeClickable(element)));
     }
 
-    @And("^enables top and bottom \"([^\"]*)\" buttons$") 
+    @And("^enables top and bottom \"([^\"]*)\" buttons$")
     public void top_bottom_buttons_should_be_clickable(String button) throws Throwable {
         String xpath = "//input[@type='button'][@id='" + button + "']";
         WebElement element = driver.findElement(By.xpath(xpath));
@@ -462,7 +463,7 @@ public class StepDefs {
     public void clicks_the_confirmation_save_button() throws Throwable {
         driver.findElement(By.className("csc-confirmationDialogButton-act")).click();
     }
-    
+
     @And("^deletion should be confirmed in a dialogue$")
     public void deletion_should_be_confirmed_in_a_dialogue() throws Throwable {
         WebElement element = wait.until(presenceOfElementLocated(By.className("csc-confirmationDialog-text")));
@@ -490,7 +491,7 @@ public class StepDefs {
     public void selects_the_tab(String tab) throws Throwable {
         String xpath = "//li[@class='csc-tabs-tab-link cs-tabs-tab-link']/span[text()='" + tab + "']";
         driver.findElement(By.xpath(xpath)).click();
-    } 
+    }
 
     @And("^\"([^\"]*)\" should be displayed in the message bar$")
     public void content_should_be_displayed_in_message_bar(String message) throws Throwable {
@@ -505,12 +506,12 @@ public class StepDefs {
         wait.until(textToBePresentInElementLocated(
                 By.className("csc-titleBar-value"), term));
     }
-    
+
     @And("^(?:the user |user )?presses the Tab key$")
     public void presses_the_tab_key() throws Throwable {
         driver.switchTo().activeElement().sendKeys(Keys.TAB);
     }
-      
+
     @And("^(?:the user |user )?presses the tab key until reaching the \"([^\"]*)\" button(?: )?(?:#.*)?$")
     public void presses_the_tab_key_until_reaching_button(String button) throws Throwable {
         WebElement destinationButton = driver.findElement(By.name(button));
