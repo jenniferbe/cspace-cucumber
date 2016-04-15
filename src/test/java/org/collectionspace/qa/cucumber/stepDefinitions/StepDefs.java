@@ -21,6 +21,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.*;
 import com.thoughtworks.selenium.*;
 import static org.openqa.selenium.support.ui.ExpectedConditions.*;
+import org.openqa.selenium.support.ui.*;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -54,12 +55,16 @@ public class StepDefs {
         String boxName = mappings.getElement(fieldName);
         WebElement field = driver.findElement(By.className(boxName));
         field.sendKeys(value);
+        wait.until(textToBePresentInElementLocated(
+                By.className(boxName), value));
+
     }
 
-    @And("^user waits$")
-    public void waitAction() throws Throwable {
-        driver.wait(50);
-    }
+    // @And("^user waits$")
+    // public void waitAction() throws Throwable {
+    //     new WebDriverWait(driver, 10).until(ExpectedConditions.invisibilityOfElementLocated(By.className("cs-loading-indicator")));
+    //
+    // }
 
 
     @And("^selects \"([^\"]*)\" from the \"([^\"]*)\" \"([^\"]*)\" dropdown$")
@@ -140,19 +145,8 @@ public class StepDefs {
     @And("^(?:the user |user )?enters \"([^\"]*)\" in the \"([^\"]*)\" \"([^\"]*)\" field$")
     public void enters_in_the_field(String value, String recordType , String fieldName) throws Throwable {
         String selector;
-        WebElement field;
-        record = loadRecordOfType(recordType);
-        selector = record.getFieldSelectorByLabel(fieldName);
-        if (selector == null) {
-            selector = record.getXPath(fieldName);
-            field = driver.findElement(By.xpath(selector));
-        } else {
-            selector = record.getFieldSelectorByLabel(fieldName);
-            field = driver.findElement(By.className(selector));
-        }
-
-        field.sendKeys(value);
-
+        WebElement element = findElementWithLabel(driver, recordType, fieldName);
+        element.sendKeys(value);
     }
 
     @And("^(?:the user |user )?enters \"([^\"]*)\" in the \"([^\"]*)\" \"([^\"]*)\" vocab field$")
@@ -274,15 +268,17 @@ public class StepDefs {
 
     @And("^(?:the user |user )?clicks (?:on )?the \"([^\"]*)\" button$")
     public void clicks_the_button(String button) throws Throwable {
-        record = loadRecordOfType("GeneralPages");
+        String recordType = "GeneralPages";
+        WebElement elem = findElementWithLabel(driver, recordType, button);
 
-        String classID = record.getFieldSelectorByLabel(button);
-      // "//input[@value='" + button + "']";
-      // //*[@id="fluid-id-41i6ti3f-296"]/a;
-        WebElement e = driver.findElement(By.className(classID));
-        wait.until(elementToBeClickable(e));
-        e.click();
+        // Wait to make sure the loading page doesn't receive the click
+        new WebDriverWait(driver, 10).until(
+                        ExpectedConditions.invisibilityOfElementLocated(By.className("cs-loading-indicator")));
+
+        elem.click();
+
     }
+
 
     @When("^(?:the user |user )?clicks (?:on )?the \"([^\"]*)\" button on the \"([^\"]*)\" area to the right$")
     public void clicks_on_button_on_right(String button, String category) throws Throwable {

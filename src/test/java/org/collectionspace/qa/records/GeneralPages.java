@@ -5,8 +5,7 @@ public class GeneralPages extends Record{
 
     	fieldSelectorByLabel.put("Advanced Search", "csc-searchBox-advancedSearch");
     	fieldSelectorByLabel.put("Save", "csc-save");
-    	fieldSelectorByLabel.put("Ok", ".csc-messageBar-cancel");
 
-    	// xpathMap.put("Ok","#fluid-id-br0hvvzr-2638 > div > input" );
+    	xpathMap.put("Ok", "//input[@value=\"OK\"]");
     }
 }

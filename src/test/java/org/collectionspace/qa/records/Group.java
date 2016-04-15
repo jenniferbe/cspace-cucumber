@@ -10,7 +10,7 @@ public class Group extends Record {
 
 
      	fieldSelectorByLabel.put("Title", "csc-group-title");
-        fieldSelectorByLabel.put("Scope Note", "input-textarea csc-group-scopeNote");
+        fieldSelectorByLabel.put("Scope Note", "csc-group-scopeNote");
         xpathMap.put("Group Owner", "//*[@id=\"primaryTab\"]/div/div[3]/div[2]/div[2]/div[2]/div/div[2]/input[2]");
     }
 }

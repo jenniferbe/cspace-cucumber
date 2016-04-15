@@ -91,6 +91,26 @@ public class Utilities {
     }
 
     /**
+     * Finds an Element by either its class name or its xPath
+     */
+    public static WebElement findElementWithLabel(
+                WebDriver driver, String recordType, String fieldName) throws Throwable {
+        Record record;
+        record = loadRecordOfType(recordType);
+        String selector = record.getFieldSelectorByLabel(fieldName);
+        WebElement element;
+        if (selector == null) {
+            selector = record.getXPath(fieldName);
+            element = driver.findElement(By.xpath(selector));
+        } else {
+            selector = record.getFieldSelectorByLabel(fieldName);
+            element = driver.findElement(By.className(selector));
+        }
+        return element;
+
+    }
+
+    /**
      * Fill in ann fields for a given record type.
      * Creates a new Record of the recordType, where fields are defined.
      */
