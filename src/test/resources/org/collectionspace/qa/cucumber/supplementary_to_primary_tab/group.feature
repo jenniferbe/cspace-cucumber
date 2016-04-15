@@ -18,41 +18,36 @@ Feature: Supplementary Manual QA - Group
 
   Scenario: Record Title
   
-    # Temporary workaround
+    ## Temporary workaround for attempting to click the "Group" radio button,
+    ## per the commented-out block below.
+    ## (Doing so currently leaves the Cataloging radio button selected.)
     Given user is on a blank "Group" record
     
     # Given user is on the "Create New" page
-    ## The following step leaves the Cataloging record's radio button selected,
-    ## rather than selecting the Group record's radio button
     #   And selects the "Group" radio button
     #   And clicks on the Create button
     
       And enters "Blue" in the "Group" "Title" field
-      And presses the Tab key
-      
-      # The following just leaves the value in the autocomplete field without selecting
-      # a vocabulary to which to add it.
-      # We might need to revise the fillVocabFieldLocatedByID() method in Utilities.java
-      # And enters "Albert Smith" in the "Group" "Group Owner" vocab field
+      And enters "Albert Smith" in the "Group" "Group Owner" vocab field and adds it to the "Local Persons" vocabulary
     
     Then the titlebar should contain "Blue"
-    # Re-enable this step after the fillVocabFieldLocatedByID issue identified above is resolved
-    # Then the titlebar should contain "Albert Smith"
+    Then the titlebar should contain "Albert Smith"
     Then close the browser
 
   Scenario: Behavior After Save
   
-    # Temporary workaround
+    ## Temporary workaround for attempting to click the "Group" radio button,
+    ## per the commented-out block below.
+    ## (Doing so currently leaves the Cataloging radio button selected.)
     Given user is on a blank "Group" record
     
     # Given user is on the "Create New" page
-    ## The following step leaves the Cataloging record's radio button selected,
-    ## rather than selecting the Group record's radio button
     #   And selects the "Group" radio button
     #   And clicks on the Create button
 
       And enters "Red" in the "Group" "Title" field
       And clicks the "Save" button
+      
     Then the record is successfully saved
     
     ## This value may be dependent on server time zone, or?
@@ -60,7 +55,7 @@ Feature: Supplementary Manual QA - Group
     
     Then disables top and bottom "cancel" buttons
     
-    ## The top_bottom_buttons_should_be_clickable() step def method assumes
+    ## The top_bottom_buttons_should_be_clickable() step def method inaccurately assumes
     ## the ID of the button name here would be "delete", rather than "deleteButton".
     ## (That 1:1 naming assumption works for the "cancel" buttons, above, but
     ## not for the "delete" buttons.)
