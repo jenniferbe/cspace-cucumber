@@ -50,16 +50,17 @@ public class StepDefs {
         login(driver, BASE_URL);
     }
 
-    @And("^enters \"([^\"]*)\" in the \"([^\"]*)\" field$")
-    public void enters_in_field(String value, String fieldName) throws Throwable{
-        String boxName = mappings.getElement(fieldName);
-        WebElement field = driver.findElement(By.className(boxName));
-        field.sendKeys(value);
-        wait.until(textToBePresentInElementLocated(
-                By.className(boxName), value));
+    @And("^navigates to the record with identification number \"([^\"]*)\"$")
+    public void go_to_record_with_id_number(String idNumber) throws Throwable {
+        // record = loadRecordOfType(recordType);
+        enters_in_the_top_nav_search_field(idNumber);
+        clicks_on_the_top_nav_search_submit_button();
+        the_search_results_should_contain_results(idNumber);
 
+        String xpath = "//tr[@class='csc-row']/td/a[text()='" + idNumber +"']";
+        driver.findElement(By.xpath(xpath)).click();
+        titlebar_should_contain(idNumber);
     }
-
 
     @And("^selects \"([^\"]*)\" from the \"([^\"]*)\" \"([^\"]*)\" dropdown$")
     public void selects_from_the_drop_down(String selector, String recordType, String dropdownName) throws Throwable {

@@ -62,7 +62,7 @@ public class Utilities {
         String xpath = "//tr[@class='csc-row']/td/a[text()='" + term +"']";
         String textTemplate;
         String fieldText;
-
+        
         if (!driver.findElements(By.xpath(xpath)).isEmpty()) {
             result = Boolean.TRUE;
         } else {
@@ -70,6 +70,7 @@ public class Utilities {
                 driver.findElement(By.className("flc-pager-next")).click();
                 pageCounter += 1;
                 WebElement textField = driver.findElement(By.xpath("//*[@id=\"pager-bottom\"]/li[5]"));
+                // textField.click();
                 textTemplate = "Viewing page " + pageCounter + ".";
                 fieldText = textField.getText();
 
