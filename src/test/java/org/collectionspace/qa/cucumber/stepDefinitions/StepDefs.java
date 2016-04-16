@@ -60,12 +60,6 @@ public class StepDefs {
 
     }
 
-    // @And("^user waits$")
-    // public void waitAction() throws Throwable {
-    //     new WebDriverWait(driver, 10).until(ExpectedConditions.invisibilityOfElementLocated(By.className("cs-loading-indicator")));
-    //
-    // }
-
 
     @And("^selects \"([^\"]*)\" from the \"([^\"]*)\" \"([^\"]*)\" dropdown$")
     public void selects_from_the_drop_down(String selector, String recordType, String dropdownName) throws Throwable {
@@ -73,6 +67,8 @@ public class StepDefs {
         String xpath = record.getDropDownBox(dropdownName);
         Select select = new Select(driver.findElement(By.xpath(xpath)));
         select.selectByVisibleText(selector);
+        new WebDriverWait(driver, 10).until(
+                        ExpectedConditions.invisibilityOfElementLocated(By.className("cs-loading-indicator")));
 
     }
 
@@ -231,7 +227,7 @@ public class StepDefs {
                 By.xpath("(//tr[@class='csc-row']/td/a)[1]")));
         String[] options = results.split("; ");
         for (String option : options){
-            assertTrue(isInSearchResults(driver, option));
+            assertTrue(isInSearchResults(driver, option, 1));
         }
     }
 
@@ -246,7 +242,7 @@ public class StepDefs {
 
         String[] options = results.split("; ");
         for (String option : options){
-            assertFalse(isInSearchResults(driver, option));
+            assertFalse(isInSearchResults(driver, option, 1));
         }
     }
 
@@ -276,6 +272,8 @@ public class StepDefs {
                         ExpectedConditions.invisibilityOfElementLocated(By.className("cs-loading-indicator")));
 
         elem.click();
+        new WebDriverWait(driver, 10).until(
+                        ExpectedConditions.invisibilityOfElementLocated(By.className("cs-loading-indicator")));
 
     }
 

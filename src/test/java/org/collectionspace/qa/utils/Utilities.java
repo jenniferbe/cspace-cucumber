@@ -16,7 +16,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.collectionspace.qa.records.*;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.*;
-
+import org.openqa.selenium.support.ui.*;
 public class Utilities {
 
     public static String
@@ -28,6 +28,8 @@ public class Utilities {
         driver.get(baseURL + LOGIN_PATH);
         driver.findElement(By.className("csc-login-userId")).sendKeys(USERNAME);
         driver.findElement(By.className("csc-login-password")).sendKeys(PASSWORD);
+        new WebDriverWait(driver, 10).until(
+                        ExpectedConditions.invisibilityOfElementLocated(By.className("cs-loading-indicator")));
         driver.findElement(By.className("csc-login-button")).click();
     }
 
@@ -55,15 +57,26 @@ public class Utilities {
      * @param term the search term expected in the results
      * @return is it true or not
      */
-    public static Boolean isInSearchResults(WebDriver driver, String term) {
+    public static Boolean isInSearchResults(WebDriver driver, String term, Integer pageCounter) {
         Boolean result = Boolean.FALSE;
         String xpath = "//tr[@class='csc-row']/td/a[text()='" + term +"']";
+        String textTemplate;
+        String fieldText;
+
         if (!driver.findElements(By.xpath(xpath)).isEmpty()) {
             result = Boolean.TRUE;
         } else {
             try {
                 driver.findElement(By.className("flc-pager-next")).click();
-                result = isInSearchResults(driver, term);
+                pageCounter += 1;
+                WebElement textField = driver.findElement(By.xpath("//*[@id=\"pager-bottom\"]/li[5]"));
+                textTemplate = "Viewing page " + pageCounter + ".";
+                fieldText = textField.getText();
+
+                if (!(fieldText.contains(textTemplate))) {
+                    return Boolean.FALSE; // fixes infinite loop of button-clicking when the item is not found.
+                }
+                result = isInSearchResults(driver, term, pageCounter);
             } catch (Exception e) { log(e.getMessage());}
         }
         return result;
