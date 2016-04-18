@@ -39,3 +39,4 @@ Feature: Advanced Search Group
           And clicks the confirmation delete button
           Then "Group" deletion should be confirmed in a dialog
           And clicks delete confirmation OK button
+          Then close the browser
