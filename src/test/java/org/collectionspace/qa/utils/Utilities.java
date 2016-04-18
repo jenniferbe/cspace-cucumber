@@ -3,6 +3,8 @@ package org.collectionspace.qa.utils;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
+import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -28,10 +30,57 @@ public class Utilities {
         driver.get(baseURL + LOGIN_PATH);
         driver.findElement(By.className("csc-login-userId")).sendKeys(USERNAME);
         driver.findElement(By.className("csc-login-password")).sendKeys(PASSWORD);
-        new WebDriverWait(driver, 10).until(
-                        ExpectedConditions.invisibilityOfElementLocated(By.className("cs-loading-indicator")));
+        // new WebDriverWait(driver, 10).until(
+                        // ExpectedConditions.invisibilityOfElementLocated(By.className("cs-loading-indicator")));
         driver.findElement(By.className("csc-login-button")).click();
     }
+
+    public static List<WebElement> findElementsWithTimeout(WebDriver driver, int timeoutSeconds, By by) {
+		driver.manage().timeouts().implicitlyWait(timeoutSeconds, TimeUnit.SECONDS);
+		List<WebElement> foundElements = driver.findElements(by);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
+		return foundElements;
+	}
+
+    public static void fillAutocompleteField(WebDriver driver, WebElement autocompleteInputElement, String value) {
+		// if (value == null) {
+		// 	value = generateAutocompleteValue();
+		// }
+
+		// WebElement autocompleteInputElement = findFollowingSiblingAutocompleteInputElement(element);
+
+		if (autocompleteInputElement != null) {
+			autocompleteInputElement.click();
+			autocompleteInputElement.sendKeys(value);
+
+			WebElement popupElement = driver.findElement(By.className("cs-autocomplete-popup"));
+			WebElement matchesElement = popupElement.findElement(By.className("csc-autocomplete-Matches"));
+			WebElement matchSpanElement = null;
+            List<WebElement> lst = matchesElement.findElements(By.tagName("li"));
+			for (WebElement candidateMatchElement : lst) {
+				WebElement candidateMatchSpanElement = candidateMatchElement.findElement(By.tagName("span"));
+
+				if (candidateMatchSpanElement.getText().equals(value)) {
+					matchSpanElement = candidateMatchSpanElement;
+					break;
+				}
+			}
+
+			matchSpanElement.click();
+
+		}
+		else {
+			log("could not find autocomplete input");
+		}
+
+		// return value;
+	}
+
+
+
+
+
 
     public static void log(String str) {
         System.out.print(str);
@@ -62,7 +111,7 @@ public class Utilities {
         String xpath = "//tr[@class='csc-row']/td/a[text()='" + term +"']";
         String textTemplate;
         String fieldText;
-        
+
         if (!driver.findElements(By.xpath(xpath)).isEmpty()) {
             result = Boolean.TRUE;
         } else {

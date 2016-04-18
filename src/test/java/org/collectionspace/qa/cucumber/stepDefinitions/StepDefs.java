@@ -30,7 +30,6 @@ import static org.junit.Assert.assertTrue;
 import org.collectionspace.qa.records.*;
 import static org.collectionspace.qa.utils.Utilities.*;
 
-
 public class StepDefs {
 
     private final WebDriver driver;
@@ -294,8 +293,20 @@ public class StepDefs {
 
     @And("^(?:the user |user )?clicks on \"([^\"]*)\" from autocomplete options$")
     public void clicks_on_from_autocomplete_options(String option) throws Throwable {
-        String xpath = "//li[@class='cs-autocomplete-matchItem csc-autocomplete-matchItem']/span[text()='" + option + "']";
-        driver.findElement(By.xpath(xpath)).click();
+        // //*[@id="primaryTab"]/div/div[3]/div[2]/div[2]/div[2]/div/div[2]/input[2]
+        try {
+        new WebDriverWait(driver, 10).until(
+                        ExpectedConditions.visibilityOfElementLocated(By.className("cs-autocomplete-popup")));
+        String xpath = "//li[@class=\'cs-autocomplete-matchItem csc-autocomplete-matchItem']/span[text()=\'" + option + "\']";
+        WebElement x = driver.findElement(By.xpath(xpath));
+        // .click();
+        // WebElement elem =
+        fillAutocompleteField(driver, x, option);
+    } catch (Exception e) {
+        log(e.getMessage());
+    }
+
+
     }
 
 
@@ -441,6 +452,8 @@ public class StepDefs {
         wait.until(visibilityOfElementLocated(By.className("csc-confirmationDialog")));
     }
 
+
+
     @And("^(?:the user |user )?clicks (?:the )?confirmation cancel button$")
     public void clicks_cancel_button() throws Throwable {
         driver.findElement(By.className("csc-confirmationDialogButton-cancel")).click();
@@ -449,12 +462,14 @@ public class StepDefs {
     @And("^(?:the user |user )?clicks (?:the )?confirmation close button$")
     public void clicks_close_button() throws Throwable {
         driver.findElement(By.className("csc-confirmationDialog-closeBtn")).click();
+        //*[@id="fluid-id-ca7bipc2-1436"]/div/div/div[4]/input
     }
 
     @And("^(?:the user |user )?clicks (?:the )?confirmation delete button$")
     public void clicks_the_confirmation_delete_button() throws Throwable {
-        driver.findElement(By.className("csc-confirmationDialogButton-act")).click();
+        driver.findElement(By.xpath("//*[@class=\"ui-dialog-content ui-widget-content\"]/div/div/div[3]/input[2]")).click();
     }
+
 
     @And("^(?:the user |user )?clicks (?:the )?confirmation don't save button$")
     public void clicks_the_confirmation_dont_save_button() throws Throwable {
@@ -466,10 +481,10 @@ public class StepDefs {
         driver.findElement(By.className("csc-confirmationDialogButton-act")).click();
     }
 
-    @And("^deletion should be confirmed in a dialogue$")
-    public void deletion_should_be_confirmed_in_a_dialogue() throws Throwable {
+    @And("^\"([^\"]*)\" deletion should be confirmed in a dialog$")
+    public void deletion_should_be_confirmed_in_a_dialogue(String recordType) throws Throwable {
         WebElement element = wait.until(presenceOfElementLocated(By.className("csc-confirmationDialog-text")));
-        assertTrue(element.getText().equals("Person successfully deleted"));
+        assertTrue(element.getText().equals(recordType + " successfully deleted"));
     }
 
     @And("^(?:the user |user )?clicks delete confirmation OK button$")
