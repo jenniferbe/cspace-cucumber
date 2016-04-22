@@ -16,6 +16,7 @@ public abstract class Record {
     protected Map<String, String> tickBoxMap  = new HashMap<>();
 
     protected Map<String, String> xpathMap    = new HashMap<>();
+    protected Map<String, String> dropDownMap = new HashMap<>();
 
     protected Map<String, String> fieldSelectorByLabel = new HashMap<>();
 
@@ -47,6 +48,14 @@ public abstract class Record {
 
     public String generateRequiredData(){
         return generateTestFieldDataFor(getClass().getName());
+    }
+
+    public String getDropDownBox(String label) {
+        return dropDownMap.get(label);
+    }
+
+    public String getXPath(String label) {
+        return xpathMap.get(label);
     }
 
 }

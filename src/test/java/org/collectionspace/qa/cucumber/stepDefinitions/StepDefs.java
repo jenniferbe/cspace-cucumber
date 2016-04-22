@@ -21,6 +21,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.*;
 import com.thoughtworks.selenium.*;
 import static org.openqa.selenium.support.ui.ExpectedConditions.*;
+import org.openqa.selenium.support.ui.*;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -28,7 +29,6 @@ import static org.junit.Assert.assertTrue;
 
 import org.collectionspace.qa.records.*;
 import static org.collectionspace.qa.utils.Utilities.*;
-
 
 public class StepDefs {
 
@@ -49,21 +49,28 @@ public class StepDefs {
         login(driver, BASE_URL);
     }
 
-    @And("^enters \"([^\"]*)\" in the \"([^\"]*)\" field$")
-    public void enters_in_field(String value, String fieldName) throws Throwable{
-        String boxName = mappings.getElement(fieldName);
+    @And("^navigates to the record with identification number \"([^\"]*)\"$")
+    public void go_to_record_with_id_number(String idNumber) throws Throwable {
+        // record = loadRecordOfType(recordType);
+        enters_in_the_top_nav_search_field(idNumber);
+        clicks_on_the_top_nav_search_submit_button();
+        the_search_results_should_contain_results(idNumber);
 
-        WebElement box = driver.findElement(By.className(boxName));
-        box.sendKeys(value);
-    } 
-
-    @And("^user waits$") 
-    public void waitAction() throws Throwable {
-        driver.wait(10);
+        String xpath = "//tr[@class='csc-row']/td/a[text()='" + idNumber +"']";
+        driver.findElement(By.xpath(xpath)).click();
+        titlebar_should_contain(idNumber);
     }
 
+    @And("^selects \"([^\"]*)\" from the \"([^\"]*)\" \"([^\"]*)\" dropdown$")
+    public void selects_from_the_drop_down(String selector, String recordType, String dropdownName) throws Throwable {
+        record = loadRecordOfType(recordType);
+        String xpath = record.getDropDownBox(dropdownName);
+        Select select = new Select(driver.findElement(By.xpath(xpath)));
+        select.selectByVisibleText(selector);
+        new WebDriverWait(driver, 10).until(
+                        ExpectedConditions.invisibilityOfElementLocated(By.className("cs-loading-indicator")));
 
-    // ##################################################################
+    }
 
 
     @And("^(?:the user |user )?is on the \"([^\"]*)\" page$")
@@ -133,9 +140,9 @@ public class StepDefs {
 
     @And("^(?:the user |user )?enters \"([^\"]*)\" in the \"([^\"]*)\" \"([^\"]*)\" field$")
     public void enters_in_the_field(String value, String recordType , String fieldName) throws Throwable {
-        record = loadRecordOfType(recordType);
-        String selector = record.getFieldSelectorByLabel(fieldName);
-        fillFieldLocatedById(selector, value, driver);
+        String selector;
+        WebElement element = findElementWithLabel(driver, recordType, fieldName);
+        element.sendKeys(value);
     }
 
     @And("^(?:the user |user )?enters \"([^\"]*)\" in the \"([^\"]*)\" \"([^\"]*)\" vocab field$")
@@ -144,14 +151,14 @@ public class StepDefs {
         String selector = record.getFieldSelectorByLabel(fieldName);
         fillVocabFieldLocatedByID(selector, value, driver);
     }
- 
+
     @And("^(?:the user |user )?enters \"([^\"]*)\" in the \"([^\"]*)\" \"([^\"]*)\" vocab field and adds (?:it )to(?: the)? \"([^\"]*)\" vocab(?:ulary)?$")
     public void enters_in_the_vocab_field(String value, String recordType, String fieldName, String vocabName) throws Throwable {
         record = loadRecordOfType(recordType);
         String selector = record.getFieldSelectorByLabel(fieldName);
         fillVocabFieldLocatedByIDAndSelectVocab(selector, value, vocabName, driver);
-    }   
-    
+    }
+
     @And("^(?:the )?record is successfully saved")
     public void record_is_successfully_saved() throws Throwable {
         wait.until(textToBePresentInElementLocated(
@@ -207,7 +214,7 @@ public class StepDefs {
         Select vocabSelect = new Select(vocab);
         vocabSelect.selectByVisibleText(searchType);
     }
-    
+
     @And("^(?:the user |user )?clicks on the top nav search submit button$")
     public void clicks_on_the_top_nav_search_submit_button() throws Throwable {
         String xpath = "//div[@class='csc-header-searchBox']/div/input[@type='button']";
@@ -220,7 +227,7 @@ public class StepDefs {
                 By.xpath("(//tr[@class='csc-row']/td/a)[1]")));
         String[] options = results.split("; ");
         for (String option : options){
-            assertTrue(isInSearchResults(driver, option));
+            assertTrue(isInSearchResults(driver, option, 1));
         }
     }
 
@@ -235,7 +242,7 @@ public class StepDefs {
 
         String[] options = results.split("; ");
         for (String option : options){
-            assertFalse(isInSearchResults(driver, option));
+            assertFalse(isInSearchResults(driver, option, 1));
         }
     }
 
@@ -257,17 +264,27 @@ public class StepDefs {
 
     @And("^(?:the user |user )?clicks (?:on )?the \"([^\"]*)\" button$")
     public void clicks_the_button(String button) throws Throwable {
-      String xpath = "//input[@value='" + button + "']";
-      driver.findElement(By.xpath(xpath)).click();
+        String recordType = "GeneralPages";
+        WebElement elem = findElementWithLabel(driver, recordType, button);
+
+        // Wait to make sure the loading page doesn't receive the click
+        new WebDriverWait(driver, 10).until(
+                        ExpectedConditions.invisibilityOfElementLocated(By.className("cs-loading-indicator")));
+
+        elem.click();
+        new WebDriverWait(driver, 10).until(
+                        ExpectedConditions.invisibilityOfElementLocated(By.className("cs-loading-indicator")));
+
     }
-    
+
+
     @When("^(?:the user |user )?clicks (?:on )?the \"([^\"]*)\" button on the \"([^\"]*)\" area to the right$")
     public void clicks_on_button_on_right(String button, String category) throws Throwable {
         String xpath = "//div[@class='csc-right-sidebar']//td/a[contains(text(), '" + button +"')]";
         if (category == "procedures")
             xpath = "//div[@class='csc-right-sidebar']//td/a[contains(text(), '" + button + "-2')]";
         driver.findElement(By.xpath(xpath)).click();
-    } 
+    }
 
     @And("^(?:the user |user )?fills in required fields for \"([^\"]*)\" record$")
     public void fills_in_required_fields_for_record(String recordType) throws Throwable {
@@ -276,8 +293,20 @@ public class StepDefs {
 
     @And("^(?:the user |user )?clicks on \"([^\"]*)\" from autocomplete options$")
     public void clicks_on_from_autocomplete_options(String option) throws Throwable {
-        String xpath = "//li[@class='cs-autocomplete-matchItem csc-autocomplete-matchItem']/span[text()='" + option + "']";
-        driver.findElement(By.xpath(xpath)).click();
+        // //*[@id="primaryTab"]/div/div[3]/div[2]/div[2]/div[2]/div/div[2]/input[2]
+        try {
+        new WebDriverWait(driver, 10).until(
+                        ExpectedConditions.visibilityOfElementLocated(By.className("cs-autocomplete-popup")));
+        String xpath = "//li[@class=\'cs-autocomplete-matchItem csc-autocomplete-matchItem']/span[text()=\'" + option + "\']";
+        WebElement x = driver.findElement(By.xpath(xpath));
+        // .click();
+        // WebElement elem =
+        fillAutocompleteField(driver, x, option);
+    } catch (Exception e) {
+        log(e.getMessage());
+    }
+
+
     }
 
 
@@ -328,7 +357,7 @@ public class StepDefs {
                 "//input[@name='primary-fields.personTermGroup']/ancestor::div[1]/input[@type='button']";
         driver.findElement(By.xpath(xpath)).click();
     }
-    
+
     // Note: code cobbled together from other stepdefs and untested
     @And("^(?:the user |user )?clicks(?: on)? the plus to repeat the \"([^\"]*)\" \"([^\"]*)\" field$")
     public void clicks_the_plus_to_repeat_the_field(String recordType, String fieldName) throws Throwable {
@@ -389,13 +418,13 @@ public class StepDefs {
         verifyAllFieldsCleared(recordType, driver);
     }
 
-    @And("^(?:the )?\"([^\"]*)\" button should not be clickable$") 
+    @And("^(?:the )?\"([^\"]*)\" button should not be clickable$")
     public void button_should_not_be_clickable(String button) throws Throwable {
         WebElement element = driver.findElement(By.className(button + "Button"));
         wait.until(not(elementToBeClickable(element)));
     }
 
-    @And("^disables top and bottom \"([^\"]*)\" buttons$") 
+    @And("^disables top and bottom \"([^\"]*)\" buttons$")
     public void top_bottom_buttons_should_not_be_clickable(String button) throws Throwable {
         String xpath = "//input[@type='button'][@id='" + button + "']";
         WebElement element = driver.findElement(By.xpath(xpath));
@@ -404,7 +433,7 @@ public class StepDefs {
         wait.until(not(elementToBeClickable(element)));
     }
 
-    @And("^enables top and bottom \"([^\"]*)\" buttons$") 
+    @And("^enables top and bottom \"([^\"]*)\" buttons$")
     public void top_bottom_buttons_should_be_clickable(String button) throws Throwable {
         String xpath = "//input[@type='button'][@id='" + button + "']";
         WebElement element = driver.findElement(By.xpath(xpath));
@@ -423,6 +452,8 @@ public class StepDefs {
         wait.until(visibilityOfElementLocated(By.className("csc-confirmationDialog")));
     }
 
+
+
     @And("^(?:the user |user )?clicks (?:the )?confirmation cancel button$")
     public void clicks_cancel_button() throws Throwable {
         driver.findElement(By.className("csc-confirmationDialogButton-cancel")).click();
@@ -431,12 +462,14 @@ public class StepDefs {
     @And("^(?:the user |user )?clicks (?:the )?confirmation close button$")
     public void clicks_close_button() throws Throwable {
         driver.findElement(By.className("csc-confirmationDialog-closeBtn")).click();
+        //*[@id="fluid-id-ca7bipc2-1436"]/div/div/div[4]/input
     }
 
     @And("^(?:the user |user )?clicks (?:the )?confirmation delete button$")
     public void clicks_the_confirmation_delete_button() throws Throwable {
-        driver.findElement(By.className("csc-confirmationDialogButton-act")).click();
+        driver.findElement(By.xpath("//*[@class=\"ui-dialog-content ui-widget-content\"]/div/div/div[3]/input[2]")).click();
     }
+
 
     @And("^(?:the user |user )?clicks (?:the )?confirmation don't save button$")
     public void clicks_the_confirmation_dont_save_button() throws Throwable {
@@ -447,11 +480,11 @@ public class StepDefs {
     public void clicks_the_confirmation_save_button() throws Throwable {
         driver.findElement(By.className("csc-confirmationDialogButton-act")).click();
     }
-    
-    @And("^deletion should be confirmed in a dialogue$")
-    public void deletion_should_be_confirmed_in_a_dialogue() throws Throwable {
+
+    @And("^\"([^\"]*)\" deletion should be confirmed in a dialog$")
+    public void deletion_should_be_confirmed_in_a_dialogue(String recordType) throws Throwable {
         WebElement element = wait.until(presenceOfElementLocated(By.className("csc-confirmationDialog-text")));
-        assertTrue(element.getText().equals("Person successfully deleted"));
+        assertTrue(element.getText().equals(recordType + " successfully deleted"));
     }
 
     @And("^(?:the user |user )?clicks delete confirmation OK button$")
@@ -475,7 +508,7 @@ public class StepDefs {
     public void selects_the_tab(String tab) throws Throwable {
         String xpath = "//li[@class='csc-tabs-tab-link cs-tabs-tab-link']/span[text()='" + tab + "']";
         driver.findElement(By.xpath(xpath)).click();
-    } 
+    }
 
     @And("^\"([^\"]*)\" should be displayed in the message bar$")
     public void content_should_be_displayed_in_message_bar(String message) throws Throwable {
@@ -490,12 +523,12 @@ public class StepDefs {
         wait.until(textToBePresentInElementLocated(
                 By.className("csc-titleBar-value"), term));
     }
-    
+
     @And("^(?:the user |user )?presses the Tab key$")
     public void presses_the_tab_key() throws Throwable {
         driver.switchTo().activeElement().sendKeys(Keys.TAB);
     }
-      
+
     @And("^(?:the user |user )?presses the tab key until reaching the \"([^\"]*)\" button(?: )?(?:#.*)?$")
     public void presses_the_tab_key_until_reaching_button(String button) throws Throwable {
         WebElement destinationButton = driver.findElement(By.name(button));
