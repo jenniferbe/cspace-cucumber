@@ -1,6 +1,6 @@
 # Created by Cesar Villalobos on 01/07/2016
 
-#@advancedsearch
+@advancedsearch
 Feature: Advanced Search results Add to Record
     Adding search results to a group
 

@@ -1,6 +1,6 @@
 # Created by Cesar Villalobos on 01/07/2016
 
-#@advancedsearch
+@advancedsearch
 Feature: Advanced Search ­Cataloging
 
     Scenario: Advanced Search Fields

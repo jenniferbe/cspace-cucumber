@@ -1,6 +1,6 @@
 #Created by Forest Yang on 12/302015
 # OBJECTS EXIT
-#@advancedsearch
+@advancedsearch
 Feature: Advanced Search - Object Exit
 #       And selects "Dataset" from the "Media Handling" "Types" dropdown
 #       And selects "Media Handling" from the "AdvancedSearch" "record type" dropdown
