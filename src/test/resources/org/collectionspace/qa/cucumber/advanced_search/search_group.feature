@@ -1,5 +1,6 @@
 # Created by Cesar Villalobos on 01/07/2016
 # CQA-75
+# Working as of 05/04/16 with occasional errors
 
 @advancedsearch
 Feature: Advanced Search Group
