@@ -1,4 +1,5 @@
 # Created by Cesar Villalobos on 01/07/2016
+# Working as of May 31st 2016
 
 @advancedsearch
 Feature: Advanced Search ­ Condition Check
@@ -14,14 +15,14 @@ Feature: Advanced Search ­ Condition Check
         And selects "Low" from the "Condition Check" "Conservation Treatment Priority" dropdown
         And enters "2016-01-01" in the "Condition Check" "Next Condition Check/Assessment Date" field
         And enters "2016-02-02" in the "Condition Check" "Condition Check/Assessment Date" field
-        And enters "textbook" in the "Condition Check" "Condition Check/Assessment Date" field
+		And enters "textbook" in the "Condition Check" "Condition Check/Assessment Note" field
         And clicks the "Save" button
 
         # "Condition Check"
 
         And clicks the "Advanced Search" button
         And selects "Condition Check" from the "AdvancedSearch" "record type" dropdown
-        And enters "CQA73" in the "Condition Check" "Condition Check/Assessment Reference Number" field
+        And enters "CQA73.1" in the "Condition Check" "Condition Check/Assessment Reference Number" field
         And clicks the "Advanced Search search" button
         Then the search results should contain "CQA73.1"
 
@@ -49,27 +50,27 @@ Feature: Advanced Search ­ Condition Check
 		# Next Condition Check/Assessment Date
         And clicks the "Advanced Search" button
         And selects "Condition Check" from the "AdvancedSearch" "record type" dropdown
-        And enters "2016-01-01" in the "Condition Check" "Next Condition Check/Assessment Date" field
+        And enters "2016-01-01" in the "Condition Check" "Earliest Next Condition Check/Assessment Date" field
         And clicks the "Advanced Search search" button
         Then the search results should contain "CQA73.1"
 
 		# Condition Check/Assessment Date
         And clicks the "Advanced Search" button
         And selects "Condition Check" from the "AdvancedSearch" "record type" dropdown
-        And enters "2016-02-02" in the "Condition Check" "Condition Check/Assessment Date" field
+        And enters "2016-02-02" in the "Condition Check" "Earliest Condition Check/Assessment Date" field
         And clicks the "Advanced Search search" button
         Then the search results should contain "CQA73.1"
 
 		# Last edited
         And clicks the "Advanced Search" button
         And selects "Condition Check" from the "AdvancedSearch" "record type" dropdown
-        And enters today's date in the "Condition Check" "Earliest Modified Date" field
+        And enters today's date in the "AdvancedSearch" "Earliest Modified Date" field
         And clicks the "Advanced Search search" button
         Then the search results should contain "CQA73.1"
 
         And clicks the "Advanced Search" button
         And selects "Condition Check" from the "AdvancedSearch" "record type" dropdown
-        And enters "admin@CollectionSpace.org" in the "Condition Check" "Record last modified by" date
+        And enters "admin@core.collectionspace.org" in the "AdvancedSearch" "Record last modified by" field
         And clicks the "Advanced Search search" button
         Then the search results should contain "CQA73.1"
 
@@ -103,21 +104,21 @@ Feature: Advanced Search ­ Condition Check
         And enters "testtest" in the "Condition Check" "Handling Recommendations" field
         And clicks the "Save" button
 
-        And clicks the "Advanced Search button"
+        And clicks the "Advanced Search" button
         And selects "Condition Check" from the "AdvancedSearch" "record type" dropdown
 
-        And selects "any (OR)" from the "AdvancedSearch" "Field-based Search" dropdown
-        And selects "Low" from the "Condition Check" "Object audit category" dropdown
+        And selects "any (OR)" from the "AdvancedSearch" "Field-based search" dropdown
+        And selects "Low" from the "Condition Check" "Object Audit Category" dropdown
         And selects "Needs no work" from the "Condition Check" "Condition" dropdown
-        And clicks the "Advanced Seach search" button
+        And clicks the "Advanced Search search" button
         Then the search results should contain "CQA73.2"
         Then the search results should contain "CQA73.3"
         Then the search results should contain "CQA73.4"
 
-        And clicks the "Advanced Search button"
+        And clicks the "Advanced Search" button
         And selects "Condition Check" from the "AdvancedSearch" "record type" dropdown
-        And selects "all (AND)" from the "AdvancedSearch" "Field-based Search" dropdown
-        And selects "Low" from the "Condition Check" "Object audit category" dropdown
+        And selects "all (AND)" from the "AdvancedSearch" "Field-based search" dropdown
+        And selects "Low" from the "Condition Check" "Object Audit Category" dropdown
         And selects "Needs no work" from the "Condition Check" "Condition" dropdown
         And clicks the "Advanced Search search" button
         Then the search results should contain "CQA73.2"
@@ -126,13 +127,14 @@ Feature: Advanced Search ­ Condition Check
         Then close the browser
 
 	Scenario: Boolean and Keyword Search
-        # Given user is in the "My CollectionSpace" page
-        # And clicks the "Advanced Search" button
+        Given user is on the "My CollectionSpace" page
+        And clicks the "Advanced Search" button
         # Press the confirm button
-        Given user is on a blank "Condition Check" record
-        And enters "testtest" in the "Condition Check" "Keyword Search" field
-        And selects "any (OR)" from the "AdvancedSearch" "Field-based Search" dropdown
-        And selects "Low" from the "Condition Check" "Object audit category" dropdown
+        # Given user is on a blank "Condition Check" record
+		And selects "Condition Check" from the "AdvancedSearch" "record type" dropdown
+        And enters "testtest" in the "AdvancedSearch" "Keyword Search" field
+        And selects "any (OR)" from the "AdvancedSearch" "Field-based search" dropdown
+        And selects "Low" from the "Condition Check" "Object Audit Category" dropdown
         And selects "Needs no work" from the "Condition Check" "Condition" dropdown
         And clicks the "Advanced Search search" button
         Then the search results should contain "CQA73.2"
@@ -140,19 +142,19 @@ Feature: Advanced Search ­ Condition Check
         Then the search results should contain "CQA73.4"
 
         And clicks the "Advanced Search" button
-        And enters "testtest" in the "Condition Check" "Keyword Search" field
-        And selects "all (AND)" from the "AdvancedSearch" "Field-based Search" dropdown
-        And selects "Low" from the "Condition Check" "Object audit category" dropdown
+		And selects "Condition Check" from the "AdvancedSearch" "record type" dropdown
+        And enters "testtest" in the "AdvancedSearch" "Keyword Search" field
+        And selects "all (AND)" from the "AdvancedSearch" "Field-based search" dropdown
+        And selects "Low" from the "Condition Check" "Object Audit Category" dropdown
         And selects "Needs no work" from the "Condition Check" "Condition" dropdown
         And clicks the "Advanced Search search" button
         Then the search results should contain "CQA73.2"
         Then the search results should contain "CQA73.3"
         Then the search results should not contain "CQA73.4"
-
         Then close the browser
 
     Scenario: Record deletion
-		Given user is in the "My CollectionSpace" page
+		Given user is on the "My CollectionSpace" page
         And navigates to the record with identification number "CQA73.1"
         And clicks on the "Delete" button
         Then delete confirmation dialogue should appear
@@ -182,6 +184,3 @@ Feature: Advanced Search ­ Condition Check
         And clicks delete confirmation OK button
 
         Then close the browser
-
-
-## DELETE THEM!
