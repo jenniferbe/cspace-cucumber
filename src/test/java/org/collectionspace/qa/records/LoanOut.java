@@ -11,7 +11,7 @@ public class LoanOut extends Record {
       fieldSelectorByLabel.put("Lender's Authorization Date", "csc-loanout-lendersAuthorizationDate");
       // fieldSelectorByLabel.put("Lender's Authorizer", "csc-loanout-lendersAuthorizer"); //autofill
       // fieldSelectorByLabel.put("Lender's Contact", "csc-loanout-lendersContact"); //autofill
-  		fieldSelectorByLabel.put("Loan Out Conditions", "input-textarea csc-loanOut-loanOutConditions");
+      fieldSelectorByLabel.put("Loan Out Conditions", "input-textarea csc-loanOut-loanOutConditions");
       // fieldSelectorByLabel.put("Loan Out Conditions", "csc-loanout-specialConditionsOfLoan"); // check this
       fieldSelectorByLabel.put("Loan Out Date", "csc-loanout-loanOutDate");
       fieldSelectorByLabel.put("Loan Out Note", "csc-loanout-loanOutNote");
@@ -24,11 +24,11 @@ public class LoanOut extends Record {
       fieldSelectorByLabel.put("Loan Status Note", "csc-loanout-loanStatusNote");
       fieldSelectorByLabel.put("Loans Out Information", "csc-loanout-loanoutInformation");
 
-  		xpathMap.put("Borrower", "//*[@id=\"primaryTab\"]/div/div[3]/div[2]/div[3]/div/div[2]/table/tbody/tr/td[1]/input[2]"); // autofill
-  		xpathMap.put("Borrower's Authorizer", "//*[@id=\"primaryTab\"]/div/div[3]/div[2]/div[3]/div/div[2]/table/tbody/tr/td[3]/input[2]"); //autofill
-  		xpathMap.put("Borrower's Contact", "//*[@id=\"primaryTab\"]/div/div[3]/div[2]/div[3]/div/div[2]/table/tbody/tr/td[2]/input[2]"); // autofill
-  		xpathMap.put("Lender's Authorizer", "//*[@id=\"primaryTab\"]/div/div[3]/div[2]/div[2]/div/div[2]/table/tbody/tr/td[1]/input[2]"); //autofill
-  		xpathMap.put("Lender's Contact", "//*[@id=\"primaryTab\"]/div/div[3]/div[2]/div[2]/div/div[2]/table/tbody/tr/td[2]/input[2]"); //autofill
+      xpathMap.put("Borrower", "//*[@id=\"primaryTab\"]/div/div[3]/div[2]/div[3]/div/div[2]/table/tbody/tr/td[1]/input[2]"); // autofill
+      xpathMap.put("Borrower's Authorizer", "//*[@id=\"primaryTab\"]/div/div[3]/div[2]/div[3]/div/div[2]/table/tbody/tr/td[3]/input[2]"); //autofill
+      xpathMap.put("Borrower's Contact", "//*[@id=\"primaryTab\"]/div/div[3]/div[2]/div[3]/div/div[2]/table/tbody/tr/td[2]/input[2]"); // autofill
+      xpathMap.put("Lender's Authorizer", "//*[@id=\"primaryTab\"]/div/div[3]/div[2]/div[2]/div/div[2]/table/tbody/tr/td[1]/input[2]"); //autofill
+      xpathMap.put("Lender's Contact", "//*[@id=\"primaryTab\"]/div/div[3]/div[2]/div[2]/div/div[2]/table/tbody/tr/td[2]/input[2]"); //autofill
  
     }
 }
