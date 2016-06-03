@@ -11,8 +11,7 @@ public class LoanOut extends Record {
       fieldSelectorByLabel.put("Lender's Authorization Date", "csc-loanout-lendersAuthorizationDate");
       // fieldSelectorByLabel.put("Lender's Authorizer", "csc-loanout-lendersAuthorizer"); //autofill
       // fieldSelectorByLabel.put("Lender's Contact", "csc-loanout-lendersContact"); //autofill
-      fieldSelectorByLabel.put("Loan Out Conditions", "input-textarea csc-loanOut-loanOutConditions");
-      // fieldSelectorByLabel.put("Loan Out Conditions", "csc-loanout-specialConditionsOfLoan"); // check this
+      fieldSelectorByLabel.put("Loan Out Conditions", "csc-loanOut-loanOutConditions");
       fieldSelectorByLabel.put("Loan Out Date", "csc-loanout-loanOutDate");
       fieldSelectorByLabel.put("Loan Out Note", "csc-loanout-loanOutNote");
       fieldSelectorByLabel.put("Loan Out Number", "csc-loanout-loanOutNumber");
