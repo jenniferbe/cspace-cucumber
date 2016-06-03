@@ -114,6 +114,13 @@ public class StepDefs {
                 By.className("csc-titleBar-value"), expectedText));
     }
 
+    @And("^(?:the )?vocabulary (?:name )?in the titlebar should contain \"([^\"]*)\"$")
+    public void titlebar_vocabulary_should_contain(String expectedText) throws Throwable {
+        // assertTrue(wait.until(textToBePresentInElementLocated(By.id("title-bar"), expectedText)));
+        wait.until(textToBePresentInElementLocated(
+                By.className("csc-titleBar-vocab"), expectedText));
+    }
+    
     @And("^(?:the user |user )?clicks (?:on )?the Create button$")
     public void clicks_the_Create_button() throws Throwable {
         driver.findElement(By.id("createButton")).click();
