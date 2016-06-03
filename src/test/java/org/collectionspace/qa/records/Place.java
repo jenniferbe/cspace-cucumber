@@ -6,7 +6,7 @@ public class Place extends Record {
 
         requiredMap.put("csc-placeAuthority-termDisplayName", "No place like Home");
 
-        fieldSelectorByLabel.put("Abbreviation", "csc-preferredPlace-nameAbbrev");
+        fieldSelectorByLabel.put("Abbreviation", "csc-placeAuthority-nameAbbrev");
         fieldSelectorByLabel.put("Broader Context", "csc-hierarchy-broaderContext");
         fieldSelectorByLabel.put("Broader object type", "csc-hierarchy-broaderContextType");
         fieldSelectorByLabel.put("Coordinate system", "csc-place-vCoordSys");
@@ -17,20 +17,19 @@ public class Place extends Record {
         fieldSelectorByLabel.put("Decimal latitude", "csc-place-decimalLatitude");
         fieldSelectorByLabel.put("Decimal longitude", "csc-place-decimalLongitude");
         fieldSelectorByLabel.put("Depth", "csc-place-vDepth");
-        fieldSelectorByLabel.put("Display Name", "csc-placeAuthority-termDisplayName"); // This was present manually in this file
-        // fieldSelectorByLabel.put("Display name", "csc-preferredPlace-termDisplayName"); // check this
+        fieldSelectorByLabel.put("Display Name", "csc-placeAuthority-termDisplayName");
         fieldSelectorByLabel.put("Distance above surface", "csc-place-vDistanceAboveSurface");
         fieldSelectorByLabel.put("Elevation", "csc-place-vElevation");
         fieldSelectorByLabel.put("Equivalent Context", "csc-hierarchy-equivalentContexts");
         fieldSelectorByLabel.put("Footprint SRS", "csc-place-footprintSRS");
         fieldSelectorByLabel.put("Footprint WKT", "csc-place-footprintWKT");
         fieldSelectorByLabel.put("Footprint sp. fit", "csc-place-footprintSpatialFit");
-        fieldSelectorByLabel.put("Formatted Display Name", "csc-preferredPlace-termFormattedDisplayName");
+        fieldSelectorByLabel.put("Formatted Display Name", "csc-placeAuthority-termFormattedDisplayName");
         fieldSelectorByLabel.put("Georeference Information", "csc-place-geoReferenceInformation");
         fieldSelectorByLabel.put("Georeference place name", "csc-place-geoRefPlaceName");
         fieldSelectorByLabel.put("Georeferenced by", "csc-place-geoReferencedBy");
-        fieldSelectorByLabel.put("Historical status", "csc-preferredPlace-historicalStatus");
-        fieldSelectorByLabel.put("Language", "csc-preferredPlace-termLanguage");
+        fieldSelectorByLabel.put("Historical status", "csc-placeAuthority-historicalStatus");
+        fieldSelectorByLabel.put("Language", "csc-placeAuthority-termLanguage");
         fieldSelectorByLabel.put("Locality Information", "csc-place-localityInformation");
         fieldSelectorByLabel.put("Max depth (m)", "csc-place-maxDepthInMeters");
         fieldSelectorByLabel.put("Max distance above surface (m)", "csc-place-maxDistanceAboveSurfaceInMeters");
@@ -38,36 +37,36 @@ public class Place extends Record {
         fieldSelectorByLabel.put("Min depth (m)", "csc-place-minDepthInMeters");
         fieldSelectorByLabel.put("Min distance above surface (m)", "csc-place-minDistanceAboveSurfaceInMeters");
         fieldSelectorByLabel.put("Min elevation (m)", "csc-place-minElevationInMeters");
-        fieldSelectorByLabel.put("Name", "csc-preferredPlace-termName");
+        fieldSelectorByLabel.put("Name", "csc-placeAuthority-termName");
         fieldSelectorByLabel.put("Narrower Context", "csc-hierarchy-narrowerContext");
         fieldSelectorByLabel.put("Note", "csc-place-ownershipNote");
-        fieldSelectorByLabel.put("Note", "csc-preferredPlace-nameNote");
+        fieldSelectorByLabel.put("Note", "csc-placeAuthority-nameNote");
         fieldSelectorByLabel.put("Object component type", "csc-hierarchy-narrowerContextType");
         fieldSelectorByLabel.put("Owner", "csc-place-owner");
         fieldSelectorByLabel.put("Place Authority", "csc-place-placeAuthorityInformation");
         fieldSelectorByLabel.put("Place Record Type", "csc-place-placeType");
-        fieldSelectorByLabel.put("Place Term Group(s)", "csc-place-preferredPlace");
+        fieldSelectorByLabel.put("Place Term Group(s)", "csc-place-placeAuthority");
         fieldSelectorByLabel.put("Place note", "csc-place-placeNote");
         fieldSelectorByLabel.put("Place owners", "csc-place-placeOwnerGroup");
         fieldSelectorByLabel.put("Place source", "csc-place-placeSource");
         fieldSelectorByLabel.put("Precision", "csc-place-coordPrecision");
-        fieldSelectorByLabel.put("Pref for lang", "csc-preferredPlace-termPrefForLang");
+        fieldSelectorByLabel.put("Pref for lang", "csc-placeAuthority-termPrefForLang");
         fieldSelectorByLabel.put("Protocol", "csc-place-geoRefProtocol");
         fieldSelectorByLabel.put("Pt. radius sp. fit", "csc-place-pointRadiusSpatialFit");
-        fieldSelectorByLabel.put("Qualifier", "csc-preferredPlace-termQualifier");
+        fieldSelectorByLabel.put("Qualifier", "csc-placeAuthority-termQualifier");
         fieldSelectorByLabel.put("Related Term", "csc-hierarchy-relatedTerms");
         fieldSelectorByLabel.put("Remarks", "csc-place-geoRefRemarks");
         fieldSelectorByLabel.put("Source", "csc-place-geoRefSource");
         fieldSelectorByLabel.put("Source", "csc-place-vCoordSource");
-        fieldSelectorByLabel.put("Source", "csc-preferredPlace-termSource");
-        fieldSelectorByLabel.put("Source ID", "csc-preferredPlace-termSourceID");
+        fieldSelectorByLabel.put("Source", "csc-placeAuthority-termSource");
+        fieldSelectorByLabel.put("Source ID", "csc-placeAuthority-termSourceID");
         fieldSelectorByLabel.put("Source detail", "csc-place-vCoordSourceRefId");
-        fieldSelectorByLabel.put("Source detail", "csc-preferredPlace-termSourceDetail");
-        fieldSelectorByLabel.put("Source note", "csc-preferredPlace-termSourceNote");
+        fieldSelectorByLabel.put("Source detail", "csc-placeAuthority-termSourceDetail");
+        fieldSelectorByLabel.put("Source note", "csc-placeAuthority-termSourceNote");
         fieldSelectorByLabel.put("Spatial ref system", "csc-place-vSpatialReferenceSystem");
-        fieldSelectorByLabel.put("Status", "csc-preferredPlace-termStatus");
-        fieldSelectorByLabel.put("Term Flag", "csc-preferredPlace-termFlag");
-        fieldSelectorByLabel.put("Type", "csc-preferredPlace-termType");
+        fieldSelectorByLabel.put("Status", "csc-placeAuthority-termStatus");
+        fieldSelectorByLabel.put("Term Flag", "csc-placeAuthority-termFlag");
+        fieldSelectorByLabel.put("Type", "csc-placeAuthority-termType");
         fieldSelectorByLabel.put("Uncertainty", "csc-place-coordUncertaintyInMeters");
         fieldSelectorByLabel.put("Unit of measure", "csc-place-vUnitofMeasure");
         fieldSelectorByLabel.put("Verbatim coords", "csc-place-vCoordinates");
@@ -103,8 +102,8 @@ public class Place extends Record {
         // Not found: text label for message key 'hierarchy-relatedTermLabel'
         // Not found: text label for message key 'place-placeGeoRefGroupLabel'
         // Not found: text label for message key 'place-placeIDLabel'
-        // Not found: text label for message key 'preferredPlace-placeTermGroupLabel'
-        // Not found: text label for message key 'preferredPlace-termInformationLabel'
+        // Not found: text label for message key 'placeAuthority-placeTermGroupLabel'
+        // Not found: text label for message key 'placeAuthority-termInformationLabel'
 
         // ----- End of entries generated by an automated script -----
 
