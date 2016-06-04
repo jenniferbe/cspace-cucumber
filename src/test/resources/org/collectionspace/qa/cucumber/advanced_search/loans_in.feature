@@ -1,6 +1,7 @@
 #created by forest yang on 12/28/2015
+# Working as of June 4 2016
 
-@advancedsearch
+@place
 Feature: Advanced Search - Loans In
   #Test1 LOANS IN
   Scenario: Search by Loan In Number
@@ -8,21 +9,16 @@ Feature: Advanced Search - Loans In
     #   And selects the "Loan In" radio button on the Create New page
     #   And clicks on the Create button
     Given user is on a blank "Loan In" record
-    Then the titlebar should contain "Loan In"
       And enters "textbook" in the "Loan In" "Loan In Number" field
-    #   And clicks on the "Loan In" "Loan Purpose" field
-    # Then a dropdown list should appear in the "Loan Purpose" row
-    #   And selects "Exhibition" from dropdown in "Loan Purpose" row
       And selects "Exhibition" from the "Loan In" "Loan Purpose" dropdown
-      And enters "textbook" in the "Loan In" "Lender" vocab field
-      And adds "textbook" to "Local Persons" #check
+      And enters "textbook" in the "Loan In" "Lender" autocomplete field
       And enters "2011-01-01" in the "Loan In" "Loan In Date" field
-      And enters "2011-01-01" in the "Loan In" "Loan In Return Date" field
+      And enters "2011-01-01" in the "Loan In" "Loan Return Date" field
       And enters "2011-01-01" in the "Loan In" "Loan Renewal Application Date" field
       And clicks the "Save" button
-    Then the record is successfully saved
+    # Then the record is successfully saved
+
       And clicks the "Advanced Search" button
-    Then the titlebar should contain "Advanced Search"
       And selects "Loan In" from the "AdvancedSearch" "record type" dropdown
       And enters "textbook" in the "Loan In" "Loan In Number" field
       And clicks the "Advanced Search search" button
@@ -32,11 +28,7 @@ Feature: Advanced Search - Loans In
   Scenario: Search by Loan Purpose
     Given user is on the "My CollectionSpace" page
       And clicks the "Advanced Search" button
-    Then the titlebar should contain "Advanced Search"
       And selects "Loan In" from the "AdvancedSearch" "record type" dropdown
-    #   And clicks on the "Advanced Search" "Loan Purpose" field
-    # Then a dropdown list should appear in the "Loan Purpose" row
-    #   And selects "Exhibition" from dropdown in "Loan Purpose" row
       And selects "Exhibition" from the "Loan In" "Loan Purpose" dropdown
       And clicks the "Advanced Search search" button
     Then the search results should contain "textbook"
@@ -45,10 +37,8 @@ Feature: Advanced Search - Loans In
   Scenario: Search by Lender
     Given user is on the "My CollectionSpace" page
       And clicks the "Advanced Search" button
-    Then the titlebar should contain "Advanced Search"
       And selects "Loan In" from the "AdvancedSearch" "record type" dropdown
-      And enters "textbook" in the "Loan In" "Lender" vocab field
-      And clicks on "textbook" from autocomplete options
+      And enters "textbook" in the "Loan In" "Lender Search" autocomplete field
       And clicks the "Advanced Search search" button
     Then the search results should contain "textbook"
     Then close the browser
@@ -56,9 +46,8 @@ Feature: Advanced Search - Loans In
   Scenario: Search by Loan In Date
     Given user is on the "My CollectionSpace" page
       And clicks the "Advanced Search" button
-    Then the titlebar should contain "Advanced Search"
       And selects "Loan In" from the "AdvancedSearch" "record type" dropdown
-      And enters "2011-01-01" in the "Loan In" "Loan In Date" field
+      And enters "2011-01-01" in the "Loan In" "Earliest Loan In Date" field
       And clicks the "Advanced Search search" button
     Then the search results should contain "textbook"
     Then close the browser
@@ -66,9 +55,8 @@ Feature: Advanced Search - Loans In
   Scenario: Search by Loan In Return Date
     Given user is on the "My CollectionSpace" page
       And clicks the "Advanced Search" button
-    Then the titlebar should contain "Advanced Search"
       And selects "Loan In" from the "AdvancedSearch" "record type" dropdown
-      And enters "2011-01-01" in the "Loan In" "Loan In Return Date" field
+      And enters "2011-01-01" in the "Loan In" "Earliest Loan Return Date" field
       And clicks the "Advanced Search search" button
     Then the search results should contain "textbook"
     Then close the browser
@@ -76,9 +64,8 @@ Feature: Advanced Search - Loans In
   Scenario: Search by Loan In Renewal Application Date
     Given user is on the "My CollectionSpace" page
       And clicks the "Advanced Search" button
-    Then the titlebar should contain "Advanced Search"
       And selects "Loan In" from the "AdvancedSearch" "record type" dropdown
-      And enters "2011-01-01" in the "Loan In" "Loan In Renewal Application" field
+      And enters "2011-01-01" in the "Loan In" "Earliest Loan Renewal Application Date" field
       And clicks the "Advanced Search search" button
     Then the search results should contain "textbook"
     Then close the browser
@@ -86,9 +73,8 @@ Feature: Advanced Search - Loans In
   Scenario: Search by Edit Date
     Given user is on the "My CollectionSpace" page
       And clicks the "Advanced Search" button
-    Then the titlebar should contain "Advanced Search"
       And selects "Loan In" from the "AdvancedSearch" "record type" dropdown
-      And enters today's date in the "GeneralPages" "Earliest Modified Date" field
+      And enters today's date in the "AdvancedSearch" "Earliest Modified Date" field
       And clicks the "Advanced Search search" button
     Then the search results should contain "textbook"
     Then close the browser
@@ -96,69 +82,49 @@ Feature: Advanced Search - Loans In
   Scenario: Search by username
     Given user is on the "My CollectionSpace" page
       And clicks the "Advanced Search" button
-    Then the titlebar should contain "Advanced Search"
       And selects "Loan In" from the "AdvancedSearch" "record type" dropdown
       And enters "admin@core.collectionspace.org" in the "Loan In" "Record last modified by" field
       And clicks the "Advanced Search search" button
     Then the search results should contain "textbook"
     Then close the browser
 
-  #Test2
+  # Test2
   Scenario: Boolean field-based search
     # Given user is on the "Create New" page
     #   And selects the "Loan In" radio button on the Create New page
     #   And clicks on the Create button
     Given user is on a blank "Loan In" record
-    Then the titlebar should contain "Loan In"
       And enters "textbook2" in the "Loan In" "Loan In Number" field
-    #   And clicks on the "Loan In" "Loan Purpose" field
-    # Then a dropdown list should appear in the "Loan Purpose" row
-    #   And selects "Research" from dropdown in "Loan Purpose" row
       And selects "Research" from the "Loan In" "Loan Purpose" dropdown
       And enters "testtest" in the "Loan In" "Loan In Conditions" field
       And enters "2001-01-01" in the "Loan In" "Loan In Date" field
       And clicks the "Save" button
-    Then the record is successfully saved
+    # Then the record is successfully saved
 
     # Given user is on the "Create New" page
     #   And selects the "Loan In" radio button on the Create New page
     #   And clicks on the Create button
     And user is on a blank "Loan In" record
-    Then the titlebar should contain "Loan In"
       And enters "textbook3" in the "Loan In" "Loan In Number" field
-    #   And clicks on the "Loan In" "Loan Purpose" field
-    # Then a dropdown list should appear in the "Loan Purpose" row
-    #   And selects "Research" from dropdown in "Loan Purpose" row
       And selects "Research" from the "Loan In" "Loan Purpose" dropdown
       And enters "testtest" in the "Loan In" "Loan In Conditions" field
       And enters "2001-01-01" in the "Loan In" "Loan In Date" field
       And clicks the "Save" button
-    Then the record is successfully saved
+    # Then the record is successfully saved
 
-    # Given user is on the "Create New" page
-    #   And selects the "Loan In" radio button on the Create New page
-    #   And clicks on the Create button
     And user is on a blank "Loan In" record
-    Then the titlebar should contain "Loan In"
       And enters "textbook4" in the "Loan In" "Loan In Number" field
-    #   And clicks on the "Loan In" "Loan Purpose" field
-    # Then a dropdown list should appear in the "Loan Purpose" row
-    #   And selects "Photography" from dropdown in "Loan Purpose" row
       And selects "Photography" from the "Loan In" "Loan Purpose" dropdown
       And enters "testtest" in the "Loan In" "Loan In Conditions" field
       And enters "2001-01-01" in the "Loan In" "Loan In Date" field
       And clicks the "Save" button
-    Then the record is successfully saved
+    # Then the record is successfully saved
 
       And clicks the "Advanced Search" button
-    Then the titlebar should contain "Advanced Search"
       And selects "Loan In" from the "AdvancedSearch" "record type" dropdown
       And selects "any (OR)" from the "AdvancedSearch" "Field-based search" dropdown
-      And enters "2001-01-01" in the "Loan In" "Loan In Date" "Earliest" field #fix this
-      And enters "2001-01-01" in the "Loan In" "Loan In Date" "Latest" field #fix this
-    #   And clicks on the "Advanced Search" "Loan Purpose" field
-    # Then a dropdown list should appear in the "Loan Purpose" row
-    #   And selects "Research" from dropdown in "Loan Purpose" row
+      And enters "2001-01-01" in the "Loan In" "Earliest Loan In Date" field
+      And enters "2001-01-01" in the "Loan In" "Latest Loan In Date" field
       And selects "Research" from the "Loan In" "Loan Purpose" dropdown
       And clicks the "Advanced Search search" button
     Then the search results should contain "textbook2"
@@ -167,14 +133,11 @@ Feature: Advanced Search - Loans In
 
     # Given user is on the "My CollectionSpace" page
       And clicks the "Advanced Search" button
-    Then the titlebar should contain "Advanced Search"
+
       And selects "Loan In" from the "AdvancedSearch" "record type" dropdown
       And selects "all (AND)" from the "AdvancedSearch" "Field-based search" dropdown
-      And enters "2001-01-01" in the "Loan In" "Loan In Date" "Earliest" field #fix
-      And enters "2001-01-01" in the "Loan In" "Loan In Date" "Latest" field #fix
-    #   And clicks on the "Advanced Search" "Loan Purpose" field
-    # Then a dropdown list should appear in the "Loan Purpose" row
-    #   And selects "Research" from dropdown in "Loan Purpose" row
+      And enters "2001-01-01" in the "Loan In" "Earliest Loan In Date" field
+      And enters "2001-01-01" in the "Loan In" "Latest Loan In Date" field
     And selects "Research" from the "Loan In" "Loan Purpose" dropdown
       And clicks the "Advanced Search search" button
     Then the search results should contain "textbook2"
@@ -186,23 +149,19 @@ Feature: Advanced Search - Loans In
   Scenario: Boolean and Keyword Search
     Given user is on the "My CollectionSpace" page
       And clicks the "Advanced Search" button
-    Then the titlebar should contain "Advanced Search"
-      And enters "testtest" in the "AdvancedSearch" "search" field
+      And enters "testtest" in the "AdvancedSearch" "Keyword Search" field
+      And selects "Loan In" from the "AdvancedSearch" "record type" dropdown
       And clicks the "Advanced Search search" button
     Then the search results should contain "textbook2"
     Then the search results should contain "textbook3"
     Then the search results should contain "textbook4"
 
       And clicks the "Advanced Search" button
-    Then the titlebar should contain "Advanced Search"
-      And enters "testtest" in the "AdvancedSearch" "search" field
+      And enters "testtest" in the "AdvancedSearch" "Keyword Search" field
       And selects "Loan In" from the "AdvancedSearch" "record type" dropdown
       And selects "any (OR)" from the "AdvancedSearch" "Field-based search" dropdown
-      And enters "2001-01-01" in the "Loan In" "Loan In Date" "Earliest" field #fix this
-      And enters "2001-01-01" in the "Loan In" "Loan In Date" "Latest" field #fix this
-    #   And clicks on the "Loan In" "Loan Purpose" field
-    # Then a dropdown list should appear in the "Loan Purpose" row
-    #   And selects "Research" from dropdown in "Loan Purpose" row
+      And enters "2001-01-01" in the "Loan In" "Earliest Loan In Date" field
+      And enters "2001-01-01" in the "Loan In" "Latest Loan In Date" field
       And selects "Research" from the "Loan In" "Loan Purpose" dropdown
       And clicks the "Advanced Search search" button
     Then the search results should contain "textbook2"
@@ -210,15 +169,11 @@ Feature: Advanced Search - Loans In
     Then the search results should contain "textbook4"
 
       And clicks the "Advanced Search" button
-    Then the titlebar should contain "Advanced Search"
-      And enters "testtest" in the "AdvancedSearch" "search" field
+      And enters "testtest" in the "AdvancedSearch" "Keyword Search" field
       And selects "Loan In" from the "AdvancedSearch" "record type" dropdown
       And selects "all (AND)" from the "AdvancedSearch" "Field-based search" dropdown
-      And enters "2001-01-01" in the "Loan In" "Loan In Date" "Earliest" field #fix this
-      And enters "2001-01-01" in the "Loan In" "Loan In Date" "Latest" field #fix this
-    #   And clicks on the "Advanced Search" "Loan Purpose" field
-    # Then a dropdown list should appear in the "Loan Purpose" row
-    #   And selects "Research" from dropdown in "Loan Purpose" row
+      And enters "2001-01-01" in the "Loan In" "Earliest Loan In Date" field
+      And enters "2001-01-01" in the "Loan In" "Latest Loan In Date" field
       And selects "Research" from the "Loan In" "Loan Purpose" dropdown
       And clicks the "Advanced Search search" button
     Then the search results should contain "textbook2"
