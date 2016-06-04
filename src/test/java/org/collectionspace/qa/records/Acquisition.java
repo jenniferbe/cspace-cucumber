@@ -36,13 +36,12 @@ public class Acquisition extends Record {
         dropDownMap.put("Acquisition Method",	        "csc-acquisition-acquisition-method");
         dropDownMap.put("Acquisition Funding Currency", "//*[@id=\"termList-5\"]");
 
-//*[@id="primaryTab"]/div/div[3]/div[1]/div[2]/div[1]/div[1]/div[6]/div[2]/div/ul/li/input[3]
 
 		xpathMap.put("Acquisition Authorizer",		  "//*[@id=\"primaryTab\"]/div/div[3]/div[1]/div[2]/div[1]/div[1]/div[3]/div[2]/table/tbody/tr/td[1]/input[2]");
+		xpathMap.put("Acquisition Source",            "//*[@name=\"primary-fields.acquisitionSources\"]/following-sibling::input[1]");
 		xpathMap.put("Funding Source",				  "//*[@id=\"repeat::\"]/td[4]/input[2]");
-        xpathMap.put("Search Funding source",         "//*[@id=\".csc-acquisition-acquisitionFunding\"]/input[2]");
-        xpathMap.put("Search Acquisition source",     "//*[@name=\"primary-acquisitionSources\"]/following-sibling::input[1]");
-        xpathMap.put("Acquisition Source",            "//*[@name=\"primary-fields.acquisitionSources\"]/following-sibling::input[1]");
+		xpathMap.put("Search Acquisition source",     "//*[@name=\"primary-acquisitionSources\"]/following-sibling::input[1]");
+		xpathMap.put("Search Funding source",         "//*[@id=\".csc-acquisition-acquisitionFunding\"]/input[2]");
 
 
     }
