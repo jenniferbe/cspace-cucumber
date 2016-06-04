@@ -59,58 +59,6 @@ public class StepDefs {
 
     }
 
-    // And clicks on the "Recent searches" entry containing "{"initialState":false, "keywords":"goodbye"}" #double check
-    @And("^clicks on the recent searches entry containing \"([^\"]*)\"$")
-    // @And("^clicks on the recent searches entry containing \"([^\"]*)\"}\"$")
-    public void and_clicks_on_the_recent_searches_entry_containing(String value) throws Throwable {
-        // value = what we want to search
-        // recordType = "AdvancedSearch";
-        // field name
-        // WebElement element = driver.findElement(By.xpath("//*[@id=\"all-content\"]/div/div[2]/div[2]/div/div[1]/a[text()='" + value + "'    ]"));
-        // String xpath = "//div[@class='csc-related-record csc-related-vocabularies']//td/a[contains(text(), '" + term +"')]";
-        // JSONObject obj = new JSONObject(value);
-        // // JSONArray arr = obj.getJSONArray("posts");
-        // StringBuilder s = new StringBuilder();
-        // s.append("{");
-
-
-        // String p = '{"initialState":false, "keywords":"goodbye"}';
-
-//         "{'initialState':false,
-//         'keywords':'goodbye'}"
-// {"initialState" :false,
-// "keywords" :"Goodbye" ,
-// "recordType" :"objectexit" ,
-// "fields" : {
-//     "exitNumbers" :[
-//         {"_primary" :true}
-//     ],
-//     "exitNotes" :[
-//     {"_primary" :true}
-//     ]
-//
-//
-//         for (int i = 0; i < obj.length(); i++) {
-//
-//         }
-
-
-        // span[contains(.,'Recent searches')]
-//div[@class='csc-searchTools-template cs-searchTools-template']/div/div/div/
-        String path = "//div[@class='csc-searchTools-template cs-searchTools-template']/div/div/div[1]/a[contains(text()='" + value + "')]";
-        // String path = "//*[@id=\"all-content\"]/div/div[2]/div[2]/div/div[1]/a[contains(text()='" + p + "')]";
-        WebElement element = driver.findElement(By.xpath(path));
-        element.click();
-
-            // WebElement element = driver.findElement(By.xpath(""))
-        // String xpath = "//li[@class='csc-tabs-tab-link cs-tabs-tab-link']/span[text()='" + tab + "']";
-
-        //
-        // WebElement element = findElementWithLabel(driver, recordType, )
-        // if
-
-    }
-
 
 
     @And("^enters today's date in the \"([^\"]*)\" \"([^\"]*)\" field$")
@@ -192,6 +140,13 @@ public class StepDefs {
         // assertTrue(wait.until(textToBePresentInElementLocated(By.id("title-bar"), expectedText)));
         wait.until(textToBePresentInElementLocated(
                 By.className("csc-titleBar-value"), expectedText));
+    }
+
+    @And("^(?:the )?vocabulary (?:name )?in the titlebar should contain \"([^\"]*)\"$")
+    public void titlebar_vocabulary_should_contain(String expectedText) throws Throwable {
+        // assertTrue(wait.until(textToBePresentInElementLocated(By.id("title-bar"), expectedText)));
+        wait.until(textToBePresentInElementLocated(
+                By.className("csc-titleBar-vocab"), expectedText));
     }
 
     @And("^(?:the user |user )?clicks (?:on )?the Create button$")
@@ -354,20 +309,8 @@ public class StepDefs {
         new WebDriverWait(driver, 10).until(
                         ExpectedConditions.invisibilityOfElementLocated(By.className("cs-loading-indicator")));
 
-
-        // WebElement target = driver.findElement(By.id("myId"));
-        // ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", elem);
-        // Thread.sleep(500); //not sure why the sleep was needed, but it was needed or it wouldnt work :(
-        // target.click();
-
-
-        // WebElement element = driver.findElement(By("element"));
-        // Actions action = new Actions(driver);
-        // action.moveToElement(elem);
         elem.click();
-        // action.perform();
 
-        // elem.click();
         new WebDriverWait(driver, 10).until(
                         ExpectedConditions.invisibilityOfElementLocated(By.className("cs-loading-indicator")));
 
