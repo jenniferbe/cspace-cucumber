@@ -1,7 +1,5 @@
 package org.collectionspace.qa.cucumber.stepDefinitions;
 
-// import org.json.*;
-
 import java.util.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -44,7 +42,7 @@ public class StepDefs {
     private Pages pages = new Pages();
     private Selenium selenium;
     private ElementMappings mappings = new ElementMappings();
-    private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+    private SimpleDateFormat isoDateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
     public static String
             BASE_URL = "http://qa.collectionspace.org:8180/collectionspace/ui/core/html/";
@@ -54,7 +52,7 @@ public class StepDefs {
         driver = new FirefoxDriver();
         wait = new WebDriverWait(driver, 10);
         driver.manage().window().maximize();
-
+        // for
         login(driver, BASE_URL);
 
     }
@@ -65,7 +63,7 @@ public class StepDefs {
     public void enters_todays_date_in_field(String recordType, String fieldName) throws Throwable {
         String date;
         Date dateNow = new Date();
-        date = dateFormat.format(dateNow);
+        date = isoDateFormat.format(dateNow);
 
         try {
             enters_in_the_field(date, recordType, fieldName);
@@ -179,7 +177,8 @@ public class StepDefs {
         String selector;
         WebElement element = findElementWithLabel(driver, recordType, fieldName);
         element.sendKeys(value);
-
+        new WebDriverWait(driver, 10);
+        // removes_focus_from_field(recordType, fieldName);
         // wait.until(textToBePresentInElement(element, value));
     }
 
