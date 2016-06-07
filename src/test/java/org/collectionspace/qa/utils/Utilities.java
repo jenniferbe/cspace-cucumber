@@ -191,9 +191,6 @@ public class Utilities {
         WebElement element;
         if (selector == null) {
             selector = record.getXPath(fieldName);
-            if (selector == null) { // if there is no xPath... Try to find by Name instead
-                selector = record.getNamePath(fieldName);
-            }
             element = driver.findElement(By.xpath(selector));
         } else {
             selector = record.getFieldSelectorByLabel(fieldName);
