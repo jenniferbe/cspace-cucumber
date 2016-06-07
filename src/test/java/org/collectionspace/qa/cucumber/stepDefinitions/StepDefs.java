@@ -1,7 +1,9 @@
 package org.collectionspace.qa.cucumber.stepDefinitions;
 
-
 import java.util.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.text.ParseException;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -22,6 +24,8 @@ import org.openqa.*;
 import com.thoughtworks.selenium.*;
 import static org.openqa.selenium.support.ui.ExpectedConditions.*;
 import org.openqa.selenium.support.ui.*;
+import org.openqa.selenium.JavascriptExecutor;
+
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -38,6 +42,7 @@ public class StepDefs {
     private Pages pages = new Pages();
     private Selenium selenium;
     private ElementMappings mappings = new ElementMappings();
+    private SimpleDateFormat isoDateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
     public static String
             BASE_URL = "http://qa.collectionspace.org:8180/collectionspace/ui/core/html/";
@@ -46,7 +51,27 @@ public class StepDefs {
     public StepDefs() {
         driver = new FirefoxDriver();
         wait = new WebDriverWait(driver, 10);
+        driver.manage().window().maximize();
+        // for
         login(driver, BASE_URL);
+
+    }
+
+
+
+    @And("^enters today's date in the \"([^\"]*)\" \"([^\"]*)\" field$")
+    public void enters_todays_date_in_field(String recordType, String fieldName) throws Throwable {
+        String date;
+        Date dateNow = new Date();
+        date = isoDateFormat.format(dateNow);
+
+        try {
+            enters_in_the_field(date, recordType, fieldName);
+        } catch (Exception e) {
+            System.out.print(e.getMessage());
+        }
+
+
     }
 
     @And("^navigates to the record with identification number \"([^\"]*)\"$")
@@ -64,11 +89,12 @@ public class StepDefs {
     @And("^selects \"([^\"]*)\" from the \"([^\"]*)\" \"([^\"]*)\" dropdown$")
     public void selects_from_the_drop_down(String selector, String recordType, String dropdownName) throws Throwable {
         record = loadRecordOfType(recordType);
-        String xpath = record.getDropDownBox(dropdownName);
-        Select select = new Select(driver.findElement(By.xpath(xpath)));
+        String path  = record.getDropDownBox(dropdownName);
+        Select select = new Select(driver.findElement(By.className(path)));
         select.selectByVisibleText(selector);
         new WebDriverWait(driver, 10).until(
                         ExpectedConditions.invisibilityOfElementLocated(By.className("cs-loading-indicator")));
+
 
     }
 
@@ -120,7 +146,7 @@ public class StepDefs {
         wait.until(textToBePresentInElementLocated(
                 By.className("csc-titleBar-vocab"), expectedText));
     }
-    
+
     @And("^(?:the user |user )?clicks (?:on )?the Create button$")
     public void clicks_the_Create_button() throws Throwable {
         driver.findElement(By.id("createButton")).click();
@@ -145,11 +171,15 @@ public class StepDefs {
         wait.until(visibilityOfElementLocated(By.className("saveButton")));
     }
 
+
     @And("^(?:the user |user )?enters \"([^\"]*)\" in the \"([^\"]*)\" \"([^\"]*)\" field$")
     public void enters_in_the_field(String value, String recordType , String fieldName) throws Throwable {
         String selector;
         WebElement element = findElementWithLabel(driver, recordType, fieldName);
         element.sendKeys(value);
+        new WebDriverWait(driver, 10);
+        // removes_focus_from_field(recordType, fieldName);
+        // wait.until(textToBePresentInElement(element, value));
     }
 
     @And("^(?:the user |user )?enters \"([^\"]*)\" in the \"([^\"]*)\" \"([^\"]*)\" vocab field$")
@@ -279,6 +309,7 @@ public class StepDefs {
                         ExpectedConditions.invisibilityOfElementLocated(By.className("cs-loading-indicator")));
 
         elem.click();
+
         new WebDriverWait(driver, 10).until(
                         ExpectedConditions.invisibilityOfElementLocated(By.className("cs-loading-indicator")));
 
@@ -298,20 +329,16 @@ public class StepDefs {
         fillRequiredFieldsFor(recordType, driver);
     }
 
-    @And("^(?:the user |user )?clicks on \"([^\"]*)\" from autocomplete options$")
-    public void clicks_on_from_autocomplete_options(String option) throws Throwable {
-        // //*[@id="primaryTab"]/div/div[3]/div[2]/div[2]/div[2]/div/div[2]/input[2]
+
+    @And("^enters \"([^\"]*)\" in the \"([^\"]*)\" \"([^\"]*)\" autocomplete field$")
+    public void clicks_on_from_autocomplete_options(String value, String recordType, String fieldName) throws Throwable {
+
         try {
-        new WebDriverWait(driver, 10).until(
-                        ExpectedConditions.visibilityOfElementLocated(By.className("cs-autocomplete-popup")));
-        String xpath = "//li[@class=\'cs-autocomplete-matchItem csc-autocomplete-matchItem']/span[text()=\'" + option + "\']";
-        WebElement x = driver.findElement(By.xpath(xpath));
-        // .click();
-        // WebElement elem =
-        fillAutocompleteField(driver, x, option);
-    } catch (Exception e) {
-        log(e.getMessage());
-    }
+            WebElement element = findElementWithLabel(driver, recordType, fieldName);
+            fillAutocompleteField(driver, element, value);
+        } catch (Exception e) {
+            log(e.getMessage());
+        }
 
 
     }
@@ -535,6 +562,12 @@ public class StepDefs {
     public void presses_the_tab_key() throws Throwable {
         driver.switchTo().activeElement().sendKeys(Keys.TAB);
     }
+
+    @And("^(?:the user |user )?presses the ESC key$")
+    public void presses_the_esc_key() throws Throwable {
+        driver.switchTo().activeElement().sendKeys(Keys.ESCAPE);
+    }
+
 
     @And("^(?:the user |user )?presses the tab key until reaching the \"([^\"]*)\" button(?: )?(?:#.*)?$")
     public void presses_the_tab_key_until_reaching_button(String button) throws Throwable {

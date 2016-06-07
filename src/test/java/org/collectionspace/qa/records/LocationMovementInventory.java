@@ -4,6 +4,12 @@ public class LocationMovementInventory extends Record {
 
     public LocationMovementInventory() {
 
+
+      xpathMap.put("Current Location",         "//*[@id=\"primaryTab\"]/div/div[3]/div[1]/div[2]/div[2]/div/div[2]/table/tbody/tr/td[1]/input[2]");
+      xpathMap.put("Contact",                  "//*[@id=\"primaryTab\"]/div/div[3]/div[2]/div[2]/div[1]/div[2]/div/div[2]/input[2]");
+      xpathMap.put("Normal Location",          "//*[@id=\"primaryTab\"]/div/div[3]/div[1]/div[2]/div[1]/div[2]/div/div[2]/input[2]");
+      xpathMap.put("Second Contact",           "//*[@id=\"fluid-id-5jxc7z9x-1204\"]/ul/li/input[3]"); // fix fluid id....
+
       // fieldSelectorByLabel.put("Contact", "csc-movement-movementContact"); // "Contact" in UI. Disambiguating name could be "Movement Contact"
       // fieldSelectorByLabel.put("Current Location", "csc-movement-currentLocation");
       fieldSelectorByLabel.put("First Note", "csc-movement-currentLocationNote"); // "Note" in UI. Disambiguating name could be "Current Location Note"
@@ -26,10 +32,6 @@ public class LocationMovementInventory extends Record {
       fieldSelectorByLabel.put("Second Note", "csc-movement-movementNote"); // "Note" in UI. Disambiguating name could be "Movement Note"
       fieldSelectorByLabel.put("Third Note", "csc-movement-inventoryNote"); // "Note" in UI. Disambiguating name could be "Inventory Note"
 
-      xpathMap.put("Contact", "//*[@id=\"primaryTab\"]/div/div[3]/div[2]/div[2]/div[1]/div[2]/div/div[2]/input[2]"); //
-      xpathMap.put("Current Location", "//*[@id=\"primaryTab\"]/div/div[3]/div[1]/div[2]/div[2]/div/div[2]/table/tbody/tr/td[1]/input[2]"); //
-      xpathMap.put("Normal Location", "//*[@id=\"primaryTab\"]/div/div[3]/div[1]/div[2]/div[1]/div[2]/div/div[2]/input[2]"); //
-      xpathMap.put("Second Contact", "//*[@id=\"fluid-id-5jxc7z9x-1204\"]/ul/li/input[3]"); 
 
     }
 }
