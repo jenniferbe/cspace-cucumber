@@ -1,5 +1,5 @@
 #Created by Forest Yang on 12/30/2015
-
+# Working as of June 14 2016
 @place
 Feature: Advanced Search - Media Handling
 
@@ -33,110 +33,110 @@ Feature: Advanced Search - Media Handling
       And enters "CQA82685934" in the "Media Handling" "Identification Number" field
       And clicks the "Advanced Search search" button
     Then the search results should contain "CQA82685934"
-    # Then close the browser
+    Then close the browser
 
-  # Scenario: Search by Title
-    # Given user is on the "My CollectionSpace" page
+  Scenario: Search by Title
+    Given user is on the "My CollectionSpace" page
       And clicks the "Advanced Search" button
      And selects "Media Handling" from the "AdvancedSearch" "record type" dropdown
       And enters "hailstorm" in the "Media Handling" "Title" field
       And clicks the "Advanced Search search" button
     Then the search results should contain "CQA82685934"
-    # Then close the browser
+    Then close the browser
 
-  # Scenario: Search by Types
-    # Given user is on the "My CollectionSpace" page
+  Scenario: Search by Types
+    Given user is on the "My CollectionSpace" page
       And clicks the "Advanced Search" button
      And selects "Media Handling" from the "AdvancedSearch" "record type" dropdown
       And selects "Dataset" from the "Media Handling" "Types" dropdown
       And clicks the "Advanced Search search" button
     Then the search results should contain "CQA82685934"
-    # Then close the browser
+    Then close the browser
 
-  # Scenario: Search by Creator
-    # Given user is on the "My CollectionSpace" page
+  Scenario: Search by Creator
+    Given user is on the "My CollectionSpace" page
       And clicks the "Advanced Search" button
      And selects "Media Handling" from the "AdvancedSearch" "record type" dropdown
       And enters "Lord Jesus" in the "Advanced Search" "Creator Search" autocomplete field
       And clicks the "Advanced Search search" button
     Then the search results should contain "CQA82685934"
-    # Then close the browser
+    Then close the browser
 
-  # Scenario: Search by Languages
-    # Given user is on the "My CollectionSpace" page
+  Scenario: Search by Languages
+    Given user is on the "My CollectionSpace" page
       And clicks the "Advanced Search" button
      And selects "Media Handling" from the "AdvancedSearch" "record type" dropdown
       And selects "Hebrew" from the "Media Handling" "Languages" dropdown
       And clicks the "Advanced Search search" button
     Then the search results should contain "CQA82685934"
-    # Then close the browser
+    Then close the browser
 
-  # Scenario: Search by Date
-    # Given user is on the "My CollectionSpace" page
+  Scenario: Search by Date
+    Given user is on the "My CollectionSpace" page
       And clicks the "Advanced Search" button
      And selects "Media Handling" from the "AdvancedSearch" "record type" dropdown
       And enters "0-0-0" in the "Media Handling" "Earliest Dates" field
       And enters "0-0-0" in the "Media Handling" "Latest Dates" field
       And clicks the "Advanced Search search" button
     Then the search results should contain "CQA82685934"
-    # Then close the browser
+    Then close the browser
 
-  # Scenario: Search by Publisher
-    # Given user is on the "My CollectionSpace" page
+  Scenario: Search by Publisher
+    Given user is on the "My CollectionSpace" page
       And clicks the "Advanced Search" button
      And selects "Media Handling" from the "AdvancedSearch" "record type" dropdown
       And enters "Lord Lucifer" in the "Advanced Search" "Publisher Search" autocomplete field
       And clicks the "Advanced Search search" button
     Then the search results should contain "CQA82685934"
-    # Then close the browser
+    Then close the browser
 
-  # Scenario: Search by Source
-    # Given user is on the "My CollectionSpace" page
+  Scenario: Search by Source
+    Given user is on the "My CollectionSpace" page
       And clicks the "Advanced Search" button
      And selects "Media Handling" from the "AdvancedSearch" "record type" dropdown
       And enters "Pearly Gates" in the "Media Handling" "Source" field
       And clicks the "Advanced Search search" button
     Then the search results should contain "CQA82685934"
-    # Then close the browser
+    Then close the browser
 
-  # Scenario: Search by Rights holder
-    # Given user is on the "My CollectionSpace" page
+  Scenario: Search by Rights holder
+    Given user is on the "My CollectionSpace" page
       And clicks the "Advanced Search" button
      And selects "Media Handling" from the "AdvancedSearch" "record type" dropdown
       And enters "Yahweh" in the "Media Handling" "Rights holder search" autocomplete field
       And clicks the "Advanced Search search" button
     Then the search results should contain "CQA82685934"
-    # Then close the browser
+    Then close the browser
 
-  # Scenario: Search by subjects
-    # Given user is on the "My CollectionSpace" page
+  Scenario: Search by subjects
+    Given user is on the "My CollectionSpace" page
       And clicks the "Advanced Search" button
      And selects "Media Handling" from the "AdvancedSearch" "record type" dropdown
       And enters "textbook" in the "Media Handling" "Subjects" field
       And clicks the "Advanced Search search" button
     Then the search results should contain "CQA82685934"
-    # Then close the browser
+    Then close the browser
 
-  # Scenario: Search by Modified Date
-    # Given user is on the "My CollectionSpace" page
+  Scenario: Search by Modified Date
+    Given user is on the "My CollectionSpace" page
       And clicks the "Advanced Search" button
      And selects "Media Handling" from the "AdvancedSearch" "record type" dropdown
       And enters today's date in the "Media Handling" "Earliest Modified Date" field
       And clicks the "Advanced Search search" button
     Then the search results should contain "CQA82685934"
-    # Then close the browser
+    Then close the browser
 
-  # Scenario: Search by username
-    # Given user is on the "My CollectionSpace" page
+  Scenario: Search by username
+    Given user is on the "My CollectionSpace" page
       And clicks the "Advanced Search" button
      And selects "Media Handling" from the "AdvancedSearch" "record type" dropdown
       And enters "admin@core.collectionspace.org" in the "Media Handling" "Record last modified by" field
       And clicks the "Advanced Search search" button
     Then the search results should contain "CQA82685934"
-    # Then close the browser
+    Then close the browser
 
-  # Scenario: textb**
-    # Given user is on the "My CollectionSpace" page
+  Scenario: textb**
+    Given user is on the "My CollectionSpace" page
       And clicks the "Advanced Search" button
      And selects "Media Handling" from the "AdvancedSearch" "record type" dropdown
       And enters "textb*" in the "Media Handling" "Subjects" field
