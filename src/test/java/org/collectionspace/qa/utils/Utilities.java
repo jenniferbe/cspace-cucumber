@@ -38,8 +38,6 @@ public class Utilities {
 
         driver.findElement(By.className("csc-login-userId")).sendKeys(USERNAME);
         driver.findElement(By.className("csc-login-password")).sendKeys(PASSWORD);
-        // new WebDriverWait(driver, 10).until(
-                        // ExpectedConditions.invisibilityOfElementLocated(By.className("cs-loading-indicator")));
         driver.findElement(By.className("csc-login-button")).click();
     }
 
