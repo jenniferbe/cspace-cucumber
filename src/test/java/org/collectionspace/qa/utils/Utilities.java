@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import java.util.ArrayList;
+import org.openqa.selenium.Keys;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -28,6 +29,13 @@ public class Utilities {
 
     public static void login(WebDriver driver, String baseURL){
         driver.get(baseURL + LOGIN_PATH);
+
+        WebElement html = driver.findElement(By.tagName("html"));
+
+        for (int i = 0; i != 4; i++){
+            html.sendKeys(Keys.chord(Keys.COMMAND, Keys.SUBTRACT));
+        }
+
         driver.findElement(By.className("csc-login-userId")).sendKeys(USERNAME);
         driver.findElement(By.className("csc-login-password")).sendKeys(PASSWORD);
         // new WebDriverWait(driver, 10).until(
