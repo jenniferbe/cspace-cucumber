@@ -20,7 +20,7 @@ public class Pages {
 
         pageUrls.put("My CollectionSpace","myCollectionSpace.html");
         pageLoadedSelector.put("My CollectionSpace","csc-myCollectionSpace-categoryHeader");
-    
+
         pageUrls.put("Group", "group.html");
         pageUrls.put("Cataloging", "cataloging.html");
         pageUrls.put("Cataloging Inventory Template", "cataloging.html?template=inventory");
@@ -35,13 +35,12 @@ public class Pages {
         pageUrls.put("Intake Doorstep Donation Template", "intake.html?template=doorstopDonation");
         pageUrls.put("Condition Check", "conditioncheck.html");
         pageUrls.put("Valuation Control", "valuationcontrol.html");
-        pageUrls.put("Madia Handling", "media.html");
-
+        pageUrls.put("Media Handling", "media.html");
         pageUrls.put("Associated Concepts","concept.html?vocab=concept");
         pageUrls.put("Matrial Concepts", "concept.html?vocab=material_ca");
         pageUrls.put("Activity Concepts", "concept.html?vocab=activity");
         pageUrls.put("Local Persons", "person.html?vocab=person");
-        pageUrls.put("ULAN Persons", "person.html?vocab=ulan_pa");        
+        pageUrls.put("ULAN Persons", "person.html?vocab=ulan_pa");
         pageUrls.put("Local Storage Locations", "location.html?vocab=location");
         pageUrls.put("Offsite Storage Locations", "location.html?vocab=offsite_sla");
         pageUrls.put("Local Organizations", "organization.html?vocab=organization");
