@@ -52,12 +52,10 @@ public class StepDefs {
         driver = new FirefoxDriver();
         wait = new WebDriverWait(driver, 10);
         driver.manage().window().maximize();
-        // for
+
         login(driver, BASE_URL);
 
     }
-
-
 
     @And("^enters today's date in the \"([^\"]*)\" \"([^\"]*)\" field$")
     public void enters_todays_date_in_field(String recordType, String fieldName) throws Throwable {
@@ -76,7 +74,9 @@ public class StepDefs {
 
     @And("^navigates to the record with identification number \"([^\"]*)\"$")
     public void go_to_record_with_id_number(String idNumber) throws Throwable {
-        // record = loadRecordOfType(recordType);
+        new WebDriverWait(driver, 10).until(
+                        ExpectedConditions.invisibilityOfElementLocated(By.className("cs-loading-indicator")));
+
         enters_in_the_top_nav_search_field(idNumber);
         clicks_on_the_top_nav_search_submit_button();
         the_search_results_should_contain_results(idNumber);
@@ -92,10 +92,8 @@ public class StepDefs {
         String path  = record.getDropDownBox(dropdownName);
         Select select = new Select(driver.findElement(By.className(path)));
         select.selectByVisibleText(selector);
-        new WebDriverWait(driver, 10).until(
+        new WebDriverWait(driver, 20).until(
                         ExpectedConditions.invisibilityOfElementLocated(By.className("cs-loading-indicator")));
-
-
     }
 
 
@@ -109,8 +107,6 @@ public class StepDefs {
     @And("^(?:the user |user )?selects the \"([^\"]*)\" radio button(?: on the Create New page)?$")
     public void selects_the_radio_button(String radioButton) throws Throwable {
         WebElement radio = wait.until(visibilityOfElementLocated(By.xpath("//input[@value='" + radioButton.toLowerCase() + "']")));
-        // WebElement radio = driver.findElement(
-        //        By.xpath("//input[@value='" + radioButton.toLowerCase() + "']"));
         radio.click();
     }
 
@@ -264,6 +260,7 @@ public class StepDefs {
                 By.xpath("(//tr[@class='csc-row']/td/a)[1]")));
         String[] options = results.split("; ");
         for (String option : options){
+            driver.findElement(By.xpath("//*[@id=\"page-link:link1\"]")).click();
             assertTrue(isInSearchResults(driver, option, 1));
         }
     }
@@ -279,6 +276,7 @@ public class StepDefs {
 
         String[] options = results.split("; ");
         for (String option : options){
+            driver.findElement(By.xpath("//*[@id=\"page-link:link1\"]")).click();
             assertFalse(isInSearchResults(driver, option, 1));
         }
     }
