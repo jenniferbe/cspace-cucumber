@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import java.util.ArrayList;
+import org.openqa.selenium.Keys;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -28,10 +29,15 @@ public class Utilities {
 
     public static void login(WebDriver driver, String baseURL){
         driver.get(baseURL + LOGIN_PATH);
+
+        WebElement html = driver.findElement(By.tagName("html"));
+
+        for (int i = 0; i != 4; i++){
+            html.sendKeys(Keys.chord(Keys.COMMAND, Keys.SUBTRACT));
+        }
+
         driver.findElement(By.className("csc-login-userId")).sendKeys(USERNAME);
         driver.findElement(By.className("csc-login-password")).sendKeys(PASSWORD);
-        // new WebDriverWait(driver, 10).until(
-                        // ExpectedConditions.invisibilityOfElementLocated(By.className("cs-loading-indicator")));
         driver.findElement(By.className("csc-login-button")).click();
     }
 
@@ -137,20 +143,23 @@ public class Utilities {
         Boolean result = Boolean.FALSE;
         String xpath = "//tr[@class='csc-row']/td/a[text()='" + term +"']";
         String textTemplate;
-        String fieldText;
+        String currentPageIndicatorFieldText;
 
         if (!driver.findElements(By.xpath(xpath)).isEmpty()) {
             result = Boolean.TRUE;
         } else {
             try {
                 driver.findElement(By.className("flc-pager-next")).click();
+                new WebDriverWait(driver, 10).until(
+                                ExpectedConditions.invisibilityOfElementLocated(By.className("cs-loading-indicator")));
+
                 pageCounter += 1;
                 WebElement textField = driver.findElement(By.xpath("//*[@id=\"pager-bottom\"]/li[5]"));
-                // textField.click();
-                textTemplate = "Viewing page " + pageCounter + ".";
-                fieldText = textField.getText();
 
-                if (!(fieldText.contains(textTemplate))) {
+                textTemplate = "Viewing page " + pageCounter + ".";
+                currentPageIndicatorFieldText = textField.getText();
+
+                if (!(currentPageIndicatorFieldText.contains(textTemplate))) {
                     return Boolean.FALSE; // fixes infinite loop of button-clicking when the item is not found.
                 }
                 result = isInSearchResults(driver, term, pageCounter);
@@ -523,6 +532,9 @@ public class Utilities {
                 break;
             case "Object Exit":
                 record = new ObjectExit();
+                break;
+            case "Organization":
+                record = new Organization();
                 break;
             case "Person":
                 record = new Person();
